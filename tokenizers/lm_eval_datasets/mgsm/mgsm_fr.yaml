@@ -1,0 +1,10 @@
+dataset_name: fr
+task: mgsm_fr
+generation_kwargs:
+  temperature: 0.1
+  do_sample: True
+  until:
+  - 'Question :'
+  - </s>
+  - <|im_end|>
+include: _default_template_yaml

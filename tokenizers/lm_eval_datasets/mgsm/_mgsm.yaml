@@ -1,0 +1,22 @@
+group: mgsm
+task:
+  - mgsm_de
+  - mgsm_en
+  - mgsm_fr
+  - mgsm_zh
+  - mgsm_bn
+  - mgsm_es
+  - mgsm_ja
+  - mgsm_ru
+  - mgsm_sw
+  - mgsm_te
+  - mgsm_th
+aggregate_metric_list:
+  - metric: exact_match
+    aggregation: mean
+  - metric: rouge
+    aggregation: mean
+  - metric: numeric_match
+    aggregation: mean
+metadata:
+  version: 0.0

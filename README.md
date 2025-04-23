@@ -18,5 +18,13 @@ uv sync --all-extras
 # on machines w/o cuda
 uv sync --all-extras --all-groups  --no-install-package flash-attn
 ```
+## Sample Usage:
+LM-Eval
+```bash
+uv run eval tokenizers/configs/mgsm_eval_llama8B.yaml 
+```
+
+## Lm-Eval new datasets
+Add new datasets under lm_eval_datasets
 
 This repo inherits from https://github.com/r-three/ca-merging.

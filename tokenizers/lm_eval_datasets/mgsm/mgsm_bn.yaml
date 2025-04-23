@@ -1,0 +1,10 @@
+task: mgsm_bn
+dataset_name: bn
+generation_kwargs:
+  temperature: 0.1
+  do_sample: True
+  until:
+  - 'প্রশ্ন:'
+  - </s>
+  - <|im_end|>
+include: _default_template_yaml

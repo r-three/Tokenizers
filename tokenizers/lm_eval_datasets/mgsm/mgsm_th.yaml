@@ -1,0 +1,10 @@
+task: mgsm_th
+dataset_name: th
+generation_kwargs:
+  temperature: 0.1
+  do_sample: True
+  until:
+  - 'โจทย์:'
+  - </s>
+  - <|im_end|>
+include: _default_template_yaml

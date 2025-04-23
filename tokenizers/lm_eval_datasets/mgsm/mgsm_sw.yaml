@@ -1,0 +1,10 @@
+task: mgsm_sw
+dataset_name: sw
+generation_kwargs:
+  temperature: 0.1
+  do_sample: True
+  until:
+  - 'Swali:'
+  - </s>
+  - <|im_end|>
+include: _default_template_yaml

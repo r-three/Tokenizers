@@ -1,0 +1,10 @@
+task: mgsm_te
+dataset_name: te
+generation_kwargs:
+  temperature: 0.1
+  do_sample: True
+  until:
+  - 'ప్రశ్న:'
+  - </s>
+  - <|im_end|>
+include: _default_template_yaml
