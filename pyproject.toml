@@ -1,0 +1,84 @@
+[project]
+name = "tokenizers"
+authors = [{ name = "Gül Sena Altıntaş", email = "gsaltintas@cs.toronto.edu" }, ]
+version = "0.1.0"
+description = "Code base for tokenizer transfer et al"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=3.3.2",
+    "jupyter>=1.1.1",
+    "levenshtein>=0.27.1",
+    "lm-eval>=0.4.8",
+    "notebook>=7.3.2",
+    "numpy>=1.26.4",
+    "scikit-learn>=1.6.1",
+    "torch>=2.4.0",
+    "transformers>=4.45.2",
+    "vllm>=0.6.1.post2",
+    "wandb>=0.19.8",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["tokenizers"]
+
+[project.optional-dependencies]
+build = ["torch", "setuptools", "packaging"]
+compile = ["flash-attn"]
+mergekit = ["mergekit"]
+zett = [ "jax==0.5.2", "jaxlib==0.5.1", "optax==0.2.4", "flax==0.10.4", "chex", "zett" ]
+dev = [  "ruff", "pytest" ]
+
+
+[tool.uv]
+no-build-isolation-package = ["flash-attn", "xformers", "vllm"]
+
+[[tool.uv.dependency-metadata]]
+name = "flash-attn"
+version = "2.4.1"
+requires-dist = ["torch", "einops", "setuptools"]
+
+[tool.uv.sources]
+lm-eval = { git = "https://github.com/EleutherAI/lm-evaluation-harness.git" }
+mergekit = { git = "https://github.com/arcee-ai/mergekit.git" }
+zett = { git = "https://github.com/bminixhofer/zett.git" }
+
+
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = ["Test*"]
+python_functions = "test_*"
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gpu: tests that require GPU (deselect with '-m \"not gpu\"')",
+]
+
+[tool.isort]
+profile = "ruff"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "I"]
+ignore = []
+
+[tool.ruff.isort]
+known-first-party = ["tokenizers"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.5",
+]
+
+
+[project.scripts]
+eval = "ca.scripts.eval:main"
+mergekit-tokensurgeon = "mergekit.scripts.tokensurgeon:main"
+
