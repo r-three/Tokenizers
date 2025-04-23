@@ -1,0 +1,442 @@
+# Dataset Registry Configuration
+# Math Datasets
+openai/gsm8k:
+  name: gsm8k
+  registry: math
+  samples: 7473
+  classes: null
+  task_type: generation
+  max_seq_length: 512
+  hf_config: main
+  splits:
+    train: train
+    validation: test
+  metrics:
+    - exact_match
+  max_gen_seq_length: 128
+  input_field: question
+  label_field: answer
+
+juletxara/mgsm:
+  name: mgsm
+  registry: multilingual
+  samples: 2838  # 258*11
+  classes: null
+  task_type: generation
+  max_seq_length: 512
+  hf_config: main
+  splits:
+    train: train
+    validation: test
+  metrics:
+    - exact_match
+  trust_remote_code: true
+  max_gen_seq_length: 128
+  input_field: question
+  label_field: answer
+  languages:
+    - bn
+    - de
+    - en
+    - es
+    - fr
+    - ja
+    - ru
+    - sw
+    - te
+    - th
+    - zh
+  instruction_format:
+    instruction: ""
+    user_format: "{question}"
+    user_input: question
+    assistant_output: answer_number
+    # assistant_output: answer
+    answer_len: medium
+  
+EleutherAI/hendrycks_math:
+  name: math
+  registry: math
+  samples: 1744
+  classes: null
+  task_type: generation
+  max_seq_length: 2048
+  hf_config: algebra
+  splits:
+    train: train
+    validation: test
+  metrics:
+    - exact_match
+  input_field: problem
+  label_field: solution
+  additional_fields:
+    - level
+    - type
+
+
+allenai/math_qa:
+  name: mathqa
+  registry: math
+  samples: 29838
+  classes: 5
+  task_type: generation
+  max_seq_length: 512
+  splits:
+    train: train
+    validation: validation
+    test: test
+  metrics:
+    - accuracy
+    - f1
+  trust_remote_code: true
+
+EleutherAI/asdiv:
+  name: asdiv
+  registry: math
+  samples: 1839
+  classes: null
+  task_type: generation
+  max_seq_length: 256
+  splits:
+    validation: validation
+  metrics:
+    - exact_match
+  trust_remote_code: true
+
+# Question Answering Datasets
+rajpurkar/squad:
+  name: squad
+  registry: qa
+  samples: 87599
+  classes: 2
+  task_type: question_answering
+  max_seq_length: 384
+  splits:
+    train: train
+    validation: validation
+  input_field: question
+  label_field: answers.text
+  additional_fields:
+    - title
+    - context
+
+rajpurkar/squad_v2:
+  name: squad_v2
+  registry: qa
+  samples: 162000
+  classes: 2
+  task_type: question_answering
+  max_seq_length: 384
+  splits:
+    train: train
+    validation: validation
+  input_field: question
+  label_field: answers.text
+  additional_fields:
+    - title
+    - context
+
+Maluuba/newsqa:
+  name: newsqa
+  registry: qa
+  samples: 120000
+  classes: 2
+  task_type: question_answering
+  max_seq_length: 512
+  splits:
+    train: train
+    validation: validation
+
+# Natural Language Inference Datasets
+stanfordnlp/snli:
+  name: snli
+  registry: nli
+  samples: 550000
+  classes: 3
+  task_type: natural_language_inference
+  max_seq_length: 128
+  splits:
+    train: train
+    validation: validation
+    test: test
+  input_field:
+    - premise
+    - hypothesis
+  label_field: label
+
+allenai/scitail:
+  name: scitail
+  registry: nli
+  samples: 27000
+  classes: 2
+  task_type: natural_language_inference
+  max_seq_length: 128
+  splits:
+    train: train
+    validation: validation
+    test: test
+  input_field:
+    - premise
+    - hypothesis
+
+# Text Generation Datasets
+Salesforce/wikitext:
+  name: wikitext
+  registry: generation
+  samples: 2088628
+  classes: null
+  vocab_size: 33278
+  task_type: generation
+  max_seq_length: 512
+  hf_config: wikitext-2-raw-v1
+  splits:
+    train: train
+    validation: validation
+    test: test
+  input_field: text
+  label_field: null
+
+wikitext:
+  name: wikitext-103
+  registry: generation
+  samples: 103227021
+  classes: null
+  vocab_size: 267735
+  task_type: generation
+  max_seq_length: 512
+  hf_config: wikitext-103-raw-v1
+  splits:
+    train: train
+    validation: validation
+    test: test
+  input_field: text
+  label_field: null
+
+allenai/c4:
+  name: c4
+  registry: generation
+  samples: 364868892
+  classes: null
+  vocab_size: 32000
+  task_type: generation
+  max_seq_length: 512
+  hf_config: en
+  splits:
+    train: train
+    validation: validation
+  input_field: text
+  label_field: null
+
+# GLUE Benchmark Datasets
+nyu-mll/glue:
+  name: glue
+  registry: glue
+  configs:
+    cola:
+      samples: 8551
+      classes: 2
+      task_type: classification
+      max_seq_length: 128
+      metrics:
+        - matthews_correlation
+        - accuracy
+      input_field: sentence
+      label_field: label
+    sst2:
+      samples: 67349
+      classes: 2
+      task_type: classification
+      max_seq_length: 128
+      metrics:
+        - accuracy
+      input_field: sentence
+      label_field: label
+    mrpc:
+      samples: 3668
+      classes: 2
+      task_type: sequence_pair
+      max_seq_length: 128
+      metrics:
+        - accuracy
+        - f1
+      input_field:
+        - sentence1
+        - sentence2
+      label_field: label
+    qqp:
+      samples: 363849
+      classes: 2
+      task_type: sequence_pair
+      max_seq_length: 128
+      metrics:
+        - accuracy
+        - f1
+      input_field:
+        - question1
+        - question2
+      label_field: label
+    mnli:
+      samples: 392702
+      classes: 3
+      task_type: natural_language_inference
+      max_seq_length: 128
+      splits:
+        train: train
+        validation: validation_matched
+        test: test_matched
+      metrics:
+        - accuracy
+      input_field:
+        - premise
+        - hypothesis
+      label_field: label
+    qnli:
+      samples: 104743
+      classes: 2
+      task_type: natural_language_inference
+      max_seq_length: 128
+      metrics:
+        - accuracy
+      input_field:
+        - question
+        - sentence
+      label_field: label
+    rte:
+      samples: 2490
+      classes: 2
+      task_type: natural_language_inference
+      max_seq_length: 128
+      metrics:
+        - accuracy
+      input_field:
+        - sentence1
+        - sentence2
+      label_field: label
+    wnli:
+      samples: 635
+      classes: 2
+      task_type: natural_language_inference
+      max_seq_length: 128
+      metrics:
+        - accuracy
+      input_field:
+        - sentence1
+        - sentence2
+      label_field: label
+    stsb:
+      samples: 5749
+      classes: 1
+      task_type: regression
+      max_seq_length: 128
+      splits:
+        train: train
+        validation: validation
+        test: test_matched
+      metrics:
+        - pearson_correlation
+        - spearman_correlation
+      input_field:
+        - sentence1
+        - sentence2
+      label_field: label
+
+# Multilingual Datasets
+AYueksel/TurkishMMLU:
+  name: turkishmmlu
+  registry: multilingual
+  configs:
+    Mathematics:
+      samples: 954
+      classes: 4
+      task_type: generation
+      max_seq_length: 512
+      splits:
+        train: auxiliary_train
+        validation: dev
+        test: test
+      metrics:
+        - accuracy
+      language: tr
+    Geography:
+      samples: 632
+      classes: 4
+      task_type: generation
+      max_seq_length: 512
+      splits:
+        train: auxiliary_train
+        validation: dev
+        test: test
+      metrics:
+        - accuracy
+      language: tr
+    Philosophy:
+      samples: 743
+      classes: 4
+      task_type: generation
+      max_seq_length: 512
+      splits:
+        train: auxiliary_train
+        validation: dev
+        test: test
+      metrics:
+        - accuracy
+      language: tr
+    turkish_language_and_literature:
+      samples: 876
+      classes: 4
+      task_type: generation
+      max_seq_length: 512
+      splits:
+        train: auxiliary_train
+        validation: dev
+        test: test
+      metrics:
+        - accuracy
+      language: tr
+
+haonan-li/cmmlu:
+  name: cmmlu
+  registry: multilingual
+  configs:
+    modern_chinese:
+      samples: 962
+      classes: 4
+      task_type: generation
+      max_seq_length: 512
+      splits:
+        train: train
+        validation: dev
+        test: test
+      metrics:
+        - accuracy
+      language: zh
+
+xnli:
+  name: xnli
+  registry: multilingual
+  samples: 112500
+  classes: 3
+  task_type: natural_language_inference
+  max_seq_length: 128
+  splits:
+    train: train
+    validation: validation
+    test: test
+  metrics:
+    - accuracy
+  languages:
+    - ar
+    - bg
+    - de
+    - el
+    - en
+    - es
+    - fr
+    - hi
+    - ru
+    - sw
+    - th
+    - tr
+    - ur
+    - vi
+    - zh

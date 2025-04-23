@@ -1,0 +1,41 @@
+## run with eval
+datasets:
+  - mgsm_direct_en
+  - name: juletxara/mgsm
+    subset: en
+    override_config:
+      doc_to_text: "{{question.strip()}}"
+      doc_to_target: "{{answer_number}}"
+  # - name: juletxara/mgsm
+  #   subset: zh
+  #   override_config:
+  #     doc_to_text: "{{question.strip()}}"
+  #     doc_to_target: "{{answer_number}}"
+  # - name: juletxara/mgsm
+  #   subset: de
+  #   override_config:
+  #     doc_to_text: "{{question.strip()}}"
+  #     doc_to_target: "{{answer_number}}"
+  # - name: juletxara/mgsm
+  #   subset: fr
+  #   override_config:
+  #     doc_to_text: "{{question.strip()}}"
+  #     doc_to_target: "{{answer_number}}"
+model_name: &model_name "Qwen/Qwen2.5-0.5B-Instruct"
+tokenizer_name: &tokenizer_name "Qwen/Qwen2.5-0.5B-Instruct"
+trust_remote_code: true
+revision: null
+
+use_wandb: false
+wandb_project: xarch-multilingual
+experiment_name: "mgsm-eval-Qwen2.5-0.5B-Instruct"  
+log_level: INFO
+
+seed: 42
+evaluation_method: lm_eval
+num_fewshot: 0
+num_samples: 2
+chat_template: qwen
+
+load_existing: true
+save_dir: debug/Qwen2.5-0.5B-Instruct
