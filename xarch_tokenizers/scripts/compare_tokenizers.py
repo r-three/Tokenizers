@@ -17,15 +17,20 @@ from transformers import AutoTokenizer
 from xarch_tokenizers.config import Config
 from xarch_tokenizers.experiment_config import load_config
 from xarch_tokenizers.logging.logger import setup_logger
+from xarch_tokenizers.logging.plot_utils import setup_styles
 from xarch_tokenizers.models import load_tokenizer
 from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING
 
 # Usage:
 #     python tokenizer_comparison.py --tokenizer_names yourmodule.BertTokenizer yourmodule.GPT2Tokenizer
+# python xarch_tokenizers/scripts/compare_tokenizers.py --tokenizer_names meta-llama/Meta-Llama-3-8B-Instruct meta-llama/Meta-Llama-3.1-8B-Instruct Qwen/Qwen2.5-3B-Instruct CohereLabs/aya-expanse-8b --experiment_name=llama-qwen-aya
+
+## TODO: add long text
 SAMPLE_TEXTS = {
     "english": "The quick brown fox jumps over the lazy dog. It's 1234.56 and costs $789.",
     "french": "Le renard brun rapide saute par-dessus le chien paresseux. C'est 1234,56 et coûte 789€.",
     "german": "Der schnelle braune Fuchs springt über den faulen Hund. Es ist 1234,56 und kostet 789€.",
+    "turkish": "Hızlı kahverengi tilki tembel köpeğin üstunden atlar. 1234.56'dır ve 789$ tutar.",
     "chinese": "快速的棕色狐狸跳过懒狗。它是1234.56，价格为789美元。",
     "arabic": "الثعلب البني السريع يقفز فوق الكلب الكسول. إنه 1234.56 ويكلف 789 دولارًا.",
     "hindi": "तेज भूरी लोमड़ी आलसी कुत्ते पर कूदती है। यह 1234.56 है और 789 डॉलर की कीमत है।",
@@ -57,6 +62,7 @@ def setup_tokenizer_environment(config: TokenizerComparisonConfig):
     for tokenizer_name in config.tokenizer_names:
         _tokenizer_name = VECTOR_HF_MAPPING.get(tokenizer_name, tokenizer_name)
         tokenizer = load_tokenizer(_tokenizer_name)
+        tokenizer_name = tokenizer_name.split("/")[-1]
         tokenizers[tokenizer_name] = tokenizer
         # _model_name = VECTOR_HF_MAPPING.get(config.model_name, config.model_name)
         # logger.info("Loading model from %s", _model_name)
@@ -102,14 +108,16 @@ def analyze_number_tokenization(tokens: List[str], original_text: str) -> str:
         return "complex"
 
 
-def analyze_vocabulary_overlap(tokenizers: Dict[str, AutoTokenizer]) -> Dict[str, Any]:
+def analyze_vocabulary_overlap(
+    tokenizers: Dict[str, AutoTokenizer], logger
+) -> Dict[str, Any]:
     """
     Analyze vocabulary overlap between tokenizers:
     - Shared vocabulary tokens
     - Unique tokens per tokenizer
     - Overlap percentages
     """
-    print("Analyzing vocabulary overlap...")
+    logger.info("Analyzing vocabulary overlap...")
     vocabularies = {}
 
     # Extract vocabulary from each tokenizer
@@ -120,7 +128,7 @@ def analyze_vocabulary_overlap(tokenizers: Dict[str, AutoTokenizer]) -> Dict[str
             vocabularies[name] = set(tokenizer.vocab.keys())
         else:
             vocabularies[name] = set()
-            print(f"Warning: Could not extract vocabulary for {name}")
+            logger.info(f"Warning: Could not extract vocabulary for {name}")
 
     # Compute pairwise overlaps
     overlaps = {}
@@ -161,7 +169,7 @@ def analyze_vocabulary_overlap(tokenizers: Dict[str, AutoTokenizer]) -> Dict[str
 
 
 def analyze_categorical_differences(
-    tokenizers: Dict[str, AutoTokenizer], tokenizer_info: Dict[str, Any]
+    tokenizers: Dict[str, AutoTokenizer], tokenizer_info: Dict[str, Any], logger
 ) -> pd.DataFrame:
     """
     Analyze categorical differences between tokenizers:
@@ -169,7 +177,7 @@ def analyze_categorical_differences(
     - Algorithm type (BPE, WordPiece, Unigram)
     - Special token handling for numbers, punctuation, etc.
     """
-    print("Analyzing categorical differences...")
+    logger.info("Analyzing categorical differences...")
     results = []
 
     for name, tokenizer in tokenizers.items():
@@ -210,14 +218,16 @@ def analyze_categorical_differences(
     return pd.DataFrame(results)
 
 
-def analyze_language_differences(tokenizers: Dict[str, AutoTokenizer]) -> pd.DataFrame:
+def analyze_language_differences(
+    tokenizers: Dict[str, AutoTokenizer], logger
+) -> pd.DataFrame:
     """
     Analyze how tokenizers perform across different languages:
     - Tokens per character ratio
     - Token count comparison
     - Special handling detection
     """
-    print("Analyzing language differences...")
+    logger.info("Analyzing language differences...")
     results = []
 
     for lang, text in SAMPLE_TEXTS.items():
@@ -244,14 +254,14 @@ def analyze_language_differences(tokenizers: Dict[str, AutoTokenizer]) -> pd.Dat
 
 
 def analyze_token_length_distribution(
-    tokenizers: Dict[str, AutoTokenizer],
+    tokenizers: Dict[str, AutoTokenizer], logger
 ) -> Dict[str, Dict[str, Any]]:
     """
     Analyze token length distribution for each tokenizer:
     - Calculate statistics on token lengths
     - Create histograms of token lengths
     """
-    print("Analyzing token length distributions...")
+    logger.info("Analyzing token length distributions...")
     distributions = {}
 
     # Combine all sample texts
@@ -282,13 +292,14 @@ def clean_token(token: str) -> str:
     return token
 
 
-def analyze_merge_rules(tokenizers: Dict[str, AutoTokenizer]) -> Dict[str, Any]:
+def analyze_merge_rules(tokenizers: Dict[str, AutoTokenizer], logger) -> Dict[str, Any]:
     """
     Analyze merge rules for BPE-based tokenizers:
     - Extract merge priorities
     - Compare merge strategies
+    TODO: check the problem
     """
-    print("Analyzing merge rules...")
+    logger.info("Analyzing merge rules...")
     merge_analysis = {}
 
     for name, tokenizer in tokenizers.items():
@@ -323,52 +334,25 @@ def analyze_merge_rules(tokenizers: Dict[str, AutoTokenizer]) -> Dict[str, Any]:
     return merge_analysis
 
 
-def visualize_results(
-    tokenizers: Dict[str, AutoTokenizer],
-    tokenizer_info: Dict[str, Any],
-    output_dir: Path = Path("./tokenizer_analysis"),
-):
-    """Generate visualizations of the analysis results"""
-    print("Generating visualizations...")
-    output_dir.mkdir(exist_ok=True, parents=True)
-
-    # Categorical differences visualization
-    cat_diff = analyze_categorical_differences(tokenizers, tokenizer_info)
-    plot_categorical_diff(cat_diff, output_dir)
-
-    # Vocabulary overlap visualization
-    vocab_overlap = analyze_vocabulary_overlap(tokenizers)
-    plot_vocab_overlap(vocab_overlap, output_dir)
-
-    # Language differences visualization
-    lang_diff = analyze_language_differences(tokenizers)
-    plot_language_diff(lang_diff, output_dir)
-
-    # Token length distribution visualization
-    token_lengths = analyze_token_length_distribution(tokenizers)
-    plot_token_length_dist(token_lengths, output_dir)
-
-    # Save all raw data
-    save_all_data(cat_diff, vocab_overlap, lang_diff, token_lengths, output_dir)
-
-
 def plot_categorical_diff(df: pd.DataFrame, output_dir: str):
     """Plot categorical differences"""
-    plt.figure(figsize=(12, 8))
+    fig, axs = plt.subplots(1, 3, figsize=(18, 6))
     cols = ["algorithm", "number_handling", "vocab_size"]
     for i, col in enumerate(cols):
-        plt.subplot(2, 2, i + 1)
+        # plt.subplot(2, 2, i + 1)
+        ax = axs[i]
         if col == "vocab_size":
-            sns.barplot(x="tokenizer", y=col, data=df)
-            plt.yscale("log")
-            plt.title(f"Vocabulary Size (log scale)")
+            sns.barplot(x="tokenizer", y=col, data=df, ax=ax)
+            ax.set_yscale("log")
+            ax.set_title(f"Vocab. Size")
         else:
             counts = df.groupby(["tokenizer", col]).size().unstack()
-            counts.plot(kind="bar", stacked=True)
-            plt.title(f"Distribution of {col}")
-        plt.xticks(rotation=45)
-        plt.tight_layout()
-    plt.savefig(output_dir / "categorical_differences.png")
+            counts.plot(kind="bar", stacked=True, ax=ax)
+            ax.set_title(f"Distribution of {col}")
+        ax.tick_params(axis="x", rotation=45)
+
+    plt.tight_layout()
+    fig.savefig(output_dir / "categorical_differences.png", bbox_inches="tight")
 
 
 def plot_vocab_overlap(overlap_data: Dict[str, Any], output_dir: str):
@@ -471,7 +455,9 @@ def plot_token_length_dist(distributions: Dict[str, Dict[str, Any]], output_dir:
     plt.savefig(os.path.join(output_dir, "token_length_distribution.png"))
 
 
-def save_all_data(cat_diff, vocab_overlap, lang_diff, token_lengths, output_dir):
+def save_all_data(
+    cat_diff, vocab_overlap, lang_diff, token_lengths, merge_rules, output_dir
+):
     """Save all raw data for further analysis"""
     # Save categorical differences
     cat_diff.to_csv(
@@ -505,6 +491,13 @@ def save_all_data(cat_diff, vocab_overlap, lang_diff, token_lengths, output_dir)
             serializable_dists[name] = serializable_dist
         json.dump(serializable_dists, f, indent=2)
 
+    # Save merge rules
+    with open(os.path.join(output_dir, "merge_rules.json"), "w") as f:
+        # Convert sets to lists for JSON serialization
+        serializable_overlap = merge_rules.copy()
+        # Just save the metrics, not the actual tokens
+        json.dump(serializable_overlap, f, indent=2)
+
 
 def generate_report(output_dir: str = "./tokenizer_analysis"):
     """Generate a comprehensive report of the analysis"""
@@ -517,31 +510,47 @@ def analyze_all(output_dir: str = "./tokenizer_analysis"):
     output_dir.mkdir(parents=True, exist_ok=True)
 
 
-def run_analysis(config, models, tokenizers):
+def run_analysis(config, models, tokenizers, logger):
     ## 1. static analysis
     tokenizer_info = dict()
     for tokenizer_name, tokenizer in tokenizers.items():
         tokenizer_info[tokenizer_name] = get_tokenizer_info(tokenizer)
     # Run all analyses
-    categorical = analyze_categorical_differences(tokenizers, tokenizer_info)
-    vocabulary = analyze_vocabulary_overlap(tokenizers)
-    language = analyze_language_differences(tokenizers)
-    token_lengths = analyze_token_length_distribution(tokenizers)
-    merge_rules = analyze_merge_rules(tokenizers)
+    cat_diff = analyze_categorical_differences(tokenizers, tokenizer_info, logger)
+    vocab_overlap = analyze_vocabulary_overlap(tokenizers, logger)
+    lang_diff = analyze_language_differences(tokenizers, logger)
+    token_lengths = analyze_token_length_distribution(tokenizers, logger)
+    merge_rules = analyze_merge_rules(tokenizers, logger)
 
-    # Generate visualizations
-    visualize_results(tokenizers, tokenizer_info, config.experiment_dir)
+    logger.info("Generating visualizations...")
+    # Categorical differences visualization
+    plot_categorical_diff(cat_diff, config.experiment_dir)
+    # Vocabulary overlap visualization
+    plot_vocab_overlap(vocab_overlap, config.experiment_dir)
+    # Language differences visualization
+    plot_language_diff(lang_diff, config.experiment_dir)
+    # Token length distribution visualization
+    plot_token_length_dist(token_lengths, config.experiment_dir)
 
+    # Save all raw data
+    save_all_data(
+        cat_diff,
+        vocab_overlap,
+        lang_diff,
+        token_lengths,
+        merge_rules,
+        config.experiment_dir,
+    )
     # Generate report
     generate_report(config.experiment_dir)
 
-    print(f"Analysis complete. Results saved to {config.experiment_dir}")
+    logger.info(f"Analysis complete. Results saved to {config.experiment_dir}")
 
     # Return summary of results
     return {
-        "categorical": categorical,
-        "vocabulary": vocabulary,
-        "language": language,
+        "categorical": cat_diff,
+        "vocabulary": vocab_overlap,
+        "language": lang_diff,
         "token_lengths": token_lengths,
         "merge_rules": merge_rules,
     }
@@ -549,12 +558,11 @@ def run_analysis(config, models, tokenizers):
 
 def main():
     """Entry point for translate command."""
+    setup_styles()
     config = load_config(TokenizerComparisonConfig)
     models, tokenizers, logger, device = setup_tokenizer_environment(config)
-    run_analysis(config, models, tokenizers)
+    run_analysis(config, models, tokenizers, logger)
 
 
 if __name__ == "__main__":
     main()
-
-# python xarch_tokenizers/scripts/compare_tokenizers.py --tokenizer_names meta-llama/Llama-3.2-1B-Instruct  meta-llama/Meta-Llama-3.1-8B-Instruct meta-llama/Meta-Llama-3-8B-Instruct Qwen/Qwen2.5-3B-Instruct

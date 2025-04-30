@@ -1,0 +1,314 @@
+{
+    "test_sets": [
+        {
+            "set_id": 1,
+            "category": "Rare Character Sequences",
+            "title": "Icelandic Volcano",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What year did Eyjafjallajökull erupt and disrupt European air travel?",
+                    "tokenization_type": "original"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What year did Eyja fjalla jökull erupt and disrupt European air travel?",
+                    "tokenization_type": "split_components"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "What year did Eyjafjalla jokull erupt and disrupt European air travel?",
+                    "tokenization_type": "simplified"
+                }
+            ],
+            "targets": [
+                "2010"
+            ]
+        },
+        {
+            "set_id": 2,
+            "category": "Rare Character Sequences",
+            "title": "Welsh Village",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "In which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?",
+                    "tokenization_type": "original"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "In which country is Llanfair pwllgwyngyll located?",
+                    "tokenization_type": "split_shortened"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "In which country is Llanfair PG located?",
+                    "tokenization_type": "abbreviated"
+                }
+            ],
+            "targets": [
+                "Wales",
+                "United Kingdom"
+            ]
+        },
+        {
+            "set_id": 3,
+            "category": "Rare Character Sequences",
+            "title": "Long Medical Term",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?",
+                    "tokenization_type": "original"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What type of condition is Pneumono ultra microscopic silico volcano coniosis?",
+                    "tokenization_type": "split_components"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "What type of condition is Pneumoconiosis?",
+                    "tokenization_type": "simplified"
+                }
+            ],
+            "targets": [
+                "lung disease"
+            ]
+        },
+        {
+            "set_id": 4,
+            "category": "Rare Character Sequences",
+            "title": "Māori Hill",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "In which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?",
+                    "tokenization_type": "original"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "In which country is Taumata whakatangi hangakoauau o tamatea located?",
+                    "tokenization_type": "partial"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "In which country is Taumata hill located?",
+                    "tokenization_type": "simplified"
+                }
+            ],
+            "targets": [
+                "New Zealand"
+            ]
+        },
+        {
+            "set_id": 5,
+            "category": "Rare Character Sequences",
+            "title": "Russian Greeting",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What is the English translation of \"Привет, как дела?\"",
+                    "tokenization_type": "original_cyrillic"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What is the English translation of \"Privet, kak dela?\"",
+                    "tokenization_type": "transliterated"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "What is the English translation of \"привет как дела\"?",
+                    "tokenization_type": "no_punctuation"
+                }
+            ],
+            "targets": [
+                "\"Hello, how are you?\"",
+                "Hello, how are you?",
+                "Hello how are you",
+                "\"Hi, how are you doing?\"",
+                "Hi, how are you doing?",
+                "Hi how are you doing"
+            ]
+        },
+        {
+            "set_id": 6,
+            "category": "Compound Words",
+            "title": "Healthcare",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What sector does healthcare belong to: public, private, or both?",
+                    "tokenization_type": "single_word"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What sector does health care belong to: public, private, or both?",
+                    "tokenization_type": "two_words"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "What sector does health-care belong to: public, private, or both?",
+                    "tokenization_type": "hyphenated"
+                }
+            ],
+            "targets": [
+                "both",
+                "public and private"
+            ]
+        },
+        {
+            "set_id": 7,
+            "category": "Compound Words",
+            "title": "Database",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "In one word, what is the main function of a database in computing?",
+                    "tokenization_type": "single_word"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "In one word, what is the main function of a data base in computing?",
+                    "tokenization_type": "two_words"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "In one word, what is the main function of a data-base in computing?",
+                    "tokenization_type": "hyphenated"
+                }
+            ],
+            "targets": [
+                "storage",
+                "store"
+            ]
+        },
+        {
+            "set_id": 8,
+            "category": "Compound Words",
+            "title": "Cryptocurrency",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What technology underlies most cryptocurrency systems?",
+                    "tokenization_type": "single_word"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What technology underlies most crypto currency systems?",
+                    "tokenization_type": "two_words"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "What technology underlies most crypto-currency systems?",
+                    "tokenization_type": "hyphenated"
+                }
+            ],
+            "targets": [
+                "Blockchain"
+            ]
+        },
+        {
+            "set_id": 9,
+            "category": "Compound Words",
+            "title": "Socioeconomic",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Complete this pair: socioeconomic status combines _____ factors and economic factors.",
+                    "tokenization_type": "single_word"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Complete this pair: socio economic status combines _____ factors and economic factors.",
+                    "tokenization_type": "two_words"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Complete this pair: socio-economic status combines _____ factors and economic factors.",
+                    "tokenization_type": "hyphenated"
+                }
+            ],
+            "targets": [
+                "social"
+            ]
+        },
+        {
+            "set_id": 10,
+            "category": "Compound Words",
+            "title": "Webpage",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What markup language is primarily used to create a webpage?",
+                    "tokenization_type": "single_word"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What markup language is primarily used to create a web page?",
+                    "tokenization_type": "two_words"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "What markup language is primarily used to create a web-page?",
+                    "tokenization_type": "hyphenated"
+                }
+            ],
+            "targets": [
+                "HTML (Hypertext Markup Language)",
+                "Hypertext Markup Language",
+                "HTML"
+            ]
+        },
+        {
+            "set_id": 11,
+            "category": "Technical Terminology",
+            "title": "TensorFlow",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Which company developed TensorFlow?",
+                    "tokenization_type": "standard_capitalization"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Which company developed Tensorflow?",
+                    "tokenization_type": "alternative_capitalization"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Which company developed tensor flow?",
+                    "tokenization_type": "split_words"
+                }
+            ],
+            "targets": [
+                "Google"
+            ]
+        },
+        {
+            "set_id": 12,
+            "category": "Technical Terminology",
+            "title": "JavaScript",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Is JavaScript the same programming language as Java?",
+                    "tokenization_type": "standard_capitalization"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Is Javascript the same programming language as Java?",
+                    "tokenization_type": "alternative_capitalization"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Is java script the same programming language as Java?",
+                    "tokenization_type": "split_words"
+                }
+            ],
+            "targets": [
+                "No"
+            ]
+        }
+    ]
+}
