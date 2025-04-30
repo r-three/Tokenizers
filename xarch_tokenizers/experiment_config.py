@@ -4,8 +4,7 @@ from pathlib import Path
 from typing import List, Literal, Optional
 
 from transformers import HfArgumentParser
-
-from tokenizers.config import Config
+from xarch_tokenizers.config import Config
 
 
 @dataclass

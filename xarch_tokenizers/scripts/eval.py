@@ -9,14 +9,13 @@ import wandb
 from lm_eval import evaluator
 from lm_eval.models.huggingface import HFLM
 from tabulate import tabulate
-
-from tokenizers.data.lm_eval import get_new_manager, load_tasks_with_overrides
-from tokenizers.experiment_config import EvaluationConfig, load_config
-from tokenizers.logging.logger import setup_logger
-from tokenizers.logging.wandb_utils import setup_wandb
-from tokenizers.models import load_tokenizer
-from tokenizers.utils.lm_eval import dump_predictions
-from tokenizers.utils.system import VECTOR_HF_MAPPING
+from xarch_tokenizers.data.lm_eval import get_new_manager, load_tasks_with_overrides
+from xarch_tokenizers.experiment_config import EvaluationConfig, load_config
+from xarch_tokenizers.logging.logger import setup_logger
+from xarch_tokenizers.logging.wandb_utils import setup_wandb
+from xarch_tokenizers.models import load_tokenizer
+from xarch_tokenizers.utils.lm_eval import dump_predictions
+from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING
 
 
 def setup_lm_eval_environment(config):

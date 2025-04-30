@@ -30,7 +30,7 @@ class TestEnvironmentSetup(TestExperiment):
             "lm_eval.models.huggingface.HFLM", return_value=mock_model
         ) as mock_hflm, patch("torch.cuda.is_available", return_value=True):
             # Call the function to test
-            from tokenizers.scripts.eval import setup_lm_eval_environment
+            from xarch_tokenizers.scripts.eval import setup_lm_eval_environment
 
             model, tokenizer, logger, device = setup_lm_eval_environment(config)
 
@@ -69,7 +69,10 @@ class TestEvaluation(TestExperiment):
         """
         # Get config from setup
         config = setup["config"]
-        from tokenizers.scripts.eval import run_evaluation, setup_lm_eval_environment
+        from xarch_tokenizers.scripts.eval import (
+            run_evaluation,
+            setup_lm_eval_environment,
+        )
 
         model, tokenizer, logger, device = setup_lm_eval_environment(config)
         results, tasks = run_evaluation(config, model)
@@ -95,7 +98,7 @@ class TestResultsSaving(TestExperiment):
         ]
 
         # Call the function to test
-        from tokenizers.scripts.eval import save_results
+        from xarch_tokenizers.scripts.eval import save_results
 
         save_results(processed_results, config)
 

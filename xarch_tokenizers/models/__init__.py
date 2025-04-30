@@ -11,8 +11,7 @@ import torch
 import transformer_lens
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from vllm import LLM
-
-from tokenizers.utils.system import VECTOR_HF_MAPPING, Hosts, get_host
+from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING, Hosts, get_host
 
 
 def load_tokenizer(model_name: str) -> AutoTokenizer:

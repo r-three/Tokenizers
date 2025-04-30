@@ -14,7 +14,7 @@ from rich import box
 from rich.console import Console
 from rich.table import Table
 
-from tokenizers.data.data_config import TaskConfig
+from xarch_tokenizers.data.data_config import TaskConfig
 
 logger = logging.getLogger(__file__)
 
@@ -159,12 +159,10 @@ class Config:
         # Generate a unique experiment path including timestamp
         if self.experiment_name == "xarch":
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            self.experiment_name = (
-                "xarch_%s_%s",
+            self.experiment_name = "xarch_%s_%s" % (
                 self.model_name.rsplit("/", maxsplit=1)[-1],
                 timestamp,
             )
-
         self.experiment_dir = self.save_dir / self.experiment_name
         self.experiment_dir.mkdir(parents=True, exist_ok=True)
         # Auto-detect GPU count for tensor parallelism if not specified
@@ -389,6 +387,7 @@ class Config:
             console.print(ds_table)
 
         # return console.export_text()
+        # TODO; add experiment specific configs
 
     def __repr__(self) -> str:
         """Return a simple string representation for debugging."""

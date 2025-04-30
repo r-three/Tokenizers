@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock, patch
 
-from tokenizers.logging.wandb_utils import setup_wandb
+from xarch_tokenizers.logging.wandb_utils import setup_wandb
 
 from .test_experiment import TestExperiment
 

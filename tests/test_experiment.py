@@ -4,8 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 import pytest
-
-from tokenizers.experiment_config import EvaluationConfig, load_config
+from xarch_tokenizers.experiment_config import EvaluationConfig, load_config
 
 
 class TestExperiment:

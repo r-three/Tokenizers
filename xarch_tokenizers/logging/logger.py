@@ -3,7 +3,7 @@
 import logging
 from pathlib import Path
 
-from tokenizers.config import Config
+from xarch_tokenizers.config import Config
 
 
 def setup_logger(config: "Config", name: str = "") -> logging.Logger:

@@ -14,9 +14,8 @@ from huggingface_hub import HfApi, create_repo, login
 from transformers import (
     HfArgumentParser,
 )
-
-from tokenizers.config import Config
-from tokenizers.logging.logger import setup_logger
+from xarch_tokenizers.config import Config
+from xarch_tokenizers.logging.logger import setup_logger
 
 
 @dataclass

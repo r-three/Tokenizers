@@ -10,10 +10,10 @@ from unittest.mock import patch
 import pytest
 import yaml
 from transformers import HfArgumentParser
+from xarch_tokenizers.config import Config
+from xarch_tokenizers.experiment_config import EvaluationConfig, load_config
 
 from tests.test_experiment import TestExperiment
-from tokenizers.config import Config
-from tokenizers.experiment_config import EvaluationConfig, load_config
 
 
 class TestConfig(TestExperiment):
