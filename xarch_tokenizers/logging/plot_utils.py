@@ -2,9 +2,13 @@ import os
 from pathlib import Path
 
 import matplotlib as mpl
+import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import plotly.graph_objects as go
+import plotly.io as pio
+import requests
 import seaborn as sns
 from matplotlib.cm import viridis
 from matplotlib.colors import to_hex
@@ -36,25 +40,46 @@ TASK_TO_PLOT_MAPPING = {
 }
 
 
-def setup_styles():
-    import matplotlib.font_manager as fm
+def download_font():
+    """Download the Atkinson Hyperlegible font if it doesn't exist"""
+    # Define the font URL
+    font_url = "https://github.com/googlefonts/atkinson-hyperlegible/archive/main.zip"
+    # Create fonts directory in user home if it doesn't exist
+    fonts_dir = Path(os.environ.get("HOME"), ".fonts")
+    fonts_dir.mkdir(exist_ok=True)
+    font_path = fonts_dir / "AtkinsonHyperlegible-Regular.ttf"
+    # Only download if the font doesn't already exist
+    if not font_path.exists():
+        import tempfile
+        import zipfile
 
-    font_path = Path(
-        os.environ.get("HOME"), "Library/Fonts/AtkinsonHyperlegible-Regular.ttf"
-    )
-    # Find all Atkinson Hyperlegible font files you have
-    font_files = [
-        font_path.with_stem(f"AtkinsonHyperlegible-{setting}")
-        for setting in ["Regular", "Bold", "Italic", "BoldItalic"]
-    ]
+        print(f"Downloading Atkinson Hyperlegible font...")
+        # Download the zip file to a temporary location
+        with tempfile.NamedTemporaryFile(suffix=".zip", delete=False) as temp_file:
+            response = requests.get(font_url, stream=True)
+            response.raise_for_status()  # Ensure we got a successful response
+            for chunk in response.iter_content(chunk_size=8192):
+                temp_file.write(chunk)
+            temp_path = temp_file.name
+        # Extract the font file from the zip
+        with zipfile.ZipFile(temp_path, "r") as zip_ref:
+            # Find the regular TTF file in the zip
+            for zip_info in zip_ref.infolist():
+                if zip_info.filename.endswith("Regular.ttf"):
+                    # Extract with the new name
+                    zip_info.filename = os.path.basename(font_path)
+                    zip_ref.extract(zip_info, fonts_dir)
+                    print(f"Font extracted to {font_path}")
+                    break
+        # Clean up the temporary file
+        os.unlink(temp_path)
+        # Update matplotlib font cache
+        fm.fontManager.addfont(str(font_path))
+    return font_path
 
-    # Register each font file
-    for font_file in font_files:
-        if os.path.exists(font_file):
-            fm.fontManager.addfont(font_file)
-    # Add the font file to matplotlib's font manager
-    custom_font = fm.FontProperties(fname=font_path)
 
+def setup_styles_matplotlib(custom_font):
+    """Setup global styles for matplotlib"""
     sns.set_style("whitegrid")
     # Set global font sizes
     plt.rcParams.update(
@@ -71,6 +96,93 @@ def setup_styles():
             "figure.titlesize": 16,  # Figure title font size
         }
     )
+
+
+def setup_styles_plotly(custom_font):
+    """Setup global styles for plotly"""
+    # Set up Plotly template
+    template = go.layout.Template()
+
+    # Define custom font settings for Plotly
+    font_settings = {
+        "family": "Atkinson Hyperlegible, Arial, sans-serif",
+        "size": 14,
+        "color": "#333333",
+    }
+
+    # Set the global font
+    template.layout.font = font_settings
+
+    # Set title font
+    template.layout.title = {
+        "font": {
+            "family": font_settings["family"],
+            "size": 16,
+            "color": font_settings["color"],
+        },
+        "x": 0.5,  # Center title
+        "xanchor": "center",
+    }
+
+    # Set axis styling
+    axis_settings = {
+        "titlefont": {
+            "family": font_settings["family"],
+            "size": 14,
+            "color": font_settings["color"],
+        },
+        "tickfont": {
+            "family": font_settings["family"],
+            "size": 14,
+            "color": font_settings["color"],
+        },
+        "gridcolor": "#E5E5E5",  # Similar to whitegrid in seaborn
+        "linecolor": "#E5E5E5",
+    }
+
+    # Apply axis settings to template
+    template.layout.xaxis = axis_settings
+    template.layout.yaxis = axis_settings
+
+    # Set legend styling
+    template.layout.legend = {
+        "font": {
+            "family": font_settings["family"],
+            "size": 14,
+            "color": font_settings["color"],
+        },
+        "bgcolor": "rgba(255, 255, 255, 0.5)",
+        "bordercolor": "#E5E5E5",
+        "borderwidth": 1,
+    }
+
+    # Set plot background
+    template.layout.plot_bgcolor = "white"
+    template.layout.paper_bgcolor = "white"
+
+    # Apply margin
+    template.layout.margin = {"l": 60, "r": 40, "t": 60, "b": 60}
+
+    # Set the template as default
+    pio.templates["custom"] = template
+    pio.templates.default = "custom"
+
+
+def setup_styles():
+    font_path = download_font()
+    # Find all Atkinson Hyperlegible font files you have
+    font_files = [
+        font_path.with_stem(f"AtkinsonHyperlegible-{setting}")
+        for setting in ["Regular", "Bold", "Italic", "BoldItalic"]
+    ]
+    # Register each font file
+    for font_file in font_files:
+        if os.path.exists(font_file):
+            fm.fontManager.addfont(font_file)
+    # Add the font file to matplotlib's font manager
+    custom_font = fm.FontProperties(fname=font_path)
+    setup_styles_matplotlib(custom_font)
+    setup_styles_plotly(custom_font)
 
 
 # Define base colors for each model family
