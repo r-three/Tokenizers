@@ -309,6 +309,361 @@
             "targets": [
                 "No"
             ]
+        },
+        {
+            "set_id": 13,
+            "category": "Multi-linguality",
+            "title": "Afyonkarahisar",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Afyonkarahisarlılaştıramadıklarımızdan olduğu söyleniyor. Burada hangi şehirden bahsediliyor?",
+                    "tokenization_type": "turkish_agglutinative_complete"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Afyon karahi sar lı laş tır ama dık lar ımız dan olduğu söyleniyor. Burada hangi şehirden bahsediliyor?",
+                    "tokenization_type": "turkish_morpheme_split"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Afyonkarahisarlilaştiramadiklarimizdan olduğu söyleniyor. Burada hangi şehirden bahsediliyor?",
+                    "tokenization_type": "turkish_no_diacritics"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Afyonkarahisarlilaştiramadiklarimizdan olduğu soyleniyor. Burada hangi sehirden bahsediliyor?",
+                    "tokenization_type": "turkish_no_diacritics"
+                },
+                {
+                    "variant_id": "Q5",
+                    "question": "He is said to be 'Afyonkarahisarlılaştıramadıklarımızdan'. Which city in Turkey is mentioned in this word?",
+                    "tokenization_type": "english_with_turkish_word"
+                },
+                {
+                    "variant_id": "Q6",
+                    "question": "He is said to be 'Afyonkarahisarlilaştiramadiklarimizdan'. Which city in Turkey is mentioned in this word?",
+                    "tokenization_type": "english_with_turkish_word_no_diacritics"
+                }
+            ],
+            "targets": ["Afyonkarahisar", "Afyon"],
+            "notes": "The question asks 'It is said that they are one of those whom we couldn't make citizens of Afyonkarahisar. Which city is mentioned here?'"
+         },
+        {
+            "set_id": 14,
+            "category": "Multi-linguality",
+            "title": "Oeufs",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "What is the plural form of 'oeuf' in French?",
+                    "tokenization_type": "basic_question"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "What is the plural form of \"l'œuf\" in French?",
+                    "tokenization_type": "basic_question"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Dans la phrase 'J'ai acheté un oeuf', quel est le pluriel de 'oeuf'?",
+                    "tokenization_type": "french_sentence_standard"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Dans la phrase 'J'ai acheté un œuf', quel est le pluriel de 'œuf'?",
+                    "tokenization_type": "french_sentence_ligature"
+                }
+            ],
+            "targets": ["oeufs", "œufs", "des oeufs", "les oeufs", "des œufs", "les œufs"],
+            "notes": "Both 'oeufs' and 'œufs' are correct, with the latter using the ligature character."
+         },
+         {
+            "set_id": 15,
+            "category": "Multi-linguality",
+            "title": "Gul",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Gul Sena is a PhD student in machine learning. What does Gul Sena study?",
+                    "tokenization_type": "english_no_diacritics"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Gül Sena is a PhD student in machine learning. What does Gül Sena study?",
+                    "tokenization_type": "english_with_diacritics"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Gül Sena makine öğrenmesi alanında doktora öğrencisidir. Gül Sena ne çalışıyor?",
+                    "tokenization_type": "turkish_with_diacritics"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Gul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?",
+                    "tokenization_type": "turkish_no_diacritics"
+                }
+            ],
+            "targets": ["machine learning", "makine öğrenmesi", "ML", "artificial intelligence", "yapay zeka"],
+            "notes": "The precise answer is 'machine learning' or its Turkish equivalent 'makine öğrenmesi'"
+         },
+         {
+            "set_id": 16,
+            "category": "Multi-linguality",
+            "title": "German Compound",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Die Donaudampfschifffahrtsgesellschaftskapitänswitwe trauert um ihren Mann. Welches Transportmittel wird hier erwähnt?",
+                    "tokenization_type": "german_compound_complete"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Die Donau dampf schiff fahrts gesellschafts kapitäns witwe trauert um ihren Mann. Welches Transportmittel wird hier erwähnt?",
+                    "tokenization_type": "german_compound_split"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "The Donaudampfschifffahrtsgesellschaftskapitänswitwe mourns her husband. Which mode of transportation is mentioned in this word?",
+                    "tokenization_type": "english_with_german_compound"
+                }
+            ],
+            "targets": ["Schiff", "ship", "steamship", "Dampfschiff", "steamboat"],
+            "notes": "The question asks about the widow of a Danube steamship company captain and which transportation method is mentioned."
+        },
+        {
+            "set_id": 17,
+            "category": "Multi-linguality",
+            "title": "Chinese Characters",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "北京是中华人民共和国的首都。这个句子中提到了哪个城市？",
+                    "tokenization_type": "simplified_chinese"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "北 京 是 中 华 人 民 共 和 国 的 首 都。这 个 句 子 中 提 到 了 哪 个 城 市？",
+                    "tokenization_type": "character_split_chinese"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Beijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong tìdao le nage chengshi?",
+                    "tokenization_type": "pinyin_no_tones"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Běijīng shì Zhōnghuá Rénmín Gònghéguó de shǒudū. Zhège jùzi zhōng tídào le nǎge chéngshì?",
+                    "tokenization_type": "pinyin_with_tones"
+                }
+            ],
+            "targets": ["Beijing", "Běijīng", "北京"],
+            "notes": "The sentence states 'Beijing is the capital of the People's Republic of China. Which city is mentioned in this sentence?'"
+        },
+        {
+            "set_id": 18,
+            "category": "Multi-linguality",
+            "title": "Arabic Diacritics",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "مُحَمَّد يَدْرُسُ اللُّغَةَ العَرَبِيَّةَ فِي الجَامِعَةِ. مَاذَا يَدْرُسُ مُحَمَّد؟",
+                    "tokenization_type": "arabic_with_diacritics"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "محمد يدرس اللغة العربية في الجامعة. ماذا يدرس محمد؟",
+                    "tokenization_type": "arabic_without_diacritics"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Mohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?",
+                    "tokenization_type": "arabic_transliterated"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Muhammad is studying Arabic language at the university. What is Muhammad studying?",
+                    "tokenization_type": "english_translation"
+                }
+            ],
+            "targets": ["Arabic", "Arabic language", "اللغة العربية", "allughata al'arabiyata"],
+            "notes": "The sentence states 'Muhammad is studying Arabic language at the university. What is Muhammad studying?'"
+        },
+        {
+            "set_id": 19,
+            "category": "Multi-linguality",
+            "title": "Russian Case",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Я живу в Санкт-Петербурге и работаю в университете. В каком городе я живу?",
+                    "tokenization_type": "russian_cyrillic"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "Ya zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?",
+                    "tokenization_type": "russian_transliterated"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Я живу в Санкт Петербурге и работаю в университете. В каком городе я живу?",
+                    "tokenization_type": "russian_unhyphenated"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "I live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)",
+                    "tokenization_type": "english_with_russian_case"
+                }
+            ],
+            "targets": ["Saint Petersburg", "St. Petersburg", "Sankt-Petersburg", "Санкт-Петербург"],
+            "notes": "The question asks 'I live in Saint Petersburg and work at the university. In which city do I live?' Note that 'Санкт-Петербурге' is in the prepositional case in Russian."
+        },
+        {
+            "set_id": 20,
+            "category": "Multi-linguality",
+            "title": "Japanese Scripts",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "東京オリンピックは2021年に開催されました。いつオリンピックが開催されましたか？",
+                    "tokenization_type": "japanese_mixed_scripts"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "とうきょうオリンピックは2021ねんにかいさいされました。いつオリンピックがかいさいされましたか？",
+                    "tokenization_type": "japanese_hiragana_katakana"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Tokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?",
+                    "tokenization_type": "japanese_romaji"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "東京 オリンピック は 2021 年 に 開催 さ れ まし た。いつ オリンピック が 開催 さ れ まし た か？",
+                    "tokenization_type": "japanese_word_split"
+                }
+            ],
+            "targets": ["2021"],
+            "notes": "The sentence states 'The Tokyo Olympics were held in 2021. When were the Olympics held?'"
+        },
+        {
+            "set_id": 21,
+            "category": "Multi-linguality",
+            "title": "Bengali Script",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "বিশ্বের সবচেয়ে দীর্ঘ নদী হল নীল নদী। বিশ্বের সবচেয়ে দীর্ঘ নদী কোনটি?",
+                    "tokenization_type": "bengali_standard"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "বিশ্ব এর সব চেয়ে দীর্ঘ নদী হল নীল নদী। বিশ্ব এর সব চেয়ে দীর্ঘ নদী কোন টি?",
+                    "tokenization_type": "bengali_split"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Bishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?",
+                    "tokenization_type": "bengali_transliterated"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "The longest river in the world is the Nile River. Which is the longest river in the world?",
+                    "tokenization_type": "english_translation"
+                }
+            ],
+            "targets": ["Nile", "Nile River", "নীল নদী", "Neel nodi"],
+            "notes": "The sentence states 'The longest river in the world is the Nile River. Which is the longest river in the world?'"
+        },
+        {
+            "set_id": 22,
+            "category": "Multi-linguality",
+            "title": "Swahili Noun Classes",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "Mlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?",
+                    "tokenization_type": "swahili_standard"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "M lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?",
+                    "tokenization_type": "swahili_morpheme_split"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Mount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?",
+                    "tokenization_type": "english_translation"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Mlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?",
+                    "tokenization_type": "swahili_alternative_phrasing"
+                }
+            ],
+            "targets": ["Kilimanjaro", "Mount Kilimanjaro", "Mlima Kilimanjaro"],
+            "notes": "The sentence states 'Mount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?'"
+        },
+        {
+            "set_id": 23,
+            "category": "Multi-linguality",
+            "title": "Thai Script",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "กรุงเทพมหานครเป็นเมืองหลวงของประเทศไทย เมืองหลวงของประเทศไทยคืออะไร?",
+                    "tokenization_type": "thai_standard"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "กรุง เทพ มหา นคร เป็น เมือง หลวง ของ ประเทศ ไทย เมือง หลวง ของ ประเทศ ไทย คือ อะไร?",
+                    "tokenization_type": "thai_word_split"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Krung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?",
+                    "tokenization_type": "thai_transliterated"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Bangkok is the capital city of Thailand. What is the capital city of Thailand?",
+                    "tokenization_type": "english_translation"
+                }
+            ],
+            "answer": "Bangkok",
+            "acceptable_answers": ["Bangkok", "Krung Thep", "กรุงเทพมหานคร", "กรุงเทพ", "Krung Thep Maha Nakhon"],
+            "notes": "The sentence states 'Bangkok is the capital city of Thailand. What is the capital city of Thailand?' Note that the full ceremonial name of Bangkok in Thai is extremely long."
+        },
+        {
+            "set_id": 24,
+            "category": "Multi-linguality",
+            "title": "Telugu Script",
+            "variants": [
+                {
+                    "variant_id": "Q1",
+                    "question": "హైదరాబాద్ తెలంగాణ రాష్ట్ర రాజధాని. తెలంగాణ రాజధాని ఏమిటి?",
+                    "tokenization_type": "telugu_standard"
+                },
+                {
+                    "variant_id": "Q2",
+                    "question": "హైదరాబాద్ తెలంగాణ రాష్ట్ర రాజ ధాని. తెలంగాణ రాజ ధాని ఏమిటి?",
+                    "tokenization_type": "telugu_partial_split"
+                },
+                {
+                    "variant_id": "Q3",
+                    "question": "Hyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?",
+                    "tokenization_type": "telugu_transliterated"
+                },
+                {
+                    "variant_id": "Q4",
+                    "question": "Hyderabad is the capital of Telangana state. What is the capital of Telangana?",
+                    "tokenization_type": "english_translation"
+                }
+            ],
+            "answer": "Hyderabad",
+            "acceptable_answers": ["Hyderabad", "హైదరాబాద్"],
+            "notes": "The sentence states 'Hyderabad is the capital of Telangana state. What is the capital of Telangana?'"
         }
     ]
 }
