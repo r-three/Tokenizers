@@ -1,0 +1,4248 @@
+{
+  "tokenization_robustness": [
+    {
+      "doc_id": 0,
+      "doc": {
+        "id": "1_Q1",
+        "question": "What year did Eyjafjallaj\u00f6kull erupt and disrupt European air travel?",
+        "answer": "2010",
+        "all_targets": [
+          "2010"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "Icelandic Volcano",
+        "set_id": "1"
+      },
+      "target": "2010",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat year did Eyjafjallaj\u00f6kull erupt and disrupt European air travel?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The eruption of Eyjafjallaj\u00f6kull that disrupted European air travel occurred in 2010. Specifically, the initial eruption began on March 20, 2010, but it was the subsequent eruption from April 14 to April 22, 2010, that led to widespread flight cancellations across Europe due to the resulting ash cloud."
+        ]
+      ],
+      "filtered_resps": [
+        "The eruption of Eyjafjallaj\u00f6kull that disrupted European air travel occurred in 2010. Specifically, the initial eruption began on March 20, 2010, but it was the subsequent eruption from April 14 to April 22, 2010, that led to widespread flight cancellations across Europe due to the resulting ash cloud."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c1634ae969ca3e4628e2b98432a334cbebe66294bcabb3d713d30612d2b2c73a",
+      "prompt_hash": "727c407cfc4bf5c3cfc1470b1f062f3a7e80bd9beb63503f85f738f3df32a7df",
+      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 1,
+      "doc": {
+        "id": "1_Q2",
+        "question": "What year did Eyja fjalla j\u00f6kull erupt and disrupt European air travel?",
+        "answer": "2010",
+        "all_targets": [
+          "2010"
+        ],
+        "tokenization_type": "split_components",
+        "category": "Rare Character Sequences",
+        "title": "Icelandic Volcano",
+        "set_id": "1"
+      },
+      "target": "2010",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat year did Eyja fjalla j\u00f6kull erupt and disrupt European air travel?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Eyjafjallaj\u00f6kull erupted in 2010, and this eruption caused significant disruption to European air travel. The eruption began on March 20, 2010, and the airspace over much of Europe was closed for several days due to concerns about ash clouds affecting aircraft engines."
+        ]
+      ],
+      "filtered_resps": [
+        "Eyjafjallaj\u00f6kull erupted in 2010, and this eruption caused significant disruption to European air travel. The eruption began on March 20, 2010, and the airspace over much of Europe was closed for several days due to concerns about ash clouds affecting aircraft engines."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5284a93ce78bd1d49a1fe5a0805d441f7303b505630bfc01b8e80d5a537bd47d",
+      "prompt_hash": "7f4ea324c4f58d7eed873b8c7f9f5c3e645fd28ec9c41289e5442585da25797a",
+      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 2,
+      "doc": {
+        "id": "1_Q3",
+        "question": "What year did Eyjafjalla jokull erupt and disrupt European air travel?",
+        "answer": "2010",
+        "all_targets": [
+          "2010"
+        ],
+        "tokenization_type": "simplified",
+        "category": "Rare Character Sequences",
+        "title": "Icelandic Volcano",
+        "set_id": "1"
+      },
+      "target": "2010",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat year did Eyjafjalla jokull erupt and disrupt European air travel?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The eruption of Eyjafjallaj\u00f6kull in Iceland that disrupted European air travel occurred in 2010. The eruption began on March 20, 2010, and the ash cloud it produced led to widespread flight cancellations across Europe from April 14 to April 20, 2010."
+        ]
+      ],
+      "filtered_resps": [
+        "The eruption of Eyjafjallaj\u00f6kull in Iceland that disrupted European air travel occurred in 2010. The eruption began on March 20, 2010, and the ash cloud it produced led to widespread flight cancellations across Europe from April 14 to April 20, 2010."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "eb0836ad7ebbba320ad519093ea6a1d82a1c6a1b94bc9baaa5c506ddfa1ec04f",
+      "prompt_hash": "b958cb35bd6b6fa62db98844d04116ec73826db94185734efdc253930c82cb0b",
+      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 3,
+      "doc": {
+        "id": "2_Q1",
+        "question": "In which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?",
+        "answer": "Wales",
+        "all_targets": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "Welsh Village",
+        "set_id": "2"
+      },
+      "target": "Wales",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch is located in Wales, which is a country that is part of the United Kingdom. Specifically, it is situated near the Menai Strait, close to the town of Caernarfon. This village holds the title of the longest place name in Europe."
+        ]
+      ],
+      "filtered_resps": [
+        "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch is located in Wales, which is a country that is part of the United Kingdom. Specifically, it is situated near the Menai Strait, close to the town of Caernarfon. This village holds the title of the longest place name in Europe."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "94dd329e5491054e2a94c8c0e68be33e25b38e3f998dcb8c891ef216cb884d92",
+      "prompt_hash": "badbd74f78db74fe3fc959402891241ccf9ed7f12e944a47a709ff2147b1e3dd",
+      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 4,
+      "doc": {
+        "id": "2_Q2",
+        "question": "In which country is Llanfair pwllgwyngyll located?",
+        "answer": "Wales",
+        "all_targets": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "tokenization_type": "split_shortened",
+        "category": "Rare Character Sequences",
+        "title": "Welsh Village",
+        "set_id": "2"
+      },
+      "target": "Wales",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Llanfair pwllgwyngyll located?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Llanfairpwllgwyngyll is located in Wales, which is a country that forms part of the United Kingdom. It is situated near the Menai Strait, close to the town of Caernarfon. This village holds the title for the longest place name in Britain."
+        ]
+      ],
+      "filtered_resps": [
+        "Llanfairpwllgwyngyll is located in Wales, which is a country that forms part of the United Kingdom. It is situated near the Menai Strait, close to the town of Caernarfon. This village holds the title for the longest place name in Britain."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0a0bd83aaf0c5269dc3bdd9903d6dbfea0e98edcfa71afb74535dcfb4aee9838",
+      "prompt_hash": "86924ebe490fc3913db16f91026bc37d59d56a7523482676125c68048481d366",
+      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 5,
+      "doc": {
+        "id": "2_Q3",
+        "question": "In which country is Llanfair PG located?",
+        "answer": "Wales",
+        "all_targets": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "tokenization_type": "abbreviated",
+        "category": "Rare Character Sequences",
+        "title": "Welsh Village",
+        "set_id": "2"
+      },
+      "target": "Wales",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Llanfair PG located?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Llanfair PG is located in Wales, which is a country that is part of the United Kingdom. The full name \"Llanfair Piainar y Betgyn\" (Llanfair PG) translates from Welsh to \"St Mary's of the Ford on the Mountain Pass.\" It is situated in Gwynedd, one of the twenty-two unitary authorities of Wales."
+        ]
+      ],
+      "filtered_resps": [
+        "Llanfair PG is located in Wales, which is a country that is part of the United Kingdom. The full name \"Llanfair Piainar y Betgyn\" (Llanfair PG) translates from Welsh to \"St Mary's of the Ford on the Mountain Pass.\" It is situated in Gwynedd, one of the twenty-two unitary authorities of Wales."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6f78c784945e1dd2d74b0810ced35b14be41d385249af50efef534f51e68d2d9",
+      "prompt_hash": "ae6569798a6b1c26e126b372a91d4461316206956322cae24aaa60151406b15e",
+      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 6,
+      "doc": {
+        "id": "3_Q1",
+        "question": "What type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?",
+        "answer": "lung disease",
+        "all_targets": [
+          "lung disease"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "Long Medical Term",
+        "set_id": "3"
+      },
+      "target": "lung disease",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Pneumonoultramicroscopicsilicovolcanoconiosis is a type of occupational lung disease. Specifically, it is a form of pneumoconiosis, which is a lung condition caused by the inhalation and retention of very fine particles in the lungs over a long period of time. This particular condition is caused by the inhalation of very fine silica dust, often from volcanic ash or other industrial sources."
+        ]
+      ],
+      "filtered_resps": [
+        "Pneumonoultramicroscopicsilicovolcanoconiosis is a type of occupational lung disease. Specifically, it is a form of pneumoconiosis, which is a lung condition caused by the inhalation and retention of very fine particles in the lungs over a long period of time. This particular condition is caused by the inhalation of very fine silica dust, often from volcanic ash or other industrial sources."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e75be3b43d5699c6d99c978845877c304c5fd3554670e1098df28230c620ebc4",
+      "prompt_hash": "d9860de03f5fad76f45750a325dda8be38c25fa50a71beba6c3d2f261b00102c",
+      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 7,
+      "doc": {
+        "id": "3_Q2",
+        "question": "What type of condition is Pneumono ultra microscopic silico volcano coniosis?",
+        "answer": "lung disease",
+        "all_targets": [
+          "lung disease"
+        ],
+        "tokenization_type": "split_components",
+        "category": "Rare Character Sequences",
+        "title": "Long Medical Term",
+        "set_id": "3"
+      },
+      "target": "lung disease",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat type of condition is Pneumono ultra microscopic silico volcano coniosis?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Pneumono ultra microscopic silico volcano coniosis is not a recognized medical term or condition. It appears to be a nonsensical combination of words that do not form a real medical diagnosis. "
+        ]
+      ],
+      "filtered_resps": [
+        "Pneumono ultra microscopic silico volcano coniosis is not a recognized medical term or condition. It appears to be a nonsensical combination of words that do not form a real medical diagnosis."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "8e9b1e65f87ddcd002ca9b218283608f89e3258c67e710f52fadd749ee51e04e",
+      "prompt_hash": "8800aeb34b7dc3b3338f9a1e383bfe0844ad1ac26d91ced41e00e6f5663a38f0",
+      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 8,
+      "doc": {
+        "id": "3_Q3",
+        "question": "What type of condition is Pneumoconiosis?",
+        "answer": "lung disease",
+        "all_targets": [
+          "lung disease"
+        ],
+        "tokenization_type": "simplified",
+        "category": "Rare Character Sequences",
+        "title": "Long Medical Term",
+        "set_id": "3"
+      },
+      "target": "lung disease",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat type of condition is Pneumoconiosis?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Pneumoconiosis is a type of occupational lung disease that results from the inhalation of dust particles, typically inorganic in nature, over a prolonged period. These dust particles, when inhaled, can cause inflammation and scarring in the lungs, leading to various respiratory problems."
+        ]
+      ],
+      "filtered_resps": [
+        "Pneumoconiosis is a type of occupational lung disease that results from the inhalation of dust particles, typically inorganic in nature, over a prolonged period. These dust particles, when inhaled, can cause inflammation and scarring in the lungs, leading to various respiratory problems."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3510bab534f03a0c3d378115e78150c89f319f3dc537e9e7376bbbe0a0b2bfc9",
+      "prompt_hash": "e7ad72858f67f46f8e7356112d7eb4111a09158cdb8c81618c42f5ce54e8d1ce",
+      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 9,
+      "doc": {
+        "id": "4_Q1",
+        "question": "In which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?",
+        "answer": "New Zealand",
+        "all_targets": [
+          "New Zealand"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "M\u0101ori Hill",
+        "set_id": "4"
+      },
+      "target": "New Zealand",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu is located in New Zealand. Specifically, it is a hill in the Ruahine Range, in the Manawatu region of the North Island. This place name is one of the longest place names in the world, consisting of 85 letters."
+        ]
+      ],
+      "filtered_resps": [
+        "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu is located in New Zealand. Specifically, it is a hill in the Ruahine Range, in the Manawatu region of the North Island. This place name is one of the longest place names in the world, consisting of 85 letters."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "71d1d42566a0930bef277be669d7771d13c9c713280809ad4a0be7c8749aaa37",
+      "prompt_hash": "b9bdc7bfbb7bcbfea657c501c85a346c0494cb10f4c3f736dd53772603396bfb",
+      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 10,
+      "doc": {
+        "id": "4_Q2",
+        "question": "In which country is Taumata whakatangi hangakoauau o tamatea located?",
+        "answer": "New Zealand",
+        "all_targets": [
+          "New Zealand"
+        ],
+        "tokenization_type": "partial",
+        "category": "Rare Character Sequences",
+        "title": "M\u0101ori Hill",
+        "set_id": "4"
+      },
+      "target": "New Zealand",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Taumata whakatangi hangakoauau o tamatea located?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Taumatawhakatangihangakoauauoagematangiikoipuhangapokaiwhenuakitanatahu is located in New Zealand. Specifically, it is situated on the eastern coast of the North Island, near the town of Mahia Peninsula, in the Gisborne region. This place name is one of the longest in the world and is known for its linguistic complexity and cultural significance to the M\u0101ori people."
+        ]
+      ],
+      "filtered_resps": [
+        "Taumatawhakatangihangakoauauoagematangiikoipuhangapokaiwhenuakitanatahu is located in New Zealand. Specifically, it is situated on the eastern coast of the North Island, near the town of Mahia Peninsula, in the Gisborne region. This place name is one of the longest in the world and is known for its linguistic complexity and cultural significance to the M\u0101ori people."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3001a3b2ab5963f7045f8af72ec8c6c6207c2abeb0bde817f55420a8451552d7",
+      "prompt_hash": "dad71afd263cb908c521f2a97b21ff34e42f886d092ef6f858da5ac7e7a00246",
+      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 11,
+      "doc": {
+        "id": "4_Q3",
+        "question": "In which country is Taumata hill located?",
+        "answer": "New Zealand",
+        "all_targets": [
+          "New Zealand"
+        ],
+        "tokenization_type": "simplified",
+        "category": "Rare Character Sequences",
+        "title": "M\u0101ori Hill",
+        "set_id": "4"
+      },
+      "target": "New Zealand",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Taumata hill located?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Taumata Hill is located in New Zealand. Specifically, it is situated in the Wairarapa region, on the eastern coast of the South Island. The hill is known for its unique shape and the long M\u0101ori place name that describes it, which is often simplified to \"Taumata\" or \"Taumatawa.\""
+        ]
+      ],
+      "filtered_resps": [
+        "Taumata Hill is located in New Zealand. Specifically, it is situated in the Wairarapa region, on the eastern coast of the South Island. The hill is known for its unique shape and the long M\u0101ori place name that describes it, which is often simplified to \"Taumata\" or \"Taumatawa.\""
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3d0515990809c14b4965181a7d157f7a16b737e6f4e06267fc1ad202e8937904",
+      "prompt_hash": "95ea18d058abe2562ecb747db7aa98d7601e6ed30c64481321d26fb588ab99ad",
+      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 12,
+      "doc": {
+        "id": "5_Q1",
+        "question": "What is the English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\"",
+        "answer": "\"Hello, how are you?\"",
+        "all_targets": [
+          "\"Hello, how are you?\"",
+          "Hello, how are you?",
+          "Hello how are you",
+          "\"Hi, how are you doing?\"",
+          "Hi, how are you doing?",
+          "Hi how are you doing"
+        ],
+        "tokenization_type": "original_cyrillic",
+        "category": "Rare Character Sequences",
+        "title": "Russian Greeting",
+        "set_id": "5"
+      },
+      "target": "\"Hello, how are you?\"",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\"<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\" is \"Hello, how are you?\""
+        ]
+      ],
+      "filtered_resps": [
+        "The English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\" is \"Hello, how are you?\""
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2b43d7c88bcb9277af645652b459f4fbcfa976b0d350741fedb5fa4663aeffae",
+      "prompt_hash": "e6ffd82f236062441f171176bf9c69ebd76b0214c0142626b0dd656fce5c1756",
+      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 13,
+      "doc": {
+        "id": "5_Q2",
+        "question": "What is the English translation of \"Privet, kak dela?\"",
+        "answer": "\"Hello, how are you?\"",
+        "all_targets": [
+          "\"Hello, how are you?\"",
+          "Hello, how are you?",
+          "Hello how are you",
+          "\"Hi, how are you doing?\"",
+          "Hi, how are you doing?",
+          "Hi how are you doing"
+        ],
+        "tokenization_type": "transliterated",
+        "category": "Rare Character Sequences",
+        "title": "Russian Greeting",
+        "set_id": "5"
+      },
+      "target": "\"Hello, how are you?\"",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the English translation of \"Privet, kak dela?\"<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\"Privet, kak dela?\" translates to \"Hello, how are you?\" in English."
+        ]
+      ],
+      "filtered_resps": [
+        "\"Privet, kak dela?\" translates to \"Hello, how are you?\" in English."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "25511a494a272cdc75c620323ba97aa96cdf92907879c7d56dd1944f33f2b67a",
+      "prompt_hash": "5006219bfa7dec9d76426062aeb91d3dd1d304c32654ee87433b804900275442",
+      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 14,
+      "doc": {
+        "id": "5_Q3",
+        "question": "What is the English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\"?",
+        "answer": "\"Hello, how are you?\"",
+        "all_targets": [
+          "\"Hello, how are you?\"",
+          "Hello, how are you?",
+          "Hello how are you",
+          "\"Hi, how are you doing?\"",
+          "Hi, how are you doing?",
+          "Hi how are you doing"
+        ],
+        "tokenization_type": "no_punctuation",
+        "category": "Rare Character Sequences",
+        "title": "Russian Greeting",
+        "set_id": "5"
+      },
+      "target": "\"Hello, how are you?\"",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\"?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\" is \"hello, how are you?\""
+        ]
+      ],
+      "filtered_resps": [
+        "The English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\" is \"hello, how are you?\""
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "acd629c6ce69d4ed169f7b1fdef5b231994ec38c4e8e4649ca15bb118afb5230",
+      "prompt_hash": "f1c2cd8caaf1933dedbe26c2d316992be20a191a03d447abeb65b4d29a7aa3a6",
+      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 15,
+      "doc": {
+        "id": "6_Q1",
+        "question": "What sector does healthcare belong to: public, private, or both?",
+        "answer": "both",
+        "all_targets": [
+          "both",
+          "public and private"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Healthcare",
+        "set_id": "6"
+      },
+      "target": "both",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat sector does healthcare belong to: public, private, or both?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Healthcare can be part of both the public and private sectors, depending on the country and its healthcare system. Here's a breakdown:"
+        ]
+      ],
+      "filtered_resps": [
+        "Healthcare can be part of both the public and private sectors, depending on the country and its healthcare system. Here's a breakdown:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "954470175f7ed2bbd061f0c1329d763247ac656f5bc881ca14f25f7740f4cfa6",
+      "prompt_hash": "ba12606c7569995e74b5fd7fa037d4e9d6859ca6a49961fa359360c502bdf6f7",
+      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 16,
+      "doc": {
+        "id": "6_Q2",
+        "question": "What sector does health care belong to: public, private, or both?",
+        "answer": "both",
+        "all_targets": [
+          "both",
+          "public and private"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Healthcare",
+        "set_id": "6"
+      },
+      "target": "both",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat sector does health care belong to: public, private, or both?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Health care can be part of both the public and private sectors, depending on the country and its healthcare system. Here's a breakdown:"
+        ]
+      ],
+      "filtered_resps": [
+        "Health care can be part of both the public and private sectors, depending on the country and its healthcare system. Here's a breakdown:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "af743d0a1dd73a55ce5723731047280c569675cac5a5b928c6c753b9afc30478",
+      "prompt_hash": "d3b5979c53465b582f5bb94f320a915fecf7d462d5bd809b7c5d6f01a09e5a34",
+      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 17,
+      "doc": {
+        "id": "6_Q3",
+        "question": "What sector does health-care belong to: public, private, or both?",
+        "answer": "both",
+        "all_targets": [
+          "both",
+          "public and private"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Healthcare",
+        "set_id": "6"
+      },
+      "target": "both",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat sector does health-care belong to: public, private, or both?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Health care can be part of both the public and private sectors, depending on the country and its healthcare system. Here's a breakdown:"
+        ]
+      ],
+      "filtered_resps": [
+        "Health care can be part of both the public and private sectors, depending on the country and its healthcare system. Here's a breakdown:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2ae39220eb7032bbffee1f00f8e7453844fd18bbadb7174371a5613ef3ad2d9a",
+      "prompt_hash": "95c8c82a57fbc68d0fcaf9433bf114ad3f9e50bdf7eeb4963470ef534517aac9",
+      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 18,
+      "doc": {
+        "id": "7_Q1",
+        "question": "In one word, what is the main function of a database in computing?",
+        "answer": "storage",
+        "all_targets": [
+          "storage",
+          "store"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Database",
+        "set_id": "7"
+      },
+      "target": "storage",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one word, what is the main function of a database in computing?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Store."
+        ]
+      ],
+      "filtered_resps": [
+        "Store."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "908d4c4827f15c8a0f2b7250d5a1e2fc648f54ceab1e72521fadfe34454d790d",
+      "prompt_hash": "377653f9f69aa3aa9586743615e90524ed560f9e52f5c908ce33cdb5cd114e15",
+      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 19,
+      "doc": {
+        "id": "7_Q2",
+        "question": "In one word, what is the main function of a data base in computing?",
+        "answer": "storage",
+        "all_targets": [
+          "storage",
+          "store"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Database",
+        "set_id": "7"
+      },
+      "target": "storage",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one word, what is the main function of a data base in computing?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Store."
+        ]
+      ],
+      "filtered_resps": [
+        "Store."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "7d85e32a4fc98e1c286ae998af172743856144cb59253cb9ddbcda6197905322",
+      "prompt_hash": "c2f8d5db1763f24f92c2d1c3d26288cac06040adb50b76aa886f6d812adf9b75",
+      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 20,
+      "doc": {
+        "id": "7_Q3",
+        "question": "In one word, what is the main function of a data-base in computing?",
+        "answer": "storage",
+        "all_targets": [
+          "storage",
+          "store"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Database",
+        "set_id": "7"
+      },
+      "target": "storage",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one word, what is the main function of a data-base in computing?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Store."
+        ]
+      ],
+      "filtered_resps": [
+        "Store."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d26085deac9d15cbab75c5f8b180c83290dae91527ecf64b91774273dce948bc",
+      "prompt_hash": "a34cca6df8ef75e75925e2701b0f7cdd205c6de0e4f590b1c26be8c8cf3616ba",
+      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 21,
+      "doc": {
+        "id": "8_Q1",
+        "question": "What technology underlies most cryptocurrency systems?",
+        "answer": "Blockchain",
+        "all_targets": [
+          "Blockchain"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Cryptocurrency",
+        "set_id": "8"
+      },
+      "target": "Blockchain",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat technology underlies most cryptocurrency systems?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Most cryptocurrency systems are built on blockchain technology. Blockchain is a decentralized, distributed ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively. This technology ensures transparency, security, and immutability of the transaction records."
+        ]
+      ],
+      "filtered_resps": [
+        "Most cryptocurrency systems are built on blockchain technology. Blockchain is a decentralized, distributed ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively. This technology ensures transparency, security, and immutability of the transaction records."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "9b221b445b204e275a9f7d225da78ede5ead611db70a37e2d796d97af6fd0669",
+      "prompt_hash": "42eea4557ce79a178eabeca8dd0229bd45a0d8c8b5c344f7a37199eec2fec6e9",
+      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 22,
+      "doc": {
+        "id": "8_Q2",
+        "question": "What technology underlies most crypto currency systems?",
+        "answer": "Blockchain",
+        "all_targets": [
+          "Blockchain"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Cryptocurrency",
+        "set_id": "8"
+      },
+      "target": "Blockchain",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat technology underlies most crypto currency systems?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Most cryptocurrency systems are built on blockchain technology. Blockchain is a decentralized, distributed ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively. This technology ensures transparency, security, and immutability of the transaction records."
+        ]
+      ],
+      "filtered_resps": [
+        "Most cryptocurrency systems are built on blockchain technology. Blockchain is a decentralized, distributed ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively. This technology ensures transparency, security, and immutability of the transaction records."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "61184acb5a5bd67290168104a04f3504c43fe3c14ad3e021550497c9ce469532",
+      "prompt_hash": "351e0a5e8b4383aefa71c298b7565fcd1f70d9122bbb0b0b61958eea759ae7bc",
+      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 23,
+      "doc": {
+        "id": "8_Q3",
+        "question": "What technology underlies most crypto-currency systems?",
+        "answer": "Blockchain",
+        "all_targets": [
+          "Blockchain"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Cryptocurrency",
+        "set_id": "8"
+      },
+      "target": "Blockchain",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat technology underlies most crypto-currency systems?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Most cryptocurrency systems are built on blockchain technology. Blockchain is a decentralized, distributed ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively. This technology ensures transparency, security, and immutability of the transaction records."
+        ]
+      ],
+      "filtered_resps": [
+        "Most cryptocurrency systems are built on blockchain technology. Blockchain is a decentralized, distributed ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively. This technology ensures transparency, security, and immutability of the transaction records."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e878a9407ebc2d120138a6735d82fb441f9fcfb1923506f4da5c4188f84d68bb",
+      "prompt_hash": "3cf40b8f3e0d20bd89f3449a17b1706ec79752242c51c43b460f6a30845f57a4",
+      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 24,
+      "doc": {
+        "id": "9_Q1",
+        "question": "Complete this pair: socioeconomic status combines _____ factors and economic factors.",
+        "answer": "social",
+        "all_targets": [
+          "social"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Socioeconomic",
+        "set_id": "9"
+      },
+      "target": "social",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nComplete this pair: socioeconomic status combines _____ factors and economic factors.<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "socioeconomic status combines social factors and economic factors."
+        ]
+      ],
+      "filtered_resps": [
+        "socioeconomic status combines social factors and economic factors."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c44747c799b7f7ede1f548f8afc49dcc15d896546793c81dd4aaa7ab7a5f6dad",
+      "prompt_hash": "c416fb82d88587543d0703a51641cf23394aeac6a34985c5a33206cd7a7bfa7c",
+      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 25,
+      "doc": {
+        "id": "9_Q2",
+        "question": "Complete this pair: socio economic status combines _____ factors and economic factors.",
+        "answer": "social",
+        "all_targets": [
+          "social"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Socioeconomic",
+        "set_id": "9"
+      },
+      "target": "social",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nComplete this pair: socio economic status combines _____ factors and economic factors.<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "socioeconomic status combines social factors and economic factors."
+        ]
+      ],
+      "filtered_resps": [
+        "socioeconomic status combines social factors and economic factors."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "bb0913137a4a99dff9e85e07c8a56bd45101a022c5152b43fe741d2843e7e486",
+      "prompt_hash": "dddff04a4da6553ae753d2302f7bd2be722a5602d78a8df6282734ba4c8a0809",
+      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 26,
+      "doc": {
+        "id": "9_Q3",
+        "question": "Complete this pair: socio-economic status combines _____ factors and economic factors.",
+        "answer": "social",
+        "all_targets": [
+          "social"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Socioeconomic",
+        "set_id": "9"
+      },
+      "target": "social",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nComplete this pair: socio-economic status combines _____ factors and economic factors.<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "socio-economic status combines social factors and economic factors."
+        ]
+      ],
+      "filtered_resps": [
+        "socio-economic status combines social factors and economic factors."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ae53aa1c5014f941a384413ae15d55bc91b3127ca7b7d450f5d330dfefa236e4",
+      "prompt_hash": "71e1f47892a488eac24d8310270e2ab4781df4864498d545a1d14df3f96bbb60",
+      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 27,
+      "doc": {
+        "id": "10_Q1",
+        "question": "What markup language is primarily used to create a webpage?",
+        "answer": "HTML (Hypertext Markup Language)",
+        "all_targets": [
+          "HTML (Hypertext Markup Language)",
+          "Hypertext Markup Language",
+          "HTML"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Webpage",
+        "set_id": "10"
+      },
+      "target": "HTML (Hypertext Markup Language)",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat markup language is primarily used to create a webpage?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The primary markup language used to create webpages is HTML (Hypertext Markup Language). HTML provides the structure and content of web pages and is often used in conjunction with CSS (Cascading Style Sheets) for styling and JavaScript for adding interactivity."
+        ]
+      ],
+      "filtered_resps": [
+        "The primary markup language used to create webpages is HTML (Hypertext Markup Language). HTML provides the structure and content of web pages and is often used in conjunction with CSS (Cascading Style Sheets) for styling and JavaScript for adding interactivity."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "04f14bd80f4ee306653b8afa124add74dcce01fd6c63bb6303a079bb4ad2e704",
+      "prompt_hash": "6765e2cbf6f791d4f30776a62097194130c2521001ab353b3b0d0f03a4046572",
+      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 28,
+      "doc": {
+        "id": "10_Q2",
+        "question": "What markup language is primarily used to create a web page?",
+        "answer": "HTML (Hypertext Markup Language)",
+        "all_targets": [
+          "HTML (Hypertext Markup Language)",
+          "Hypertext Markup Language",
+          "HTML"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Webpage",
+        "set_id": "10"
+      },
+      "target": "HTML (Hypertext Markup Language)",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat markup language is primarily used to create a web page?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The primary markup language used to create a web page is HTML (Hypertext Markup Language). HTML provides the structure and content of a webpage, defining elements such as headings, paragraphs, images, links, and more. While there are other languages like CSS for styling and JavaScript for interactivity, HTML remains the fundamental building block for web pages."
+        ]
+      ],
+      "filtered_resps": [
+        "The primary markup language used to create a web page is HTML (Hypertext Markup Language). HTML provides the structure and content of a webpage, defining elements such as headings, paragraphs, images, links, and more. While there are other languages like CSS for styling and JavaScript for interactivity, HTML remains the fundamental building block for web pages."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d296895eddbda55298bf06cb463fa75981460e7737038969ad907faeb5f25384",
+      "prompt_hash": "6f6469668a811e8661d0da5bdb2d41423d5a23736f6dce316401a0192c502d4d",
+      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 29,
+      "doc": {
+        "id": "10_Q3",
+        "question": "What markup language is primarily used to create a web-page?",
+        "answer": "HTML (Hypertext Markup Language)",
+        "all_targets": [
+          "HTML (Hypertext Markup Language)",
+          "Hypertext Markup Language",
+          "HTML"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Webpage",
+        "set_id": "10"
+      },
+      "target": "HTML (Hypertext Markup Language)",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat markup language is primarily used to create a web-page?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The primary markup language used to create web pages is HTML (Hypertext Markup Language). HTML provides the structure and content of web pages and is used in conjunction with CSS (Cascading Style Sheets) for styling and JavaScript for adding interactivity."
+        ]
+      ],
+      "filtered_resps": [
+        "The primary markup language used to create web pages is HTML (Hypertext Markup Language). HTML provides the structure and content of web pages and is used in conjunction with CSS (Cascading Style Sheets) for styling and JavaScript for adding interactivity."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "062ef791d6d753d9304eddf9773e565a87125b121e54d80e64925faac34adffa",
+      "prompt_hash": "e6fcb8bdf3207125df91a2ef5e8b6a3c2f28918807d6dad00e3b02eb60560e3a",
+      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 30,
+      "doc": {
+        "id": "11_Q1",
+        "question": "Which company developed TensorFlow?",
+        "answer": "Google",
+        "all_targets": [
+          "Google"
+        ],
+        "tokenization_type": "standard_capitalization",
+        "category": "Technical Terminology",
+        "title": "TensorFlow",
+        "set_id": "11"
+      },
+      "target": "Google",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhich company developed TensorFlow?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "TensorFlow was developed by the Google Brain team at Google. It was initially released as an open-source software library in 2015 to support machine learning and deep learning applications."
+        ]
+      ],
+      "filtered_resps": [
+        "TensorFlow was developed by the Google Brain team at Google. It was initially released as an open-source software library in 2015 to support machine learning and deep learning applications."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5e13f7923116037435dd18885a361cda82e8c3d0e8186aad9b101b32ece8df6a",
+      "prompt_hash": "dcc59f28474eeba9157df1b2311ac9d0540684ecd0c2bdf4959a26e3fdd64005",
+      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 31,
+      "doc": {
+        "id": "11_Q2",
+        "question": "Which company developed Tensorflow?",
+        "answer": "Google",
+        "all_targets": [
+          "Google"
+        ],
+        "tokenization_type": "alternative_capitalization",
+        "category": "Technical Terminology",
+        "title": "TensorFlow",
+        "set_id": "11"
+      },
+      "target": "Google",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhich company developed Tensorflow?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "TensorFlow was developed by the Google Brain team at Google. It was initially released as an open-source software library in 2015 and has since been widely adopted for machine learning and deep learning applications across various industries."
+        ]
+      ],
+      "filtered_resps": [
+        "TensorFlow was developed by the Google Brain team at Google. It was initially released as an open-source software library in 2015 and has since been widely adopted for machine learning and deep learning applications across various industries."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "326f7d869a56118de77ddceadb3a2ae9ac3a144855967cfbbb0b12be8716703f",
+      "prompt_hash": "2f10564095bd2f59091e48a87be76178c21cc8062e95170d3cca2e70d6ba7be8",
+      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 32,
+      "doc": {
+        "id": "11_Q3",
+        "question": "Which company developed tensor flow?",
+        "answer": "Google",
+        "all_targets": [
+          "Google"
+        ],
+        "tokenization_type": "split_words",
+        "category": "Technical Terminology",
+        "title": "TensorFlow",
+        "set_id": "11"
+      },
+      "target": "Google",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhich company developed tensor flow?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "TensorFlow was developed by the Google Brain team at Google. It was initially released as an open-source software library for numerical computation using data flow graphs, allowing developers to build machine learning and deep learning models."
+        ]
+      ],
+      "filtered_resps": [
+        "TensorFlow was developed by the Google Brain team at Google. It was initially released as an open-source software library for numerical computation using data flow graphs, allowing developers to build machine learning and deep learning models."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "7299d2a9a664cd2e84bbe54fddce3d09adf521c67126a99971af3f9224e72500",
+      "prompt_hash": "10c1b6ce6555fd99e00098bee725b076ee1d3fc9627567155fa4e14cb3acf941",
+      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 33,
+      "doc": {
+        "id": "12_Q1",
+        "question": "Is JavaScript the same programming language as Java?",
+        "answer": "No",
+        "all_targets": [
+          "No"
+        ],
+        "tokenization_type": "standard_capitalization",
+        "category": "Technical Terminology",
+        "title": "JavaScript",
+        "set_id": "12"
+      },
+      "target": "No",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIs JavaScript the same programming language as Java?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "No, JavaScript and Java are not the same programming language, although they share some similarities in syntax and naming. Here are some key differences:"
+        ]
+      ],
+      "filtered_resps": [
+        "No, JavaScript and Java are not the same programming language, although they share some similarities in syntax and naming. Here are some key differences:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e3a9946a8f6672f1884bc929dad4be79b8516c49c40cca6dcccddb025c9c8348",
+      "prompt_hash": "6e62683ab87ad2a343dda2936e6fdbbc4a939aad0b742be20fb5f6caf9dbb357",
+      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 34,
+      "doc": {
+        "id": "12_Q2",
+        "question": "Is Javascript the same programming language as Java?",
+        "answer": "No",
+        "all_targets": [
+          "No"
+        ],
+        "tokenization_type": "alternative_capitalization",
+        "category": "Technical Terminology",
+        "title": "JavaScript",
+        "set_id": "12"
+      },
+      "target": "No",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIs Javascript the same programming language as Java?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "No, JavaScript and Java are not the same programming language, although they share some similarities in syntax and naming conventions. Here are some key differences:"
+        ]
+      ],
+      "filtered_resps": [
+        "No, JavaScript and Java are not the same programming language, although they share some similarities in syntax and naming conventions. Here are some key differences:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2dc36c98c7ce38701af3b7b9f86f9572d8f91cd5991f2c701369080c48a5ba87",
+      "prompt_hash": "092992a61e730a5c369c309a7e6d53bdfaf297d3b6f0c169a66deb719d398cd5",
+      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 35,
+      "doc": {
+        "id": "12_Q3",
+        "question": "Is java script the same programming language as Java?",
+        "answer": "No",
+        "all_targets": [
+          "No"
+        ],
+        "tokenization_type": "split_words",
+        "category": "Technical Terminology",
+        "title": "JavaScript",
+        "set_id": "12"
+      },
+      "target": "No",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIs java script the same programming language as Java?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "No, JavaScript and Java are not the same programming language, although they share some similarities in syntax and are both widely used for developing web applications."
+        ]
+      ],
+      "filtered_resps": [
+        "No, JavaScript and Java are not the same programming language, although they share some similarities in syntax and are both widely used for developing web applications."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e9582b4533d1738e2b91c4a9a0fc944f1e7aa793199074ae42fbd65c723d76a0",
+      "prompt_hash": "6b97baf0ea7080f68df3da00345319b9e8b59f3c7865211a9ff0596946d0a6ea",
+      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 36,
+      "doc": {
+        "id": "13_Q1",
+        "question": "Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_agglutinative_complete",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Bu c\u00fcmle, bir yer ad\u0131n\u0131 belirtmeyi i\u00e7erdi\u011fi i\u00e7in tam olarak hangi \u015fehri ifadeetti\u011fini kesin olarak belirleyemem, ancak c\u00fcmlenin yap\u0131s\u0131na ve kullan\u0131mlar\u0131na g\u00f6re, genellikle \u015fu anlama gelebilir:"
+        ]
+      ],
+      "filtered_resps": [
+        "Bu c\u00fcmle, bir yer ad\u0131n\u0131 belirtmeyi i\u00e7erdi\u011fi i\u00e7in tam olarak hangi \u015fehri ifadeetti\u011fini kesin olarak belirleyemem, ancak c\u00fcmlenin yap\u0131s\u0131na ve kullan\u0131mlar\u0131na g\u00f6re, genellikle \u015fu anlama gelebilir:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "9f5b1325c46fd7d054d0d381b4092a3ce4a890f13870ec552cadd51a8b2a4b94",
+      "prompt_hash": "4da21ff8606bca3dea6e17d164e0cb808e79673241830a6ec9293114e145d44b",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 37,
+      "doc": {
+        "id": "13_Q2",
+        "question": "Afyon karahi sar l\u0131 la\u015f t\u0131r ama d\u0131k lar \u0131m\u0131z dan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_morpheme_split",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyon karahi sar l\u0131 la\u015f t\u0131r ama d\u0131k lar \u0131m\u0131z dan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Bu c\u00fcmlede bahsedilen \u015fehir, Afyonkarahisar'd\u0131r. "
+        ]
+      ],
+      "filtered_resps": [
+        "Bu c\u00fcmlede bahsedilen \u015fehir, Afyonkarahisar'd\u0131r."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "806cfd0a545e0158aa75370b084435aee725ae970bea607cf28dd302cca3a878",
+      "prompt_hash": "8b81ea0bb222cb522010d6b00feecf3735f294017af6bffb871fe949295756e2",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 38,
+      "doc": {
+        "id": "13_Q3",
+        "question": "Afyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Bu c\u00fcmle, Afyonkarahisar \u015fehrinde ya\u015fanan bir olay\u0131 anlatmaya y\u00f6nelik olabilir. Ancak, tam olarak hangi olay\u0131 ifade etti\u011fi belirsiz g\u00f6r\u00fcn\u00fcyor. \"Afyonkarahisarl\u0131 \u015fat\u0131rmad\u0131klar\u0131m\u0131zdan\" ifadesi, genellikle Afyonkarahisar'da ger\u00e7ekle\u015fen veya bu \u015fehirle ilgili olumsuz olaylar\u0131 ifade eder."
+        ]
+      ],
+      "filtered_resps": [
+        "Bu c\u00fcmle, Afyonkarahisar \u015fehrinde ya\u015fanan bir olay\u0131 anlatmaya y\u00f6nelik olabilir. Ancak, tam olarak hangi olay\u0131 ifade etti\u011fi belirsiz g\u00f6r\u00fcn\u00fcyor. \"Afyonkarahisarl\u0131 \u015fat\u0131rmad\u0131klar\u0131m\u0131zdan\" ifadesi, genellikle Afyonkarahisar'da ger\u00e7ekle\u015fen veya bu \u015fehirle ilgili olumsuz olaylar\u0131 ifade eder."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0e50ac4e090a1c1c6cef398bf4d3c17b7c7007098256b538925bac8255a6fd30",
+      "prompt_hash": "2a616f09f5518071416956fb4254a40261f4d2dc6c46eb6acc69c25259e83dd2",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 39,
+      "doc": {
+        "id": "13_Q4",
+        "question": "Afyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu soyleniyor. Burada hangi sehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu soyleniyor. Burada hangi sehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Bu c\u00fcmle, Afyonkarahisar \u015fehrindeki baz\u0131 olaylar\u0131 anlatmaya \u00e7al\u0131\u015f\u0131yor. Ancak, c\u00fcmlede biraz eksiklik var ve tam anlam\u0131yla anla\u015f\u0131lmas\u0131nda zorluklar olabilir. E\u011fer \"Afyonkarahisarl\u0131 \u015fimdat\u0131ramad\u0131klar\u0131m\u0131zdan\" ifadesini tamamlayabilirsek daha iyi anla\u015f\u0131labilir olur."
+        ]
+      ],
+      "filtered_resps": [
+        "Bu c\u00fcmle, Afyonkarahisar \u015fehrindeki baz\u0131 olaylar\u0131 anlatmaya \u00e7al\u0131\u015f\u0131yor. Ancak, c\u00fcmlede biraz eksiklik var ve tam anlam\u0131yla anla\u015f\u0131lmas\u0131nda zorluklar olabilir. E\u011fer \"Afyonkarahisarl\u0131 \u015fimdat\u0131ramad\u0131klar\u0131m\u0131zdan\" ifadesini tamamlayabilirsek daha iyi anla\u015f\u0131labilir olur."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6ba10439e48c4d494f95c161e2deb5a00054b673876620862c24ae7ce2c088a7",
+      "prompt_hash": "ff196cfc7932e30c5f21de267266f15131275928484fb854a6ba32a61e5088df",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 40,
+      "doc": {
+        "id": "13_Q5",
+        "question": "He is said to be 'Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan'. Which city in Turkey is mentioned in this word?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "english_with_turkish_word",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHe is said to be 'Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan'. Which city in Turkey is mentioned in this word?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The phrase \"Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan\" refers to people from Afyonkarahisar, a province in Turkey. "
+        ]
+      ],
+      "filtered_resps": [
+        "The phrase \"Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan\" refers to people from Afyonkarahisar, a province in Turkey."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a0abd912fc1ad72987dca5f423d50e751f92ee449d09943f2d69b7142d82734a",
+      "prompt_hash": "2707bfd9b7334bcfbb69ccfcb625ed68a0c8d2c38be82058f762a52dcb7f9b7a",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 41,
+      "doc": {
+        "id": "13_Q6",
+        "question": "He is said to be 'Afyonkarahisarlila\u015ftiramadiklarimizdan'. Which city in Turkey is mentioned in this word?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "english_with_turkish_word_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHe is said to be 'Afyonkarahisarlila\u015ftiramadiklarimizdan'. Which city in Turkey is mentioned in this word?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The phrase \"Afyonkarahisarlila\u015ftiramadiklarimizdan\" refers to the city of Afyonkarahisar in Turkey. "
+        ]
+      ],
+      "filtered_resps": [
+        "The phrase \"Afyonkarahisarlila\u015ftiramadiklarimizdan\" refers to the city of Afyonkarahisar in Turkey."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "349c67a4f66b8ddb7d6abe3929ef8ccde42b9cbfe636386a33936c0369b9775a",
+      "prompt_hash": "6a06f75deb9c7bee40e400056f03279cc8ce89a978657e56309a9f5185b4139c",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 42,
+      "doc": {
+        "id": "14_Q1",
+        "question": "What is the plural form of 'oeuf' in French?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "basic_question",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the plural form of 'oeuf' in French?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The plural form of \"oeuf\" in French is \"\u0153ufs.\" Note that the character \"\u0153\" is a ligature in the French language, representing two letters (o and e) joined together."
+        ]
+      ],
+      "filtered_resps": [
+        "The plural form of \"oeuf\" in French is \"\u0153ufs.\" Note that the character \"\u0153\" is a ligature in the French language, representing two letters (o and e) joined together."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "13649dffba11351975b197ebc533943d54779c3c8ea3d15ba8fe1915a2d6fe68",
+      "prompt_hash": "cd23d483400c93aa28f22b0eb33d1b1726eca0a9b5e9e6a7f8324cc5beac969f",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 43,
+      "doc": {
+        "id": "14_Q2",
+        "question": "What is the plural form of \"l'\u0153uf\" in French?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "basic_question",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the plural form of \"l'\u0153uf\" in French?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The plural form of \"l'\u0153uf\" in French is \"les \u0153ufs.\""
+        ]
+      ],
+      "filtered_resps": [
+        "The plural form of \"l'\u0153uf\" in French is \"les \u0153ufs.\""
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a58f8ad5c57bef5ff822a1b821ab701152f409fed8234c6a2b53cd18891f0b5d",
+      "prompt_hash": "e56c824b4ba8943c3261369b0cf83672d2a62a54c6ef3bbae8599086ce9d4bbd",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 44,
+      "doc": {
+        "id": "14_Q3",
+        "question": "Dans la phrase 'J'ai achet\u00e9 un oeuf', quel est le pluriel de 'oeuf'?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "french_sentence_standard",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDans la phrase 'J'ai achet\u00e9 un oeuf', quel est le pluriel de 'oeuf'?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Le mot \"oeuf\" est une entit\u00e9 qui change de forme selon qu'il est singulier ou pluriel en fran\u00e7ais. Cependant, l'oeuf n'a pas de pluriel formellement reconnu dans la langue fran\u00e7aise. En effet, on ne dit pas \"oeufs\" pour plus d'un \u0153uf, mais on utilise d'autres expressions comme \"plusieurs oeufs\", \"deux oeufs\", etc."
+        ]
+      ],
+      "filtered_resps": [
+        "Le mot \"oeuf\" est une entit\u00e9 qui change de forme selon qu'il est singulier ou pluriel en fran\u00e7ais. Cependant, l'oeuf n'a pas de pluriel formellement reconnu dans la langue fran\u00e7aise. En effet, on ne dit pas \"oeufs\" pour plus d'un \u0153uf, mais on utilise d'autres expressions comme \"plusieurs oeufs\", \"deux oeufs\", etc."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "60ab5da26867ade717b3b3c6f1e3f3a2dfa82e64efa88daa1ee8569b2d3dd0fc",
+      "prompt_hash": "368f52c888d49cd2b0e5970e08d3344a2d3697312dc66cc990d2bf407d6f1364",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 45,
+      "doc": {
+        "id": "14_Q4",
+        "question": "Dans la phrase 'J'ai achet\u00e9 un \u0153uf', quel est le pluriel de '\u0153uf'?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "french_sentence_ligature",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDans la phrase 'J'ai achet\u00e9 un \u0153uf', quel est le pluriel de '\u0153uf'?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Le mot \"\u0153uf\" est un nom masculin singulier en fran\u00e7ais, et il n'a pas de pluriel formellement reconnu dans l'usage standard. En effet, on ne parle g\u00e9n\u00e9ralement que d'un seul \u0153uf \u00e0 la fois. Cependant, dans certains contextes sp\u00e9cifiques ou pour des usages litt\u00e9raires, on peut rencontrer des expressions comme \"des \u0153ufs\" pour d\u00e9signer plusieurs \u0153ufs, bien que ce soit rare."
+        ]
+      ],
+      "filtered_resps": [
+        "Le mot \"\u0153uf\" est un nom masculin singulier en fran\u00e7ais, et il n'a pas de pluriel formellement reconnu dans l'usage standard. En effet, on ne parle g\u00e9n\u00e9ralement que d'un seul \u0153uf \u00e0 la fois. Cependant, dans certains contextes sp\u00e9cifiques ou pour des usages litt\u00e9raires, on peut rencontrer des expressions comme \"des \u0153ufs\" pour d\u00e9signer plusieurs \u0153ufs, bien que ce soit rare."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6d6e8b855909ceb2d0f84f03930cc36db612ced41e8245514a1ae48f6d7f1fdc",
+      "prompt_hash": "87931221c048d6b3af223ec74bc764b0e70cdb92fac51ef8e071df481fa17b55",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 46,
+      "doc": {
+        "id": "15_Q1",
+        "question": "Gul Sena is a PhD student in machine learning. What does Gul Sena study?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "english_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nGul Sena is a PhD student in machine learning. What does Gul Sena study?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "As a PhD student in machine learning, Gul Sena's specific area of study would depend on her research focus and the guidance of her advisor. Machine learning is a broad field that encompasses various subdomains, including but not limited to:"
+        ]
+      ],
+      "filtered_resps": [
+        "As a PhD student in machine learning, Gul Sena's specific area of study would depend on her research focus and the guidance of her advisor. Machine learning is a broad field that encompasses various subdomains, including but not limited to:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "bf90db3d1a02787451851a7f92cf54df36a666a1dcd6c7cc664ca265d0aeddbe",
+      "prompt_hash": "cb975924b0bdf93c7d5e1437d3e119898f4bf7fd97474d3b321d577c10ac0b58",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 47,
+      "doc": {
+        "id": "15_Q2",
+        "question": "G\u00fcl Sena is a PhD student in machine learning. What does G\u00fcl Sena study?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "english_with_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nG\u00fcl Sena is a PhD student in machine learning. What does G\u00fcl Sena study?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "As a PhD student in machine learning, G\u00fcl Sena's specific area of study would depend on her research focus and the guidance of her advisor. Machine learning is a broad field with many sub-disciplines, including but not limited to:"
+        ]
+      ],
+      "filtered_resps": [
+        "As a PhD student in machine learning, G\u00fcl Sena's specific area of study would depend on her research focus and the guidance of her advisor. Machine learning is a broad field with many sub-disciplines, including but not limited to:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "31595557e2baabe102d0a266f4a2777ca5fa4e3a340ee31f395b6b6d34abc4cc",
+      "prompt_hash": "93ce962131d7696e49c4dbdf30859dcfeca3e45b213714908de4b8acf14c877c",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 48,
+      "doc": {
+        "id": "15_Q3",
+        "question": "G\u00fcl Sena makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisidir. G\u00fcl Sena ne \u00e7al\u0131\u015f\u0131yor?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "turkish_with_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nG\u00fcl Sena makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisidir. G\u00fcl Sena ne \u00e7al\u0131\u015f\u0131yor?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda bir doktora \u00f6\u011frencisi olarak, belirli bir konuda uzmanla\u015fmak i\u00e7in yo\u011fun \u00e7al\u0131\u015fmaktad\u0131r. Ancak, belirtilen bilgilerle beraber, G\u00fcl Sena'n\u0131n exact \u00e7al\u0131\u015fma konusu hakk\u0131nda kesin bir bilgi verilemez. Makine \u00f6\u011frenmesi alan\u0131nda genellikle \u015fu konulardan biri veya birka\u00e7\u0131 \u00fczerinde \u00e7al\u0131\u015fabilir:"
+        ]
+      ],
+      "filtered_resps": [
+        "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda bir doktora \u00f6\u011frencisi olarak, belirli bir konuda uzmanla\u015fmak i\u00e7in yo\u011fun \u00e7al\u0131\u015fmaktad\u0131r. Ancak, belirtilen bilgilerle beraber, G\u00fcl Sena'n\u0131n exact \u00e7al\u0131\u015fma konusu hakk\u0131nda kesin bir bilgi verilemez. Makine \u00f6\u011frenmesi alan\u0131nda genellikle \u015fu konulardan biri veya birka\u00e7\u0131 \u00fczerinde \u00e7al\u0131\u015fabilir:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "f7e364b177034643c496039be8aaef294d2de67088612ecc8947eab34da2bca2",
+      "prompt_hash": "1f72f911036d747b5744379396a619d3561ed3c3d0aab4a8aa375d73153b1326",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 49,
+      "doc": {
+        "id": "15_Q4",
+        "question": "Gul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "turkish_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nGul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisi oldu\u011fu bilinen bir ki\u015fi oldu\u011funa g\u00f6re, genellikle \u015fu \u015fekilde \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 tahmin edebiliriz:"
+        ]
+      ],
+      "filtered_resps": [
+        "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisi oldu\u011fu bilinen bir ki\u015fi oldu\u011funa g\u00f6re, genellikle \u015fu \u015fekilde \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 tahmin edebiliriz:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "1b3a5e33c57f1b3a54b5e776e8ed5c12683f365bddc9465479dfd71d884c2e95",
+      "prompt_hash": "61eec91daf3a079e5d6eaacd2781d215c5c24d4b2b22bf0cf63dadacb30c42bf",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 50,
+      "doc": {
+        "id": "16_Q1",
+        "question": "Die Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?",
+        "answer": "Schiff",
+        "all_targets": [
+          "Schiff",
+          "ship",
+          "steamship",
+          "Dampfschiff",
+          "steamboat"
+        ],
+        "tokenization_type": "german_compound_complete",
+        "category": "Multi-linguality",
+        "title": "German Compound",
+        "set_id": "16"
+      },
+      "target": "Schiff",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDie Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Hier wird das Schiff der Donaudampfschifffahrtsgesellschaft erw\u00e4hnt. Das Transportmittel, das genannt wird, ist ein Schiff."
+        ]
+      ],
+      "filtered_resps": [
+        "Hier wird das Schiff der Donaudampfschifffahrtsgesellschaft erw\u00e4hnt. Das Transportmittel, das genannt wird, ist ein Schiff."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "61f9c08e25e1a6ed1b4c09fcadf46c5d6129e355cff605fc36b059eac4726344",
+      "prompt_hash": "a47c87547e88ff147005f9414afa721467d4d8c9ea0c86bdf3c0d50d9f7750d1",
+      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 51,
+      "doc": {
+        "id": "16_Q2",
+        "question": "Die Donau dampf schiff fahrts gesellschafts kapit\u00e4ns witwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?",
+        "answer": "Schiff",
+        "all_targets": [
+          "Schiff",
+          "ship",
+          "steamship",
+          "Dampfschiff",
+          "steamboat"
+        ],
+        "tokenization_type": "german_compound_split",
+        "category": "Multi-linguality",
+        "title": "German Compound",
+        "set_id": "16"
+      },
+      "target": "Schiff",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDie Donau dampf schiff fahrts gesellschafts kapit\u00e4ns witwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Hier wird das \"Dampfschiff\" erw\u00e4hnt. Es ist ein wichtiger Bestandteil der Donau-Dampfschiff-Fahrten, die in der Phrase genannt werden."
+        ]
+      ],
+      "filtered_resps": [
+        "Hier wird das \"Dampfschiff\" erw\u00e4hnt. Es ist ein wichtiger Bestandteil der Donau-Dampfschiff-Fahrten, die in der Phrase genannt werden."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "4cac5ad57e8d76e435b65e7ee654ff50e21e2cd348e4caa98e824f90d3105e3d",
+      "prompt_hash": "e750e6708ed5d750855e80589e7dfb1e3bcaa2afde3e413ce20ab4e59696e2d6",
+      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 52,
+      "doc": {
+        "id": "16_Q3",
+        "question": "The Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe mourns her husband. Which mode of transportation is mentioned in this word?",
+        "answer": "Schiff",
+        "all_targets": [
+          "Schiff",
+          "ship",
+          "steamship",
+          "Dampfschiff",
+          "steamboat"
+        ],
+        "tokenization_type": "english_with_german_compound",
+        "category": "Multi-linguality",
+        "title": "German Compound",
+        "set_id": "16"
+      },
+      "target": "Schiff",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nThe Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe mourns her husband. Which mode of transportation is mentioned in this word?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The mode of transportation mentioned in the phrase \"Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe\" is a steamship or riverboat. This is evident from the word \"Donaudampfschifffahrt,\" which translates to \"Danube Steamship Navigation.\" The full phrase translates to \"The widow of the Donau Steamship Company captain,\" referring to the widow of a captain who worked for a company that operated steamships on the Danube River."
+        ]
+      ],
+      "filtered_resps": [
+        "The mode of transportation mentioned in the phrase \"Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe\" is a steamship or riverboat. This is evident from the word \"Donaudampfschifffahrt,\" which translates to \"Danube Steamship Navigation.\" The full phrase translates to \"The widow of the Donau Steamship Company captain,\" referring to the widow of a captain who worked for a company that operated steamships on the Danube River."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e0fd0d1bb5dcff5067415a4a83c844066c9f0beeea5b9469d1255e477b8e38c4",
+      "prompt_hash": "49736b8df90316e41796ee0547f88f08eb15089a9b33f39db73f5c7d8cc250da",
+      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 53,
+      "doc": {
+        "id": "17_Q1",
+        "question": "\u5317\u4eac\u662f\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u4e86\u54ea\u4e2a\u57ce\u5e02\uff1f",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "simplified_chinese",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u5317\u4eac\u662f\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u4e86\u54ea\u4e2a\u57ce\u5e02\uff1f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u7684\u57ce\u5e02\u662f\u5317\u4eac\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u7684\u57ce\u5e02\u662f\u5317\u4eac\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "fa62daeafab42197410a7ea830f9ffd1e18701148bdd778956cfcc8e32b34717",
+      "prompt_hash": "581cef4d45690d6e637918975188d553604b919d977129faad305bc35e2ac39f",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 54,
+      "doc": {
+        "id": "17_Q2",
+        "question": "\u5317 \u4eac \u662f \u4e2d \u534e \u4eba \u6c11 \u5171 \u548c \u56fd \u7684 \u9996 \u90fd\u3002\u8fd9 \u4e2a \u53e5 \u5b50 \u4e2d \u63d0 \u5230 \u4e86 \u54ea \u4e2a \u57ce \u5e02\uff1f",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "character_split_chinese",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u5317 \u4eac \u662f \u4e2d \u534e \u4eba \u6c11 \u5171 \u548c \u56fd \u7684 \u9996 \u90fd\u3002\u8fd9 \u4e2a \u53e5 \u5b50 \u4e2d \u63d0 \u5230 \u4e86 \u54ea \u4e2a \u57ce \u5e02\uff1f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u7684\u57ce\u5e02\u662f\u5317\u4eac\u3002\u5317\u4eac\u662f\u4e2d\u56fd\u7684\u9996\u90fd\uff0c\u4f4d\u4e8e\u4e2d\u56fd\u5317\u90e8\uff0c\u662f\u4e00\u5ea7\u62e5\u6709\u60a0\u4e45\u5386\u53f2\u548c\u4e30\u5bcc\u6587\u5316\u9057\u4ea7\u7684\u57ce\u5e02\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u7684\u57ce\u5e02\u662f\u5317\u4eac\u3002\u5317\u4eac\u662f\u4e2d\u56fd\u7684\u9996\u90fd\uff0c\u4f4d\u4e8e\u4e2d\u56fd\u5317\u90e8\uff0c\u662f\u4e00\u5ea7\u62e5\u6709\u60a0\u4e45\u5386\u53f2\u548c\u4e30\u5bcc\u6587\u5316\u9057\u4ea7\u7684\u57ce\u5e02\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "b21b5c190e9a1caccefd5f9f24f43b9088dbc0004b95d893ed9a08fcd94fe9df",
+      "prompt_hash": "7f715e9003156dd2f0c04afc17a7038c5445a6e01d473cdd5a92db529bd21bbd",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 55,
+      "doc": {
+        "id": "17_Q3",
+        "question": "Beijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong t\u00ecdao le nage chengshi?",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "pinyin_no_tones",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nBeijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong t\u00ecdao le nage chengshi?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u7684\u662f\u54ea\u4e2a\u57ce\u5e02\uff1f"
+        ]
+      ],
+      "filtered_resps": [
+        "\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u7684\u662f\u54ea\u4e2a\u57ce\u5e02\uff1f"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e4987df8b385230052ab5ed4b248aa9266fe6defb65c8b7d27988020a2114f2a",
+      "prompt_hash": "a02d5bab64ff848556edc44d65c5acbd1fba25f4c95ecf2baf7d1af2dbc265ba",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 56,
+      "doc": {
+        "id": "17_Q4",
+        "question": "B\u011bij\u012bng sh\u00ec Zh\u014dnghu\u00e1 R\u00e9nm\u00edn G\u00f2ngh\u00e9gu\u00f3 de sh\u01d2ud\u016b. Zh\u00e8ge j\u00f9zi zh\u014dng t\u00edd\u00e0o le n\u01cege ch\u00e9ngsh\u00ec?",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "pinyin_with_tones",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nB\u011bij\u012bng sh\u00ec Zh\u014dnghu\u00e1 R\u00e9nm\u00edn G\u00f2ngh\u00e9gu\u00f3 de sh\u01d2ud\u016b. Zh\u00e8ge j\u00f9zi zh\u014dng t\u00edd\u00e0o le n\u01cege ch\u00e9ngsh\u00ec?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u8fd9\u53e5\u8bdd\u4e2d\u63d0\u5230\u7684\u57ce\u5e02\u662f\u5317\u4eac\u3002\u5317\u4eac\u662f\u4e2d\u56fd\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u8fd9\u53e5\u8bdd\u4e2d\u63d0\u5230\u7684\u57ce\u5e02\u662f\u5317\u4eac\u3002\u5317\u4eac\u662f\u4e2d\u56fd\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e391bb1ee965218d1dabaffe72e054b6323e0e9268d7bb19bda2c41e40975352",
+      "prompt_hash": "ad5850cc611ecf7ca1b7e11f20bdf801d8b91b7c06ad0d53c5eaa0eedd99bbc8",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 57,
+      "doc": {
+        "id": "18_Q1",
+        "question": "\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0641\u0650\u064a \u0627\u0644\u062c\u064e\u0627\u0645\u0650\u0639\u064e\u0629\u0650. \u0645\u064e\u0627\u0630\u064e\u0627 \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f\u061f",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "arabic_with_diacritics",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0641\u0650\u064a \u0627\u0644\u062c\u064e\u0627\u0645\u0650\u0639\u064e\u0629\u0650. \u0645\u064e\u0627\u0630\u064e\u0627 \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f\u061f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0437\u043d\u0430\u0447\u0438\u0442, \u041c\u0443\u0445\u0430\u043c\u043c\u0435\u0434 \u0438\u0437\u0443\u0447\u0430\u0435\u0442 \u0430\u0440\u0430\u0431\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0437\u043d\u0430\u0447\u0438\u0442, \u041c\u0443\u0445\u0430\u043c\u043c\u0435\u0434 \u0438\u0437\u0443\u0447\u0430\u0435\u0442 \u0430\u0440\u0430\u0431\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "771782fbc7108f4aa3a1d2db072fe268d7879b6f0505308c79a9593f9b669325",
+      "prompt_hash": "5f9984293100fe950f966f24b481d6dcf24fea2fae6c8b98271282287dbb8ddf",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 58,
+      "doc": {
+        "id": "18_Q2",
+        "question": "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0645\u0627\u0630\u0627 \u064a\u062f\u0631\u0633 \u0645\u062d\u0645\u062f\u061f",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "arabic_without_diacritics",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0645\u0627\u0630\u0627 \u064a\u062f\u0631\u0633 \u0645\u062d\u0645\u062f\u061f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0437\u043d\u0430\u0447\u0438\u0442, \u041c\u0443\u0445\u0430\u043c\u043c\u0435\u0434 \u0438\u0437\u0443\u0447\u0430\u0435\u0442 \u0430\u0440\u0430\u0431\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. "
+        ]
+      ],
+      "filtered_resps": [
+        "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0437\u043d\u0430\u0447\u0438\u0442, \u041c\u0443\u0445\u0430\u043c\u043c\u0435\u0434 \u0438\u0437\u0443\u0447\u0430\u0435\u0442 \u0430\u0440\u0430\u0431\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "37d35ab5e1530e25e196564de73e17232cc69f76008dbc75988b9d25d65952a5",
+      "prompt_hash": "e1406bb4a1964aa1b4df88722114c71bef911e01edc8816bc305f4805a6f528e",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 59,
+      "doc": {
+        "id": "18_Q3",
+        "question": "Mohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "arabic_transliterated",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mohammed yadrusu al-'arabiyya fi al-j\u0101mi'ah bi-intiq\u0101lih wa ta'allumih al-'arabiyya min qabl min q\u0101n\u016bni. Yadrusu al-'arabiyya li-yu'tid f\u012bhi f\u012b ta'allum ghayruhu wa li-yu'min bi-tasawwur al-'arabiyya wa 'ilmuhu. Innahu yadrusu al-'arabiyya bi-ikhtil\u0101f al-mad\u0101ris wa al-kurs\u012by\u012bn f\u012b al-j\u0101mi'ah, wa inna al-'arabiyya lahu f\u012b ta'allumih wa f\u012b m\u0101 yu'allimuh."
+        ]
+      ],
+      "filtered_resps": [
+        "Mohammed yadrusu al-'arabiyya fi al-j\u0101mi'ah bi-intiq\u0101lih wa ta'allumih al-'arabiyya min qabl min q\u0101n\u016bni. Yadrusu al-'arabiyya li-yu'tid f\u012bhi f\u012b ta'allum ghayruhu wa li-yu'min bi-tasawwur al-'arabiyya wa 'ilmuhu. Innahu yadrusu al-'arabiyya bi-ikhtil\u0101f al-mad\u0101ris wa al-kurs\u012by\u012bn f\u012b al-j\u0101mi'ah, wa inna al-'arabiyya lahu f\u012b ta'allumih wa f\u012b m\u0101 yu'allimuh."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d885a33f5bcb3c16e7fa24dbb27ced8f62c087cb3468ab63ffd78c6db31ee9d9",
+      "prompt_hash": "4a03743873545b0b8bc035de58b70887b89d51bd3811c5900e4ee75466df96a0",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 60,
+      "doc": {
+        "id": "18_Q4",
+        "question": "Muhammad is studying Arabic language at the university. What is Muhammad studying?",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMuhammad is studying Arabic language at the university. What is Muhammad studying?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Muhammad is studying the Arabic language at the university."
+        ]
+      ],
+      "filtered_resps": [
+        "Muhammad is studying the Arabic language at the university."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "4135dd15ca832a2f7b69d1cc0c877c723fb24a3085e014148db0bff700551ff5",
+      "prompt_hash": "515c1a9f50a2c663be7f5452f0fac57194421c0cfb3fe0b45760357d2cfade86",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 61,
+      "doc": {
+        "id": "19_Q1",
+        "question": "\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "russian_cyrillic",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "fc2b4dd9cef15396aa508cb6987441c4bb82ce090435f2692a19da424e56ff30",
+      "prompt_hash": "8b0870dbf17534bc7a719266a01a9d110651707a4e95372ea319d50e23f45e73",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 62,
+      "doc": {
+        "id": "19_Q2",
+        "question": "Ya zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "russian_transliterated",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nYa zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0433\u043e\u0440\u043e\u0434\u043e\u043c, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u0432\u044b \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442\u0435 \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0433\u043e\u0440\u043e\u0434\u043e\u043c, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u0432\u044b \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442\u0435 \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6a171eb7bddb1ce2e490308e5719429984837af49445a146a875a7ced2f9d0d7",
+      "prompt_hash": "dc92c00c207793b28641bea71c0615b155034561f8519085a8ef30fce2e35ea0",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 63,
+      "doc": {
+        "id": "19_Q3",
+        "question": "\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442 \u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "russian_unhyphenated",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442 \u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a1de0d694f0a6423f795933f97f6843cc4abc502a29ecadec897e8c16930dae5",
+      "prompt_hash": "418d33171708c6d55024f473358adbff533fc21c3174ee2e1e677e6ec72673a5",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 64,
+      "doc": {
+        "id": "19_Q4",
+        "question": "I live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "english_with_russian_case",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nI live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "You live in \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435, which is the Russian genitive case form of the city's name, Sankt-Peterburg. So, you live in \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "You live in \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435, which is the Russian genitive case form of the city's name, Sankt-Peterburg. So, you live in \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "09bce0444f251e331cc2bb6348d28381763d9c694aecc30029c0b17e583ca682",
+      "prompt_hash": "93be75210442c7d7bc384a0e279b5feffec8490b8c6688b39e4cfff2742f87a4",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 65,
+      "doc": {
+        "id": "20_Q1",
+        "question": "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u304b\uff1f",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_mixed_scripts",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u5177\u4f53\u7684\u306b\u306f\u30012021\u5e747\u670823\u65e5\u304b\u30898\u67088\u65e5\u307e\u3067\u884c\u308f\u308c\u307e\u3057\u305f\u3002\u305f\u3060\u3057\u3001\u5f53\u521d\u306f2020\u5e74\u4e88\u5b9a\u3067\u3057\u305f\u304c\u3001\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u5f71\u97ff\u306b\u3088\u308a1\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u5177\u4f53\u7684\u306b\u306f\u30012021\u5e747\u670823\u65e5\u304b\u30898\u67088\u65e5\u307e\u3067\u884c\u308f\u308c\u307e\u3057\u305f\u3002\u305f\u3060\u3057\u3001\u5f53\u521d\u306f2020\u5e74\u4e88\u5b9a\u3067\u3057\u305f\u304c\u3001\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u5f71\u97ff\u306b\u3088\u308a1\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "f4809c929dcd69a5d7ae916aa0db14899a9e4f912b023f22db90452cc04b4704",
+      "prompt_hash": "4880ff6bf683e9de424f9db8d29110d7909be8d1a264442b8df26d6a729d68bd",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 66,
+      "doc": {
+        "id": "20_Q2",
+        "question": "\u3068\u3046\u304d\u3087\u3046\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u306d\u3093\u306b\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u304b\uff1f",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_hiragana_katakana",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u3068\u3046\u304d\u3087\u3046\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u306d\u3093\u306b\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u6b63\u78ba\u306b\u306f\u30012021\u5e747\u670823\u65e5\u304b\u30898\u67088\u65e5\u307e\u3067\u884c\u308f\u308c\u307e\u3057\u305f\u3002\u305f\u3060\u3057\u3001\u5f53\u521d\u306f2020\u5e74\u306b\u958b\u50ac\u3055\u308c\u308b\u4e88\u5b9a\u3067\u3057\u305f\u304c\u3001\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u5f71\u97ff\u306b\u3088\u308a1\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u6b63\u78ba\u306b\u306f\u30012021\u5e747\u670823\u65e5\u304b\u30898\u67088\u65e5\u307e\u3067\u884c\u308f\u308c\u307e\u3057\u305f\u3002\u305f\u3060\u3057\u3001\u5f53\u521d\u306f2020\u5e74\u306b\u958b\u50ac\u3055\u308c\u308b\u4e88\u5b9a\u3067\u3057\u305f\u304c\u3001\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u5f71\u97ff\u306b\u3088\u308a1\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3a49480e1f40fee909d58234b2fc6bcb188141dccefe8255bee3cc631cd57b5e",
+      "prompt_hash": "6f13096a169638aaa74d382b747fc1532ea6febdb07f3784db13fefee7b35c73",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 67,
+      "doc": {
+        "id": "20_Q3",
+        "question": "Tokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_romaji",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nTokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u3054\u8cea\u554f\u306e\u5185\u5bb9\u306b\u5c11\u3057\u8aa4\u308a\u304c\u3042\u308b\u3088\u3046\u3067\u3059\u3002\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3057\u304b\u3057\u3001\u901a\u5e38\u306e\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306e\u958b\u50ac\u5468\u671f\u306f4\u5e74\u9593\u9694\u3067\u30012021\u5e74\u306e\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u5f71\u97ff\u306b\u3088\u308a\u3001\u5f53\u521d\u306e2020\u5e74\u304b\u30891\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u3054\u8cea\u554f\u306e\u5185\u5bb9\u306b\u5c11\u3057\u8aa4\u308a\u304c\u3042\u308b\u3088\u3046\u3067\u3059\u3002\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3057\u304b\u3057\u3001\u901a\u5e38\u306e\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306e\u958b\u50ac\u5468\u671f\u306f4\u5e74\u9593\u9694\u3067\u30012021\u5e74\u306e\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u5f71\u97ff\u306b\u3088\u308a\u3001\u5f53\u521d\u306e2020\u5e74\u304b\u30891\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a1c6596172eb646dc83b6424a67904c621a5efe4fe9dba4b6df072a3aad9fed8",
+      "prompt_hash": "c6e0fc9188a372ed83464c9b5285eb09bba0bce1bce924da73ad7f7903a047ee",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 68,
+      "doc": {
+        "id": "20_Q4",
+        "question": "\u6771\u4eac \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u306f 2021 \u5e74 \u306b \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f\u3002\u3044\u3064 \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u304c \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f \u304b\uff1f",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_word_split",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u6771\u4eac \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u306f 2021 \u5e74 \u306b \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f\u3002\u3044\u3064 \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u304c \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f \u304b\uff1f<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u305f\u3060\u3057\u3001\u5f53\u521d\u306f2020\u5e74\u590f\u5b63\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u3068\u8a08\u753b\u3055\u308c\u3066\u3044\u307e\u3057\u305f\u3002\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u4e16\u754c\u7684\u306a\u30d1\u30f3\u30c7\u30df\u30c3\u30af\u306e\u5f71\u97ff\u306b\u3088\u308a\u3001\u958b\u50ac\u304c1\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u305f\u3060\u3057\u3001\u5f53\u521d\u306f2020\u5e74\u590f\u5b63\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u3068\u8a08\u753b\u3055\u308c\u3066\u3044\u307e\u3057\u305f\u3002\u65b0\u578b\u30b3\u30ed\u30ca\u30a6\u30a4\u30eb\u30b9\u306e\u4e16\u754c\u7684\u306a\u30d1\u30f3\u30c7\u30df\u30c3\u30af\u306e\u5f71\u97ff\u306b\u3088\u308a\u3001\u958b\u50ac\u304c1\u5e74\u5ef6\u671f\u3055\u308c\u307e\u3057\u305f\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0dd4f7f44ac87b9167a2881d327a4392e1f6d6e76a5fd68818f1c6536a875921",
+      "prompt_hash": "58625b56fb1e4cdd06b12ace0ccd14489f303ba9aaa642feb72af779f50524bc",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 69,
+      "doc": {
+        "id": "21_Q1",
+        "question": "\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u099f\u09bf?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "bengali_standard",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u099f\u09bf?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09bf\u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09a6\u09bf \u09a8\u09a6\u09c0 (Nile River)\u0964 \u098f\u099f\u09bf \u09ae\u09a7\u09cd\u09af \u0986\u09ab\u09cd\u09b0\u09bf\u0995\u09be\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u0985\u09ac\u09b8\u09cd\u09a5\u09bf\u09a4 \u098f\u09ac\u0982 \u09aa\u09cd\u09b0\u09be\u09af\u09bc 6,650 \u0995\u09bf\u09b2\u09cb\u09ae\u09bf\u099f\u09be\u09b0 (4,132 \u09ae\u09be\u0987\u09b2) \u09a6\u09c0\u09b0\u09cd\u0998\u0964 \u098f\u099f\u09bf \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09ac\u09a1\u09bc \u099c\u09b2\u09a7\u09b0 \u09a8\u09a6\u09c0\u0993 \u09b9\u09bf\u09b8\u09c7\u09ac\u09c7 \u09aa\u09b0\u09bf\u099a\u09bf\u09a4\u0964"
+        ]
+      ],
+      "filtered_resps": [
+        "\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09bf\u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09a6\u09bf \u09a8\u09a6\u09c0 (Nile River)\u0964 \u098f\u099f\u09bf \u09ae\u09a7\u09cd\u09af \u0986\u09ab\u09cd\u09b0\u09bf\u0995\u09be\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u0985\u09ac\u09b8\u09cd\u09a5\u09bf\u09a4 \u098f\u09ac\u0982 \u09aa\u09cd\u09b0\u09be\u09af\u09bc 6,650 \u0995\u09bf\u09b2\u09cb\u09ae\u09bf\u099f\u09be\u09b0 (4,132 \u09ae\u09be\u0987\u09b2) \u09a6\u09c0\u09b0\u09cd\u0998\u0964 \u098f\u099f\u09bf \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09ac\u09a1\u09bc \u099c\u09b2\u09a7\u09b0 \u09a8\u09a6\u09c0\u0993 \u09b9\u09bf\u09b8\u09c7\u09ac\u09c7 \u09aa\u09b0\u09bf\u099a\u09bf\u09a4\u0964"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "37e6f96bbedec66beba430d0e0a14dd907c88bdc7552f94d347b9fbb90d64207",
+      "prompt_hash": "6561e983f13ac16890652e9d45a9f2fccb4722fa5e58ae5c7c68e9f8ab128e11",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 70,
+      "doc": {
+        "id": "21_Q2",
+        "question": "\u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8 \u099f\u09bf?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "bengali_split",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8 \u099f\u09bf?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09bf\u09b2\u0995\u09a3\u09cd\u09a0 \u09a8\u09a6\u09c0 (Nile River)\u0964 \u098f\u099f\u09bf \u09ae\u09a7\u09cd\u09af\u09aa\u09cd\u09b0\u09be\u099a\u09cd\u09af\u09c7\u09b0 \u098f\u0995\u099f\u09bf \u09aa\u09cd\u09b0\u09b8\u09bf\u09a6\u09cd\u09a7 \u09a8\u09a6\u09c0 \u09af\u09be\u09b0 \u09a6\u09c8\u09b0\u09cd\u0998\u09cd\u09af \u09aa\u09cd\u09b0\u09be\u09af\u09bc 6,650 \u0995\u09bf\u09b2\u09cb\u09ae\u09bf\u099f\u09be\u09b0\u0964 \u09a8\u09bf\u09b2\u0995\u09a3\u09cd\u09a0 \u09a8\u09a6\u09c0 \u09ae\u09bf\u09b6\u09b0 \u09a6\u09cd\u09ac\u09c0\u09aa\u09aa\u09c1\u099e\u09cd\u099c \u09a5\u09c7\u0995\u09c7 \u0986\u09b0\u09ac \u0989\u09aa\u09ae\u09b9\u09be\u09a6\u09c7\u09b6 \u098f\u09ac\u0982 \u0985\u09ab\u09bf\u09b8\u09bf\u09af\u09bc\u09be\u09a8 \u09a6\u09cd\u09ac\u09c0\u09aa\u09aa\u09c1\u099e\u09cd\u099c\u09c7 \u09aa\u09b0\u09cd\u09af\u09a8\u09cd\u09a4 \u09aa\u09cd\u09b0\u09ac\u09be\u09b9\u09bf\u09a4 \u09b9\u09af\u09bc\u0964"
+        ]
+      ],
+      "filtered_resps": [
+        "\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09bf\u09b2\u0995\u09a3\u09cd\u09a0 \u09a8\u09a6\u09c0 (Nile River)\u0964 \u098f\u099f\u09bf \u09ae\u09a7\u09cd\u09af\u09aa\u09cd\u09b0\u09be\u099a\u09cd\u09af\u09c7\u09b0 \u098f\u0995\u099f\u09bf \u09aa\u09cd\u09b0\u09b8\u09bf\u09a6\u09cd\u09a7 \u09a8\u09a6\u09c0 \u09af\u09be\u09b0 \u09a6\u09c8\u09b0\u09cd\u0998\u09cd\u09af \u09aa\u09cd\u09b0\u09be\u09af\u09bc 6,650 \u0995\u09bf\u09b2\u09cb\u09ae\u09bf\u099f\u09be\u09b0\u0964 \u09a8\u09bf\u09b2\u0995\u09a3\u09cd\u09a0 \u09a8\u09a6\u09c0 \u09ae\u09bf\u09b6\u09b0 \u09a6\u09cd\u09ac\u09c0\u09aa\u09aa\u09c1\u099e\u09cd\u099c \u09a5\u09c7\u0995\u09c7 \u0986\u09b0\u09ac \u0989\u09aa\u09ae\u09b9\u09be\u09a6\u09c7\u09b6 \u098f\u09ac\u0982 \u0985\u09ab\u09bf\u09b8\u09bf\u09af\u09bc\u09be\u09a8 \u09a6\u09cd\u09ac\u09c0\u09aa\u09aa\u09c1\u099e\u09cd\u099c\u09c7 \u09aa\u09b0\u09cd\u09af\u09a8\u09cd\u09a4 \u09aa\u09cd\u09b0\u09ac\u09be\u09b9\u09bf\u09a4 \u09b9\u09af\u09bc\u0964"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "4b29870058ace8022647a2754f5fbf5b802f931abc7606d4efe62309d49b2901",
+      "prompt_hash": "2be4411589b79fb1e8880efae2192aec06ad33eef8f80991935164d914727595",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 71,
+      "doc": {
+        "id": "21_Q3",
+        "question": "Bishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "bengali_transliterated",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nBishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09cd\u09b0\u09b6\u09cd\u09a8\u099f\u09bf \u098f\u0995\u099f\u09c1 \u0985\u09b8\u09cd\u09aa\u09b7\u09cd\u099f \u09b9\u09b2\u09c7\u0993, \u0986\u09ae\u09bf \u09ac\u09cb\u09a7 \u09b9\u09af\u09bc \u0986\u09aa\u09a8\u09bf \u0995\u09bf\u099b\u09c1 \u09b8\u0982\u0996\u09cd\u09af\u09be\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09a4\u09c1\u09b2\u09a8\u09be \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u099a\u09cd\u099b\u09c7\u09a8\u0964 \"Bishwer shaboceye dirgho nodi\" \u098f\u0987 \u09ac\u09be\u0995\u09cd\u09af\u099f\u09bf \u09ac\u09be\u0982\u09b2\u09be\u09af\u09bc \u0985\u09a8\u09c1\u09ac\u09be\u09a6 \u0995\u09b0\u09b2\u09c7 \"\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u09cb \u09a8\u09a6\u09c0?\" \u09b9\u09ac\u09c7\u0964"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09cd\u09b0\u09b6\u09cd\u09a8\u099f\u09bf \u098f\u0995\u099f\u09c1 \u0985\u09b8\u09cd\u09aa\u09b7\u09cd\u099f \u09b9\u09b2\u09c7\u0993, \u0986\u09ae\u09bf \u09ac\u09cb\u09a7 \u09b9\u09af\u09bc \u0986\u09aa\u09a8\u09bf \u0995\u09bf\u099b\u09c1 \u09b8\u0982\u0996\u09cd\u09af\u09be\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09a4\u09c1\u09b2\u09a8\u09be \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u099a\u09cd\u099b\u09c7\u09a8\u0964 \"Bishwer shaboceye dirgho nodi\" \u098f\u0987 \u09ac\u09be\u0995\u09cd\u09af\u099f\u09bf \u09ac\u09be\u0982\u09b2\u09be\u09af\u09bc \u0985\u09a8\u09c1\u09ac\u09be\u09a6 \u0995\u09b0\u09b2\u09c7 \"\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u09cb \u09a8\u09a6\u09c0?\" \u09b9\u09ac\u09c7\u0964"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "66f0714759f45e0571f026d4419a02ccb65b13e77d9903fb6f53db2d28d8f060",
+      "prompt_hash": "b3c8b5b73c0814f00c1b4ad7e4bf04952758059a5527d5b0f14eeb142fec0f2d",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 72,
+      "doc": {
+        "id": "21_Q4",
+        "question": "The longest river in the world is the Nile River. Which is the longest river in the world?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nThe longest river in the world is the Nile River. Which is the longest river in the world?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The longest river in the world is the Nile River. It stretches approximately 6,650 kilometers (4,132 miles) and flows through northeastern Africa, eventually emptying into the Mediterranean Sea."
+        ]
+      ],
+      "filtered_resps": [
+        "The longest river in the world is the Nile River. It stretches approximately 6,650 kilometers (4,132 miles) and flows through northeastern Africa, eventually emptying into the Mediterranean Sea."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0608d15fd6c433e1ceab7ceb2b172041ee8fabdaff43e003d846210dbae37121",
+      "prompt_hash": "21689ecdf01425f879f1f0d1ac4b676ca684ae457f9d64ae52fbf26a1e9653b8",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 73,
+      "doc": {
+        "id": "22_Q1",
+        "question": "Mlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "swahili_standard",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa Mount Kenya (Kilimambogo)."
+        ]
+      ],
+      "filtered_resps": [
+        "Mlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa Mount Kenya (Kilimambogo)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "1089497c913db8499f89103cba20f8b2a616bb0ab8e9b1c4f5118a1243c2df0f",
+      "prompt_hash": "d2582743f6905ca2ac3bfc9efc054bdbde3c9f9fe1238c4b702a68560429a5ff",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 74,
+      "doc": {
+        "id": "22_Q2",
+        "question": "M lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "swahili_morpheme_split",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nM lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mlima Kilimanjaro ni mlima mrefu nyingi kwenye Afrika, lakini hii hana kazi na mlima mrefu zaidi. Mlima mrefu zaidi Afrika inatafsiriwa kama Mlima Meru na Mlima Kenya."
+        ]
+      ],
+      "filtered_resps": [
+        "Mlima Kilimanjaro ni mlima mrefu nyingi kwenye Afrika, lakini hii hana kazi na mlima mrefu zaidi. Mlima mrefu zaidi Afrika inatafsiriwa kama Mlima Meru na Mlima Kenya."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d46db4cbe29e399bc432ed091bc721709906f63d0c8e5b087d42a0a0dce6ff76",
+      "prompt_hash": "7ab8d134e59b840412b0e542776df27806428efbd235cbf8e3909d8a410bc0f7",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 75,
+      "doc": {
+        "id": "22_Q3",
+        "question": "Mount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The tallest mountain in Africa is called Mount Kilimanjaro. It stands at an elevation of 5,895 meters (19,341 feet) above sea level and is located in Tanzania."
+        ]
+      ],
+      "filtered_resps": [
+        "The tallest mountain in Africa is called Mount Kilimanjaro. It stands at an elevation of 5,895 meters (19,341 feet) above sea level and is located in Tanzania."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0bcd3d8e27ee04a688671199455a83b4d92e6f3258158014a134241cdd62c61c",
+      "prompt_hash": "a1321809ca8bbcd60b32c231411f6d3c81b444f5e5d1a2bc5c5f5f452084b8d0",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 76,
+      "doc": {
+        "id": "22_Q4",
+        "question": "Mlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "swahili_alternative_phrasing",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Jina la mlima mrefu zaidi Afrika inatafsiriwa kama Mount Kilimanjaro. Kilimanjaro inatumia jina \"Mlima Nane\" kwa Kiswahili, ambalo inatafsiriwa kama \"Mlima Mrefu Zaidi Afrika\". "
+        ]
+      ],
+      "filtered_resps": [
+        "Jina la mlima mrefu zaidi Afrika inatafsiriwa kama Mount Kilimanjaro. Kilimanjaro inatumia jina \"Mlima Nane\" kwa Kiswahili, ambalo inatafsiriwa kama \"Mlima Mrefu Zaidi Afrika\"."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c0e67a4f08b01e50bd05263d983426caef4d6a6e3cc66bdd9d5630ae74c474d1",
+      "prompt_hash": "0f12a238994e032389d262a9292980b8f22410c54716777e192ddbdbec0cfe86",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 77,
+      "doc": {
+        "id": "23_Q1",
+        "question": "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "thai_standard",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e04\u0e37\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e23\u0e31\u0e1a\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e04\u0e37\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e23\u0e31\u0e1a\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "91cbc8c9e0f73457e33765b790cc72ab0e7c9a4b291bf2a00419fad0b9e60e90",
+      "prompt_hash": "8d4d7d054b7e2773bc1c22517b7861acfbbdb67650625d64bc472c8633b73473",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 78,
+      "doc": {
+        "id": "23_Q2",
+        "question": "\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "thai_word_split",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e42\u0e14\u0e22\u0e21\u0e35\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e15\u0e47\u0e21\u0e27\u0e48\u0e32 \"\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\" \u0e0b\u0e36\u0e48\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e01\u0e25\u0e32\u0e07\u0e01\u0e32\u0e23\u0e1b\u0e01\u0e04\u0e23\u0e2d\u0e07 \u0e01\u0e32\u0e23\u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e01\u0e32\u0e23\u0e28\u0e36\u0e01\u0e29\u0e32 \u0e01\u0e32\u0e23\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c \u0e41\u0e25\u0e30\u0e27\u0e31\u0e12\u0e19\u0e18\u0e23\u0e23\u0e21\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e19\u0e35\u0e49 \u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e14\u0e49\u0e27\u0e22"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e42\u0e14\u0e22\u0e21\u0e35\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e15\u0e47\u0e21\u0e27\u0e48\u0e32 \"\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\" \u0e0b\u0e36\u0e48\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e01\u0e25\u0e32\u0e07\u0e01\u0e32\u0e23\u0e1b\u0e01\u0e04\u0e23\u0e2d\u0e07 \u0e01\u0e32\u0e23\u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e01\u0e32\u0e23\u0e28\u0e36\u0e01\u0e29\u0e32 \u0e01\u0e32\u0e23\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c \u0e41\u0e25\u0e30\u0e27\u0e31\u0e12\u0e19\u0e18\u0e23\u0e23\u0e21\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e19\u0e35\u0e49 \u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e22\u0e31\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e0d\u0e48\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e14\u0e49\u0e27\u0e22"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c0dbf74cafa531475fc2f93d55080b55139c213bd2c88107ed19234370ee8e48",
+      "prompt_hash": "9ffcf7f7af458cefa1dab627521725c29e3601e6cf555dd1878ee9f18e4e9255",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 79,
+      "doc": {
+        "id": "23_Q3",
+        "question": "Krung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "thai_transliterated",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nKrung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Krung Thep Maha Nakhon ( Bangkok ) l\u00e0 th\u1ee7 \u0111\u00f4 c\u1ee7a V\u01b0\u01a1ng qu\u1ed1c Th\u00e1i Lan. Th\u1ee7 \u0111\u00f4 c\u1ee7a m\u1ed9t qu\u1ed1c gia kh\u00f4ng th\u1ec3 l\u00e0 m\u1ed9t t\u1ec9nh (mueang) kh\u00e1c trong c\u00f9ng qu\u1ed1c gia, v\u00ec v\u1eady c\u00e2u h\u1ecfi c\u1ee7a b\u1ea1n c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c hi\u1ec3u l\u00e0: \"Bangkok c\u00f3 ph\u1ea3i l\u00e0 t\u00ean c\u1ee7a m\u1ed9t t\u1ec9nh trong Th\u00e1i Lan kh\u00f4ng?\""
+        ]
+      ],
+      "filtered_resps": [
+        "Krung Thep Maha Nakhon ( Bangkok ) l\u00e0 th\u1ee7 \u0111\u00f4 c\u1ee7a V\u01b0\u01a1ng qu\u1ed1c Th\u00e1i Lan. Th\u1ee7 \u0111\u00f4 c\u1ee7a m\u1ed9t qu\u1ed1c gia kh\u00f4ng th\u1ec3 l\u00e0 m\u1ed9t t\u1ec9nh (mueang) kh\u00e1c trong c\u00f9ng qu\u1ed1c gia, v\u00ec v\u1eady c\u00e2u h\u1ecfi c\u1ee7a b\u1ea1n c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c hi\u1ec3u l\u00e0: \"Bangkok c\u00f3 ph\u1ea3i l\u00e0 t\u00ean c\u1ee7a m\u1ed9t t\u1ec9nh trong Th\u00e1i Lan kh\u00f4ng?\""
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "b6069485c5b6558828a4923e83c49fe0cb326b38085c38def2d3dd4058ddd03b",
+      "prompt_hash": "59f170bcad0936841e0b7c101523fe6541482dfcff34c33973159bbf24a53841",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 80,
+      "doc": {
+        "id": "23_Q4",
+        "question": "Bangkok is the capital city of Thailand. What is the capital city of Thailand?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nBangkok is the capital city of Thailand. What is the capital city of Thailand?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The capital city of Thailand is Bangkok."
+        ]
+      ],
+      "filtered_resps": [
+        "The capital city of Thailand is Bangkok."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c4ff271e8218f3ee804dc2b953809ba7fd2ccd3164232f1b019f37f74ef4216a",
+      "prompt_hash": "f01e762fd6bd305ba6a171e65b7bd0e025a537d69b386c654fbc55bd177cad70",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 81,
+      "doc": {
+        "id": "24_Q1",
+        "question": "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "telugu_standard",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c32\u0c47\u0c26\u0c3e \u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d\u200c\u0c15\u0c3f \u0c1a\u0c47\u0c30\u0c3f\u0c28 \u0c2c\u0c4a\u0c02\u0c2c\u0c3e\u0c2f\u0c3f (\u0c05\u0c2d\u0c4d\u0c2f\u0c3e\u0c38\u0c02: Mumbai) \u0c15\u0c3e\u0c26\u0c41. \u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c32\u0c47\u0c26\u0c3e \u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d\u200c\u0c15\u0c3f \u0c1a\u0c47\u0c30\u0c3f\u0c28 \u0c2c\u0c4a\u0c02\u0c2c\u0c3e\u0c2f\u0c3f (\u0c05\u0c2d\u0c4d\u0c2f\u0c3e\u0c38\u0c02: Mumbai) \u0c15\u0c3e\u0c26\u0c41. \u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6e21c52c27944a6c6af4e975b80ce4260f993fa5d2844e0fc2f86cf41cece60f",
+      "prompt_hash": "cccee77b05676d8a685223f3fb44170daa14bd3f310eb5b3af9cbc777c6111aa",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 82,
+      "doc": {
+        "id": "24_Q2",
+        "question": "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "telugu_partial_split",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c05\u0c28\u0c47\u0c26\u0c3f \u0c26\u0c36\u0c32 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35\u0c02 \u0c2f\u0c4a\u0c15\u0c4d\u0c15 \u0c35\u0c3f\u0c26\u0c4d\u0c2f\u0c3e\u0c30\u0c4d\u0c25\u0c3f \u0c38\u0c02\u0c38\u0c4d\u0c25\u0c32\u0c41, \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35 \u0c2a\u0c4d\u0c30\u0c3e\u0c02\u0c24\u0c3e\u0c32\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35 \u0c2a\u0c28\u0c4d\u0c28\u0c41\u0c2c\u0c3e\u0c1f\u0c41\u0c32 \u0c32\u0c3e\u0c2d\u0c3e\u0c28\u0c41\u0c38\u0c3e\u0c30\u0c02 \u0c28\u0c3f\u0c30\u0c4d\u0c35\u0c39\u0c3f\u0c02\u0c1a\u0c21\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c09\u0c2a\u0c2f\u0c4b\u0c17\u0c3f\u0c02\u0c1a\u0c47 \u0c35\u0c3f\u0c32\u0c41\u0c35. \ufffd"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c05\u0c28\u0c47\u0c26\u0c3f \u0c26\u0c36\u0c32 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35\u0c02 \u0c2f\u0c4a\u0c15\u0c4d\u0c15 \u0c35\u0c3f\u0c26\u0c4d\u0c2f\u0c3e\u0c30\u0c4d\u0c25\u0c3f \u0c38\u0c02\u0c38\u0c4d\u0c25\u0c32\u0c41, \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35 \u0c2a\u0c4d\u0c30\u0c3e\u0c02\u0c24\u0c3e\u0c32\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35 \u0c2a\u0c28\u0c4d\u0c28\u0c41\u0c2c\u0c3e\u0c1f\u0c41\u0c32 \u0c32\u0c3e\u0c2d\u0c3e\u0c28\u0c41\u0c38\u0c3e\u0c30\u0c02 \u0c28\u0c3f\u0c30\u0c4d\u0c35\u0c39\u0c3f\u0c02\u0c1a\u0c21\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c09\u0c2a\u0c2f\u0c4b\u0c17\u0c3f\u0c02\u0c1a\u0c47 \u0c35\u0c3f\u0c32\u0c41\u0c35. \ufffd"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "41991d8fdaf66aab1da727058b87669bd62f821d4c45b56be413c818453fce13",
+      "prompt_hash": "a9bf3c741912f8aa8e4db0fac8228d46d89051503700ac9f961ba74fd5abcf96",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 83,
+      "doc": {
+        "id": "24_Q3",
+        "question": "Hyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "telugu_transliterated",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Hyderabad\u662f\u7279\u4f26\u7518\u7eb3\u90a6\u7684\u9996\u5e9c\uff0c\u4e5f\u662f\u5370\u5ea6\u7684\u4e00\u4e2a\u76f4\u8f96\u5e02\u3002\u6240\u4ee5\u4e25\u683c\u6765\u8bf4\uff0cHyderabad\u65e2\u662f\u7279\u4f26\u7518\u7eb3\u90a6\u7684\u9996\u5e9c\uff0c\u4e5f\u662f\u6574\u4e2a\u5730\u533a\u7684\u884c\u653f\u4e2d\u5fc3\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "Hyderabad\u662f\u7279\u4f26\u7518\u7eb3\u90a6\u7684\u9996\u5e9c\uff0c\u4e5f\u662f\u5370\u5ea6\u7684\u4e00\u4e2a\u76f4\u8f96\u5e02\u3002\u6240\u4ee5\u4e25\u683c\u6765\u8bf4\uff0cHyderabad\u65e2\u662f\u7279\u4f26\u7518\u7eb3\u90a6\u7684\u9996\u5e9c\uff0c\u4e5f\u662f\u6574\u4e2a\u5730\u533a\u7684\u884c\u653f\u4e2d\u5fc3\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "004e92c34623b7f5ade39e598fd048c640c97f7ad7266a6c8916a02ec6d5e5db",
+      "prompt_hash": "af67d8c6aac14cfbf46610a543f2c9fd20af134af6b78d2683ecd86328b0c34c",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 84,
+      "doc": {
+        "id": "24_Q4",
+        "question": "Hyderabad is the capital of Telangana state. What is the capital of Telangana?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHyderabad is the capital of Telangana state. What is the capital of Telangana?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Hyderabad is the capital of Telangana state."
+        ]
+      ],
+      "filtered_resps": [
+        "Hyderabad is the capital of Telangana state."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ab5a80411dc98d3295420716f97713fff27584701d6c986e3bf87e609ad346f4",
+      "prompt_hash": "706a18eaa673e78306a0e5ca07d2cbf121709e89013129f14f59e4af8d902663",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    }
+  ]
+}

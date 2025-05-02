@@ -1,0 +1,42 @@
+apply_chat_template: true
+batch_size: 32
+cache_dir: null
+chat_template: null
+dataset_configs:
+- name: tokenization_robustness
+  num_samples: null
+  split: null
+  subset: null
+datasets:
+- tokenization_robustness
+debug: false
+dtype: float32
+dump_predictions: true
+eval_batch_size: 8
+evaluation_method: lm_eval
+experiment_dir: results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct
+experiment_name: tok-robust-Llama-3.1-8B-Instruct
+generate_plots: true
+load_existing: false
+load_in_4bit: false
+load_in_8bit: false
+log_level: INFO
+max_gpu_memory: null
+model_name: meta-llama/Meta-Llama-3.1-8B-Instruct
+num_fewshot: 0
+num_samples: null
+plot_format: png
+results_format: json
+resume_dir: null
+revision: null
+save_dir: results/tokenization_robustness/Llama-3.1-8B-Instruct
+save_results: true
+seed: 42
+slurm_job_id: '16062562'
+tags: []
+tensor_parallel_size: 1
+tokenizer_name: meta-llama/Meta-Llama-3.1-8B-Instruct
+trust_remote_code: false
+use_wandb: false
+wandb_entity: gsaltintas
+wandb_project: xarch-tokenizers

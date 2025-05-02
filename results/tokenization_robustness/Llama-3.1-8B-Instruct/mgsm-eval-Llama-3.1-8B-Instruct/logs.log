@@ -1,0 +1,3 @@
+2025-05-01 22:46:39,071 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-01 22:46:39,873 - eval - INFO - Starting eval with config:
+2025-05-01 22:46:43,062 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct

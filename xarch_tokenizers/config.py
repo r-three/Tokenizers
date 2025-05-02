@@ -98,7 +98,8 @@ class Config:
 
     # Advanced settings
     cache_dir: Optional[str] = field(
-        default=None, metadata={"help": "Directory to cache models and datasets"}
+        default=f"{os.environ.get('SCRATCH')}/.cache",
+        metadata={"help": "Directory to cache models and datasets"},
     )
     tokenizer_name: Optional[str] = field(
         default=None,
@@ -143,6 +144,7 @@ class Config:
     )
 
     _dataset_configs: Optional[List[str]] = field(default_factory=list)
+    _create_experiment_dir: bool = True
 
     def __post_init__(self):
         if self.wandb_entity is None:
@@ -164,7 +166,8 @@ class Config:
                 timestamp,
             )
         self.experiment_dir = self.save_dir / self.experiment_name
-        self.experiment_dir.mkdir(parents=True, exist_ok=True)
+        if self._create_experiment_dir:
+            self.experiment_dir.mkdir(parents=True, exist_ok=True)
         # Auto-detect GPU count for tensor parallelism if not specified
         if self.tensor_parallel_size is None:
             self.tensor_parallel_size = torch.cuda.device_count()
@@ -177,6 +180,12 @@ class Config:
         # Set tokenizer to model name if not specified
         if self.tokenizer_name is None:
             self.tokenizer_name = self.model_name
+
+        if self.cache_dir is None or self.cache_dir == "/checkpoint":
+            self.cache_dir = (
+                "/checkpoint/{os.environ.get('USER')}/{self.slurm_job_id}/.cache"
+            )
+        os.environ["$HUGGINGFACE_HUB_CACHE"] = self.cache_dir
 
     def _parse_datasets(self):
         """Parse the datasets field into TaskConfig objects."""

@@ -1,0 +1,4248 @@
+{
+  "tokenization_robustness": [
+    {
+      "doc_id": 0,
+      "doc": {
+        "id": "1_Q1",
+        "question": "What year did Eyjafjallaj\u00f6kull erupt and disrupt European air travel?",
+        "answer": "2010",
+        "all_targets": [
+          "2010"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "Icelandic Volcano",
+        "set_id": "1"
+      },
+      "target": "2010",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat year did Eyjafjallaj\u00f6kull erupt and disrupt European air travel?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Eyjafjallaj\u00f6kull, a volcano in Iceland, erupted in 2010. The eruption began on April 14, 2010, and continued intermittently until May 22, 2010. The ash cloud from the eruption caused significant disruptions to air travel across Europe, with many flights cancelled or delayed due to concerns about the potential impact of the ash on aircraft engines. The disruptions lasted for several weeks, with the peak disruption occurring on April 15-16, 2010."
+        ]
+      ],
+      "filtered_resps": [
+        "Eyjafjallaj\u00f6kull, a volcano in Iceland, erupted in 2010. The eruption began on April 14, 2010, and continued intermittently until May 22, 2010. The ash cloud from the eruption caused significant disruptions to air travel across Europe, with many flights cancelled or delayed due to concerns about the potential impact of the ash on aircraft engines. The disruptions lasted for several weeks, with the peak disruption occurring on April 15-16, 2010."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c1634ae969ca3e4628e2b98432a334cbebe66294bcabb3d713d30612d2b2c73a",
+      "prompt_hash": "dbb273881b69ae6105b8f8127711928c31e9071efbf238d45007d3beb040c4eb",
+      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 1,
+      "doc": {
+        "id": "1_Q2",
+        "question": "What year did Eyja fjalla j\u00f6kull erupt and disrupt European air travel?",
+        "answer": "2010",
+        "all_targets": [
+          "2010"
+        ],
+        "tokenization_type": "split_components",
+        "category": "Rare Character Sequences",
+        "title": "Icelandic Volcano",
+        "set_id": "1"
+      },
+      "target": "2010",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat year did Eyja fjalla j\u00f6kull erupt and disrupt European air travel?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "I'm not aware of any information about an Eyja fjalla j\u00f6kull eruption that disrupted European air travel. However, I think you may be referring to the Eyjafjallaj\u00f6kull volcano, which is a glacier-covered volcano in Iceland."
+        ]
+      ],
+      "filtered_resps": [
+        "I'm not aware of any information about an Eyja fjalla j\u00f6kull eruption that disrupted European air travel. However, I think you may be referring to the Eyjafjallaj\u00f6kull volcano, which is a glacier-covered volcano in Iceland."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5284a93ce78bd1d49a1fe5a0805d441f7303b505630bfc01b8e80d5a537bd47d",
+      "prompt_hash": "6b5eae294d169e88fa0110b07058bb8c67488e65682031c82dc59c07530625a3",
+      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 2,
+      "doc": {
+        "id": "1_Q3",
+        "question": "What year did Eyjafjalla jokull erupt and disrupt European air travel?",
+        "answer": "2010",
+        "all_targets": [
+          "2010"
+        ],
+        "tokenization_type": "simplified",
+        "category": "Rare Character Sequences",
+        "title": "Icelandic Volcano",
+        "set_id": "1"
+      },
+      "target": "2010",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat year did Eyjafjalla jokull erupt and disrupt European air travel?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The Eyjafjallaj\u00f6kull volcano erupted in 2010, specifically from April 14 to May 24, 2010. The eruption caused significant disruptions to air travel across Europe, with over 100,000 flights cancelled or delayed. The ash cloud from the eruption spread across the continent, affecting many countries and causing widespread disruptions to air travel."
+        ]
+      ],
+      "filtered_resps": [
+        "The Eyjafjallaj\u00f6kull volcano erupted in 2010, specifically from April 14 to May 24, 2010. The eruption caused significant disruptions to air travel across Europe, with over 100,000 flights cancelled or delayed. The ash cloud from the eruption spread across the continent, affecting many countries and causing widespread disruptions to air travel."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "eb0836ad7ebbba320ad519093ea6a1d82a1c6a1b94bc9baaa5c506ddfa1ec04f",
+      "prompt_hash": "a7717bbf912258ff73943d8bb7d3bd597db45f3f31acaad152d2f628cc9fd493",
+      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 3,
+      "doc": {
+        "id": "2_Q1",
+        "question": "In which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?",
+        "answer": "Wales",
+        "all_targets": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "Welsh Village",
+        "set_id": "2"
+      },
+      "target": "Wales",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A tongue-twister of a place name!"
+        ]
+      ],
+      "filtered_resps": [
+        "A tongue-twister of a place name!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "94dd329e5491054e2a94c8c0e68be33e25b38e3f998dcb8c891ef216cb884d92",
+      "prompt_hash": "4356d79106396bc89cfcdd90a055a6eae6686091eaf775199a0b4118dff83ac6",
+      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 4,
+      "doc": {
+        "id": "2_Q2",
+        "question": "In which country is Llanfair pwllgwyngyll located?",
+        "answer": "Wales",
+        "all_targets": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "tokenization_type": "split_shortened",
+        "category": "Rare Character Sequences",
+        "title": "Welsh Village",
+        "set_id": "2"
+      },
+      "target": "Wales",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Llanfair pwllgwyngyll located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A famous name!"
+        ]
+      ],
+      "filtered_resps": [
+        "A famous name!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0a0bd83aaf0c5269dc3bdd9903d6dbfea0e98edcfa71afb74535dcfb4aee9838",
+      "prompt_hash": "a1bef2a85330727cf1eebc4d64e9e1b1364344f1dc20ddf331413655743d71aa",
+      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 5,
+      "doc": {
+        "id": "2_Q3",
+        "question": "In which country is Llanfair PG located?",
+        "answer": "Wales",
+        "all_targets": [
+          "Wales",
+          "United Kingdom"
+        ],
+        "tokenization_type": "abbreviated",
+        "category": "Rare Character Sequences",
+        "title": "Welsh Village",
+        "set_id": "2"
+      },
+      "target": "Wales",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Llanfair PG located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Llanfair PG (also known as Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch) is a village located in Wales, United Kingdom."
+        ]
+      ],
+      "filtered_resps": [
+        "Llanfair PG (also known as Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch) is a village located in Wales, United Kingdom."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6f78c784945e1dd2d74b0810ced35b14be41d385249af50efef534f51e68d2d9",
+      "prompt_hash": "ef38c797f6f845f15a526afb045a782881b2a9799a20554a60a282f23fa20b4b",
+      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 6,
+      "doc": {
+        "id": "3_Q1",
+        "question": "What type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?",
+        "answer": "lung disease",
+        "all_targets": [
+          "lung disease"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "Long Medical Term",
+        "set_id": "3"
+      },
+      "target": "lung disease",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A tongue-twister of a word!"
+        ]
+      ],
+      "filtered_resps": [
+        "A tongue-twister of a word!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e75be3b43d5699c6d99c978845877c304c5fd3554670e1098df28230c620ebc4",
+      "prompt_hash": "1f938f7d06ee98d0829cc6e3beba9c00a30b2e5ba36aed7d1d7c5edf1550a61c",
+      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 7,
+      "doc": {
+        "id": "3_Q2",
+        "question": "What type of condition is Pneumono ultra microscopic silico volcano coniosis?",
+        "answer": "lung disease",
+        "all_targets": [
+          "lung disease"
+        ],
+        "tokenization_type": "split_components",
+        "category": "Rare Character Sequences",
+        "title": "Long Medical Term",
+        "set_id": "3"
+      },
+      "target": "lung disease",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat type of condition is Pneumono ultra microscopic silico volcano coniosis?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "I'm not familiar with the term \"Pneumono ultra microscopic silico volcano coniosis.\" It's possible that it's a made-up or fictional term, or it could be a real medical condition that I'm not aware of."
+        ]
+      ],
+      "filtered_resps": [
+        "I'm not familiar with the term \"Pneumono ultra microscopic silico volcano coniosis.\" It's possible that it's a made-up or fictional term, or it could be a real medical condition that I'm not aware of."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "8e9b1e65f87ddcd002ca9b218283608f89e3258c67e710f52fadd749ee51e04e",
+      "prompt_hash": "4ca315664843b2029d4f24f23ef4a80cdb9a4e205a25fa1f2935ef5f8343b8ee",
+      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 8,
+      "doc": {
+        "id": "3_Q3",
+        "question": "What type of condition is Pneumoconiosis?",
+        "answer": "lung disease",
+        "all_targets": [
+          "lung disease"
+        ],
+        "tokenization_type": "simplified",
+        "category": "Rare Character Sequences",
+        "title": "Long Medical Term",
+        "set_id": "3"
+      },
+      "target": "lung disease",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat type of condition is Pneumoconiosis?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Pneumoconiosis is a type of occupational lung disease, which is a condition that affects the lungs due to inhalation of dust particles or other airborne substances. It is a chronic condition that can cause inflammation and scarring in the lungs, leading to breathing difficulties and other respiratory problems."
+        ]
+      ],
+      "filtered_resps": [
+        "Pneumoconiosis is a type of occupational lung disease, which is a condition that affects the lungs due to inhalation of dust particles or other airborne substances. It is a chronic condition that can cause inflammation and scarring in the lungs, leading to breathing difficulties and other respiratory problems."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3510bab534f03a0c3d378115e78150c89f319f3dc537e9e7376bbbe0a0b2bfc9",
+      "prompt_hash": "fea9ff0edc3eefca35e075711c47c731a364f58c8c1383f8e5f480c0699ebde0",
+      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 9,
+      "doc": {
+        "id": "4_Q1",
+        "question": "In which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?",
+        "answer": "New Zealand",
+        "all_targets": [
+          "New Zealand"
+        ],
+        "tokenization_type": "original",
+        "category": "Rare Character Sequences",
+        "title": "M\u0101ori Hill",
+        "set_id": "4"
+      },
+      "target": "New Zealand",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A tongue-twister of a place name!"
+        ]
+      ],
+      "filtered_resps": [
+        "A tongue-twister of a place name!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "71d1d42566a0930bef277be669d7771d13c9c713280809ad4a0be7c8749aaa37",
+      "prompt_hash": "af6dba7bb680bb0d8b3ee78f6ce04e46e724c8966b332b0086a45f7b141053ae",
+      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 10,
+      "doc": {
+        "id": "4_Q2",
+        "question": "In which country is Taumata whakatangi hangakoauau o tamatea located?",
+        "answer": "New Zealand",
+        "all_targets": [
+          "New Zealand"
+        ],
+        "tokenization_type": "partial",
+        "category": "Rare Character Sequences",
+        "title": "M\u0101ori Hill",
+        "set_id": "4"
+      },
+      "target": "New Zealand",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Taumata whakatangi hangakoauau o tamatea located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A famous question!"
+        ]
+      ],
+      "filtered_resps": [
+        "A famous question!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3001a3b2ab5963f7045f8af72ec8c6c6207c2abeb0bde817f55420a8451552d7",
+      "prompt_hash": "2b6e5a28b077bd931ce497822c6d70b53b107dc25953d4d7fd09ffeb31200061",
+      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 11,
+      "doc": {
+        "id": "4_Q3",
+        "question": "In which country is Taumata hill located?",
+        "answer": "New Zealand",
+        "all_targets": [
+          "New Zealand"
+        ],
+        "tokenization_type": "simplified",
+        "category": "Rare Character Sequences",
+        "title": "M\u0101ori Hill",
+        "set_id": "4"
+      },
+      "target": "New Zealand",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Taumata hill located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Taumata hill is located in New Zealand."
+        ]
+      ],
+      "filtered_resps": [
+        "Taumata hill is located in New Zealand."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3d0515990809c14b4965181a7d157f7a16b737e6f4e06267fc1ad202e8937904",
+      "prompt_hash": "f4619c49f370d1e8538fb8b356c86144efe934a97339e4a065ac35cb95816546",
+      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 12,
+      "doc": {
+        "id": "5_Q1",
+        "question": "What is the English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\"",
+        "answer": "\"Hello, how are you?\"",
+        "all_targets": [
+          "\"Hello, how are you?\"",
+          "Hello, how are you?",
+          "Hello how are you",
+          "\"Hi, how are you doing?\"",
+          "Hi, how are you doing?",
+          "Hi how are you doing"
+        ],
+        "tokenization_type": "original_cyrillic",
+        "category": "Rare Character Sequences",
+        "title": "Russian Greeting",
+        "set_id": "5"
+      },
+      "target": "\"Hello, how are you?\"",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A common Russian phrase!"
+        ]
+      ],
+      "filtered_resps": [
+        "A common Russian phrase!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2b43d7c88bcb9277af645652b459f4fbcfa976b0d350741fedb5fa4663aeffae",
+      "prompt_hash": "128d183bfedd216051d9863bd468e792bf7c93faf9f2e3b338ac47f6531d4acd",
+      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 13,
+      "doc": {
+        "id": "5_Q2",
+        "question": "What is the English translation of \"Privet, kak dela?\"",
+        "answer": "\"Hello, how are you?\"",
+        "all_targets": [
+          "\"Hello, how are you?\"",
+          "Hello, how are you?",
+          "Hello how are you",
+          "\"Hi, how are you doing?\"",
+          "Hi, how are you doing?",
+          "Hi how are you doing"
+        ],
+        "tokenization_type": "transliterated",
+        "category": "Rare Character Sequences",
+        "title": "Russian Greeting",
+        "set_id": "5"
+      },
+      "target": "\"Hello, how are you?\"",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the English translation of \"Privet, kak dela?\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A Russian phrase!"
+        ]
+      ],
+      "filtered_resps": [
+        "A Russian phrase!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "25511a494a272cdc75c620323ba97aa96cdf92907879c7d56dd1944f33f2b67a",
+      "prompt_hash": "ddf63ad188b85d6595fb709c3e1a3ab6f477a02f194f5d1004125ccafd2451ee",
+      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 14,
+      "doc": {
+        "id": "5_Q3",
+        "question": "What is the English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\"?",
+        "answer": "\"Hello, how are you?\"",
+        "all_targets": [
+          "\"Hello, how are you?\"",
+          "Hello, how are you?",
+          "Hello how are you",
+          "\"Hi, how are you doing?\"",
+          "Hi, how are you doing?",
+          "Hi how are you doing"
+        ],
+        "tokenization_type": "no_punctuation",
+        "category": "Rare Character Sequences",
+        "title": "Russian Greeting",
+        "set_id": "5"
+      },
+      "target": "\"Hello, how are you?\"",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\"?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\" is \"hello, how are you?\""
+        ]
+      ],
+      "filtered_resps": [
+        "The English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\" is \"hello, how are you?\""
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "acd629c6ce69d4ed169f7b1fdef5b231994ec38c4e8e4649ca15bb118afb5230",
+      "prompt_hash": "61bde40629522fce3e9ea021044cd56ba6ccaae60fa9c5c1b590e69b9abedf3f",
+      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 15,
+      "doc": {
+        "id": "6_Q1",
+        "question": "What sector does healthcare belong to: public, private, or both?",
+        "answer": "both",
+        "all_targets": [
+          "both",
+          "public and private"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Healthcare",
+        "set_id": "6"
+      },
+      "target": "both",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat sector does healthcare belong to: public, private, or both?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Healthcare is a sector that belongs to both the public and private sectors. Here's a breakdown:"
+        ]
+      ],
+      "filtered_resps": [
+        "Healthcare is a sector that belongs to both the public and private sectors. Here's a breakdown:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "954470175f7ed2bbd061f0c1329d763247ac656f5bc881ca14f25f7740f4cfa6",
+      "prompt_hash": "3c3da74c698b40021a9ba1ed131ad108d10951d90d1620fdb88cef5e3269ee5f",
+      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 16,
+      "doc": {
+        "id": "6_Q2",
+        "question": "What sector does health care belong to: public, private, or both?",
+        "answer": "both",
+        "all_targets": [
+          "both",
+          "public and private"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Healthcare",
+        "set_id": "6"
+      },
+      "target": "both",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat sector does health care belong to: public, private, or both?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Health care is a sector that belongs to both public and private sectors. Here's a breakdown:"
+        ]
+      ],
+      "filtered_resps": [
+        "Health care is a sector that belongs to both public and private sectors. Here's a breakdown:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "af743d0a1dd73a55ce5723731047280c569675cac5a5b928c6c753b9afc30478",
+      "prompt_hash": "9cfcf4bc0a2a44111f80b0a25618d8f836ea43f4fbb21df99ee339e82e17412c",
+      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 17,
+      "doc": {
+        "id": "6_Q3",
+        "question": "What sector does health-care belong to: public, private, or both?",
+        "answer": "both",
+        "all_targets": [
+          "both",
+          "public and private"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Healthcare",
+        "set_id": "6"
+      },
+      "target": "both",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat sector does health-care belong to: public, private, or both?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Healthcare is a sector that can be classified as both public and private, depending on the country, region, or specific system. Here's a breakdown:"
+        ]
+      ],
+      "filtered_resps": [
+        "Healthcare is a sector that can be classified as both public and private, depending on the country, region, or specific system. Here's a breakdown:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2ae39220eb7032bbffee1f00f8e7453844fd18bbadb7174371a5613ef3ad2d9a",
+      "prompt_hash": "2fbaa14b918c26d8e5361c2192ab3f875e549bd84e5804ee782720382eda7948",
+      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 18,
+      "doc": {
+        "id": "7_Q1",
+        "question": "In one word, what is the main function of a database in computing?",
+        "answer": "storage",
+        "all_targets": [
+          "storage",
+          "store"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Database",
+        "set_id": "7"
+      },
+      "target": "storage",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn one word, what is the main function of a database in computing?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Storage."
+        ]
+      ],
+      "filtered_resps": [
+        "Storage."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "908d4c4827f15c8a0f2b7250d5a1e2fc648f54ceab1e72521fadfe34454d790d",
+      "prompt_hash": "fff253fa40d6dbf79da2c81dc556ffedae7a7c24e78f40e399feff4083952b2f",
+      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 19,
+      "doc": {
+        "id": "7_Q2",
+        "question": "In one word, what is the main function of a data base in computing?",
+        "answer": "storage",
+        "all_targets": [
+          "storage",
+          "store"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Database",
+        "set_id": "7"
+      },
+      "target": "storage",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn one word, what is the main function of a data base in computing?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Storage"
+        ]
+      ],
+      "filtered_resps": [
+        "Storage"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "7d85e32a4fc98e1c286ae998af172743856144cb59253cb9ddbcda6197905322",
+      "prompt_hash": "f596ec1df45d7688dcc7b1ac8867e289942fb3a5dea19b50ed886145053d9059",
+      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 20,
+      "doc": {
+        "id": "7_Q3",
+        "question": "In one word, what is the main function of a data-base in computing?",
+        "answer": "storage",
+        "all_targets": [
+          "storage",
+          "store"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Database",
+        "set_id": "7"
+      },
+      "target": "storage",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn one word, what is the main function of a data-base in computing?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Storage"
+        ]
+      ],
+      "filtered_resps": [
+        "Storage"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d26085deac9d15cbab75c5f8b180c83290dae91527ecf64b91774273dce948bc",
+      "prompt_hash": "d3eb1450e8268dd6980c8e6ecdd0d0f512d0893a43fadf6f74b2a3f90f74bc92",
+      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 21,
+      "doc": {
+        "id": "8_Q1",
+        "question": "What technology underlies most cryptocurrency systems?",
+        "answer": "Blockchain",
+        "all_targets": [
+          "Blockchain"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Cryptocurrency",
+        "set_id": "8"
+      },
+      "target": "Blockchain",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat technology underlies most cryptocurrency systems?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Most cryptocurrency systems are based on a technology called blockchain, which is a decentralized, distributed ledger that records transactions across a network of computers. The blockchain is maintained by a network of nodes, each of which has a copy of the blockchain, and new transactions are verified by a process called consensus."
+        ]
+      ],
+      "filtered_resps": [
+        "Most cryptocurrency systems are based on a technology called blockchain, which is a decentralized, distributed ledger that records transactions across a network of computers. The blockchain is maintained by a network of nodes, each of which has a copy of the blockchain, and new transactions are verified by a process called consensus."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "9b221b445b204e275a9f7d225da78ede5ead611db70a37e2d796d97af6fd0669",
+      "prompt_hash": "240f03fdb406dfa2840531fd7c61e921d309b879a71a4751f964cc524b32b630",
+      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 22,
+      "doc": {
+        "id": "8_Q2",
+        "question": "What technology underlies most crypto currency systems?",
+        "answer": "Blockchain",
+        "all_targets": [
+          "Blockchain"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Cryptocurrency",
+        "set_id": "8"
+      },
+      "target": "Blockchain",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat technology underlies most crypto currency systems?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Most cryptocurrency systems are built on top of a technology called blockchain, which is a decentralized, distributed ledger technology. The blockchain is a chain of blocks, each of which contains a set of transactions, and is maintained by a network of computers around the world."
+        ]
+      ],
+      "filtered_resps": [
+        "Most cryptocurrency systems are built on top of a technology called blockchain, which is a decentralized, distributed ledger technology. The blockchain is a chain of blocks, each of which contains a set of transactions, and is maintained by a network of computers around the world."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "61184acb5a5bd67290168104a04f3504c43fe3c14ad3e021550497c9ce469532",
+      "prompt_hash": "c313504daa8753a3d9df207bb649ae496f1cf3e3b20f728fb61071fb56e06e34",
+      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 23,
+      "doc": {
+        "id": "8_Q3",
+        "question": "What technology underlies most crypto-currency systems?",
+        "answer": "Blockchain",
+        "all_targets": [
+          "Blockchain"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Cryptocurrency",
+        "set_id": "8"
+      },
+      "target": "Blockchain",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat technology underlies most crypto-currency systems?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Most cryptocurrency systems are based on a technology called blockchain, which is a decentralized, distributed ledger technology. Blockchain is a chain of blocks, each of which contains a set of transactions, such as the transfer of cryptocurrency units. The blockchain is maintained by a network of computers, rather than a single central authority, and is secured through the use of cryptography."
+        ]
+      ],
+      "filtered_resps": [
+        "Most cryptocurrency systems are based on a technology called blockchain, which is a decentralized, distributed ledger technology. Blockchain is a chain of blocks, each of which contains a set of transactions, such as the transfer of cryptocurrency units. The blockchain is maintained by a network of computers, rather than a single central authority, and is secured through the use of cryptography."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e878a9407ebc2d120138a6735d82fb441f9fcfb1923506f4da5c4188f84d68bb",
+      "prompt_hash": "46b5ea729503bc9b0dc2c8bf87499933d501480600b509821924b2a089fdc4ad",
+      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 24,
+      "doc": {
+        "id": "9_Q1",
+        "question": "Complete this pair: socioeconomic status combines _____ factors and economic factors.",
+        "answer": "social",
+        "all_targets": [
+          "social"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Socioeconomic",
+        "set_id": "9"
+      },
+      "target": "social",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nComplete this pair: socioeconomic status combines _____ factors and economic factors.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The completed pair is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The completed pair is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c44747c799b7f7ede1f548f8afc49dcc15d896546793c81dd4aaa7ab7a5f6dad",
+      "prompt_hash": "17f02c3b6e0598f0684e1905d1fcf4b21ede569ea2a6e688edee1b03d9558166",
+      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 25,
+      "doc": {
+        "id": "9_Q2",
+        "question": "Complete this pair: socio economic status combines _____ factors and economic factors.",
+        "answer": "social",
+        "all_targets": [
+          "social"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Socioeconomic",
+        "set_id": "9"
+      },
+      "target": "social",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nComplete this pair: socio economic status combines _____ factors and economic factors.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The correct completion of the pair is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The correct completion of the pair is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "bb0913137a4a99dff9e85e07c8a56bd45101a022c5152b43fe741d2843e7e486",
+      "prompt_hash": "fdd185acd382100e6abc99c5cfa925d6905c8ecb39e75dca1f7558cd06ec32e4",
+      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 26,
+      "doc": {
+        "id": "9_Q3",
+        "question": "Complete this pair: socio-economic status combines _____ factors and economic factors.",
+        "answer": "social",
+        "all_targets": [
+          "social"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Socioeconomic",
+        "set_id": "9"
+      },
+      "target": "social",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nComplete this pair: socio-economic status combines _____ factors and economic factors.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The completed pair is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The completed pair is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ae53aa1c5014f941a384413ae15d55bc91b3127ca7b7d450f5d330dfefa236e4",
+      "prompt_hash": "8756d91eb6e73004b91b5e93f813aecc76b13c2918c0953d1fb55e834e6be577",
+      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 27,
+      "doc": {
+        "id": "10_Q1",
+        "question": "What markup language is primarily used to create a webpage?",
+        "answer": "HTML (Hypertext Markup Language)",
+        "all_targets": [
+          "HTML (Hypertext Markup Language)",
+          "Hypertext Markup Language",
+          "HTML"
+        ],
+        "tokenization_type": "single_word",
+        "category": "Compound Words",
+        "title": "Webpage",
+        "set_id": "10"
+      },
+      "target": "HTML (Hypertext Markup Language)",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat markup language is primarily used to create a webpage?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The markup language primarily used to create a webpage is **HTML** (Hypertext Markup Language)."
+        ]
+      ],
+      "filtered_resps": [
+        "The markup language primarily used to create a webpage is **HTML** (Hypertext Markup Language)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "04f14bd80f4ee306653b8afa124add74dcce01fd6c63bb6303a079bb4ad2e704",
+      "prompt_hash": "1c6a9992a26f45e3f3034da4ad31b15b77688de43758719acca7c556ed2644dd",
+      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 28,
+      "doc": {
+        "id": "10_Q2",
+        "question": "What markup language is primarily used to create a web page?",
+        "answer": "HTML (Hypertext Markup Language)",
+        "all_targets": [
+          "HTML (Hypertext Markup Language)",
+          "Hypertext Markup Language",
+          "HTML"
+        ],
+        "tokenization_type": "two_words",
+        "category": "Compound Words",
+        "title": "Webpage",
+        "set_id": "10"
+      },
+      "target": "HTML (Hypertext Markup Language)",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat markup language is primarily used to create a web page?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The markup language primarily used to create a web page is **HTML** (Hypertext Markup Language)."
+        ]
+      ],
+      "filtered_resps": [
+        "The markup language primarily used to create a web page is **HTML** (Hypertext Markup Language)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d296895eddbda55298bf06cb463fa75981460e7737038969ad907faeb5f25384",
+      "prompt_hash": "5f42fd39e08905eaaa6e63de66ac33a87c8a052ab220ea2c53b7c85996b9f569",
+      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 29,
+      "doc": {
+        "id": "10_Q3",
+        "question": "What markup language is primarily used to create a web-page?",
+        "answer": "HTML (Hypertext Markup Language)",
+        "all_targets": [
+          "HTML (Hypertext Markup Language)",
+          "Hypertext Markup Language",
+          "HTML"
+        ],
+        "tokenization_type": "hyphenated",
+        "category": "Compound Words",
+        "title": "Webpage",
+        "set_id": "10"
+      },
+      "target": "HTML (Hypertext Markup Language)",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat markup language is primarily used to create a web-page?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The markup language primarily used to create a web-page is **HTML** (Hypertext Markup Language)."
+        ]
+      ],
+      "filtered_resps": [
+        "The markup language primarily used to create a web-page is **HTML** (Hypertext Markup Language)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "062ef791d6d753d9304eddf9773e565a87125b121e54d80e64925faac34adffa",
+      "prompt_hash": "6ecaa31455b684afac1c75f62ac94ed0410d0bbd514ffa7febe0eb263d232b5c",
+      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 30,
+      "doc": {
+        "id": "11_Q1",
+        "question": "Which company developed TensorFlow?",
+        "answer": "Google",
+        "all_targets": [
+          "Google"
+        ],
+        "tokenization_type": "standard_capitalization",
+        "category": "Technical Terminology",
+        "title": "TensorFlow",
+        "set_id": "11"
+      },
+      "target": "Google",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhich company developed TensorFlow?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "TensorFlow was developed by the Google Brain team for Google's internal use. However, in 2015, Google open-sourced TensorFlow, making it available to the public under the Apache 2.0 license."
+        ]
+      ],
+      "filtered_resps": [
+        "TensorFlow was developed by the Google Brain team for Google's internal use. However, in 2015, Google open-sourced TensorFlow, making it available to the public under the Apache 2.0 license."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5e13f7923116037435dd18885a361cda82e8c3d0e8186aad9b101b32ece8df6a",
+      "prompt_hash": "e7bf06cafe4624cb571064763600cc0f0647f282e519e61892596964c7b30138",
+      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 31,
+      "doc": {
+        "id": "11_Q2",
+        "question": "Which company developed Tensorflow?",
+        "answer": "Google",
+        "all_targets": [
+          "Google"
+        ],
+        "tokenization_type": "alternative_capitalization",
+        "category": "Technical Terminology",
+        "title": "TensorFlow",
+        "set_id": "11"
+      },
+      "target": "Google",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhich company developed Tensorflow?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "TensorFlow was developed by the Google Brain team, which is a deep learning research team at Google. The team was led by Andrew Ng, Jeff Dean, and Rajat Monga, among others. TensorFlow was initially developed as a research project within Google, but it was later open-sourced in 2015 and is now maintained by the TensorFlow community, which includes Google, as well as other contributors from around the world."
+        ]
+      ],
+      "filtered_resps": [
+        "TensorFlow was developed by the Google Brain team, which is a deep learning research team at Google. The team was led by Andrew Ng, Jeff Dean, and Rajat Monga, among others. TensorFlow was initially developed as a research project within Google, but it was later open-sourced in 2015 and is now maintained by the TensorFlow community, which includes Google, as well as other contributors from around the world."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "326f7d869a56118de77ddceadb3a2ae9ac3a144855967cfbbb0b12be8716703f",
+      "prompt_hash": "5681ad301c841a614ece7299099137bfbe0b1ff9256ee2979592131e985e2ef2",
+      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 32,
+      "doc": {
+        "id": "11_Q3",
+        "question": "Which company developed tensor flow?",
+        "answer": "Google",
+        "all_targets": [
+          "Google"
+        ],
+        "tokenization_type": "split_words",
+        "category": "Technical Terminology",
+        "title": "TensorFlow",
+        "set_id": "11"
+      },
+      "target": "Google",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhich company developed tensor flow?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "TensorFlow is an open-source machine learning framework developed by Google. It was originally developed by the Google Brain team, which is a group of researchers at Google that focuses on artificial intelligence and machine learning."
+        ]
+      ],
+      "filtered_resps": [
+        "TensorFlow is an open-source machine learning framework developed by Google. It was originally developed by the Google Brain team, which is a group of researchers at Google that focuses on artificial intelligence and machine learning."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "7299d2a9a664cd2e84bbe54fddce3d09adf521c67126a99971af3f9224e72500",
+      "prompt_hash": "c07d8a1298098a1af068c997864833df93647622e0dbfeded499a6c29c16bd58",
+      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 33,
+      "doc": {
+        "id": "12_Q1",
+        "question": "Is JavaScript the same programming language as Java?",
+        "answer": "No",
+        "all_targets": [
+          "No"
+        ],
+        "tokenization_type": "standard_capitalization",
+        "category": "Technical Terminology",
+        "title": "JavaScript",
+        "set_id": "12"
+      },
+      "target": "No",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIs JavaScript the same programming language as Java?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "No, JavaScript and Java are not the same programming language, although they share a similar name and are often confused with each other. Here's a brief overview of each language:"
+        ]
+      ],
+      "filtered_resps": [
+        "No, JavaScript and Java are not the same programming language, although they share a similar name and are often confused with each other. Here's a brief overview of each language:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e3a9946a8f6672f1884bc929dad4be79b8516c49c40cca6dcccddb025c9c8348",
+      "prompt_hash": "7e4b28c6930c839422f2c4b794e063f39965aea3792df20c4a9854242d3af899",
+      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 34,
+      "doc": {
+        "id": "12_Q2",
+        "question": "Is Javascript the same programming language as Java?",
+        "answer": "No",
+        "all_targets": [
+          "No"
+        ],
+        "tokenization_type": "alternative_capitalization",
+        "category": "Technical Terminology",
+        "title": "JavaScript",
+        "set_id": "12"
+      },
+      "target": "No",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIs Javascript the same programming language as Java?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "No, JavaScript and Java are not the same programming language, although they share a similar name and are often confused with each other. Here's a brief overview of each language:"
+        ]
+      ],
+      "filtered_resps": [
+        "No, JavaScript and Java are not the same programming language, although they share a similar name and are often confused with each other. Here's a brief overview of each language:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2dc36c98c7ce38701af3b7b9f86f9572d8f91cd5991f2c701369080c48a5ba87",
+      "prompt_hash": "1a29d1ccecfd77516eb44dfb27cf773ece76b61ed5d355ee15a3edb3e979fab6",
+      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 35,
+      "doc": {
+        "id": "12_Q3",
+        "question": "Is java script the same programming language as Java?",
+        "answer": "No",
+        "all_targets": [
+          "No"
+        ],
+        "tokenization_type": "split_words",
+        "category": "Technical Terminology",
+        "title": "JavaScript",
+        "set_id": "12"
+      },
+      "target": "No",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIs java script the same programming language as Java?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "No, JavaScript and Java are not the same programming language, although they share a similar name and are often confused with each other. Here's a brief overview of each language:"
+        ]
+      ],
+      "filtered_resps": [
+        "No, JavaScript and Java are not the same programming language, although they share a similar name and are often confused with each other. Here's a brief overview of each language:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e9582b4533d1738e2b91c4a9a0fc944f1e7aa793199074ae42fbd65c723d76a0",
+      "prompt_hash": "426a1f38186efe19273bf72deb85d19d97f7aa3f42f6bd4d58fbbed2085baae7",
+      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 36,
+      "doc": {
+        "id": "13_Q1",
+        "question": "Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_agglutinative_complete",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Afyonkarahisar'dan bahsediliyor."
+        ]
+      ],
+      "filtered_resps": [
+        "Afyonkarahisar'dan bahsediliyor."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "9f5b1325c46fd7d054d0d381b4092a3ce4a890f13870ec552cadd51a8b2a4b94",
+      "prompt_hash": "17dae42a5372f32ea451bf5aa6df53eb7dd39b6cbb656da02f7038ae10f65365",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 37,
+      "doc": {
+        "id": "13_Q2",
+        "question": "Afyon karahi sar l\u0131 la\u015f t\u0131r ama d\u0131k lar \u0131m\u0131z dan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_morpheme_split",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyon karahi sar l\u0131 la\u015f t\u0131r ama d\u0131k lar \u0131m\u0131z dan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Afyonkarahisar'dan bahsediliyor."
+        ]
+      ],
+      "filtered_resps": [
+        "Afyonkarahisar'dan bahsediliyor."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "806cfd0a545e0158aa75370b084435aee725ae970bea607cf28dd302cca3a878",
+      "prompt_hash": "d5a35ca8f8a7f458c96c1bf19858e5af453066908e4b682315f5a72dbe569f09",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 38,
+      "doc": {
+        "id": "13_Q3",
+        "question": "Afyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Afyonkarahisar'dan bahsediliyor."
+        ]
+      ],
+      "filtered_resps": [
+        "Afyonkarahisar'dan bahsediliyor."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0e50ac4e090a1c1c6cef398bf4d3c17b7c7007098256b538925bac8255a6fd30",
+      "prompt_hash": "249788f1fb74ab64ff34dee07fb60dc027f3b6f8f3b2badf7a7ea2cff52805de",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 39,
+      "doc": {
+        "id": "13_Q4",
+        "question": "Afyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu soyleniyor. Burada hangi sehirden bahsediliyor?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "turkish_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu soyleniyor. Burada hangi sehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Afyonkarahisar'dan bahsediliyor."
+        ]
+      ],
+      "filtered_resps": [
+        "Afyonkarahisar'dan bahsediliyor."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6ba10439e48c4d494f95c161e2deb5a00054b673876620862c24ae7ce2c088a7",
+      "prompt_hash": "ee21686344da0864e5182d7867c2eb160e7d75842c1a61ee0e7dc4ed6551b9c5",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 40,
+      "doc": {
+        "id": "13_Q5",
+        "question": "He is said to be 'Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan'. Which city in Turkey is mentioned in this word?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "english_with_turkish_word",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHe is said to be 'Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan'. Which city in Turkey is mentioned in this word?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The city in Turkey is Afyonkarahisar."
+        ]
+      ],
+      "filtered_resps": [
+        "The city in Turkey is Afyonkarahisar."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a0abd912fc1ad72987dca5f423d50e751f92ee449d09943f2d69b7142d82734a",
+      "prompt_hash": "2d35e29318323db69a6b6c8fdc992bacf4a08f0b655c595cd86ad72fb588daae",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 41,
+      "doc": {
+        "id": "13_Q6",
+        "question": "He is said to be 'Afyonkarahisarlila\u015ftiramadiklarimizdan'. Which city in Turkey is mentioned in this word?",
+        "answer": "Afyonkarahisar",
+        "all_targets": [
+          "Afyonkarahisar",
+          "Afyon"
+        ],
+        "tokenization_type": "english_with_turkish_word_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Afyonkarahisar",
+        "set_id": "13"
+      },
+      "target": "Afyonkarahisar",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHe is said to be 'Afyonkarahisarlila\u015ftiramadiklarimizdan'. Which city in Turkey is mentioned in this word?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The city in Turkey mentioned in the word is Afyonkarahisar."
+        ]
+      ],
+      "filtered_resps": [
+        "The city in Turkey mentioned in the word is Afyonkarahisar."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "349c67a4f66b8ddb7d6abe3929ef8ccde42b9cbfe636386a33936c0369b9775a",
+      "prompt_hash": "93e3fa28659ec0268196f6966e94c74bb8f0f61312d6e3c55d6f38ee01905cd8",
+      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 42,
+      "doc": {
+        "id": "14_Q1",
+        "question": "What is the plural form of 'oeuf' in French?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "basic_question",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the plural form of 'oeuf' in French?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "In French, the plural form of \"oeuf\" (egg) is \"oeufs\"."
+        ]
+      ],
+      "filtered_resps": [
+        "In French, the plural form of \"oeuf\" (egg) is \"oeufs\"."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "13649dffba11351975b197ebc533943d54779c3c8ea3d15ba8fe1915a2d6fe68",
+      "prompt_hash": "ac6901199c21a876d549638345cccb8308b6e1a54f06747d8bb2b1c6f0d2a290",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 43,
+      "doc": {
+        "id": "14_Q2",
+        "question": "What is the plural form of \"l'\u0153uf\" in French?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "basic_question",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the plural form of \"l'\u0153uf\" in French?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "In French, the plural form of \"l'\u0153uf\" (the egg) is \"les \u0153ufs\"."
+        ]
+      ],
+      "filtered_resps": [
+        "In French, the plural form of \"l'\u0153uf\" (the egg) is \"les \u0153ufs\"."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a58f8ad5c57bef5ff822a1b821ab701152f409fed8234c6a2b53cd18891f0b5d",
+      "prompt_hash": "c744347277952db57689ff2177d67c105347a89e320f4b85d22df5684eefa8f8",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 44,
+      "doc": {
+        "id": "14_Q3",
+        "question": "Dans la phrase 'J'ai achet\u00e9 un oeuf', quel est le pluriel de 'oeuf'?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "french_sentence_standard",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDans la phrase 'J'ai achet\u00e9 un oeuf', quel est le pluriel de 'oeuf'?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Le pluriel de 'oeuf' est 'oeufs'."
+        ]
+      ],
+      "filtered_resps": [
+        "Le pluriel de 'oeuf' est 'oeufs'."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "60ab5da26867ade717b3b3c6f1e3f3a2dfa82e64efa88daa1ee8569b2d3dd0fc",
+      "prompt_hash": "20c44594ea8d8f3c2ee56df766e05d4f064aaa5135d5d64bd4ee003aadc9d5b5",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 45,
+      "doc": {
+        "id": "14_Q4",
+        "question": "Dans la phrase 'J'ai achet\u00e9 un \u0153uf', quel est le pluriel de '\u0153uf'?",
+        "answer": "oeufs",
+        "all_targets": [
+          "oeufs",
+          "\u0153ufs",
+          "des oeufs",
+          "les oeufs",
+          "des \u0153ufs",
+          "les \u0153ufs"
+        ],
+        "tokenization_type": "french_sentence_ligature",
+        "category": "Multi-linguality",
+        "title": "Oeufs",
+        "set_id": "14"
+      },
+      "target": "oeufs",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDans la phrase 'J'ai achet\u00e9 un \u0153uf', quel est le pluriel de '\u0153uf'?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Le pluriel de '\u0153uf' est '\u0153ufs'."
+        ]
+      ],
+      "filtered_resps": [
+        "Le pluriel de '\u0153uf' est '\u0153ufs'."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6d6e8b855909ceb2d0f84f03930cc36db612ced41e8245514a1ae48f6d7f1fdc",
+      "prompt_hash": "8c8f96cea6161addda76780ab34f388e98033cb13a2838a30d408933a55c05e9",
+      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 46,
+      "doc": {
+        "id": "15_Q1",
+        "question": "Gul Sena is a PhD student in machine learning. What does Gul Sena study?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "english_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nGul Sena is a PhD student in machine learning. What does Gul Sena study?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "As a PhD student in machine learning, Gul Sena likely studies the theoretical foundations, mathematical frameworks, and practical applications of machine learning. Some possible areas of focus for Gul Sena's research might include:"
+        ]
+      ],
+      "filtered_resps": [
+        "As a PhD student in machine learning, Gul Sena likely studies the theoretical foundations, mathematical frameworks, and practical applications of machine learning. Some possible areas of focus for Gul Sena's research might include:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "bf90db3d1a02787451851a7f92cf54df36a666a1dcd6c7cc664ca265d0aeddbe",
+      "prompt_hash": "898b2a9420e51de5cf88f84ce0bbb18446f3be139a44440e7e07f3850f84a7a4",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 47,
+      "doc": {
+        "id": "15_Q2",
+        "question": "G\u00fcl Sena is a PhD student in machine learning. What does G\u00fcl Sena study?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "english_with_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nG\u00fcl Sena is a PhD student in machine learning. What does G\u00fcl Sena study?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "As a PhD student in machine learning, G\u00fcl Sena likely studies the development and application of algorithms and statistical models that enable machines to learn from data, make decisions, and improve their performance over time."
+        ]
+      ],
+      "filtered_resps": [
+        "As a PhD student in machine learning, G\u00fcl Sena likely studies the development and application of algorithms and statistical models that enable machines to learn from data, make decisions, and improve their performance over time."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "31595557e2baabe102d0a266f4a2777ca5fa4e3a340ee31f395b6b6d34abc4cc",
+      "prompt_hash": "62d025cdb2c699e37be142eab140620ec683f7eea2c91d57787ba67034be3b6a",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 48,
+      "doc": {
+        "id": "15_Q3",
+        "question": "G\u00fcl Sena makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisidir. G\u00fcl Sena ne \u00e7al\u0131\u015f\u0131yor?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "turkish_with_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nG\u00fcl Sena makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisidir. G\u00fcl Sena ne \u00e7al\u0131\u015f\u0131yor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisi olarak \u00e7al\u0131\u015f\u0131yor."
+        ]
+      ],
+      "filtered_resps": [
+        "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisi olarak \u00e7al\u0131\u015f\u0131yor."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "f7e364b177034643c496039be8aaef294d2de67088612ecc8947eab34da2bca2",
+      "prompt_hash": "50dbcaa6ef4eb37eaef09fba521fe4e035af14bafd7034f6f754ef3e343dc6c8",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 49,
+      "doc": {
+        "id": "15_Q4",
+        "question": "Gul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?",
+        "answer": "machine learning",
+        "all_targets": [
+          "machine learning",
+          "makine \u00f6\u011frenmesi",
+          "ML",
+          "artificial intelligence",
+          "yapay zeka"
+        ],
+        "tokenization_type": "turkish_no_diacritics",
+        "category": "Multi-linguality",
+        "title": "Gul",
+        "set_id": "15"
+      },
+      "target": "machine learning",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nGul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisi olarak \u00e7al\u0131\u015fmaktad\u0131r."
+        ]
+      ],
+      "filtered_resps": [
+        "G\u00fcl Sena, makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisi olarak \u00e7al\u0131\u015fmaktad\u0131r."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "1b3a5e33c57f1b3a54b5e776e8ed5c12683f365bddc9465479dfd71d884c2e95",
+      "prompt_hash": "0968e04aa8f92e3d4261647b991862e7fa7e59e4f7066b91537c7ea7d2b1e24d",
+      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 50,
+      "doc": {
+        "id": "16_Q1",
+        "question": "Die Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?",
+        "answer": "Schiff",
+        "all_targets": [
+          "Schiff",
+          "ship",
+          "steamship",
+          "Dampfschiff",
+          "steamboat"
+        ],
+        "tokenization_type": "german_compound_complete",
+        "category": "Multi-linguality",
+        "title": "German Compound",
+        "set_id": "16"
+      },
+      "target": "Schiff",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDie Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Die Donau"
+        ]
+      ],
+      "filtered_resps": [
+        "Die Donau"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "61f9c08e25e1a6ed1b4c09fcadf46c5d6129e355cff605fc36b059eac4726344",
+      "prompt_hash": "ad4d6e2431b30310dd249c68b46eadab8b47693131a90d3dc959513165839458",
+      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 51,
+      "doc": {
+        "id": "16_Q2",
+        "question": "Die Donau dampf schiff fahrts gesellschafts kapit\u00e4ns witwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?",
+        "answer": "Schiff",
+        "all_targets": [
+          "Schiff",
+          "ship",
+          "steamship",
+          "Dampfschiff",
+          "steamboat"
+        ],
+        "tokenization_type": "german_compound_split",
+        "category": "Multi-linguality",
+        "title": "German Compound",
+        "set_id": "16"
+      },
+      "target": "Schiff",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDie Donau dampf schiff fahrts gesellschafts kapit\u00e4ns witwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Das Transportmittel, das erw\u00e4hnt wird, ist ein Dampfschiff."
+        ]
+      ],
+      "filtered_resps": [
+        "Das Transportmittel, das erw\u00e4hnt wird, ist ein Dampfschiff."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "4cac5ad57e8d76e435b65e7ee654ff50e21e2cd348e4caa98e824f90d3105e3d",
+      "prompt_hash": "4a9f823acc9f73ca75f24b48ad73990332fb68527e7b5a719077a5836858758c",
+      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 52,
+      "doc": {
+        "id": "16_Q3",
+        "question": "The Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe mourns her husband. Which mode of transportation is mentioned in this word?",
+        "answer": "Schiff",
+        "all_targets": [
+          "Schiff",
+          "ship",
+          "steamship",
+          "Dampfschiff",
+          "steamboat"
+        ],
+        "tokenization_type": "english_with_german_compound",
+        "category": "Multi-linguality",
+        "title": "German Compound",
+        "set_id": "16"
+      },
+      "target": "Schiff",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nThe Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe mourns her husband. Which mode of transportation is mentioned in this word?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "What a mouthful!"
+        ]
+      ],
+      "filtered_resps": [
+        "What a mouthful!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e0fd0d1bb5dcff5067415a4a83c844066c9f0beeea5b9469d1255e477b8e38c4",
+      "prompt_hash": "2dd6c3767c63c504f3667e4f139c234318e76321435a28e6ca1e9fe4813dcabf",
+      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 53,
+      "doc": {
+        "id": "17_Q1",
+        "question": "\u5317\u4eac\u662f\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u4e86\u54ea\u4e2a\u57ce\u5e02\uff1f",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "simplified_chinese",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u5317\u4eac\u662f\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u4e86\u54ea\u4e2a\u57ce\u5e02\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u5317\u4eac"
+        ]
+      ],
+      "filtered_resps": [
+        "\u5317\u4eac"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "fa62daeafab42197410a7ea830f9ffd1e18701148bdd778956cfcc8e32b34717",
+      "prompt_hash": "cfe8ab6ec4f86204376d159d42da2575fec9732e9478b74560a9cbd06da7b10e",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 54,
+      "doc": {
+        "id": "17_Q2",
+        "question": "\u5317 \u4eac \u662f \u4e2d \u534e \u4eba \u6c11 \u5171 \u548c \u56fd \u7684 \u9996 \u90fd\u3002\u8fd9 \u4e2a \u53e5 \u5b50 \u4e2d \u63d0 \u5230 \u4e86 \u54ea \u4e2a \u57ce \u5e02\uff1f",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "character_split_chinese",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u5317 \u4eac \u662f \u4e2d \u534e \u4eba \u6c11 \u5171 \u548c \u56fd \u7684 \u9996 \u90fd\u3002\u8fd9 \u4e2a \u53e5 \u5b50 \u4e2d \u63d0 \u5230 \u4e86 \u54ea \u4e2a \u57ce \u5e02\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u5317 \u4eac"
+        ]
+      ],
+      "filtered_resps": [
+        "\u5317 \u4eac"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "b21b5c190e9a1caccefd5f9f24f43b9088dbc0004b95d893ed9a08fcd94fe9df",
+      "prompt_hash": "690cdf9e09bfc048458dc965bd15b8a3db37e093cf8d73d3ba36696272174e9b",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 55,
+      "doc": {
+        "id": "17_Q3",
+        "question": "Beijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong t\u00ecdao le nage chengshi?",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "pinyin_no_tones",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nBeijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong t\u00ecdao le nage chengshi?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Beijing"
+        ]
+      ],
+      "filtered_resps": [
+        "Beijing"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e4987df8b385230052ab5ed4b248aa9266fe6defb65c8b7d27988020a2114f2a",
+      "prompt_hash": "0895faee9f0f0ac941795721cad87e75a509f0a66770fb1c87db678a338b570b",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 56,
+      "doc": {
+        "id": "17_Q4",
+        "question": "B\u011bij\u012bng sh\u00ec Zh\u014dnghu\u00e1 R\u00e9nm\u00edn G\u00f2ngh\u00e9gu\u00f3 de sh\u01d2ud\u016b. Zh\u00e8ge j\u00f9zi zh\u014dng t\u00edd\u00e0o le n\u01cege ch\u00e9ngsh\u00ec?",
+        "answer": "Beijing",
+        "all_targets": [
+          "Beijing",
+          "B\u011bij\u012bng",
+          "\u5317\u4eac"
+        ],
+        "tokenization_type": "pinyin_with_tones",
+        "category": "Multi-linguality",
+        "title": "Chinese Characters",
+        "set_id": "17"
+      },
+      "target": "Beijing",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nB\u011bij\u012bng sh\u00ec Zh\u014dnghu\u00e1 R\u00e9nm\u00edn G\u00f2ngh\u00e9gu\u00f3 de sh\u01d2ud\u016b. Zh\u00e8ge j\u00f9zi zh\u014dng t\u00edd\u00e0o le n\u01cege ch\u00e9ngsh\u00ec?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "B\u011bij\u012bng."
+        ]
+      ],
+      "filtered_resps": [
+        "B\u011bij\u012bng."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e391bb1ee965218d1dabaffe72e054b6323e0e9268d7bb19bda2c41e40975352",
+      "prompt_hash": "d540500a7304b165286a6d1f8c9bd3693a4d67a4af0af6284f15eafaa13192fe",
+      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 57,
+      "doc": {
+        "id": "18_Q1",
+        "question": "\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0641\u0650\u064a \u0627\u0644\u062c\u064e\u0627\u0645\u0650\u0639\u064e\u0629\u0650. \u0645\u064e\u0627\u0630\u064e\u0627 \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f\u061f",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "arabic_with_diacritics",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0641\u0650\u064a \u0627\u0644\u062c\u064e\u0627\u0645\u0650\u0639\u064e\u0629\u0650. \u0645\u064e\u0627\u0630\u064e\u0627 \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f\u061f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "771782fbc7108f4aa3a1d2db072fe268d7879b6f0505308c79a9593f9b669325",
+      "prompt_hash": "54a2a63fc60beca67fc335f3434dc55836674504c794ab24990191ce0dab8882",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 58,
+      "doc": {
+        "id": "18_Q2",
+        "question": "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0645\u0627\u0630\u0627 \u064a\u062f\u0631\u0633 \u0645\u062d\u0645\u062f\u061f",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "arabic_without_diacritics",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0645\u0627\u0630\u0627 \u064a\u062f\u0631\u0633 \u0645\u062d\u0645\u062f\u061f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "37d35ab5e1530e25e196564de73e17232cc69f76008dbc75988b9d25d65952a5",
+      "prompt_hash": "d6580716aa2dfd67189bd09e3643b4079f963eb6658ad5529c470f0c8ae5aebe",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 59,
+      "doc": {
+        "id": "18_Q3",
+        "question": "Mohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "arabic_transliterated",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mohammed yadrusu al'arabiyata fi aljami'ati."
+        ]
+      ],
+      "filtered_resps": [
+        "Mohammed yadrusu al'arabiyata fi aljami'ati."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d885a33f5bcb3c16e7fa24dbb27ced8f62c087cb3468ab63ffd78c6db31ee9d9",
+      "prompt_hash": "55729c7c5083a2dff4a65a66506530707267718794d0d29098fb106a0d649028",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 60,
+      "doc": {
+        "id": "18_Q4",
+        "question": "Muhammad is studying Arabic language at the university. What is Muhammad studying?",
+        "answer": "Arabic",
+        "all_targets": [
+          "Arabic",
+          "Arabic language",
+          "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "allughata al'arabiyata"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Arabic Diacritics",
+        "set_id": "18"
+      },
+      "target": "Arabic",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMuhammad is studying Arabic language at the university. What is Muhammad studying?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Muhammad is studying the Arabic language at the university."
+        ]
+      ],
+      "filtered_resps": [
+        "Muhammad is studying the Arabic language at the university."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "4135dd15ca832a2f7b69d1cc0c877c723fb24a3085e014148db0bff700551ff5",
+      "prompt_hash": "60b7c8c9171155cbfb11f3f1a1e60c1ffe7640e94416afd4c55240213ed41ead",
+      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 61,
+      "doc": {
+        "id": "19_Q1",
+        "question": "\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "russian_cyrillic",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "fc2b4dd9cef15396aa508cb6987441c4bb82ce090435f2692a19da424e56ff30",
+      "prompt_hash": "7b896f9f6c250d97571406a14fb133e29be2c026af86c393e201294af6ba23ca",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 62,
+      "doc": {
+        "id": "19_Q2",
+        "question": "Ya zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "russian_transliterated",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nYa zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Ya zhivu v Sankt-Peterburge."
+        ]
+      ],
+      "filtered_resps": [
+        "Ya zhivu v Sankt-Peterburge."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6a171eb7bddb1ce2e490308e5719429984837af49445a146a875a7ced2f9d0d7",
+      "prompt_hash": "71fe653fce5548072e8618bcb2c4f38990a85254febc3afb91602fcac31574b9",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 63,
+      "doc": {
+        "id": "19_Q3",
+        "question": "\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442 \u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "russian_unhyphenated",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442 \u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+        ]
+      ],
+      "filtered_resps": [
+        "\u0412\u044b \u0436\u0438\u0432\u0435\u0442\u0435 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a1de0d694f0a6423f795933f97f6843cc4abc502a29ecadec897e8c16930dae5",
+      "prompt_hash": "7ed00912bd985c45933bc9bbc814d34b53597ec30339388726955b32870c1516",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 64,
+      "doc": {
+        "id": "19_Q4",
+        "question": "I live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)",
+        "answer": "Saint Petersburg",
+        "all_targets": [
+          "Saint Petersburg",
+          "St. Petersburg",
+          "Sankt-Petersburg",
+          "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+        ],
+        "tokenization_type": "english_with_russian_case",
+        "category": "Multi-linguality",
+        "title": "Russian Case",
+        "set_id": "19"
+      },
+      "target": "Saint Petersburg",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nI live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "A native Russian speaker!"
+        ]
+      ],
+      "filtered_resps": [
+        "A native Russian speaker!"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "09bce0444f251e331cc2bb6348d28381763d9c694aecc30029c0b17e583ca682",
+      "prompt_hash": "dbb98b1e6193c70cb2462c81736cc60cea5c58d4ca9fa6ab2c2ead133bae58be",
+      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 65,
+      "doc": {
+        "id": "20_Q1",
+        "question": "\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u304b\uff1f",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_mixed_scripts",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "2020\u5e74\u3067\u3059\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "2020\u5e74\u3067\u3059\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "f4809c929dcd69a5d7ae916aa0db14899a9e4f912b023f22db90452cc04b4704",
+      "prompt_hash": "4024a65d347010bb90af4db13320eefe78256fd96c68509240d51ee1702a7d92",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 66,
+      "doc": {
+        "id": "20_Q2",
+        "question": "\u3068\u3046\u304d\u3087\u3046\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u306d\u3093\u306b\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u304b\uff1f",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_hiragana_katakana",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u3068\u3046\u304d\u3087\u3046\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u306d\u3093\u306b\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "2020\u306d\u3093\u3067\u3059\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "2020\u306d\u3093\u3067\u3059\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3a49480e1f40fee909d58234b2fc6bcb188141dccefe8255bee3cc631cd57b5e",
+      "prompt_hash": "185d53ffb2c8312a45fd60c22632987ff6c87bdd9b5f52b7480c1795f5ea3d95",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 67,
+      "doc": {
+        "id": "20_Q3",
+        "question": "Tokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_romaji",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nTokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Tokyo Orinpikku wa 1964-nen ni kaisai saremashita."
+        ]
+      ],
+      "filtered_resps": [
+        "Tokyo Orinpikku wa 1964-nen ni kaisai saremashita."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a1c6596172eb646dc83b6424a67904c621a5efe4fe9dba4b6df072a3aad9fed8",
+      "prompt_hash": "03fe78f64fc51fa0814444d91ffedc8643409ea9d2692e7c5ca026785f4c4bb0",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 68,
+      "doc": {
+        "id": "20_Q4",
+        "question": "\u6771\u4eac \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u306f 2021 \u5e74 \u306b \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f\u3002\u3044\u3064 \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u304c \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f \u304b\uff1f",
+        "answer": "2021",
+        "all_targets": [
+          "2021"
+        ],
+        "tokenization_type": "japanese_word_split",
+        "category": "Multi-linguality",
+        "title": "Japanese Scripts",
+        "set_id": "20"
+      },
+      "target": "2021",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u6771\u4eac \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u306f 2021 \u5e74 \u306b \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f\u3002\u3044\u3064 \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u304c \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f \u304b\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "2021\u5e74\u3067\u3059\u3002"
+        ]
+      ],
+      "filtered_resps": [
+        "2021\u5e74\u3067\u3059\u3002"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0dd4f7f44ac87b9167a2881d327a4392e1f6d6e76a5fd68818f1c6536a875921",
+      "prompt_hash": "e80a63dcb87850578203ea73ce985c81ba11ce265a7df7d6cc3b404d0199b06a",
+      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 69,
+      "doc": {
+        "id": "21_Q1",
+        "question": "\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u099f\u09bf?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "bengali_standard",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u099f\u09bf?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0989\u09a4\u09cd\u09a4\u09b0\u0983 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0989\u09a4\u09cd\u09a4\u09b0\u0983 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "37e6f96bbedec66beba430d0e0a14dd907c88bdc7552f94d347b9fbb90d64207",
+      "prompt_hash": "bb60ce9f5964b8d4727b82f7840d8198fb7f9f549490f2b75ca654d2e352a65d",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 70,
+      "doc": {
+        "id": "21_Q2",
+        "question": "\u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8 \u099f\u09bf?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "bengali_split",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8 \u099f\u09bf?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0989\u09a4\u09cd\u09a4\u09b0: \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0989\u09a4\u09cd\u09a4\u09b0: \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "4b29870058ace8022647a2754f5fbf5b802f931abc7606d4efe62309d49b2901",
+      "prompt_hash": "a2792603c7046156f814a5a9b06b0001244a0d612ab2202c54f327fa65d370a9",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 71,
+      "doc": {
+        "id": "21_Q3",
+        "question": "Bishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "bengali_transliterated",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nBishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Bishwer shaboceye dirgho nodi holo Neel nodi."
+        ]
+      ],
+      "filtered_resps": [
+        "Bishwer shaboceye dirgho nodi holo Neel nodi."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "66f0714759f45e0571f026d4419a02ccb65b13e77d9903fb6f53db2d28d8f060",
+      "prompt_hash": "489383283c4984299f473fa1038fdc539337993d897defdbd2456b2b5df94b40",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 72,
+      "doc": {
+        "id": "21_Q4",
+        "question": "The longest river in the world is the Nile River. Which is the longest river in the world?",
+        "answer": "Nile",
+        "all_targets": [
+          "Nile",
+          "Nile River",
+          "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+          "Neel nodi"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Bengali Script",
+        "set_id": "21"
+      },
+      "target": "Nile",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nThe longest river in the world is the Nile River. Which is the longest river in the world?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Actually, the longest river in the world is a matter of some debate, and there are different sources that may give different answers. However, according to the most widely accepted sources, including the National Geographic and the Guinness World Records, the longest river in the world is the Nile River."
+        ]
+      ],
+      "filtered_resps": [
+        "Actually, the longest river in the world is a matter of some debate, and there are different sources that may give different answers. However, according to the most widely accepted sources, including the National Geographic and the Guinness World Records, the longest river in the world is the Nile River."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0608d15fd6c433e1ceab7ceb2b172041ee8fabdaff43e003d846210dbae37121",
+      "prompt_hash": "3c8ecb0b449a655fa149b9b964c6d1bdb05aa9ee1a3a89976b18b7efa41ffd79",
+      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 73,
+      "doc": {
+        "id": "22_Q1",
+        "question": "Mlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "swahili_standard",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mlima mrefu zaidi Afrika ni Mlima Kilimanjaro."
+        ]
+      ],
+      "filtered_resps": [
+        "Mlima mrefu zaidi Afrika ni Mlima Kilimanjaro."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "1089497c913db8499f89103cba20f8b2a616bb0ab8e9b1c4f5118a1243c2df0f",
+      "prompt_hash": "cd8d2d61ece089689e34023c306b63050cf7a288496d14f8f815a58182e77f83",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 74,
+      "doc": {
+        "id": "22_Q2",
+        "question": "M lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "swahili_morpheme_split",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nM lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mlima Kilimanjaro ni mlima mrefu zaidi Afrika."
+        ]
+      ],
+      "filtered_resps": [
+        "Mlima Kilimanjaro ni mlima mrefu zaidi Afrika."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "d46db4cbe29e399bc432ed091bc721709906f63d0c8e5b087d42a0a0dce6ff76",
+      "prompt_hash": "f1a63142e8c874f3963075feca4f468d55223d7583e5c42ec193823f6228921a",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 75,
+      "doc": {
+        "id": "22_Q3",
+        "question": "Mount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mount Kilimanjaro is indeed the highest mountain in Africa, but it's not the tallest mountain in Africa. The term \"tallest\" refers to the mountain's height above sea level, while \"highest\" refers to its elevation above the surrounding terrain."
+        ]
+      ],
+      "filtered_resps": [
+        "Mount Kilimanjaro is indeed the highest mountain in Africa, but it's not the tallest mountain in Africa. The term \"tallest\" refers to the mountain's height above sea level, while \"highest\" refers to its elevation above the surrounding terrain."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0bcd3d8e27ee04a688671199455a83b4d92e6f3258158014a134241cdd62c61c",
+      "prompt_hash": "a8a01c133a56e5537f2b7e7fd1dcb1e2b9dd2c7e7ca692b3805410ecc2adcbdd",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 76,
+      "doc": {
+        "id": "22_Q4",
+        "question": "Mlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?",
+        "answer": "Kilimanjaro",
+        "all_targets": [
+          "Kilimanjaro",
+          "Mount Kilimanjaro",
+          "Mlima Kilimanjaro"
+        ],
+        "tokenization_type": "swahili_alternative_phrasing",
+        "category": "Multi-linguality",
+        "title": "Swahili Noun Classes",
+        "set_id": "22"
+      },
+      "target": "Kilimanjaro",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mlima mrefu zaidi barani Afrika ni Mlima Kilimanjaro."
+        ]
+      ],
+      "filtered_resps": [
+        "Mlima mrefu zaidi barani Afrika ni Mlima Kilimanjaro."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c0e67a4f08b01e50bd05263d983426caef4d6a6e3cc66bdd9d5630ae74c474d1",
+      "prompt_hash": "c0c3d69196771cbe20082f26d6b7c7786fa14b26eddbc72901938506021623a0",
+      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 77,
+      "doc": {
+        "id": "23_Q1",
+        "question": "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "thai_standard",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "91cbc8c9e0f73457e33765b790cc72ab0e7c9a4b291bf2a00419fad0b9e60e90",
+      "prompt_hash": "4771a3a4b8bcbc1224acf554a258700c6183129a19e31fea03e76f452c80001a",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 78,
+      "doc": {
+        "id": "23_Q2",
+        "question": "\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "thai_word_split",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c0dbf74cafa531475fc2f93d55080b55139c213bd2c88107ed19234370ee8e48",
+      "prompt_hash": "82bfbf53a3c4e5fbd83aed51ea0c7fa641904d3326bcc927918b6394ed168530",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 79,
+      "doc": {
+        "id": "23_Q3",
+        "question": "Krung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "thai_transliterated",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nKrung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Mueang luang khong Prathet Thai khue arai Krung Thep Maha Nakhon."
+        ]
+      ],
+      "filtered_resps": [
+        "Mueang luang khong Prathet Thai khue arai Krung Thep Maha Nakhon."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "b6069485c5b6558828a4923e83c49fe0cb326b38085c38def2d3dd4058ddd03b",
+      "prompt_hash": "24a3fbf3aae85bde7d56637b578aad612e342c1d7f13243b7ee73d1cf0fa621c",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 80,
+      "doc": {
+        "id": "23_Q4",
+        "question": "Bangkok is the capital city of Thailand. What is the capital city of Thailand?",
+        "answer": "Bangkok",
+        "all_targets": [
+          "Bangkok",
+          "Bangkok",
+          "Krung Thep",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+          "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+          "Krung Thep Maha Nakhon"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Thai Script",
+        "set_id": "23"
+      },
+      "target": "Bangkok",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nBangkok is the capital city of Thailand. What is the capital city of Thailand?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Bangkok is indeed the capital city of Thailand."
+        ]
+      ],
+      "filtered_resps": [
+        "Bangkok is indeed the capital city of Thailand."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c4ff271e8218f3ee804dc2b953809ba7fd2ccd3164232f1b019f37f74ef4216a",
+      "prompt_hash": "8314f7a7a4e4d2186a34ea6fa14e8b55b4ba72e8ec5f9617d6d771d5f508ec09",
+      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 81,
+      "doc": {
+        "id": "24_Q1",
+        "question": "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "telugu_standard",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6e21c52c27944a6c6af4e975b80ce4260f993fa5d2844e0fc2f86cf41cece60f",
+      "prompt_hash": "e7381af604290c48264029a955d0764a7c3d01c97b09600617b7df264dcb57d5",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 82,
+      "doc": {
+        "id": "24_Q2",
+        "question": "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "telugu_partial_split",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c05\u0c28\u0c47\u0c26\u0c3f \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35\u0c02 \u0c2a\u0c4d\u0c30\u0c35\u0c47\u0c36\u0c2a\u0c46\u0c1f\u0c4d\u0c1f\u0c3f\u0c28 \u0c12\u0c15 \u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15 \u0c2a\u0c26\u0c4d\u0c27\u0c24\u0c3f. \u0c08 \u0c2a\u0c26\u0c4d\u0c27\u0c24\u0c3f \u0c2a\u0c4d\u0c30\u0c15\u0c3e\u0c30\u0c02 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35 \u0c09\u0c26\u0c4d\u0c2f\u0c4b\u0c17\u0c41\u0c32\u0c41 \u0c24\u0c2e \u0c2a\u0c26\u0c35\u0c41\u0c32\u0c28\u0c41 \u0c30\u0c3e\u0c1c\u0c40\u0c28\u0c3e\u0c2e\u0c3e \u0c1a\ufffd"
+        ]
+      ],
+      "filtered_resps": [
+        "\u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c05\u0c28\u0c47\u0c26\u0c3f \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35\u0c02 \u0c2a\u0c4d\u0c30\u0c35\u0c47\u0c36\u0c2a\u0c46\u0c1f\u0c4d\u0c1f\u0c3f\u0c28 \u0c12\u0c15 \u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15 \u0c2a\u0c26\u0c4d\u0c27\u0c24\u0c3f. \u0c08 \u0c2a\u0c26\u0c4d\u0c27\u0c24\u0c3f \u0c2a\u0c4d\u0c30\u0c15\u0c3e\u0c30\u0c02 \u0c2a\u0c4d\u0c30\u0c2d\u0c41\u0c24\u0c4d\u0c35 \u0c09\u0c26\u0c4d\u0c2f\u0c4b\u0c17\u0c41\u0c32\u0c41 \u0c24\u0c2e \u0c2a\u0c26\u0c35\u0c41\u0c32\u0c28\u0c41 \u0c30\u0c3e\u0c1c\u0c40\u0c28\u0c3e\u0c2e\u0c3e \u0c1a\ufffd"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "41991d8fdaf66aab1da727058b87669bd62f821d4c45b56be413c818453fce13",
+      "prompt_hash": "3c533942d7778a687f04be843d9e7d244672ad7c84ecf2c25750b7f08f9bbfae",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 83,
+      "doc": {
+        "id": "24_Q3",
+        "question": "Hyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "telugu_transliterated",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Hyderabad Telangana rashtra rajdhani. Telangana rajdhani 2 June 2014 emiti."
+        ]
+      ],
+      "filtered_resps": [
+        "Hyderabad Telangana rashtra rajdhani. Telangana rajdhani 2 June 2014 emiti."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "004e92c34623b7f5ade39e598fd048c640c97f7ad7266a6c8916a02ec6d5e5db",
+      "prompt_hash": "aa204ed27293cb9ccac1ae49019658678457ce571d3769baa2a67795396f94a9",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 84,
+      "doc": {
+        "id": "24_Q4",
+        "question": "Hyderabad is the capital of Telangana state. What is the capital of Telangana?",
+        "answer": "Hyderabad",
+        "all_targets": [
+          "Hyderabad",
+          "Hyderabad",
+          "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+        ],
+        "tokenization_type": "english_translation",
+        "category": "Multi-linguality",
+        "title": "Telugu Script",
+        "set_id": "24"
+      },
+      "target": "Hyderabad",
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHyderabad is the capital of Telangana state. What is the capital of Telangana?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "Hyderabad is indeed the capital of Telangana state."
+        ]
+      ],
+      "filtered_resps": [
+        "Hyderabad is indeed the capital of Telangana state."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ab5a80411dc98d3295420716f97713fff27584701d6c986e3bf87e609ad346f4",
+      "prompt_hash": "2c3331dd3e29ae8ae74da4585f0a4509bd4cd349784aee34cb3d5747a49434ae",
+      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    }
+  ]
+}
