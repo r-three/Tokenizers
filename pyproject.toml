@@ -82,6 +82,6 @@ dev = [
 
 
 [project.scripts]
-eval = "tokenizers.scripts.eval:main"
+eval = "xarch_tokenizers.scripts.eval:main"
 mergekit-tokensurgeon = "mergekit.scripts.tokensurgeon:main"
 token-alysis = "xarch_tokenizers.scripts.compare_tokenizers:main"

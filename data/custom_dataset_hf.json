@@ -1,0 +1,1186 @@
+  [
+    {
+      "id": "1_Q1",
+      "question": "What year did Eyjafjallajökull erupt and disrupt European air travel?",
+      "answer": "2010",
+      "all_targets": [
+        "2010"
+      ],
+      "tokenization_type": "original",
+      "category": "Rare Character Sequences",
+      "title": "Icelandic Volcano",
+      "set_id": "1"
+    },
+    {
+      "id": "1_Q2",
+      "question": "What year did Eyja fjalla jökull erupt and disrupt European air travel?",
+      "answer": "2010",
+      "all_targets": [
+        "2010"
+      ],
+      "tokenization_type": "split_components",
+      "category": "Rare Character Sequences",
+      "title": "Icelandic Volcano",
+      "set_id": "1"
+    },
+    {
+      "id": "1_Q3",
+      "question": "What year did Eyjafjalla jokull erupt and disrupt European air travel?",
+      "answer": "2010",
+      "all_targets": [
+        "2010"
+      ],
+      "tokenization_type": "simplified",
+      "category": "Rare Character Sequences",
+      "title": "Icelandic Volcano",
+      "set_id": "1"
+    },
+    {
+      "id": "2_Q1",
+      "question": "In which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?",
+      "answer": "Wales",
+      "all_targets": [
+        "Wales",
+        "United Kingdom"
+      ],
+      "tokenization_type": "original",
+      "category": "Rare Character Sequences",
+      "title": "Welsh Village",
+      "set_id": "2"
+    },
+    {
+      "id": "2_Q2",
+      "question": "In which country is Llanfair pwllgwyngyll located?",
+      "answer": "Wales",
+      "all_targets": [
+        "Wales",
+        "United Kingdom"
+      ],
+      "tokenization_type": "split_shortened",
+      "category": "Rare Character Sequences",
+      "title": "Welsh Village",
+      "set_id": "2"
+    },
+    {
+      "id": "2_Q3",
+      "question": "In which country is Llanfair PG located?",
+      "answer": "Wales",
+      "all_targets": [
+        "Wales",
+        "United Kingdom"
+      ],
+      "tokenization_type": "abbreviated",
+      "category": "Rare Character Sequences",
+      "title": "Welsh Village",
+      "set_id": "2"
+    },
+    {
+      "id": "3_Q1",
+      "question": "What type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?",
+      "answer": "lung disease",
+      "all_targets": [
+        "lung disease"
+      ],
+      "tokenization_type": "original",
+      "category": "Rare Character Sequences",
+      "title": "Long Medical Term",
+      "set_id": "3"
+    },
+    {
+      "id": "3_Q2",
+      "question": "What type of condition is Pneumono ultra microscopic silico volcano coniosis?",
+      "answer": "lung disease",
+      "all_targets": [
+        "lung disease"
+      ],
+      "tokenization_type": "split_components",
+      "category": "Rare Character Sequences",
+      "title": "Long Medical Term",
+      "set_id": "3"
+    },
+    {
+      "id": "3_Q3",
+      "question": "What type of condition is Pneumoconiosis?",
+      "answer": "lung disease",
+      "all_targets": [
+        "lung disease"
+      ],
+      "tokenization_type": "simplified",
+      "category": "Rare Character Sequences",
+      "title": "Long Medical Term",
+      "set_id": "3"
+    },
+    {
+      "id": "4_Q1",
+      "question": "In which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?",
+      "answer": "New Zealand",
+      "all_targets": [
+        "New Zealand"
+      ],
+      "tokenization_type": "original",
+      "category": "Rare Character Sequences",
+      "title": "Māori Hill",
+      "set_id": "4"
+    },
+    {
+      "id": "4_Q2",
+      "question": "In which country is Taumata whakatangi hangakoauau o tamatea located?",
+      "answer": "New Zealand",
+      "all_targets": [
+        "New Zealand"
+      ],
+      "tokenization_type": "partial",
+      "category": "Rare Character Sequences",
+      "title": "Māori Hill",
+      "set_id": "4"
+    },
+    {
+      "id": "4_Q3",
+      "question": "In which country is Taumata hill located?",
+      "answer": "New Zealand",
+      "all_targets": [
+        "New Zealand"
+      ],
+      "tokenization_type": "simplified",
+      "category": "Rare Character Sequences",
+      "title": "Māori Hill",
+      "set_id": "4"
+    },
+    {
+      "id": "5_Q1",
+      "question": "What is the English translation of \"Привет, как дела?\"",
+      "answer": "\"Hello, how are you?\"",
+      "all_targets": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
+      "tokenization_type": "original_cyrillic",
+      "category": "Rare Character Sequences",
+      "title": "Russian Greeting",
+      "set_id": "5"
+    },
+    {
+      "id": "5_Q2",
+      "question": "What is the English translation of \"Privet, kak dela?\"",
+      "answer": "\"Hello, how are you?\"",
+      "all_targets": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
+      "tokenization_type": "transliterated",
+      "category": "Rare Character Sequences",
+      "title": "Russian Greeting",
+      "set_id": "5"
+    },
+    {
+      "id": "5_Q3",
+      "question": "What is the English translation of \"привет как дела\"?",
+      "answer": "\"Hello, how are you?\"",
+      "all_targets": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
+      "tokenization_type": "no_punctuation",
+      "category": "Rare Character Sequences",
+      "title": "Russian Greeting",
+      "set_id": "5"
+    },
+    {
+      "id": "6_Q1",
+      "question": "What sector does healthcare belong to: public, private, or both?",
+      "answer": "both",
+      "all_targets": [
+        "both",
+        "public and private"
+      ],
+      "tokenization_type": "single_word",
+      "category": "Compound Words",
+      "title": "Healthcare",
+      "set_id": "6"
+    },
+    {
+      "id": "6_Q2",
+      "question": "What sector does health care belong to: public, private, or both?",
+      "answer": "both",
+      "all_targets": [
+        "both",
+        "public and private"
+      ],
+      "tokenization_type": "two_words",
+      "category": "Compound Words",
+      "title": "Healthcare",
+      "set_id": "6"
+    },
+    {
+      "id": "6_Q3",
+      "question": "What sector does health-care belong to: public, private, or both?",
+      "answer": "both",
+      "all_targets": [
+        "both",
+        "public and private"
+      ],
+      "tokenization_type": "hyphenated",
+      "category": "Compound Words",
+      "title": "Healthcare",
+      "set_id": "6"
+    },
+    {
+      "id": "7_Q1",
+      "question": "In one word, what is the main function of a database in computing?",
+      "answer": "storage",
+      "all_targets": [
+        "storage",
+        "store"
+      ],
+      "tokenization_type": "single_word",
+      "category": "Compound Words",
+      "title": "Database",
+      "set_id": "7"
+    },
+    {
+      "id": "7_Q2",
+      "question": "In one word, what is the main function of a data base in computing?",
+      "answer": "storage",
+      "all_targets": [
+        "storage",
+        "store"
+      ],
+      "tokenization_type": "two_words",
+      "category": "Compound Words",
+      "title": "Database",
+      "set_id": "7"
+    },
+    {
+      "id": "7_Q3",
+      "question": "In one word, what is the main function of a data-base in computing?",
+      "answer": "storage",
+      "all_targets": [
+        "storage",
+        "store"
+      ],
+      "tokenization_type": "hyphenated",
+      "category": "Compound Words",
+      "title": "Database",
+      "set_id": "7"
+    },
+    {
+      "id": "8_Q1",
+      "question": "What technology underlies most cryptocurrency systems?",
+      "answer": "Blockchain",
+      "all_targets": [
+        "Blockchain"
+      ],
+      "tokenization_type": "single_word",
+      "category": "Compound Words",
+      "title": "Cryptocurrency",
+      "set_id": "8"
+    },
+    {
+      "id": "8_Q2",
+      "question": "What technology underlies most crypto currency systems?",
+      "answer": "Blockchain",
+      "all_targets": [
+        "Blockchain"
+      ],
+      "tokenization_type": "two_words",
+      "category": "Compound Words",
+      "title": "Cryptocurrency",
+      "set_id": "8"
+    },
+    {
+      "id": "8_Q3",
+      "question": "What technology underlies most crypto-currency systems?",
+      "answer": "Blockchain",
+      "all_targets": [
+        "Blockchain"
+      ],
+      "tokenization_type": "hyphenated",
+      "category": "Compound Words",
+      "title": "Cryptocurrency",
+      "set_id": "8"
+    },
+    {
+      "id": "9_Q1",
+      "question": "Complete this pair: socioeconomic status combines _____ factors and economic factors.",
+      "answer": "social",
+      "all_targets": [
+        "social"
+      ],
+      "tokenization_type": "single_word",
+      "category": "Compound Words",
+      "title": "Socioeconomic",
+      "set_id": "9"
+    },
+    {
+      "id": "9_Q2",
+      "question": "Complete this pair: socio economic status combines _____ factors and economic factors.",
+      "answer": "social",
+      "all_targets": [
+        "social"
+      ],
+      "tokenization_type": "two_words",
+      "category": "Compound Words",
+      "title": "Socioeconomic",
+      "set_id": "9"
+    },
+    {
+      "id": "9_Q3",
+      "question": "Complete this pair: socio-economic status combines _____ factors and economic factors.",
+      "answer": "social",
+      "all_targets": [
+        "social"
+      ],
+      "tokenization_type": "hyphenated",
+      "category": "Compound Words",
+      "title": "Socioeconomic",
+      "set_id": "9"
+    },
+    {
+      "id": "10_Q1",
+      "question": "What markup language is primarily used to create a webpage?",
+      "answer": "HTML (Hypertext Markup Language)",
+      "all_targets": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
+      "tokenization_type": "single_word",
+      "category": "Compound Words",
+      "title": "Webpage",
+      "set_id": "10"
+    },
+    {
+      "id": "10_Q2",
+      "question": "What markup language is primarily used to create a web page?",
+      "answer": "HTML (Hypertext Markup Language)",
+      "all_targets": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
+      "tokenization_type": "two_words",
+      "category": "Compound Words",
+      "title": "Webpage",
+      "set_id": "10"
+    },
+    {
+      "id": "10_Q3",
+      "question": "What markup language is primarily used to create a web-page?",
+      "answer": "HTML (Hypertext Markup Language)",
+      "all_targets": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
+      "tokenization_type": "hyphenated",
+      "category": "Compound Words",
+      "title": "Webpage",
+      "set_id": "10"
+    },
+    {
+      "id": "11_Q1",
+      "question": "Which company developed TensorFlow?",
+      "answer": "Google",
+      "all_targets": [
+        "Google"
+      ],
+      "tokenization_type": "standard_capitalization",
+      "category": "Technical Terminology",
+      "title": "TensorFlow",
+      "set_id": "11"
+    },
+    {
+      "id": "11_Q2",
+      "question": "Which company developed Tensorflow?",
+      "answer": "Google",
+      "all_targets": [
+        "Google"
+      ],
+      "tokenization_type": "alternative_capitalization",
+      "category": "Technical Terminology",
+      "title": "TensorFlow",
+      "set_id": "11"
+    },
+    {
+      "id": "11_Q3",
+      "question": "Which company developed tensor flow?",
+      "answer": "Google",
+      "all_targets": [
+        "Google"
+      ],
+      "tokenization_type": "split_words",
+      "category": "Technical Terminology",
+      "title": "TensorFlow",
+      "set_id": "11"
+    },
+    {
+      "id": "12_Q1",
+      "question": "Is JavaScript the same programming language as Java?",
+      "answer": "No",
+      "all_targets": [
+        "No"
+      ],
+      "tokenization_type": "standard_capitalization",
+      "category": "Technical Terminology",
+      "title": "JavaScript",
+      "set_id": "12"
+    },
+    {
+      "id": "12_Q2",
+      "question": "Is Javascript the same programming language as Java?",
+      "answer": "No",
+      "all_targets": [
+        "No"
+      ],
+      "tokenization_type": "alternative_capitalization",
+      "category": "Technical Terminology",
+      "title": "JavaScript",
+      "set_id": "12"
+    },
+    {
+      "id": "12_Q3",
+      "question": "Is java script the same programming language as Java?",
+      "answer": "No",
+      "all_targets": [
+        "No"
+      ],
+      "tokenization_type": "split_words",
+      "category": "Technical Terminology",
+      "title": "JavaScript",
+      "set_id": "12"
+    },
+    {
+      "id": "13_Q1",
+      "question": "Afyonkarahisarlılaştıramadıklarımızdan olduğu söyleniyor. Burada hangi şehirden bahsediliyor?",
+      "answer": "Afyonkarahisar",
+      "all_targets": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
+      "tokenization_type": "turkish_agglutinative_complete",
+      "category": "Multi-linguality",
+      "title": "Afyonkarahisar",
+      "set_id": "13"
+    },
+    {
+      "id": "13_Q2",
+      "question": "Afyon karahi sar lı laş tır ama dık lar ımız dan olduğu söyleniyor. Burada hangi şehirden bahsediliyor?",
+      "answer": "Afyonkarahisar",
+      "all_targets": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
+      "tokenization_type": "turkish_morpheme_split",
+      "category": "Multi-linguality",
+      "title": "Afyonkarahisar",
+      "set_id": "13"
+    },
+    {
+      "id": "13_Q3",
+      "question": "Afyonkarahisarlilaştiramadiklarimizdan olduğu söyleniyor. Burada hangi şehirden bahsediliyor?",
+      "answer": "Afyonkarahisar",
+      "all_targets": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
+      "tokenization_type": "turkish_no_diacritics",
+      "category": "Multi-linguality",
+      "title": "Afyonkarahisar",
+      "set_id": "13"
+    },
+    {
+      "id": "13_Q4",
+      "question": "Afyonkarahisarlilaştiramadiklarimizdan olduğu soyleniyor. Burada hangi sehirden bahsediliyor?",
+      "answer": "Afyonkarahisar",
+      "all_targets": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
+      "tokenization_type": "turkish_no_diacritics",
+      "category": "Multi-linguality",
+      "title": "Afyonkarahisar",
+      "set_id": "13"
+    },
+    {
+      "id": "13_Q5",
+      "question": "He is said to be 'Afyonkarahisarlılaştıramadıklarımızdan'. Which city in Turkey is mentioned in this word?",
+      "answer": "Afyonkarahisar",
+      "all_targets": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
+      "tokenization_type": "english_with_turkish_word",
+      "category": "Multi-linguality",
+      "title": "Afyonkarahisar",
+      "set_id": "13"
+    },
+    {
+      "id": "13_Q6",
+      "question": "He is said to be 'Afyonkarahisarlilaştiramadiklarimizdan'. Which city in Turkey is mentioned in this word?",
+      "answer": "Afyonkarahisar",
+      "all_targets": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
+      "tokenization_type": "english_with_turkish_word_no_diacritics",
+      "category": "Multi-linguality",
+      "title": "Afyonkarahisar",
+      "set_id": "13"
+    },
+    {
+      "id": "14_Q1",
+      "question": "What is the plural form of 'oeuf' in French?",
+      "answer": "oeufs",
+      "all_targets": [
+        "oeufs",
+        "œufs",
+        "des oeufs",
+        "les oeufs",
+        "des œufs",
+        "les œufs"
+      ],
+      "tokenization_type": "basic_question",
+      "category": "Multi-linguality",
+      "title": "Oeufs",
+      "set_id": "14"
+    },
+    {
+      "id": "14_Q2",
+      "question": "What is the plural form of \"l'œuf\" in French?",
+      "answer": "oeufs",
+      "all_targets": [
+        "oeufs",
+        "œufs",
+        "des oeufs",
+        "les oeufs",
+        "des œufs",
+        "les œufs"
+      ],
+      "tokenization_type": "basic_question",
+      "category": "Multi-linguality",
+      "title": "Oeufs",
+      "set_id": "14"
+    },
+    {
+      "id": "14_Q3",
+      "question": "Dans la phrase 'J'ai acheté un oeuf', quel est le pluriel de 'oeuf'?",
+      "answer": "oeufs",
+      "all_targets": [
+        "oeufs",
+        "œufs",
+        "des oeufs",
+        "les oeufs",
+        "des œufs",
+        "les œufs"
+      ],
+      "tokenization_type": "french_sentence_standard",
+      "category": "Multi-linguality",
+      "title": "Oeufs",
+      "set_id": "14"
+    },
+    {
+      "id": "14_Q4",
+      "question": "Dans la phrase 'J'ai acheté un œuf', quel est le pluriel de 'œuf'?",
+      "answer": "oeufs",
+      "all_targets": [
+        "oeufs",
+        "œufs",
+        "des oeufs",
+        "les oeufs",
+        "des œufs",
+        "les œufs"
+      ],
+      "tokenization_type": "french_sentence_ligature",
+      "category": "Multi-linguality",
+      "title": "Oeufs",
+      "set_id": "14"
+    },
+    {
+      "id": "15_Q1",
+      "question": "Gul Sena is a PhD student in machine learning. What does Gul Sena study?",
+      "answer": "machine learning",
+      "all_targets": [
+        "machine learning",
+        "makine öğrenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
+      "tokenization_type": "english_no_diacritics",
+      "category": "Multi-linguality",
+      "title": "Gul",
+      "set_id": "15"
+    },
+    {
+      "id": "15_Q2",
+      "question": "Gül Sena is a PhD student in machine learning. What does Gül Sena study?",
+      "answer": "machine learning",
+      "all_targets": [
+        "machine learning",
+        "makine öğrenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
+      "tokenization_type": "english_with_diacritics",
+      "category": "Multi-linguality",
+      "title": "Gul",
+      "set_id": "15"
+    },
+    {
+      "id": "15_Q3",
+      "question": "Gül Sena makine öğrenmesi alanında doktora öğrencisidir. Gül Sena ne çalışıyor?",
+      "answer": "machine learning",
+      "all_targets": [
+        "machine learning",
+        "makine öğrenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
+      "tokenization_type": "turkish_with_diacritics",
+      "category": "Multi-linguality",
+      "title": "Gul",
+      "set_id": "15"
+    },
+    {
+      "id": "15_Q4",
+      "question": "Gul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?",
+      "answer": "machine learning",
+      "all_targets": [
+        "machine learning",
+        "makine öğrenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
+      "tokenization_type": "turkish_no_diacritics",
+      "category": "Multi-linguality",
+      "title": "Gul",
+      "set_id": "15"
+    },
+    {
+      "id": "16_Q1",
+      "question": "Die Donaudampfschifffahrtsgesellschaftskapitänswitwe trauert um ihren Mann. Welches Transportmittel wird hier erwähnt?",
+      "answer": "Schiff",
+      "all_targets": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
+      "tokenization_type": "german_compound_complete",
+      "category": "Multi-linguality",
+      "title": "German Compound",
+      "set_id": "16"
+    },
+    {
+      "id": "16_Q2",
+      "question": "Die Donau dampf schiff fahrts gesellschafts kapitäns witwe trauert um ihren Mann. Welches Transportmittel wird hier erwähnt?",
+      "answer": "Schiff",
+      "all_targets": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
+      "tokenization_type": "german_compound_split",
+      "category": "Multi-linguality",
+      "title": "German Compound",
+      "set_id": "16"
+    },
+    {
+      "id": "16_Q3",
+      "question": "The Donaudampfschifffahrtsgesellschaftskapitänswitwe mourns her husband. Which mode of transportation is mentioned in this word?",
+      "answer": "Schiff",
+      "all_targets": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
+      "tokenization_type": "english_with_german_compound",
+      "category": "Multi-linguality",
+      "title": "German Compound",
+      "set_id": "16"
+    },
+    {
+      "id": "17_Q1",
+      "question": "北京是中华人民共和国的首都。这个句子中提到了哪个城市？",
+      "answer": "Beijing",
+      "all_targets": [
+        "Beijing",
+        "Běijīng",
+        "北京"
+      ],
+      "tokenization_type": "simplified_chinese",
+      "category": "Multi-linguality",
+      "title": "Chinese Characters",
+      "set_id": "17"
+    },
+    {
+      "id": "17_Q2",
+      "question": "北 京 是 中 华 人 民 共 和 国 的 首 都。这 个 句 子 中 提 到 了 哪 个 城 市？",
+      "answer": "Beijing",
+      "all_targets": [
+        "Beijing",
+        "Běijīng",
+        "北京"
+      ],
+      "tokenization_type": "character_split_chinese",
+      "category": "Multi-linguality",
+      "title": "Chinese Characters",
+      "set_id": "17"
+    },
+    {
+      "id": "17_Q3",
+      "question": "Beijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong tìdao le nage chengshi?",
+      "answer": "Beijing",
+      "all_targets": [
+        "Beijing",
+        "Běijīng",
+        "北京"
+      ],
+      "tokenization_type": "pinyin_no_tones",
+      "category": "Multi-linguality",
+      "title": "Chinese Characters",
+      "set_id": "17"
+    },
+    {
+      "id": "17_Q4",
+      "question": "Běijīng shì Zhōnghuá Rénmín Gònghéguó de shǒudū. Zhège jùzi zhōng tídào le nǎge chéngshì?",
+      "answer": "Beijing",
+      "all_targets": [
+        "Beijing",
+        "Běijīng",
+        "北京"
+      ],
+      "tokenization_type": "pinyin_with_tones",
+      "category": "Multi-linguality",
+      "title": "Chinese Characters",
+      "set_id": "17"
+    },
+    {
+      "id": "18_Q1",
+      "question": "مُحَمَّد يَدْرُسُ اللُّغَةَ العَرَبِيَّةَ فِي الجَامِعَةِ. مَاذَا يَدْرُسُ مُحَمَّد؟",
+      "answer": "Arabic",
+      "all_targets": [
+        "Arabic",
+        "Arabic language",
+        "اللغة العربية",
+        "allughata al'arabiyata"
+      ],
+      "tokenization_type": "arabic_with_diacritics",
+      "category": "Multi-linguality",
+      "title": "Arabic Diacritics",
+      "set_id": "18"
+    },
+    {
+      "id": "18_Q2",
+      "question": "محمد يدرس اللغة العربية في الجامعة. ماذا يدرس محمد؟",
+      "answer": "Arabic",
+      "all_targets": [
+        "Arabic",
+        "Arabic language",
+        "اللغة العربية",
+        "allughata al'arabiyata"
+      ],
+      "tokenization_type": "arabic_without_diacritics",
+      "category": "Multi-linguality",
+      "title": "Arabic Diacritics",
+      "set_id": "18"
+    },
+    {
+      "id": "18_Q3",
+      "question": "Mohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?",
+      "answer": "Arabic",
+      "all_targets": [
+        "Arabic",
+        "Arabic language",
+        "اللغة العربية",
+        "allughata al'arabiyata"
+      ],
+      "tokenization_type": "arabic_transliterated",
+      "category": "Multi-linguality",
+      "title": "Arabic Diacritics",
+      "set_id": "18"
+    },
+    {
+      "id": "18_Q4",
+      "question": "Muhammad is studying Arabic language at the university. What is Muhammad studying?",
+      "answer": "Arabic",
+      "all_targets": [
+        "Arabic",
+        "Arabic language",
+        "اللغة العربية",
+        "allughata al'arabiyata"
+      ],
+      "tokenization_type": "english_translation",
+      "category": "Multi-linguality",
+      "title": "Arabic Diacritics",
+      "set_id": "18"
+    },
+    {
+      "id": "19_Q1",
+      "question": "Я живу в Санкт-Петербурге и работаю в университете. В каком городе я живу?",
+      "answer": "Saint Petersburg",
+      "all_targets": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "Санкт-Петербург"
+      ],
+      "tokenization_type": "russian_cyrillic",
+      "category": "Multi-linguality",
+      "title": "Russian Case",
+      "set_id": "19"
+    },
+    {
+      "id": "19_Q2",
+      "question": "Ya zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?",
+      "answer": "Saint Petersburg",
+      "all_targets": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "Санкт-Петербург"
+      ],
+      "tokenization_type": "russian_transliterated",
+      "category": "Multi-linguality",
+      "title": "Russian Case",
+      "set_id": "19"
+    },
+    {
+      "id": "19_Q3",
+      "question": "Я живу в Санкт Петербурге и работаю в университете. В каком городе я живу?",
+      "answer": "Saint Petersburg",
+      "all_targets": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "Санкт-Петербург"
+      ],
+      "tokenization_type": "russian_unhyphenated",
+      "category": "Multi-linguality",
+      "title": "Russian Case",
+      "set_id": "19"
+    },
+    {
+      "id": "19_Q4",
+      "question": "I live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)",
+      "answer": "Saint Petersburg",
+      "all_targets": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "Санкт-Петербург"
+      ],
+      "tokenization_type": "english_with_russian_case",
+      "category": "Multi-linguality",
+      "title": "Russian Case",
+      "set_id": "19"
+    },
+    {
+      "id": "20_Q1",
+      "question": "東京オリンピックは2021年に開催されました。いつオリンピックが開催されましたか？",
+      "answer": "2021",
+      "all_targets": [
+        "2021"
+      ],
+      "tokenization_type": "japanese_mixed_scripts",
+      "category": "Multi-linguality",
+      "title": "Japanese Scripts",
+      "set_id": "20"
+    },
+    {
+      "id": "20_Q2",
+      "question": "とうきょうオリンピックは2021ねんにかいさいされました。いつオリンピックがかいさいされましたか？",
+      "answer": "2021",
+      "all_targets": [
+        "2021"
+      ],
+      "tokenization_type": "japanese_hiragana_katakana",
+      "category": "Multi-linguality",
+      "title": "Japanese Scripts",
+      "set_id": "20"
+    },
+    {
+      "id": "20_Q3",
+      "question": "Tokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?",
+      "answer": "2021",
+      "all_targets": [
+        "2021"
+      ],
+      "tokenization_type": "japanese_romaji",
+      "category": "Multi-linguality",
+      "title": "Japanese Scripts",
+      "set_id": "20"
+    },
+    {
+      "id": "20_Q4",
+      "question": "東京 オリンピック は 2021 年 に 開催 さ れ まし た。いつ オリンピック が 開催 さ れ まし た か？",
+      "answer": "2021",
+      "all_targets": [
+        "2021"
+      ],
+      "tokenization_type": "japanese_word_split",
+      "category": "Multi-linguality",
+      "title": "Japanese Scripts",
+      "set_id": "20"
+    },
+    {
+      "id": "21_Q1",
+      "question": "বিশ্বের সবচেয়ে দীর্ঘ নদী হল নীল নদী। বিশ্বের সবচেয়ে দীর্ঘ নদী কোনটি?",
+      "answer": "Nile",
+      "all_targets": [
+        "Nile",
+        "Nile River",
+        "নীল নদী",
+        "Neel nodi"
+      ],
+      "tokenization_type": "bengali_standard",
+      "category": "Multi-linguality",
+      "title": "Bengali Script",
+      "set_id": "21"
+    },
+    {
+      "id": "21_Q2",
+      "question": "বিশ্ব এর সব চেয়ে দীর্ঘ নদী হল নীল নদী। বিশ্ব এর সব চেয়ে দীর্ঘ নদী কোন টি?",
+      "answer": "Nile",
+      "all_targets": [
+        "Nile",
+        "Nile River",
+        "নীল নদী",
+        "Neel nodi"
+      ],
+      "tokenization_type": "bengali_split",
+      "category": "Multi-linguality",
+      "title": "Bengali Script",
+      "set_id": "21"
+    },
+    {
+      "id": "21_Q3",
+      "question": "Bishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?",
+      "answer": "Nile",
+      "all_targets": [
+        "Nile",
+        "Nile River",
+        "নীল নদী",
+        "Neel nodi"
+      ],
+      "tokenization_type": "bengali_transliterated",
+      "category": "Multi-linguality",
+      "title": "Bengali Script",
+      "set_id": "21"
+    },
+    {
+      "id": "21_Q4",
+      "question": "The longest river in the world is the Nile River. Which is the longest river in the world?",
+      "answer": "Nile",
+      "all_targets": [
+        "Nile",
+        "Nile River",
+        "নীল নদী",
+        "Neel nodi"
+      ],
+      "tokenization_type": "english_translation",
+      "category": "Multi-linguality",
+      "title": "Bengali Script",
+      "set_id": "21"
+    },
+    {
+      "id": "22_Q1",
+      "question": "Mlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?",
+      "answer": "Kilimanjaro",
+      "all_targets": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
+      "tokenization_type": "swahili_standard",
+      "category": "Multi-linguality",
+      "title": "Swahili Noun Classes",
+      "set_id": "22"
+    },
+    {
+      "id": "22_Q2",
+      "question": "M lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?",
+      "answer": "Kilimanjaro",
+      "all_targets": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
+      "tokenization_type": "swahili_morpheme_split",
+      "category": "Multi-linguality",
+      "title": "Swahili Noun Classes",
+      "set_id": "22"
+    },
+    {
+      "id": "22_Q3",
+      "question": "Mount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?",
+      "answer": "Kilimanjaro",
+      "all_targets": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
+      "tokenization_type": "english_translation",
+      "category": "Multi-linguality",
+      "title": "Swahili Noun Classes",
+      "set_id": "22"
+    },
+    {
+      "id": "22_Q4",
+      "question": "Mlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?",
+      "answer": "Kilimanjaro",
+      "all_targets": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
+      "tokenization_type": "swahili_alternative_phrasing",
+      "category": "Multi-linguality",
+      "title": "Swahili Noun Classes",
+      "set_id": "22"
+    },
+    {
+      "id": "23_Q1",
+      "question": "กรุงเทพมหานครเป็นเมืองหลวงของประเทศไทย เมืองหลวงของประเทศไทยคืออะไร?",
+      "answer": "Bangkok",
+      "all_targets": [
+        "Bangkok",
+        "Bangkok",
+        "Krung Thep",
+        "กรุงเทพมหานคร",
+        "กรุงเทพ",
+        "Krung Thep Maha Nakhon"
+      ],
+      "tokenization_type": "thai_standard",
+      "category": "Multi-linguality",
+      "title": "Thai Script",
+      "set_id": "23"
+    },
+    {
+      "id": "23_Q2",
+      "question": "กรุง เทพ มหา นคร เป็น เมือง หลวง ของ ประเทศ ไทย เมือง หลวง ของ ประเทศ ไทย คือ อะไร?",
+      "answer": "Bangkok",
+      "all_targets": [
+        "Bangkok",
+        "Bangkok",
+        "Krung Thep",
+        "กรุงเทพมหานคร",
+        "กรุงเทพ",
+        "Krung Thep Maha Nakhon"
+      ],
+      "tokenization_type": "thai_word_split",
+      "category": "Multi-linguality",
+      "title": "Thai Script",
+      "set_id": "23"
+    },
+    {
+      "id": "23_Q3",
+      "question": "Krung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?",
+      "answer": "Bangkok",
+      "all_targets": [
+        "Bangkok",
+        "Bangkok",
+        "Krung Thep",
+        "กรุงเทพมหานคร",
+        "กรุงเทพ",
+        "Krung Thep Maha Nakhon"
+      ],
+      "tokenization_type": "thai_transliterated",
+      "category": "Multi-linguality",
+      "title": "Thai Script",
+      "set_id": "23"
+    },
+    {
+      "id": "23_Q4",
+      "question": "Bangkok is the capital city of Thailand. What is the capital city of Thailand?",
+      "answer": "Bangkok",
+      "all_targets": [
+        "Bangkok",
+        "Bangkok",
+        "Krung Thep",
+        "กรุงเทพมหานคร",
+        "กรุงเทพ",
+        "Krung Thep Maha Nakhon"
+      ],
+      "tokenization_type": "english_translation",
+      "category": "Multi-linguality",
+      "title": "Thai Script",
+      "set_id": "23"
+    },
+    {
+      "id": "24_Q1",
+      "question": "హైదరాబాద్ తెలంగాణ రాష్ట్ర రాజధాని. తెలంగాణ రాజధాని ఏమిటి?",
+      "answer": "Hyderabad",
+      "all_targets": [
+        "Hyderabad",
+        "Hyderabad",
+        "హైదరాబాద్"
+      ],
+      "tokenization_type": "telugu_standard",
+      "category": "Multi-linguality",
+      "title": "Telugu Script",
+      "set_id": "24"
+    },
+    {
+      "id": "24_Q2",
+      "question": "హైదరాబాద్ తెలంగాణ రాష్ట్ర రాజ ధాని. తెలంగాణ రాజ ధాని ఏమిటి?",
+      "answer": "Hyderabad",
+      "all_targets": [
+        "Hyderabad",
+        "Hyderabad",
+        "హైదరాబాద్"
+      ],
+      "tokenization_type": "telugu_partial_split",
+      "category": "Multi-linguality",
+      "title": "Telugu Script",
+      "set_id": "24"
+    },
+    {
+      "id": "24_Q3",
+      "question": "Hyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?",
+      "answer": "Hyderabad",
+      "all_targets": [
+        "Hyderabad",
+        "Hyderabad",
+        "హైదరాబాద్"
+      ],
+      "tokenization_type": "telugu_transliterated",
+      "category": "Multi-linguality",
+      "title": "Telugu Script",
+      "set_id": "24"
+    },
+    {
+      "id": "24_Q4",
+      "question": "Hyderabad is the capital of Telangana state. What is the capital of Telangana?",
+      "answer": "Hyderabad",
+      "all_targets": [
+        "Hyderabad",
+        "Hyderabad",
+        "హైదరాబాద్"
+      ],
+      "tokenization_type": "english_translation",
+      "category": "Multi-linguality",
+      "title": "Telugu Script",
+      "set_id": "24"
+    }
+  ]
