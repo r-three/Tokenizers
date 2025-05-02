@@ -1,0 +1,60 @@
+tag: 
+  - multilingual
+  - tokenization
+  - evaluation
+task: tokenization_robustness
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files: ../../../data/custom_dataset.json
+test_split: all  # Using the entire dataset as test
+output_type: generate_until
+
+doc_to_text: "{{ question }}"
+doc_to_target: "{{ answer }}"
+
+generation_kwargs:
+  temperature: 0.0  # Use 0 to get deterministic outputs
+  do_sample: False
+  until:
+    - "\n"
+    - "</s>"
+    - "<|im_end|>"
+
+filter_list:
+  - filter:
+    - function: first_word  # Custom filter to extract just the first word/number
+    name: first-word-extract
+  - filter:
+    - function: exact
+    name: exact-match
+
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+  
+  # Custom metric that organizes results by tokenization type
+  - metric: group_exact_match
+    groups: tokenization_type
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+  
+  # Custom metric that organizes results by category
+  - metric: group_exact_match
+    groups: category
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+
+repeats: 1
+
+metadata:
+  version: 0.0
+  description: "Evaluation of model performance across different tokenization variants"
+  num_fewshot: 0  # Zero-shot evaluation
