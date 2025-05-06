@@ -14,7 +14,9 @@
         "title": "Icelandic Volcano",
         "set_id": "1"
       },
-      "target": "2010",
+      "target": [
+        "2010"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat year did Eyjafjallaj\u00f6kull erupt and disrupt European air travel?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -44,7 +46,7 @@
       ],
       "doc_hash": "c1634ae969ca3e4628e2b98432a334cbebe66294bcabb3d713d30612d2b2c73a",
       "prompt_hash": "dbb273881b69ae6105b8f8127711928c31e9071efbf238d45007d3beb040c4eb",
-      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "target_hash": "2ee1672483fc554adda35e9fdae9ee5db286e7d25dde7bd484842b76ac64c784",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -62,7 +64,9 @@
         "title": "Icelandic Volcano",
         "set_id": "1"
       },
-      "target": "2010",
+      "target": [
+        "2010"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat year did Eyja fjalla j\u00f6kull erupt and disrupt European air travel?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -92,7 +96,7 @@
       ],
       "doc_hash": "5284a93ce78bd1d49a1fe5a0805d441f7303b505630bfc01b8e80d5a537bd47d",
       "prompt_hash": "6b5eae294d169e88fa0110b07058bb8c67488e65682031c82dc59c07530625a3",
-      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "target_hash": "2ee1672483fc554adda35e9fdae9ee5db286e7d25dde7bd484842b76ac64c784",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -110,7 +114,9 @@
         "title": "Icelandic Volcano",
         "set_id": "1"
       },
-      "target": "2010",
+      "target": [
+        "2010"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat year did Eyjafjalla jokull erupt and disrupt European air travel?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -140,7 +146,7 @@
       ],
       "doc_hash": "eb0836ad7ebbba320ad519093ea6a1d82a1c6a1b94bc9baaa5c506ddfa1ec04f",
       "prompt_hash": "a7717bbf912258ff73943d8bb7d3bd597db45f3f31acaad152d2f628cc9fd493",
-      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "target_hash": "2ee1672483fc554adda35e9fdae9ee5db286e7d25dde7bd484842b76ac64c784",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -159,7 +165,10 @@
         "title": "Welsh Village",
         "set_id": "2"
       },
-      "target": "Wales",
+      "target": [
+        "Wales",
+        "United Kingdom"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -189,7 +198,7 @@
       ],
       "doc_hash": "94dd329e5491054e2a94c8c0e68be33e25b38e3f998dcb8c891ef216cb884d92",
       "prompt_hash": "4356d79106396bc89cfcdd90a055a6eae6686091eaf775199a0b4118dff83ac6",
-      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "target_hash": "2753616ce02e1a91e098ffa8dd97b543ed15f6da4637adbacbe32ccd0225c5c0",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -208,7 +217,10 @@
         "title": "Welsh Village",
         "set_id": "2"
       },
-      "target": "Wales",
+      "target": [
+        "Wales",
+        "United Kingdom"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Llanfair pwllgwyngyll located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -238,7 +250,7 @@
       ],
       "doc_hash": "0a0bd83aaf0c5269dc3bdd9903d6dbfea0e98edcfa71afb74535dcfb4aee9838",
       "prompt_hash": "a1bef2a85330727cf1eebc4d64e9e1b1364344f1dc20ddf331413655743d71aa",
-      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "target_hash": "2753616ce02e1a91e098ffa8dd97b543ed15f6da4637adbacbe32ccd0225c5c0",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -257,7 +269,10 @@
         "title": "Welsh Village",
         "set_id": "2"
       },
-      "target": "Wales",
+      "target": [
+        "Wales",
+        "United Kingdom"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Llanfair PG located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -287,7 +302,7 @@
       ],
       "doc_hash": "6f78c784945e1dd2d74b0810ced35b14be41d385249af50efef534f51e68d2d9",
       "prompt_hash": "ef38c797f6f845f15a526afb045a782881b2a9799a20554a60a282f23fa20b4b",
-      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "target_hash": "2753616ce02e1a91e098ffa8dd97b543ed15f6da4637adbacbe32ccd0225c5c0",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -305,7 +320,9 @@
         "title": "Long Medical Term",
         "set_id": "3"
       },
-      "target": "lung disease",
+      "target": [
+        "lung disease"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -335,7 +352,7 @@
       ],
       "doc_hash": "e75be3b43d5699c6d99c978845877c304c5fd3554670e1098df28230c620ebc4",
       "prompt_hash": "1f938f7d06ee98d0829cc6e3beba9c00a30b2e5ba36aed7d1d7c5edf1550a61c",
-      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "target_hash": "cf1bdc6c7a953a496853e342ccceaa1a3b824b3e0f5d25f3217006935aaa24dc",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -353,7 +370,9 @@
         "title": "Long Medical Term",
         "set_id": "3"
       },
-      "target": "lung disease",
+      "target": [
+        "lung disease"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat type of condition is Pneumono ultra microscopic silico volcano coniosis?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -383,7 +402,7 @@
       ],
       "doc_hash": "8e9b1e65f87ddcd002ca9b218283608f89e3258c67e710f52fadd749ee51e04e",
       "prompt_hash": "4ca315664843b2029d4f24f23ef4a80cdb9a4e205a25fa1f2935ef5f8343b8ee",
-      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "target_hash": "cf1bdc6c7a953a496853e342ccceaa1a3b824b3e0f5d25f3217006935aaa24dc",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -401,7 +420,9 @@
         "title": "Long Medical Term",
         "set_id": "3"
       },
-      "target": "lung disease",
+      "target": [
+        "lung disease"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat type of condition is Pneumoconiosis?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -431,7 +452,7 @@
       ],
       "doc_hash": "3510bab534f03a0c3d378115e78150c89f319f3dc537e9e7376bbbe0a0b2bfc9",
       "prompt_hash": "fea9ff0edc3eefca35e075711c47c731a364f58c8c1383f8e5f480c0699ebde0",
-      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "target_hash": "cf1bdc6c7a953a496853e342ccceaa1a3b824b3e0f5d25f3217006935aaa24dc",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -449,7 +470,9 @@
         "title": "M\u0101ori Hill",
         "set_id": "4"
       },
-      "target": "New Zealand",
+      "target": [
+        "New Zealand"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -479,7 +502,7 @@
       ],
       "doc_hash": "71d1d42566a0930bef277be669d7771d13c9c713280809ad4a0be7c8749aaa37",
       "prompt_hash": "af6dba7bb680bb0d8b3ee78f6ce04e46e724c8966b332b0086a45f7b141053ae",
-      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "target_hash": "b820da97c134f64b2ebafdc15f5a2f78fc082d85779bfe35737dfe3e9c883807",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -497,7 +520,9 @@
         "title": "M\u0101ori Hill",
         "set_id": "4"
       },
-      "target": "New Zealand",
+      "target": [
+        "New Zealand"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Taumata whakatangi hangakoauau o tamatea located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -527,7 +552,7 @@
       ],
       "doc_hash": "3001a3b2ab5963f7045f8af72ec8c6c6207c2abeb0bde817f55420a8451552d7",
       "prompt_hash": "2b6e5a28b077bd931ce497822c6d70b53b107dc25953d4d7fd09ffeb31200061",
-      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "target_hash": "b820da97c134f64b2ebafdc15f5a2f78fc082d85779bfe35737dfe3e9c883807",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -545,7 +570,9 @@
         "title": "M\u0101ori Hill",
         "set_id": "4"
       },
-      "target": "New Zealand",
+      "target": [
+        "New Zealand"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn which country is Taumata hill located?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -575,7 +602,7 @@
       ],
       "doc_hash": "3d0515990809c14b4965181a7d157f7a16b737e6f4e06267fc1ad202e8937904",
       "prompt_hash": "f4619c49f370d1e8538fb8b356c86144efe934a97339e4a065ac35cb95816546",
-      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "target_hash": "b820da97c134f64b2ebafdc15f5a2f78fc082d85779bfe35737dfe3e9c883807",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -598,7 +625,14 @@
         "title": "Russian Greeting",
         "set_id": "5"
       },
-      "target": "\"Hello, how are you?\"",
+      "target": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -628,7 +662,7 @@
       ],
       "doc_hash": "2b43d7c88bcb9277af645652b459f4fbcfa976b0d350741fedb5fa4663aeffae",
       "prompt_hash": "128d183bfedd216051d9863bd468e792bf7c93faf9f2e3b338ac47f6531d4acd",
-      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "target_hash": "6dc058681875f282ed4bee0e3c4f17423a33c69972d6e1ac69e6871d00ba88da",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -651,7 +685,14 @@
         "title": "Russian Greeting",
         "set_id": "5"
       },
-      "target": "\"Hello, how are you?\"",
+      "target": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the English translation of \"Privet, kak dela?\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -681,7 +722,7 @@
       ],
       "doc_hash": "25511a494a272cdc75c620323ba97aa96cdf92907879c7d56dd1944f33f2b67a",
       "prompt_hash": "ddf63ad188b85d6595fb709c3e1a3ab6f477a02f194f5d1004125ccafd2451ee",
-      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "target_hash": "6dc058681875f282ed4bee0e3c4f17423a33c69972d6e1ac69e6871d00ba88da",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -704,7 +745,14 @@
         "title": "Russian Greeting",
         "set_id": "5"
       },
-      "target": "\"Hello, how are you?\"",
+      "target": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\"?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -734,7 +782,7 @@
       ],
       "doc_hash": "acd629c6ce69d4ed169f7b1fdef5b231994ec38c4e8e4649ca15bb118afb5230",
       "prompt_hash": "61bde40629522fce3e9ea021044cd56ba6ccaae60fa9c5c1b590e69b9abedf3f",
-      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "target_hash": "6dc058681875f282ed4bee0e3c4f17423a33c69972d6e1ac69e6871d00ba88da",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -753,7 +801,10 @@
         "title": "Healthcare",
         "set_id": "6"
       },
-      "target": "both",
+      "target": [
+        "both",
+        "public and private"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat sector does healthcare belong to: public, private, or both?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -783,7 +834,7 @@
       ],
       "doc_hash": "954470175f7ed2bbd061f0c1329d763247ac656f5bc881ca14f25f7740f4cfa6",
       "prompt_hash": "3c3da74c698b40021a9ba1ed131ad108d10951d90d1620fdb88cef5e3269ee5f",
-      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "target_hash": "f721f3669b53c2e836da1aaf5c2cf887758e16da2061fdf26b7ad8d9b85e6bb9",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -802,7 +853,10 @@
         "title": "Healthcare",
         "set_id": "6"
       },
-      "target": "both",
+      "target": [
+        "both",
+        "public and private"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat sector does health care belong to: public, private, or both?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -832,7 +886,7 @@
       ],
       "doc_hash": "af743d0a1dd73a55ce5723731047280c569675cac5a5b928c6c753b9afc30478",
       "prompt_hash": "9cfcf4bc0a2a44111f80b0a25618d8f836ea43f4fbb21df99ee339e82e17412c",
-      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "target_hash": "f721f3669b53c2e836da1aaf5c2cf887758e16da2061fdf26b7ad8d9b85e6bb9",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -851,7 +905,10 @@
         "title": "Healthcare",
         "set_id": "6"
       },
-      "target": "both",
+      "target": [
+        "both",
+        "public and private"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat sector does health-care belong to: public, private, or both?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -881,7 +938,7 @@
       ],
       "doc_hash": "2ae39220eb7032bbffee1f00f8e7453844fd18bbadb7174371a5613ef3ad2d9a",
       "prompt_hash": "2fbaa14b918c26d8e5361c2192ab3f875e549bd84e5804ee782720382eda7948",
-      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "target_hash": "f721f3669b53c2e836da1aaf5c2cf887758e16da2061fdf26b7ad8d9b85e6bb9",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -900,7 +957,10 @@
         "title": "Database",
         "set_id": "7"
       },
-      "target": "storage",
+      "target": [
+        "storage",
+        "store"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn one word, what is the main function of a database in computing?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -930,7 +990,7 @@
       ],
       "doc_hash": "908d4c4827f15c8a0f2b7250d5a1e2fc648f54ceab1e72521fadfe34454d790d",
       "prompt_hash": "fff253fa40d6dbf79da2c81dc556ffedae7a7c24e78f40e399feff4083952b2f",
-      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "target_hash": "2e187a967386fa80ed0f6722a5738e9ed53a26c4b4d4026cb9fc49fec13d04f4",
       "exact_match": 1.0,
       "multi_target_match": 1.0
     },
@@ -949,7 +1009,10 @@
         "title": "Database",
         "set_id": "7"
       },
-      "target": "storage",
+      "target": [
+        "storage",
+        "store"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn one word, what is the main function of a data base in computing?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -979,7 +1042,7 @@
       ],
       "doc_hash": "7d85e32a4fc98e1c286ae998af172743856144cb59253cb9ddbcda6197905322",
       "prompt_hash": "f596ec1df45d7688dcc7b1ac8867e289942fb3a5dea19b50ed886145053d9059",
-      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "target_hash": "2e187a967386fa80ed0f6722a5738e9ed53a26c4b4d4026cb9fc49fec13d04f4",
       "exact_match": 1.0,
       "multi_target_match": 1.0
     },
@@ -998,7 +1061,10 @@
         "title": "Database",
         "set_id": "7"
       },
-      "target": "storage",
+      "target": [
+        "storage",
+        "store"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIn one word, what is the main function of a data-base in computing?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1028,7 +1094,7 @@
       ],
       "doc_hash": "d26085deac9d15cbab75c5f8b180c83290dae91527ecf64b91774273dce948bc",
       "prompt_hash": "d3eb1450e8268dd6980c8e6ecdd0d0f512d0893a43fadf6f74b2a3f90f74bc92",
-      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "target_hash": "2e187a967386fa80ed0f6722a5738e9ed53a26c4b4d4026cb9fc49fec13d04f4",
       "exact_match": 1.0,
       "multi_target_match": 1.0
     },
@@ -1046,7 +1112,9 @@
         "title": "Cryptocurrency",
         "set_id": "8"
       },
-      "target": "Blockchain",
+      "target": [
+        "Blockchain"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat technology underlies most cryptocurrency systems?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1076,7 +1144,7 @@
       ],
       "doc_hash": "9b221b445b204e275a9f7d225da78ede5ead611db70a37e2d796d97af6fd0669",
       "prompt_hash": "240f03fdb406dfa2840531fd7c61e921d309b879a71a4751f964cc524b32b630",
-      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "target_hash": "1cf5ed10c599fd3f5007f3e918d9a3aac97273e247234b6fbe325f6cc1f17850",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1094,7 +1162,9 @@
         "title": "Cryptocurrency",
         "set_id": "8"
       },
-      "target": "Blockchain",
+      "target": [
+        "Blockchain"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat technology underlies most crypto currency systems?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1124,7 +1194,7 @@
       ],
       "doc_hash": "61184acb5a5bd67290168104a04f3504c43fe3c14ad3e021550497c9ce469532",
       "prompt_hash": "c313504daa8753a3d9df207bb649ae496f1cf3e3b20f728fb61071fb56e06e34",
-      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "target_hash": "1cf5ed10c599fd3f5007f3e918d9a3aac97273e247234b6fbe325f6cc1f17850",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1142,7 +1212,9 @@
         "title": "Cryptocurrency",
         "set_id": "8"
       },
-      "target": "Blockchain",
+      "target": [
+        "Blockchain"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat technology underlies most crypto-currency systems?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1172,7 +1244,7 @@
       ],
       "doc_hash": "e878a9407ebc2d120138a6735d82fb441f9fcfb1923506f4da5c4188f84d68bb",
       "prompt_hash": "46b5ea729503bc9b0dc2c8bf87499933d501480600b509821924b2a089fdc4ad",
-      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "target_hash": "1cf5ed10c599fd3f5007f3e918d9a3aac97273e247234b6fbe325f6cc1f17850",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1190,7 +1262,9 @@
         "title": "Socioeconomic",
         "set_id": "9"
       },
-      "target": "social",
+      "target": [
+        "social"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nComplete this pair: socioeconomic status combines _____ factors and economic factors.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1220,7 +1294,7 @@
       ],
       "doc_hash": "c44747c799b7f7ede1f548f8afc49dcc15d896546793c81dd4aaa7ab7a5f6dad",
       "prompt_hash": "17f02c3b6e0598f0684e1905d1fcf4b21ede569ea2a6e688edee1b03d9558166",
-      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "target_hash": "f5f98b1681b35a1294695fb8e580252ad5f4f816796338fdb18f1b16b163dde6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1238,7 +1312,9 @@
         "title": "Socioeconomic",
         "set_id": "9"
       },
-      "target": "social",
+      "target": [
+        "social"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nComplete this pair: socio economic status combines _____ factors and economic factors.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1268,7 +1344,7 @@
       ],
       "doc_hash": "bb0913137a4a99dff9e85e07c8a56bd45101a022c5152b43fe741d2843e7e486",
       "prompt_hash": "fdd185acd382100e6abc99c5cfa925d6905c8ecb39e75dca1f7558cd06ec32e4",
-      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "target_hash": "f5f98b1681b35a1294695fb8e580252ad5f4f816796338fdb18f1b16b163dde6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1286,7 +1362,9 @@
         "title": "Socioeconomic",
         "set_id": "9"
       },
-      "target": "social",
+      "target": [
+        "social"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nComplete this pair: socio-economic status combines _____ factors and economic factors.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1316,7 +1394,7 @@
       ],
       "doc_hash": "ae53aa1c5014f941a384413ae15d55bc91b3127ca7b7d450f5d330dfefa236e4",
       "prompt_hash": "8756d91eb6e73004b91b5e93f813aecc76b13c2918c0953d1fb55e834e6be577",
-      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "target_hash": "f5f98b1681b35a1294695fb8e580252ad5f4f816796338fdb18f1b16b163dde6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1336,7 +1414,11 @@
         "title": "Webpage",
         "set_id": "10"
       },
-      "target": "HTML (Hypertext Markup Language)",
+      "target": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat markup language is primarily used to create a webpage?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1366,9 +1448,9 @@
       ],
       "doc_hash": "04f14bd80f4ee306653b8afa124add74dcce01fd6c63bb6303a079bb4ad2e704",
       "prompt_hash": "1c6a9992a26f45e3f3034da4ad31b15b77688de43758719acca7c556ed2644dd",
-      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "target_hash": "cd528659e723b43c7e42df3b394619b361978a78c128d236f4725321cca03501",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 28,
@@ -1386,7 +1468,11 @@
         "title": "Webpage",
         "set_id": "10"
       },
-      "target": "HTML (Hypertext Markup Language)",
+      "target": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat markup language is primarily used to create a web page?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1416,9 +1502,9 @@
       ],
       "doc_hash": "d296895eddbda55298bf06cb463fa75981460e7737038969ad907faeb5f25384",
       "prompt_hash": "5f42fd39e08905eaaa6e63de66ac33a87c8a052ab220ea2c53b7c85996b9f569",
-      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "target_hash": "cd528659e723b43c7e42df3b394619b361978a78c128d236f4725321cca03501",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 29,
@@ -1436,7 +1522,11 @@
         "title": "Webpage",
         "set_id": "10"
       },
-      "target": "HTML (Hypertext Markup Language)",
+      "target": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat markup language is primarily used to create a web-page?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1466,9 +1556,9 @@
       ],
       "doc_hash": "062ef791d6d753d9304eddf9773e565a87125b121e54d80e64925faac34adffa",
       "prompt_hash": "6ecaa31455b684afac1c75f62ac94ed0410d0bbd514ffa7febe0eb263d232b5c",
-      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "target_hash": "cd528659e723b43c7e42df3b394619b361978a78c128d236f4725321cca03501",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 30,
@@ -1484,7 +1574,9 @@
         "title": "TensorFlow",
         "set_id": "11"
       },
-      "target": "Google",
+      "target": [
+        "Google"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhich company developed TensorFlow?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1514,7 +1606,7 @@
       ],
       "doc_hash": "5e13f7923116037435dd18885a361cda82e8c3d0e8186aad9b101b32ece8df6a",
       "prompt_hash": "e7bf06cafe4624cb571064763600cc0f0647f282e519e61892596964c7b30138",
-      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "target_hash": "65c4fa741804bd17e9c0be23993808840b70fd51f2480f3844811c2b0d7458c7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1532,7 +1624,9 @@
         "title": "TensorFlow",
         "set_id": "11"
       },
-      "target": "Google",
+      "target": [
+        "Google"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhich company developed Tensorflow?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1562,7 +1656,7 @@
       ],
       "doc_hash": "326f7d869a56118de77ddceadb3a2ae9ac3a144855967cfbbb0b12be8716703f",
       "prompt_hash": "5681ad301c841a614ece7299099137bfbe0b1ff9256ee2979592131e985e2ef2",
-      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "target_hash": "65c4fa741804bd17e9c0be23993808840b70fd51f2480f3844811c2b0d7458c7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1580,7 +1674,9 @@
         "title": "TensorFlow",
         "set_id": "11"
       },
-      "target": "Google",
+      "target": [
+        "Google"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhich company developed tensor flow?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1610,7 +1706,7 @@
       ],
       "doc_hash": "7299d2a9a664cd2e84bbe54fddce3d09adf521c67126a99971af3f9224e72500",
       "prompt_hash": "c07d8a1298098a1af068c997864833df93647622e0dbfeded499a6c29c16bd58",
-      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "target_hash": "65c4fa741804bd17e9c0be23993808840b70fd51f2480f3844811c2b0d7458c7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1628,7 +1724,9 @@
         "title": "JavaScript",
         "set_id": "12"
       },
-      "target": "No",
+      "target": [
+        "No"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIs JavaScript the same programming language as Java?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1658,7 +1756,7 @@
       ],
       "doc_hash": "e3a9946a8f6672f1884bc929dad4be79b8516c49c40cca6dcccddb025c9c8348",
       "prompt_hash": "7e4b28c6930c839422f2c4b794e063f39965aea3792df20c4a9854242d3af899",
-      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "target_hash": "624e19d6d4a6ca65cc7d7c2f1a2dfab282625eef3b071f7a31a0ca195ec62ba6",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1676,7 +1774,9 @@
         "title": "JavaScript",
         "set_id": "12"
       },
-      "target": "No",
+      "target": [
+        "No"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIs Javascript the same programming language as Java?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1706,7 +1806,7 @@
       ],
       "doc_hash": "2dc36c98c7ce38701af3b7b9f86f9572d8f91cd5991f2c701369080c48a5ba87",
       "prompt_hash": "1a29d1ccecfd77516eb44dfb27cf773ece76b61ed5d355ee15a3edb3e979fab6",
-      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "target_hash": "624e19d6d4a6ca65cc7d7c2f1a2dfab282625eef3b071f7a31a0ca195ec62ba6",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1724,7 +1824,9 @@
         "title": "JavaScript",
         "set_id": "12"
       },
-      "target": "No",
+      "target": [
+        "No"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIs java script the same programming language as Java?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1754,7 +1856,7 @@
       ],
       "doc_hash": "e9582b4533d1738e2b91c4a9a0fc944f1e7aa793199074ae42fbd65c723d76a0",
       "prompt_hash": "426a1f38186efe19273bf72deb85d19d97f7aa3f42f6bd4d58fbbed2085baae7",
-      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "target_hash": "624e19d6d4a6ca65cc7d7c2f1a2dfab282625eef3b071f7a31a0ca195ec62ba6",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1773,7 +1875,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1803,7 +1908,7 @@
       ],
       "doc_hash": "9f5b1325c46fd7d054d0d381b4092a3ce4a890f13870ec552cadd51a8b2a4b94",
       "prompt_hash": "17dae42a5372f32ea451bf5aa6df53eb7dd39b6cbb656da02f7038ae10f65365",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1822,7 +1927,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyon karahi sar l\u0131 la\u015f t\u0131r ama d\u0131k lar \u0131m\u0131z dan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1852,7 +1960,7 @@
       ],
       "doc_hash": "806cfd0a545e0158aa75370b084435aee725ae970bea607cf28dd302cca3a878",
       "prompt_hash": "d5a35ca8f8a7f458c96c1bf19858e5af453066908e4b682315f5a72dbe569f09",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1871,7 +1979,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1901,7 +2012,7 @@
       ],
       "doc_hash": "0e50ac4e090a1c1c6cef398bf4d3c17b7c7007098256b538925bac8255a6fd30",
       "prompt_hash": "249788f1fb74ab64ff34dee07fb60dc027f3b6f8f3b2badf7a7ea2cff52805de",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1920,7 +2031,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu soyleniyor. Burada hangi sehirden bahsediliyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1950,7 +2064,7 @@
       ],
       "doc_hash": "6ba10439e48c4d494f95c161e2deb5a00054b673876620862c24ae7ce2c088a7",
       "prompt_hash": "ee21686344da0864e5182d7867c2eb160e7d75842c1a61ee0e7dc4ed6551b9c5",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1969,7 +2083,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHe is said to be 'Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan'. Which city in Turkey is mentioned in this word?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -1999,7 +2116,7 @@
       ],
       "doc_hash": "a0abd912fc1ad72987dca5f423d50e751f92ee449d09943f2d69b7142d82734a",
       "prompt_hash": "2d35e29318323db69a6b6c8fdc992bacf4a08f0b655c595cd86ad72fb588daae",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2018,7 +2135,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHe is said to be 'Afyonkarahisarlila\u015ftiramadiklarimizdan'. Which city in Turkey is mentioned in this word?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2048,7 +2168,7 @@
       ],
       "doc_hash": "349c67a4f66b8ddb7d6abe3929ef8ccde42b9cbfe636386a33936c0369b9775a",
       "prompt_hash": "93e3fa28659ec0268196f6966e94c74bb8f0f61312d6e3c55d6f38ee01905cd8",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2071,7 +2191,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the plural form of 'oeuf' in French?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2101,7 +2228,7 @@
       ],
       "doc_hash": "13649dffba11351975b197ebc533943d54779c3c8ea3d15ba8fe1915a2d6fe68",
       "prompt_hash": "ac6901199c21a876d549638345cccb8308b6e1a54f06747d8bb2b1c6f0d2a290",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2124,7 +2251,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the plural form of \"l'\u0153uf\" in French?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2154,9 +2288,9 @@
       ],
       "doc_hash": "a58f8ad5c57bef5ff822a1b821ab701152f409fed8234c6a2b53cd18891f0b5d",
       "prompt_hash": "c744347277952db57689ff2177d67c105347a89e320f4b85d22df5684eefa8f8",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 44,
@@ -2177,7 +2311,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDans la phrase 'J'ai achet\u00e9 un oeuf', quel est le pluriel de 'oeuf'?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2207,7 +2348,7 @@
       ],
       "doc_hash": "60ab5da26867ade717b3b3c6f1e3f3a2dfa82e64efa88daa1ee8569b2d3dd0fc",
       "prompt_hash": "20c44594ea8d8f3c2ee56df766e05d4f064aaa5135d5d64bd4ee003aadc9d5b5",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2230,7 +2371,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDans la phrase 'J'ai achet\u00e9 un \u0153uf', quel est le pluriel de '\u0153uf'?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2260,9 +2408,9 @@
       ],
       "doc_hash": "6d6e8b855909ceb2d0f84f03930cc36db612ced41e8245514a1ae48f6d7f1fdc",
       "prompt_hash": "8c8f96cea6161addda76780ab34f388e98033cb13a2838a30d408933a55c05e9",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 46,
@@ -2282,7 +2430,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nGul Sena is a PhD student in machine learning. What does Gul Sena study?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2312,7 +2466,7 @@
       ],
       "doc_hash": "bf90db3d1a02787451851a7f92cf54df36a666a1dcd6c7cc664ca265d0aeddbe",
       "prompt_hash": "898b2a9420e51de5cf88f84ce0bbb18446f3be139a44440e7e07f3850f84a7a4",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2334,7 +2488,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nG\u00fcl Sena is a PhD student in machine learning. What does G\u00fcl Sena study?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2364,7 +2524,7 @@
       ],
       "doc_hash": "31595557e2baabe102d0a266f4a2777ca5fa4e3a340ee31f395b6b6d34abc4cc",
       "prompt_hash": "62d025cdb2c699e37be142eab140620ec683f7eea2c91d57787ba67034be3b6a",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2386,7 +2546,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nG\u00fcl Sena makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisidir. G\u00fcl Sena ne \u00e7al\u0131\u015f\u0131yor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2416,9 +2582,9 @@
       ],
       "doc_hash": "f7e364b177034643c496039be8aaef294d2de67088612ecc8947eab34da2bca2",
       "prompt_hash": "50dbcaa6ef4eb37eaef09fba521fe4e035af14bafd7034f6f754ef3e343dc6c8",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 49,
@@ -2438,7 +2604,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nGul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2468,9 +2640,9 @@
       ],
       "doc_hash": "1b3a5e33c57f1b3a54b5e776e8ed5c12683f365bddc9465479dfd71d884c2e95",
       "prompt_hash": "0968e04aa8f92e3d4261647b991862e7fa7e59e4f7066b91537c7ea7d2b1e24d",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 50,
@@ -2490,7 +2662,13 @@
         "title": "German Compound",
         "set_id": "16"
       },
-      "target": "Schiff",
+      "target": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDie Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2520,7 +2698,7 @@
       ],
       "doc_hash": "61f9c08e25e1a6ed1b4c09fcadf46c5d6129e355cff605fc36b059eac4726344",
       "prompt_hash": "ad4d6e2431b30310dd249c68b46eadab8b47693131a90d3dc959513165839458",
-      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "target_hash": "f312f9af4cffbc891c2c3a8daeea233ce0358fe6b1a35c7352fba6a5e1212ea9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2542,7 +2720,13 @@
         "title": "German Compound",
         "set_id": "16"
       },
-      "target": "Schiff",
+      "target": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nDie Donau dampf schiff fahrts gesellschafts kapit\u00e4ns witwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2572,7 +2756,7 @@
       ],
       "doc_hash": "4cac5ad57e8d76e435b65e7ee654ff50e21e2cd348e4caa98e824f90d3105e3d",
       "prompt_hash": "4a9f823acc9f73ca75f24b48ad73990332fb68527e7b5a719077a5836858758c",
-      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "target_hash": "f312f9af4cffbc891c2c3a8daeea233ce0358fe6b1a35c7352fba6a5e1212ea9",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2594,7 +2778,13 @@
         "title": "German Compound",
         "set_id": "16"
       },
-      "target": "Schiff",
+      "target": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nThe Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe mourns her husband. Which mode of transportation is mentioned in this word?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2624,7 +2814,7 @@
       ],
       "doc_hash": "e0fd0d1bb5dcff5067415a4a83c844066c9f0beeea5b9469d1255e477b8e38c4",
       "prompt_hash": "2dd6c3767c63c504f3667e4f139c234318e76321435a28e6ca1e9fe4813dcabf",
-      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "target_hash": "f312f9af4cffbc891c2c3a8daeea233ce0358fe6b1a35c7352fba6a5e1212ea9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2644,7 +2834,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u5317\u4eac\u662f\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u4e86\u54ea\u4e2a\u57ce\u5e02\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2674,9 +2868,9 @@
       ],
       "doc_hash": "fa62daeafab42197410a7ea830f9ffd1e18701148bdd778956cfcc8e32b34717",
       "prompt_hash": "cfe8ab6ec4f86204376d159d42da2575fec9732e9478b74560a9cbd06da7b10e",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
-      "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 54,
@@ -2694,7 +2888,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u5317 \u4eac \u662f \u4e2d \u534e \u4eba \u6c11 \u5171 \u548c \u56fd \u7684 \u9996 \u90fd\u3002\u8fd9 \u4e2a \u53e5 \u5b50 \u4e2d \u63d0 \u5230 \u4e86 \u54ea \u4e2a \u57ce \u5e02\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2724,7 +2922,7 @@
       ],
       "doc_hash": "b21b5c190e9a1caccefd5f9f24f43b9088dbc0004b95d893ed9a08fcd94fe9df",
       "prompt_hash": "690cdf9e09bfc048458dc965bd15b8a3db37e093cf8d73d3ba36696272174e9b",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2744,7 +2942,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nBeijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong t\u00ecdao le nage chengshi?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2774,7 +2976,7 @@
       ],
       "doc_hash": "e4987df8b385230052ab5ed4b248aa9266fe6defb65c8b7d27988020a2114f2a",
       "prompt_hash": "0895faee9f0f0ac941795721cad87e75a509f0a66770fb1c87db678a338b570b",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
       "exact_match": 1.0,
       "multi_target_match": 1.0
     },
@@ -2794,7 +2996,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nB\u011bij\u012bng sh\u00ec Zh\u014dnghu\u00e1 R\u00e9nm\u00edn G\u00f2ngh\u00e9gu\u00f3 de sh\u01d2ud\u016b. Zh\u00e8ge j\u00f9zi zh\u014dng t\u00edd\u00e0o le n\u01cege ch\u00e9ngsh\u00ec?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2824,9 +3030,9 @@
       ],
       "doc_hash": "e391bb1ee965218d1dabaffe72e054b6323e0e9268d7bb19bda2c41e40975352",
       "prompt_hash": "d540500a7304b165286a6d1f8c9bd3693a4d67a4af0af6284f15eafaa13192fe",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
-      "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 57,
@@ -2845,7 +3051,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0641\u0650\u064a \u0627\u0644\u062c\u064e\u0627\u0645\u0650\u0639\u064e\u0629\u0650. \u0645\u064e\u0627\u0630\u064e\u0627 \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f\u061f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2875,7 +3086,7 @@
       ],
       "doc_hash": "771782fbc7108f4aa3a1d2db072fe268d7879b6f0505308c79a9593f9b669325",
       "prompt_hash": "54a2a63fc60beca67fc335f3434dc55836674504c794ab24990191ce0dab8882",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2896,7 +3107,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0645\u0627\u0630\u0627 \u064a\u062f\u0631\u0633 \u0645\u062d\u0645\u062f\u061f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2926,9 +3142,9 @@
       ],
       "doc_hash": "37d35ab5e1530e25e196564de73e17232cc69f76008dbc75988b9d25d65952a5",
       "prompt_hash": "d6580716aa2dfd67189bd09e3643b4079f963eb6658ad5529c470f0c8ae5aebe",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 59,
@@ -2947,7 +3163,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -2977,7 +3198,7 @@
       ],
       "doc_hash": "d885a33f5bcb3c16e7fa24dbb27ced8f62c087cb3468ab63ffd78c6db31ee9d9",
       "prompt_hash": "55729c7c5083a2dff4a65a66506530707267718794d0d29098fb106a0d649028",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2998,7 +3219,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMuhammad is studying Arabic language at the university. What is Muhammad studying?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3028,7 +3254,7 @@
       ],
       "doc_hash": "4135dd15ca832a2f7b69d1cc0c877c723fb24a3085e014148db0bff700551ff5",
       "prompt_hash": "60b7c8c9171155cbfb11f3f1a1e60c1ffe7640e94416afd4c55240213ed41ead",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3049,7 +3275,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3079,9 +3310,9 @@
       ],
       "doc_hash": "fc2b4dd9cef15396aa508cb6987441c4bb82ce090435f2692a19da424e56ff30",
       "prompt_hash": "7b896f9f6c250d97571406a14fb133e29be2c026af86c393e201294af6ba23ca",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 62,
@@ -3100,7 +3331,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nYa zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3130,7 +3366,7 @@
       ],
       "doc_hash": "6a171eb7bddb1ce2e490308e5719429984837af49445a146a875a7ced2f9d0d7",
       "prompt_hash": "71fe653fce5548072e8618bcb2c4f38990a85254febc3afb91602fcac31574b9",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3151,7 +3387,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442 \u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3181,9 +3422,9 @@
       ],
       "doc_hash": "a1de0d694f0a6423f795933f97f6843cc4abc502a29ecadec897e8c16930dae5",
       "prompt_hash": "7ed00912bd985c45933bc9bbc814d34b53597ec30339388726955b32870c1516",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 64,
@@ -3202,7 +3443,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nI live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3232,7 +3478,7 @@
       ],
       "doc_hash": "09bce0444f251e331cc2bb6348d28381763d9c694aecc30029c0b17e583ca682",
       "prompt_hash": "dbb98b1e6193c70cb2462c81736cc60cea5c58d4ca9fa6ab2c2ead133bae58be",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3250,7 +3496,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3280,7 +3528,7 @@
       ],
       "doc_hash": "f4809c929dcd69a5d7ae916aa0db14899a9e4f912b023f22db90452cc04b4704",
       "prompt_hash": "4024a65d347010bb90af4db13320eefe78256fd96c68509240d51ee1702a7d92",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3298,7 +3546,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u3068\u3046\u304d\u3087\u3046\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u306d\u3093\u306b\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3328,7 +3578,7 @@
       ],
       "doc_hash": "3a49480e1f40fee909d58234b2fc6bcb188141dccefe8255bee3cc631cd57b5e",
       "prompt_hash": "185d53ffb2c8312a45fd60c22632987ff6c87bdd9b5f52b7480c1795f5ea3d95",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3346,7 +3596,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nTokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3376,7 +3628,7 @@
       ],
       "doc_hash": "a1c6596172eb646dc83b6424a67904c621a5efe4fe9dba4b6df072a3aad9fed8",
       "prompt_hash": "03fe78f64fc51fa0814444d91ffedc8643409ea9d2692e7c5ca026785f4c4bb0",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3394,7 +3646,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u6771\u4eac \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u306f 2021 \u5e74 \u306b \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f\u3002\u3044\u3064 \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u304c \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f \u304b\uff1f<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3424,7 +3678,7 @@
       ],
       "doc_hash": "0dd4f7f44ac87b9167a2881d327a4392e1f6d6e76a5fd68818f1c6536a875921",
       "prompt_hash": "e80a63dcb87850578203ea73ce985c81ba11ce265a7df7d6cc3b404d0199b06a",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3445,7 +3699,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u099f\u09bf?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3475,9 +3734,9 @@
       ],
       "doc_hash": "37e6f96bbedec66beba430d0e0a14dd907c88bdc7552f94d347b9fbb90d64207",
       "prompt_hash": "bb60ce9f5964b8d4727b82f7840d8198fb7f9f549490f2b75ca654d2e352a65d",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 70,
@@ -3496,7 +3755,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8 \u099f\u09bf?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3526,9 +3790,9 @@
       ],
       "doc_hash": "4b29870058ace8022647a2754f5fbf5b802f931abc7606d4efe62309d49b2901",
       "prompt_hash": "a2792603c7046156f814a5a9b06b0001244a0d612ab2202c54f327fa65d370a9",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 71,
@@ -3547,7 +3811,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nBishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3577,9 +3846,9 @@
       ],
       "doc_hash": "66f0714759f45e0571f026d4419a02ccb65b13e77d9903fb6f53db2d28d8f060",
       "prompt_hash": "489383283c4984299f473fa1038fdc539337993d897defdbd2456b2b5df94b40",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 72,
@@ -3598,7 +3867,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nThe longest river in the world is the Nile River. Which is the longest river in the world?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3628,7 +3902,7 @@
       ],
       "doc_hash": "0608d15fd6c433e1ceab7ceb2b172041ee8fabdaff43e003d846210dbae37121",
       "prompt_hash": "3c8ecb0b449a655fa149b9b964c6d1bdb05aa9ee1a3a89976b18b7efa41ffd79",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3648,7 +3922,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3678,7 +3956,7 @@
       ],
       "doc_hash": "1089497c913db8499f89103cba20f8b2a616bb0ab8e9b1c4f5118a1243c2df0f",
       "prompt_hash": "cd8d2d61ece089689e34023c306b63050cf7a288496d14f8f815a58182e77f83",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3698,7 +3976,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nM lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3728,7 +4010,7 @@
       ],
       "doc_hash": "d46db4cbe29e399bc432ed091bc721709906f63d0c8e5b087d42a0a0dce6ff76",
       "prompt_hash": "f1a63142e8c874f3963075feca4f468d55223d7583e5c42ec193823f6228921a",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3748,7 +4030,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3778,7 +4064,7 @@
       ],
       "doc_hash": "0bcd3d8e27ee04a688671199455a83b4d92e6f3258158014a134241cdd62c61c",
       "prompt_hash": "a8a01c133a56e5537f2b7e7fd1dcb1e2b9dd2c7e7ca692b3805410ecc2adcbdd",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3798,7 +4084,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nMlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3828,7 +4118,7 @@
       ],
       "doc_hash": "c0e67a4f08b01e50bd05263d983426caef4d6a6e3cc66bdd9d5630ae74c474d1",
       "prompt_hash": "c0c3d69196771cbe20082f26d6b7c7786fa14b26eddbc72901938506021623a0",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3840,7 +4130,6 @@
         "answer": "Bangkok",
         "all_targets": [
           "Bangkok",
-          "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
@@ -3851,7 +4140,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3879,11 +4174,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "91cbc8c9e0f73457e33765b790cc72ab0e7c9a4b291bf2a00419fad0b9e60e90",
+      "doc_hash": "96390a36ff63193f4922a42b156934460a8ebb34adf6e383b57b1ba56f666882",
       "prompt_hash": "4771a3a4b8bcbc1224acf554a258700c6183129a19e31fea03e76f452c80001a",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
-      "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 78,
@@ -3892,7 +4187,6 @@
         "question": "\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?",
         "answer": "Bangkok",
         "all_targets": [
-          "Bangkok",
           "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
@@ -3904,7 +4198,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3932,11 +4232,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "c0dbf74cafa531475fc2f93d55080b55139c213bd2c88107ed19234370ee8e48",
+      "doc_hash": "2ce646fa742102294c89c1bf64cb3d13c0a1c8b2e8467c84d4cf0d09e4c00fba",
       "prompt_hash": "82bfbf53a3c4e5fbd83aed51ea0c7fa641904d3326bcc927918b6394ed168530",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
-      "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 79,
@@ -3945,7 +4245,6 @@
         "question": "Krung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?",
         "answer": "Bangkok",
         "all_targets": [
-          "Bangkok",
           "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
@@ -3957,7 +4256,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nKrung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -3985,11 +4290,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "b6069485c5b6558828a4923e83c49fe0cb326b38085c38def2d3dd4058ddd03b",
+      "doc_hash": "84a113e54c6ee693494fd42662eaa80bab369a019bd3b317c9e34a5c7355d327",
       "prompt_hash": "24a3fbf3aae85bde7d56637b578aad612e342c1d7f13243b7ee73d1cf0fa621c",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 80,
@@ -3998,7 +4303,6 @@
         "question": "Bangkok is the capital city of Thailand. What is the capital city of Thailand?",
         "answer": "Bangkok",
         "all_targets": [
-          "Bangkok",
           "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
@@ -4010,7 +4314,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nBangkok is the capital city of Thailand. What is the capital city of Thailand?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -4038,9 +4348,9 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "c4ff271e8218f3ee804dc2b953809ba7fd2ccd3164232f1b019f37f74ef4216a",
+      "doc_hash": "1d0c6481e0100d14d2c4981d59179a6c8e1ae3475213bbc9dacc2b018d8b415d",
       "prompt_hash": "8314f7a7a4e4d2186a34ea6fa14e8b55b4ba72e8ec5f9617d6d771d5f508ec09",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -4052,7 +4362,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "telugu_standard",
@@ -4060,7 +4369,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -4088,11 +4400,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "6e21c52c27944a6c6af4e975b80ce4260f993fa5d2844e0fc2f86cf41cece60f",
+      "doc_hash": "9a6bea355a144495921e61408415cf8c33227fcfd0976bd1b8c79e3432c3ea82",
       "prompt_hash": "e7381af604290c48264029a955d0764a7c3d01c97b09600617b7df264dcb57d5",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
-      "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
+      "exact_match": 1.0,
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 82,
@@ -4102,7 +4414,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "telugu_partial_split",
@@ -4110,7 +4421,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -4138,9 +4452,9 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "41991d8fdaf66aab1da727058b87669bd62f821d4c45b56be413c818453fce13",
+      "doc_hash": "6bb2b19417c01b8e2bdf5981143c4b4d309527532d8238a1bc5288cdf39adf8e",
       "prompt_hash": "3c533942d7778a687f04be843d9e7d244672ad7c84ecf2c25750b7f08f9bbfae",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -4152,7 +4466,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "telugu_transliterated",
@@ -4160,7 +4473,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -4188,9 +4504,9 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "004e92c34623b7f5ade39e598fd048c640c97f7ad7266a6c8916a02ec6d5e5db",
+      "doc_hash": "09dc6c91a4030f737035585de571a613dde89d8df9b7faea3f0ba6234cfd58b9",
       "prompt_hash": "aa204ed27293cb9ccac1ae49019658678457ce571d3769baa2a67795396f94a9",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -4202,7 +4518,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "english_translation",
@@ -4210,7 +4525,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHyderabad is the capital of Telangana state. What is the capital of Telangana?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
@@ -4238,11 +4556,2571 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "ab5a80411dc98d3295420716f97713fff27584701d6c986e3bf87e609ad346f4",
+      "doc_hash": "2768a16c37db76b785e47290e7f723619e341cf772770f894ed4431f279baf7e",
       "prompt_hash": "2c3331dd3e29ae8ae74da4585f0a4509bd4cd349784aee34cb3d5747a49434ae",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
       "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 85,
+      "doc": {
+        "id": "25_Q1",
+        "question": "What is the value of 12345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "no_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the value of 12345 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the value of 12345 multiplied by 2, I'll simply multiply the two numbers together."
+        ]
+      ],
+      "filtered_resps": [
+        "To find the value of 12345 multiplied by 2, I'll simply multiply the two numbers together."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2602c4170e45020f2b3d8fe09f0bca8d5e89f34c94f60a49ee3b81a606c81689",
+      "prompt_hash": "58bd1c63e164bd7a647e5587478e388d424d8fda426ca39bd214056cb0a44a07",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 86,
+      "doc": {
+        "id": "25_Q2",
+        "question": "What is the value of 12,345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "comma_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the value of 12,345 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the value of 12,345 multiplied by 2, I'll simply multiply the two numbers together:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the value of 12,345 multiplied by 2, I'll simply multiply the two numbers together:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5f0739c2d89b0567a03c8336a75d29cf60b1780718cb8ba49f2960af029e2e33",
+      "prompt_hash": "8333ee5d694696d88473df3b57466ec0e6d893a9c2578682bb61146617139b71",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 87,
+      "doc": {
+        "id": "25_Q3",
+        "question": "What is the value of 12.345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "period_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the value of 12.345 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the value of 12.345 multiplied by 2, I'll simply multiply the numbers together:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the value of 12.345 multiplied by 2, I'll simply multiply the numbers together:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6ba0e22d5fd11630fa193c34b409127c5e6c7428fd33aa3dfe4078f858ae11f7",
+      "prompt_hash": "52c69d6e99e2443f4b6ea909af8bbd3417b1354835b0aaf77fdfefd0a6b212a2",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 88,
+      "doc": {
+        "id": "25_Q4",
+        "question": "What is the value of 12 345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "space_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the value of 12 345 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the value of 12 345 multiplied by 2, I'll simply multiply the two numbers together:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the value of 12 345 multiplied by 2, I'll simply multiply the two numbers together:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "60276761211dcf360c2b3a18717bde3df89a3ec2b52f905579218c285a0f994c",
+      "prompt_hash": "246458186aeba2bfa13ff2be056652af0ed8ef4287535c6bd974ae1c683e40b8",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 89,
+      "doc": {
+        "id": "26_Q1",
+        "question": "What is 5000000000 divided by 1000?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "no_separators",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 5000000000 divided by 1000?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "5000000000 divided by 1000 is 5,000,000."
+        ]
+      ],
+      "filtered_resps": [
+        "5000000000 divided by 1000 is 5,000,000."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "7f03a4c64c9be050fabe8c0a2aa2644af97cd6d71ce107aa959ee20c68faaae6",
+      "prompt_hash": "f1ab8500d66fd71e7fbb3d3180429079f5387604462e368895ecdcd9f46404e0",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 90,
+      "doc": {
+        "id": "26_Q2",
+        "question": "What is 5,000,000,000 divided by 1,000?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "comma_separators",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 5,000,000,000 divided by 1,000?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To divide 5,000,000,000 by 1,000, I'll simply move the decimal point 3 places to the left:"
+        ]
+      ],
+      "filtered_resps": [
+        "To divide 5,000,000,000 by 1,000, I'll simply move the decimal point 3 places to the left:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e878eb9e13cd15c06c3796a41ec47f8176ae36f58dccb7de00873e7bab88b2d1",
+      "prompt_hash": "23ef723dd6ea76598b43e4edffe94adcc7333d11c49a3b1fa5dce03819979ffe",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 91,
+      "doc": {
+        "id": "26_Q3",
+        "question": "What is 5.0 \u00d7 10^9 divided by 1.0 \u00d7 10^3?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "scientific_notation",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 5.0 \u00d7 10^9 divided by 1.0 \u00d7 10^3?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To divide numbers in scientific notation, we divide the coefficients (the numbers in front of the exponents) and subtract the exponents."
+        ]
+      ],
+      "filtered_resps": [
+        "To divide numbers in scientific notation, we divide the coefficients (the numbers in front of the exponents) and subtract the exponents."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "176064c16b8bffdeae2fd71d9bedd8aa6f9f6e1f02d9ea4d37fb3da5e1f4fb58",
+      "prompt_hash": "f67e641df6e95c2dd7be161eb68f3d93114e372a375cd24d692931aea4487904",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 92,
+      "doc": {
+        "id": "26_Q4",
+        "question": "What is 5.0e9 divided by 1.0e3?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "computer_scientific_notation",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 5.0e9 divided by 1.0e3?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To divide 5.0e9 by 1.0e3, we need to divide the coefficients (5.0 and 1.0) and subtract the exponents (9 and 3)."
+        ]
+      ],
+      "filtered_resps": [
+        "To divide 5.0e9 by 1.0e3, we need to divide the coefficients (5.0 and 1.0) and subtract the exponents (9 and 3)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "39ff3b4707f0e89b2691588305c744915939cde843e19af344d21a2b3797d4d4",
+      "prompt_hash": "72bca9cf6397b9b4cef9afa18bda32e851a8e3441864ee4940a28540a0f19bf1",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 93,
+      "doc": {
+        "id": "27_Q1",
+        "question": "What is 3.14159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "period_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 3.14159 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The result of multiplying 3.14159 (which is an approximation of pi) by 2 is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The result of multiplying 3.14159 (which is an approximation of pi) by 2 is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "8f364405f819892141ac4aae3fcd8d825233458b086aa287eba7f5a083eb18f8",
+      "prompt_hash": "269da6de709c0470e517650853f134eda718514d594969c82f75b6ce4dbf4709",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 94,
+      "doc": {
+        "id": "27_Q2",
+        "question": "What is 3,14159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "comma_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 3,14159 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The result of multiplying 3.14159 by 2 is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The result of multiplying 3.14159 by 2 is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e87c85e59433a018ccb4d8598a4d759e37972878b5ef8d29e6fbb0dac0450279",
+      "prompt_hash": "b3050db6c44d78d6727578f3c51f774d8afa0b972717a0d42138839f59604ef7",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 95,
+      "doc": {
+        "id": "27_Q3",
+        "question": "What is 3\u00b714159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "middle_dot_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 3\u00b714159 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate this, I'll multiply 3.14159 by 2."
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate this, I'll multiply 3.14159 by 2."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "321dc7f1022f64993a5a8b9a5bfcfadcb6f55f8bd6d2116c427d15401f525c9a",
+      "prompt_hash": "10c847c67acf67fd203fda5f5aee12bef6640a5b9f52d893cc2e44b89500f0a3",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 96,
+      "doc": {
+        "id": "27_Q4",
+        "question": "What is 3 14159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "space_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 3 14159 multiplied by 2?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The calculation is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The calculation is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0e2ea77c0b507e4f38580c9c8dc6e93d49a9ee5645c0082f152a80457a01b03e",
+      "prompt_hash": "fedc1620bd8b5c6177db5f94bfd749e1a7d3993d0e238b7abfe28bf002e483be",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 97,
+      "doc": {
+        "id": "28_Q1",
+        "question": "What is the quadratic formula for solving ax\u00b2 + bx + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "standard_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the quadratic formula for solving ax\u00b2 + bx + c = 0?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the quadratic equation ax\u00b2 + bx + c = 0 is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the quadratic equation ax\u00b2 + bx + c = 0 is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a7cff5338e163e33cf1cf2eccbcb9e7aae199322cde01601b77526accebc800f",
+      "prompt_hash": "6c46168d7d81d72cd5929685a3eb7c3b84708e1be87dbab8bc0c794cd9e510ad",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 98,
+      "doc": {
+        "id": "28_Q2",
+        "question": "What is the quadratic formula for solving ax^2 + bx + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "caret_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the quadratic formula for solving ax^2 + bx + c = 0?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the quadratic equation ax^2 + bx + c = 0 is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the quadratic equation ax^2 + bx + c = 0 is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0352ed9ce0a9b878c555de39a4cdb611ae07ab27a7fcad2badbaf1f58e28fe02",
+      "prompt_hash": "c6b359d635759522cea2e28ee0c36973a7efebecd588c80d505c5f93aedc7009",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 99,
+      "doc": {
+        "id": "28_Q3",
+        "question": "What is the quadratic formula for solving a*x*x + b*x + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "multiplication_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the quadratic formula for solving a*x*x + b*x + c = 0?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation a*x^2 + b*x + c = 0 is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation a*x^2 + b*x + c = 0 is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c8ce411817a806064a0bb9af8a1d8496a9a8757468b9c7be8c29b55a9c2c831a",
+      "prompt_hash": "da4ccf837d234174827cb48376df416ecc8e0abfd2cf06d63bf56a721782982a",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 100,
+      "doc": {
+        "id": "28_Q4",
+        "question": "What is the quadratic formula for solving ax**2 + bx + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "python_power_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the quadratic formula for solving ax**2 + bx + c = 0?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the quadratic equation ax**2 + bx + c = 0 is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the quadratic equation ax**2 + bx + c = 0 is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "883075bd0d08bb7847e74ad363b16d96eb7d1b6640dd20e21983e5db75738e39",
+      "prompt_hash": "ab357c915be0d1292e6f451e27544ed5d1c76b06c22137315c1db3ea53aa57d4",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 101,
+      "doc": {
+        "id": "28_Q5",
+        "question": "What is the quadratic formula for solving $ax^2 + bx + c = 0$?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "markdown_math",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the quadratic formula for solving $ax^2 + bx + c = 0$?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the quadratic equation $ax^2 + bx + c = 0$ is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the quadratic equation $ax^2 + bx + c = 0$ is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "9e6520d6f5e45601fd743094a3b098922c9549731a917f72122b2f09c43dcc26",
+      "prompt_hash": "c2535c61ce357705aaf9f4eba06476b63d1f59fdb08f5814b8677c388400df85",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 102,
+      "doc": {
+        "id": "28_Q6",
+        "question": "What is the quadratic formula for solving \\begin{equation}ax^2 + bx + c = 0\\end{equation}?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "latex_environment",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the quadratic formula for solving \\begin{equation}ax^2 + bx + c = 0\\end{equation}?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the quadratic equation \\begin{equation}ax^2 + bx + c = 0\\end{equation} is:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the quadratic equation \\begin{equation}ax^2 + bx + c = 0\\end{equation} is:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e14ed77e1d716fa9f1c33b725589bab41c3975d6e77c580b3e41f5a4c19627df",
+      "prompt_hash": "e82a49e1800d5ee71b0be6f761c0e82b50bcf4e9e425eed656a18ef549ebba28",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 103,
+      "doc": {
+        "id": "29_Q1",
+        "question": "What is the derivative of sin(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "standard_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the derivative of sin(x)?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of sin(x) is cos(x)."
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of sin(x) is cos(x)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "51170550c7ce5bcb1deb8a767f0b15128dcabd5387fd70ae3640899ae68baa9a",
+      "prompt_hash": "e3a60869ba7ae1b313cbd5dbe1e6f53ce8e498b61120ce1b61942cb101fbaf77",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 104,
+      "doc": {
+        "id": "29_Q2",
+        "question": "What is d/dx sin(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "calculus_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is d/dx sin(x)?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the derivative of sin(x), we can use the definition of a derivative:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the derivative of sin(x), we can use the definition of a derivative:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "044792c985313e2723639d02d25f9aaa8b345c75c6961687436bc42d15821cbc",
+      "prompt_hash": "9ab9fa94a29505fb05e24b600711a902ed297a4afaca9c3a5b43010e97228993",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 105,
+      "doc": {
+        "id": "29_Q3",
+        "question": "What is sin'(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "prime_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is sin'(x)?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of the sine function is the cosine function. In mathematical notation, this is written as:"
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of the sine function is the cosine function. In mathematical notation, this is written as:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e884b6f006cc648bf5f3ecf910585228a258dd6260901b3ad95addc309f19dee",
+      "prompt_hash": "99dcf428ee287c9723f21d5bd2ce6d2ed6f57542d89cd172c03d06cd5fbf5476",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 106,
+      "doc": {
+        "id": "29_Q4",
+        "question": "What is the derivative of sin x?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "no_parentheses",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the derivative of sin x?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of sin(x) is cos(x)."
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of sin(x) is cos(x)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "63d05271fd84642e7f1b62633b8217571d0787024dd7eb794cf814dc16932d6e",
+      "prompt_hash": "50ee0366715b6a18b465160a9fc95a772836cd978298f1f1e60cf71a9850f12b",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 107,
+      "doc": {
+        "id": "29_Q5",
+        "question": "What is \\frac{d}{dx}\\sin(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "latex_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is \\frac{d}{dx}\\sin(x)?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "\\frac{d}{dx}\\sin(x) = \\cos(x)"
+        ]
+      ],
+      "filtered_resps": [
+        "\\frac{d}{dx}\\sin(x) = \\cos(x)"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ed16d7efee6fcc0a902c565e58db551dc4bea7d96988c1d15ab86f27191bf911",
+      "prompt_hash": "49f1de61c0f42e87f4bc54d537c235d3b1333bef6b669ab27edf67f187f8ebca",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 108,
+      "doc": {
+        "id": "29_Q6",
+        "question": "What is $\\frac{d}{dx}\\sin(x)$?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "inline_latex",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is $\\frac{d}{dx}\\sin(x)$?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "## Step 1: Recall the definition of the derivative"
+        ]
+      ],
+      "filtered_resps": [
+        "## Step 1: Recall the definition of the derivative"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6ad3140990b403eb66edbda3365a8cc999d75dae92c0980a3e8822863b701c50",
+      "prompt_hash": "acae141107aad5a22e1927056bd65030645211ebc4baf8202bde4129070cbd99",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 109,
+      "doc": {
+        "id": "30_Q1",
+        "question": "What is the class of IP address 192.168.1.1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "standard_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the class of IP address 192.168.1.1?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The IP address 192.168.1.1 is a private IP address, which falls under the Class C IP address range."
+        ]
+      ],
+      "filtered_resps": [
+        "The IP address 192.168.1.1 is a private IP address, which falls under the Class C IP address range."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5f5f497206ed509b00cd80cf75ee8994b7546356320322469278956a8da139bd",
+      "prompt_hash": "5191e6aa7d391b5a0c550cd5f3a16fce6541a66cffff1df8ede57b0c708564d4",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 110,
+      "doc": {
+        "id": "30_Q2",
+        "question": "What is the class of IP address 192 168 1 1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "space_separated_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the class of IP address 192 168 1 1?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The IP address `192.168.1.1` is a private IP address, which falls under the Class C IP address range."
+        ]
+      ],
+      "filtered_resps": [
+        "The IP address `192.168.1.1` is a private IP address, which falls under the Class C IP address range."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a8c4c986474063895e71be591c103d61d1d428c634251629a613f5c3d5958cbc",
+      "prompt_hash": "432505974d08e75693ed6f255fbdf14b4195cc6e9206a70e82a004bc6228c12c",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 111,
+      "doc": {
+        "id": "30_Q3",
+        "question": "What is the class of IP address 192-168-1-1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "hyphen_separated_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the class of IP address 192-168-1-1?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The IP address 192.168.1.1 is a private IP address, which falls under the Class C category."
+        ]
+      ],
+      "filtered_resps": [
+        "The IP address 192.168.1.1 is a private IP address, which falls under the Class C category."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "56cf65c01a44fcf13c1279042427b39171bb77b71b888fc09dcf96ed8d0fe118",
+      "prompt_hash": "65186da3150b80183087e3adba8a0f9898c697940dc8f8bbdc7cef9b016d5fb0",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 112,
+      "doc": {
+        "id": "30_Q4",
+        "question": "What is the class of IP address 192,168,1,1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "comma_separated_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the class of IP address 192,168,1,1?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The IP address 192.168.1.1 is a private IP address, which falls into the Class C private IP address range."
+        ]
+      ],
+      "filtered_resps": [
+        "The IP address 192.168.1.1 is a private IP address, which falls into the Class C private IP address range."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e6cb50470ae8bbfbdbdf167194696f5ea89f20a39a34b0f80a7fdd6f9652a628",
+      "prompt_hash": "e851337304a84158b2a5e8967379f23bde5f6eaabb62f57e0dc37c9c67d9d98e",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 113,
+      "doc": {
+        "id": "31_Q1",
+        "question": "If you invest $1000000 at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "no_separators",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIf you invest $1000000 at 5% annual interest, how much will you have after 1 year?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the interest earned, multiply the principal amount ($1000000) by the interest rate (5% or 0.05):"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the interest earned, multiply the principal amount ($1000000) by the interest rate (5% or 0.05):"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a05aeb29f30e78803f47d87ed2862b9cf5d7acc3768eed3308f61a98191900cd",
+      "prompt_hash": "fad39db6845364118f739b86b4c15df12a64667d557f0c23e28accef0fd54011",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 114,
+      "doc": {
+        "id": "31_Q2",
+        "question": "If you invest $1,000,000 at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "comma_separators",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIf you invest $1,000,000 at 5% annual interest, how much will you have after 1 year?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the interest earned, multiply the principal amount ($1,000,000) by the interest rate (5% or 0.05):"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the interest earned, multiply the principal amount ($1,000,000) by the interest rate (5% or 0.05):"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "eecae39a6c40e8763fdfe7c14cbfe470df039a206d7d8937d80d97fed6fd1a06",
+      "prompt_hash": "704673da4b5cf05ce061f5f6c59dca114a95f2a763dbd82701c4623d1122e6dc",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 115,
+      "doc": {
+        "id": "31_Q3",
+        "question": "If you invest $1.000.000 at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "european_separators",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIf you invest $1.000.000 at 5% annual interest, how much will you have after 1 year?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the interest earned, multiply the principal amount ($1,000,000) by the interest rate (5% or 0.05):"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the interest earned, multiply the principal amount ($1,000,000) by the interest rate (5% or 0.05):"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "104fe1de9bf3ce6e9b48817a33dda8988ce3ccb6369c3f3ba3d04dd2c87f0cd9",
+      "prompt_hash": "23a4eb3fa2ecbbfcb3643786f1eee42756ab1ca3d63f5d7ec8dbef7d6a83a9e9",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 116,
+      "doc": {
+        "id": "31_Q4",
+        "question": "If you invest $1M at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "abbreviated_notation",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nIf you invest $1M at 5% annual interest, how much will you have after 1 year?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the interest earned, multiply the principal amount ($1,000,000) by the interest rate (5% or 0.05):"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the interest earned, multiply the principal amount ($1,000,000) by the interest rate (5% or 0.05):"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "922e636fc4411867796d9bb5036ca64893cd3f0dae3c83929848bf61471734da",
+      "prompt_hash": "c4272eca41414f080ab0d774107bbec747bec5aefee02afed607b052a1597ad5",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 117,
+      "doc": {
+        "id": "32_Q1",
+        "question": "What is 1/2 + 1/3 in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "slash_notation",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 1/2 + 1/3 in simplified form?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To add 1/2 and 1/3, we need to find a common denominator, which is 6. "
+        ]
+      ],
+      "filtered_resps": [
+        "To add 1/2 and 1/3, we need to find a common denominator, which is 6."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "212f9acd50f8c4edd1ad0032d9b8a730dcc9fd6cbf7256a65f842018e5d9d3be",
+      "prompt_hash": "88b93a77c38d1c94f84e7863e5c21248119c0465cdd5cebb5c175f369e984b88",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 118,
+      "doc": {
+        "id": "32_Q2",
+        "question": "What is \u00bd + \u2153 in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "unicode_fraction",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is \u00bd + \u2153 in simplified form?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To add \u00bd and \u2153, we need to find a common denominator, which is 6."
+        ]
+      ],
+      "filtered_resps": [
+        "To add \u00bd and \u2153, we need to find a common denominator, which is 6."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "83102851db2273b0869a9d6b0a4bd6c1dbcf1f4bd8245608cd12d9306448a788",
+      "prompt_hash": "87b0331d16c2f659b19816111d1a80c9cb149fa7438dea79b16c307554510894",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 119,
+      "doc": {
+        "id": "32_Q3",
+        "question": "What is 1\u00f72 + 1\u00f73 in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "division_symbol",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is 1\u00f72 + 1\u00f73 in simplified form?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To simplify the expression 1\u00f72 + 1\u00f73, we need to follow the order of operations (PEMDAS):"
+        ]
+      ],
+      "filtered_resps": [
+        "To simplify the expression 1\u00f72 + 1\u00f73, we need to follow the order of operations (PEMDAS):"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "929670b51ba9db96f89b9508a4e420ce6579674614aa36a7fabd95710290e2e2",
+      "prompt_hash": "0185a956184612532bc166144a4134b2cac62d55372d9b327050fa082dcc08ab",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 120,
+      "doc": {
+        "id": "32_Q4",
+        "question": "What is (1/2) + (1/3) in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "parentheses_fraction",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is (1/2) + (1/3) in simplified form?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To add fractions, we need to find a common denominator. In this case, the least common multiple (LCM) of 2 and 3 is 6."
+        ]
+      ],
+      "filtered_resps": [
+        "To add fractions, we need to find a common denominator. In this case, the least common multiple (LCM) of 2 and 3 is 6."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3d891f75f1415da705e4c3ce8f4faab922327312e7e34f0151bb7b3a9ef00aba",
+      "prompt_hash": "815d08bc3d866f6525e900d83837dbdbfbf439f17bf9a74ce58c7308250876e6",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 121,
+      "doc": {
+        "id": "33_Q1",
+        "question": "What is the decimal value of the hexadecimal number 1A?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "uppercase_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the decimal value of the hexadecimal number 1A?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "## Step 1: Understand the hexadecimal number system"
+        ]
+      ],
+      "filtered_resps": [
+        "## Step 1: Understand the hexadecimal number system"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a7d9882be5ef42cb255ad6f6b9af52d3d0bb909a02e589a7ca01afb021e11339",
+      "prompt_hash": "a691b72471f3d0d28e43cb0252d645afb64edc22653e2633be6cfd528c2e9269",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 122,
+      "doc": {
+        "id": "33_Q2",
+        "question": "What is the decimal value of the hexadecimal number 1a?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "lowercase_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the decimal value of the hexadecimal number 1a?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "## Step 1: Understand the hexadecimal number system"
+        ]
+      ],
+      "filtered_resps": [
+        "## Step 1: Understand the hexadecimal number system"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e1fea8977b4601f602ace1eda81532a878994db847dc5b316e203296aa49942b",
+      "prompt_hash": "6ebf11774f7497f9395ebf974a68eb6888a57823d3119e6e4956103c0be69a50",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 123,
+      "doc": {
+        "id": "33_Q3",
+        "question": "What is the decimal value of the hexadecimal number 0x1A?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "c_style_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the decimal value of the hexadecimal number 0x1A?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "## Step 1: Understand the hexadecimal number system"
+        ]
+      ],
+      "filtered_resps": [
+        "## Step 1: Understand the hexadecimal number system"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "429cd653a2a1bea778be714b65ce436718d02f8c244825637ddc6bfa7a830d01",
+      "prompt_hash": "6cccb46585dff36536dfb391aef55c7a118e49f61e7d27adcbd6ae01ee622cd9",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 124,
+      "doc": {
+        "id": "33_Q4",
+        "question": "What is the decimal value of the hexadecimal number #1A?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "web_color_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the decimal value of the hexadecimal number #1A?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "## Step 1: Understand the hexadecimal number system"
+        ]
+      ],
+      "filtered_resps": [
+        "## Step 1: Understand the hexadecimal number system"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "822b6bfae487ce491d87b177ee9c0f323c07e9e13ef0901888906544b90925ac",
+      "prompt_hash": "60eee0823b27f2f9765a296ab25c6942d76e96c9a234c8b174beb464095913e4",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 125,
+      "doc": {
+        "id": "34_Q1",
+        "question": "What is the determinant of the matrix [[1, 2], [3, 4]]?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "bracket_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the determinant of the matrix [[1, 2], [3, 4]]?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the determinant of a 2x2 matrix, we use the formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the determinant of a 2x2 matrix, we use the formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "08703c31ce7fc79c2b96fd2fab08f7489454da994053179b814a040e6dbb8952",
+      "prompt_hash": "1ff5a0121d5a6cd50b0f9a91e3a67cea2c11492252574296d23af0c231228d09",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 126,
+      "doc": {
+        "id": "34_Q2",
+        "question": "What is the determinant of the matrix \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "latex_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the determinant of the matrix \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "## Step 1: Recall the formula for the determinant of a 2x2 matrix"
+        ]
+      ],
+      "filtered_resps": [
+        "## Step 1: Recall the formula for the determinant of a 2x2 matrix"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "f1c4289bed7c26e1d71c33ec97c7762c557c0d1c6c3b9b639dd37a890e4cbb87",
+      "prompt_hash": "125dcf129a1cac064b193133f0cad0a9be8c592de06f4833b65a590d695a34fb",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 127,
+      "doc": {
+        "id": "34_Q3",
+        "question": "What is the determinant of the matrix | 1 2 | | 3 4 |?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "pipe_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the determinant of the matrix | 1 2 | | 3 4 |?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the determinant of a 2x2 matrix, we use the formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the determinant of a 2x2 matrix, we use the formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ded6aa9344ec148e6fdf9b709be1aa837f560dd69fd1e4c2d6c660b8494376b5",
+      "prompt_hash": "fa432184d135cd89f48f327a61939468bc16b9c160e65546858a976e033bdddf",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 128,
+      "doc": {
+        "id": "34_Q4",
+        "question": "What is the determinant of the 2x2 matrix with entries a11=1, a12=2, a21=3, a22=4?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "subscript_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nWhat is the determinant of the 2x2 matrix with entries a11=1, a12=2, a21=3, a22=4?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the determinant of a 2x2 matrix, we use the formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the determinant of a 2x2 matrix, we use the formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "cc6035a2510ee9ccfad09fd0f600a21f0881b3e2ceef3ee93d986fae2c53ef0a",
+      "prompt_hash": "4fcbe5deb23ea219c1624510b2fdffd2290fa7208c23d570bace4db2c935ab62",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
     }
   ]
 }

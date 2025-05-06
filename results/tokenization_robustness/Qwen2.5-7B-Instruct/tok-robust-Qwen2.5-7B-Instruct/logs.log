@@ -1,0 +1,15 @@
+2025-05-05 21:37:41,150 - eval - INFO - Config saved at results/tokenization_robustness/Qwen2.5-7B-Instruct/tok-robust-Qwen2.5-7B-Instruct/config.json
+2025-05-05 21:37:41,150 - eval - INFO - Starting eval with config:
+2025-05-05 21:37:41,603 - eval - INFO - Loading model: /model-weights/Qwen2.5-7B-Instruct
+2025-05-05 21:58:52,307 - eval - INFO - Config saved at results/tokenization_robustness/Qwen2.5-7B-Instruct/tok-robust-Qwen2.5-7B-Instruct/config.json
+2025-05-05 21:58:52,308 - eval - INFO - Starting eval with config:
+2025-05-05 21:58:52,764 - eval - INFO - Loading model: /model-weights/Qwen2.5-7B-Instruct
+2025-05-05 22:05:48,537 - eval - INFO - Config saved at results/tokenization_robustness/Qwen2.5-7B-Instruct/tok-robust-Qwen2.5-7B-Instruct/config.json
+2025-05-05 22:05:48,537 - eval - INFO - Starting eval with config:
+2025-05-05 22:05:49,001 - eval - INFO - Loading model: /model-weights/Qwen2.5-7B-Instruct
+2025-05-05 22:10:48,850 - eval - INFO - Config saved at results/tokenization_robustness/Qwen2.5-7B-Instruct/tok-robust-Qwen2.5-7B-Instruct/config.json
+2025-05-05 22:10:48,851 - eval - INFO - Starting eval with config:
+2025-05-05 22:10:49,307 - eval - INFO - Loading model: /model-weights/Qwen2.5-7B-Instruct
+2025-05-05 22:12:35,680 - eval - INFO - Config saved at results/tokenization_robustness/Qwen2.5-7B-Instruct/tok-robust-Qwen2.5-7B-Instruct/config.json
+2025-05-05 22:12:35,681 - eval - INFO - Starting eval with config:
+2025-05-05 22:12:36,130 - eval - INFO - Loading model: /model-weights/Qwen2.5-7B-Instruct

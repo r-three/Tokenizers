@@ -21,10 +21,24 @@ uv sync --all-extras --all-groups  --no-install-package flash-attn
 ## Sample Usage:
 LM-Eval
 ```bash
-uv run eval tokenizers/configs/mgsm_eval_llama8B.yaml 
+uv run eval xarch_tokenizers/configs/mgsm/mgsm_eval_llama8B.yaml 
 ```
 
 ## Lm-Eval new datasets
 Add new datasets under lm_eval_datasets
 
 This repo inherits from https://github.com/r-three/ca-merging.
+
+## Tokenizer Fail Cases
+### Convert dataset
+```bash
+python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py --dataset_path data/custom_dataset.json --output_path data/custom_dataset_hf.json
+```
+
+
+- `custom_dataset.json`
+```bash
+python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_robustness/eval_llama8B.yaml
+python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_robustness/eval_qwen_7B.yaml
+python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_robustness/eval_qwen_05B.yaml
+```

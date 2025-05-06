@@ -45,6 +45,9 @@ def load_predictions(
     base_dir: Union[Path, str],
     patterns: Optional[List[str]] = None,
     doc_ids: List[int] = None,
+    filters: List[str] = ["flexible-extract"],
+    metrics: List[str] = ["exact_match"],
+    additional_docs: List[str] = [],
 ):
     """Loads the results and configs from a base_dir into a unified dataframe
 
@@ -86,10 +89,11 @@ def load_predictions(
                     "prompt": pred_["arguments"][0][0],
                     "resp": pred_["resps"][0][0],
                     "filtered_resps": pred_["filtered_resps"][0],
-                    "exact_match": pred_["exact_match"],
                 }
+                | {doc_arg: pred_["doc"][doc_arg] for doc_arg in additional_docs}
+                | {metric: pred_[metric] for metric in metrics}
                 for pred_ in task_preds
-                if pred_["filter"] == "flexible-extract"
+                if filters is None or pred_["filter"] in filters
             ]
             df = pd.DataFrame.from_records(task_preds)
             df["dataset"] = task

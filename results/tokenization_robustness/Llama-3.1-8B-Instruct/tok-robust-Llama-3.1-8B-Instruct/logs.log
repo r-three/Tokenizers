@@ -1,0 +1,21 @@
+2025-05-05 18:40:01,367 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 18:40:01,367 - eval - INFO - Starting eval with config:
+2025-05-05 18:40:01,993 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct
+2025-05-05 18:49:24,994 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 18:49:24,994 - eval - INFO - Starting eval with config:
+2025-05-05 18:49:25,587 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct
+2025-05-05 18:55:38,013 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 18:55:38,014 - eval - INFO - Starting eval with config:
+2025-05-05 18:55:38,604 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct
+2025-05-05 18:56:37,291 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 18:56:37,291 - eval - INFO - Starting eval with config:
+2025-05-05 18:56:37,880 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct
+2025-05-05 19:01:07,648 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 19:01:07,648 - eval - INFO - Starting eval with config:
+2025-05-05 19:01:08,259 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct
+2025-05-05 19:28:21,790 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 19:28:21,791 - eval - INFO - Starting eval with config:
+2025-05-05 19:28:22,382 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct
+2025-05-05 22:19:05,765 - eval - INFO - Config saved at results/tokenization_robustness/Llama-3.1-8B-Instruct/tok-robust-Llama-3.1-8B-Instruct/config.json
+2025-05-05 22:19:05,766 - eval - INFO - Starting eval with config:
+2025-05-05 22:19:06,363 - eval - INFO - Loading model: /model-weights/Meta-Llama-3.1-8B-Instruct

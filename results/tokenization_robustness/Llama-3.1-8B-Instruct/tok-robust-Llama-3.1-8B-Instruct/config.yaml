@@ -1,6 +1,6 @@
 apply_chat_template: true
 batch_size: 32
-cache_dir: null
+cache_dir: /scratch/ssd004/scratch/altintas/.cache
 chat_template: null
 dataset_configs:
 - name: tokenization_robustness
@@ -32,7 +32,7 @@ revision: null
 save_dir: results/tokenization_robustness/Llama-3.1-8B-Instruct
 save_results: true
 seed: 42
-slurm_job_id: '16062562'
+slurm_job_id: '16089407'
 tags: []
 tensor_parallel_size: 1
 tokenizer_name: meta-llama/Meta-Llama-3.1-8B-Instruct
