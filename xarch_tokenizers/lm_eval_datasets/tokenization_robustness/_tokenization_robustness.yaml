@@ -13,6 +13,7 @@ test_split: test
 output_type: generate_until
 
 doc_to_text: "{{ question }}"
+# doc_to_text: "{% if 'question' in doc %}{{ question }}{% else %}{ huhuhu }{% endif %}"
 doc_to_target: "{{ answer }}"
 
 generation_kwargs:
