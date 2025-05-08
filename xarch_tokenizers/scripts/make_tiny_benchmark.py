@@ -9,76 +9,36 @@ random.seed(42)
 
 def subsample_and_push(dataset_name, split_ratio, min_samples, output_repo, delay_between_pushes=10, max_retries=5):
     api = HfApi()
-
-    # Detect if the dataset has configs
-    try:
-        config_names = get_dataset_config_names(dataset_name)
-        has_configs = bool(config_names)
-    except Exception:
-        config_names = []
-        has_configs = False
-
-    # If no configs, process the dataset directly
-    if not has_configs:
-        print("\n🔹 Processing dataset without configs")
-        try:
-            dataset = load_dataset(dataset_name)
-        except Exception as e:
-            print(f"❌ Failed to load dataset: {e}")
-            return
-
-        for split in dataset.keys():
-            print(f"\n🔸 Processing split: {split}")
-            # Check if split already exists
-            try:
-                repo_info = api.dataset_info(output_repo)
-                if split in repo_info.splits:
-                    print(f"✅ Skipping existing split: {split}")
-                    continue
-            except Exception:
-                pass  # Repo might not exist yet
-
-            data = dataset[split]
-            total = len(data)
-            sample_size = max(int(total * split_ratio), min_samples)
-            print(sample_size)
-            subsampled_data = data.select(random.sample(range(total), sample_size)) if sample_size < total else data
-            tiny_dataset = DatasetDict({split: subsampled_data})
-            print(f"   → Subsampled: {len(subsampled_data)}/{total}")
-
-            # Retry pushing
-            for retry in range(max_retries):
-                try:
-                    tiny_dataset.push_to_hub(repo_id=output_repo)
-                    print(f"✅ Successfully pushed split: {split}")
-                    break
-                except HFValidationError as e:
-                    print(f"❌ Validation error: {e}")
-                    break
-                except Exception as e:
-                    wait = 2 ** retry
-                    print(f"⚠️ Push failed: {e}. Retrying in {wait}s...")
-                    time.sleep(wait)
-            else:
-                print(f"❌ Gave up after {max_retries} retries.")
-
-            print(f"⏳ Waiting {delay_between_pushes}s before next push...")
-            time.sleep(delay_between_pushes)
+    config_names = get_dataset_config_names(dataset_name)
 
     # If dataset has configs
-    else:
+    if True:
         try:
             repo_info = api.dataset_info(output_repo)
-            existing_configs = [config['config_name'] for config in repo_info.card_data.get('dataset_info', [])]
-            # Extracting the split names from 'splits' inside 'dataset_info'
-            existing_splits = []
-            for config in repo_info.card_data.get('dataset_info', []):
-                for split in config.get('splits', []):
-                    existing_splits.append(split['name'])
+
+            # This is a LIST of dicts
+            dataset_info = repo_info.card_data.get("dataset_info", [])
+
+            existing_configs = []
+            if isinstance(dataset_info, list):
+                # Multi-config dataset
+                existing_configs = [entry.get("config_name") for entry in dataset_info]
+                existing_splits = []
+                for entry in dataset_info:
+                    for split in entry.get("splits", []):
+                        existing_splits.append(split.get("name"))
+            elif isinstance(dataset_info, dict):
+                # Single-config dataset
+                existing_configs = ["default"]
+                existing_splits = [split.get("name") for split in dataset_info.get("splits", [])]
+
+
+            print("Configs:", existing_configs)
+
         except Exception as e:
             print(f"❌ An error occurred: {e}")
-            existing_splits = set()
             existing_configs = set()
+
 
         for config in config_names:
             config_label = config.replace("/", "__")
@@ -97,10 +57,6 @@ def subsample_and_push(dataset_name, split_ratio, min_samples, output_repo, dela
 
             new_dataset = DatasetDict()
             for split in dataset.keys():
-                full_id = f"{config_label}/{split}"
-                if full_id in existing_splits:
-                    print(f"✅ Skipping existing split: {full_id}")
-                    continue
 
                 data = dataset[split]
                 total = len(data)
