@@ -1,0 +1,23 @@
+## run with eval
+datasets:
+  - name: tokenization_robustness
+model_name: &model_name gsaltintas/qwen2.5-7B-finetune-aya-sw
+tokenizer_name: &tokenizer_name gsaltintas/qwen2.5-7B-finetune-aya-sw
+trust_remote_code: false
+revision: null
+
+use_wandb: false
+wandb_project: xarch-tokenizers
+experiment_name: "tok-robust-Qwen2.5-7B-SW-LoRa-Instruct"  
+log_level: INFO
+
+seed: 42
+evaluation_method: lm_eval
+num_fewshot: 0
+apply_chat_template: true
+# num_samples: 2
+
+load_existing: false
+save_dir: results/tokenization_robustness/Qwen2.5-7B-SW-LoRa-Instruct/
+
+# sbatch -p a40 --time 120 --gres=gpu:a40:1 --wrap="python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_robustness/eval_qwen_7B_sw_lora.yaml "
