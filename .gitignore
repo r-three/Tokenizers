@@ -224,3 +224,6 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/macos,linux,django,python,pycharm
+
+*.png
+*.pdf
