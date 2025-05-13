@@ -1,0 +1,3 @@
+2025-05-01 23:14:38,267 - eval - INFO - Config saved at results/tokenization_robustness/TS-Qwen2.5-7B-Instruct/mgsm-eval-TS-Qwen2.5-7B-Instruct/config.json
+2025-05-01 23:14:38,268 - eval - INFO - Starting eval with config:
+2025-05-01 23:14:40,631 - eval - INFO - Loading model: gsaltintas/tokensurgeon-Qwen2.5-7B-Instruct-Meta-Llama-3.1-8B-Instruct-knn-euc-k8

@@ -1,2 +1,2 @@
 ,alias,"exact_match,basic-extraction","exact_match_stderr,basic-extraction","multi_target_match,basic-extraction","multi_target_match_stderr,basic-extraction",dataset,model
-0,tokenization_robustness,0.0,N/A,0.6941176470588235,N/A,tokenization_robustness,Qwen/Qwen2.5-7B-Instruct
+0,tokenization_robustness,0.06976744186046512,N/A,0.5503875968992248,N/A,tokenization_robustness,meta-llama/Meta-Llama-3.1-8B-Instruct

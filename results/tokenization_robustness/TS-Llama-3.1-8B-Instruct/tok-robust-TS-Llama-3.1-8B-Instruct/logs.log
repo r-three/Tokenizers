@@ -1,0 +1,3 @@
+2025-05-01 23:18:47,834 - eval - INFO - Config saved at results/tokenization_robustness/TS-Llama-3.1-8B-Instruct/tok-robust-TS-Llama-3.1-8B-Instruct/config.json
+2025-05-01 23:18:47,679 - eval - INFO - Starting eval with config:
+2025-05-01 23:18:55,481 - eval - INFO - Loading model: gsaltintas/tokensurgeon-Meta-Llama-3.1-8B-Instruct-Qwen2.5-7B-Instruct-knn-euc-k8

@@ -1,0 +1,160 @@
+model,set_id,category,title,id,tokenization_type,baseline_variant,variant_tokens,baseline_tokens,token_ratio,variant_perf,baseline_perf,perf_delta
+Qwen/Qwen2.5-7B-Instruct,10,Compound Words,Webpage,10_Q1,single_word,10_Q2,40,41,0.975609756097561,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,10,Compound Words,Webpage,10_Q3,hyphenated,10_Q2,41,41,1.0,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,10,Compound Words,Webpage,10_Q1,single_word,10_Q2,22,23,0.9565217391304348,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,10,Compound Words,Webpage,10_Q3,hyphenated,10_Q2,23,23,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,10,Compound Words,Webpage,10_Q1,single_word,10_Q2,40,41,0.975609756097561,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,10,Compound Words,Webpage,10_Q3,hyphenated,10_Q2,41,41,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q1,turkish_agglutinative_complete,13_Q5,63,62,1.0161290322580645,0.0,1.0,-1.0
+Qwen/Qwen2.5-7B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q2,turkish_morpheme_split,13_Q5,65,62,1.0483870967741935,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q3,turkish_no_diacritics,13_Q5,62,62,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q4,turkish_no_diacritics,13_Q5,61,62,0.9838709677419355,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q6,english_with_turkish_word_no_diacritics,13_Q5,61,62,0.9838709677419355,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q1,turkish_agglutinative_complete,13_Q2,39,41,0.9512195121951219,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q3,turkish_no_diacritics,13_Q2,37,41,0.9024390243902439,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q4,turkish_no_diacritics,13_Q2,37,41,0.9024390243902439,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q5,english_with_turkish_word,13_Q2,44,41,1.0731707317073171,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q6,english_with_turkish_word_no_diacritics,13_Q2,42,41,1.024390243902439,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q1,turkish_agglutinative_complete,13_Q5,63,62,1.0161290322580645,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q2,turkish_morpheme_split,13_Q5,65,62,1.0483870967741935,0.0,1.0,-1.0
+Qwen/Qwen2.5-0.5B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q3,turkish_no_diacritics,13_Q5,62,62,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q4,turkish_no_diacritics,13_Q5,61,62,0.9838709677419355,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,13,Multi-linguality,Afyonkarahisar,13_Q6,english_with_turkish_word_no_diacritics,13_Q5,61,62,0.9838709677419355,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,15,Multi-linguality,Gul,15_Q1,english_no_diacritics,15_Q3,48,53,0.9056603773584906,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,15,Multi-linguality,Gul,15_Q2,english_with_diacritics,15_Q3,48,53,0.9056603773584906,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,15,Multi-linguality,Gul,15_Q4,turkish_no_diacritics,15_Q3,58,53,1.0943396226415094,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,15,Multi-linguality,Gul,15_Q1,english_no_diacritics,15_Q3,30,34,0.8823529411764706,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,15,Multi-linguality,Gul,15_Q2,english_with_diacritics,15_Q3,30,34,0.8823529411764706,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,15,Multi-linguality,Gul,15_Q4,turkish_no_diacritics,15_Q3,38,34,1.1176470588235294,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,15,Multi-linguality,Gul,15_Q1,english_no_diacritics,15_Q3,48,53,0.9056603773584906,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,15,Multi-linguality,Gul,15_Q2,english_with_diacritics,15_Q3,48,53,0.9056603773584906,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,15,Multi-linguality,Gul,15_Q4,turkish_no_diacritics,15_Q3,58,53,1.0943396226415094,0.0,1.0,-1.0
+Qwen/Qwen2.5-7B-Instruct,16,Multi-linguality,German Compound,16_Q1,german_compound_complete,16_Q3,66,64,1.03125,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,16,Multi-linguality,German Compound,16_Q2,german_compound_split,16_Q3,64,64,1.0,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,16,Multi-linguality,German Compound,16_Q1,german_compound_complete,16_Q3,48,46,1.0434782608695652,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,16,Multi-linguality,German Compound,16_Q2,german_compound_split,16_Q3,46,46,1.0,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,16,Multi-linguality,German Compound,16_Q1,german_compound_complete,16_Q3,66,64,1.03125,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,16,Multi-linguality,German Compound,16_Q2,german_compound_split,16_Q3,64,64,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,17,Multi-linguality,Chinese Characters,17_Q1,simplified_chinese,17_Q2,44,78,0.5641025641025641,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,17,Multi-linguality,Chinese Characters,17_Q3,pinyin_no_tones,17_Q2,65,78,0.8333333333333334,0.0,1.0,-1.0
+Qwen/Qwen2.5-7B-Instruct,17,Multi-linguality,Chinese Characters,17_Q4,pinyin_with_tones,17_Q2,78,78,1.0,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,17,Multi-linguality,Chinese Characters,17_Q1,simplified_chinese,17_Q3,29,47,0.6170212765957447,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,17,Multi-linguality,Chinese Characters,17_Q2,character_split_chinese,17_Q3,39,47,0.8297872340425532,0.0,1.0,-1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,17,Multi-linguality,Chinese Characters,17_Q4,pinyin_with_tones,17_Q3,61,47,1.297872340425532,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,17,Multi-linguality,Chinese Characters,17_Q1,simplified_chinese,17_Q2,44,78,0.5641025641025641,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,17,Multi-linguality,Chinese Characters,17_Q3,pinyin_no_tones,17_Q2,65,78,0.8333333333333334,0.0,1.0,-1.0
+Qwen/Qwen2.5-0.5B-Instruct,17,Multi-linguality,Chinese Characters,17_Q4,pinyin_with_tones,17_Q2,78,78,1.0,0.0,1.0,-1.0
+Qwen/Qwen2.5-7B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q1,arabic_with_diacritics,18_Q3,96,57,1.6842105263157894,1.0,0.0,1.0
+Qwen/Qwen2.5-7B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q2,arabic_without_diacritics,18_Q3,43,57,0.7543859649122807,1.0,0.0,1.0
+Qwen/Qwen2.5-7B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q4,english_translation,18_Q3,44,57,0.7719298245614035,1.0,0.0,1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q1,arabic_with_diacritics,18_Q3,61,39,1.564102564102564,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q2,arabic_without_diacritics,18_Q3,26,39,0.6666666666666666,1.0,0.0,1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q4,english_translation,18_Q3,26,39,0.6666666666666666,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q1,arabic_with_diacritics,18_Q3,96,57,1.6842105263157894,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q2,arabic_without_diacritics,18_Q3,43,57,0.7543859649122807,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,18,Multi-linguality,Arabic Diacritics,18_Q4,english_translation,18_Q3,44,57,0.7719298245614035,1.0,0.0,1.0
+Qwen/Qwen2.5-7B-Instruct,19,Multi-linguality,Russian Case,19_Q1,russian_cyrillic,19_Q2,53,61,0.8688524590163934,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,19,Multi-linguality,Russian Case,19_Q3,russian_unhyphenated,19_Q2,54,61,0.8852459016393442,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,19,Multi-linguality,Russian Case,19_Q4,english_with_russian_case,19_Q2,67,61,1.098360655737705,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,19,Multi-linguality,Russian Case,19_Q1,russian_cyrillic,19_Q2,36,43,0.8372093023255814,1.0,0.0,1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,19,Multi-linguality,Russian Case,19_Q3,russian_unhyphenated,19_Q2,37,43,0.8604651162790697,1.0,0.0,1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,19,Multi-linguality,Russian Case,19_Q4,english_with_russian_case,19_Q2,49,43,1.1395348837209303,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,19,Multi-linguality,Russian Case,19_Q1,russian_cyrillic,19_Q2,53,61,0.8688524590163934,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,19,Multi-linguality,Russian Case,19_Q3,russian_unhyphenated,19_Q2,54,61,0.8852459016393442,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,19,Multi-linguality,Russian Case,19_Q4,english_with_russian_case,19_Q2,67,61,1.098360655737705,1.0,0.0,1.0
+Qwen/Qwen2.5-7B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q1,japanese_mixed_scripts,20_Q3,56,68,0.8235294117647058,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q2,japanese_hiragana_katakana,20_Q3,59,68,0.8676470588235294,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q4,japanese_word_split,20_Q3,85,68,1.25,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q1,japanese_mixed_scripts,20_Q3,37,48,0.7708333333333334,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q2,japanese_hiragana_katakana,20_Q3,41,48,0.8541666666666666,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q4,japanese_word_split,20_Q3,51,48,1.0625,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q1,japanese_mixed_scripts,20_Q3,56,68,0.8235294117647058,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q2,japanese_hiragana_katakana,20_Q3,59,68,0.8676470588235294,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,20,Multi-linguality,Japanese Scripts,20_Q4,japanese_word_split,20_Q3,85,68,1.25,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,25,Number Formatting,Large Integer,25_Q1,no_separators,25_Q3,45,46,0.9782608695652174,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,25,Number Formatting,Large Integer,25_Q2,comma_separators,25_Q3,46,46,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,25,Number Formatting,Large Integer,25_Q4,space_separators,25_Q3,46,46,1.0,0.0,1.0,-1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,25,Number Formatting,Large Integer,25_Q1,no_separators,25_Q3,24,25,0.96,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,25,Number Formatting,Large Integer,25_Q2,comma_separators,25_Q3,25,25,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,25,Number Formatting,Large Integer,25_Q4,space_separators,25_Q3,25,25,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,25,Number Formatting,Large Integer,25_Q1,no_separators,25_Q3,45,46,0.9782608695652174,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,25,Number Formatting,Large Integer,25_Q2,comma_separators,25_Q3,46,46,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,25,Number Formatting,Large Integer,25_Q4,space_separators,25_Q3,46,46,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,26,Number Formatting,Scientific Notation,26_Q1,no_separators,26_Q2,50,54,0.9259259259259259,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,26,Number Formatting,Scientific Notation,26_Q3,scientific_notation,26_Q2,54,54,1.0,0.0,1.0,-1.0
+Qwen/Qwen2.5-7B-Instruct,26,Number Formatting,Scientific Notation,26_Q4,computer_scientific_notation,26_Q2,46,54,0.8518518518518519,0.0,1.0,-1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,26,Number Formatting,Scientific Notation,26_Q1,no_separators,26_Q4,24,28,0.8571428571428571,1.0,0.0,1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,26,Number Formatting,Scientific Notation,26_Q2,comma_separators,26_Q4,28,28,1.0,1.0,0.0,1.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,26,Number Formatting,Scientific Notation,26_Q3,scientific_notation,26_Q4,34,28,1.2142857142857142,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,26,Number Formatting,Scientific Notation,26_Q1,no_separators,26_Q2,50,54,0.9259259259259259,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,26,Number Formatting,Scientific Notation,26_Q3,scientific_notation,26_Q2,54,54,1.0,0.0,1.0,-1.0
+Qwen/Qwen2.5-0.5B-Instruct,26,Number Formatting,Scientific Notation,26_Q4,computer_scientific_notation,26_Q2,46,54,0.8518518518518519,0.0,1.0,-1.0
+Qwen/Qwen2.5-7B-Instruct,27,Number Formatting,Decimal Separator,27_Q1,period_decimal,27_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,27,Number Formatting,Decimal Separator,27_Q2,comma_decimal,27_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,27,Number Formatting,Decimal Separator,27_Q4,space_decimal,27_Q3,44,44,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,27,Number Formatting,Decimal Separator,27_Q1,period_decimal,27_Q3,23,23,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,27,Number Formatting,Decimal Separator,27_Q2,comma_decimal,27_Q3,23,23,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,27,Number Formatting,Decimal Separator,27_Q4,space_decimal,27_Q3,23,23,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,27,Number Formatting,Decimal Separator,27_Q1,period_decimal,27_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,27,Number Formatting,Decimal Separator,27_Q2,comma_decimal,27_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,27,Number Formatting,Decimal Separator,27_Q4,space_decimal,27_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,31,Number Formatting,Financial Values,31_Q1,no_separators,31_Q2,57,59,0.9661016949152542,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,31,Number Formatting,Financial Values,31_Q3,european_separators,31_Q2,59,59,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,31,Number Formatting,Financial Values,31_Q4,abbreviated_notation,31_Q2,52,59,0.8813559322033898,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,31,Number Formatting,Financial Values,31_Q1,no_separators,31_Q2,35,37,0.9459459459459459,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,31,Number Formatting,Financial Values,31_Q3,european_separators,31_Q2,37,37,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,31,Number Formatting,Financial Values,31_Q4,abbreviated_notation,31_Q2,34,37,0.918918918918919,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,31,Number Formatting,Financial Values,31_Q1,no_separators,31_Q2,57,59,0.9661016949152542,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,31,Number Formatting,Financial Values,31_Q3,european_separators,31_Q2,59,59,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,31,Number Formatting,Financial Values,31_Q4,abbreviated_notation,31_Q2,52,59,0.8813559322033898,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q1,slash_notation,32_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q2,unicode_fraction,32_Q3,41,44,0.9318181818181818,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q4,parentheses_fraction,32_Q3,46,44,1.0454545454545454,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q1,slash_notation,32_Q3,26,26,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q2,unicode_fraction,32_Q3,23,26,0.8846153846153846,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q4,parentheses_fraction,32_Q3,28,26,1.0769230769230769,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q1,slash_notation,32_Q3,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q2,unicode_fraction,32_Q3,41,44,0.9318181818181818,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,32,Mathematical Expressions,Fraction Notation,32_Q4,parentheses_fraction,32_Q3,46,44,1.0454545454545454,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q1,uppercase_hex,33_Q4,42,42,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q2,lowercase_hex,33_Q4,42,42,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q3,c_style_hex,33_Q4,44,42,1.0476190476190477,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q1,uppercase_hex,33_Q4,24,24,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q2,lowercase_hex,33_Q4,24,24,1.0,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q3,c_style_hex,33_Q4,26,24,1.0833333333333333,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q1,uppercase_hex,33_Q4,42,42,1.0,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q2,lowercase_hex,33_Q4,42,42,1.0,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,33,Number Formatting,Hexadecimal Numbers,33_Q3,c_style_hex,33_Q4,44,42,1.0476190476190477,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q1,bracket_notation,34_Q2,49,59,0.8305084745762712,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q3,pipe_notation,34_Q2,49,59,0.8305084745762712,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q4,subscript_notation,34_Q2,66,59,1.11864406779661,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q1,bracket_notation,34_Q2,31,41,0.7560975609756098,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q3,pipe_notation,34_Q2,31,41,0.7560975609756098,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q4,subscript_notation,34_Q2,44,41,1.0731707317073171,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q1,bracket_notation,34_Q2,49,59,0.8305084745762712,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q3,pipe_notation,34_Q2,49,59,0.8305084745762712,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,34,Mathematical Expressions,Matrix Notation,34_Q4,subscript_notation,34_Q2,66,59,1.11864406779661,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,6,Compound Words,Healthcare,6_Q1,single_word,6_Q2,43,44,0.9772727272727273,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,6,Compound Words,Healthcare,6_Q3,hyphenated,6_Q2,44,44,1.0,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,6,Compound Words,Healthcare,6_Q1,single_word,6_Q2,25,26,0.9615384615384616,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,6,Compound Words,Healthcare,6_Q3,hyphenated,6_Q2,26,26,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,6,Compound Words,Healthcare,6_Q1,single_word,6_Q2,43,44,0.9772727272727273,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,6,Compound Words,Healthcare,6_Q3,hyphenated,6_Q2,44,44,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-7B-Instruct,7,Compound Words,Database,7_Q1,single_word,7_Q2,44,45,0.9777777777777777,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,7,Compound Words,Database,7_Q3,hyphenated,7_Q2,45,45,1.0,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,7,Compound Words,Database,7_Q1,single_word,7_Q2,26,27,0.9629629629629629,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,7,Compound Words,Database,7_Q3,hyphenated,7_Q2,27,27,1.0,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,7,Compound Words,Database,7_Q1,single_word,7_Q2,44,45,0.9777777777777777,1.0,0.0,1.0
+Qwen/Qwen2.5-0.5B-Instruct,7,Compound Words,Database,7_Q3,hyphenated,7_Q2,45,45,1.0,1.0,0.0,1.0
+Qwen/Qwen2.5-7B-Instruct,8,Compound Words,Cryptocurrency,8_Q1,single_word,8_Q2,37,38,0.9736842105263158,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,8,Compound Words,Cryptocurrency,8_Q3,hyphenated,8_Q2,39,38,1.0263157894736843,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,8,Compound Words,Cryptocurrency,8_Q1,single_word,8_Q2,19,20,0.95,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,8,Compound Words,Cryptocurrency,8_Q3,hyphenated,8_Q2,21,20,1.05,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,8,Compound Words,Cryptocurrency,8_Q1,single_word,8_Q2,37,38,0.9736842105263158,1.0,1.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,8,Compound Words,Cryptocurrency,8_Q3,hyphenated,8_Q2,39,38,1.0263157894736843,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,9,Compound Words,Socioeconomic,9_Q1,single_word,9_Q2,42,43,0.9767441860465116,1.0,1.0,0.0
+Qwen/Qwen2.5-7B-Instruct,9,Compound Words,Socioeconomic,9_Q3,hyphenated,9_Q2,43,43,1.0,1.0,1.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,9,Compound Words,Socioeconomic,9_Q1,single_word,9_Q2,24,25,0.96,0.0,0.0,0.0
+meta-llama/Meta-Llama-3.1-8B-Instruct,9,Compound Words,Socioeconomic,9_Q3,hyphenated,9_Q2,25,25,1.0,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,9,Compound Words,Socioeconomic,9_Q1,single_word,9_Q2,42,43,0.9767441860465116,0.0,0.0,0.0
+Qwen/Qwen2.5-0.5B-Instruct,9,Compound Words,Socioeconomic,9_Q3,hyphenated,9_Q2,43,43,1.0,0.0,0.0,0.0

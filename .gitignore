@@ -9,7 +9,6 @@ wheels/
 # Virtual environments
 .venv
 
-
 .idea/
 
 # Created by https://www.gitignore.io/api/macos,linux,django,python,pycharm

@@ -1,0 +1,52 @@
+{
+  "config": {
+    "model_name": "gsaltintas/qwen2.5-7B-finetune-aya-sw",
+    "datasets": [
+      "tokenization_robustness"
+    ],
+    "use_wandb": false,
+    "wandb_project": "xarch-tokenizers",
+    "wandb_entity": "gsaltintas",
+    "tags": [],
+    "seed": 42,
+    "save_dir": "results/tokenization_robustness/Qwen2.5-7B-SW-LoRa-Instruct",
+    "resume_dir": null,
+    "experiment_name": "tok-robust-Qwen2.5-7B-SW-LoRa-Instruct",
+    "debug": false,
+    "log_level": "INFO",
+    "batch_size": 32,
+    "tensor_parallel_size": 1,
+    "evaluation_method": "lm_eval",
+    "num_fewshot": 0,
+    "eval_batch_size": 8,
+    "dtype": "float32",
+    "max_gpu_memory": null,
+    "load_in_8bit": false,
+    "load_in_4bit": false,
+    "cache_dir": "/scratch/ssd004/scratch/altintas/.cache",
+    "tokenizer_name": "gsaltintas/qwen2.5-7B-finetune-aya-sw",
+    "chat_template": null,
+    "apply_chat_template": true,
+    "trust_remote_code": false,
+    "revision": null,
+    "save_results": true,
+    "dump_predictions": true,
+    "results_format": "json",
+    "generate_plots": true,
+    "plot_format": "png",
+    "slurm_job_id": "16155314",
+    "num_samples": null,
+    "load_existing": false
+  },
+  "results": [
+    {
+      "alias": "tokenization_robustness",
+      "exact_match,basic-extraction": 0.11627906976744186,
+      "exact_match_stderr,basic-extraction": "N/A",
+      "multi_target_match,basic-extraction": 0.8217054263565892,
+      "multi_target_match_stderr,basic-extraction": "N/A",
+      "dataset": "tokenization_robustness",
+      "model": "gsaltintas/qwen2.5-7B-finetune-aya-sw"
+    }
+  ]
+}

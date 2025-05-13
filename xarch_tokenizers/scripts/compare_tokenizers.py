@@ -19,7 +19,7 @@ from xarch_tokenizers.experiment_config import load_config
 from xarch_tokenizers.logging.logger import setup_logger
 from xarch_tokenizers.logging.plot_utils import setup_styles
 from xarch_tokenizers.models import load_tokenizer
-from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING
+from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING, get_host, Hosts
 
 # Usage:
 #     python tokenizer_comparison.py --tokenizer_names yourmodule.BertTokenizer yourmodule.GPT2Tokenizer
@@ -60,7 +60,10 @@ def setup_tokenizer_environment(config: TokenizerComparisonConfig):
     models = dict()
     # Load tokenizer and model
     for tokenizer_name in config.tokenizer_names:
-        _tokenizer_name = VECTOR_HF_MAPPING.get(tokenizer_name, tokenizer_name)
+        if get_host() == Hosts.vector:
+            _tokenizer_name = VECTOR_HF_MAPPING.get(tokenizer_name, tokenizer_name)
+        else:
+            _tokenizer_name = tokenizer_name
         tokenizer = load_tokenizer(_tokenizer_name)
         tokenizer_name = tokenizer_name.split("/")[-1]
         tokenizers[tokenizer_name] = tokenizer

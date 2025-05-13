@@ -37,7 +37,6 @@ TASK_TO_PLOT_MAPPING = {
     "mgsm_te": "MGSM-Te",
     "mgsm_th": "MGSM-Th",
     "mgsm_zh": "MGSM-Zh",
-    "tokenization_robustness": "Tokenization Robustness",
 }
 
 

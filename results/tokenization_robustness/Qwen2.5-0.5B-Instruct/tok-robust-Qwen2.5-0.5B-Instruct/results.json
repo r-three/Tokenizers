@@ -1,6 +1,6 @@
 {
   "config": {
-    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "model_name": "Qwen/Qwen2.5-0.5B-Instruct",
     "datasets": [
       "tokenization_robustness"
     ],
@@ -9,9 +9,9 @@
     "wandb_entity": "gsaltintas",
     "tags": [],
     "seed": 42,
-    "save_dir": "results/tokenization_robustness/Llama-3.1-8B-Instruct",
+    "save_dir": "results/tokenization_robustness/Qwen2.5-0.5B-Instruct",
     "resume_dir": null,
-    "experiment_name": "tok-robust-Llama-3.1-8B-Instruct",
+    "experiment_name": "tok-robust-Qwen2.5-0.5B-Instruct",
     "debug": false,
     "log_level": "INFO",
     "batch_size": 32,
@@ -23,8 +23,8 @@
     "max_gpu_memory": null,
     "load_in_8bit": false,
     "load_in_4bit": false,
-    "cache_dir": null,
-    "tokenizer_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "cache_dir": "/scratch/ssd004/scratch/altintas/.cache",
+    "tokenizer_name": "Qwen/Qwen2.5-0.5B-Instruct",
     "chat_template": null,
     "apply_chat_template": true,
     "trust_remote_code": false,
@@ -34,19 +34,19 @@
     "results_format": "json",
     "generate_plots": true,
     "plot_format": "png",
-    "slurm_job_id": "16062562",
+    "slurm_job_id": "16089407",
     "num_samples": null,
     "load_existing": false
   },
   "results": [
     {
       "alias": "tokenization_robustness",
-      "exact_match,basic-extraction": 0.047058823529411764,
+      "exact_match,basic-extraction": 0.0,
       "exact_match_stderr,basic-extraction": "N/A",
-      "multi_target_match,basic-extraction": 0.5058823529411764,
+      "multi_target_match,basic-extraction": 0.5581395348837209,
       "multi_target_match_stderr,basic-extraction": "N/A",
       "dataset": "tokenization_robustness",
-      "model": "meta-llama/Meta-Llama-3.1-8B-Instruct"
+      "model": "Qwen/Qwen2.5-0.5B-Instruct"
     }
   ]
 }

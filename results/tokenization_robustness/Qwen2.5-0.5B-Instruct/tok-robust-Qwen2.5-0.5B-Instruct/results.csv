@@ -1,0 +1,2 @@
+,alias,"exact_match,basic-extraction","exact_match_stderr,basic-extraction","multi_target_match,basic-extraction","multi_target_match_stderr,basic-extraction",dataset,model
+0,tokenization_robustness,0.0,N/A,0.5581395348837209,N/A,tokenization_robustness,Qwen/Qwen2.5-0.5B-Instruct

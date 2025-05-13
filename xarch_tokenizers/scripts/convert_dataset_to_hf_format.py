@@ -68,7 +68,7 @@ def transform_to_lm_eval_format(input_json_path, output_json_path):
         data = json.load(f)
 
     # The transformed dataset will have a list of examples
-    transformed_data = {"test": []}
+    transformed_data = []
 
     # Process each test set
     for test_set in data.get("test_sets", []):
@@ -107,23 +107,23 @@ def transform_to_lm_eval_format(input_json_path, output_json_path):
                 "set_id": str(set_id),
             }
 
-            transformed_data["test"].append(example)
+            transformed_data.append(example)
 
     # Save the transformed data
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(transformed_data, f, ensure_ascii=False, indent=2)
 
-    print(f"Transformed {len(transformed_data['test'])} examples")
+    print(f"Transformed {len(transformed_data)} examples")
     print(f"Saved to {output_json_path}")
 
     # Return some statistics about the data
     stats = {
-        "num_examples": len(transformed_data["test"]),
-        "categories": list(set(ex["category"] for ex in transformed_data["test"])),
+        "num_examples": len(transformed_data),
+        "categories": list(set(ex["category"] for ex in transformed_data)),
         "tokenization_types": list(
-            set(ex["tokenization_type"] for ex in transformed_data["test"])
+            set(ex["tokenization_type"] for ex in transformed_data)
         ),
-        "num_sets": len(set(ex["set_id"] for ex in transformed_data["test"])),
+        "num_sets": len(set(ex["set_id"] for ex in transformed_data)),
     }
 
     return transformed_data, stats

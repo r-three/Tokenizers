@@ -105,27 +105,6 @@ def group_exact_match(items, groups, ignore_case=False, ignore_punctuation=False
 
 
 @register_metric(
-    metric="multi_target_match1",
-    higher_is_better=True,
-    output_type="float",
-    aggregation="mean",
-)
-def multi_target_match1(pred, doc):
-    """Check if the prediction matches any target in all_targets"""
-    prediction = pred.strip().lower()
-    all_targets = doc.get("all_targets", [doc.get("target", "")])
-
-    for target in all_targets:
-        if prediction == target.strip().lower():
-            return 1.0
-
-    return 0.0
-
-
-# Instead of a custom filter function, let's create a custom metric that handles multiple targets
-
-
-@register_metric(
     metric="multi_target_match",
     higher_is_better=True,
     output_type="float",
@@ -133,12 +112,23 @@ def multi_target_match1(pred, doc):
 )
 def multi_target_match(predictions, references, **kwargs):
     """Check if prediction matches any target in all_targets"""
-    print(predictions)
-    print(references)
     normalized_targets = [target.strip().lower() for target in references]
+    print("T:", normalized_targets)
+    print("P:", predictions)
+
     results = []
-    for pred in predictions:
-        # Check if prediction matches any target
-        match = any([target in pred.strip().lower() for target in normalized_targets])
+    for pred_list in predictions:
+        # Handle the nested structure - extract the actual prediction
+        if isinstance(pred_list, list) and len(pred_list) > 0:
+            # Take the first item from the nested list
+            pred_text = pred_list[0]
+        else:
+            # If somehow not nested, use as is
+            pred_text = pred_list
+
+        # Check if prediction contains any target
+        pred_text_lower = pred_text.strip().lower()
+        match = any([target in pred_text_lower for target in normalized_targets])
         results.append(float(match))
+
     return sum(results) / len(results) if results else 0.0

@@ -14,7 +14,9 @@
         "title": "Icelandic Volcano",
         "set_id": "1"
       },
-      "target": "2010",
+      "target": [
+        "2010"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat year did Eyjafjallaj\u00f6kull erupt and disrupt European air travel?<|im_end|>\n<|im_start|>assistant\n",
@@ -44,7 +46,7 @@
       ],
       "doc_hash": "c1634ae969ca3e4628e2b98432a334cbebe66294bcabb3d713d30612d2b2c73a",
       "prompt_hash": "727c407cfc4bf5c3cfc1470b1f062f3a7e80bd9beb63503f85f738f3df32a7df",
-      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "target_hash": "2ee1672483fc554adda35e9fdae9ee5db286e7d25dde7bd484842b76ac64c784",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -62,7 +64,9 @@
         "title": "Icelandic Volcano",
         "set_id": "1"
       },
-      "target": "2010",
+      "target": [
+        "2010"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat year did Eyja fjalla j\u00f6kull erupt and disrupt European air travel?<|im_end|>\n<|im_start|>assistant\n",
@@ -92,7 +96,7 @@
       ],
       "doc_hash": "5284a93ce78bd1d49a1fe5a0805d441f7303b505630bfc01b8e80d5a537bd47d",
       "prompt_hash": "7f4ea324c4f58d7eed873b8c7f9f5c3e645fd28ec9c41289e5442585da25797a",
-      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "target_hash": "2ee1672483fc554adda35e9fdae9ee5db286e7d25dde7bd484842b76ac64c784",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -110,7 +114,9 @@
         "title": "Icelandic Volcano",
         "set_id": "1"
       },
-      "target": "2010",
+      "target": [
+        "2010"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat year did Eyjafjalla jokull erupt and disrupt European air travel?<|im_end|>\n<|im_start|>assistant\n",
@@ -140,7 +146,7 @@
       ],
       "doc_hash": "eb0836ad7ebbba320ad519093ea6a1d82a1c6a1b94bc9baaa5c506ddfa1ec04f",
       "prompt_hash": "b958cb35bd6b6fa62db98844d04116ec73826db94185734efdc253930c82cb0b",
-      "target_hash": "7d12ba56e9f8b3dc64f77c87318c4f37bc12cfbf1a37573cdf3e4fa683f20155",
+      "target_hash": "2ee1672483fc554adda35e9fdae9ee5db286e7d25dde7bd484842b76ac64c784",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -159,7 +165,10 @@
         "title": "Welsh Village",
         "set_id": "2"
       },
-      "target": "Wales",
+      "target": [
+        "Wales",
+        "United Kingdom"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch located?<|im_end|>\n<|im_start|>assistant\n",
@@ -189,7 +198,7 @@
       ],
       "doc_hash": "94dd329e5491054e2a94c8c0e68be33e25b38e3f998dcb8c891ef216cb884d92",
       "prompt_hash": "badbd74f78db74fe3fc959402891241ccf9ed7f12e944a47a709ff2147b1e3dd",
-      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "target_hash": "2753616ce02e1a91e098ffa8dd97b543ed15f6da4637adbacbe32ccd0225c5c0",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -208,7 +217,10 @@
         "title": "Welsh Village",
         "set_id": "2"
       },
-      "target": "Wales",
+      "target": [
+        "Wales",
+        "United Kingdom"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Llanfair pwllgwyngyll located?<|im_end|>\n<|im_start|>assistant\n",
@@ -238,7 +250,7 @@
       ],
       "doc_hash": "0a0bd83aaf0c5269dc3bdd9903d6dbfea0e98edcfa71afb74535dcfb4aee9838",
       "prompt_hash": "86924ebe490fc3913db16f91026bc37d59d56a7523482676125c68048481d366",
-      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "target_hash": "2753616ce02e1a91e098ffa8dd97b543ed15f6da4637adbacbe32ccd0225c5c0",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -257,7 +269,10 @@
         "title": "Welsh Village",
         "set_id": "2"
       },
-      "target": "Wales",
+      "target": [
+        "Wales",
+        "United Kingdom"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Llanfair PG located?<|im_end|>\n<|im_start|>assistant\n",
@@ -287,9 +302,9 @@
       ],
       "doc_hash": "6f78c784945e1dd2d74b0810ced35b14be41d385249af50efef534f51e68d2d9",
       "prompt_hash": "ae6569798a6b1c26e126b372a91d4461316206956322cae24aaa60151406b15e",
-      "target_hash": "0cf3878b94e16c9953194a9107a232ba765f908839efa6bd8ac054b604577d7f",
+      "target_hash": "2753616ce02e1a91e098ffa8dd97b543ed15f6da4637adbacbe32ccd0225c5c0",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 6,
@@ -305,7 +320,9 @@
         "title": "Long Medical Term",
         "set_id": "3"
       },
-      "target": "lung disease",
+      "target": [
+        "lung disease"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat type of condition is Pneumonoultramicroscopicsilicovolcanoconiosis?<|im_end|>\n<|im_start|>assistant\n",
@@ -335,7 +352,7 @@
       ],
       "doc_hash": "e75be3b43d5699c6d99c978845877c304c5fd3554670e1098df28230c620ebc4",
       "prompt_hash": "d9860de03f5fad76f45750a325dda8be38c25fa50a71beba6c3d2f261b00102c",
-      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "target_hash": "cf1bdc6c7a953a496853e342ccceaa1a3b824b3e0f5d25f3217006935aaa24dc",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -353,7 +370,9 @@
         "title": "Long Medical Term",
         "set_id": "3"
       },
-      "target": "lung disease",
+      "target": [
+        "lung disease"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat type of condition is Pneumono ultra microscopic silico volcano coniosis?<|im_end|>\n<|im_start|>assistant\n",
@@ -383,7 +402,7 @@
       ],
       "doc_hash": "8e9b1e65f87ddcd002ca9b218283608f89e3258c67e710f52fadd749ee51e04e",
       "prompt_hash": "8800aeb34b7dc3b3338f9a1e383bfe0844ad1ac26d91ced41e00e6f5663a38f0",
-      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "target_hash": "cf1bdc6c7a953a496853e342ccceaa1a3b824b3e0f5d25f3217006935aaa24dc",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -401,7 +420,9 @@
         "title": "Long Medical Term",
         "set_id": "3"
       },
-      "target": "lung disease",
+      "target": [
+        "lung disease"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat type of condition is Pneumoconiosis?<|im_end|>\n<|im_start|>assistant\n",
@@ -431,7 +452,7 @@
       ],
       "doc_hash": "3510bab534f03a0c3d378115e78150c89f319f3dc537e9e7376bbbe0a0b2bfc9",
       "prompt_hash": "e7ad72858f67f46f8e7356112d7eb4111a09158cdb8c81618c42f5ce54e8d1ce",
-      "target_hash": "7ede2e220fcf34f1328596e7689b53038336094a68ce0df404c0645639d38cd5",
+      "target_hash": "cf1bdc6c7a953a496853e342ccceaa1a3b824b3e0f5d25f3217006935aaa24dc",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -449,7 +470,9 @@
         "title": "M\u0101ori Hill",
         "set_id": "4"
       },
-      "target": "New Zealand",
+      "target": [
+        "New Zealand"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu located?<|im_end|>\n<|im_start|>assistant\n",
@@ -479,7 +502,7 @@
       ],
       "doc_hash": "71d1d42566a0930bef277be669d7771d13c9c713280809ad4a0be7c8749aaa37",
       "prompt_hash": "b9bdc7bfbb7bcbfea657c501c85a346c0494cb10f4c3f736dd53772603396bfb",
-      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "target_hash": "b820da97c134f64b2ebafdc15f5a2f78fc082d85779bfe35737dfe3e9c883807",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -497,7 +520,9 @@
         "title": "M\u0101ori Hill",
         "set_id": "4"
       },
-      "target": "New Zealand",
+      "target": [
+        "New Zealand"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Taumata whakatangi hangakoauau o tamatea located?<|im_end|>\n<|im_start|>assistant\n",
@@ -527,7 +552,7 @@
       ],
       "doc_hash": "3001a3b2ab5963f7045f8af72ec8c6c6207c2abeb0bde817f55420a8451552d7",
       "prompt_hash": "dad71afd263cb908c521f2a97b21ff34e42f886d092ef6f858da5ac7e7a00246",
-      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "target_hash": "b820da97c134f64b2ebafdc15f5a2f78fc082d85779bfe35737dfe3e9c883807",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -545,7 +570,9 @@
         "title": "M\u0101ori Hill",
         "set_id": "4"
       },
-      "target": "New Zealand",
+      "target": [
+        "New Zealand"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn which country is Taumata hill located?<|im_end|>\n<|im_start|>assistant\n",
@@ -575,7 +602,7 @@
       ],
       "doc_hash": "3d0515990809c14b4965181a7d157f7a16b737e6f4e06267fc1ad202e8937904",
       "prompt_hash": "95ea18d058abe2562ecb747db7aa98d7601e6ed30c64481321d26fb588ab99ad",
-      "target_hash": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237",
+      "target_hash": "b820da97c134f64b2ebafdc15f5a2f78fc082d85779bfe35737dfe3e9c883807",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -598,7 +625,14 @@
         "title": "Russian Greeting",
         "set_id": "5"
       },
-      "target": "\"Hello, how are you?\"",
+      "target": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the English translation of \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430?\"<|im_end|>\n<|im_start|>assistant\n",
@@ -628,7 +662,7 @@
       ],
       "doc_hash": "2b43d7c88bcb9277af645652b459f4fbcfa976b0d350741fedb5fa4663aeffae",
       "prompt_hash": "e6ffd82f236062441f171176bf9c69ebd76b0214c0142626b0dd656fce5c1756",
-      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "target_hash": "6dc058681875f282ed4bee0e3c4f17423a33c69972d6e1ac69e6871d00ba88da",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -651,7 +685,14 @@
         "title": "Russian Greeting",
         "set_id": "5"
       },
-      "target": "\"Hello, how are you?\"",
+      "target": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the English translation of \"Privet, kak dela?\"<|im_end|>\n<|im_start|>assistant\n",
@@ -681,7 +722,7 @@
       ],
       "doc_hash": "25511a494a272cdc75c620323ba97aa96cdf92907879c7d56dd1944f33f2b67a",
       "prompt_hash": "5006219bfa7dec9d76426062aeb91d3dd1d304c32654ee87433b804900275442",
-      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "target_hash": "6dc058681875f282ed4bee0e3c4f17423a33c69972d6e1ac69e6871d00ba88da",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -704,7 +745,14 @@
         "title": "Russian Greeting",
         "set_id": "5"
       },
-      "target": "\"Hello, how are you?\"",
+      "target": [
+        "\"Hello, how are you?\"",
+        "Hello, how are you?",
+        "Hello how are you",
+        "\"Hi, how are you doing?\"",
+        "Hi, how are you doing?",
+        "Hi how are you doing"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the English translation of \"\u043f\u0440\u0438\u0432\u0435\u0442 \u043a\u0430\u043a \u0434\u0435\u043b\u0430\"?<|im_end|>\n<|im_start|>assistant\n",
@@ -734,7 +782,7 @@
       ],
       "doc_hash": "acd629c6ce69d4ed169f7b1fdef5b231994ec38c4e8e4649ca15bb118afb5230",
       "prompt_hash": "f1c2cd8caaf1933dedbe26c2d316992be20a191a03d447abeb65b4d29a7aa3a6",
-      "target_hash": "6bc478592aa03b30466544965c3af71b3577e7ce0fe90720024a40f0a2140c92",
+      "target_hash": "6dc058681875f282ed4bee0e3c4f17423a33c69972d6e1ac69e6871d00ba88da",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -753,7 +801,10 @@
         "title": "Healthcare",
         "set_id": "6"
       },
-      "target": "both",
+      "target": [
+        "both",
+        "public and private"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat sector does healthcare belong to: public, private, or both?<|im_end|>\n<|im_start|>assistant\n",
@@ -783,7 +834,7 @@
       ],
       "doc_hash": "954470175f7ed2bbd061f0c1329d763247ac656f5bc881ca14f25f7740f4cfa6",
       "prompt_hash": "ba12606c7569995e74b5fd7fa037d4e9d6859ca6a49961fa359360c502bdf6f7",
-      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "target_hash": "f721f3669b53c2e836da1aaf5c2cf887758e16da2061fdf26b7ad8d9b85e6bb9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -802,7 +853,10 @@
         "title": "Healthcare",
         "set_id": "6"
       },
-      "target": "both",
+      "target": [
+        "both",
+        "public and private"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat sector does health care belong to: public, private, or both?<|im_end|>\n<|im_start|>assistant\n",
@@ -832,7 +886,7 @@
       ],
       "doc_hash": "af743d0a1dd73a55ce5723731047280c569675cac5a5b928c6c753b9afc30478",
       "prompt_hash": "d3b5979c53465b582f5bb94f320a915fecf7d462d5bd809b7c5d6f01a09e5a34",
-      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "target_hash": "f721f3669b53c2e836da1aaf5c2cf887758e16da2061fdf26b7ad8d9b85e6bb9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -851,7 +905,10 @@
         "title": "Healthcare",
         "set_id": "6"
       },
-      "target": "both",
+      "target": [
+        "both",
+        "public and private"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat sector does health-care belong to: public, private, or both?<|im_end|>\n<|im_start|>assistant\n",
@@ -881,7 +938,7 @@
       ],
       "doc_hash": "2ae39220eb7032bbffee1f00f8e7453844fd18bbadb7174371a5613ef3ad2d9a",
       "prompt_hash": "95c8c82a57fbc68d0fcaf9433bf114ad3f9e50bdf7eeb4963470ef534517aac9",
-      "target_hash": "ff7772053abf7d817d6eec229a09e14f0d1552f1cb0aeedb2ac73784ac2d2e39",
+      "target_hash": "f721f3669b53c2e836da1aaf5c2cf887758e16da2061fdf26b7ad8d9b85e6bb9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -900,7 +957,10 @@
         "title": "Database",
         "set_id": "7"
       },
-      "target": "storage",
+      "target": [
+        "storage",
+        "store"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one word, what is the main function of a database in computing?<|im_end|>\n<|im_start|>assistant\n",
@@ -930,7 +990,7 @@
       ],
       "doc_hash": "908d4c4827f15c8a0f2b7250d5a1e2fc648f54ceab1e72521fadfe34454d790d",
       "prompt_hash": "377653f9f69aa3aa9586743615e90524ed560f9e52f5c908ce33cdb5cd114e15",
-      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "target_hash": "2e187a967386fa80ed0f6722a5738e9ed53a26c4b4d4026cb9fc49fec13d04f4",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -949,7 +1009,10 @@
         "title": "Database",
         "set_id": "7"
       },
-      "target": "storage",
+      "target": [
+        "storage",
+        "store"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one word, what is the main function of a data base in computing?<|im_end|>\n<|im_start|>assistant\n",
@@ -979,7 +1042,7 @@
       ],
       "doc_hash": "7d85e32a4fc98e1c286ae998af172743856144cb59253cb9ddbcda6197905322",
       "prompt_hash": "c2f8d5db1763f24f92c2d1c3d26288cac06040adb50b76aa886f6d812adf9b75",
-      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "target_hash": "2e187a967386fa80ed0f6722a5738e9ed53a26c4b4d4026cb9fc49fec13d04f4",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -998,7 +1061,10 @@
         "title": "Database",
         "set_id": "7"
       },
-      "target": "storage",
+      "target": [
+        "storage",
+        "store"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one word, what is the main function of a data-base in computing?<|im_end|>\n<|im_start|>assistant\n",
@@ -1028,7 +1094,7 @@
       ],
       "doc_hash": "d26085deac9d15cbab75c5f8b180c83290dae91527ecf64b91774273dce948bc",
       "prompt_hash": "a34cca6df8ef75e75925e2701b0f7cdd205c6de0e4f590b1c26be8c8cf3616ba",
-      "target_hash": "49a25f9feefaffecad0fcd30c50dc9331cff8b55ece53def6285c09e17e6f5d7",
+      "target_hash": "2e187a967386fa80ed0f6722a5738e9ed53a26c4b4d4026cb9fc49fec13d04f4",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1046,7 +1112,9 @@
         "title": "Cryptocurrency",
         "set_id": "8"
       },
-      "target": "Blockchain",
+      "target": [
+        "Blockchain"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat technology underlies most cryptocurrency systems?<|im_end|>\n<|im_start|>assistant\n",
@@ -1076,7 +1144,7 @@
       ],
       "doc_hash": "9b221b445b204e275a9f7d225da78ede5ead611db70a37e2d796d97af6fd0669",
       "prompt_hash": "42eea4557ce79a178eabeca8dd0229bd45a0d8c8b5c344f7a37199eec2fec6e9",
-      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "target_hash": "1cf5ed10c599fd3f5007f3e918d9a3aac97273e247234b6fbe325f6cc1f17850",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1094,7 +1162,9 @@
         "title": "Cryptocurrency",
         "set_id": "8"
       },
-      "target": "Blockchain",
+      "target": [
+        "Blockchain"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat technology underlies most crypto currency systems?<|im_end|>\n<|im_start|>assistant\n",
@@ -1124,7 +1194,7 @@
       ],
       "doc_hash": "61184acb5a5bd67290168104a04f3504c43fe3c14ad3e021550497c9ce469532",
       "prompt_hash": "351e0a5e8b4383aefa71c298b7565fcd1f70d9122bbb0b0b61958eea759ae7bc",
-      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "target_hash": "1cf5ed10c599fd3f5007f3e918d9a3aac97273e247234b6fbe325f6cc1f17850",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1142,7 +1212,9 @@
         "title": "Cryptocurrency",
         "set_id": "8"
       },
-      "target": "Blockchain",
+      "target": [
+        "Blockchain"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat technology underlies most crypto-currency systems?<|im_end|>\n<|im_start|>assistant\n",
@@ -1172,7 +1244,7 @@
       ],
       "doc_hash": "e878a9407ebc2d120138a6735d82fb441f9fcfb1923506f4da5c4188f84d68bb",
       "prompt_hash": "3cf40b8f3e0d20bd89f3449a17b1706ec79752242c51c43b460f6a30845f57a4",
-      "target_hash": "625da44e4eaf58d61cf048d168aa6f5e492dea166d8bb54ec06c30de07db57e1",
+      "target_hash": "1cf5ed10c599fd3f5007f3e918d9a3aac97273e247234b6fbe325f6cc1f17850",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1190,7 +1262,9 @@
         "title": "Socioeconomic",
         "set_id": "9"
       },
-      "target": "social",
+      "target": [
+        "social"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nComplete this pair: socioeconomic status combines _____ factors and economic factors.<|im_end|>\n<|im_start|>assistant\n",
@@ -1220,7 +1294,7 @@
       ],
       "doc_hash": "c44747c799b7f7ede1f548f8afc49dcc15d896546793c81dd4aaa7ab7a5f6dad",
       "prompt_hash": "c416fb82d88587543d0703a51641cf23394aeac6a34985c5a33206cd7a7bfa7c",
-      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "target_hash": "f5f98b1681b35a1294695fb8e580252ad5f4f816796338fdb18f1b16b163dde6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1238,7 +1312,9 @@
         "title": "Socioeconomic",
         "set_id": "9"
       },
-      "target": "social",
+      "target": [
+        "social"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nComplete this pair: socio economic status combines _____ factors and economic factors.<|im_end|>\n<|im_start|>assistant\n",
@@ -1268,7 +1344,7 @@
       ],
       "doc_hash": "bb0913137a4a99dff9e85e07c8a56bd45101a022c5152b43fe741d2843e7e486",
       "prompt_hash": "dddff04a4da6553ae753d2302f7bd2be722a5602d78a8df6282734ba4c8a0809",
-      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "target_hash": "f5f98b1681b35a1294695fb8e580252ad5f4f816796338fdb18f1b16b163dde6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1286,7 +1362,9 @@
         "title": "Socioeconomic",
         "set_id": "9"
       },
-      "target": "social",
+      "target": [
+        "social"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nComplete this pair: socio-economic status combines _____ factors and economic factors.<|im_end|>\n<|im_start|>assistant\n",
@@ -1316,7 +1394,7 @@
       ],
       "doc_hash": "ae53aa1c5014f941a384413ae15d55bc91b3127ca7b7d450f5d330dfefa236e4",
       "prompt_hash": "71e1f47892a488eac24d8310270e2ab4781df4864498d545a1d14df3f96bbb60",
-      "target_hash": "3e860f41a5ea92c49803d6ec96d452693b6dcefb0e8c0bf0125b0e3debac5281",
+      "target_hash": "f5f98b1681b35a1294695fb8e580252ad5f4f816796338fdb18f1b16b163dde6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1336,7 +1414,11 @@
         "title": "Webpage",
         "set_id": "10"
       },
-      "target": "HTML (Hypertext Markup Language)",
+      "target": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat markup language is primarily used to create a webpage?<|im_end|>\n<|im_start|>assistant\n",
@@ -1366,7 +1448,7 @@
       ],
       "doc_hash": "04f14bd80f4ee306653b8afa124add74dcce01fd6c63bb6303a079bb4ad2e704",
       "prompt_hash": "6765e2cbf6f791d4f30776a62097194130c2521001ab353b3b0d0f03a4046572",
-      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "target_hash": "cd528659e723b43c7e42df3b394619b361978a78c128d236f4725321cca03501",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1386,7 +1468,11 @@
         "title": "Webpage",
         "set_id": "10"
       },
-      "target": "HTML (Hypertext Markup Language)",
+      "target": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat markup language is primarily used to create a web page?<|im_end|>\n<|im_start|>assistant\n",
@@ -1416,7 +1502,7 @@
       ],
       "doc_hash": "d296895eddbda55298bf06cb463fa75981460e7737038969ad907faeb5f25384",
       "prompt_hash": "6f6469668a811e8661d0da5bdb2d41423d5a23736f6dce316401a0192c502d4d",
-      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "target_hash": "cd528659e723b43c7e42df3b394619b361978a78c128d236f4725321cca03501",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1436,7 +1522,11 @@
         "title": "Webpage",
         "set_id": "10"
       },
-      "target": "HTML (Hypertext Markup Language)",
+      "target": [
+        "HTML (Hypertext Markup Language)",
+        "Hypertext Markup Language",
+        "HTML"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat markup language is primarily used to create a web-page?<|im_end|>\n<|im_start|>assistant\n",
@@ -1466,7 +1556,7 @@
       ],
       "doc_hash": "062ef791d6d753d9304eddf9773e565a87125b121e54d80e64925faac34adffa",
       "prompt_hash": "e6fcb8bdf3207125df91a2ef5e8b6a3c2f28918807d6dad00e3b02eb60560e3a",
-      "target_hash": "008f997ffac339a91e97ab5e2433a0c3b2c733c669e64558f07f6bd9bffd22ae",
+      "target_hash": "cd528659e723b43c7e42df3b394619b361978a78c128d236f4725321cca03501",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1484,7 +1574,9 @@
         "title": "TensorFlow",
         "set_id": "11"
       },
-      "target": "Google",
+      "target": [
+        "Google"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhich company developed TensorFlow?<|im_end|>\n<|im_start|>assistant\n",
@@ -1514,7 +1606,7 @@
       ],
       "doc_hash": "5e13f7923116037435dd18885a361cda82e8c3d0e8186aad9b101b32ece8df6a",
       "prompt_hash": "dcc59f28474eeba9157df1b2311ac9d0540684ecd0c2bdf4959a26e3fdd64005",
-      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "target_hash": "65c4fa741804bd17e9c0be23993808840b70fd51f2480f3844811c2b0d7458c7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1532,7 +1624,9 @@
         "title": "TensorFlow",
         "set_id": "11"
       },
-      "target": "Google",
+      "target": [
+        "Google"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhich company developed Tensorflow?<|im_end|>\n<|im_start|>assistant\n",
@@ -1562,7 +1656,7 @@
       ],
       "doc_hash": "326f7d869a56118de77ddceadb3a2ae9ac3a144855967cfbbb0b12be8716703f",
       "prompt_hash": "2f10564095bd2f59091e48a87be76178c21cc8062e95170d3cca2e70d6ba7be8",
-      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "target_hash": "65c4fa741804bd17e9c0be23993808840b70fd51f2480f3844811c2b0d7458c7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1580,7 +1674,9 @@
         "title": "TensorFlow",
         "set_id": "11"
       },
-      "target": "Google",
+      "target": [
+        "Google"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhich company developed tensor flow?<|im_end|>\n<|im_start|>assistant\n",
@@ -1610,7 +1706,7 @@
       ],
       "doc_hash": "7299d2a9a664cd2e84bbe54fddce3d09adf521c67126a99971af3f9224e72500",
       "prompt_hash": "10c1b6ce6555fd99e00098bee725b076ee1d3fc9627567155fa4e14cb3acf941",
-      "target_hash": "ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8",
+      "target_hash": "65c4fa741804bd17e9c0be23993808840b70fd51f2480f3844811c2b0d7458c7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1628,7 +1724,9 @@
         "title": "JavaScript",
         "set_id": "12"
       },
-      "target": "No",
+      "target": [
+        "No"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIs JavaScript the same programming language as Java?<|im_end|>\n<|im_start|>assistant\n",
@@ -1658,7 +1756,7 @@
       ],
       "doc_hash": "e3a9946a8f6672f1884bc929dad4be79b8516c49c40cca6dcccddb025c9c8348",
       "prompt_hash": "6e62683ab87ad2a343dda2936e6fdbbc4a939aad0b742be20fb5f6caf9dbb357",
-      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "target_hash": "624e19d6d4a6ca65cc7d7c2f1a2dfab282625eef3b071f7a31a0ca195ec62ba6",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1676,7 +1774,9 @@
         "title": "JavaScript",
         "set_id": "12"
       },
-      "target": "No",
+      "target": [
+        "No"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIs Javascript the same programming language as Java?<|im_end|>\n<|im_start|>assistant\n",
@@ -1706,7 +1806,7 @@
       ],
       "doc_hash": "2dc36c98c7ce38701af3b7b9f86f9572d8f91cd5991f2c701369080c48a5ba87",
       "prompt_hash": "092992a61e730a5c369c309a7e6d53bdfaf297d3b6f0c169a66deb719d398cd5",
-      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "target_hash": "624e19d6d4a6ca65cc7d7c2f1a2dfab282625eef3b071f7a31a0ca195ec62ba6",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1724,7 +1824,9 @@
         "title": "JavaScript",
         "set_id": "12"
       },
-      "target": "No",
+      "target": [
+        "No"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIs java script the same programming language as Java?<|im_end|>\n<|im_start|>assistant\n",
@@ -1754,7 +1856,7 @@
       ],
       "doc_hash": "e9582b4533d1738e2b91c4a9a0fc944f1e7aa793199074ae42fbd65c723d76a0",
       "prompt_hash": "6b97baf0ea7080f68df3da00345319b9e8b59f3c7865211a9ff0596946d0a6ea",
-      "target_hash": "1ea442a134b2a184bd5d40104401f2a37fbc09ccf3f4bc9da161c6099be3691d",
+      "target_hash": "624e19d6d4a6ca65cc7d7c2f1a2dfab282625eef3b071f7a31a0ca195ec62ba6",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1773,7 +1875,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
@@ -1803,9 +1908,9 @@
       ],
       "doc_hash": "9f5b1325c46fd7d054d0d381b4092a3ce4a890f13870ec552cadd51a8b2a4b94",
       "prompt_hash": "4da21ff8606bca3dea6e17d164e0cb808e79673241830a6ec9293114e145d44b",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 37,
@@ -1822,7 +1927,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyon karahi sar l\u0131 la\u015f t\u0131r ama d\u0131k lar \u0131m\u0131z dan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
@@ -1852,7 +1960,7 @@
       ],
       "doc_hash": "806cfd0a545e0158aa75370b084435aee725ae970bea607cf28dd302cca3a878",
       "prompt_hash": "8b81ea0bb222cb522010d6b00feecf3735f294017af6bffb871fe949295756e2",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -1871,7 +1979,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu s\u00f6yleniyor. Burada hangi \u015fehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
@@ -1901,7 +2012,7 @@
       ],
       "doc_hash": "0e50ac4e090a1c1c6cef398bf4d3c17b7c7007098256b538925bac8255a6fd30",
       "prompt_hash": "2a616f09f5518071416956fb4254a40261f4d2dc6c46eb6acc69c25259e83dd2",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1920,7 +2031,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAfyonkarahisarlila\u015ftiramadiklarimizdan oldu\u011fu soyleniyor. Burada hangi sehirden bahsediliyor?<|im_end|>\n<|im_start|>assistant\n",
@@ -1950,7 +2064,7 @@
       ],
       "doc_hash": "6ba10439e48c4d494f95c161e2deb5a00054b673876620862c24ae7ce2c088a7",
       "prompt_hash": "ff196cfc7932e30c5f21de267266f15131275928484fb854a6ba32a61e5088df",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -1969,7 +2083,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHe is said to be 'Afyonkarahisarl\u0131la\u015ft\u0131ramad\u0131klar\u0131m\u0131zdan'. Which city in Turkey is mentioned in this word?<|im_end|>\n<|im_start|>assistant\n",
@@ -1999,7 +2116,7 @@
       ],
       "doc_hash": "a0abd912fc1ad72987dca5f423d50e751f92ee449d09943f2d69b7142d82734a",
       "prompt_hash": "2707bfd9b7334bcfbb69ccfcb625ed68a0c8d2c38be82058f762a52dcb7f9b7a",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2018,7 +2135,10 @@
         "title": "Afyonkarahisar",
         "set_id": "13"
       },
-      "target": "Afyonkarahisar",
+      "target": [
+        "Afyonkarahisar",
+        "Afyon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHe is said to be 'Afyonkarahisarlila\u015ftiramadiklarimizdan'. Which city in Turkey is mentioned in this word?<|im_end|>\n<|im_start|>assistant\n",
@@ -2048,7 +2168,7 @@
       ],
       "doc_hash": "349c67a4f66b8ddb7d6abe3929ef8ccde42b9cbfe636386a33936c0369b9775a",
       "prompt_hash": "6a06f75deb9c7bee40e400056f03279cc8ce89a978657e56309a9f5185b4139c",
-      "target_hash": "d3bb13ec893ada6364f3bdd268c845b14068dd5c63592870b0fa579d4761ac86",
+      "target_hash": "b20eb1ec7ab4b4ff72e85203e1082a2562ba106ceb9924366720338536ecca9a",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2071,7 +2191,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the plural form of 'oeuf' in French?<|im_end|>\n<|im_start|>assistant\n",
@@ -2101,9 +2228,9 @@
       ],
       "doc_hash": "13649dffba11351975b197ebc533943d54779c3c8ea3d15ba8fe1915a2d6fe68",
       "prompt_hash": "cd23d483400c93aa28f22b0eb33d1b1726eca0a9b5e9e6a7f8324cc5beac969f",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 43,
@@ -2124,7 +2251,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the plural form of \"l'\u0153uf\" in French?<|im_end|>\n<|im_start|>assistant\n",
@@ -2154,9 +2288,9 @@
       ],
       "doc_hash": "a58f8ad5c57bef5ff822a1b821ab701152f409fed8234c6a2b53cd18891f0b5d",
       "prompt_hash": "e56c824b4ba8943c3261369b0cf83672d2a62a54c6ef3bbae8599086ce9d4bbd",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 44,
@@ -2177,7 +2311,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDans la phrase 'J'ai achet\u00e9 un oeuf', quel est le pluriel de 'oeuf'?<|im_end|>\n<|im_start|>assistant\n",
@@ -2207,9 +2348,9 @@
       ],
       "doc_hash": "60ab5da26867ade717b3b3c6f1e3f3a2dfa82e64efa88daa1ee8569b2d3dd0fc",
       "prompt_hash": "368f52c888d49cd2b0e5970e08d3344a2d3697312dc66cc990d2bf407d6f1364",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 45,
@@ -2230,7 +2371,14 @@
         "title": "Oeufs",
         "set_id": "14"
       },
-      "target": "oeufs",
+      "target": [
+        "oeufs",
+        "\u0153ufs",
+        "des oeufs",
+        "les oeufs",
+        "des \u0153ufs",
+        "les \u0153ufs"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDans la phrase 'J'ai achet\u00e9 un \u0153uf', quel est le pluriel de '\u0153uf'?<|im_end|>\n<|im_start|>assistant\n",
@@ -2260,9 +2408,9 @@
       ],
       "doc_hash": "6d6e8b855909ceb2d0f84f03930cc36db612ced41e8245514a1ae48f6d7f1fdc",
       "prompt_hash": "87931221c048d6b3af223ec74bc764b0e70cdb92fac51ef8e071df481fa17b55",
-      "target_hash": "739616f87089fff13cd98171c264a560627f2f3679239b1943674398d144ae78",
+      "target_hash": "71e0ab063f82847ac4312897884f501714ec0140b9e598d90512b45fec12e681",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 46,
@@ -2282,7 +2430,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nGul Sena is a PhD student in machine learning. What does Gul Sena study?<|im_end|>\n<|im_start|>assistant\n",
@@ -2312,7 +2466,7 @@
       ],
       "doc_hash": "bf90db3d1a02787451851a7f92cf54df36a666a1dcd6c7cc664ca265d0aeddbe",
       "prompt_hash": "cb975924b0bdf93c7d5e1437d3e119898f4bf7fd97474d3b321d577c10ac0b58",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2334,7 +2488,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nG\u00fcl Sena is a PhD student in machine learning. What does G\u00fcl Sena study?<|im_end|>\n<|im_start|>assistant\n",
@@ -2364,7 +2524,7 @@
       ],
       "doc_hash": "31595557e2baabe102d0a266f4a2777ca5fa4e3a340ee31f395b6b6d34abc4cc",
       "prompt_hash": "93ce962131d7696e49c4dbdf30859dcfeca3e45b213714908de4b8acf14c877c",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -2386,7 +2546,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nG\u00fcl Sena makine \u00f6\u011frenmesi alan\u0131nda doktora \u00f6\u011frencisidir. G\u00fcl Sena ne \u00e7al\u0131\u015f\u0131yor?<|im_end|>\n<|im_start|>assistant\n",
@@ -2416,9 +2582,9 @@
       ],
       "doc_hash": "f7e364b177034643c496039be8aaef294d2de67088612ecc8947eab34da2bca2",
       "prompt_hash": "1f72f911036d747b5744379396a619d3561ed3c3d0aab4a8aa375d73153b1326",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 49,
@@ -2438,7 +2604,13 @@
         "title": "Gul",
         "set_id": "15"
       },
-      "target": "machine learning",
+      "target": [
+        "machine learning",
+        "makine \u00f6\u011frenmesi",
+        "ML",
+        "artificial intelligence",
+        "yapay zeka"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nGul Sena makine ogrenmesi alaninda doktora ogrencisidir. Gul Sena ne calisiyor?<|im_end|>\n<|im_start|>assistant\n",
@@ -2468,7 +2640,7 @@
       ],
       "doc_hash": "1b3a5e33c57f1b3a54b5e776e8ed5c12683f365bddc9465479dfd71d884c2e95",
       "prompt_hash": "61eec91daf3a079e5d6eaacd2781d215c5c24d4b2b22bf0cf63dadacb30c42bf",
-      "target_hash": "dcaa8e5ecb8d70ad4ededfab010e9ac8894d61070d561e97e84cd68d6f1ff0c9",
+      "target_hash": "d942662d601fc90445acf12679bfaf3ea33254d847d63bade724f905103a94bf",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2490,7 +2662,13 @@
         "title": "German Compound",
         "set_id": "16"
       },
-      "target": "Schiff",
+      "target": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDie Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|im_end|>\n<|im_start|>assistant\n",
@@ -2520,7 +2698,7 @@
       ],
       "doc_hash": "61f9c08e25e1a6ed1b4c09fcadf46c5d6129e355cff605fc36b059eac4726344",
       "prompt_hash": "a47c87547e88ff147005f9414afa721467d4d8c9ea0c86bdf3c0d50d9f7750d1",
-      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "target_hash": "f312f9af4cffbc891c2c3a8daeea233ce0358fe6b1a35c7352fba6a5e1212ea9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2542,7 +2720,13 @@
         "title": "German Compound",
         "set_id": "16"
       },
-      "target": "Schiff",
+      "target": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nDie Donau dampf schiff fahrts gesellschafts kapit\u00e4ns witwe trauert um ihren Mann. Welches Transportmittel wird hier erw\u00e4hnt?<|im_end|>\n<|im_start|>assistant\n",
@@ -2572,7 +2756,7 @@
       ],
       "doc_hash": "4cac5ad57e8d76e435b65e7ee654ff50e21e2cd348e4caa98e824f90d3105e3d",
       "prompt_hash": "e750e6708ed5d750855e80589e7dfb1e3bcaa2afde3e413ce20ab4e59696e2d6",
-      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "target_hash": "f312f9af4cffbc891c2c3a8daeea233ce0358fe6b1a35c7352fba6a5e1212ea9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2594,7 +2778,13 @@
         "title": "German Compound",
         "set_id": "16"
       },
-      "target": "Schiff",
+      "target": [
+        "Schiff",
+        "ship",
+        "steamship",
+        "Dampfschiff",
+        "steamboat"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nThe Donaudampfschifffahrtsgesellschaftskapit\u00e4nswitwe mourns her husband. Which mode of transportation is mentioned in this word?<|im_end|>\n<|im_start|>assistant\n",
@@ -2624,7 +2814,7 @@
       ],
       "doc_hash": "e0fd0d1bb5dcff5067415a4a83c844066c9f0beeea5b9469d1255e477b8e38c4",
       "prompt_hash": "49736b8df90316e41796ee0547f88f08eb15089a9b33f39db73f5c7d8cc250da",
-      "target_hash": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+      "target_hash": "f312f9af4cffbc891c2c3a8daeea233ce0358fe6b1a35c7352fba6a5e1212ea9",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2644,7 +2834,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u5317\u4eac\u662f\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u7684\u9996\u90fd\u3002\u8fd9\u4e2a\u53e5\u5b50\u4e2d\u63d0\u5230\u4e86\u54ea\u4e2a\u57ce\u5e02\uff1f<|im_end|>\n<|im_start|>assistant\n",
@@ -2674,9 +2868,9 @@
       ],
       "doc_hash": "fa62daeafab42197410a7ea830f9ffd1e18701148bdd778956cfcc8e32b34717",
       "prompt_hash": "581cef4d45690d6e637918975188d553604b919d977129faad305bc35e2ac39f",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 54,
@@ -2694,7 +2888,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u5317 \u4eac \u662f \u4e2d \u534e \u4eba \u6c11 \u5171 \u548c \u56fd \u7684 \u9996 \u90fd\u3002\u8fd9 \u4e2a \u53e5 \u5b50 \u4e2d \u63d0 \u5230 \u4e86 \u54ea \u4e2a \u57ce \u5e02\uff1f<|im_end|>\n<|im_start|>assistant\n",
@@ -2724,9 +2922,9 @@
       ],
       "doc_hash": "b21b5c190e9a1caccefd5f9f24f43b9088dbc0004b95d893ed9a08fcd94fe9df",
       "prompt_hash": "7f715e9003156dd2f0c04afc17a7038c5445a6e01d473cdd5a92db529bd21bbd",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 55,
@@ -2744,7 +2942,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nBeijing shi Zhonghua Renmin Gongheguo de shoudu. Zhege juzi zhong t\u00ecdao le nage chengshi?<|im_end|>\n<|im_start|>assistant\n",
@@ -2774,7 +2976,7 @@
       ],
       "doc_hash": "e4987df8b385230052ab5ed4b248aa9266fe6defb65c8b7d27988020a2114f2a",
       "prompt_hash": "a02d5bab64ff848556edc44d65c5acbd1fba25f4c95ecf2baf7d1af2dbc265ba",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2794,7 +2996,11 @@
         "title": "Chinese Characters",
         "set_id": "17"
       },
-      "target": "Beijing",
+      "target": [
+        "Beijing",
+        "B\u011bij\u012bng",
+        "\u5317\u4eac"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nB\u011bij\u012bng sh\u00ec Zh\u014dnghu\u00e1 R\u00e9nm\u00edn G\u00f2ngh\u00e9gu\u00f3 de sh\u01d2ud\u016b. Zh\u00e8ge j\u00f9zi zh\u014dng t\u00edd\u00e0o le n\u01cege ch\u00e9ngsh\u00ec?<|im_end|>\n<|im_start|>assistant\n",
@@ -2824,7 +3030,7 @@
       ],
       "doc_hash": "e391bb1ee965218d1dabaffe72e054b6323e0e9268d7bb19bda2c41e40975352",
       "prompt_hash": "ad5850cc611ecf7ca1b7e11f20bdf801d8b91b7c06ad0d53c5eaa0eedd99bbc8",
-      "target_hash": "65bb46ed07b2bbf1ef3fc4799a1686745134306e06939d52d72f9db8a36a8ebe",
+      "target_hash": "fdfdff1233430e76114fa8c4d58da4f05f7889d6491fbb60149cb7185ab4c450",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2845,7 +3051,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0627\u0644\u0644\u064f\u0651\u063a\u064e\u0629\u064e \u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0641\u0650\u064a \u0627\u0644\u062c\u064e\u0627\u0645\u0650\u0639\u064e\u0629\u0650. \u0645\u064e\u0627\u0630\u064e\u0627 \u064a\u064e\u062f\u0652\u0631\u064f\u0633\u064f \u0645\u064f\u062d\u064e\u0645\u064e\u0651\u062f\u061f<|im_end|>\n<|im_start|>assistant\n",
@@ -2875,9 +3086,9 @@
       ],
       "doc_hash": "771782fbc7108f4aa3a1d2db072fe268d7879b6f0505308c79a9593f9b669325",
       "prompt_hash": "5f9984293100fe950f966f24b481d6dcf24fea2fae6c8b98271282287dbb8ddf",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 58,
@@ -2896,7 +3107,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0645\u062d\u0645\u062f \u064a\u062f\u0631\u0633 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0641\u064a \u0627\u0644\u062c\u0627\u0645\u0639\u0629. \u0645\u0627\u0630\u0627 \u064a\u062f\u0631\u0633 \u0645\u062d\u0645\u062f\u061f<|im_end|>\n<|im_start|>assistant\n",
@@ -2926,9 +3142,9 @@
       ],
       "doc_hash": "37d35ab5e1530e25e196564de73e17232cc69f76008dbc75988b9d25d65952a5",
       "prompt_hash": "e1406bb4a1964aa1b4df88722114c71bef911e01edc8816bc305f4805a6f528e",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 59,
@@ -2947,7 +3163,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMohammed yadrusu allughata al'arabiyata fi aljami'ati. Madha yadrusu Mohammed?<|im_end|>\n<|im_start|>assistant\n",
@@ -2977,7 +3198,7 @@
       ],
       "doc_hash": "d885a33f5bcb3c16e7fa24dbb27ced8f62c087cb3468ab63ffd78c6db31ee9d9",
       "prompt_hash": "4a03743873545b0b8bc035de58b70887b89d51bd3811c5900e4ee75466df96a0",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -2998,7 +3219,12 @@
         "title": "Arabic Diacritics",
         "set_id": "18"
       },
-      "target": "Arabic",
+      "target": [
+        "Arabic",
+        "Arabic language",
+        "\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+        "allughata al'arabiyata"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMuhammad is studying Arabic language at the university. What is Muhammad studying?<|im_end|>\n<|im_start|>assistant\n",
@@ -3028,7 +3254,7 @@
       ],
       "doc_hash": "4135dd15ca832a2f7b69d1cc0c877c723fb24a3085e014148db0bff700551ff5",
       "prompt_hash": "515c1a9f50a2c663be7f5452f0fac57194421c0cfb3fe0b45760357d2cfade86",
-      "target_hash": "bafb66f32cd77a326693cd4dd80f6ea33788e5f0ed540ada155e61950b6fd380",
+      "target_hash": "821e950d29539ff5ae50a9d62c2e6058d15f27b4e10b624120ee8b1a0b436ede",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3049,7 +3275,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|im_end|>\n<|im_start|>assistant\n",
@@ -3079,9 +3310,9 @@
       ],
       "doc_hash": "fc2b4dd9cef15396aa508cb6987441c4bb82ce090435f2692a19da424e56ff30",
       "prompt_hash": "8b0870dbf17534bc7a719266a01a9d110651707a4e95372ea319d50e23f45e73",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 62,
@@ -3100,7 +3331,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nYa zhivu v Sankt-Peterburge i rabotayu v universitete. V kakom gorode ya zhivu?<|im_end|>\n<|im_start|>assistant\n",
@@ -3130,7 +3366,7 @@
       ],
       "doc_hash": "6a171eb7bddb1ce2e490308e5719429984837af49445a146a875a7ced2f9d0d7",
       "prompt_hash": "dc92c00c207793b28641bea71c0615b155034561f8519085a8ef30fce2e35ea0",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3151,7 +3387,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u042f \u0436\u0438\u0432\u0443 \u0432 \u0421\u0430\u043d\u043a\u0442 \u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435 \u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0432 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435. \u0412 \u043a\u0430\u043a\u043e\u043c \u0433\u043e\u0440\u043e\u0434\u0435 \u044f \u0436\u0438\u0432\u0443?<|im_end|>\n<|im_start|>assistant\n",
@@ -3181,9 +3422,9 @@
       ],
       "doc_hash": "a1de0d694f0a6423f795933f97f6843cc4abc502a29ecadec897e8c16930dae5",
       "prompt_hash": "418d33171708c6d55024f473358adbff533fc21c3174ee2e1e677e6ec72673a5",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 64,
@@ -3202,7 +3443,12 @@
         "title": "Russian Case",
         "set_id": "19"
       },
-      "target": "Saint Petersburg",
+      "target": [
+        "Saint Petersburg",
+        "St. Petersburg",
+        "Sankt-Petersburg",
+        "\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nI live in Sankt-Peterburge and work at the university. Which city do I live in? (Note: The city name is in its Russian grammatical case form)<|im_end|>\n<|im_start|>assistant\n",
@@ -3232,9 +3478,9 @@
       ],
       "doc_hash": "09bce0444f251e331cc2bb6348d28381763d9c694aecc30029c0b17e583ca682",
       "prompt_hash": "93be75210442c7d7bc384a0e279b5feffec8490b8c6688b39e4cfff2742f87a4",
-      "target_hash": "8019b77606f9d9582ab161c3e5572951cfa1f71b003b68dcb0ba94d297e3e8e8",
+      "target_hash": "b0dd86531388aee15cb95cf3954b0ce7020fe1d374f77d6cf9bc3fac43f4b053",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 65,
@@ -3250,7 +3496,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u6771\u4eac\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u5e74\u306b\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u958b\u50ac\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|im_end|>\n<|im_start|>assistant\n",
@@ -3280,7 +3528,7 @@
       ],
       "doc_hash": "f4809c929dcd69a5d7ae916aa0db14899a9e4f912b023f22db90452cc04b4704",
       "prompt_hash": "4880ff6bf683e9de424f9db8d29110d7909be8d1a264442b8df26d6a729d68bd",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3298,7 +3546,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u3068\u3046\u304d\u3087\u3046\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u306f2021\u306d\u3093\u306b\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u3002\u3044\u3064\u30aa\u30ea\u30f3\u30d4\u30c3\u30af\u304c\u304b\u3044\u3055\u3044\u3055\u308c\u307e\u3057\u305f\u304b\uff1f<|im_end|>\n<|im_start|>assistant\n",
@@ -3328,7 +3578,7 @@
       ],
       "doc_hash": "3a49480e1f40fee909d58234b2fc6bcb188141dccefe8255bee3cc631cd57b5e",
       "prompt_hash": "6f13096a169638aaa74d382b747fc1532ea6febdb07f3784db13fefee7b35c73",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3346,7 +3596,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nTokyo Orinpikku wa 2021-nen ni kaisai saremashita. Itsu Orinpikku ga kaisai saremashita ka?<|im_end|>\n<|im_start|>assistant\n",
@@ -3376,7 +3628,7 @@
       ],
       "doc_hash": "a1c6596172eb646dc83b6424a67904c621a5efe4fe9dba4b6df072a3aad9fed8",
       "prompt_hash": "c6e0fc9188a372ed83464c9b5285eb09bba0bce1bce924da73ad7f7903a047ee",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3394,7 +3646,9 @@
         "title": "Japanese Scripts",
         "set_id": "20"
       },
-      "target": "2021",
+      "target": [
+        "2021"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u6771\u4eac \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u306f 2021 \u5e74 \u306b \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f\u3002\u3044\u3064 \u30aa\u30ea\u30f3\u30d4\u30c3\u30af \u304c \u958b\u50ac \u3055 \u308c \u307e\u3057 \u305f \u304b\uff1f<|im_end|>\n<|im_start|>assistant\n",
@@ -3424,7 +3678,7 @@
       ],
       "doc_hash": "0dd4f7f44ac87b9167a2881d327a4392e1f6d6e76a5fd68818f1c6536a875921",
       "prompt_hash": "58625b56fb1e4cdd06b12ace0ccd14489f303ba9aaa642feb72af779f50524bc",
-      "target_hash": "1bea20e1df19b12013976de2b5e0e3d1fb4ba088b59fe53642c324298b21ffd9",
+      "target_hash": "23eed98ffe56a50be0d7b6f9b9f326bc74f992470382a7476d0dbee79046ebc7",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3445,7 +3699,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac\u09c7\u09b0 \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8\u099f\u09bf?<|im_end|>\n<|im_start|>assistant\n",
@@ -3475,9 +3734,9 @@
       ],
       "doc_hash": "37e6f96bbedec66beba430d0e0a14dd907c88bdc7552f94d347b9fbb90d64207",
       "prompt_hash": "6561e983f13ac16890652e9d45a9f2fccb4722fa5e58ae5c7c68e9f8ab128e11",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 70,
@@ -3496,7 +3755,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u09b9\u09b2 \u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0\u0964 \u09ac\u09bf\u09b6\u09cd\u09ac \u098f\u09b0 \u09b8\u09ac \u099a\u09c7\u09af\u09bc\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09a8\u09a6\u09c0 \u0995\u09cb\u09a8 \u099f\u09bf?<|im_end|>\n<|im_start|>assistant\n",
@@ -3526,9 +3790,9 @@
       ],
       "doc_hash": "4b29870058ace8022647a2754f5fbf5b802f931abc7606d4efe62309d49b2901",
       "prompt_hash": "2be4411589b79fb1e8880efae2192aec06ad33eef8f80991935164d914727595",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 71,
@@ -3547,7 +3811,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nBishwer shaboceye dirgho nodi holo Neel nodi. Bishwer shaboceye dirgho nodi konti?<|im_end|>\n<|im_start|>assistant\n",
@@ -3577,9 +3846,9 @@
       ],
       "doc_hash": "66f0714759f45e0571f026d4419a02ccb65b13e77d9903fb6f53db2d28d8f060",
       "prompt_hash": "b3c8b5b73c0814f00c1b4ad7e4bf04952758059a5527d5b0f14eeb142fec0f2d",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 72,
@@ -3598,7 +3867,12 @@
         "title": "Bengali Script",
         "set_id": "21"
       },
-      "target": "Nile",
+      "target": [
+        "Nile",
+        "Nile River",
+        "\u09a8\u09c0\u09b2 \u09a8\u09a6\u09c0",
+        "Neel nodi"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nThe longest river in the world is the Nile River. Which is the longest river in the world?<|im_end|>\n<|im_start|>assistant\n",
@@ -3628,7 +3902,7 @@
       ],
       "doc_hash": "0608d15fd6c433e1ceab7ceb2b172041ee8fabdaff43e003d846210dbae37121",
       "prompt_hash": "21689ecdf01425f879f1f0d1ac4b676ca684ae457f9d64ae52fbf26a1e9653b8",
-      "target_hash": "3223ab722b84e5bc60ecaa6dbedd4fce28d56298a7a1ce4171036682da1b6df5",
+      "target_hash": "2d93e0cc4e02227627eedf67cea8a5fdd0b125157f3501cce8372fb9b9cc1c71",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3648,7 +3922,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMlima Kilimanjaro ni mlima mrefu zaidi katika Afrika. Mlima mrefu zaidi Afrika unaitwa nini?<|im_end|>\n<|im_start|>assistant\n",
@@ -3678,7 +3956,7 @@
       ],
       "doc_hash": "1089497c913db8499f89103cba20f8b2a616bb0ab8e9b1c4f5118a1243c2df0f",
       "prompt_hash": "d2582743f6905ca2ac3bfc9efc054bdbde3c9f9fe1238c4b702a68560429a5ff",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3698,7 +3976,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nM lima Kilimanjaro ni m lima m refu zaidi katika Afrika. M lima m refu zaidi Afrika una itwa nini?<|im_end|>\n<|im_start|>assistant\n",
@@ -3728,7 +4010,7 @@
       ],
       "doc_hash": "d46db4cbe29e399bc432ed091bc721709906f63d0c8e5b087d42a0a0dce6ff76",
       "prompt_hash": "7ab8d134e59b840412b0e542776df27806428efbd235cbf8e3909d8a410bc0f7",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3748,7 +4030,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMount Kilimanjaro is the tallest mountain in Africa. What is the tallest mountain in Africa called?<|im_end|>\n<|im_start|>assistant\n",
@@ -3778,7 +4064,7 @@
       ],
       "doc_hash": "0bcd3d8e27ee04a688671199455a83b4d92e6f3258158014a134241cdd62c61c",
       "prompt_hash": "a1321809ca8bbcd60b32c231411f6d3c81b444f5e5d1a2bc5c5f5f452084b8d0",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3798,7 +4084,11 @@
         "title": "Swahili Noun Classes",
         "set_id": "22"
       },
-      "target": "Kilimanjaro",
+      "target": [
+        "Kilimanjaro",
+        "Mount Kilimanjaro",
+        "Mlima Kilimanjaro"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nMlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika. Jina la mlima mrefu zaidi Afrika ni gani?<|im_end|>\n<|im_start|>assistant\n",
@@ -3828,7 +4118,7 @@
       ],
       "doc_hash": "c0e67a4f08b01e50bd05263d983426caef4d6a6e3cc66bdd9d5630ae74c474d1",
       "prompt_hash": "0f12a238994e032389d262a9292980b8f22410c54716777e192ddbdbec0cfe86",
-      "target_hash": "3d1b94e5a27d4af2f25b852e137766b9ee2f753235e5ad46c0aac77a7a5a96f3",
+      "target_hash": "b47187f6fcb1faddaae430aae270da64e80ffc2d0f7e0d531b17ab957f8b2410",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -3840,7 +4130,6 @@
         "answer": "Bangkok",
         "all_targets": [
           "Bangkok",
-          "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
@@ -3851,7 +4140,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2b\u0e25\u0e27\u0e07\u0e02\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?<|im_end|>\n<|im_start|>assistant\n",
@@ -3879,11 +4174,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "91cbc8c9e0f73457e33765b790cc72ab0e7c9a4b291bf2a00419fad0b9e60e90",
+      "doc_hash": "96390a36ff63193f4922a42b156934460a8ebb34adf6e383b57b1ba56f666882",
       "prompt_hash": "8d4d7d054b7e2773bc1c22517b7861acfbbdb67650625d64bc472c8633b73473",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 78,
@@ -3892,7 +4187,6 @@
         "question": "\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?",
         "answer": "Bangkok",
         "all_targets": [
-          "Bangkok",
           "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
@@ -3904,7 +4198,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0e01\u0e23\u0e38\u0e07 \u0e40\u0e17\u0e1e \u0e21\u0e2b\u0e32 \u0e19\u0e04\u0e23 \u0e40\u0e1b\u0e47\u0e19 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e40\u0e21\u0e37\u0e2d\u0e07 \u0e2b\u0e25\u0e27\u0e07 \u0e02\u0e2d\u0e07 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28 \u0e44\u0e17\u0e22 \u0e04\u0e37\u0e2d \u0e2d\u0e30\u0e44\u0e23?<|im_end|>\n<|im_start|>assistant\n",
@@ -3932,11 +4232,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "c0dbf74cafa531475fc2f93d55080b55139c213bd2c88107ed19234370ee8e48",
+      "doc_hash": "2ce646fa742102294c89c1bf64cb3d13c0a1c8b2e8467c84d4cf0d09e4c00fba",
       "prompt_hash": "9ffcf7f7af458cefa1dab627521725c29e3601e6cf555dd1878ee9f18e4e9255",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 79,
@@ -3945,7 +4245,6 @@
         "question": "Krung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?",
         "answer": "Bangkok",
         "all_targets": [
-          "Bangkok",
           "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
@@ -3957,7 +4256,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nKrung Thep Maha Nakhon pen mueang luang khong Prathet Thai. Mueang luang khong Prathet Thai khue arai?<|im_end|>\n<|im_start|>assistant\n",
@@ -3985,9 +4290,9 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "b6069485c5b6558828a4923e83c49fe0cb326b38085c38def2d3dd4058ddd03b",
+      "doc_hash": "84a113e54c6ee693494fd42662eaa80bab369a019bd3b317c9e34a5c7355d327",
       "prompt_hash": "59f170bcad0936841e0b7c101523fe6541482dfcff34c33973159bbf24a53841",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -3999,7 +4304,6 @@
         "answer": "Bangkok",
         "all_targets": [
           "Bangkok",
-          "Bangkok",
           "Krung Thep",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
           "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
@@ -4010,7 +4314,13 @@
         "title": "Thai Script",
         "set_id": "23"
       },
-      "target": "Bangkok",
+      "target": [
+        "Bangkok",
+        "Krung Thep",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+        "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
+        "Krung Thep Maha Nakhon"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nBangkok is the capital city of Thailand. What is the capital city of Thailand?<|im_end|>\n<|im_start|>assistant\n",
@@ -4038,9 +4348,9 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "c4ff271e8218f3ee804dc2b953809ba7fd2ccd3164232f1b019f37f74ef4216a",
+      "doc_hash": "1d0c6481e0100d14d2c4981d59179a6c8e1ae3475213bbc9dacc2b018d8b415d",
       "prompt_hash": "f01e762fd6bd305ba6a171e65b7bd0e025a537d69b386c654fbc55bd177cad70",
-      "target_hash": "fbc20470055e6ba70e441ea73906322cf37add1964d42c960e95b2aa09495028",
+      "target_hash": "17cacd94215ab1b658193de6716b6100e2758acf771fddd6fea2d76c62b64bb3",
       "exact_match": 0.0,
       "multi_target_match": 1.0
     },
@@ -4052,7 +4362,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "telugu_standard",
@@ -4060,7 +4369,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c\u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|im_end|>\n<|im_start|>assistant\n",
@@ -4088,11 +4400,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "6e21c52c27944a6c6af4e975b80ce4260f993fa5d2844e0fc2f86cf41cece60f",
+      "doc_hash": "9a6bea355a144495921e61408415cf8c33227fcfd0976bd1b8c79e3432c3ea82",
       "prompt_hash": "cccee77b05676d8a685223f3fb44170daa14bd3f310eb5b3af9cbc777c6111aa",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 82,
@@ -4102,7 +4414,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "telugu_partial_split",
@@ -4110,7 +4421,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f. \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23 \u0c30\u0c3e\u0c1c \u0c27\u0c3e\u0c28\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?<|im_end|>\n<|im_start|>assistant\n",
@@ -4138,11 +4452,11 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "41991d8fdaf66aab1da727058b87669bd62f821d4c45b56be413c818453fce13",
+      "doc_hash": "6bb2b19417c01b8e2bdf5981143c4b4d309527532d8238a1bc5288cdf39adf8e",
       "prompt_hash": "a9bf3c741912f8aa8e4db0fac8228d46d89051503700ac9f961ba74fd5abcf96",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
-      "multi_target_match": 0.0
+      "multi_target_match": 1.0
     },
     {
       "doc_id": 83,
@@ -4152,7 +4466,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "telugu_transliterated",
@@ -4160,7 +4473,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHyderabad Telangana rashtra rajdhani. Telangana rajdhani emiti?<|im_end|>\n<|im_start|>assistant\n",
@@ -4188,9 +4504,9 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "004e92c34623b7f5ade39e598fd048c640c97f7ad7266a6c8916a02ec6d5e5db",
+      "doc_hash": "09dc6c91a4030f737035585de571a613dde89d8df9b7faea3f0ba6234cfd58b9",
       "prompt_hash": "af67d8c6aac14cfbf46610a543f2c9fd20af134af6b78d2683ecd86328b0c34c",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
       "multi_target_match": 0.0
     },
@@ -4202,7 +4518,6 @@
         "answer": "Hyderabad",
         "all_targets": [
           "Hyderabad",
-          "Hyderabad",
           "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
         ],
         "tokenization_type": "english_translation",
@@ -4210,7 +4525,10 @@
         "title": "Telugu Script",
         "set_id": "24"
       },
-      "target": "Hyderabad",
+      "target": [
+        "Hyderabad",
+        "\u0c39\u0c48\u0c26\u0c30\u0c3e\u0c2c\u0c3e\u0c26\u0c4d"
+      ],
       "arguments": [
         [
           "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHyderabad is the capital of Telangana state. What is the capital of Telangana?<|im_end|>\n<|im_start|>assistant\n",
@@ -4238,11 +4556,2571 @@
         "exact_match",
         "multi_target_match"
       ],
-      "doc_hash": "ab5a80411dc98d3295420716f97713fff27584701d6c986e3bf87e609ad346f4",
+      "doc_hash": "2768a16c37db76b785e47290e7f723619e341cf772770f894ed4431f279baf7e",
       "prompt_hash": "706a18eaa673e78306a0e5ca07d2cbf121709e89013129f14f59e4af8d902663",
-      "target_hash": "4fa64bd55d5c0c1f83015952b4b9500cb099dd0b1b04647f1a7c3c5708295b6e",
+      "target_hash": "50ede30ecb69aac4194737a93d0020b3210ed5804e71c35b2b5b83779c18de83",
       "exact_match": 0.0,
       "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 85,
+      "doc": {
+        "id": "25_Q1",
+        "question": "What is the value of 12345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "no_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the value of 12345 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The value of 12345 multiplied by 2 can be calculated as follows:"
+        ]
+      ],
+      "filtered_resps": [
+        "The value of 12345 multiplied by 2 can be calculated as follows:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "2602c4170e45020f2b3d8fe09f0bca8d5e89f34c94f60a49ee3b81a606c81689",
+      "prompt_hash": "645308630338b6422220f82d33268624628d724724c2742c0be101c9f6d10336",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 86,
+      "doc": {
+        "id": "25_Q2",
+        "question": "What is the value of 12,345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "comma_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the value of 12,345 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The value of \\(12,345 \\times 2\\) can be calculated as follows:"
+        ]
+      ],
+      "filtered_resps": [
+        "The value of \\(12,345 \\times 2\\) can be calculated as follows:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5f0739c2d89b0567a03c8336a75d29cf60b1780718cb8ba49f2960af029e2e33",
+      "prompt_hash": "b330987c9fdbfcdbec784327f4cd2da1d6812c6bd9243942dc395d1e604ae462",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 87,
+      "doc": {
+        "id": "25_Q3",
+        "question": "What is the value of 12.345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "period_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the value of 12.345 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The value of \\(12.345 \\times 2\\) can be calculated as follows:"
+        ]
+      ],
+      "filtered_resps": [
+        "The value of \\(12.345 \\times 2\\) can be calculated as follows:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6ba0e22d5fd11630fa193c34b409127c5e6c7428fd33aa3dfe4078f858ae11f7",
+      "prompt_hash": "a9e3e3b3414352ac9cb525240d56746cd3ad0163d9b592bcb8f4178097393530",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 88,
+      "doc": {
+        "id": "25_Q4",
+        "question": "What is the value of 12 345 multiplied by 2?",
+        "answer": "24690",
+        "all_targets": [
+          "24690",
+          "24,690",
+          "24.690",
+          "24 690"
+        ],
+        "tokenization_type": "space_separators",
+        "category": "Number Formatting",
+        "title": "Large Integer",
+        "set_id": "25"
+      },
+      "target": [
+        "24690",
+        "24,690",
+        "24.690",
+        "24 690"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the value of 12 345 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the value of \\(12,345 \\times 2\\), you simply multiply the two numbers together:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the value of \\(12,345 \\times 2\\), you simply multiply the two numbers together:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "60276761211dcf360c2b3a18717bde3df89a3ec2b52f905579218c285a0f994c",
+      "prompt_hash": "6d3de03527517349fc87e2d2d709e3fff27741d3cf212d47056a4332138a4a25",
+      "target_hash": "50ae7f2e7ff2526600d847b57fd313e01f97f009f763aa51eb29f4d43ce7dded",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 89,
+      "doc": {
+        "id": "26_Q1",
+        "question": "What is 5000000000 divided by 1000?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "no_separators",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 5000000000 divided by 1000?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem of dividing 5000000000 by 1000, we can follow these steps:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem of dividing 5000000000 by 1000, we can follow these steps:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "7f03a4c64c9be050fabe8c0a2aa2644af97cd6d71ce107aa959ee20c68faaae6",
+      "prompt_hash": "11352900fa85d264248f90e4fbbea6b5fedcbbfaa152cfa63e0416e7b6195fd7",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 90,
+      "doc": {
+        "id": "26_Q2",
+        "question": "What is 5,000,000,000 divided by 1,000?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "comma_separators",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 5,000,000,000 divided by 1,000?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem of dividing 5,000,000,000 by 1,000, we can follow these steps:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem of dividing 5,000,000,000 by 1,000, we can follow these steps:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e878eb9e13cd15c06c3796a41ec47f8176ae36f58dccb7de00873e7bab88b2d1",
+      "prompt_hash": "925cd4200a3c54d492928cceb4409bd31dfb0417ccf849c2d0bb4b46675caa91",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 91,
+      "doc": {
+        "id": "26_Q3",
+        "question": "What is 5.0 \u00d7 10^9 divided by 1.0 \u00d7 10^3?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "scientific_notation",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 5.0 \u00d7 10^9 divided by 1.0 \u00d7 10^3?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem of dividing \\(5.0 \\times 10^9\\) by \\(1.0 \\times 10^3\\), we can follow these steps:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem of dividing \\(5.0 \\times 10^9\\) by \\(1.0 \\times 10^3\\), we can follow these steps:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "176064c16b8bffdeae2fd71d9bedd8aa6f9f6e1f02d9ea4d37fb3da5e1f4fb58",
+      "prompt_hash": "8afdb6752f07b87a36dcc69b247b0acbc73e022afc14233f5fb993d568d74ba4",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 92,
+      "doc": {
+        "id": "26_Q4",
+        "question": "What is 5.0e9 divided by 1.0e3?",
+        "answer": "5000000",
+        "all_targets": [
+          "5000000",
+          "5,000,000",
+          "5.0 \u00d7 10^6",
+          "5.0e6",
+          "5 million",
+          "five million"
+        ],
+        "tokenization_type": "computer_scientific_notation",
+        "category": "Number Formatting",
+        "title": "Scientific Notation",
+        "set_id": "26"
+      },
+      "target": [
+        "5000000",
+        "5,000,000",
+        "5.0 \u00d7 10^6",
+        "5.0e6",
+        "5 million",
+        "five million"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 5.0e9 divided by 1.0e3?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem of dividing \\(5.0 \\times 10^9\\) by \\(1.0 \\times 10^3\\), we can follow these steps:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem of dividing \\(5.0 \\times 10^9\\) by \\(1.0 \\times 10^3\\), we can follow these steps:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "39ff3b4707f0e89b2691588305c744915939cde843e19af344d21a2b3797d4d4",
+      "prompt_hash": "5e1b8b816de4e32aa223de03612b54357f3db24f43ea1829b24cc9ba10b70438",
+      "target_hash": "b6c9d8b779cfd90fee580a7bd76f79b21e7db192ae77b6cce4f0a02370832233",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 93,
+      "doc": {
+        "id": "27_Q1",
+        "question": "What is 3.14159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "period_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 3.14159 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the product of \\(3.14159\\) and \\(2\\), you simply multiply them together:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the product of \\(3.14159\\) and \\(2\\), you simply multiply them together:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "8f364405f819892141ac4aae3fcd8d825233458b086aa287eba7f5a083eb18f8",
+      "prompt_hash": "4dbfa9b79ec5a75f2814eb7270f3937704715f433d67f4547633a450bebfb6ec",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 94,
+      "doc": {
+        "id": "27_Q2",
+        "question": "What is 3,14159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "comma_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 3,14159 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem of multiplying 3,141,59 by 2, we can follow these steps:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem of multiplying 3,141,59 by 2, we can follow these steps:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e87c85e59433a018ccb4d8598a4d759e37972878b5ef8d29e6fbb0dac0450279",
+      "prompt_hash": "aeb7948a481bc82559c7ccca6c8a7717e438a87e8dd3dd362114b505316e8b85",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 95,
+      "doc": {
+        "id": "27_Q3",
+        "question": "What is 3\u00b714159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "middle_dot_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 3\u00b714159 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem \\(3 \\times 10^{10} \\times 2\\), we can break it down step-by-step:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem \\(3 \\times 10^{10} \\times 2\\), we can break it down step-by-step:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "321dc7f1022f64993a5a8b9a5bfcfadcb6f55f8bd6d2116c427d15401f525c9a",
+      "prompt_hash": "b03dd324e6cdec31fd6fdd6c358dae39ddaf9bf280c467bc6326a1e97ad4b2b7",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 96,
+      "doc": {
+        "id": "27_Q4",
+        "question": "What is 3 14159 multiplied by 2?",
+        "answer": "6.28318",
+        "all_targets": [
+          "6.28318",
+          "6,28318",
+          "6\u00b728318",
+          "6 28318",
+          "approximately 6.28",
+          "about 6.28"
+        ],
+        "tokenization_type": "space_decimal",
+        "category": "Number Formatting",
+        "title": "Decimal Separator",
+        "set_id": "27"
+      },
+      "target": [
+        "6.28318",
+        "6,28318",
+        "6\u00b728318",
+        "6 28318",
+        "approximately 6.28",
+        "about 6.28"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 3 14159 multiplied by 2?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To solve the problem of multiplying \\(3 \\frac{1}{4}\\) by 2, we can follow these steps:"
+        ]
+      ],
+      "filtered_resps": [
+        "To solve the problem of multiplying \\(3 \\frac{1}{4}\\) by 2, we can follow these steps:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0e2ea77c0b507e4f38580c9c8dc6e93d49a9ee5645c0082f152a80457a01b03e",
+      "prompt_hash": "530fdc561d125bd6d4d9ffc329fbcc8cab8b29a8ab7c9f38702c225999f8992a",
+      "target_hash": "6f9f4e642c5b3f3fae6da2b520771ea3f38680f5fcb2f872ff0ee9564152a7db",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 97,
+      "doc": {
+        "id": "28_Q1",
+        "question": "What is the quadratic formula for solving ax\u00b2 + bx + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "standard_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the quadratic formula for solving ax\u00b2 + bx + c = 0?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation \\(ax^2 + bx + c = 0\\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation \\(ax^2 + bx + c = 0\\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a7cff5338e163e33cf1cf2eccbcb9e7aae199322cde01601b77526accebc800f",
+      "prompt_hash": "beb0084283bba832fd0a15469948b6267d677eaa87ae6c8384b67ea3b8910629",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 98,
+      "doc": {
+        "id": "28_Q2",
+        "question": "What is the quadratic formula for solving ax^2 + bx + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "caret_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the quadratic formula for solving ax^2 + bx + c = 0?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation \\(ax^2 + bx + c = 0\\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation \\(ax^2 + bx + c = 0\\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "0352ed9ce0a9b878c555de39a4cdb611ae07ab27a7fcad2badbaf1f58e28fe02",
+      "prompt_hash": "4a5fa6fbf006a934f3289e37c71d3e1788187b34f32afd28d9941a337950c20d",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 99,
+      "doc": {
+        "id": "28_Q3",
+        "question": "What is the quadratic formula for solving a*x*x + b*x + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "multiplication_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the quadratic formula for solving a*x*x + b*x + c = 0?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation \\( ax^2 + bx + c = 0 \\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation \\( ax^2 + bx + c = 0 \\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "c8ce411817a806064a0bb9af8a1d8496a9a8757468b9c7be8c29b55a9c2c831a",
+      "prompt_hash": "76a38d48a453e7ada55f723b829d40d8f68275a88d55faadc2dd47b890cab4de",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 100,
+      "doc": {
+        "id": "28_Q4",
+        "question": "What is the quadratic formula for solving ax**2 + bx + c = 0?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "python_power_notation",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the quadratic formula for solving ax**2 + bx + c = 0?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation \\(ax^2 + bx + c = 0\\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation \\(ax^2 + bx + c = 0\\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "883075bd0d08bb7847e74ad363b16d96eb7d1b6640dd20e21983e5db75738e39",
+      "prompt_hash": "121f170c0a7578b3899407c7aa43d43249a6261278db8b20360f1f034249caa2",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 101,
+      "doc": {
+        "id": "28_Q5",
+        "question": "What is the quadratic formula for solving $ax^2 + bx + c = 0$?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "markdown_math",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the quadratic formula for solving $ax^2 + bx + c = 0$?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation \\( ax^2 + bx + c = 0 \\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation \\( ax^2 + bx + c = 0 \\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "9e6520d6f5e45601fd743094a3b098922c9549731a917f72122b2f09c43dcc26",
+      "prompt_hash": "c6955d2ac80370781b7c6bbacf073ffda1c9221b6ea58746301ca82492c44dc1",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 102,
+      "doc": {
+        "id": "28_Q6",
+        "question": "What is the quadratic formula for solving \\begin{equation}ax^2 + bx + c = 0\\end{equation}?",
+        "answer": "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "all_targets": [
+          "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+          "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+        ],
+        "tokenization_type": "latex_environment",
+        "category": "Mathematical Expressions",
+        "title": "Quadratic Formula",
+        "set_id": "28"
+      },
+      "target": [
+        "x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 \u221a(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b^2 - 4ac)) / (2a) or x = (-b - sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+        "x = (-b + sqrt(b*b - 4*a*c)) / (2*a) or x = (-b - sqrt(b*b - 4*a*c)) / (2*a)"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the quadratic formula for solving \\begin{equation}ax^2 + bx + c = 0\\end{equation}?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The quadratic formula for solving the equation \\( ax^2 + bx + c = 0 \\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The quadratic formula for solving the equation \\( ax^2 + bx + c = 0 \\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e14ed77e1d716fa9f1c33b725589bab41c3975d6e77c580b3e41f5a4c19627df",
+      "prompt_hash": "cf3c81b35f3a2768915db031b505570d43e69bd94d5903557490ac39ac928bc3",
+      "target_hash": "97477e55c389d01310472f52d41516f5e7ddadbdb379f847193b6ca7d27258c6",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 103,
+      "doc": {
+        "id": "29_Q1",
+        "question": "What is the derivative of sin(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "standard_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the derivative of sin(x)?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of \\(\\sin(x)\\) with respect to \\(x\\) is \\(\\cos(x)\\). This result can be derived using basic rules of differentiation or through trigonometric identities."
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of \\(\\sin(x)\\) with respect to \\(x\\) is \\(\\cos(x)\\). This result can be derived using basic rules of differentiation or through trigonometric identities."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "51170550c7ce5bcb1deb8a767f0b15128dcabd5387fd70ae3640899ae68baa9a",
+      "prompt_hash": "183fc2b9abdb5c1f6cf65ba8ffed995bd05ec5da9f72b395ebefe3ea7beb7503",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 104,
+      "doc": {
+        "id": "29_Q2",
+        "question": "What is d/dx sin(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "calculus_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is d/dx sin(x)?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of the sine function with respect to \\( x \\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of the sine function with respect to \\( x \\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "044792c985313e2723639d02d25f9aaa8b345c75c6961687436bc42d15821cbc",
+      "prompt_hash": "11b6a179859d22ab89710a33b9c36f8c007ec89dbd80970259c77286aa070f91",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 105,
+      "doc": {
+        "id": "29_Q3",
+        "question": "What is sin'(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "prime_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is sin'(x)?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of the sine function \\( \\sin(x) \\) with respect to \\( x \\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of the sine function \\( \\sin(x) \\) with respect to \\( x \\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e884b6f006cc648bf5f3ecf910585228a258dd6260901b3ad95addc309f19dee",
+      "prompt_hash": "61a9a2238eb16dfb10f1f801d31c578fc7f5c716c85fd5c2cf97f112fb885849",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 106,
+      "doc": {
+        "id": "29_Q4",
+        "question": "What is the derivative of sin x?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "no_parentheses",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the derivative of sin x?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of \\(\\sin x\\) with respect to \\(x\\) is \\(\\cos x\\). This result can be derived using basic rules of differentiation or through trigonometric identities."
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of \\(\\sin x\\) with respect to \\(x\\) is \\(\\cos x\\). This result can be derived using basic rules of differentiation or through trigonometric identities."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "63d05271fd84642e7f1b62633b8217571d0787024dd7eb794cf814dc16932d6e",
+      "prompt_hash": "7d9b4a8c1a0e1b1072d3bee8fc4c2b112621e466498e61cf0470472da6802351",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 107,
+      "doc": {
+        "id": "29_Q5",
+        "question": "What is \\frac{d}{dx}\\sin(x)?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "latex_notation",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is \\frac{d}{dx}\\sin(x)?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of the sine function with respect to \\( x \\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of the sine function with respect to \\( x \\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ed16d7efee6fcc0a902c565e58db551dc4bea7d96988c1d15ab86f27191bf911",
+      "prompt_hash": "9bdf6e11c8dc168e882a5c2af74ee8ca117784c9b53a200fa0939ba55543e712",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 108,
+      "doc": {
+        "id": "29_Q6",
+        "question": "What is $\\frac{d}{dx}\\sin(x)$?",
+        "answer": "cos(x)",
+        "all_targets": [
+          "cos(x)",
+          "cos x",
+          "cosine of x",
+          "cosine(x)",
+          "$\\cos x$"
+        ],
+        "tokenization_type": "inline_latex",
+        "category": "Mathematical Expressions",
+        "title": "Derivative Formula",
+        "set_id": "29"
+      },
+      "target": [
+        "cos(x)",
+        "cos x",
+        "cosine of x",
+        "cosine(x)",
+        "$\\cos x$"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is $\\frac{d}{dx}\\sin(x)$?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The derivative of the sine function \\(\\sin(x)\\) with respect to \\(x\\) is given by:"
+        ]
+      ],
+      "filtered_resps": [
+        "The derivative of the sine function \\(\\sin(x)\\) with respect to \\(x\\) is given by:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "6ad3140990b403eb66edbda3365a8cc999d75dae92c0980a3e8822863b701c50",
+      "prompt_hash": "045821ca8f31aefde4bbf01b6d3a34948e956c938eb2913daee10d99af9bfdc3",
+      "target_hash": "3f4acd6a0b7928b579e3b26a64e8fa6f716ee77eed61912c74e68dbf77ee1df4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 109,
+      "doc": {
+        "id": "30_Q1",
+        "question": "What is the class of IP address 192.168.1.1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "standard_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the class of IP address 192.168.1.1?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The class of an IP address refers to its network classification based on the number of bits allocated for the network part and the number of bits allocated for the host part."
+        ]
+      ],
+      "filtered_resps": [
+        "The class of an IP address refers to its network classification based on the number of bits allocated for the network part and the number of bits allocated for the host part."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "5f5f497206ed509b00cd80cf75ee8994b7546356320322469278956a8da139bd",
+      "prompt_hash": "b2dc87a98d4cb19053a7cc9e92ac661bb3216177a9f9c5d0698bde09a99471aa",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 110,
+      "doc": {
+        "id": "30_Q2",
+        "question": "What is the class of IP address 192 168 1 1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "space_separated_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the class of IP address 192 168 1 1?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The class of an IP address is determined by its network prefix length (NLP). The class of an IP address indicates how many bits it uses to identify a network segment."
+        ]
+      ],
+      "filtered_resps": [
+        "The class of an IP address is determined by its network prefix length (NLP). The class of an IP address indicates how many bits it uses to identify a network segment."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a8c4c986474063895e71be591c103d61d1d428c634251629a613f5c3d5958cbc",
+      "prompt_hash": "e34b966f048890832f4db8a2f62d98e8552177e41c18d4c8b7c7b69d0aae8e83",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 111,
+      "doc": {
+        "id": "30_Q3",
+        "question": "What is the class of IP address 192-168-1-1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "hyphen_separated_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the class of IP address 192-168-1-1?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The class of an IP address refers to its network classification based on the subnet mask it uses. The class of an IP address can be one of four categories: A (Class A), B (Class B), C (Class C), or D (Class D)."
+        ]
+      ],
+      "filtered_resps": [
+        "The class of an IP address refers to its network classification based on the subnet mask it uses. The class of an IP address can be one of four categories: A (Class A), B (Class B), C (Class C), or D (Class D)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "56cf65c01a44fcf13c1279042427b39171bb77b71b888fc09dcf96ed8d0fe118",
+      "prompt_hash": "8982197ffc5a7cf183e43f9c69c7717c5239686d57061c068df3f2d66042e1ce",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 112,
+      "doc": {
+        "id": "30_Q4",
+        "question": "What is the class of IP address 192,168,1,1?",
+        "answer": "Class C",
+        "all_targets": [
+          "Class C",
+          "C",
+          "class C private IP address",
+          "private Class C"
+        ],
+        "tokenization_type": "comma_separated_ip",
+        "category": "Number Formatting",
+        "title": "IP Address",
+        "set_id": "30"
+      },
+      "target": [
+        "Class C",
+        "C",
+        "class C private IP address",
+        "private Class C"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the class of IP address 192,168,1,1?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The class of an IP address refers to its network layer classification based on the first octet (the most significant byte) of the IP address. The first octet determines the class of the IP address."
+        ]
+      ],
+      "filtered_resps": [
+        "The class of an IP address refers to its network layer classification based on the first octet (the most significant byte) of the IP address. The first octet determines the class of the IP address."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e6cb50470ae8bbfbdbdf167194696f5ea89f20a39a34b0f80a7fdd6f9652a628",
+      "prompt_hash": "a7ff626eb02b56ab986446765bd21f945eb5e15a709f45f66d7210143c2cd46a",
+      "target_hash": "2d785436ff7b08873eb41c0a0c7af7ac7f17febd11d01de4d4d85a190fb0d512",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 113,
+      "doc": {
+        "id": "31_Q1",
+        "question": "If you invest $1000000 at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "no_separators",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIf you invest $1000000 at 5% annual interest, how much will you have after 1 year?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the amount of money you will have after one year with an initial investment of $100,000 and an annual interest rate of 5%, we can use the simple interest formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the amount of money you will have after one year with an initial investment of $100,000 and an annual interest rate of 5%, we can use the simple interest formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a05aeb29f30e78803f47d87ed2862b9cf5d7acc3768eed3308f61a98191900cd",
+      "prompt_hash": "8e896c5e0fc6268037145abd2ccbd4162ee71202b2f692949fcd9b38a74a78af",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 114,
+      "doc": {
+        "id": "31_Q2",
+        "question": "If you invest $1,000,000 at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "comma_separators",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIf you invest $1,000,000 at 5% annual interest, how much will you have after 1 year?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the amount of money you will have after one year with an initial investment of $1,000,000 and an annual interest rate of 5%, we can use the simple interest formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the amount of money you will have after one year with an initial investment of $1,000,000 and an annual interest rate of 5%, we can use the simple interest formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "eecae39a6c40e8763fdfe7c14cbfe470df039a206d7d8937d80d97fed6fd1a06",
+      "prompt_hash": "b6e0c98b226b39366f43b2127cf1bf4deb897623c9dde448084d3dbe5d79c2ca",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 115,
+      "doc": {
+        "id": "31_Q3",
+        "question": "If you invest $1.000.000 at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "european_separators",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIf you invest $1.000.000 at 5% annual interest, how much will you have after 1 year?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the amount of money you will have after one year with an initial investment of $1.000.000 at an annual interest rate of 5%, we can use the formula for compound interest:"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the amount of money you will have after one year with an initial investment of $1.000.000 at an annual interest rate of 5%, we can use the formula for compound interest:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "104fe1de9bf3ce6e9b48817a33dda8988ce3ccb6369c3f3ba3d04dd2c87f0cd9",
+      "prompt_hash": "aecfcbb50bf8e98b25dce3baab50d1e7824cc9faafddb76ffee7af629508d1a6",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 116,
+      "doc": {
+        "id": "31_Q4",
+        "question": "If you invest $1M at 5% annual interest, how much will you have after 1 year?",
+        "answer": "$1,050,000",
+        "all_targets": [
+          "$1,050,000",
+          "$1050000",
+          "$1.050.000",
+          "$1.05M",
+          "$1,050,000.00",
+          "$1.05 million",
+          "1,050,000 dollars",
+          "1050000 dollars"
+        ],
+        "tokenization_type": "abbreviated_notation",
+        "category": "Number Formatting",
+        "title": "Financial Values",
+        "set_id": "31"
+      },
+      "target": [
+        "$1,050,000",
+        "$1050000",
+        "$1.050.000",
+        "$1.05M",
+        "$1,050,000.00",
+        "$1.05 million",
+        "1,050,000 dollars",
+        "1050000 dollars"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIf you invest $1M at 5% annual interest, how much will you have after 1 year?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To calculate the amount of money you will have after one year with an initial investment of $1 million and an annual interest rate of 5%, we can use the formula for compound interest:"
+        ]
+      ],
+      "filtered_resps": [
+        "To calculate the amount of money you will have after one year with an initial investment of $1 million and an annual interest rate of 5%, we can use the formula for compound interest:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "922e636fc4411867796d9bb5036ca64893cd3f0dae3c83929848bf61471734da",
+      "prompt_hash": "bdceac2ae7a22d744c26a3a19572c7ab8a0977990ca521f2b848b8aa95127db5",
+      "target_hash": "e5d0fc9117973bd9d1ce05d237c4cde0a9d5fcaeb592043147747851929cdf33",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 117,
+      "doc": {
+        "id": "32_Q1",
+        "question": "What is 1/2 + 1/3 in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "slash_notation",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 1/2 + 1/3 in simplified form?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To simplify the expression \\( \\frac{1}{2} + \\frac{1}{3} \\), we need to find a common denominator for the two fractions. The denominators are 2 and 3."
+        ]
+      ],
+      "filtered_resps": [
+        "To simplify the expression \\( \\frac{1}{2} + \\frac{1}{3} \\), we need to find a common denominator for the two fractions. The denominators are 2 and 3."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "212f9acd50f8c4edd1ad0032d9b8a730dcc9fd6cbf7256a65f842018e5d9d3be",
+      "prompt_hash": "29113a8d8a03b96bbea33df99d2a6962514b4aa2f17058dde8c90830f26895dc",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 118,
+      "doc": {
+        "id": "32_Q2",
+        "question": "What is \u00bd + \u2153 in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "unicode_fraction",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is \u00bd + \u2153 in simplified form?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To simplify the expression \\( \\frac{1}{2} + \\frac{3}{5} \\), we need to find a common denominator for the two fractions."
+        ]
+      ],
+      "filtered_resps": [
+        "To simplify the expression \\( \\frac{1}{2} + \\frac{3}{5} \\), we need to find a common denominator for the two fractions."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "83102851db2273b0869a9d6b0a4bd6c1dbcf1f4bd8245608cd12d9306448a788",
+      "prompt_hash": "98b42a915954d4c92b85252e9d53ce5355c64253a34536ccd960c846bf095096",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 119,
+      "doc": {
+        "id": "32_Q3",
+        "question": "What is 1\u00f72 + 1\u00f73 in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "division_symbol",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is 1\u00f72 + 1\u00f73 in simplified form?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To simplify the expression \\( \\frac{1}{2} + \\frac{1}{3} \\), we need to find a common denominator for the two fractions. The denominators are 2 and 3."
+        ]
+      ],
+      "filtered_resps": [
+        "To simplify the expression \\( \\frac{1}{2} + \\frac{1}{3} \\), we need to find a common denominator for the two fractions. The denominators are 2 and 3."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "929670b51ba9db96f89b9508a4e420ce6579674614aa36a7fabd95710290e2e2",
+      "prompt_hash": "7a66038d9ecd8fbf128ee7f0d9792ec08c396d2257aefc5123b8782f856725d8",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 120,
+      "doc": {
+        "id": "32_Q4",
+        "question": "What is (1/2) + (1/3) in simplified form?",
+        "answer": "5/6",
+        "all_targets": [
+          "5/6",
+          "\u215a",
+          "five sixths",
+          "five-sixths",
+          "0.833...",
+          "approximately 0.833",
+          "0.83"
+        ],
+        "tokenization_type": "parentheses_fraction",
+        "category": "Mathematical Expressions",
+        "title": "Fraction Notation",
+        "set_id": "32"
+      },
+      "target": [
+        "5/6",
+        "\u215a",
+        "five sixths",
+        "five-sixths",
+        "0.833...",
+        "approximately 0.833",
+        "0.83"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is (1/2) + (1/3) in simplified form?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To simplify the expression \\(\\frac{1}{2} + \\frac{1}{3}\\), we need to find a common denominator for the two fractions. The denominators are 2 and 3."
+        ]
+      ],
+      "filtered_resps": [
+        "To simplify the expression \\(\\frac{1}{2} + \\frac{1}{3}\\), we need to find a common denominator for the two fractions. The denominators are 2 and 3."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "3d891f75f1415da705e4c3ce8f4faab922327312e7e34f0151bb7b3a9ef00aba",
+      "prompt_hash": "5c69b790237a843d947a8622d417acbf8027064b3ce4dc2712f28c094ff644a0",
+      "target_hash": "7a656ac2a041a49bc16e985ffce027f62035c7b604a43a30d3c15f6b1e0d78b4",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 121,
+      "doc": {
+        "id": "33_Q1",
+        "question": "What is the decimal value of the hexadecimal number 1A?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "uppercase_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the decimal value of the hexadecimal number 1A?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The decimal (base-10) value of the hexadecimal number 1A is 26."
+        ]
+      ],
+      "filtered_resps": [
+        "The decimal (base-10) value of the hexadecimal number 1A is 26."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "a7d9882be5ef42cb255ad6f6b9af52d3d0bb909a02e589a7ca01afb021e11339",
+      "prompt_hash": "8215b258a2ea8622e2172bae003c36da6b2362c6b35021c45889d044bb712ba0",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 122,
+      "doc": {
+        "id": "33_Q2",
+        "question": "What is the decimal value of the hexadecimal number 1a?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "lowercase_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the decimal value of the hexadecimal number 1a?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The decimal (base-10) value of the hexadecimal number 1a is 26."
+        ]
+      ],
+      "filtered_resps": [
+        "The decimal (base-10) value of the hexadecimal number 1a is 26."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "e1fea8977b4601f602ace1eda81532a878994db847dc5b316e203296aa49942b",
+      "prompt_hash": "42dec6c21f3729fd0c91cbdde671b4a6ec8bdb56e2ef6b879ce9f7ecc6bf82f7",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 1.0
+    },
+    {
+      "doc_id": 123,
+      "doc": {
+        "id": "33_Q3",
+        "question": "What is the decimal value of the hexadecimal number 0x1A?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "c_style_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the decimal value of the hexadecimal number 0x1A?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The decimal value of the hexadecimal number \\(0x1A\\) can be calculated as follows:"
+        ]
+      ],
+      "filtered_resps": [
+        "The decimal value of the hexadecimal number \\(0x1A\\) can be calculated as follows:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "429cd653a2a1bea778be714b65ce436718d02f8c244825637ddc6bfa7a830d01",
+      "prompt_hash": "5f3407f5a4d2e5ce904a018ce7c7f86ba6776a767a6261aa8810d32b11e80303",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 124,
+      "doc": {
+        "id": "33_Q4",
+        "question": "What is the decimal value of the hexadecimal number #1A?",
+        "answer": "26",
+        "all_targets": [
+          "26",
+          "twenty-six",
+          "twenty six"
+        ],
+        "tokenization_type": "web_color_hex",
+        "category": "Number Formatting",
+        "title": "Hexadecimal Numbers",
+        "set_id": "33"
+      },
+      "target": [
+        "26",
+        "twenty-six",
+        "twenty six"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the decimal value of the hexadecimal number #1A?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The hexadecimal number #1A corresponds to the decimal value 32 in binary (base-2). This can be derived from the fact that each digit in a hexadecimal number represents a power of 2, and the corresponding digits represent powers of 20 (since there are 4 digits)."
+        ]
+      ],
+      "filtered_resps": [
+        "The hexadecimal number #1A corresponds to the decimal value 32 in binary (base-2). This can be derived from the fact that each digit in a hexadecimal number represents a power of 2, and the corresponding digits represent powers of 20 (since there are 4 digits)."
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "822b6bfae487ce491d87b177ee9c0f323c07e9e13ef0901888906544b90925ac",
+      "prompt_hash": "0b996877cfc1cc6b183cd51ad498a4f0f65c3cb00732e89a348bbfc9fb9818e6",
+      "target_hash": "063d00b32e7d7439ab935f4571e337fac302f3262867a644d46873177435db7a",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 125,
+      "doc": {
+        "id": "34_Q1",
+        "question": "What is the determinant of the matrix [[1, 2], [3, 4]]?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "bracket_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the determinant of the matrix [[1, 2], [3, 4]]?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The determinant of a 2x2 matrix \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) is calculated using the formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "The determinant of a 2x2 matrix \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) is calculated using the formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "08703c31ce7fc79c2b96fd2fab08f7489454da994053179b814a040e6dbb8952",
+      "prompt_hash": "8e1bff5c4a951571365efb92655ce9a143ca76e31698253586dead96b05c6da3",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 126,
+      "doc": {
+        "id": "34_Q2",
+        "question": "What is the determinant of the matrix \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "latex_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the determinant of the matrix \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The determinant of a \\(2 \\times 2\\) matrix \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) is calculated using the formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "The determinant of a \\(2 \\times 2\\) matrix \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) is calculated using the formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "f1c4289bed7c26e1d71c33ec97c7762c557c0d1c6c3b9b639dd37a890e4cbb87",
+      "prompt_hash": "d16f0a19663052be6635f9bedf7342155e9cbf18db280a1a3f413cff97c4f73c",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 127,
+      "doc": {
+        "id": "34_Q3",
+        "question": "What is the determinant of the matrix | 1 2 | | 3 4 |?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "pipe_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the determinant of the matrix | 1 2 | | 3 4 |?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "The determinant of a 2x2 matrix \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) is calculated using the formula:"
+        ]
+      ],
+      "filtered_resps": [
+        "The determinant of a 2x2 matrix \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) is calculated using the formula:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "ded6aa9344ec148e6fdf9b709be1aa837f560dd69fd1e4c2d6c660b8494376b5",
+      "prompt_hash": "0453c8825dd76794316ca2ff0a8e0243a179752794b5e34e6914bc38c5a1ddff",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
+    },
+    {
+      "doc_id": 128,
+      "doc": {
+        "id": "34_Q4",
+        "question": "What is the determinant of the 2x2 matrix with entries a11=1, a12=2, a21=3, a22=4?",
+        "answer": "-2",
+        "all_targets": [
+          "-2",
+          "negative 2",
+          "minus 2"
+        ],
+        "tokenization_type": "subscript_notation",
+        "category": "Mathematical Expressions",
+        "title": "Matrix Notation",
+        "set_id": "34"
+      },
+      "target": [
+        "-2",
+        "negative 2",
+        "minus 2"
+      ],
+      "arguments": [
+        [
+          "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the determinant of the 2x2 matrix with entries a11=1, a12=2, a21=3, a22=4?<|im_end|>\n<|im_start|>assistant\n",
+          {
+            "temperature": 0.0,
+            "do_sample": false,
+            "until": [
+              "\n",
+              "</s>",
+              "<|im_end|>"
+            ]
+          }
+        ]
+      ],
+      "resps": [
+        [
+          "To find the determinant of a 2x2 matrix \\(\\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}\\), we use the formula for the determinant:"
+        ]
+      ],
+      "filtered_resps": [
+        "To find the determinant of a 2x2 matrix \\(\\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}\\), we use the formula for the determinant:"
+      ],
+      "filter": "basic-extraction",
+      "metrics": [
+        "exact_match",
+        "multi_target_match"
+      ],
+      "doc_hash": "cc6035a2510ee9ccfad09fd0f600a21f0881b3e2ceef3ee93d986fae2c53ef0a",
+      "prompt_hash": "e81c6df5b2bff4e07394fb97b0e30e34270138d818d28376d2ccc0fc2af6aa75",
+      "target_hash": "292de88035832eded041fe092037d262b1501b8251734880c9d15b42a947568c",
+      "exact_match": 0.0,
+      "multi_target_match": 0.0
     }
   ]
 }

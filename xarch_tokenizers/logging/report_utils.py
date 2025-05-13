@@ -89,10 +89,9 @@ def load_predictions(
                     "prompt": pred_["arguments"][0][0],
                     "resp": pred_["resps"][0][0],
                     "filtered_resps": pred_["filtered_resps"][0],
-                    # "exact_match": pred_["exact_match"],
                 }
+                | {doc_arg: pred_["doc"][doc_arg] for doc_arg in additional_docs}
                 | {metric: pred_[metric] for metric in metrics}
-                | {arg: pred_["doc"][arg] for arg in additional_docs}
                 for pred_ in task_preds
                 if filters is None or pred_["filter"] in filters
             ]
