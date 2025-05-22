@@ -141,7 +141,7 @@ class TokenMonsterTokenizer(Tokenizer):
     def info(self):
         return {
             "backend": "tokenmonster",
-            "name": name.split("/")[1]
+            "name": self.name.split("/")[1]
         }
 
     def get_token(self, i):
@@ -283,7 +283,7 @@ def main(args):
             logging.info("Saving vocab for %s to '%s'", name, d)
             json.dump(vocab, wf)
 
-        with open(d := os.path.join(args.output_dir, f"{name.repalce('/', '--')}_info.json"), "w") as wf:
+        with open(d := os.path.join(args.output_dir, f"{name.replace('/', '--')}_info.json"), "w") as wf:
             logging.info("Saving tokenizer info for %s to '%s'", name, d)
             json.dump(tokenizers[name].info(), wf)
 
