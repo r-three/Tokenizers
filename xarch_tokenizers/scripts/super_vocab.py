@@ -5,6 +5,7 @@ Load tiktoken with tiktoken/${model-name}
 """
 
 import argparse
+import collections
 import functools
 import json
 import operator as op
@@ -19,7 +20,7 @@ from xarch_tokenizers.models import load_tokenizer as hf_load_tokenizer
 from xarch_tokenizers.utils import system
 
 
-Vocab = dict[str, int]
+Vocab = dict[str, list[int]]
 
 parser = argparse.ArgumentParser(description="Create a Super Vocab of all vocabs.")
 parser.add_argument("--tokenizers", required=True, nargs="+")
@@ -65,14 +66,27 @@ class HFTokenizer(Tokenizer):
 
     def get_token(self, i):
         if "byt5" in self.name:
-            return self.tokenizer.decode([i])
+            token = self.tokenizer.convert_ids_to_tokens(i)
+            # We are a special value.
+            if len(token) > 1:
+                return token
+            as_int = ord(token)
+            as_bytes = bytes([as_int])
+            try:
+                return as_bytes.decode("utf-8")
+            except UnicodeDecodeError:
+                return as_int # as_bytes
         t = self.tokenizer.id_to_token(i)
-        t = real_unicode(t)
-        # Replace whitespace handling with actual whitespace.
-        t = t.replace("▁", " ")
-        # Remove Wordpiece continuations
-        t = re.sub(r"##([^#])", r"\1", t)
-        return t
+        if isinstance(self.tokenizer.model, tokenizers.models.WordPiece):
+            # If it is not a continuation character, then it is the start of a word. Other tokenizers start the word with a subword token that has a space to start.
+            if not t.startswith("##"):
+                return f" {t}"
+            return re.sub(r"##([^#])", r"\1", t)
+        if isinstance(self.tokenizer.model, tokenizers.models.Unigram) or any(n in self.name for n in ("gemma", "Phi-3", "Mistral-7B-Instruct-v0.3")):
+            # Replace whitespace handling with actual whitespace.
+            return t.replace("▁", " ")
+        # BPE models.
+        return real_unicode(t)
 
     @classmethod
     def load(cls, name):
@@ -91,14 +105,13 @@ class HFTokenizer(Tokenizer):
 class TikTokenTokenizer(Tokenizer):
 
     def get_token(self, i):
-        b = self.tokenizer.decode_single_token_bytes(i)
+        try:
+            b = self.tokenizer.decode_single_token_bytes(i)
+        except KeyError:
+            return f"~~~~~undefined {i}~~~~~~"
         return b.decode("latin-1")
 
     def get_vocab_size(self):
-        if "gpt-4o" in self.name:
-            return 199998
-        if "gpt-4" in self.name:
-            return 100256
         return self.tokenizer.n_vocab
 
     @classmethod
@@ -180,12 +193,36 @@ def real_unicode(word: str) -> str:
 
 
 def make_vocab(tok: Tokenizer) -> Vocab:
-    return {tok.get_token(i): i for i in range(tok.get_vocab_size())}
+    # Track multiple values because tekken and tokenmonster are weird
+    vocab = collections.defaultdict(list)
+    for i in range(tok.get_vocab_size()):
+        vocab[tok.get_token(i)].append(i)
+    if len(vocab) != tok.get_vocab_size():
+        logging.error("Built vocab size (%d) does not match declared vocab size (%d) for %s", len(vocab), tok.get_vocab_size(), tok.name)
+    return vocab
+
+
+def to_bytes(s: bytes | str | int) -> bytes:
+    if isinstance(s, str):
+        s = s.encode("utf-8")
+    if isinstance(s, int):
+        s = bytes([s])
+    # Now s is def bytes
+    return s
 
 
 def join_vocabs(vocabs: dict[str, Vocab]) -> Vocab:
     joint = functools.reduce(op.or_, [v.keys() for v in vocabs.values()])
-    return {s: i for i, s in enumerate(sorted(joint))}
+    return {s: i for i, s in enumerate(sorted(joint, key=to_bytes))}
+
+
+def align_to_super(super_vocab, model_vocab):
+    alignment = {}
+    for piece, idxs in model_vocab.items():
+        super_idx = super_vocab[piece]
+        for i in idxs:
+            alignment[i] = super_idx
+    return alignment
 
 
 def main(args):
@@ -213,7 +250,7 @@ def main(args):
         # Replace / with -- like the huggingface caching code does.
         with open(d := os.path.join(args.output_dir, f"{name.replace('/', '--')}_super_mapping.json"), "w") as wf:
             logging.info("Saving vocab mapping for %s to '%s'", name, d)
-            json.dump({i: super_vocab[s] for s, i in vocab.items()}, wf)
+            json.dump(align_to_super(super_vocab, vocab), wf)
 
         with open(d := os.path.join(args.output_dir, f"{name.replace('/','--')}_vocab.json"), "w") as wf:
             logging.info("Saving vocab for %s to '%s'", name, d)
