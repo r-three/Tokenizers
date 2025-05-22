@@ -20,4 +20,4 @@ apply_chat_template: true
 load_existing: false
 save_dir: results/tokenization_robustness/Qwen2.5-0.5B-Instruct/
 
-# sbatch -p a40 --time 120 --gres=gpu:a40:1 --wrap="python xarch-tokenizers/eval.py xarch-tokenizers/configs/tokenization_robustness/eval_qwen_05B.yaml "
+# sbatch -p a40 --time 120 --gres=gpu:a40:1 --wrap="python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_robustness/eval_qwen_05B.yaml "
