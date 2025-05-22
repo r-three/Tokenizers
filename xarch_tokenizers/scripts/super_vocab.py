@@ -46,6 +46,9 @@ class Tokenizer:
     def get_token(self, i):
         raise NotImplementedError
 
+    def info(self):
+        raise NotImplementedError
+
     @classmethod
     def load(cls, name):
         if name.startswith("tokenmonster"):
@@ -58,6 +61,12 @@ class Tokenizer:
 
 
 class HFTokenizer(Tokenizer):
+
+    def info(self):
+        return {
+            "backend": "huggingface",
+            "name": self.name
+        }
 
     def get_vocab_size(self):
         if "byt5" in self.name:
@@ -104,6 +113,12 @@ class HFTokenizer(Tokenizer):
 
 class TikTokenTokenizer(Tokenizer):
 
+    def info(self):
+        return {
+            "backend": "tiktoken",
+            "name": self.name.split("/")[1]
+        }
+
     def get_token(self, i):
         try:
             b = self.tokenizer.decode_single_token_bytes(i)
@@ -123,6 +138,12 @@ class TikTokenTokenizer(Tokenizer):
 
 class TokenMonsterTokenizer(Tokenizer):
 
+    def info(self):
+        return {
+            "backend": "tokenmonster",
+            "name": name.split("/")[1]
+        }
+
     def get_token(self, i):
         return self.tokenizer.id_to_token(i)
 
@@ -137,6 +158,12 @@ class TokenMonsterTokenizer(Tokenizer):
 
 
 class MistralTokenizer(Tokenizer):
+
+    def info(self):
+        return {
+            "backend": "tekken",
+            "name": "tekken"
+        }
 
     def get_token(self, i):
         return self.tokenizer.id_to_piece(i)
@@ -255,6 +282,10 @@ def main(args):
         with open(d := os.path.join(args.output_dir, f"{name.replace('/','--')}_vocab.json"), "w") as wf:
             logging.info("Saving vocab for %s to '%s'", name, d)
             json.dump(vocab, wf)
+
+        with open(d := os.path.join(args.output_dir, f"{name.repalce('/', '--')}_info.json"), "w") as wf:
+            logging.info("Saving tokenizer info for %s to '%s'", name, d)
+            json.dump(tokenizers[name].info(), wf)
 
 
 if __name__ == "__main__":
