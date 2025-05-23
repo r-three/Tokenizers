@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description="Create a checkpoint for a specific
 parser.add_argument("--tokenizers", required=True, nargs="+")
 parser.add_argument("--vocab_dir", default="vocabs")
 parser.add_argument("--model_dir", default="models")
-parser.add_argument("--superset", default="models/superset.pt")
+parser.add_argument("--superset", default="models/superset.pth")
 parser.add_argument("--embedding_layer", default="tok_embeddings.weight")
 parser.add_argument("--output_layer", default="output.weight")
 
@@ -52,8 +52,8 @@ def main(args):
         new_model[args.embedding_layer] = new_embedding
         new_model[args.output_layer] = new_output
 
-        os.makedirs(args.model_dir, exist_ok=True)
-        checkpoint = os.path.join(args.model_dir, f"{tokenizer.replace('/', '--')}.pt")
+        checkpoint = os.path.join(args.model_dir, f"supervocab-{tokenizer.replace('/', '--')}", 'model.pth')
+        os.makedirs(os.path.dirname(checkpoint), exist_ok=True)
         logging.info("Saving model for %s at '%s'", tokenizer, checkpoint)
         torch.save(new_model, checkpoint)
 
