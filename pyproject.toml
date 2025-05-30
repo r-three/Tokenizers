@@ -7,6 +7,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "uv",
+    "setuptools",
     "pip",
     "datasets>=3.3.2",
     "jupyter>=1.1.1",
@@ -19,7 +20,8 @@ dependencies = [
     "transformers>=4.45.2",
     "vllm>=0.6.1.post2",
     "wandb>=0.19.8",
-    "plotly==5.13.1"
+    "plotly==5.13.1",
+    "seaborn>=0.13.2",
 ]
 
 [build-system]
@@ -35,12 +37,12 @@ packages = ["xarch_tokenizers"]
 build = ["torch", "setuptools", "packaging"]
 compile = ["flash-attn"]
 mergekit = ["mergekit"]
-zett = [ "jax==0.5.2", "jaxlib==0.5.1", "optax==0.2.4", "flax==0.10.4", "chex", "zett" ]
+# zett = [ "jax==0.5.2", "jaxlib==0.5.1", "optax==0.2.4", "flax==0.10.4", "chex", "zett" ]
 dev = [  "ruff", "pytest" ]
 
 
 [tool.uv]
-no-build-isolation-package = ["flash-attn", "xformers", "vllm"]
+no-build-isolation-package = ["flash-attn", "xformers"]
 
 [[tool.uv.dependency-metadata]]
 name = "flash-attn"
@@ -48,7 +50,7 @@ version = "2.4.1"
 requires-dist = ["torch", "einops", "setuptools"]
 
 [tool.uv.sources]
-lm-eval = { git = "https://github.com/EleutherAI/lm-evaluation-harness.git" }
+lm-eval = { git = "https://github.com/r-three/lm-evaluation-harness", branch="multilingual-tiny-benchmarks"}
 mergekit = { git = "https://github.com/arcee-ai/mergekit.git" }
 zett = { git = "https://github.com/bminixhofer/zett.git" }
 
