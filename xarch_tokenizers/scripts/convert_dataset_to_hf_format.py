@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Tokenization Variant Test Converter
+Tokenization Robustness Dataset Test Converter
 
-This script converts the structured tokenization variant test set into a format
+This script converts the structured tokenization robustness dataset test set into a format
 that is directly compatible with lm-evaluation-harness.
+It creates parquet files and creates corresponding yaml files in the lm_eval directory
 ## TODO: upload to hf
 """
 
@@ -39,14 +40,6 @@ from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING
 from xarch_tokenizers.utils.utils import find_package_dir
 
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
-## this allows us to preserve key order when dumping task configs
-# yaml.add_representer(
-#     OrderedDict,
-#     lambda dumper, data: dumper.represent_mapping(
-#         "tag:yaml.org,2002:map", data.items()
-#     ),
-# )
-
 # Usage:
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py --dataset_path data/custom_dataset.json --output_dir data/custom_dataset_hf.json
 

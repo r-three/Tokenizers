@@ -1,0 +1,69 @@
+
+dataset_path: data/v101.csv
+output_dir: data/v101
+separator: "§§§"
+question_field: MMLU-version
+target_field: Correct
+option_fields:
+  - Opt 1
+  - Opt 2
+  - Opt 3
+metadata_fields:
+  subcategories: Subcategory
+  type: MMLU
+  lang: Lang
+  second_lang: 2nd Lang
+  coding_lang: Coding Lang
+  notes: Notes
+create_subset_dirs: true
+subset_by: Category
+# subset_by: Subcategory
+lm_eval_task:
+  dataset_name: tokenizer_robustness
+  task: tokenizer_robustness
+  # group: tokenizer_robustness
+  dataset_path: parquet
+  tag:
+    - tokenizer_robustness
+  output_type: multiple_choice
+  training_split: null
+  validation_split: null
+  doc_to_text:  '{{ question.strip() }}'
+  # doc_to_target: '{{answer_label }}'
+  doc_to_target: "answer"  # Changed from '{{answer_label}}' to field name
+  doc_to_choice: "choices"  # Changed from null to actual field name
+  test_split: test
+  fewshot_split: null
+  num_fewshot: 0
+  metric_list:
+    - metric: acc
+      aggregation: mean
+      higher_is_better: true
+    - metric: acc_norm
+      aggregation: mean
+      higher_is_better: true
+  aggregate_metric_list:
+    - metric: acc
+      aggregation: mean
+      weight_by_size: true
+    - metric: acc_norm
+      aggregation: mean
+      weight_by_size: true
+  metadata:
+    version: "1.0"
+    description: "Tokenization robustness evaluation dataset"
+
+  # It doesn't have a yaml file extension as it is not meant to be imported directly
+  # by the harness.
+
+  target_delimiter: ' '
+  # generation_kwargs:
+  #   until:
+  #     - "\n"
+  #   do_sample: false
+  #   temperature: 0.0
+# subset_args:
+#   include: tiny_xquad_common_yamlAdd commentMore actions
+#   task: tiny_xquad_zh
+#   dataset_name: tiny_xquad.zh
+#   doc_to_text: "语境: {{context}}\n\n问题: {{question}}\n\n回答:"
