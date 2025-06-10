@@ -10,6 +10,7 @@ It creates parquet files and creates corresponding yaml files in the lm_eval dir
 
 import argparse
 import json
+import math
 import os
 import random
 import traceback
@@ -36,12 +37,14 @@ from xarch_tokenizers.experiment_config import load_config
 from xarch_tokenizers.logging.logger import setup_basic_logger, setup_logger
 from xarch_tokenizers.logging.plot_utils import setup_styles
 from xarch_tokenizers.models import load_tokenizer
+from xarch_tokenizers.scripts.upload_dataset_to_hf import HFUploadConfig, upload_dataset
 from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING
 from xarch_tokenizers.utils.utils import find_package_dir
 
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
 # Usage:
-# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py --dataset_path data/custom_dataset.json --output_dir data/custom_dataset_hf.json
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml --upload_to_hf --dataset_name_prefix=""
 
 
 @dataclass
@@ -215,7 +218,7 @@ class LmEvalTaskArgs:
 
 
 @dataclass
-class DatasetConverterConfig(Config):
+class DatasetConverterConfig(HFUploadConfig):
     dataset_path: str = field(
         default=None,
         metadata={"help": "Path to the dataset .json | or csv", "required": True},
@@ -417,17 +420,20 @@ def convert_to_lm_eval_format(
         correct_idx = random.randint(0, len(config.option_fields))
         correct_answer = str(row.get("Correct", "")).strip()
         choices.insert(correct_idx, correct_answer)
-
+        metadata = {
+            opt_field: row[opt_val]
+            if type(row[opt_val]) == str
+            or (type(row[opt_val]) == float and not math.isnan(row[opt_val]))
+            else None
+            for opt_field, opt_val in config.metadata_fields.items()
+        }
         # Create sample in LM Eval format
         sample = {
             "question": question,
             "choices": choices,
             "answer": correct_idx,
             "answer_label": choice_labels[correct_idx],
-            "metadata": {
-                opt_field: opt_val
-                for opt_field, opt_val in config.metadata_fields.items()
-            },
+            "metadata": metadata,
         }
 
         samples.append(sample)
@@ -437,7 +443,6 @@ def convert_to_lm_eval_format(
     output_dir.mkdir(exist_ok=True, parents=True)
     # output_path.mkdir(exist_ok=True, parents=True)
     # output_path = output_path.with_suffix(".arrow")
-
     dataset = Dataset.from_list(samples)
     # Save as Arrow format
     output_path = output_path.with_suffix("")  # Remove any extension
@@ -563,9 +568,11 @@ def main():
     elif config.version == "v1":
         transform_v1(config, logger)
 
+    if config.upload_to_hf:
+        upload_dataset(config.output_dir, config)
+
 
 if __name__ == "__main__":
     main()
 
-# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml
 # lm_eval

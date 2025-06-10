@@ -14,6 +14,7 @@ from huggingface_hub import HfApi, create_repo, login
 from transformers import (
     HfArgumentParser,
 )
+
 from xarch_tokenizers.config import Config
 from xarch_tokenizers.logging.logger import setup_logger
 
@@ -122,7 +123,7 @@ def create_dataset_dict(dataset_dir: Path) -> DatasetDict:
     return dataset_dict
 
 
-def extract_dataset_metadata(
+def extract_dataset_metadata_translation(
     dataset_dir: Path, config: HFUploadConfig
 ) -> Dict[str, Any]:
     """Extract metadata from the dataset directory."""
@@ -198,7 +199,7 @@ def upload_dataset(dataset_dir: Path, config: HFUploadConfig) -> None:
         return
     # TODO: not uploading the readme
     # Extract metadata
-    metadata_info = extract_dataset_metadata(dataset_dir, config)
+    metadata_info = extract_dataset_metadata_translation(dataset_dir, config)
     hf_dataset_name = metadata_info["hf_dataset_name"]
 
     # Determine repo_id based on whether an organization is specified
