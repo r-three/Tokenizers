@@ -15,6 +15,7 @@ import logging
 
 import tokenizers
 import transformers
+import yaml
 
 from xarch_tokenizers.models import load_tokenizer as hf_load_tokenizer
 from xarch_tokenizers.utils import system
@@ -72,10 +73,10 @@ class HFTokenizer(Tokenizer):
         self.bos_str = bos_str
 
     def info(self):
-        return {
-            "backend": "huggingface",
-            "name": self.name
-        }
+        return {"data": {"tokenizer": {
+            "name": "huggingface",
+            "path": self.name
+        }}}
 
     def get_vocab_size(self):
         if "byt5" in self.name:
@@ -132,10 +133,10 @@ class HFTokenizer(Tokenizer):
 class TikTokenTokenizer(Tokenizer):
 
     def info(self):
-        return {
-            "backend": "tiktoken",
-            "name": self.name.split("/")[1]
-        }
+        return {"data": {"tokenizer": {
+            "name": "tiktoken",
+            "path": self.name.split("/")[1]
+        }}}
 
     def get_token(self, i):
         try:
@@ -157,10 +158,10 @@ class TikTokenTokenizer(Tokenizer):
 class TokenMonsterTokenizer(Tokenizer):
 
     def info(self):
-        return {
-            "backend": "tokenmonster",
-            "name": self.name.split("/")[1]
-        }
+        return {"data": {"tokenizer": {
+            "name": "tokenmonster",
+            "path": self.name.split("/")[1]
+        }}}
 
     def get_token(self, i):
         return self.tokenizer.id_to_token(i)
@@ -178,10 +179,10 @@ class TokenMonsterTokenizer(Tokenizer):
 class MistralTokenizer(Tokenizer):
 
     def info(self):
-        return {
-            "backend": "tekken",
-            "name": "tekken"
-        }
+        return {"data": {"tokenizer": {
+            "name": "tekken",
+            "path": "tekken"
+        }}}
 
     def get_token(self, i):
         if i == self.tokenizer.bos_id:
@@ -306,6 +307,10 @@ def main(args):
         with open(d := os.path.join(args.output_dir, f"{name.replace('/', '--')}_info.json"), "w") as wf:
             logging.info("Saving tokenizer info for %s to '%s'", name, d)
             json.dump(tokenizers[name].info(), wf)
+
+        with open(d := os.path.join(args.output_dir, f"{name.replace('/', '--')}.yaml"), "w") as wf:
+            logging.info("Saving tokenizer info for %s to '%s'", name, d)
+            yaml.dump(tokenizers[name].info(), wf)
 
 
 if __name__ == "__main__":
