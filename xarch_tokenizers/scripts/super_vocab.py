@@ -28,6 +28,8 @@ parser.add_argument("--output_dir", default="vocabs")
 
 logging.basicConfig(level=logging.INFO)
 
+ALIGNED_BOS = "~SPECIAL~ALIGNED~BOS~SYMBOL~"
+
 
 class Tokenizer:
     """Tokenizer wrapper that unifies interface."""
@@ -46,6 +48,9 @@ class Tokenizer:
     def get_token(self, i):
         raise NotImplementedError
 
+    def get_bos_str(self):
+        raise NotImplementedError
+
     def info(self):
         raise NotImplementedError
 
@@ -61,6 +66,10 @@ class Tokenizer:
 
 
 class HFTokenizer(Tokenizer):
+
+    def __init__(self, *args, bos_str: str | None = None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.bos_str = bos_str
 
     def info(self):
         return {
@@ -86,6 +95,8 @@ class HFTokenizer(Tokenizer):
             except UnicodeDecodeError:
                 return as_int # as_bytes
         t = self.tokenizer.id_to_token(i)
+        if t == self.bos_str:
+            return ALIGNED_BOS
         if isinstance(self.tokenizer.model, tokenizers.models.WordPiece):
             # If it is not a continuation character, then it is the start of a word. Other tokenizers start the word with a subword token that has a space to start.
             if not t.startswith("##"):
@@ -105,12 +116,19 @@ class HFTokenizer(Tokenizer):
             tok = hf_load_tokenizer(name)
         except:
             tok = transformers.AutoTokenizer.from_pretrained(name)
+        sts = getattr(tok, "special_tokens_map", {})
+        if "bert" in name:
+            bos_str = sts.get("cls_token")
+        elif "t5" in name:
+            bos_str = sts.get("pad_token")
+        else:
+            bos_str = sts.get("bos_token")
         if hasattr(tok, "_tokenizer"):
             tok = tok._tokenizer
-        return cls(name, tok)
+        return cls(name, tok, bos_str=bos_str)
 
 
-
+# Note, GPT4 and GPT4o don't have BOS
 class TikTokenTokenizer(Tokenizer):
 
     def info(self):
@@ -166,6 +184,8 @@ class MistralTokenizer(Tokenizer):
         }
 
     def get_token(self, i):
+        if i == self.tokenizer.bos_id:
+            return ALIGNED_BOS
         return self.tokenizer.id_to_piece(i)
 
     def get_vocab_size(self):
