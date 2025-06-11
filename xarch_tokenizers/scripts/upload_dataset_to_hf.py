@@ -8,6 +8,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import huggingface_hub
 import pandas as pd
 from datasets import Dataset, DatasetDict
 from huggingface_hub import HfApi, create_repo, login
@@ -39,38 +40,34 @@ class HFUploadConfig(Config):
         default=None,
         metadata={"help": "Hugging Face organization (omit for personal account)"},
     )
-
-    dataset_name_prefix: str = field(
-        default="translated-", metadata={"help": "Prefix for dataset names on HF Hub"}
+    dataset_name: str = field(
+        default=None, metadata={"help": "Name of the dataset on HF Hub"}
     )
 
     # Dataset metadata
     dataset_tags: List[str] = field(
-        default_factory=lambda: [
-            "multilingual",
-            "translated",
-            "evaluation",
-            "benchmark",
-        ],
+        default_factory=lambda: [],
         metadata={"help": "Tags for the dataset on HF Hub"},
     )
+    tag: str = field(default=None, metadata={"help": "Tag for the dataset on HF Hub"})
 
     license_name: str = field(
         default="cc-by-sa-4.0", metadata={"help": "License name for the dataset"}
     )
 
-    add_original_dataset_tag: bool = field(
-        default=True, metadata={"help": "Add original dataset as a tag"}
-    )
     # Processing options
     force_upload: bool = field(
         default=False, metadata={"help": "Force upload even if dataset already exists"}
     )
-    upload_all: bool = field(
-        default=False, metadata={"help": "Upload all datasets in the directory"}
+    upload_individually: bool = field(
+        default=False, metadata={"help": "Upload datasets individually"}
     )
     private: bool = field(
         default=True, metadata={"help": "Pass false to make the dataset public."}
+    )
+    is_translation: bool = field(
+        default=True,
+        metadata={"help": "Whether the dataset is a translated version of a benchmark"},
     )
 
     def __post_init__(self):
@@ -88,39 +85,61 @@ def load_jsonl_file(filepath: Path) -> List[Dict]:
     return data
 
 
-def create_dataset_dict(dataset_dir: Path) -> DatasetDict:
-    """Create a DatasetDict from JSONL files in the dataset directory."""
+def create_dataset_dict(
+    config: HFUploadConfig, dataset_dir: Path, logger
+) -> DatasetDict:
+    """Create a DatasetDict from parquet|arrow|jsonl|json files in the dataset directory."""
     dataset_dict = DatasetDict()
 
-    # Map file names to dataset splits
-    split_mapping = {
-        "train.jsonl": "train",
-        "validation.jsonl": "validation",
-        "dev.jsonl": "validation",  # Map dev to validation
-        "test.jsonl": "test",
-    }
-
-    # Load each split
-    for filename, split_name in split_mapping.items():
-        filepath = dataset_dir / filename
-        if filepath.exists():
+    for suffix in ["parquet", "arrow", "jsonl", "json"]:
+        files = list(dataset_dir.rglob(f"*.{suffix}"))
+        logger.info(f"Found {len(files)} files with suffix {suffix}")
+        for filepath in files:
+            logger.info(f"Processing file: {filepath}")
+            split_name = filepath.stem
             # Load the data
-            data = load_jsonl_file(filepath)
+            if suffix == "parquet" or suffix == "arrow":
+                data = pd.read_parquet(filepath)
+            elif suffix == "jsonl":
+                data = load_jsonl_file(filepath)
+            elif suffix == "json":
+                data = pd.read_json(filepath)
 
-            # Convert to DataFrame first for easier processing
             df = pd.DataFrame(data)
+            if config.flatten_metadata and "metadata" in df.columns:
+                metadata = data.pop("metadata")
+                for key, value in metadata.items():
+                    data[key] = value
+            import numpy as np
 
+            df.replace(np.nan, "", inplace=True)
             # Create dataset
             dataset = Dataset.from_pandas(df)
-
-            # Add to dataset dict
-            if split_name not in dataset_dict:
-                dataset_dict[split_name] = dataset
-            elif split_name == "validation" and "dev.jsonl" in filename:
-                # If we already have a validation set from validation.jsonl,
-                # and this is from dev.jsonl, rename to dev
-                dataset_dict["dev"] = dataset
+            dataset_dict[split_name] = dataset
+        if len(files) > 0:
+            logger.info(
+                f"Found {len(files)} files with suffix {suffix}, continuing with next directory..."
+            )
+            break
     return dataset_dict
+
+
+def extract_dataset_metadata(
+    dataset_dir: Path, config: HFUploadConfig
+) -> Dict[str, Any]:
+    """Extract metadata for non-translation datasets."""
+    if config.is_translation:
+        return extract_dataset_metadata_translation(dataset_dir, config)
+    dataset_name = (
+        dataset_dir.name if config.dataset_name is None else config.dataset_name
+    )
+    hf_dataset_name = f"{dataset_name}"
+    return {
+        "hf_dataset_name": hf_dataset_name,
+        "metadata": {"original_dataset": dataset_name},
+        "tags": config.dataset_tags,
+        "description": f"This dataset contains the {dataset_name} benchmark.",
+    }
 
 
 def extract_dataset_metadata_translation(
@@ -164,15 +183,12 @@ def extract_dataset_metadata_translation(
     }
 
     # Create human-readable name and description
-    hf_dataset_name = (
-        f"{config.dataset_name_prefix}{dataset_name}-{source_lang}-to-{target_lang}"
-    )
+    hf_dataset_name = f"{dataset_name}-{source_lang}-to-{target_lang}"
 
     # Build tags list
     tags = config.dataset_tags.copy()
     tags.extend([f"source-language-{source_lang}", f"target-language-{target_lang}"])
-    if config.add_original_dataset_tag:
-        tags.append(f"original-{dataset_name}")
+    tags.append(f"original-{dataset_name}")
 
     return {
         "hf_dataset_name": hf_dataset_name,
@@ -182,31 +198,23 @@ def extract_dataset_metadata_translation(
     }
 
 
-def upload_dataset(dataset_dir: Path, config: HFUploadConfig) -> None:
-    """Upload a single dataset to Hugging Face Hub."""
-    print(f"Processing dataset directory: {dataset_dir}")
-
-    # Create Dataset object
-    try:
-        dataset_dict = create_dataset_dict(dataset_dir)
-        if not dataset_dict:
-            print(f"  No valid data files found in {dataset_dir}")
-            return
-
-        print(f"  Created dataset with splits: {list(dataset_dict.keys())}")
-    except Exception as e:
-        print(f"  Failed to create dataset: {e}")
-        return
-    # TODO: not uploading the readme
-    # Extract metadata
-    metadata_info = extract_dataset_metadata_translation(dataset_dir, config)
-    hf_dataset_name = metadata_info["hf_dataset_name"]
-
-    # Determine repo_id based on whether an organization is specified
+def get_repo_id(dataset_name: str, config: HFUploadConfig) -> str:
+    """Generate repository ID based on configuration."""
     if config.hf_organization:
-        repo_id = f"{config.hf_organization}/{hf_dataset_name}"
+        return f"{config.hf_organization}/{dataset_name}"
     else:
-        repo_id = hf_dataset_name
+        username = huggingface_hub.whoami(token=config.hf_token)["name"]
+        return f"{username}/{dataset_name}"
+
+
+def upload_to_hub(
+    dataset_dict: DatasetDict,
+    repo_id: str,
+    config: HFUploadConfig,
+    logger,
+    config_name: str = "default",
+) -> None:
+    """Upload dataset dictionary to Hugging Face Hub."""
 
     print(f"  Preparing to upload to: {repo_id}")
 
@@ -241,21 +249,56 @@ def upload_dataset(dataset_dir: Path, config: HFUploadConfig) -> None:
                 )
     except Exception as e:
         print(f"  Failed to create repository: {e}")
+        logger.error(f"Repository creation failed: {e}")
         return
 
-    # Upload each split
+    # Upload dataset to Hub
     try:
-        # Push dataset to Hub
         dataset_dict.push_to_hub(
             repo_id=repo_id,
             token=config.hf_token,
             private=config.private,
+            config_name=config_name,
             # tags=metadata_info["tags"],
             # license=config.license_name,
         )
+        print(f"  Successfully uploaded dataset to {repo_id}")
 
     except Exception as e:
         print(f"  Failed to upload dataset: {e}")
+        logger.error(f"Dataset upload failed: {e}")
+
+
+def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
+    """Upload dataset with multiple subsets from subdirectories."""
+
+    # Extract base metadata
+    metadata_info = extract_dataset_metadata(dataset_dir, config)
+    base_dataset_name = metadata_info["hf_dataset_name"]
+    repo_id = get_repo_id(base_dataset_name, config)
+
+    for subset_dir in dataset_dir.iterdir():
+        subset_name = subset_dir.name
+        print(f"  Processing subset: {subset_name}")
+
+        try:
+            # Create dataset for this subset
+            subset_dataset_dict = create_dataset_dict(config, subset_dir, logger)
+            if not subset_dataset_dict:
+                print(f"    No valid data files found in subset {subset_name}")
+                continue
+            if config.upload_individually:
+                upload_to_hub(subset_dataset_dict, repo_id, config, logger, "default")
+            else:
+                upload_to_hub(subset_dataset_dict, repo_id, config, logger, subset_name)
+
+        except Exception as e:
+            print(f"    Failed to process subset {subset_name}: {e}")
+            logger.error(f"Error processing subset {subset_name}: {e}")
+            continue
+    if config.tag:
+        huggingface_hub.card
+        huggingface_hub.create_tag(repo_id, tag=config.tag, repo_type="dataset")
 
 
 def upload():
@@ -267,7 +310,6 @@ def upload():
         print(
             "No HF_TOKEN provided. Please set the HF_TOKEN environment variable or use --hf_token"
         )
-        # return
     login(token=config.hf_token)
 
     # Setup logger
@@ -280,22 +322,13 @@ def upload():
         print(f"Input directory {input_dir_path} does not exist")
         return
 
-    if config.upload_all:
-        # Process all subdirectories
+    if config.upload_individually:
+        # Process all subdirectories and upload them as individual datasets
         dataset_dirs = [d for d in input_dir_path.iterdir() if d.is_dir()]
-    elif config.datasets:
-        # Process only specified directories
-        dataset_dirs = [input_dir_path / d for d in config.datasets]
+        for dataset_dir in dataset_dirs:
+            upload_dataset(dataset_dir, config, logger)
     else:
-        print(
-            "No datasets specified. Use --upload_all or --datasets to specify which datasets to upload"
-        )
-        return
-
-    # Upload each dataset
-    print(f"Found {len(dataset_dirs)} datasets to process")
-    for dataset_dir in dataset_dirs:
-        upload_dataset(dataset_dir, config)
+        upload_dataset(input_dir_path, config, logger)
 
 
 if __name__ == "__main__":
