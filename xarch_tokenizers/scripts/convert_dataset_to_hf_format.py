@@ -44,7 +44,7 @@ from xarch_tokenizers.utils.utils import find_package_dir
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
 # Usage:
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml
-# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml --upload_to_hf --dataset_name_prefix=""
+# python xarch_tokenizers/scripts/upload_dataset_to_hf.py --input_dir=data/v101 --upload_all=true --private=false --is_translation=false  --upload_individually=false
 
 
 @dataclass
@@ -256,6 +256,7 @@ class DatasetConverterConfig(HFUploadConfig):
             "help": "Mapping for metadata, e.g. subcategories: Subcategory will include a subcategory field for each example and place the raw_format['Subcategory'] into that field."
         },
     )
+    flatten_metadata: bool = False
     create_subset_dirs: bool = False
     subset_by: str = None
     lm_eval_task: Optional[LmEvalTaskArgs] = field(
@@ -428,14 +429,17 @@ def convert_to_lm_eval_format(
             for opt_field, opt_val in config.metadata_fields.items()
         }
         # Create sample in LM Eval format
+
         sample = {
             "question": question,
             "choices": choices,
             "answer": correct_idx,
             "answer_label": choice_labels[correct_idx],
-            "metadata": metadata,
         }
-
+        if config.flatten_metadata:
+            sample.update(metadata)
+        else:
+            sample["metadata"] = metadata
         samples.append(sample)
     # TODO: save dev, test, train
     data_files = {}
@@ -569,7 +573,7 @@ def main():
         transform_v1(config, logger)
 
     if config.upload_to_hf:
-        upload_dataset(config.output_dir, config)
+        upload_dataset(config.output_dir, config, logger)
 
 
 if __name__ == "__main__":

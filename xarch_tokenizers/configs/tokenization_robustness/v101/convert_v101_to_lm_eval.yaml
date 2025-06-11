@@ -9,7 +9,40 @@ private: false
 tags:
   - multilingual
   - tokenization
-  
+
+dataset_card:
+  dataset_name: "Tokenization Robustness Dataset"
+  dataset_summary: "A comprehensive evaluation dataset for testing robustness of different tokenization strategies."
+  dataset_description: "This dataset evaluates how robust language models are to different tokenization strategies and edge cases. It includes questions with multiple choice answers designed to test various aspects of tokenization handling."
+  curators: "R3"
+  # languages: "English (en)"
+  # direct_use: "This dataset is intended for evaluating language model robustness to tokenization variations. It can be used for benchmarking models and understanding their sensitivity to input preprocessing."
+  # out_of_scope_use: "This dataset should not be used for training models, as it is specifically designed for evaluation. It may not be suitable for assessing performance on tasks other than tokenization robustness."
+  dataset_structure: "The dataset contains multiple-choice questions with associated metadata about tokenization types and categories."
+  curation_rationale: "Created to address the lack of comprehensive evaluation tools for tokenization robustness in language models."
+  data_collection: "Questions were systematically generated bu humans to cover various tokenization edge cases and strategies."
+  has_annotations: True
+  personal_sensitive_info: "The dataset does not contain personal or sensitive information."
+  bias_risks_limitations: "The dataset focuses primarily on English text and may not generalize to other languages or tokenization schemes not covered in the evaluation."
+  # dataset_card_contact: "gsaltintas@cs.toronto.edu"
+
+
+  # language: None
+  license: cc
+  # annotations_creators: None
+  # language_creators: None
+  multilinguality: multilingual
+  # size_categories: None
+  # source_datasets: None
+  task_categories: 
+    - multiple-choice
+  # task_ids: None
+  # paperswithcode_id: None
+  pretty_name: Tokenization Robustness
+  # train_eval_index: None
+  # config_names: None
+  ignore_metadata_errors: false
+
 
 dataset_path: data/v101.csv
 output_dir: data/v101
