@@ -5,40 +5,26 @@ Tokenization Robustness Dataset Test Converter
 This script converts the structured tokenization robustness dataset test set into a format
 that is directly compatible with lm-evaluation-harness.
 It creates parquet files and creates corresponding yaml files in the lm_eval directory
-## TODO: upload to hf
 """
 
-import argparse
 import json
 import math
-import os
 import random
 import traceback
-from collections import Counter, OrderedDict
-from dataclasses import asdict, dataclass, field, fields
+from collections import OrderedDict
+from dataclasses import dataclass, field, fields
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Union
 
-import lm_eval
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pyarrow as pa
-import seaborn as sns
-import torch
 import yaml
 from datasets import Dataset
 
 # For tokenizer loading
-from transformers import AutoTokenizer
-
-from xarch_tokenizers.config import Config
 from xarch_tokenizers.experiment_config import load_config
-from xarch_tokenizers.logging.logger import setup_basic_logger, setup_logger
-from xarch_tokenizers.logging.plot_utils import setup_styles
-from xarch_tokenizers.models import load_tokenizer
+from xarch_tokenizers.logging.logger import setup_logger
 from xarch_tokenizers.scripts.upload_dataset_to_hf import HFUploadConfig, upload_dataset
-from xarch_tokenizers.utils.system import VECTOR_HF_MAPPING
 from xarch_tokenizers.utils.utils import find_package_dir
 
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
@@ -223,6 +209,10 @@ class DatasetConverterConfig(HFUploadConfig):
         default=None,
         metadata={"help": "Path to the dataset .json | or csv", "required": True},
     )
+    dataset_format: Literal["json", "jsonl", "arrow", "parquet"] = field(
+        default="parquet",
+        metadata={"help": "Format of the dataset"},
+    )
     output_dir: Optional[str] = field(
         default=None, metadata={"help": "Out path for writing the pivoted datasets"}
     )
@@ -255,6 +245,10 @@ class DatasetConverterConfig(HFUploadConfig):
         metadata={
             "help": "Mapping for metadata, e.g. subcategories: Subcategory will include a subcategory field for each example and place the raw_format['Subcategory'] into that field."
         },
+    )
+    split_field: str = field(
+        default="split",
+        metadata={"help": "Name of the field containing the split."},
     )
     flatten_metadata: bool = False
     create_subset_dirs: bool = False
@@ -403,6 +397,7 @@ def convert_to_lm_eval_format(
     """Convert dataset to LM Evaluation Harness format."""
 
     samples = []
+    df.replace(np.nan, "", inplace=True)
 
     for idx, row in df.iterrows():
         # Extract question and choices
@@ -428,36 +423,40 @@ def convert_to_lm_eval_format(
             else None
             for opt_field, opt_val in config.metadata_fields.items()
         }
-        # Create sample in LM Eval format
-
+        split = row.get(config.split_field, "test")
+        if split == "":
+            split = "test"
         sample = {
             "question": question,
             "choices": choices,
             "answer": correct_idx,
             "answer_label": choice_labels[correct_idx],
+            "split": split,
         }
         if config.flatten_metadata:
             sample.update(metadata)
         else:
             sample["metadata"] = metadata
         samples.append(sample)
-    # TODO: save dev, test, train
-    data_files = {}
-    output_path = output_dir / "test"
-    output_dir.mkdir(exist_ok=True, parents=True)
-    # output_path.mkdir(exist_ok=True, parents=True)
-    # output_path = output_path.with_suffix(".arrow")
-    dataset = Dataset.from_list(samples)
-    # Save as Arrow format
-    output_path = output_path.with_suffix("")  # Remove any extension
-    # dataset.save_to_disk(str(output_path))
-    # data_files["test"] = [p.absolute().as_posix() for p in output_path.rglob("*.arrow")]
-
-    output_path = output_path.with_suffix(".parquet")  # Remove any extension
-    dataset.to_parquet(str(output_path))
-    data_files["test"] = [
-        p.absolute().as_posix() for p in output_dir.rglob("*.parquet")
-    ]
+    samples = pd.DataFrame(samples)
+    for split in samples["split"].unique():
+        data_files = {}
+        output_path = output_dir / split
+        output_path.mkdir(exist_ok=True, parents=True)
+        dataset = Dataset.from_pandas(samples[samples["split"] == split], split=split)
+        # dataset = Dataset.from_list(samples[samples["split"] == split])
+        output_path = output_path.with_suffix("")  # Remove any extension
+        dataset.save_to_disk(str(output_path))
+        data_files[split] = [
+            p.absolute().as_posix()
+            for p in output_path.rglob(f".{config.dataset_format}")
+        ]
+        ## TODO: save as other formats
+        output_path = output_path.with_suffix(".parquet")
+        dataset.to_parquet(str(output_path))
+        data_files["test"] = [
+            p.absolute().as_posix() for p in output_dir.rglob("*.parquet")
+        ]
 
     logger.info(f"Converted {len(samples)} samples to {output_path}")
     return samples, data_files
@@ -482,7 +481,6 @@ def transform_v1(config: DatasetConverterConfig, logger):
         update_args=config.lm_eval_task.export_dict()
         | {
             "dataset_name": None,
-            # "group": f"{config.lm_eval_task.dataset_name}",
         },
     )
     if config.create_subset_dirs:

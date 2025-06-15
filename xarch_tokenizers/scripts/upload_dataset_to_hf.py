@@ -45,10 +45,6 @@ class HFUploadConfig(Config):
     )
 
     # Dataset metadata
-    dataset_tags: List[str] = field(
-        default_factory=lambda: [],
-        metadata={"help": "Tags for the dataset on HF Hub"},
-    )
     tag: str = field(default=None, metadata={"help": "Tag for the dataset on HF Hub"})
 
     license_name: str = field(
@@ -182,7 +178,7 @@ def extract_dataset_metadata_translation(
     hf_dataset_name = f"{dataset_name}-{source_lang}-to-{target_lang}"
 
     # Build tags list
-    tags = config.dataset_tags.copy()
+    tags = config.tags.copy()
     tags.extend([f"source-language-{source_lang}", f"target-language-{target_lang}"])
     tags.append(f"original-{dataset_name}")
 
@@ -222,6 +218,7 @@ def create_dataset_card(
         train_eval_index=config.dataset_card.get("train_eval_index"),
         config_names=config_names or config.dataset_card.get("config_names"),
         ignore_metadata_errors=config.dataset_card.get("ignore_metadata_errors"),
+        tags=config.tags,
     )
     return DatasetCard.from_template(data, **config.dataset_card)
 
@@ -237,6 +234,27 @@ def upload_to_hub(
 
     print(f"  Preparing to upload to: {repo_id}")
 
+    # Upload dataset to Hub
+    try:
+        dataset_dict.push_to_hub(
+            repo_id=repo_id,
+            token=config.hf_token,
+            private=config.private,
+            config_name=config_name,
+            commit_message=f"Uploading {config_name} subset",
+        )
+        print(f"  Successfully uploaded dataset to {repo_id}")
+
+    except Exception as e:
+        print(f"  Failed to upload dataset: {e}")
+        logger.error(f"Dataset upload failed: {e}")
+
+
+def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
+    """Upload dataset with multiple subsets from subdirectories."""
+    # Extract base metadata
+    base_dataset_name = get_dataset_name(dataset_dir, config)
+    repo_id = get_repo_id(base_dataset_name, config)
     api = HfApi()
     try:
         # Check if repo exists
@@ -250,30 +268,10 @@ def upload_to_hub(
             token=config.hf_token,
             exist_ok=True,
         )
-
-    # Upload dataset to Hub
-    try:
-        dataset_dict.push_to_hub(
-            repo_id=repo_id,
-            token=config.hf_token,
-            private=config.private,
-            config_name=config_name,
-        )
-        print(f"  Successfully uploaded dataset to {repo_id}")
-
-    except Exception as e:
-        print(f"  Failed to upload dataset: {e}")
-        logger.error(f"Dataset upload failed: {e}")
-
-
-def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
-    """Upload dataset with multiple subsets from subdirectories."""
-
-    # Extract base metadata
-    base_dataset_name = get_dataset_name(dataset_dir, config)
-    repo_id = get_repo_id(base_dataset_name, config)
     config_names = []
 
+    card = create_dataset_card(config, config_names)
+    card.push_to_hub(repo_id, token=config.hf_token)
     for subset_dir in dataset_dir.iterdir():
         subset_name = subset_dir.name
         print(f"  Processing subset: {subset_name}")
@@ -288,21 +286,12 @@ def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
                 upload_to_hub(subset_dataset_dict, repo_id, config, logger, "default")
             else:
                 upload_to_hub(subset_dataset_dict, repo_id, config, logger, subset_name)
-            # config_names.append(subset_name)
+            config_names.append(subset_name)
         except Exception as e:
             print(f"    Failed to process subset {subset_name}: {e}")
             logger.error(f"Error processing subset {subset_name}: {e}")
             continue
-        config_dict = {
-            "config_name": subset_name,
-            "data_files": f"{subset_name}/*.parquet",  # Adjust path as needed
-            "description": f"Configuration for {subset_name.replace('_', ' ').title()} subset",
-        }
-        config_names.append(config_dict)
-    # card = create_dataset_card(config, config_names)
-    configs = [{"config_name": name} for name in config_names]
-    card = create_dataset_card(config, config_names)
-    card.push_to_hub(repo_id, token=config.hf_token)
+
     if config.tag:
         huggingface_hub.create_tag(
             repo_id, tag=config.tag, repo_type="dataset", exist_ok=True

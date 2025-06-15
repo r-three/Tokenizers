@@ -226,3 +226,9 @@ ENV/
 
 *.png
 *.pdf
+*.parquet
+*.arrow
+*.jsonl
+*.json
+*.csv
+*.txt
