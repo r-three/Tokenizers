@@ -29,6 +29,7 @@ from xarch_tokenizers.utils.utils import find_package_dir
 
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
 # Usage:
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v102_to_lm_eval.yaml
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml
 # python xarch_tokenizers/scripts/upload_dataset_to_hf.py --input_dir=data/v101 --upload_all=true --private=false --is_translation=false  --upload_individually=false
 
@@ -222,6 +223,12 @@ class DatasetConverterConfig(HFUploadConfig):
             "help": "If the provided dataset_path is a csv pass the relevant separator."
         },
     )
+    sheet_name: str = field(
+        default="Examples-cleaned",
+        metadata={
+            "help": "If the provided dataset_path is an excel file, pass the relevant sheet name."
+        },
+    )
     version: Literal["v01", "v1"] = field(
         default="v1",
         metadata={
@@ -397,7 +404,7 @@ def convert_to_lm_eval_format(
     """Convert dataset to LM Evaluation Harness format."""
 
     samples = []
-    df.replace(np.nan, "", inplace=True)
+    df = df.replace(np.nan, "")
 
     for idx, row in df.iterrows():
         # Extract question and choices
@@ -413,6 +420,9 @@ def convert_to_lm_eval_format(
             if opt_text and opt_text != "nan":
                 choices.append(opt_text)
 
+        if len(choices) == 0:
+            print(f"Warning: No choices found for row {idx}, skipping")
+            continue
         correct_idx = random.randint(0, len(config.option_fields))
         correct_answer = str(row.get("Correct", "")).strip()
         choices.insert(correct_idx, correct_answer)
@@ -420,12 +430,13 @@ def convert_to_lm_eval_format(
             opt_field: row[opt_val]
             if type(row[opt_val]) == str
             or (type(row[opt_val]) == float and not math.isnan(row[opt_val]))
-            else None
+            else ""
             for opt_field, opt_val in config.metadata_fields.items()
         }
-        split = row.get(config.split_field, "test")
-        if split == "":
+        split = str(row.get(config.split_field, "")).strip()
+        if not split or split.lower() in ["", "nan", "none", "null"]:
             split = "test"
+            print(f"Warning: Split is empty for row {idx}, setting to test")
         sample = {
             "question": question,
             "choices": choices,
@@ -439,33 +450,61 @@ def convert_to_lm_eval_format(
             sample["metadata"] = metadata
         samples.append(sample)
     samples = pd.DataFrame(samples)
-    for split in samples["split"].unique():
-        data_files = {}
-        output_path = output_dir / split
-        output_path.mkdir(exist_ok=True, parents=True)
-        dataset = Dataset.from_pandas(samples[samples["split"] == split], split=split)
-        # dataset = Dataset.from_list(samples[samples["split"] == split])
-        output_path = output_path.with_suffix("")  # Remove any extension
-        dataset.save_to_disk(str(output_path))
-        data_files[split] = [
-            p.absolute().as_posix()
-            for p in output_path.rglob(f".{config.dataset_format}")
-        ]
-        ## TODO: save as other formats
-        output_path = output_path.with_suffix(".parquet")
-        dataset.to_parquet(str(output_path))
-        data_files["test"] = [
-            p.absolute().as_posix() for p in output_dir.rglob("*.parquet")
-        ]
+    print(samples["split"].unique())
+    data_files = {}
+    try:
+        for split in samples["split"].unique():
+            output_path = output_dir / split
+            # output_path.mkdir(exist_ok=True, parents=True)
+            dataset = Dataset.from_pandas(
+                samples[samples["split"] == split], split=split
+            )
+            # dataset = Dataset.from_list(samples[samples["split"] == split])
+            # output_path = output_path.with_suffix("")  # Remove any extension
+            # dataset.save_to_disk(str(output_path))
+            # data_files[split] = [
+            #     p.absolute().as_posix()
+            #     for p in output_path.rglob(f".{config.dataset_format}")
+            # ]
+            ## TODO: save as other formats
+            output_path = output_dir / f"{split}.parquet"
+            # output_path = output_path.with_suffix(".parquet")
+            dataset.to_parquet(str(output_path))
+            data_files[split] = [
+                p.absolute().as_posix() for p in output_dir.rglob(f"{split}*.parquet")
+            ]
+    except Exception as e:
+        print(e)
+        import code
+
+        code.interact(local=locals() | globals())
 
     logger.info(f"Converted {len(samples)} samples to {output_path}")
     return samples, data_files
 
 
+def cleanup_excel(df: pd.DataFrame, config: DatasetConverterConfig):
+    df = df.dropna(subset=[config.question_field])
+    df = df[
+        ~df["Version"]
+        .fillna("")
+        .str.lower()
+        .str.startswith(tuple(["depreceate", "ignore", "maybe", "no"]))
+    ]
+    return df
+
+
 def transform_v1(config: DatasetConverterConfig, logger):
     logger.info(f"Loading data from {config.dataset_path}")
-    df = pd.read_csv(config.dataset_path, sep=config.separator, engine="python")
+    if config.dataset_path.suffix == ".xlsx":
+        df = pd.read_excel(config.dataset_path, sheet_name=config.sheet_name)
+        df = cleanup_excel(df, config)
+    else:
+        df = pd.read_csv(config.dataset_path, sep=config.separator, engine="python")
     logger.info(f"Loaded {len(df)} rows")
+    import code
+
+    code.interact(local=locals() | globals())
 
     # Create output directory
     output_dir = Path(config.output_dir)
@@ -530,6 +569,9 @@ def transform_v1(config: DatasetConverterConfig, logger):
             except:
                 logger.error(f"Error saving subset: {subset}")
                 logger.error(traceback.format_exc())
+                import code
+
+                code.interact(local=locals() | globals())
         group_kwargs = {
             "group": config.lm_eval_task.dataset_name,
             "task": list(added_subsets),
