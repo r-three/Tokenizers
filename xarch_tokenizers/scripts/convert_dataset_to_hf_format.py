@@ -11,7 +11,6 @@ import json
 import math
 import random
 import traceback
-from collections import OrderedDict
 from dataclasses import dataclass, field, fields
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Union
@@ -19,12 +18,17 @@ from typing import Any, Dict, List, Literal, Optional, Union
 import numpy as np
 import pandas as pd
 import yaml
-from datasets import Dataset
+from datasets import Dataset, Features, Value
 
 # For tokenizer loading
 from xarch_tokenizers.experiment_config import load_config
 from xarch_tokenizers.logging.logger import setup_logger
-from xarch_tokenizers.scripts.upload_dataset_to_hf import HFUploadConfig, upload_dataset
+from xarch_tokenizers.scripts.upload_dataset_to_hf import (
+    HFUploadConfig,
+    get_dataset_name,
+    get_repo_id,
+    upload_dataset,
+)
 from xarch_tokenizers.utils.utils import find_package_dir
 
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
@@ -266,6 +270,12 @@ class DatasetConverterConfig(HFUploadConfig):
     _create_experiment_dir: bool = False
 
     upload_to_hf: bool = False
+    lm_eval_local_or_hf: Literal["local", "hf"] = field(
+        default="local",
+        metadata={
+            "help": "Whether to use local files created or HF for LM Evaluation Harness."
+        },
+    )
 
     def __post_init__(self):
         self.dataset_path = Path(self.dataset_path)
@@ -452,8 +462,8 @@ def convert_to_lm_eval_format(
     samples = pd.DataFrame(samples)
     print(samples["split"].unique())
     data_files = {}
-    try:
-        for split in samples["split"].unique():
+    for split in samples["split"].unique():
+        try:
             output_path = output_dir / split
             # output_path.mkdir(exist_ok=True, parents=True)
             dataset = Dataset.from_pandas(
@@ -473,11 +483,11 @@ def convert_to_lm_eval_format(
             data_files[split] = [
                 p.absolute().as_posix() for p in output_dir.rglob(f"{split}*.parquet")
             ]
-    except Exception as e:
-        print(e)
-        import code
+        except Exception as e:
+            print(e)
+            import code
 
-        code.interact(local=locals() | globals())
+            code.interact(local=locals() | globals())
 
     logger.info(f"Converted {len(samples)} samples to {output_path}")
     return samples, data_files
@@ -497,19 +507,29 @@ def cleanup_excel(df: pd.DataFrame, config: DatasetConverterConfig):
 def transform_v1(config: DatasetConverterConfig, logger):
     logger.info(f"Loading data from {config.dataset_path}")
     if config.dataset_path.suffix == ".xlsx":
-        df = pd.read_excel(config.dataset_path, sheet_name=config.sheet_name)
+        df = pd.read_excel(
+            config.dataset_path,
+            sheet_name=config.sheet_name,
+            na_values=["", "null", "NULL"],
+        )
         df = cleanup_excel(df, config)
     else:
-        df = pd.read_csv(config.dataset_path, sep=config.separator, engine="python")
+        df = pd.read_csv(
+            config.dataset_path,
+            sep=config.separator,
+            engine="python",
+            na_values=["", "null", "NULL"],
+        )
     logger.info(f"Loaded {len(df)} rows")
-    import code
-
-    code.interact(local=locals() | globals())
 
     # Create output directory
     output_dir = Path(config.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-
+    update_args = dict(dataset_name=None, dataset_path="parquet")
+    if config.lm_eval_local_or_hf == "hf":
+        update_args["dataset_path"] = get_repo_id(
+            get_dataset_name(config.dataset_path, config), config
+        )
     base_conf_path = create_task_config(
         config,
         logger,
@@ -517,10 +537,7 @@ def transform_v1(config: DatasetConverterConfig, logger):
         # relative_path="",
         config_name=f"{config.lm_eval_task.dataset_name}_base",
         base_dir=True,
-        update_args=config.lm_eval_task.export_dict()
-        | {
-            "dataset_name": None,
-        },
+        update_args=config.lm_eval_task.export_dict() | update_args,
     )
     if config.create_subset_dirs:
         if config.subset_by not in df.columns:
@@ -550,20 +567,23 @@ def transform_v1(config: DatasetConverterConfig, logger):
             # todo upload to hf
             try:
                 samples, data_file_paths = convert_to_lm_eval_format(
-                    config, logger, subset_df, data_path
+                    config,
+                    logger,
+                    subset_df,
+                    data_path,
                 )
+                update_args = {
+                    "task": task_name,
+                    "include": base_conf_path.absolute().as_posix(),
+                }
+                if config.lm_eval_local_or_hf == "local":
+                    update_args["dataset_kwargs"] = {"data_files": data_file_paths}
+                    update_args["dataset_path"] = "parquet"
                 create_task_config(
                     config,
                     logger,
                     task_name=f"{config.lm_eval_task.dataset_name}_{subset}",
-                    update_args=OrderedDict(
-                        {
-                            "task": task_name,
-                            "include": base_conf_path.absolute().as_posix(),
-                            "dataset_kwargs": {"data_files": data_file_paths},
-                            "dataset_path": "parquet",
-                        }
-                    ),
+                    update_args=update_args,
                 )
                 added_subsets.add(task_name)
             except:

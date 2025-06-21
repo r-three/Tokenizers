@@ -10,6 +10,9 @@ tags:
   - multilingual
   - tokenization
 
+lm_eval_local_or_hf: hf
+# lm_eval_local_or_hf: local
+
 dataset_card:
   dataset_name: "Tokenization Robustness Dataset"
   dataset_summary: "A comprehensive evaluation dataset for testing robustness of different tokenization strategies."
