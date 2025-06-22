@@ -70,7 +70,7 @@ class LmEvalTaskArgs:
         default="null", metadata={"help": "split name of val. set, or `null`"}
     )
     test_split: str = field(
-        default="null", metadata={"help": "split name of test set, or `null`"}
+        default=None, metadata={"help": "split name of test set, or `null`"}
     )
 
     # Data processing
@@ -525,7 +525,10 @@ def transform_v1(config: DatasetConverterConfig, logger):
     # Create output directory
     output_dir = Path(config.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    update_args = dict(dataset_name=None, dataset_path="parquet")
+    update_args = dict(
+        dataset_name=None,
+        dataset_path="parquet",
+    )
     if config.lm_eval_local_or_hf == "hf":
         update_args["dataset_path"] = get_repo_id(
             get_dataset_name(config.dataset_path, config), config
@@ -534,7 +537,6 @@ def transform_v1(config: DatasetConverterConfig, logger):
         config,
         logger,
         task_name=config.lm_eval_task.dataset_name,
-        # relative_path="",
         config_name=f"{config.lm_eval_task.dataset_name}_base",
         base_dir=True,
         update_args=config.lm_eval_task.export_dict() | update_args,
@@ -574,15 +576,18 @@ def transform_v1(config: DatasetConverterConfig, logger):
                 )
                 update_args = {
                     "task": task_name,
-                    "include": base_conf_path.absolute().as_posix(),
+                    "include": base_conf_path.name,
                 }
                 if config.lm_eval_local_or_hf == "local":
                     update_args["dataset_kwargs"] = {"data_files": data_file_paths}
                     update_args["dataset_path"] = "parquet"
+                else:
+                    # subset id
+                    update_args["dataset_name"] = subset
                 create_task_config(
                     config,
                     logger,
-                    task_name=f"{config.lm_eval_task.dataset_name}_{subset}",
+                    task_name=task_name,
                     update_args=update_args,
                 )
                 added_subsets.add(task_name)

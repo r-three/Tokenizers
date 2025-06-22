@@ -89,7 +89,7 @@ lm_eval_task:
   doc_to_target: "answer"  # Changed from '{{answer_label}}' to field name
   doc_to_choice: "choices"  # Changed from null to actual field name
   test_split: test
-  fewshot_split: null
+  fewshot_split: dev
   num_fewshot: 0
   metric_list:
     - metric: acc

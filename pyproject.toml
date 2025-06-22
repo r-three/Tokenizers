@@ -9,19 +9,23 @@ dependencies = [
     "uv",
     "setuptools",
     "pip",
-    "datasets>=3.3.2",
+    "datasets>=3.6.0",
     "jupyter>=1.1.1",
     "levenshtein>=0.27.1",
-    "lm-eval>=0.4.8",
+    #"lm-eval>=0.4.8",
+    "lm-eval@git+https://github.com/r-three/lm-evaluation-harness@multilingual-tiny-benchmarks",
     "notebook>=7.3.2",
     "numpy>=1.26.4",
     "scikit-learn>=1.6.1",
     "torch>=2.4.0",
-    "transformers>=4.45.2",
+    "transformers==4.51.3",
     "vllm>=0.6.1.post2",
     "wandb>=0.19.8",
     "plotly==5.13.1",
     "seaborn>=0.13.2",
+    "rich>=14.0.0",
+    "transformer-lens>=2.15.4",
+    "openpyxl>=3.1.5",
 ]
 
 [build-system]
@@ -50,7 +54,7 @@ version = "2.4.1"
 requires-dist = ["torch", "einops", "setuptools"]
 
 [tool.uv.sources]
-lm-eval = { git = "https://github.com/r-three/lm-evaluation-harness", branch="multilingual-tiny-benchmarks"}
+lm-eval = { git = "https://github.com/r-three/lm-evaluation-harness", branch = "multilingual-tiny-benchmarks" }
 mergekit = { git = "https://github.com/arcee-ai/mergekit.git" }
 zett = { git = "https://github.com/bminixhofer/zett.git" }
 
