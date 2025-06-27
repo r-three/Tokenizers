@@ -225,6 +225,8 @@ def write_model(
     push_to_hub=False,
 ):
     print("Converting the model.")
+    import os
+
     params = read_json(os.path.join(input_base_path, "params.json"))
     num_shards = NUM_SHARDS[model_size] if num_shards is None else num_shards
     params = params.get("model", params)
@@ -280,14 +282,15 @@ def write_model(
             # Load only if you have enough memory
             if memory.available < os.path.getsize(p) * 2:  # 2x safety margin
                 print("Insufficient memory!")
-            import code
 
-            code.interact(local=dict(globals(), **locals()))
             loaded = torch.load(
                 p,
                 map_location="cpu",
                 weights_only=True,
             )
+            if "model" in loaded:
+                loaded = loaded["model"]
+            # code.interact(local=dict(globals(), **locals()))
         else:
             # Sharded
             checkpoint_list = sorted(
@@ -462,7 +465,9 @@ def write_model(
             index_dict, os.path.join(tmp_model_path, "pytorch_model.bin.index.json")
         )
         ffn_dim_multiplier = (
-            params["ffn_dim_multiplier"] if "ffn_dim_multiplier" in params else 1
+            params["ffn_dim_multiplier"]
+            if params.get("ffn_dim_multiplier", None)
+            else 1
         )
         multiple_of = params["multiple_of"] if "multiple_of" in params else 256
 
@@ -554,8 +559,6 @@ class Llama3Converter(TikTokenConverter):
         llama_version="3.2",
         **kwargs,
     ):
-        import code
-
         super().__init__(vocab_file, additional_special_tokens=special_tokens, **kwargs)
         tokenizer = self.converted()
 
@@ -758,8 +761,9 @@ def main():
         spm_path = os.path.join(args.input_dir, "tokenizer.model")
     else:
         spm_path = args.tokenizer_path
-        spm_path = list(Path(spm_path).rglob("*model.pth"))[0].as_posix()
+        # spm_path = list(Path(spm_path).rglob("*model.pth"))[0].as_posix()
         spm_path = list(Path(spm_path).rglob("*vocab.json"))[0].as_posix()
+        # spm_path = list(Path(spm_path).rglob("*super_mapping.json"))[0].as_posix()
 
     if not args.only_model:
         vocab_size = len(
@@ -776,8 +780,10 @@ def main():
         spm_path = list(Path(args.tokenizer_path).rglob("*vocab.json"))[0].as_posix()
 
         with open(spm_path, "r") as f:
-            vocab_size = len(json.load(f))
-    print("tok finished")
+            vocab = json.load(f)
+            vocab_size = len(vocab)
+    print("tokenizer finished", vocab_size)
+
     if args.model_size != "tokenizer_only":
         input_base_path = args.input_dir
         write_model(

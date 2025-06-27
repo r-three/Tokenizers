@@ -8,6 +8,17 @@ This repo eventually inherits from https://github.com/r-three/ca-merging.
 
 ## Set-up
 We recommend using uv (install it with `pip install uv` if not already available).
+
+### On Killarney
+On the Killarney cluster, you need to first load the following modules:
+```bash
+module load slurm/killarney/24.05.7 StdEnv/2023  gcc/13.3  openmpi/5.0.3 cuda/12.6 python/3.10.13
+```
+and for the first time you run the code, you need to install the packages to the system:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
 ```bash
 # If you don't have a virtual environment already, you can either
 # 1. Install the packages to the system
@@ -54,13 +65,52 @@ python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_ro
 python xarch_tokenizers/scripts/eval.py xarch_tokenizers/configs/tokenization_robustness/eval_qwen_05B.yaml
 ```
 
-### Convert dataset to HF format
+### Convert dataset to HF format and upload to HF
 ```bash
-python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py --dataset_path data/custom_dataset.json --output_path data/custom_dataset_hf.json
+python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/convert_v102_to_hf.yaml
 ```
-
-
 
 ## Other Functionality
 - You can upload custom datasets to huggingface with [this](xarch_tokenizers/scripts/upload_dataset_to_hf.py) script.
 - Token surgeon is our fork of the arcee's token surgeon script.
+
+
+
+## Converting Supertoken Models
+```bash
+
+model="gpt4o"
+tokenizer="tiktoken-gpt-4o"
+model_name="craffel/supertoken_models"
+model_path="$model_name/$model/"
+tokenizer="blester125/supervocab-$tokenizer"
+hf_model_path="$PROJECT/models/$model_name"
+tokenizer_path="$PROJECT/tokenizers/$tokenizer"
+
+# Create directories
+mkdir -p "$hf_model_path"
+mkdir -p "$hf_model_path"
+
+huggingface-cli download $model_name --local-dir=$hf_model_path
+huggingface-cli download $tokenizer --local-dir=$tokenizer_path
+# Convert LLaMA weights to HuggingFace format
+echo "Converting model weights to HuggingFace format..."
+python -m xarch_tokenizers.scripts.convert_supertoken_models \
+    --input_dir "$hf_model_path/$model" \
+    --model_size 1B \
+    --output_dir "$hf_model_path" \
+    --llama_version 3 --tokenizer_version 3 \
+    --tokenizer_path "$tokenizer_path" --only_model \
+    --push_to_hub --output_dir gsaltintas/supertoken_models_$model \
+    --only_model
+
+# Run lm_eval with converted model
+echo "Running lm_eval..."
+lm_eval \
+    --model_args "pretrained=$hf_model_path,tokenizer=$tokenizer" \
+    --device cuda \
+    --tasks tokenizer_robustness_code_technical_content,tokenizer_robustness_context-dependent_ambiguities,tokenizer_robustness_mathematical_scientific_notation,tokenizer_robustness_morphological_challenges,tokenizer_robustness_multi-linguality,tokenizer_robustness_named_entities,tokenizer_robustness_orthographic_variations,tokenizer_robustness_social_media_informal_text,tokenizer_robustness_structural_text_elements,tokenizer_robustness_temporal_expressions  \
+    --log_samples \
+    --verbosity DEBUG \
+    --output_path "results/tokenizer_robustness/supertoken/$model"
+```
