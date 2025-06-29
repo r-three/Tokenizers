@@ -15,6 +15,7 @@ import argparse
 import gc
 import json
 import os
+import shutil
 import tempfile
 import warnings
 from pathlib import Path
@@ -223,6 +224,7 @@ def write_model(
     num_shards=None,
     instruct=False,
     push_to_hub=False,
+    private=False,
 ):
     print("Converting the model.")
     import os
@@ -509,8 +511,8 @@ def write_model(
             bos_token_id=bos_token_id,
             eos_token_id=eos_token_id,
             tie_word_embeddings=True if llama_version in ["3.2"] else False,
+            # model_type="llama",
         )
-
         config.save_pretrained(tmp_model_path)
 
         generation_config = GenerationConfig(
@@ -542,9 +544,13 @@ def write_model(
             model.push_to_hub(
                 model_path,
                 safe_serialization=safe_serialization,
-                private=True,
+                private=private,
                 use_temp_dir=True,
             )
+            config.save_pretrained(
+                tmp_model_path, push_to_hub=push_to_hub, repo_id=model_path
+            )
+            print(f"The model is available at https://huggingface.co/{model_path}")
         else:
             print("Saving to disk.")
             model.save_pretrained(model_path, safe_serialization=safe_serialization)
@@ -640,6 +646,7 @@ def write_tokenizer(
     special_tokens=None,
     instruct=False,
     push_to_hub=False,
+    private=False,
 ):
     print("Converting the tokenizer.")
     tokenizer_class = (
@@ -664,7 +671,7 @@ def write_tokenizer(
         print(
             f"Pushing a {tokenizer_class.__name__} to the Hub repo - {tokenizer_path}."
         )
-        tokenizer.push_to_hub(tokenizer_path, private=True, use_temp_dir=True)
+        tokenizer.push_to_hub(tokenizer_path, private=private, use_temp_dir=True)
     else:
         print(f"Saving a {tokenizer_class.__name__} to {tokenizer_path}.")
         tokenizer.save_pretrained(tokenizer_path)
@@ -743,6 +750,12 @@ def main():
         action="store_true",
         help="Only convert the model, not the tokenizer.",
     )
+    parser.add_argument(
+        "--public",
+        default=False,
+        action="store_true",
+        help="Whether to push the model to the hub as public.",
+    )
 
     args = parser.parse_args()
     if args.tokenizer_version is None:
@@ -774,6 +787,7 @@ def main():
                 special_tokens=args.special_tokens,
                 instruct=args.instruct,
                 push_to_hub=args.push_to_hub,
+                private=not args.public,
             )
         )
     else:
@@ -782,8 +796,42 @@ def main():
         with open(spm_path, "r") as f:
             vocab = json.load(f)
             vocab_size = len(vocab)
-    print("tokenizer finished", vocab_size)
+        if args.push_to_hub:
+            print("Copying tokenizerfiles to the output directory.")
+            Path(args.output_dir).mkdir(parents=True, exist_ok=True)
+            files_to_push = list(Path(args.tokenizer_path).rglob("*.json")) + list(
+                Path(args.tokenizer_path).rglob("*.yaml")
+            )
+            from huggingface_hub import HfApi
 
+            api = HfApi()
+            api.create_repo(
+                args.output_dir,
+                repo_type="model",
+                private=not args.public,
+                exist_ok=True,
+            )
+            for file in files_to_push:
+                name = file.stem
+                if "vocab" in file.name:
+                    name = "tokenizer"
+                if "info" in file.name:
+                    name = "tokenizer_config"
+                try:
+                    api.upload_file(
+                        path_or_fileobj=str(file),
+                        path_in_repo=f"{name}{file.suffix}",  # or specify custom path
+                        repo_id=args.output_dir,
+                        repo_type="model",
+                        commit_message=f"Upload tokenizer file {file.name}",
+                    )
+                except Exception as e:
+                    print(f"Error uploading {file.name}: {e}")
+
+    # for gpt4-o
+    if vocab_size == 200019:
+        vocab_size = 200254
+    print("tokenizer finished", vocab_size)
     if args.model_size != "tokenizer_only":
         input_base_path = args.input_dir
         write_model(
@@ -796,6 +844,7 @@ def main():
             num_shards=args.num_shards,
             instruct=args.instruct,
             push_to_hub=args.push_to_hub,
+            private=not args.public,
         )
 
 
