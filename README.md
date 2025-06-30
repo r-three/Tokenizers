@@ -79,20 +79,22 @@ python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers
 ## Converting Supertoken Models
 ```bash
 
-model="gpt4o"
-tokenizer="tiktoken-gpt-4o"
+
+model="gpt2"
+tokenizer="gpt2"
 model_name="craffel/supertoken_models"
 model_path="$model_name/$model/"
-tokenizer="blester125/supervocab-$tokenizer"
+tokenizer_name="blester125/supervocab-$tokenizer"
 hf_model_path="$PROJECT/models/$model_name"
 tokenizer_path="$PROJECT/tokenizers/$tokenizer"
+hf_out_path="gsaltintas/supertoken_models-llama_$model"
 
 # Create directories
 mkdir -p "$hf_model_path"
 mkdir -p "$hf_model_path"
 
 huggingface-cli download $model_name --local-dir=$hf_model_path
-huggingface-cli download $tokenizer --local-dir=$tokenizer_path
+huggingface-cli download $tokenizer_name --local-dir=$tokenizer_path
 # Convert LLaMA weights to HuggingFace format
 echo "Converting model weights to HuggingFace format..."
 python -m xarch_tokenizers.scripts.convert_supertoken_models \
@@ -100,17 +102,17 @@ python -m xarch_tokenizers.scripts.convert_supertoken_models \
     --model_size 1B \
     --output_dir "$hf_model_path" \
     --llama_version 3 --tokenizer_version 3 \
-    --tokenizer_path "$tokenizer_path" --only_model \
-    --push_to_hub --output_dir gsaltintas/supertoken_models_$model \
-    --only_model
+    --tokenizer_path "$tokenizer_path" \
+    --push_to_hub --output_dir $hf_out_path \
+    --only_model --public
 
 # Run lm_eval with converted model
 echo "Running lm_eval..."
 lm_eval \
-    --model_args "pretrained=$hf_model_path,tokenizer=$tokenizer" \
-    --device cuda \
-    --tasks tokenizer_robustness_code_technical_content,tokenizer_robustness_context-dependent_ambiguities,tokenizer_robustness_mathematical_scientific_notation,tokenizer_robustness_morphological_challenges,tokenizer_robustness_multi-linguality,tokenizer_robustness_named_entities,tokenizer_robustness_orthographic_variations,tokenizer_robustness_social_media_informal_text,tokenizer_robustness_structural_text_elements,tokenizer_robustness_temporal_expressions  \
-    --log_samples \
-    --verbosity DEBUG \
-    --output_path "results/tokenizer_robustness/supertoken/$model"
+--model hf --model_args "pretrained=$hf_out_path,tokenizer=$tokenizer" \
+--device cuda \
+--tasks tokenizer_robustness_code_technical_content,tokenizer_robustness_context-dependent_ambiguities,tokenizer_robustness_mathematical_scientific_notation,tokenizer_robustness_morphological_challenges,tokenizer_robustness_multi-linguality,tokenizer_robustness_named_entities,tokenizer_robustness_orthographic_variations,tokenizer_robustness_social_media_informal_text,tokenizer_robustness_structural_text_elements,tokenizer_robustness_temporal_expressions \
+--log_samples \
+--verbosity DEBUG \
+--output_path "results/tokenization_robustness/v102-cleaned/supertoken/$model"
 ```

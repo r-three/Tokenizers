@@ -12,14 +12,13 @@ dependencies = [
     "datasets>=3.6.0",
     "jupyter>=1.1.1",
     "levenshtein>=0.27.1",
-    #"lm-eval>=0.4.8",
-    "lm-eval@git+https://github.com/r-three/lm-evaluation-harness@multilingual-tiny-benchmarks",
+    "lm-eval",
+    #"lm-eval@git+https://github.com/r-three/lm-evaluation-harness@multilingual-tiny-benchmarks",
     "notebook>=7.3.2",
     "numpy>=1.26.4",
     "scikit-learn>=1.6.1",
-    #"torch>=2.4.0",
     "torch>=2.5.0",
-    "transformers==4.51.3",
+    "transformers>=4.53.0",
     "vllm>=0.6.1.post2",
     "wandb>=0.19.8",
     "plotly==5.13.1",
@@ -44,10 +43,10 @@ packages = ["xarch_tokenizers"]
 [project.optional-dependencies]
 build = ["torch", "setuptools", "packaging"]
 compile = ["flash-attn"]
-mergekit = ["mergekit"]
+# mergekit = ["mergekit"]
 # zett = [ "jax==0.5.2", "jaxlib==0.5.1", "optax==0.2.4", "flax==0.10.4", "chex", "zett" ]
 dev = [  "ruff", "pytest" ]
-
+eval = [ "lm-eval" ]
 
 [tool.uv]
 no-build-isolation-package = ["flash-attn", "xformers"]

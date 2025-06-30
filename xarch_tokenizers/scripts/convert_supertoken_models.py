@@ -798,7 +798,6 @@ def main():
             vocab_size = len(vocab)
         if args.push_to_hub:
             print("Copying tokenizerfiles to the output directory.")
-            Path(args.output_dir).mkdir(parents=True, exist_ok=True)
             files_to_push = list(Path(args.tokenizer_path).rglob("*.json")) + list(
                 Path(args.tokenizer_path).rglob("*.yaml")
             )
