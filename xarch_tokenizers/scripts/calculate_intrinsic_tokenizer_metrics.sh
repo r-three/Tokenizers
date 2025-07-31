@@ -7,12 +7,10 @@ source /home/ehghaghi/projects/aip-craffel/ehghaghi/Tokenizers/.venv/bin/activat
 
 export HUGGINGFACE_HUB_CACHE=$SCRATCH/.cache
 
-# # pip install datasets==3.6.0
-# # pip install tokenmonster==1.1.12
-# # pip install spacy
-# # pip install jieba
-
-# python calculate_intrinsic_tokenizer_metrics.py
+# pip install datasets==3.6.0
+# pip install tokenmonster==1.1.12
+# pip install spacy
+# pip install jieba
 
 
 # Set script directory
@@ -34,5 +32,3 @@ python3 calculate_intrinsic_tokenizer_metrics.py \
     --languages "$LANGUAGES" \
     --analyses all \
     --sample_size 10000
-
-echo "Analysis complete!"

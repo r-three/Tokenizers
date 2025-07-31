@@ -31,6 +31,7 @@ from xarch_tokenizers.models import load_tokenizer as hf_load_tokenizer
 from xarch_tokenizers.utils import system
 
 
+
 Vocab = dict[str, list[int]]
 
 LOG = logging.getLogger(__name__)
@@ -965,21 +966,6 @@ def plot_pcw_scores(results, dataset_name):
     plt.tight_layout()
     plt.savefig("pcw.png")
 
-# print(list_tokenizer_vocab_sizes(tokenizer_names))
-# plot_tokenizer_vocab_overlap_symmetric(tokenizer_names)
-# plot_tokenizer_vocab_overlap_asymmetric(tokenizer_names)
-
-# results = compute_subword_fertility(tokenizer_names, language_keys)
-# print(results)
-# plot_fertility_scores(results, 'Flores200')
-
-# results = compute_parity(tokenizer_names, language_keys)
-# print(results)
-# plot_parity_scores(results, 'Flores200')
-
-# results = compute_proportion_of_continued_words(tokenizer_names, language_keys)
-# print(results)
-# plot_pcw_scores(results, 'Flores200')
 
 def parse_tokenizer_argument(tokenizer_arg):
     """
