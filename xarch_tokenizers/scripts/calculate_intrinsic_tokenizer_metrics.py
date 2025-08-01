@@ -40,7 +40,7 @@ random.seed(42)  # Set the seed to a fixed value
 
 ALIGNED_BOS = "~SPECIAL~ALIGNED~BOS~SYMBOL~"
 
-tokenizer_names =  {
+TOKENIZER_NAMES =  {
     "BERT multilingual base model (cased)": "google-bert/bert-base-multilingual-cased",
     "BERT base model (uncased)": "google-bert/bert-base-uncased",
     "T5": "google-t5/t5-base",
@@ -62,7 +62,7 @@ tokenizer_names =  {
     "Common Pile v1.0": "common-pile/comma-v0.1",
 }
 
-tokenizer_types =  {
+TOKENIZER_TYPES =  {
     "BERT multilingual base model (cased)": "WordPiece",
     "BERT base model (uncased)": "WordPiece",
     "T5": "SentencePiece_Unigram",
@@ -84,7 +84,7 @@ tokenizer_types =  {
     "Common Pile v1.0": "BPE",
 }
 
-tokenizer_n_special_tokens_for_words =  {
+TOKENIZER_N_SPECIAL_TOKENS_PER_WORD =  {
     "BERT multilingual base model (cased)": 2, # Example: ['[CLS]', 'Families', '[SEP]']
     "BERT base model (uncased)": 2, # Example: ['[CLS]', 'families', '[SEP]']
     "T5": 1, # Example: ['▁Familie', 's', '</s>']
@@ -106,7 +106,7 @@ tokenizer_n_special_tokens_for_words =  {
     "Common Pile v1.0": 0, # Example: ['F', 'amil', 'ies']
 }
 
-language_keys = {'sentence_eng_Latn': "eng_Latn", #english
+LANGUAGE_KEYS = {'sentence_eng_Latn': "eng_Latn", #english
                  'sentence_zho_Hans': "zho_Hani", #chinese
                  'sentence_tur_Latn': "tur_Latn", #turkish
                  'sentence_pes_Arab': "fas_Arab", #persian
@@ -717,16 +717,16 @@ def compute_subword_fertility(
             cur_tokenizer = load_word_tokenizer(language_keys[lang])
 
             total_words = 0
-            total_subwords = 0
+            text_subwords = 0
 
             for text in texts:
                 words = cur_tokenizer.word_tokenize(text)
                 total_words += len(words)
-                text_subwords = sum(len(tokenizer.tokenize(word)) for word in words)
-                total_subwords += text_subwords - tokenizer_n_special_tokens_for_words[tokenizer_name]
+                for word in words:
+                    text_subwords += len(tokenizer.tokenize(word)) - TOKENIZER_N_SPECIAL_TOKENS_PER_WORD[tokenizer_name]
             
 
-            fertility = total_subwords / total_words if total_words > 0 else 0
+            fertility = text_subwords / total_words if total_words > 0 else 0
             fertility_scores[lang.replace("sentence_", "")] = fertility
 
         # Store scores
@@ -838,7 +838,7 @@ def compute_proportion_of_continued_words(
                 for word in words:
                     # Encode word separately to avoid sentence-level effects
                     tokenized = tokenizer.tokenize(word)
-                    if len(tokenized) - tokenizer_n_special_tokens_for_words[tokenizer_name] >= 2:
+                    if len(tokenized) - TOKENIZER_N_SPECIAL_TOKENS_PER_WORD[tokenizer_name] >= 2:
                         split_word_count += 1
 
             total_word_count = len(all_words)
@@ -975,7 +975,7 @@ def parse_tokenizer_argument(tokenizer_arg):
     3. A JSON string with custom tokenizer mappings
     """
     if tokenizer_arg.lower() == 'all':
-        return tokenizer_names
+        return TOKENIZER_NAMES
     
     # Try to parse as JSON first (for custom tokenizer mappings)
     try:
@@ -990,8 +990,8 @@ def parse_tokenizer_argument(tokenizer_arg):
     selected_tokenizers = {}
     
     for name in tokenizer_list:
-        if name in tokenizer_names:
-            selected_tokenizers[name] = tokenizer_names[name]
+        if name in TOKENIZER_NAMES:
+            selected_tokenizers[name] = TOKENIZER_NAMES[name]
         else:
             print(f"Warning: Tokenizer '{name}' not found in default list. Skipping.")
     
@@ -1006,7 +1006,7 @@ def parse_language_argument(language_arg):
     3. A JSON string with custom language mappings
     """
     if language_arg.lower() == 'all':
-        return language_keys
+        return LANGUAGE_KEYS
     
     # Try to parse as JSON first (for custom language mappings)
     try:
@@ -1021,8 +1021,8 @@ def parse_language_argument(language_arg):
     selected_languages = {}
     
     for lang in language_list:
-        if lang in language_keys:
-            selected_languages[lang] = language_keys[lang]
+        if lang in LANGUAGE_KEYS:
+            selected_languages[lang] = LANGUAGE_KEYS[lang]
         else:
             print(f"Warning: Language '{lang}' not found in default list. Skipping.")
     
