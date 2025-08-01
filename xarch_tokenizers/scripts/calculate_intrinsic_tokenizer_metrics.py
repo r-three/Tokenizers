@@ -727,6 +727,7 @@ def compute_subword_fertility(
             
 
             fertility = text_subwords / total_words if total_words > 0 else 0
+            fertility = round(fertility, 3)
             fertility_scores[lang.replace("sentence_", "")] = fertility
 
         # Store scores
@@ -782,6 +783,7 @@ def compute_parity(
                 if len_t2 > 0:
                     ratios.append(len_t1 / len_t2)
             parity = np.mean(ratios) if ratios else 0
+            parity = round(parity, 3)
             parity_scores[lang.replace("sentence_", "")] = parity
 
         # Store scores
@@ -838,11 +840,12 @@ def compute_proportion_of_continued_words(
                 for word in words:
                     # Encode word separately to avoid sentence-level effects
                     tokenized = tokenizer.tokenize(word)
-                    if len(tokenized) - TOKENIZER_N_SPECIAL_TOKENS_PER_WORD[tokenizer_name] >= 2:
+                    if (len(tokenized) - TOKENIZER_N_SPECIAL_TOKENS_PER_WORD[tokenizer_name]) >= 2:
                         split_word_count += 1
 
             total_word_count = len(all_words)
             proportion = split_word_count / total_word_count if total_word_count > 0 else 0
+            proportion = round(proportion, 3)
             cont_word_scores[lang.replace("sentence_", "")] = proportion
 
         # Store scores
@@ -1028,6 +1031,118 @@ def parse_language_argument(language_arg):
     
     return selected_languages
 
+def tokenize_sentence_with_all_tokenizers(
+    sentence: str,
+    tokenizer_names: dict,
+    output_file: str = "tokenization_results.txt",
+    print_results: bool = True
+):
+    """
+    Tokenize a given sentence with all specified tokenizers and save results to a file.
+    
+    Parameters:
+    - sentence: The input sentence to tokenize
+    - tokenizer_names: Dict mapping display names to tokenizer paths
+    - output_file: Output file path to save results (default: "tokenization_results.txt")
+    - print_results: Whether to print results to console (default: True)
+    
+    Returns:
+    - Dictionary with tokenizer names as keys and tokenization results as values
+    """
+    
+    results = {}
+    
+    # Header for output
+    header = f"TOKENIZATION RESULTS FOR: '{sentence}'\n"
+    header += "=" * (len(header) - 1) + "\n\n"
+    
+    if print_results:
+        print(header)
+    
+    # Open file for writing
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(header)
+        
+        for tokenizer_name, tokenizer_path in tokenizer_names.items():
+            try:
+                print(f"Processing with {tokenizer_name}...")
+                
+                # Load tokenizer
+                tokenizer = Tokenizer.load(tokenizer_path)
+                
+                # Tokenize the sentence
+                tokens = tokenizer.tokenize(sentence)
+                
+                # Get token count
+                token_count = len(tokens)
+                
+                # Store results
+                results[tokenizer_name] = {
+                    'tokens': tokens,
+                    'count': token_count,
+                    'tokenizer_path': tokenizer_path
+                }
+                
+                # Format output
+                output_text = f"TOKENIZER: {tokenizer_name}\n"
+                output_text += f"PATH: {tokenizer_path}\n"
+                output_text += f"TOKEN COUNT: {token_count}\n"
+                output_text += f"TOKENS: {tokens}\n"
+                
+                # For readability, also show tokens with indices
+                indexed_tokens = [f"{i}: '{token}'" for i, token in enumerate(tokens)]
+                output_text += f"INDEXED TOKENS:\n"
+                for indexed_token in indexed_tokens:
+                    output_text += f"  {indexed_token}\n"
+                
+                output_text += "-" * 80 + "\n\n"
+                
+                # Print to console if requested
+                if print_results:
+                    print(output_text)
+                
+                # Write to file
+                f.write(output_text)
+                
+            except Exception as e:
+                error_msg = f"ERROR with {tokenizer_name}: {str(e)}\n"
+                error_msg += "-" * 80 + "\n\n"
+                
+                if print_results:
+                    print(error_msg)
+                f.write(error_msg)
+                
+                results[tokenizer_name] = {
+                    'error': str(e),
+                    'tokenizer_path': tokenizer_path
+                }
+    
+    print(f"\nResults saved to: {output_file}")
+    
+    # Print summary statistics
+    successful_tokenizers = [name for name, result in results.items() if 'tokens' in result]
+    if successful_tokenizers:
+        token_counts = [results[name]['count'] for name in successful_tokenizers]
+        
+        summary = f"\nSUMMARY STATISTICS:\n"
+        summary += f"Successfully processed tokenizers: {len(successful_tokenizers)}\n"
+        summary += f"Token count range: {min(token_counts)} - {max(token_counts)}\n"
+        summary += f"Average token count: {sum(token_counts)/len(token_counts):.2f}\n"
+        
+        # Find most and least efficient tokenizers
+        min_tokens_tokenizer = successful_tokenizers[token_counts.index(min(token_counts))]
+        max_tokens_tokenizer = successful_tokenizers[token_counts.index(max(token_counts))]
+        
+        summary += f"Most efficient (fewest tokens): {min_tokens_tokenizer} ({min(token_counts)} tokens)\n"
+        summary += f"Least efficient (most tokens): {max_tokens_tokenizer} ({max(token_counts)} tokens)\n"
+        
+        if print_results:
+            print(summary)
+        
+        with open(output_file, 'a', encoding='utf-8') as f:
+            f.write(summary)
+    
+    return results
 
 def main():
     parser = argparse.ArgumentParser(
@@ -1067,7 +1182,7 @@ def main():
         '--analyses',
         type=str,
         default='all',
-        help='Analyses to run. Options: "all", or comma-separated list from: vocab_sizes,vocab_overlap,fertility,parity,pcw'
+        help='Analyses to run. Options: "all", or comma-separated list from: vocab_sizes,vocab_overlap,fertility,parity,pcw,example_tokenizations'
     )
     
     parser.add_argument(
@@ -1097,6 +1212,12 @@ def main():
         default="dev",
         help='Dataset split to use (default: dev)'
     )
+    parser.add_argument(
+        '--sample_sentence',
+        type=str,
+        default="Hello World",
+        help='Sample sentence for tokenization'
+    )
     
     args = parser.parse_args()
     
@@ -1106,7 +1227,7 @@ def main():
     
     # Parse analyses
     if args.analyses.lower() == 'all':
-        analyses = ['vocab_sizes', 'vocab_overlap', 'fertility', 'parity', 'pcw']
+        analyses = ['vocab_sizes', 'vocab_overlap', 'fertility', 'parity', 'pcw', 'example_tokenizations']
     else:
         analyses = [a.strip() for a in args.analyses.split(',')]
     
@@ -1171,6 +1292,17 @@ def main():
         print("Plotting PCW scores...")
         plot_pcw_scores(pcw_results, args.dataset_name)
         print("-" * 50)
+
+    if 'example_tokenizations' in analyses:
+        print("Printing tokenization output of different tokenizers for the given input sentence...")
+        tokenize_sentence_with_all_tokenizers(
+            sentence=args.sample_sentence,
+            tokenizer_names=TOKENIZER_NAMES,
+            output_file="tokenization_results.txt",
+            print_results=True
+        )
+        print("-" * 50)  
+
         
     print("Analysis complete!")
 
