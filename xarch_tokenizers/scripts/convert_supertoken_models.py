@@ -225,6 +225,7 @@ def write_model(
     instruct=False,
     push_to_hub=False,
     private=False,
+    commit_message: str = None
 ):
     print("Converting the model.")
     import os
@@ -546,6 +547,7 @@ def write_model(
                 safe_serialization=safe_serialization,
                 private=private,
                 use_temp_dir=True,
+                commit_message=commit_message
             )
             config.save_pretrained(
                 tmp_model_path, push_to_hub=push_to_hub, repo_id=model_path
@@ -677,6 +679,12 @@ def write_tokenizer(
         tokenizer.save_pretrained(tokenizer_path)
     return tokenizer
 
+def created_consolidated(dcp_directory:Path):
+    consolidated_path = dcp_directory.joinpath("consolidated.pth")
+    if consolidated_path.exists():
+        return
+    from torch.distributed.checkpoint.format_utils import dcp_to_torch_save
+    dcp_to_torch_save(dcp_directory, consolidated_path)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -756,6 +764,13 @@ def main():
         action="store_true",
         help="Whether to push the model to the hub as public.",
     )
+    parser.add_argument(
+        "--collection",
+        default=None,
+        type=str,
+        help="The name of the collection to which the model belongs.",
+    )
+    parser.add_argument("--commit_message", default="Upload model files", type=str)
 
     args = parser.parse_args()
     if args.tokenizer_version is None:
@@ -774,9 +789,9 @@ def main():
         spm_path = os.path.join(args.input_dir, "tokenizer.model")
     else:
         spm_path = args.tokenizer_path
-        # spm_path = list(Path(spm_path).rglob("*model.pth"))[0].as_posix()
         spm_path = list(Path(spm_path).rglob("*vocab.json"))[0].as_posix()
-        # spm_path = list(Path(spm_path).rglob("*super_mapping.json"))[0].as_posix()
+
+    created_consolidated(Path(args.input_dir))
 
     if not args.only_model:
         vocab_size = len(
@@ -822,14 +837,11 @@ def main():
                         path_in_repo=f"{name}{file.suffix}",  # or specify custom path
                         repo_id=args.output_dir,
                         repo_type="model",
-                        commit_message=f"Upload tokenizer file {file.name}",
+                        commit_message=f"Upload tokenizer file {file.name} - {args.commit_message}",
                     )
                 except Exception as e:
                     print(f"Error uploading {file.name}: {e}")
 
-    # for gpt4-o
-    if vocab_size == 200019:
-        vocab_size = 200254
     print("tokenizer finished", vocab_size)
     if args.model_size != "tokenizer_only":
         input_base_path = args.input_dir
@@ -844,8 +856,13 @@ def main():
             instruct=args.instruct,
             push_to_hub=args.push_to_hub,
             private=not args.public,
+            commit_message=args.commit_message
         )
 
+    if args.collection:
+        from huggingface_hub import create_collection, add_collection_item
+        collection = create_collection(title=args.collection, namespace=args.output_dir.split("/")[0], exists_ok=True)
+        add_collection_item(collection.slug, item_id=args.output_dir, item_type="model", exists_ok=True)
 
 if __name__ == "__main__":
     main()
