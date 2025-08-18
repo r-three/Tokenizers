@@ -6,6 +6,8 @@ import json
 import os
 from dataclasses import dataclass, field
 from pathlib import Path
+from textwrap import wrap
+from time import sleep
 from typing import Any, Dict, List, Optional
 
 import huggingface_hub
@@ -17,7 +19,39 @@ from transformers import (
 )
 
 from xarch_tokenizers.config import Config
-from xarch_tokenizers.logging.logger import setup_logger
+from xarch_tokenizers.logging.logger import setup_basic_logger, setup_logger
+
+logger = setup_basic_logger()
+
+
+def wrap_huggingface_hub_op(func, logger, success_message=None, error_message=None):
+    """Decorator to wrap Hugging Face Hub operations with error handling."""
+
+    if error_message is None:
+        error_message = "Error occurred in Hugging Face Hub operation"
+
+    def wrapper(*args, **kwargs):
+        sleep_time = 5
+        num_errs = 0
+        while True:
+            try:
+                res = func(*args, **kwargs)
+                if res is None:
+                    return True
+                return res
+            except huggingface_hub.utils.HfHubHTTPError as e:
+                logger.error(f"Error occurred in Hugging Face Hub operation: {e}")
+                sleep(sleep_time)
+                num_errs += 1
+                if num_errs % 3 == 0:
+                    sleep_time *= 2
+                logger.info(f"Sleeping {sleep_time}")
+
+            except Exception as e:
+                logger.error(f"{error_message}: {e}")
+                return False
+
+    return wrapper
 
 
 @dataclass
@@ -67,10 +101,18 @@ class HFUploadConfig(Config):
         default_factory=lambda: {},
         metadata={"help": "Dataset card info to upload to Hugging Face Hub"},
     )
+    collections: Optional[List[str]] = field(
+        default=None,
+        metadata={"help": "List of collections to which the dataset belongs"},
+    )
 
     def __post_init__(self):
         if self.hf_token is None:
             self.hf_token = os.environ.get("HF_TOKEN", None)
+        if self.hf_organization is None:
+            self.hf_organization = wrap_huggingface_hub_op(
+                huggingface_hub.whoami, logger
+            )().get("name", None)
         return super().__post_init__()
 
 
@@ -122,14 +164,14 @@ def create_dataset_dict(
     return dataset_dict
 
 
-def get_dataset_name(dataset_dir: Path, config: HFUploadConfig) -> Dict[str, Any]:
+def get_dataset_name(dataset_dir: Path, config: HFUploadConfig) -> str:
     """Extract metadata for non-translation datasets."""
     if config.is_translation:
         return extract_dataset_metadata_translation(dataset_dir, config)[
             "hf_dataset_name"
         ]
     dataset_name = (
-        dataset_dir.name if config.dataset_name is None else config.dataset_name
+        Path(dataset_dir).name if config.dataset_name is None else config.dataset_name
     )
     return dataset_name
 
@@ -195,7 +237,9 @@ def get_repo_id(dataset_name: str, config: HFUploadConfig) -> str:
     if config.hf_organization:
         return f"{config.hf_organization}/{dataset_name}"
     else:
-        username = huggingface_hub.whoami(token=config.hf_token)["name"]
+        username = wrap_huggingface_hub_op(huggingface_hub.whoami)(
+            token=config.hf_token
+        )["name"]
         return f"{username}/{dataset_name}"
 
 
@@ -235,19 +279,18 @@ def upload_to_hub(
     print(f"  Preparing to upload to: {repo_id}")
 
     # Upload dataset to Hub
-    try:
-        dataset_dict.push_to_hub(
-            repo_id=repo_id,
-            token=config.hf_token,
-            private=config.private,
-            config_name=config_name,
-            commit_message=f"Uploading {config_name} subset",
-        )
-        print(f"  Successfully uploaded dataset to {repo_id}")
-
-    except Exception as e:
-        print(f"  Failed to upload dataset: {e}")
-        logger.error(f"Dataset upload failed: {e}")
+    wrap_huggingface_hub_op(
+        dataset_dict.push_to_hub,
+        logger,
+        success_message=f"  Successfully uploaded dataset to {repo_id}",
+        error_message=f"  Failed to upload dataset to {repo_id}",
+    )(
+        repo_id=repo_id,
+        token=config.hf_token,
+        private=config.private,
+        config_name=config_name,
+        commit_message=f"Uploading {config_name} subset",
+    )
 
 
 def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
@@ -261,7 +304,7 @@ def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
         api.repo_info(repo_id=repo_id, repo_type="dataset")
     except Exception:
         # Repo doesn't exist, create it
-        create_repo(
+        wrap_huggingface_hub_op(create_repo, logger)(
             repo_id=repo_id,
             repo_type="dataset",
             private=config.private,
@@ -276,26 +319,42 @@ def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
         subset_name = subset_dir.name
         print(f"  Processing subset: {subset_name}")
 
-        try:
-            # Create dataset for this subset
-            subset_dataset_dict = create_dataset_dict(config, subset_dir, logger)
-            if not subset_dataset_dict:
-                print(f"    No valid data files found in subset {subset_name}")
-                continue
-            if config.upload_individually:
-                upload_to_hub(subset_dataset_dict, repo_id, config, logger, "default")
-            else:
-                upload_to_hub(subset_dataset_dict, repo_id, config, logger, subset_name)
-            config_names.append(subset_name)
-        except Exception as e:
-            print(f"    Failed to process subset {subset_name}: {e}")
-            logger.error(f"Error processing subset {subset_name}: {e}")
+        subset_dataset_dict = create_dataset_dict(config, subset_dir, logger)
+        if not subset_dataset_dict:
+            print(f"    No valid data files found in subset {subset_name}")
             continue
+        # todo: depreceate upload_individually
+        if config.upload_individually:
+            success = wrap_huggingface_hub_op(upload_to_hub, logger)(
+                subset_dataset_dict, repo_id, config, logger, "default"
+            )
+        else:
+            success = wrap_huggingface_hub_op(upload_to_hub, logger)(
+                subset_dataset_dict, repo_id, config, logger, subset_name
+            )
+        if success:
+            config_names.append(subset_name)
 
     if config.tag:
-        huggingface_hub.create_tag(
+        wrap_huggingface_hub_op(huggingface_hub.create_tag, logger)(
             repo_id, tag=config.tag, repo_type="dataset", exist_ok=True
         )
+
+    if config.collections:
+        from huggingface_hub import add_collection_item, create_collection
+
+        for collection_ in config.collections:
+            collection = wrap_huggingface_hub_op(create_collection, logger)(
+                title=collection_,
+                namespace=config.hf_organization,
+                exists_ok=True,
+            )
+            wrap_huggingface_hub_op(add_collection_item, logger)(
+                collection.slug,
+                item_id=repo_id,
+                item_type="dataset",
+                exists_ok=True,
+            )
 
 
 def upload():

@@ -232,3 +232,4 @@ ENV/
 *.json
 *.csv
 *.txt
+.vscode/.envFile

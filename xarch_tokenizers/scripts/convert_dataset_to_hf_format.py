@@ -7,10 +7,14 @@ that is directly compatible with lm-evaluation-harness.
 It creates parquet files and creates corresponding yaml files in the lm_eval directory
 """
 
+## TODO: do i need to add the subset config to daaset card
+## TODO: language collections
+# TODO: add lang fitlering??
 import json
 import math
 import random
 import traceback
+import warnings
 from dataclasses import dataclass, field, fields
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Union
@@ -18,7 +22,7 @@ from typing import Any, Dict, List, Literal, Optional, Union
 import numpy as np
 import pandas as pd
 import yaml
-from datasets import Dataset, Features, Value
+from datasets import Dataset
 
 # For tokenizer loading
 from xarch_tokenizers.experiment_config import load_config
@@ -27,12 +31,14 @@ from xarch_tokenizers.scripts.upload_dataset_to_hf import (
     HFUploadConfig,
     get_dataset_name,
     get_repo_id,
+    upload,
     upload_dataset,
 )
 from xarch_tokenizers.utils.utils import find_package_dir
 
 LM_EVAL_PKG_DIR = Path(find_package_dir("lm_eval"))
 # Usage:
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v103_to_lm_eval.yaml
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v102_to_lm_eval.yaml
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_v101_to_lm_eval.yaml
 # python xarch_tokenizers/scripts/upload_dataset_to_hf.py --input_dir=data/v101 --upload_all=true --private=false --is_translation=false  --upload_individually=false
@@ -45,9 +51,10 @@ class LmEvalTaskArgs:
         metadata={"help": "the name of the dataset on the HF Hub."}
     )
     dataset_name: str = field(
+        default="null",
         metadata={
             "help": "the dataset configuration to use. Leave `null` if your dataset does not require a config to be passed. See https://huggingface.co/docs/datasets/load_hub#configurations for more info."
-        }
+        },
     )
     dataset_kwargs: Optional[Dict[str, Any]] = field(
         default=None,
@@ -106,8 +113,8 @@ class LmEvalTaskArgs:
     # use_prompt: Optional[str] = field(default=None, metadata={"help": "use promptsource template, e.g. 'promptsource:GPT-3 Style' or 'promptsource:*'"})
 
     # Few-shot configuration
-    fewshot_split: str = field(
-        default="dev",
+    fewshot_split: Optional[str] = field(
+        default=None,
         metadata={"help": "split name to draw fewshot examples from, or `null`"},
     )
     fewshot_config: Optional[Dict[str, Any]] = field(
@@ -136,7 +143,9 @@ class LmEvalTaskArgs:
     )
 
     # Task registration
-    task: str = field(default=None, metadata={"help": "name of the task (mandatory)"})
+    task: Optional[str] = field(
+        default=None, metadata={"help": "name of the task (mandatory)"}
+    )
     task_alias: Optional[str] = field(
         default=None, metadata={"help": "alternative task name for display purposes"}
     )
@@ -210,7 +219,8 @@ class LmEvalTaskArgs:
 
 @dataclass
 class DatasetConverterConfig(HFUploadConfig):
-    dataset_path: str = field(
+    dataset_path: Optional[Path] = field(
+        # dataset_path: Optional[Union[str, Path]] = field(
         default=None,
         metadata={"help": "Path to the dataset .json | or csv", "required": True},
     )
@@ -218,8 +228,10 @@ class DatasetConverterConfig(HFUploadConfig):
         default="parquet",
         metadata={"help": "Format of the dataset"},
     )
-    output_dir: Optional[str] = field(
-        default=None, metadata={"help": "Out path for writing the pivoted datasets"}
+    output_dir: Optional[Path] = field(
+        # output_dir: Optional[str] = field(
+        default=None,
+        metadata={"help": "Out path for writing the pivoted datasets"},
     )
     separator: str = field(
         default="|||",
@@ -233,7 +245,7 @@ class DatasetConverterConfig(HFUploadConfig):
             "help": "If the provided dataset_path is an excel file, pass the relevant sheet name."
         },
     )
-    version: Literal["v01", "v1"] = field(
+    version: Literal["v01", "v1", "collection"] = field(
         default="v1",
         metadata={
             "help": "v01 for the cannonical form with perturbations, v1 for csv formatted"
@@ -261,11 +273,25 @@ class DatasetConverterConfig(HFUploadConfig):
         default="split",
         metadata={"help": "Name of the field containing the split."},
     )
+    combine_all_splits: bool = field(
+        default=False,
+        metadata={
+            "help": "Whether to melt dataset into just test and flatten the split field into the split column."
+        },
+    )
     flatten_metadata: bool = False
     create_subset_dirs: bool = False
-    subset_by: str = None
-    lm_eval_task: Optional[LmEvalTaskArgs] = field(
-        default=None, metadata={"help": "LM Evaluation task configuration"}
+    subset_by: Optional[str] = None
+    dataset_by: Optional[str] = field(
+        default=None,
+        metadata={
+            "help": "Name of the field corresponding to the dataset, only relevant when --collections is passed."
+        },
+    )
+    lm_eval_task: LmEvalTaskArgs = field(
+        # lm_eval_task: Optional[LmEvalTaskArgs] = field(
+        default_factory=LmEvalTaskArgs,
+        metadata={"help": "LM Evaluation task configuration"},
     )
     _create_experiment_dir: bool = False
 
@@ -278,7 +304,7 @@ class DatasetConverterConfig(HFUploadConfig):
     )
 
     def __post_init__(self):
-        self.dataset_path = Path(self.dataset_path)
+        self.dataset_path = Path(str(self.dataset_path))
         if not self.dataset_path.exists():
             raise ValueError(
                 f"Provided path ({self.dataset_path.absolute().as_posix()}) doesn't exist."
@@ -291,6 +317,10 @@ class DatasetConverterConfig(HFUploadConfig):
         if self.create_subset_dirs:
             assert self.subset_by, (
                 "Provide a valid feature|column name to create subsets for."
+            )
+        if self.dataset_by and self.collections is None:
+            warnings.warn(
+                "Dataset by argument will be ignored since no collection is passed"
             )
         # Convert nested dictionaries to dataclasses
         if isinstance(self.lm_eval_task, dict):
@@ -376,8 +406,8 @@ def transform_v01_to_lm_eval_format(input_json_path, output_json_path):
 def create_task_config(
     config: DatasetConverterConfig,
     logger,
-    task_name: str = None,
-    config_name: Union[Path, str] = None,
+    task_name: Optional[str] = None,
+    config_name: Optional[Union[Path, str]] = None,
     base_dir: bool = False,
     update_args: Dict[str, Any] = {},
 ):
@@ -392,7 +422,11 @@ def create_task_config(
     if config_name is None:
         config_name = task_name
     config_path = (dataset_path / config_name).with_suffix(".yaml")
+    config_path.parent.mkdir(exist_ok=True, parents=True)
+    print(config_path)
+    import code
 
+    # code.interact(local=locals() | globals(), banner=config_name)
     # Write YAML config
     with open(config_path, "w") as f:
         yaml.dump(
@@ -401,7 +435,7 @@ def create_task_config(
             default_flow_style=False,
         )
 
-    logger.info(f"Created task config: {config_path}")
+    logger.debug(f"Created task config: {config_path}")
     return config_path
 
 
@@ -420,6 +454,7 @@ def convert_to_lm_eval_format(
         # Extract question and choices
         question = str(row.get(config.question_field, "")).strip()
         if not question:
+            print(f"Warning: Question is empty for row {idx}, skipping")
             continue
 
         choices = []
@@ -431,22 +466,24 @@ def convert_to_lm_eval_format(
                 choices.append(opt_text)
 
         if len(choices) == 0:
-            print(f"Warning: No choices found for row {idx}, skipping")
+            logger.debug(
+                f"Warning: No choices found for row {idx}, question: {question}, skipping"
+            )
             continue
         correct_idx = random.randint(0, len(config.option_fields))
         correct_answer = str(row.get("Correct", "")).strip()
         choices.insert(correct_idx, correct_answer)
         metadata = {
             opt_field: row[opt_val]
-            if type(row[opt_val]) == str
-            or (type(row[opt_val]) == float and not math.isnan(row[opt_val]))
+            if isinstance(row[opt_val], str)
+            or (isinstance(row[opt_val], float) and not math.isnan(row[opt_val]))
             else ""
             for opt_field, opt_val in config.metadata_fields.items()
         }
         split = str(row.get(config.split_field, "")).strip()
         if not split or split.lower() in ["", "nan", "none", "null"]:
             split = "test"
-            print(f"Warning: Split is empty for row {idx}, setting to test")
+            logger.debug(f"Warning: Split is empty for row {idx}, setting to test")
         sample = {
             "question": question,
             "choices": choices,
@@ -459,72 +496,130 @@ def convert_to_lm_eval_format(
         else:
             sample["metadata"] = metadata
         samples.append(sample)
+    if len(samples) == 0:
+        logger.warning(f"No valid samples found for {output_dir}, skipping")
+        return None, None
     samples = pd.DataFrame(samples)
-    print(samples["split"].unique())
     data_files = {}
     for split in samples["split"].unique():
         try:
-            output_path = output_dir / split
             # output_path.mkdir(exist_ok=True, parents=True)
-            dataset = Dataset.from_pandas(
-                samples[samples["split"] == split], split=split
-            )
-            # dataset = Dataset.from_list(samples[samples["split"] == split])
-            # output_path = output_path.with_suffix("")  # Remove any extension
-            # dataset.save_to_disk(str(output_path))
-            # data_files[split] = [
-            #     p.absolute().as_posix()
-            #     for p in output_path.rglob(f".{config.dataset_format}")
-            # ]
+            if config.combine_all_splits:
+                output_path = output_dir / "test"
+                dataset = Dataset.from_pandas(samples)
+                split = "test"
+            else:
+                output_path = output_dir / split
+                dataset = Dataset.from_pandas(
+                    samples[samples["split"] == split], split=split
+                )
             ## TODO: save as other formats
             output_path = output_dir / f"{split}.parquet"
-            # output_path = output_path.with_suffix(".parquet")
             dataset.to_parquet(str(output_path))
             data_files[split] = [
                 p.absolute().as_posix() for p in output_dir.rglob(f"{split}*.parquet")
             ]
+            if config.combine_all_splits:
+                break
         except Exception as e:
-            print(e)
+            logger.error(e)
             import code
 
             code.interact(local=locals() | globals())
 
-    logger.info(f"Converted {len(samples)} samples to {output_path}")
+    logger.info(f"Converted {len(samples)} samples to {config.output_dir}")
     return samples, data_files
 
 
 def cleanup_excel(df: pd.DataFrame, config: DatasetConverterConfig):
+    """Cleans up the Excel DataFrame by removing rows with empty questions and certain versions (e.g. depreceated rows)."""
     df = df.dropna(subset=[config.question_field])
     df = df[
-        ~df["Version"]
-        .fillna("")
-        .str.lower()
-        .str.startswith(tuple(["depreceate", "ignore", "maybe", "no"]))
+        ~(
+            df["Version"]
+            .fillna("")
+            .str.lower()
+            .str.startswith(tuple(["depreceate", "ignore", "maybe", "no"]))
+        )
     ]
     return df
 
 
-def transform_v1(config: DatasetConverterConfig, logger):
-    logger.info(f"Loading data from {config.dataset_path}")
-    if config.dataset_path.suffix == ".xlsx":
-        df = pd.read_excel(
-            config.dataset_path,
-            sheet_name=config.sheet_name,
-            na_values=["", "null", "NULL"],
-        )
-        df = cleanup_excel(df, config)
-    else:
-        df = pd.read_csv(
-            config.dataset_path,
-            sep=config.separator,
-            engine="python",
-            na_values=["", "null", "NULL"],
-        )
-    logger.info(f"Loaded {len(df)} rows")
+def cleanup_str(s):
+    """Clean up a string to be used as a valid identifier (e.g., for filenames or task names)."""
+    s = (
+        s.replace(" & ", "_")
+        .replace(" ", "_")
+        .replace("/", "_")
+        .replace(".", "_")
+        .replace(",", "")
+        .replace("(", "")
+        .replace(")", "")
+        .replace("__", "_")
+        .lower()
+    )
+    return s
 
-    # Create output directory
-    output_dir = Path(config.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+
+def is_valid(s):
+    if s is None:
+        return False
+    s = s.strip().lower()
+    return s not in ["null", "na", "nan", "not_found", "none", "#value!"]
+
+
+def create_subsets(
+    df,
+    subset,
+    logger,
+    task_name,
+    output_dir,
+    config,
+    base_conf_path,
+    config_name: Optional[str] = None,
+):
+    logger.info(f"Processing subset: {subset}.")
+    subset_df = df[df["_subset"] == subset]
+    subset = cleanup_str(str(subset))
+    if not is_valid(subset):
+        return
+    data_path = output_dir / task_name
+    data_path.mkdir(exist_ok=True, parents=True)
+    try:
+        samples, data_file_paths = convert_to_lm_eval_format(
+            config,
+            logger,
+            subset_df,
+            data_path,
+        )
+        if samples is None or len(samples) == 0:
+            return None
+        update_args = {
+            "task": task_name,
+            "include": base_conf_path.name,
+        }
+        if config.lm_eval_local_or_hf == "local":
+            update_args["dataset_kwargs"] = {"data_files": data_file_paths}
+            update_args["dataset_path"] = "parquet"
+        else:
+            # subset id
+            update_args["dataset_name"] = subset
+        create_task_config(
+            config,
+            logger,
+            task_name=task_name,
+            update_args=update_args,
+            config_name=config_name,
+        )
+    except:
+        logger.error(f"Error saving subset: {subset}")
+        logger.error(traceback.format_exc())
+
+    return subset
+
+
+def transform_v1(config: DatasetConverterConfig, logger):
+    df = read_data(config, logger)
     update_args = dict(
         dataset_name=None,
         dataset_path="parquet",
@@ -551,52 +646,12 @@ def transform_v1(config: DatasetConverterConfig, logger):
         all_subsets = df["_subset"].unique()
         added_subsets = set()
         for subset in all_subsets:
-            logger.info(f"Processing subset: {subset}.")
-            subset_df = df[df["_subset"] == subset]
-            subset = str(subset)
-            subset = (
-                subset.replace(" & ", "_")
-                .replace(" ", "_")
-                .replace("/", "_")
-                .replace(".", "_")
-                .replace(",", "")
-                .lower()
-            )
-            if subset in [None, "null", "na", "nan", "not_found", "none"]:
-                continue
             task_name = f"{config.lm_eval_task.dataset_name}_{subset}"
-            data_path = output_dir / subset / task_name
-            # todo upload to hf
-            try:
-                samples, data_file_paths = convert_to_lm_eval_format(
-                    config,
-                    logger,
-                    subset_df,
-                    data_path,
-                )
-                update_args = {
-                    "task": task_name,
-                    "include": base_conf_path.name,
-                }
-                if config.lm_eval_local_or_hf == "local":
-                    update_args["dataset_kwargs"] = {"data_files": data_file_paths}
-                    update_args["dataset_path"] = "parquet"
-                else:
-                    # subset id
-                    update_args["dataset_name"] = subset
-                create_task_config(
-                    config,
-                    logger,
-                    task_name=task_name,
-                    update_args=update_args,
-                )
-                added_subsets.add(task_name)
-            except:
-                logger.error(f"Error saving subset: {subset}")
-                logger.error(traceback.format_exc())
-                import code
-
-                code.interact(local=locals() | globals())
+            subset = create_subsets(
+                df, subset, logger, task_name, output_dir, config, base_conf_path
+            )
+            if subset is not None:
+                added_subsets.add(subset)
         group_kwargs = {
             "group": config.lm_eval_task.dataset_name,
             "task": list(added_subsets),
@@ -621,24 +676,215 @@ def transform_v1(config: DatasetConverterConfig, logger):
             data_path,
         )
 
-    logger.info(f"\\nConversion complete! Files created in {output_dir}")
+    logger.info(f"\\nConversion complete! Files created in {config.output_dir}")
     logger.info(f"To run evaluation:")
     logger.info(
         f"lm_eval --model hf --model_args pretrained=<model_name> --tasks {config.lm_eval_task.dataset_name} --device cuda"
     )
 
 
+def transform_w_collection(
+    df,
+    config: DatasetConverterConfig,
+    logger,
+    prefix: Optional[str] = "",
+):
+    df["_dataset"] = df[config.dataset_by].apply(
+        lambda x: x.split(",")[0] if isinstance(x, str) else x
+    )
+    update_args = dict(
+        # dataset_name=None,
+        dataset_path="parquet",
+    )
+
+    def process_collection(df, collection_prefix: str = ""):
+        all_datasets = df["_dataset"].unique()
+        added_datasets = set()
+        for dataset_name in all_datasets:
+            filtered_df = df[df["_dataset"] == dataset_name]
+            dataset_name = cleanup_str(str(dataset_name))
+            # dataset_name = f"{collection_prefix}{cleanup_str(str(dataset_name))}"
+            if not is_valid(dataset_name):
+                continue
+            output_dir = config.output_dir / dataset_name
+            logger.info(f"Processing dataset: {dataset_name}.")
+            base_conf_path = create_task_config(
+                config,
+                logger,
+                task_name=dataset_name,
+                config_name=f"{collection_prefix}{dataset_name}/{dataset_name}_base",
+                base_dir=False,
+                update_args=config.lm_eval_task.export_dict()
+                | update_args
+                | {
+                    "dataset_path": f"{config.hf_organization}/{dataset_name}",
+                    "dataset_name": dataset_name,
+                },
+            )
+            if config.lm_eval_local_or_hf == "hf":
+                update_args["dataset_path"] = get_repo_id(
+                    get_dataset_name(dataset_name, config), config
+                )
+
+            if config.create_subset_dirs:
+                if config.subset_by not in df.columns:
+                    raise ValueError(
+                        f"subset_by column ({config.subset_by}) not in the data."
+                    )
+                # TODO: add canonical subset
+                filtered_df["_subset"] = filtered_df[config.subset_by].apply(
+                    lambda x: x.split(",")[0] if isinstance(x, str) else x
+                )
+                mask = (
+                    filtered_df[config.metadata_fields.get("variation_id")]
+                    .str.split(".")
+                    .str[-1]
+                    == "0"
+                )
+                filtered_df.loc[mask, "_subset"] = "cannonical"
+
+                all_subsets = filtered_df["_subset"].unique()
+                added_subsets = set()
+                for subset in all_subsets:
+                    task_name = cleanup_str(f"{dataset_name}_{subset}")
+                    # task_name = cleanup_str(f"{subset}")
+                    subset = create_subsets(
+                        filtered_df,
+                        subset,
+                        logger,
+                        task_name,
+                        output_dir,
+                        config,
+                        base_conf_path,
+                        config_name=f"{prefix}{dataset_name}/{task_name}",
+                    )
+                    if subset is not None:
+                        added_subsets.add(task_name)
+                if len(added_subsets) == 0:
+                    logger.warning(f"No subsets created for {dataset_name}.")
+                    continue
+                # group for dataset
+                group_kwargs = {
+                    "group": dataset_name,
+                    "task": list(added_subsets),
+                    "aggregate_metric_list": config.lm_eval_task.aggregate_metric_list,
+                    "metadata": config.lm_eval_task.metadata,
+                }
+                group_conf_path = create_task_config(
+                    config,
+                    logger,
+                    task_name=cleanup_str(f"{prefix}{dataset_name}"),
+                    # task_name=dataset_name,
+                    # relative_path="",
+                    config_name=f"{prefix}{dataset_name}/_{dataset_name}",
+                    # config_name=f"_{dataset_name}",
+                    base_dir=False,
+                    update_args=group_kwargs,
+                )
+                added_datasets.add(dataset_name)
+
+            for collection in config.collections:
+                collection = cleanup_str(f"{collection_prefix}{collection}")
+                # group for collection
+                # tODO: check if this is the best way
+                group_kwargs = {
+                    "group": collection,
+                    "task": list(added_datasets),
+                    "aggregate_metric_list": config.lm_eval_task.aggregate_metric_list,
+                    "metadata": config.lm_eval_task.metadata,
+                }
+                group_conf_path = create_task_config(
+                    config,
+                    logger,
+                    task_name=collection,
+                    config_name=f"{collection_prefix}_{collection}",
+                    base_dir=False,
+                    update_args=group_kwargs,
+                )
+
+    process_collection(df, collection_prefix=prefix)
+
+    logger.info(f"\\nConversion complete! Files created in {config.output_dir}")
+    logger.info(f"To run evaluation:")
+    logger.info(
+        f"lm_eval --model hf --model_args pretrained=<model_name> --tasks {config.lm_eval_task.dataset_name} --device cuda"
+    )
+
+
+def read_data(config, logger):
+    logger.info(f"Loading data from {config.dataset_path}")
+    if config.dataset_path.suffix == ".xlsx":
+        df = pd.read_excel(
+            config.dataset_path,
+            sheet_name=config.sheet_name,
+            na_values=["", "null", "NULL"],
+        )
+        df = cleanup_excel(df, config)
+    else:
+        df = pd.read_csv(
+            config.dataset_path,
+            sep=config.separator,
+            engine="python",
+            na_values=["", "null", "NULL"],
+        )
+
+    if config.dataset_by:
+        assert config.dataset_by in df.columns, ValueError(
+            f"dataset_by column '{config.dataset_by}' not found in dataset."
+        )
+        df["_dataset"] = df[config.dataset_by].apply(
+            lambda x: x.split(",")[0] if isinstance(x, str) else x
+        )
+        df = df[df[config.dataset_by].apply(is_valid)]
+    if config.subset_by is not None:
+        assert config.subset_by in df.columns, ValueError(
+            f"subset_by column '{config.subset_by}' not found in dataset."
+        )
+        df["_subset"] = df[config.subset_by].apply(
+            lambda x: x.split(",")[0] if isinstance(x, str) else x
+        )
+        df = df[df[config.subset_by].apply(is_valid)]
+        # df = df[df["_subset"].apply(is_valid)]
+
+    logger.info(f"Loaded {len(df)} rows")
+
+    # Create output directory
+    output_dir_ = Path(config.output_dir)
+    output_dir_.mkdir(parents=True, exist_ok=True)
+    return df
+
+
 def main():
     config: DatasetConverterConfig = load_config(DatasetConverterConfig)
     logger = setup_logger(config, "dataset_converter")
+    output_dir = config.output_dir.resolve().absolute()
 
     if config.version == "v01":
-        transform_v01_to_lm_eval_format(config.dataset_path, config.output_dir)
+        transform_v01_to_lm_eval_format(config.dataset_path, output_dir)
     elif config.version == "v1":
         transform_v1(config, logger)
+    elif config.version == "collection":
+        df = read_data(config, logger)
+        all_languages = df["Lang"].unique()
+        output_dir = config.output_dir
+        for lang in all_languages:
+            tmp_df = df[df["Lang"] == lang]
+            if "eng" in lang:
+                continue
+            config.output_dir = output_dir / lang
+            tmp_df[config.dataset_by] = tmp_df[config.dataset_by].apply(
+                lambda x: f"{lang}_{x}"
+            )
+            transform_w_collection(tmp_df, config, logger, prefix=f"{lang}/")
+
+            if config.upload_to_hf:
+                for dataset_name in config.output_dir.glob("*"):
+                    dataset_name = dataset_name.resolve().absolute()
+                    upload_dataset(dataset_name, config, logger)
+        return
 
     if config.upload_to_hf:
-        upload_dataset(config.output_dir, config, logger)
+        upload_dataset(output_dir, config, logger)
 
 
 if __name__ == "__main__":
