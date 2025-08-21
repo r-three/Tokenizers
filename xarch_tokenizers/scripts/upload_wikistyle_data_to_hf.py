@@ -12,7 +12,7 @@ from huggingface_hub import HfApi
 
 # Configuration
 DATASET_NAME = "code-switching-tokenizer-robustness"
-HF_USERNAME = "Malikeh1375"  # Replace with your HF username
+HF_USERNAME = "Malikeh1375"  # Replace with the target HF username
 DATASET_REPO = f"{HF_USERNAME}/{DATASET_NAME}"
 
 JSON_FILE_PATH = "code_switching_dataset.json"  # Update this path
