@@ -1,0 +1,21 @@
+dataset_path: /Users/gsaltintas/code/phd/tokenizers/data/v103.1.xlsx
+perturbations:
+  - keyboard_proximity_errors
+  - ocr_errors
+
+output_dir: /Users/gsaltintas/code/phd/tokenizers/data/automated_perturbations
+output_format: jsonl
+
+sheet_name: "English-Text-Completion"
+question_field: Question
+target_field: Correct
+option_fields:
+  - Opt 1
+  - Opt 2
+  - Opt 3
+set_id_field: "Set Id"
+variation_id_field: "Variation Id"
+perturbation_subcategory_field: Subcategory
+perturbation_category_field: Category
+
+# python xarch_tokenizers/perturbations/perturb.py /Users/gsaltintas/code/phd/tokenizers/xarch_tokenizers/perturbations/perturb.yaml
