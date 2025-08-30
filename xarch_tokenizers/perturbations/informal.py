@@ -20,40 +20,70 @@ from xarch_tokenizers.perturbations.common import (
 
 character_substitution = Perturbation(
     "Character substitution",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr, LANGS.zh, LANGS.fa],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.tur_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+    ],
     automatable=True,
     category="Social Media & Informal Text",
 )
 deliberate_misspellings = Perturbation(
     "Deliberate misspellings",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr, LANGS.zh, LANGS.fa],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.tur_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+    ],
     automatable=True,
     category="Social Media & Informal Text",
 )
 
 emoji_substitution = Perturbation(
     "Emoji substitution",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr, LANGS.zh, LANGS.fa],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.tur_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+    ],
     automatable=True,
     category="Social Media & Informal Text",
 )
 word_reordering = Perturbation(
     "Word reordering",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr, LANGS.zh, LANGS.fa],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.tur_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+    ],
     automatable=True,
     category="Social Media & Informal Text",
 )
 colloquial = Perturbation(
     "Colloquial",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr, LANGS.zh, LANGS.fa],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.tur_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+    ],
     automatable=False,
     category="Social Media & Informal Text",
 )
 phonetic_spelling = Perturbation(
     "Phonetic spelling",
     available_languages=[
-        LANGS.en,
-        LANGS.it,
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
     ],
     category="Social Media & Informal Text",
     automatable=True,
@@ -61,13 +91,13 @@ phonetic_spelling = Perturbation(
 ## tODO: chinese?? farsi??
 letter_repetition_for_emphasis = Perturbation(
     "Letter repetition for emphasis",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn, LANGS.tur_Latn],
     automatable=True,
     category="Social Media & Informal Text",
 )
 word_concatenation = Perturbation(
     "Word concatenation",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn, LANGS.tur_Latn],
     automatable=True,
     category="Social Media & Informal Text",
 )

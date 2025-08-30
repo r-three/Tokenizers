@@ -19,37 +19,37 @@ from xarch_tokenizers.perturbations.common import (
 
 clitics = Perturbation(
     "Clitics",
-    available_languages=[LANGS.en, LANGS.it],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn],
     automatable=True,
     category="Morphological Challenges",
 )
 compounds = Perturbation(
     "Compounds",
-    available_languages=[LANGS.en, LANGS.it],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn],
     automatable=True,
     category="Morphological Challenges",
 )
 contractions = Perturbation(
     "Contractions",
-    available_languages=[LANGS.en, LANGS.it],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn],
     automatable=True,
     category="Morphological Challenges",
 )
 affixation_edge_cases = Perturbation(
     "Affixation edge cases",
-    available_languages=[LANGS.en, LANGS.tr],
+    available_languages=[LANGS.eng_Latn, LANGS.tur_Latn],
     automatable=False,
     category="Morphological Challenges",
 )
 derivations = Perturbation(
     "Derivations",
-    available_languages=[LANGS.tr],
+    available_languages=[LANGS.tur_Latn],
     automatable=False,
     category="Morphological Challenges",
 )
 inflections = Perturbation(
     "Inflections",
-    available_languages=[LANGS.tr],
+    available_languages=[LANGS.tur_Latn],
     automatable=False,
     category="Morphological Challenges",
 )

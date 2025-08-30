@@ -1,7 +1,11 @@
 dataset_path: /Users/gsaltintas/code/phd/tokenizers/data/v103.1.xlsx
 perturbations:
-  - keyboard_proximity_errors
-  - ocr_errors
+  - keyboard_proximity_errors:
+      n_variations: 3
+      max_errors_in_one_sample: 1
+  - ocr_errors:
+      n_variations: 3
+      max_errors_in_one_sample: 2
 
 output_dir: /Users/gsaltintas/code/phd/tokenizers/data/automated_perturbations
 output_format: jsonl
@@ -17,5 +21,6 @@ set_id_field: "Set Id"
 variation_id_field: "Variation Id"
 perturbation_subcategory_field: Subcategory
 perturbation_category_field: Category
+language_field: Lang
 
 # python xarch_tokenizers/perturbations/perturb.py /Users/gsaltintas/code/phd/tokenizers/xarch_tokenizers/perturbations/perturb.yaml

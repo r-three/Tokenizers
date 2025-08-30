@@ -65,11 +65,11 @@ ENGLISH_HOMOGLYPHS = {
 }
 
 MULTILINGUAL_HOMOGLYPHS = {
-    LANGS.en: ENGLISH_HOMOGLYPHS,
+    LANGS.eng_Latn: ENGLISH_HOMOGLYPHS,
 }
 
 
-def generate_homoglyph_errors(word, language: Optional[LANGS] = LANGS.en):
+def generate_homoglyph_errors(word, language: Optional[LANGS] = LANGS.eng_Latn):
     """
     Generate possible homoglyph substitutions for a word.
 
@@ -97,69 +97,109 @@ def generate_homoglyph_errors(word, language: Optional[LANGS] = LANGS.en):
 
 abbreviations_with_periods = Perturbation(
     "Abbreviations (with periods)",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn, LANGS.tur_Latn],
     automatable=True,
     category="Script / Orthography",
 )
 brand_names_with_punctuation = Perturbation(
     "Brand names with punctuation",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn, LANGS.tur_Latn],
     automatable=True,
     category="Script / Orthography",
 )
 code_language_script_switching = Perturbation(
     "Code/language/script switching",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 diacritics_presence_absence = Perturbation(
     "Diacritics presence/absence",
-    available_languages=[LANGS.en, LANGS.it, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 equivalent_expressions = Perturbation(
     "Equivalent expressions",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 historical_spelling = Perturbation(
     "Historical spelling",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 # TODO: not so much in turkish
 homoglyphs = Perturbation(
     "Homoglyphs",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn, LANGS.zho_Hans],
     automatable=True,
     category="Script / Orthography",
     func=generate_homoglyph_errors,
 )
 proper_nouns_with_unusual_capitalization = Perturbation(
     "Proper nouns with unusual capitalization",
-    available_languages=[LANGS.en, LANGS.it, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 regional_spelling_variations = Perturbation(
     "Regional spelling variations",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 word_spacing_zero_width_characters_extra_space = Perturbation(
     "Word Spacing/zero-width characters/extra space",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Script / Orthography",
 )
 romanization = Perturbation(
     "Romanization",
-    available_languages=[LANGS.it, LANGS.zh, LANGS.fa],
+    available_languages=[LANGS.ita_Latn, LANGS.zho_Hans, LANGS.pes_Arab],
     automatable=True,
     category="Script / Orthography",
 )

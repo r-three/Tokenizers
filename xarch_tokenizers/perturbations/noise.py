@@ -4,8 +4,11 @@
 # Noise	Permutations
 # Noise	Typographical errors
 
+from os import replace
+from random import shuffle
 from typing import List, Optional
 
+import numpy as np
 from attr import dataclass
 
 from xarch_tokenizers.perturbations.common import (
@@ -336,22 +339,28 @@ CHINESE_OCR_ERRORS = {
 
 # Combined dictionaries for easy access
 MULTILINGUAL_KEYBOARDS = {
-    LANGS.en: ENGLISH_KEYBOARD_NEIGHBORS,
-    LANGS.fa: FARSI_KEYBOARD_NEIGHBORS,
-    LANGS.tr: TURKISH_KEYBOARD_NEIGHBORS,
-    LANGS.zh: CHINESE_KEYBOARD_NEIGHBORS,
+    LANGS.eng_Latn: ENGLISH_KEYBOARD_NEIGHBORS,
+    LANGS.pes_Arab: FARSI_KEYBOARD_NEIGHBORS,
+    LANGS.tur_Latn: TURKISH_KEYBOARD_NEIGHBORS,
+    LANGS.zho_Hans: CHINESE_KEYBOARD_NEIGHBORS,
 }
 
 MULTILINGUAL_OCR_ERRORS = {
-    LANGS.en: ENGLISH_OCR_ERRORS,
-    LANGS.fa: FARSI_OCR_ERRORS,
-    LANGS.tr: TURKISH_OCR_ERRORS,
-    LANGS.zh: CHINESE_OCR_ERRORS,
+    LANGS.eng_Latn: ENGLISH_OCR_ERRORS,
+    LANGS.pes_Arab: FARSI_OCR_ERRORS,
+    LANGS.tur_Latn: TURKISH_OCR_ERRORS,
+    LANGS.zho_Hans: CHINESE_OCR_ERRORS,
 }
 
 
 # Utility functions
-def generate_keyboard_errors(word, language: Optional[LANGS] = LANGS.en, max_errors=1):
+def generate_keyboard_errors(
+    question,
+    language: Optional[LANGS] = LANGS.eng_Latn,
+    n_variations: int = 1,
+    max_errors_in_one_sample: int = 1,
+    sampling_rate=1.0,
+):
     """
     Generate possible keyboard proximity errors for a word.
 
@@ -364,77 +373,132 @@ def generate_keyboard_errors(word, language: Optional[LANGS] = LANGS.en, max_err
         list: List of possible misspelled variants
     """
     if language not in MULTILINGUAL_KEYBOARDS:
-        return [word]
+        return [question]
 
     keyboard = MULTILINGUAL_KEYBOARDS[language]
     variants = set()
+    perturbed_indices = set()
 
-    for i, char in enumerate(word):
-        if char.lower() in keyboard:
-            for neighbor in keyboard[char.lower()]:
-                if char.isupper():
-                    neighbor = neighbor.upper()
-                variant = word[:i] + neighbor + word[i + 1 :]
-                variants.add(variant)
+    for _ in range(n_variations):
+        indx = np.random.choice(len(question), max_errors_in_one_sample, replace=False)
+        indx.sort()
+        variant = question
+        perturbed = False
+        for ind in indx:
+            char = question[ind]
+            if char.lower() not in keyboard:
+                continue
+            replacement = np.random.choice(list(keyboard[char.lower()]), size=1)[0]
+            # correct casing
+            replacement = replacement.upper() if char.isupper() else replacement
+            perturbed_indices.add(ind)
+            variant = variant[:ind] + replacement + variant[ind + 1 :]
+        if perturbed:
+            variants.add(variant)
 
     return list(variants)
 
 
-def generate_ocr_errors(word, language: Optional[LANGS] = LANGS.en):
+def generate_ocr_errors(
+    question,
+    language: Optional[LANGS] = LANGS.eng_Latn,
+    n_variations: int = 1,
+    max_errors_in_one_sample: int = 1,
+):
     """
-    Generate possible OCR errors for a word.
+    Generate possible OCR errors for a question.
 
     Args:
-        word (str): Input word
+        question (str): Input question
         language (str): Language code
 
     Returns:
         list: List of possible OCR error variants
     """
     if language not in MULTILINGUAL_OCR_ERRORS:
-        return [word]
+        return [question]
 
     ocr_dict = MULTILINGUAL_OCR_ERRORS[language]
     variants = set()
 
-    for original, alternatives in ocr_dict.items():
-        if original in word:
-            for alt in alternatives:
-                variant = word.replace(original, alt)
-                variants.add(variant)
+    # TODO: not replace all
+    replacable_indices = [
+        i for i, original in enumerate(question) if original in ocr_dict
+    ]
+    for _ in range(n_variations):
+        replace_count = np.random.randint(1, max_errors_in_one_sample + 1)
+        replace_inds = np.random.choice(
+            replacable_indices, size=replace_count, replace=False
+        )
+        variant = question
+        for i in replace_inds:
+            char = question[i]
+            alternatives = list(ocr_dict[char])
+            variant = variant[:i] + np.random.choice(alternatives) + variant[i + 1 :]
+        variants.add(variant)
 
     return list(variants)
 
 
 keyboard_proximity_errors = Perturbation(
     "Keyboard proximity errors",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     func=generate_keyboard_errors,
     category="Noise",
 )
 noise_injection = Perturbation(
     "Noise injection",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Noise",
 )
 ocr_errors = Perturbation(
     "OCR errors",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     func=generate_ocr_errors,
     category="Noise",
 )
 permutations = Perturbation(
     "Permutations",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Noise",
 )
 typographical_errors = Perturbation(
     "Typographical errors",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Noise",
 )
@@ -453,10 +517,10 @@ Noise = {
 if __name__ == "__main__":
     # Test examples for each language
     test_words = {
-        LANGS.en: "hello",
-        LANGS.fa: "سلام",
-        LANGS.tr: "merhaba",
-        LANGS.zh: "你好",
+        LANGS.eng_Latn: "hello",
+        LANGS.pes_Arab: "سلام",
+        LANGS.tur_Latn: "merhaba",
+        LANGS.zho_Hans: "你好",
     }
 
     for lang, word in test_words.items():

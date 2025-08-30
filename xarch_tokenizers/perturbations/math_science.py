@@ -16,27 +16,27 @@ from xarch_tokenizers.perturbations.common import (
 
 chemical_formulas = Perturbation(
     "Chemical formulas",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     category="Mathematical & Scientific Notation",
 )
 equations_with_mixed_notation = Perturbation(
     "Equations with mixed notation",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     category="Mathematical & Scientific Notation",
 )
 numerical_formats = Perturbation(
     "Numerical formats",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     category="Mathematical & Scientific Notation",
 )
 scientific_notation = Perturbation(
     "Scientific notation",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     category="Mathematical & Scientific Notation",
 )
 unit_combinations = Perturbation(
     "Unit combinations",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     category="Mathematical & Scientific Notation",
 )
 

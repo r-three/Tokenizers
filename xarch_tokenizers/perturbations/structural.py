@@ -20,49 +20,91 @@ from xarch_tokenizers.perturbations.common import (
 
 capitalization = Perturbation(
     "Capitalization",
-    available_languages=[LANGS.en, LANGS.it, LANGS.tr],
+    available_languages=[LANGS.eng_Latn, LANGS.ita_Latn, LANGS.tur_Latn],
     automatable=True,
     category="Structural Text Elements",
 )
 email_addresses = Perturbation(
     "Email addresses",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Structural Text Elements",
 )
 headers_and_section_titles = Perturbation(
     "Headers and section titles",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=False,
     category="Structural Text Elements",
 )
 list_markers = Perturbation(
     "List markers",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=False,
     category="Structural Text Elements",
 )
 text_decorations = Perturbation(
     "Text decorations",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Structural Text Elements",
 )
 unicode_formatting = Perturbation(
     "Unicode formatting",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Structural Text Elements",
 )
 unusual_formatting = Perturbation(
     "Unusual formatting",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=True,
     category="Structural Text Elements",
 )
 urls_and_file_paths = Perturbation(
     "URLs and file paths",
-    available_languages=[LANGS.en, LANGS.it, LANGS.zh, LANGS.fa, LANGS.tr],
+    available_languages=[
+        LANGS.eng_Latn,
+        LANGS.ita_Latn,
+        LANGS.zho_Hans,
+        LANGS.pes_Arab,
+        LANGS.tur_Latn,
+    ],
     automatable=False,
     category="Structural Text Elements",
 )

@@ -17,37 +17,37 @@ from xarch_tokenizers.perturbations.common import (
 
 cultural_references = Perturbation(
     "Cultural references",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=False,
     category="Context-Dependent Ambiguities",
 )
 domain_specific_punctuation = Perturbation(
     "Domain-Specific Punctuation",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=False,
     category="Context-Dependent Ambiguities",
 )
 quotes_and_parentheses = Perturbation(
     "Quotes & Parentheses",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Context-Dependent Ambiguities",
 )
 rare_n_grams = Perturbation(
     "Rare n-grams",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Context-Dependent Ambiguities",
 )
 sentence_boundaries = Perturbation(
     "Sentence boundaries",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=False,
     category="Context-Dependent Ambiguities",
 )
 wiki_jargon = Perturbation(
     "Wiki-jargon",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=False,
     category="Context-Dependent Ambiguities",
 )

@@ -9,11 +9,11 @@ LANG_CODES = ["eng_Latn", "tur_Latn", "pes_Arab", "zho_Hans", "ita_Latn"]
 
 
 class LANGS(enum.Enum):
-    en = "eng_Latn"
-    tr = "tur_Latn"
-    fa = "pes_Arab"
-    zh = "zho_Hans"
-    it = "ita_Latn"
+    eng_Latn = "eng_Latn"
+    tur_Latn = "tur_Latn"
+    pes_Arab = "pes_Arab"
+    zho_Hans = "zho_Hans"
+    ita_Latn = "ita_Latn"
 
 
 @dataclass

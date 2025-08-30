@@ -19,6 +19,7 @@ from xarch_tokenizers.config import Config
 from xarch_tokenizers.experiment_config import load_config
 from xarch_tokenizers.logging.logger import setup_logger
 from xarch_tokenizers.perturbations import PERTURBATION_MAPPINGS
+from xarch_tokenizers.perturbations.common import LANGS
 from xarch_tokenizers.scripts.convert_dataset_to_hf_format import (
     cleanup_excel,
     read_data,
@@ -136,6 +137,9 @@ class PerturbationArgs(Config):
             "help": "Name of the field containing the perturbation's general category."
         },
     )
+    language_field: Optional[str] = field(
+        default="Lang", metadata={"help": "Name of the field containing the language."}
+    )
 
     def __post_init__(self):
         self.dataset_path = Path(self.dataset_path).resolve().absolute()
@@ -174,26 +178,51 @@ def read_data(config, logger):
     return df
 
 
+def apply_perturbation(canonical_df, config, perturbation, perturbation_kwargs={}):
+    if perturbation.func is None:
+        return None
+    perturbed_questions = canonical_df.apply(
+        lambda row: perturbation.func(
+            row[config.question_field],
+            language=row.get(config.language_field, LANGS.eng_Latn),
+        ),
+        axis=1,
+    )
+
+    perturbed_df = canonical_df.copy()
+    perturbed_df[config.question_field] = perturbed_questions
+    perturbed_df[config.perturbation_subcategory_field] = perturbation.name
+    perturbed_df[config.perturbation_category_field] = perturbation.category
+    return perturbed_df
+
+
 def perturb(config, logger):
     df = read_data(config, logger)
     logger.info("Data loaded successfully.")
     # Apply perturbations
     # get perturbation
     resulting_df = df.copy()
-    cannonical_ids = (
+    canonical_ids = (
         df.groupby(config.set_id_field)[config.variation_id_field].min().reset_index()
     )
-    cannonical_df = df[
+    canonical_df = df[
         df.apply(
             lambda x: x[config.variation_id_field]
-            == cannonical_ids.loc[
-                cannonical_ids[config.set_id_field] == x[config.set_id_field],
+            == canonical_ids.loc[
+                canonical_ids[config.set_id_field] == x[config.set_id_field],
                 config.variation_id_field,
             ].values[0],
             axis=1,
         )
     ]
+    canonical_df[config.language_field] = canonical_df[config.language_field].map(
+        lambda x: LANGS[x] if x in [l.value for l in LANGS] else LANGS.eng_Latn
+    )
     for perturbation_name in config.perturbations:
+        perturbation_kwargs = dict()
+        if isinstance(perturbation_name, dict):
+            perturbation_kwargs = list(perturbation_name.values())[0]
+            perturbation_name = list(perturbation_name.keys())[0]
         if perturbation_name not in PERTURBATION_MAPPINGS:
             logger.warning(f"Unknown perturbation: {perturbation_name}")
             continue
@@ -205,19 +234,13 @@ def perturb(config, logger):
                 f"Skipping non-automatable perturbation: {perturbation_name}"
             )
             continue
-        from code import interact
-
-        # interact(local=locals() | globals())
-        # df = apply_perturbation(df, perturbation)
-        perturbed_df = cannonical_df.copy()
-        perturbed_df[config.question_field] = cannonical_df[
-            config.question_field
-        ].apply(perturbation.func)
-        perturbed_df[config.perturbation_subcategory_field] = perturbation_name
-        perturbed_df[config.perturbation_category_field] = perturbation.category
+        perturbed_df = apply_perturbation(
+            canonical_df, config, perturbation, perturbation_kwargs
+        )
         resulting_df = pd.concat([resulting_df, perturbed_df], ignore_index=True)
     logger.info("All perturbations applied successfully.")
 
+    # save output
     if (
         config.output_format is None and config.dataset_path.suffix == ".xlsx"
     ) or config.output_format == "xlsx":

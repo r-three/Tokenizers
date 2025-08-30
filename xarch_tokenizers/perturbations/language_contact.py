@@ -14,19 +14,19 @@ from xarch_tokenizers.perturbations.common import (
 
 borrowing = Perturbation(
     "Borrowing",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Language Contact",
 )
 calques = Perturbation(
     "Calques",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Language Contact",
 )
 transliteration = Perturbation(
     "Transliteration",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Language Contact",
 )

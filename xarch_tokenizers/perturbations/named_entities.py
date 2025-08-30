@@ -15,25 +15,25 @@ from xarch_tokenizers.perturbations.common import (
 
 academic_citations = Perturbation(
     "Academic Citations",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=False,
     category="Named Entities",
 )
 place_names_with_apostrophes = Perturbation(
     "Place names with apostrophes",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Named Entities",
 )
 special_names_across_cultures = Perturbation(
     "Special names across cultures",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=False,
     category="Named Entities",
 )
 technical_product_names = Perturbation(
     "Technical product names",
-    available_languages=[LANGS.en],
+    available_languages=[LANGS.eng_Latn],
     automatable=True,
     category="Named Entities",
 )
