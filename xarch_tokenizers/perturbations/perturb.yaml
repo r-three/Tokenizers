@@ -6,9 +6,21 @@ perturbations:
   - ocr_errors:
       n_variations: 3
       max_errors_in_one_sample: 2
+  - text_decorations:
+      n_variations: 5
+  - unicode_formatting:
+      n_variations: 5
+  - diacritics_presence_absence:
+      n_variations: 5
+  - homoglyphs:
+      n_variations: 5
+  - word_spacing_zero_width_characters_extra_space:
+      n_variations: 5
+
 
 output_dir: /Users/gsaltintas/code/phd/tokenizers/data/automated_perturbations
-output_format: jsonl
+output_format: xlsx
+# output_format: jsonl
 
 sheet_name: "English-Text-Completion"
 question_field: Question

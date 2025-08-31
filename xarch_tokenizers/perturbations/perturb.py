@@ -12,7 +12,6 @@ from typing import Any, Dict, List, Literal, Optional, Set
 import numpy as np
 import pandas as pd
 from click import Option
-from datasets import Dataset, load_dataset
 from regex import D
 
 from xarch_tokenizers.config import Config
@@ -147,12 +146,6 @@ class PerturbationArgs(Config):
         return super().__post_init__()
 
 
-def apply_perturbation(df, perturbation):
-    if perturbation.func is not None:
-        df = perturbation.func(df)
-    return df
-
-
 def read_data(config, logger):
     logger.info(f"Loading data from {config.dataset_path}")
     if config.dataset_path.suffix == ".xlsx":
@@ -185,15 +178,27 @@ def apply_perturbation(canonical_df, config, perturbation, perturbation_kwargs={
         lambda row: perturbation.func(
             row[config.question_field],
             language=row.get(config.language_field, LANGS.eng_Latn),
+            **perturbation_kwargs,
         ),
         axis=1,
     )
-
+    if len(perturbed_questions) == 0:
+        return None
     perturbed_df = canonical_df.copy()
     perturbed_df[config.question_field] = perturbed_questions
     perturbed_df[config.perturbation_subcategory_field] = perturbation.name
     perturbed_df[config.perturbation_category_field] = perturbation.category
+    perturbed_df = perturbed_df.explode(config.question_field)
+    perturbed_df = perturbed_df.reset_index(drop=True)
+
+    # Remove rows where question is None/empty (if any variations failed)
+    perturbed_df = perturbed_df.dropna(subset=[config.question_field])
+    perturbed_df = perturbed_df[perturbed_df[config.question_field].str.strip() != ""]
     return perturbed_df
+
+    import code
+
+    code.interact(local=dict(globals(), **locals()))
 
 
 def perturb(config, logger):
@@ -237,6 +242,8 @@ def perturb(config, logger):
         perturbed_df = apply_perturbation(
             canonical_df, config, perturbation, perturbation_kwargs
         )
+        if perturbed_df is None:
+            continue
         resulting_df = pd.concat([resulting_df, perturbed_df], ignore_index=True)
     logger.info("All perturbations applied successfully.")
 

@@ -511,20 +511,3 @@ Noise = {
     "permutations": permutations,
     "typographical_errors": typographical_errors,
 }
-
-
-# Example usage
-if __name__ == "__main__":
-    # Test examples for each language
-    test_words = {
-        LANGS.eng_Latn: "hello",
-        LANGS.pes_Arab: "سلام",
-        LANGS.tur_Latn: "merhaba",
-        LANGS.zho_Hans: "你好",
-    }
-
-    for lang, word in test_words.items():
-        print(f"\n{lang.value.upper()} - '{word}':")
-        errors = generate_all_error_types(word, lang)
-        for error_type, variants in errors.items():
-            print(f"  {error_type}: {variants[:5]}")  # Show first 5 variants
