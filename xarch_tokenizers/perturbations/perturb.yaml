@@ -12,8 +12,10 @@ perturbations:
       n_variations: 5
   - diacritics_presence_absence:
       n_variations: 5
+      max_errors: 2
   - homoglyphs:
       n_variations: 5
+      max_errors: 2
   - word_spacing_zero_width_characters_extra_space:
       n_variations: 5
 
