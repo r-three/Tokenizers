@@ -11,6 +11,7 @@ from typing import Any, Dict, List, Literal, Optional, Set
 
 import numpy as np
 import pandas as pd
+import xlsxwriter
 from click import Option
 from regex import D
 
@@ -196,9 +197,185 @@ def apply_perturbation(canonical_df, config, perturbation, perturbation_kwargs={
     perturbed_df = perturbed_df[perturbed_df[config.question_field].str.strip() != ""]
     return perturbed_df
 
-    import code
 
-    code.interact(local=dict(globals(), **locals()))
+def save_with_xlsxwriter(df, output_path):
+    """Save DataFrame with xlsxwriter which handles Unicode better"""
+
+    # Use xlsxwriter engine which is more Unicode-friendly
+    with pd.ExcelWriter(
+        output_path,
+        engine="xlsxwriter",  # options={"strings_to_unicode": True}
+    ) as writer:
+        df.to_excel(writer, index=False, sheet_name="Perturbed Data")
+
+        # Optional: Set column widths for better display
+        worksheet = writer.sheets["Perturbed Data"]
+        for i, col in enumerate(df.columns):
+            max_len = max(df[col].astype(str).apply(len).max(), len(col)) + 2
+            worksheet.set_column(i, i, min(max_len, 50))  # Cap at 50 chars width
+
+
+import re
+
+import pandas as pd
+from openpyxl import Workbook
+from openpyxl.cell.rich_text import CellRichText, TextBlock
+from openpyxl.cell.text import InlineFont
+from openpyxl.styles import Font, PatternFill
+
+
+def parse_ansi_codes(text):
+    """Parse ANSI escape sequences and extract formatting info"""
+
+    # ANSI code mappings
+    ansi_to_format = {
+        "0m": "reset",
+        "1m": "bold",
+        "3m": "italic",
+        "4m": "underline",
+        "9m": "strikethrough",
+        "91m": "red",
+        "92m": "green",
+        "93m": "yellow",
+        "94m": "blue",
+        "95m": "magenta",
+        "96m": "cyan",
+        "100m": "bg_gray",
+        "101m": "bg_red",
+        "102m": "bg_green",
+        "103m": "bg_yellow",
+        "104m": "bg_blue",
+    }
+
+    # Find all ANSI sequences
+    ansi_pattern = r"\[(\d+(?:;\d+)*)m"
+    segments = []
+    current_format = {}
+
+    # Split text by ANSI codes
+    parts = re.split(f"\033{ansi_pattern}", text)
+
+    i = 0
+    while i < len(parts):
+        if i % 2 == 0:  # Text part
+            if parts[i]:  # Not empty
+                segments.append({"text": parts[i], "format": current_format.copy()})
+        else:  # ANSI code part
+            codes = parts[i].split(";")
+            for code in codes:
+                code_key = f"{code}m"
+                if code_key in ansi_to_format:
+                    format_type = ansi_to_format[code_key]
+                    if format_type == "reset":
+                        current_format = {}
+                    else:
+                        current_format[format_type] = True
+        i += 1
+
+    return segments
+
+
+def create_rich_text_cell(segments):
+    """Create Excel rich text from parsed segments"""
+    if not segments:
+        return ""
+
+    # If only one segment with no formatting, return plain text
+    if len(segments) == 1 and not segments[0]["format"]:
+        return segments[0]["text"]
+
+    rich_text = CellRichText()
+
+    for segment in segments:
+        text_part = segment["text"]
+        format_info = segment["format"]
+
+        if not format_info:
+            # Plain text
+            rich_text.append(text_part)
+        else:
+            # Create font with formatting
+            font_kwargs = {}
+
+            if "bold" in format_info:
+                font_kwargs["bold"] = True
+            if "italic" in format_info:
+                font_kwargs["italic"] = True
+            if "underline" in format_info:
+                font_kwargs["underline"] = "single"
+            if "strikethrough" in format_info:
+                font_kwargs["strike"] = True
+
+            # Colors
+            color_map = {
+                "red": "FF0000",
+                "green": "008000",
+                "blue": "0000FF",
+                "yellow": "FFFF00",
+                "magenta": "FF00FF",
+                "cyan": "00FFFF",
+            }
+
+            for color, hex_code in color_map.items():
+                if color in format_info:
+                    font_kwargs["color"] = hex_code
+                    break
+            font = Font(**font_kwargs) if font_kwargs else Font()
+            font = InlineFont(font)
+            # if font_kwargs:
+            #     print(font_kwargs, font)
+            rich_text.append(TextBlock(font, text_part))
+
+    return rich_text
+
+
+def strip_ansi_codes(text):
+    """Remove ANSI escape codes from text"""
+    if not isinstance(text, str):
+        return text
+    ansi_escape = re.compile(r"\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
+    return ansi_escape.sub("", text)
+
+
+def save_with_ansi_formatting(df, output_path):
+    """Save DataFrame converting ANSI codes to Excel formatting"""
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Formatted Data"
+
+    # Write headers
+    for col_idx, col_name in enumerate(df.columns, 1):
+        ws.cell(row=1, column=col_idx, value=str(col_name))
+        # Make headers bold
+        ws.cell(row=1, column=col_idx).font = Font(bold=True)
+
+    # Write data with formatting
+    for row_idx, (_, row) in enumerate(df.iterrows(), 2):
+        for col_idx, value in enumerate(row, 1):
+            if isinstance(value, str) and "\033[" in value:
+                # Parse ANSI codes and create rich text
+                segments = parse_ansi_codes(value)
+                rich_text = create_rich_text_cell(segments)
+                ws.cell(row=row_idx, column=col_idx, value=rich_text)
+            else:
+                # Plain text
+                ws.cell(row=row_idx, column=col_idx, value=str(value))
+
+    # Auto-adjust column widths
+    for col in ws.columns:
+        max_length = 0
+        column = col[0].column_letter
+        for cell in col:
+            try:
+                if len(str(cell.value)) > max_length:
+                    max_length = len(str(cell.value))
+            except:
+                pass
+        adjusted_width = min(max_length + 2, 50)
+        ws.column_dimensions[column].width = adjusted_width
+
+    wb.save(output_path)
 
 
 def perturb(config, logger):
@@ -245,6 +422,11 @@ def perturb(config, logger):
         if perturbed_df is None:
             continue
         resulting_df = pd.concat([resulting_df, perturbed_df], ignore_index=True)
+    cnts = resulting_df.groupby(config.set_id_field)[config.variation_id_field].count()
+    resulting_df = resulting_df.sort_values(config.set_id_field)
+    resulting_df[config.variation_id_field] = [
+        f"0.{i}" for set_id in cnts.index for i in range(cnts.loc[set_id])
+    ]
     logger.info("All perturbations applied successfully.")
 
     # save output
@@ -252,7 +434,24 @@ def perturb(config, logger):
         config.output_format is None and config.dataset_path.suffix == ".xlsx"
     ) or config.output_format == "xlsx":
         output_path = config.output_dir / "perturbed_data.xlsx"
-        resulting_df.to_excel(output_path, index=False)
+        # Check if data contains ANSI codes
+        has_ansi = (
+            resulting_df.astype(str)
+            .apply(lambda x: x.str.contains("\033\[", na=False))
+            .any()
+            .any()
+        )
+
+        if has_ansi:
+            print("Converting ANSI formatting to Excel formatting...")
+            save_with_ansi_formatting(resulting_df, output_path)
+        else:
+            print("No ANSI codes found.")
+            with pd.ExcelWriter(output_path, engine="xlsxwriter") as writer:
+                resulting_df.to_excel(writer, index=False)
+
+        # resulting_df.to_excel(output_path, index=False)
+        # save_with_xlsxwriter(resulting_df, output_path)
     elif (
         config.output_format is None and config.dataset_path.suffix == ".jsonl"
     ) or config.output_format == "jsonl":
