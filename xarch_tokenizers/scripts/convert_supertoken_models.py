@@ -225,7 +225,7 @@ def write_model(
     instruct=False,
     push_to_hub=False,
     private=False,
-    commit_message: str = None
+    commit_message: str = None,
 ):
     print("Converting the model.")
     import os
@@ -273,6 +273,10 @@ def write_model(
             p = os.path.join(input_base_path, "consolidated.00.pth")
             if not os.path.exists(p):
                 p = os.path.join(input_base_path, "consolidated.pth")
+
+            if not os.path.exists(p):
+                p = os.path.join(input_base_path, "model.pth")
+
             import os
 
             import psutil
@@ -456,7 +460,8 @@ def write_model(
                     [loaded[i]["output.weight"] for i in range(len(loaded))], dim=0
                 ),
             }
-
+        if vocab_size is None:
+            vocab_size = state_dict["model.embed_tokens.weight"].shape[0]
         for k, v in state_dict.items():
             index_dict["weight_map"][k] = filename
             param_count += v.numel()
@@ -474,6 +479,7 @@ def write_model(
         )
         multiple_of = params["multiple_of"] if "multiple_of" in params else 256
 
+        # TODO: turn this off and replace
         if is_llama_3(llama_version):
             bos_token_id = 128000
 
@@ -547,7 +553,7 @@ def write_model(
                 safe_serialization=safe_serialization,
                 private=private,
                 use_temp_dir=True,
-                commit_message=commit_message
+                commit_message=commit_message,
             )
             config.save_pretrained(
                 tmp_model_path, push_to_hub=push_to_hub, repo_id=model_path
@@ -679,12 +685,19 @@ def write_tokenizer(
         tokenizer.save_pretrained(tokenizer_path)
     return tokenizer
 
-def created_consolidated(dcp_directory:Path):
+
+def created_consolidated(dcp_directory: Path):
     consolidated_path = dcp_directory.joinpath("consolidated.pth")
     if consolidated_path.exists():
         return
+    elif dcp_directory.joinpath("model.pth").exists():
+        print("Found model.pth, skipping creating consolidated.pth")
+        return
+
     from torch.distributed.checkpoint.format_utils import dcp_to_torch_save
+
     dcp_to_torch_save(dcp_directory, consolidated_path)
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -770,6 +783,12 @@ def main():
         type=str,
         help="The name of the collection to which the model belongs.",
     )
+    parser.add_argument(
+        "--ignore_vocab_size",
+        default=False,
+        type=bool,
+        help="Whether to ignore the vocabulary size, be careful with this option.",
+    )
     parser.add_argument("--commit_message", default="Upload model files", type=str)
 
     args = parser.parse_args()
@@ -845,24 +864,33 @@ def main():
     print("tokenizer finished", vocab_size)
     if args.model_size != "tokenizer_only":
         input_base_path = args.input_dir
+        print(f"Writing model files from {input_base_path} to {args.output_dir}")
         write_model(
             model_path=args.output_dir,
             input_base_path=input_base_path,
             model_size=args.model_size,
             safe_serialization=args.safe_serialization,
             llama_version=args.llama_version,
-            vocab_size=vocab_size,
+            vocab_size=vocab_size if not args.ignore_vocab_size else None,
             num_shards=args.num_shards,
             instruct=args.instruct,
             push_to_hub=args.push_to_hub,
             private=not args.public,
-            commit_message=args.commit_message
+            commit_message=args.commit_message,
         )
 
     if args.collection:
-        from huggingface_hub import create_collection, add_collection_item
-        collection = create_collection(title=args.collection, namespace=args.output_dir.split("/")[0], exists_ok=True)
-        add_collection_item(collection.slug, item_id=args.output_dir, item_type="model", exists_ok=True)
+        from huggingface_hub import add_collection_item, create_collection
+
+        collection = create_collection(
+            title=args.collection,
+            namespace=args.output_dir.split("/")[0],
+            exists_ok=True,
+        )
+        add_collection_item(
+            collection.slug, item_id=args.output_dir, item_type="model", exists_ok=True
+        )
+
 
 if __name__ == "__main__":
     main()
