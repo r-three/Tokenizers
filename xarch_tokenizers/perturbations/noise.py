@@ -4,12 +4,14 @@
 # Noise	Permutations
 # Noise	Typographical errors
 
+import logging
 from os import replace
 from random import shuffle
 from typing import List, Optional
 
 import numpy as np
 from attr import dataclass
+from wandb import login
 
 from xarch_tokenizers.perturbations.common import (
     LANGS,
@@ -17,6 +19,7 @@ from xarch_tokenizers.perturbations.common import (
     PerturbationCategory,
 )
 
+logger = logging.getLogger(__name__)
 # English QWERTY Keyboard Layout
 ENGLISH_KEYBOARD_NEIGHBORS = {
     "a": "qwszx",
@@ -57,43 +60,78 @@ ENGLISH_KEYBOARD_NEIGHBORS = {
     "0": "op9",
 }
 
-# Farsi/Persian Keyboard Layout (based on standard Persian QWERTY)
-FARSI_KEYBOARD_NEIGHBORS = {
-    # Persian letters with their neighboring keys
-    "ا": "قوش",
-    "ب": "لنوت",
-    "پ": "چجحخ",
-    "ت": "نبپث",
-    "ث": "بپت",
-    "ج": "چحخپ",
-    "چ": "جحپ",
-    "ح": "خعهجچ",
-    "خ": "حعهج",
-    "د": "کگی",
-    "ذ": "ظضص",
-    "ر": "ذضظ",
-    "ز": "ژضظذ",
-    "ژ": "زضظ",
-    "س": "یشک",
-    "ش": "سیکگ",
-    "ص": "ضذظ",
-    "ض": "صذظزژ",
-    "ط": "ظذ",
-    "ظ": "طذصضزژ",
-    "ع": "حخهف",
-    "غ": "فقدک",
-    "ف": "غقعه",
-    "ق": "فغدک",
-    "ک": "گدقغس",
-    "گ": "کدشس",
-    "ل": "مت",
-    "م": "لنب",
-    "ن": "متب",
-    "و": "اقش",
-    "ه": "عحخف",
-    "ی": "سشدک",
+# more detailed Persian keyboard:
+persian_keyboard_neighbors = {
+    # First letter row (QWERTY equivalent)
+    "ا": {"up": "غ", "down": "د", "left": "ل", "right": "ت"},
+    "ب": {"up": "ق", "down": "ر", "left": "ی", "right": "ل"},
+    "پ": {"up": "ت", "down": None, "left": "د", "right": "و"},
+    "ت": {"up": "ع", "down": "پ", "left": "ا", "right": "ن"},
+    "ث": {"up": "۳", "down": "ی", "left": "ص", "right": "ق"},
+    "ج": {"up": "-", "down": "گ", "left": "ح", "right": "چ"},
+    "چ": {"up": "=", "down": "\\", "left": "ج", "right": None},
+    "ح": {"up": "۰", "down": "ک", "left": "خ", "right": "ج"},
+    "خ": {"up": "۹", "down": "م", "left": "ه", "right": "ح"},
+    "د": {"up": "ا", "down": None, "left": "ذ", "right": "پ"},
+    "ذ": {"up": "ل", "down": None, "left": "ر", "right": "د"},
+    "ر": {"up": "ب", "down": None, "left": "ز", "right": "ذ"},
+    "ز": {"up": "ی", "down": None, "left": "ط", "right": "ر"},
+    "ژ": {"up": "ی", "down": None, "left": "ط", "right": "ر"},
+    "س": {"up": "ص", "down": "ط", "left": "ش", "right": "ی"},
+    "ش": {"up": "ض", "down": "ظ", "left": None, "right": "س"},
+    "ص": {"up": "۲", "down": "س", "left": "ض", "right": "ث"},
+    "ض": {"up": "۱", "down": "ش", "left": None, "right": "ص"},
+    "ط": {"up": "س", "down": None, "left": "ظ", "right": "ز"},
+    "ظ": {"up": "ش", "down": None, "left": None, "right": "ط"},
+    "ع": {"up": "۷", "down": "ت", "left": "غ", "right": "ه"},
+    "غ": {"up": "۶", "down": "ا", "left": "ف", "right": "ع"},
+    "ف": {"up": "۵", "down": "ل", "left": "ق", "right": "غ"},
+    "ق": {"up": "۴", "down": "ب", "left": "ث", "right": "ف"},
+    "ک": {"up": "ح", "down": "/", "left": "م", "right": "گ"},
+    "گ": {"up": "ج", "down": None, "left": "ک", "right": "\\"},
+    "ل": {"up": "ف", "down": "ذ", "left": "ب", "right": "ا"},
+    "م": {"up": "خ", "down": ".", "left": "ن", "right": "ک"},
+    "ن": {"up": "ه", "down": "و", "left": "ت", "right": "م"},
+    "و": {"up": "ن", "down": None, "left": "پ", "right": "."},
+    "ه": {"up": "۸", "down": "ن", "left": "ع", "right": "خ"},
+    "ی": {"up": "ث", "down": "ز", "left": "س", "right": "ب"},
 }
 
+# Farsi/Persian Keyboard Layout (based on standard Persian QWERTY)
+FARSI_KEYBOARD_NEIGHBORS = {
+    "ا": "غدلت",
+    "ب": "قریل",
+    "پ": "تدو",
+    "ت": "عپان",
+    "ث": "۳یصق",
+    "ج": "-گحچ",
+    "چ": "=\\ج",
+    "ح": "۰کخج",
+    "خ": "۹مهح",
+    "د": "اذپ",
+    "ذ": "لرد",
+    "ر": "بزذ",
+    "ز": "یطر",
+    "ژ": "یطر",
+    "س": "صطشی",
+    "ش": "ضظس",
+    "ص": "۲سضث",
+    "ض": "۱شص",
+    "ط": "سظز",
+    "ظ": "شط",
+    "ع": "۷تغه",
+    "غ": "۶افع",
+    "ف": "۵لقغ",
+    "ق": "۴بثف",
+    "ک": "ح/مگ",
+    "گ": "جک\\",
+    "ل": "فذبا",
+    "م": "خ.نک",
+    "ن": "هوتم",
+    "و": "نپ.",
+    "ه": "۸نعخ",
+    "ی": "ثزسب",
+}
 # Turkish Q-type Keyboard Layout
 TURKISH_KEYBOARD_NEIGHBORS = {
     "a": "qwsz",
@@ -185,6 +223,233 @@ CHINESE_KEYBOARD_NEIGHBORS = {
     "ǘ": "üǖǚǜ",
     "ǚ": "üǖǘǜ",
     "ǜ": "üǖǘǚ",
+}
+
+# Chinese Character Keyboard Neighbors
+# For simulating character selection errors after correct pinyin input
+
+CHINESE_CHARACTER_NEIGHBORS = {
+    # Common characters grouped by similar pinyin or IME position
+    # Characters that often appear together in IME candidate lists
+    # 的/地/得 - de variations (most common mix-up)
+    "的": "地得",
+    "地": "的得",
+    "得": "的地",
+    # 在/再 - zai
+    "在": "再",
+    "再": "在",
+    # 做/作 - zuo
+    "做": "作",
+    "作": "做",
+    # 和/或/何 - he/huo
+    "和": "或何",
+    "或": "和何",
+    "何": "和或",
+    # 了/le variations
+    "了": "乐勒",
+    "乐": "了勒",
+    "勒": "了乐",
+    # 是/十/时/实/石 - shi
+    "是": "十时实石",
+    "十": "是时实石",
+    "时": "是十实石",
+    "实": "是十时石",
+    "石": "是十时实",
+    # 不/部/步/布 - bu
+    "不": "部步布",
+    "部": "不步布",
+    "步": "不部布",
+    "布": "不部步",
+    # 一/以/已/义/意/易 - yi
+    "一": "以已义意易",
+    "以": "一已义意易",
+    "已": "一以义意易",
+    "义": "一以已意易",
+    "意": "一以已义易",
+    "易": "一以已义意",
+    # 人/任/认 - ren
+    "人": "任认",
+    "任": "人认",
+    "认": "人任",
+    # 会/回/汇/慧 - hui
+    "会": "回汇慧",
+    "回": "会汇慧",
+    "汇": "会回慧",
+    "慧": "会回汇",
+    # 个/各/哥/歌 - ge
+    "个": "各哥歌",
+    "各": "个哥歌",
+    "哥": "个各歌",
+    "歌": "个各哥",
+    # 上/尚/商 - shang
+    "上": "尚商",
+    "尚": "上商",
+    "商": "上尚",
+    # 下/夏 - xia
+    "下": "夏",
+    "夏": "下",
+    # 大/打/达 - da
+    "大": "打达",
+    "打": "大达",
+    "达": "大打",
+    # 小/校/笑 - xiao
+    "小": "校笑",
+    "校": "小笑",
+    "笑": "小校",
+    # 中/众/重/钟 - zhong
+    "中": "众重钟",
+    "众": "中重钟",
+    "重": "中众钟",
+    "钟": "中众重",
+    # 国/果/过 - guo
+    "国": "果过",
+    "果": "国过",
+    "过": "国果",
+    # 家/加/假/价 - jia
+    "家": "加假价",
+    "加": "家假价",
+    "假": "家加价",
+    "价": "家加假",
+    # 年/念 - nian
+    "年": "念",
+    "念": "年",
+    # 月/约/越 - yue
+    "月": "约越",
+    "约": "月越",
+    "越": "月约",
+    # 日/入 - ri/ru
+    "日": "入",
+    "入": "日",
+    # 水/谁 - shui
+    "水": "谁",
+    "谁": "水",
+    # 火/或/活 - huo
+    "火": "或活",
+    "或": "火活",
+    "活": "火或",
+    # 土/图/兔/吐 - tu
+    "土": "图兔吐",
+    "图": "土兔吐",
+    "兔": "土图吐",
+    "吐": "土图兔",
+    # 木/目/母 - mu
+    "木": "目母",
+    "目": "木母",
+    "母": "木目",
+    # 金/今/斤 - jin
+    "金": "今斤",
+    "今": "金斤",
+    "斤": "金今",
+    # 来/赖/莱 - lai
+    "来": "赖莱",
+    "赖": "来莱",
+    "莱": "来赖",
+    # 去/区/取/趣 - qu
+    "去": "区取趣",
+    "区": "去取趣",
+    "取": "去区趣",
+    "趣": "去区取",
+    # 好/号 - hao
+    "好": "号",
+    "号": "好",
+    # 看/刊/堪 - kan
+    "看": "刊堪",
+    "刊": "看堪",
+    "堪": "看刊",
+    # 说/朔/烁 - shuo
+    "说": "朔烁",
+    "朔": "说烁",
+    "烁": "说朔",
+    # 话/画/花/华/化 - hua
+    "话": "画花华化",
+    "画": "话花华化",
+    "花": "话画华化",
+    "华": "话画花化",
+    "化": "话画花华",
+    # 走/邹/奏 - zou
+    "走": "邹奏",
+    "邹": "走奏",
+    "奏": "走邹",
+    # 起/齐/气/期/启 - qi
+    "起": "齐气期启",
+    "齐": "起气期启",
+    "气": "起齐期启",
+    "期": "起齐气启",
+    "启": "起齐气期",
+    # 把/爸/把/吧 - ba
+    "把": "爸吧",
+    "爸": "把吧",
+    "吧": "把爸",
+    # 让/攘 - rang
+    "让": "攘",
+    "攘": "让",
+    # 给/给 - gei/ji (pronunciation variants)
+    "给": "给",  # Same character, different pronunciations
+    # Numbers
+    "零": "龄令",
+    "一": "医衣依",
+    "二": "儿尔耳",
+    "三": "散伞",
+    "四": "思死丝司",
+    "五": "午武舞",
+    "六": "流刘留",
+    "七": "妻期器",
+    "八": "发法发",
+    "九": "久酒救",
+    # Colors
+    "红": "洪虹弘",
+    "黄": "皇煌慌",
+    "蓝": "兰览懒",
+    "绿": "录路陆",
+    "白": "百摆败",
+    "黑": "嘿",
+    # Common verbs with similar sounds
+    "吃": "池迟",
+    "喝": "合河何",
+    "睡": "水谁",
+    "醒": "星姓",
+    "买": "卖麦",
+    "卖": "买麦",
+    "开": "凯楷",
+    "关": "观官",
+    "进": "近尽",
+    "出": "初触",
+    # Pronouns and common words
+    "我": "握沃",
+    "你": "拟逆",
+    "他": "她它塔",
+    "她": "他它塔",
+    "它": "他她塔",
+    "这": "者浙",
+    "那": "哪纳",
+    "哪": "那纳",
+    "什": "十时实",
+    "么": "末摸",
+    "吗": "妈马",
+    "呢": "泥尼",
+    # Time words
+    "今": "金斤",
+    "明": "鸣名",
+    "昨": "作做",
+    "早": "澡枣燥",
+    "晚": "完碗",
+    "午": "五舞武",
+    "夜": "也页",
+    # Body parts
+    "头": "投偷",
+    "眼": "演掩",
+    "口": "扣",
+    "手": "受守首",
+    "脚": "交教叫",
+    "心": "新信",
+    # Food items
+    "饭": "犯范泛",
+    "菜": "材才财",
+    "肉": "柔",
+    "鱼": "于余渔",
+    "面": "棉免",
+    "汤": "糖塘堂",
+    "茶": "查察",
 }
 
 # OCR Errors for English
@@ -374,6 +639,8 @@ def generate_keyboard_errors(
     """
     if language not in MULTILINGUAL_KEYBOARDS:
         return [question]
+    if n_variations == -1:
+        logger.info("Generating all possible variations.")
 
     keyboard = MULTILINGUAL_KEYBOARDS[language]
     variants = set()
