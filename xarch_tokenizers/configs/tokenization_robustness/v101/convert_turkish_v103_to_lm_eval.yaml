@@ -1,14 +1,20 @@
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_turkish_v103_to_lm_eval.yaml
 
 upload_to_hf: true
 upload_individually: false
 is_translation: false
 flatten_metadata: true
-tag: 1.0.21
-dataset_name: tokenization_robustness
+tag: 1.0.3
+collections: 
+  - tokenization_robustness_completion
 private: false
 tags:
   - multilingual
   - tokenization
+version: collection
+hf_organization: r-three
+dataset_name: tokenizer_robustness_completion_turkish
+split_by_lang: false
 
 lm_eval_local_or_hf: hf
 # lm_eval_local_or_hf: local
@@ -16,7 +22,7 @@ lm_eval_local_or_hf: hf
 dataset_card:
   dataset_name: "Tokenization Robustness Dataset"
   dataset_summary: "A comprehensive evaluation dataset for testing robustness of different tokenization strategies."
-  dataset_description: "This dataset evaluates how robust language models are to different tokenization strategies and edge cases. It includes questions with multiple choice answers designed to test various aspects of tokenization handling."
+  dataset_description: "This dataset evaluates how robust language models are to different tokenization strategies and edge cases. It includes text completion questions with multiple choice answers designed to test various aspects of tokenization handling."
   curators: "R3"
   # languages: "English (en)"
   # direct_use: "This dataset is intended for evaluating language model robustness to tokenization variations. It can be used for benchmarking models and understanding their sensitivity to input preprocessing."
@@ -47,12 +53,14 @@ dataset_card:
   ignore_metadata_errors: false
 
 
-dataset_path: data/v102.xlsx
-# dataset_path: data/v102.csv
-output_dir: data/v102
+dataset_path: data/v103.1.xlsx
+output_dir: data/v103.1/stem
 separator: "§§§"
-sheet_name: "Examples-cleaned"
-question_field: MMLU-version
+# sheet_name: "Examples-cleaned"
+sheet_name: "Turkish-Text-Completion"
+# sheet_name: "STEM-Text-Completion"
+# question_field: MMLU-version
+question_field: Question
 target_field: Correct
 option_fields:
   - Opt 1
@@ -63,7 +71,7 @@ metadata_fields:
   # type: Type
   lang: Lang
   second_lang: "2nd Lang"
-  coding_lang: "Coding Lang"
+  # coding_lang: "Coding Lang"
   notes: Notes
   id: Id
   set_id: "Set Id"
@@ -71,18 +79,18 @@ metadata_fields:
   # split: Split
 create_subset_dirs: true
 subset_by: Subcategory
-# subset_by: Category
+# dataset_by: Category
 dataset_format: parquet
 split_field: Split
 combine_all_splits: true
 # subset_by: Subcategory
 lm_eval_task:
-  dataset_name: tokenizer_robustness
-  task: tokenizer_robustness
+  dataset_name: tokenization_robustness_completion
+  task: tokenization_robustness_completion
   # group: tokenizer_robustness
   dataset_path: parquet
-  tag:
-    - tokenizer_robustness
+  # tag:
+  #   - tokenizer_robustness
   output_type: multiple_choice
   training_split: null
   validation_split: null

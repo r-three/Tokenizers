@@ -302,6 +302,9 @@ class DatasetConverterConfig(HFUploadConfig):
             "help": "Whether to use local files created or HF for LM Evaluation Harness."
         },
     )
+    split_by_lang: Optional[bool] = field(
+        default=False, metadata={"help": "Whether to split the dataset by language."}
+    )
 
     def __post_init__(self):
         self.dataset_path = Path(str(self.dataset_path))
@@ -424,9 +427,6 @@ def create_task_config(
     config_path = (dataset_path / config_name).with_suffix(".yaml")
     config_path.parent.mkdir(exist_ok=True, parents=True)
     print(config_path)
-    import code
-
-    # code.interact(local=locals() | globals(), banner=config_name)
     # Write YAML config
     with open(config_path, "w") as f:
         yaml.dump(
@@ -564,7 +564,7 @@ def cleanup_str(s):
 def is_valid(s):
     if s is None:
         return False
-    s = s.strip().lower()
+    s = str(s).strip().lower()
     return s not in ["null", "na", "nan", "not_found", "none", "#value!"]
 
 
@@ -597,6 +597,7 @@ def create_subsets(
         update_args = {
             "task": task_name,
             "include": base_conf_path.name,
+            "dataset_name": task_name,
         }
         if config.lm_eval_local_or_hf == "local":
             update_args["dataset_kwargs"] = {"data_files": data_file_paths}
@@ -604,6 +605,7 @@ def create_subsets(
         else:
             # subset id
             update_args["dataset_name"] = subset
+            update_args["dataset_name"] = task_name
         create_task_config(
             config,
             logger,
@@ -689,9 +691,13 @@ def transform_w_collection(
     logger,
     prefix: Optional[str] = "",
 ):
-    df["_dataset"] = df[config.dataset_by].apply(
-        lambda x: x.split(",")[0] if isinstance(x, str) else x
-    )
+    if config.dataset_by is not None:
+        df["_dataset"] = df[config.dataset_by].apply(
+            lambda x: x.split(",")[0] if isinstance(x, str) else x
+        )
+    else:
+        # df["_dataset"] = config.lm_eval_task.dataset_name
+        df["_dataset"] = config.dataset_name
     update_args = dict(
         # dataset_name=None,
         dataset_path="parquet",
@@ -737,6 +743,7 @@ def transform_w_collection(
                 )
                 mask = (
                     filtered_df[config.metadata_fields.get("variation_id")]
+                    .astype(str)
                     .str.split(".")
                     .str[-1]
                     == "0"
@@ -827,6 +834,8 @@ def read_data(config, logger):
             engine="python",
             na_values=["", "null", "NULL"],
         )
+    # cleanup empty cells
+    df = df.map(lambda x: x if is_valid(x) else "")
 
     if config.dataset_by:
         assert config.dataset_by in df.columns, ValueError(
@@ -865,24 +874,29 @@ def main():
         transform_v1(config, logger)
     elif config.version == "collection":
         df = read_data(config, logger)
-        all_languages = df["Lang"].unique()
         output_dir = config.output_dir
-        for lang in all_languages:
-            tmp_df = df[df["Lang"] == lang]
-            if "eng" in lang:
-                continue
-            config.output_dir = output_dir / lang
-            tmp_df[config.dataset_by] = tmp_df[config.dataset_by].apply(
-                lambda x: f"{lang}_{x}"
-            )
-            transform_w_collection(tmp_df, config, logger, prefix=f"{lang}/")
 
-            if config.upload_to_hf:
-                for dataset_name in config.output_dir.glob("*"):
-                    dataset_name = dataset_name.resolve().absolute()
-                    upload_dataset(dataset_name, config, logger)
-        return
+        if config.split_by_lang:
+            all_languages = df["Lang"].unique()
+            for lang in all_languages:
+                tmp_df = df[df["Lang"] == lang]
+                if "eng" in lang:
+                    continue
+                config.output_dir = output_dir / lang
+                if config.dataset_by:
+                    tmp_df[config.dataset_by] = tmp_df[config.dataset_by].apply(
+                        lambda x: f"{lang}_{x}"
+                    )
+                process_df(tmp_df)
+                transform_w_collection(tmp_df, config, logger, prefix=f"{lang}/")
+        else:
+            transform_w_collection(df, config, logger, prefix=f"")
 
+        if config.upload_to_hf:
+            for dataset_name in config.output_dir.glob("*"):
+                dataset_name = dataset_name.resolve().absolute()
+                upload_dataset(dataset_name, config, logger)
+        exit(0)
     if config.upload_to_hf:
         upload_dataset(output_dir, config, logger)
 
