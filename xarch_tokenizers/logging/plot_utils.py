@@ -13,6 +13,8 @@ import seaborn as sns
 from matplotlib.cm import viridis
 from matplotlib.colors import to_hex
 
+NORMAL_FONT = 18
+TITLE_FONT = 24
 TASK_TO_PLOT_MAPPING = {
     "turkishmmlu_mathematics": "TUR-MMLU-Math",
     "turkishmmlu_geography": "TUR-MMLU-Geo",
@@ -38,6 +40,16 @@ TASK_TO_PLOT_MAPPING = {
     "mgsm_th": "MGSM-Th",
     "mgsm_zh": "MGSM-Zh",
 }
+
+
+def get_new_6_fig(title, sharey=True):
+    # Create figure with subplots (2 rows, 3 columns)
+    fig, axes = plt.subplots(2, 3, figsize=(18, 10), sharey=sharey)
+    fig.suptitle(title, y=0.98)
+
+    # Flatten axes array for easier indexing
+    axes_flat = axes.flatten()
+    return fig, axes_flat
 
 
 def download_font():
@@ -87,13 +99,13 @@ def setup_styles_matplotlib(custom_font):
             "font.family": "sans-serif",
             "font.sans-serif": [custom_font.get_name()]
             + plt.rcParams["font.sans-serif"],
-            "font.size": 14,  # Default font size
-            "axes.titlesize": 16,  # Title font size
-            "axes.labelsize": 14,  # Axis label font size
-            "xtick.labelsize": 14,  # X-axis tick label font size
-            "ytick.labelsize": 14,  # Y-axis tick label font size
-            "legend.fontsize": 14,  # Legend font size
-            "figure.titlesize": 16,  # Figure title font size
+            "font.size": NORMAL_FONT,  # Default font size
+            "axes.titlesize": TITLE_FONT,  # Title font size
+            "axes.labelsize": NORMAL_FONT,  # Axis label font size
+            "xtick.labelsize": NORMAL_FONT,  # X-axis tick label font size
+            "ytick.labelsize": NORMAL_FONT,  # Y-axis tick label font size
+            "legend.fontsize": NORMAL_FONT,  # Legend font size
+            "figure.titlesize": TITLE_FONT,  # Figure title font size
         }
     )
 
@@ -106,7 +118,7 @@ def setup_styles_plotly(custom_font):
     # Define custom font settings for Plotly
     font_settings = {
         "family": "Atkinson Hyperlegible, Arial, sans-serif",
-        "size": 14,
+        "size": NORMAL_FONT,
         "color": "#333333",
     }
 
@@ -117,7 +129,7 @@ def setup_styles_plotly(custom_font):
     template.layout.title = {
         "font": {
             "family": font_settings["family"],
-            "size": 16,
+            "size": TITLE_FONT,
             "color": font_settings["color"],
         },
         "x": 0.5,  # Center title
@@ -128,12 +140,12 @@ def setup_styles_plotly(custom_font):
     axis_settings = {
         "titlefont": {
             "family": font_settings["family"],
-            "size": 14,
+            "size": TITLE_FONT,
             "color": font_settings["color"],
         },
         "tickfont": {
             "family": font_settings["family"],
-            "size": 14,
+            "size": NORMAL_FONT,
             "color": font_settings["color"],
         },
         "gridcolor": "#E5E5E5",  # Similar to whitegrid in seaborn
@@ -148,7 +160,7 @@ def setup_styles_plotly(custom_font):
     template.layout.legend = {
         "font": {
             "family": font_settings["family"],
-            "size": 14,
+            "size": NORMAL_FONT,
             "color": font_settings["color"],
         },
         "bgcolor": "rgba(255, 255, 255, 0.5)",
@@ -282,6 +294,22 @@ MODEL_TO_COLOR = {
     "mistralai/Mixtral-8x7B-v0.1": get_model_color("mistral", 56),
     "CohereLabs/aya-expanse-8B": get_model_color("aya", 8),
     "google/gemma-7b-it": get_model_color("gemma", 7),
+}
+
+MODEL_TO_COLOR = {
+    "Comma": get_model_color("common-pile-comma-v0.1", 7),
+    "LLaMA": get_model_color("meta-llama-Llama-3.2-1B", 7),
+    "Phi-3": get_model_color("microsoft-Phi-3-mini-4k-instruct", 7),
+    "GPT-2": get_model_color("gpt2", 7),
+    "Bloom": get_model_color("bigscience-bloom", 7),
+    "XGLM": get_model_color("facebook-xglm-564M", 7),
+    "Mistral-Tekken": get_model_color("mistralai-tekken", 7),
+    "ByT5": get_model_color("google-byt5-small", 7),
+    "MBERT": get_model_color("google-bert-bert-base-multilingual-cased", 7),
+    "Qwen-3": get_model_color("Qwen-Qwen3-8B", 7),
+    "TokenMonster": get_model_color("tokenmonster-englishcode-32000-consistent-v1", 7),
+    "GPT-4o": get_model_color("tiktoken-gpt-4o", 7),
+    "Gemma-2": get_model_color("google-gemma-2-2b", 7),
 }
 
 
