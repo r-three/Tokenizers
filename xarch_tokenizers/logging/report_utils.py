@@ -15,7 +15,7 @@ MODEL_PRETTY_NAMES = {
     "gpt2": "GPT-2",
     "bigscience-bloom": "Bloom",
     "facebook-xglm-564M": "XGLM",
-    "mistralai-tekken": "Mistral-Tekken",
+    "mistralai-tekken": "Tekken",
     "google-byt5-small": "ByT5",
     "google-bert-bert-base-multilingual-cased": "MBERT",
     "Qwen-Qwen3-8B": "Qwen-3",

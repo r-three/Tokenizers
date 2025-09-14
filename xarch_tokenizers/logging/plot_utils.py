@@ -52,6 +52,18 @@ def get_new_6_fig(title, sharey=True):
     return fig, axes_flat
 
 
+def get_new_fig(title, sharey=True, nrows=2, ncols=3):
+    # Create figure with subplots (2 rows, 3 columns)
+    fig, axes = plt.subplots(
+        nrows, ncols, figsize=(6 * ncols, 5 * nrows), sharey=sharey
+    )
+    fig.suptitle(title, y=0.98)
+
+    # Flatten axes array for easier indexing
+    axes_flat = axes.flatten()
+    return fig, axes_flat
+
+
 def download_font():
     """Download the Atkinson Hyperlegible font if it doesn't exist"""
     # Define the font URL
@@ -199,16 +211,33 @@ def setup_styles():
 
 # Define base colors for each model family
 MODEL_FAMILY_COLORS = {
+    "mpt": "#78909C",  # Brighter blue-grey
     "llama": "#5B21FF",  # Brighter purple
     "qwen": "#FF3E30",  # Brighter red
     "gpt": "#4285F4",  # Google Blue
+    "xglm": "#0081FB",  # Meta Blue
     "mistral": "#00C853",  # Brighter green
     "gemma": "#FFD600",  # Brighter yellow
     "claude": "#FF9100",  # Brighter orange
     "phi": "#00E5FF",  # Brighter cyan
     "aya": "#8D6E63",  # Brighter brown
-    "mpt": "#78909C",  # Brighter blue-grey
     "pythia": "#FF6E40",  # Brighter deep orange
+    "comma": "#FFDD00",  # orange
+    "llama": "#8B5CF6",  # Violet
+    "qwen": "#EF4444",  # Red
+    "gpt-4o": "#0C4F3A",  # Emerald
+    "gpt2": "#4B937CFF",  # Emerald
+    "xglm": "#3B82F6",  # Blue
+    "mistral": "#F59E0B",  # Amber
+    "gemma": "#06B6D4",  # Cyan
+    "claude": "#F97316",  # Orange
+    "phi": "#37197E",  # Purple
+    "aya": "#351E0D",  # Pink
+    "pythia": "#7476EC",  # Indigo
+    "byt5": "#18AA2B",  # Emerald-600
+    "mbert": "#2563EB",  # Blue-600
+    "bloom": "#5031DD",  # Violet-600
+    "tokenmonster": "#ED6AAC",
 }
 
 
@@ -297,19 +326,19 @@ MODEL_TO_COLOR = {
 }
 
 MODEL_TO_COLOR = {
-    "Comma": get_model_color("common-pile-comma-v0.1", 7),
-    "LLaMA": get_model_color("meta-llama-Llama-3.2-1B", 7),
-    "Phi-3": get_model_color("microsoft-Phi-3-mini-4k-instruct", 7),
-    "GPT-2": get_model_color("gpt2", 7),
-    "Bloom": get_model_color("bigscience-bloom", 7),
-    "XGLM": get_model_color("facebook-xglm-564M", 7),
-    "Mistral-Tekken": get_model_color("mistralai-tekken", 7),
-    "ByT5": get_model_color("google-byt5-small", 7),
-    "MBERT": get_model_color("google-bert-bert-base-multilingual-cased", 7),
-    "Qwen-3": get_model_color("Qwen-Qwen3-8B", 7),
-    "TokenMonster": get_model_color("tokenmonster-englishcode-32000-consistent-v1", 7),
-    "GPT-4o": get_model_color("tiktoken-gpt-4o", 7),
-    "Gemma-2": get_model_color("google-gemma-2-2b", 7),
+    "Comma": MODEL_FAMILY_COLORS["comma"],
+    "LLaMA": MODEL_FAMILY_COLORS["llama"],
+    "Phi-3": MODEL_FAMILY_COLORS["phi"],
+    "GPT-2": MODEL_FAMILY_COLORS["gpt2"],
+    "GPT-4o": MODEL_FAMILY_COLORS["gpt-4o"],
+    "Bloom": MODEL_FAMILY_COLORS["bloom"],
+    "XGLM": MODEL_FAMILY_COLORS["xglm"],
+    "Tekken": MODEL_FAMILY_COLORS["mistral"],
+    "ByT5": MODEL_FAMILY_COLORS["byt5"],
+    "MBERT": MODEL_FAMILY_COLORS["mbert"],
+    "Qwen-3": MODEL_FAMILY_COLORS["qwen"],
+    "TokenMonster": MODEL_FAMILY_COLORS["tokenmonster"],
+    "Gemma-2": MODEL_FAMILY_COLORS["gemma"],
 }
 
 
