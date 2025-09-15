@@ -22,6 +22,7 @@ MODEL_PRETTY_NAMES = {
     "tokenmonster-englishcode-32000-consistent-v1": "TokenMonster",
     "tiktoken-gpt-4o": "GPT-4o",
     "google-gemma-2-2b": "Gemma-2",
+    "CohereLabs-aya-expanse-8b": "Aya",
 }
 
 
@@ -134,6 +135,13 @@ def load_predictions_lm_eval(
     return pred_dfs
 
 
+def get_pretty_name(x):
+    return x.split(",")[0]
+    if isinstance(x, str):
+        return x
+    return x[0]
+
+
 def load_all_samples(
     base_dir: Union[Path, str],
     patterns: Optional[List[str]] = None,
@@ -159,6 +167,12 @@ def load_all_samples(
         date = res_path.stem.strip("results_")
         results = json.loads(res_path.read_text())
         model_name = results["model_name"]
+        model_args = results["config"]["model_args"]
+        if "tokenizer=" in model_args:
+            tokenizer_name = model_args[model_args.index("tokenizer=") + 10 :]
+            tokenizer_name = tokenizer_name.split(",")[0]
+        else:
+            tokenizer_name = model_name
         if match_date and date not in sample_path.stem:
             print(f"Skipping {sample_path} because date mismatch with {date}")
             continue
@@ -171,6 +185,7 @@ def load_all_samples(
         try:
             sample = pd.read_json(path_or_buf=sample_path, lines=True)
             sample["model_name"] = model_name
+            sample["tokenizer_name"] = tokenizer_name
             sample["task"] = task_name
             samples.append(sample)
         except Exception as e:
@@ -192,6 +207,16 @@ def load_all_samples(
             columns=[col for col in samples.columns if "hash" in col]
         )
         samples = samples.drop(columns=["arguments", "filter", "filtered_resps"])
+    print(samples["set_id"].unique())
+    samples["task_pretty_name"] = samples["subcategories"].apply(get_pretty_name)
+    samples["model_name"] = samples["model_name"].apply(clean_model_name)
+    samples["is_canonical"] = (
+        samples["variation_id"].apply(lambda x: str(x).split(".")[1]) == "0"
+    )
+    samples["var_id"] = samples["variation_id"].apply(
+        lambda x: float(str(x).split(".")[1])
+    )
+    samples = samples.sort_values(["model_name", "set_id", "var_id"])
     return samples
 
 

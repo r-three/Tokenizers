@@ -224,7 +224,7 @@ MODEL_FAMILY_COLORS = {
     "pythia": "#FF6E40",  # Brighter deep orange
     "comma": "#FFDD00",  # orange
     "llama": "#8B5CF6",  # Violet
-    "qwen": "#EF4444",  # Red
+    "qwen": "#C80505",  # Red
     "gpt-4o": "#0C4F3A",  # Emerald
     "gpt2": "#4B937CFF",  # Emerald
     "xglm": "#3B82F6",  # Blue
@@ -232,7 +232,7 @@ MODEL_FAMILY_COLORS = {
     "gemma": "#06B6D4",  # Cyan
     "claude": "#F97316",  # Orange
     "phi": "#37197E",  # Purple
-    "aya": "#351E0D",  # Pink
+    "aya": "#CA35A7",  # Pink
     "pythia": "#7476EC",  # Indigo
     "byt5": "#18AA2B",  # Emerald-600
     "mbert": "#2563EB",  # Blue-600
@@ -339,6 +339,7 @@ MODEL_TO_COLOR = {
     "Qwen-3": MODEL_FAMILY_COLORS["qwen"],
     "TokenMonster": MODEL_FAMILY_COLORS["tokenmonster"],
     "Gemma-2": MODEL_FAMILY_COLORS["gemma"],
+    "Aya": MODEL_FAMILY_COLORS["aya"],
 }
 
 
