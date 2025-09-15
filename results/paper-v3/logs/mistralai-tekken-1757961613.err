@@ -1,0 +1,500 @@
+wandb: Currently logged in as: gsaltintas to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /home/gsa/tokenizers/wandb/run-20250915_153739-vq2yxsum
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run mistralai-tekken-1757961613
+wandb: ⭐️ View project at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_english
+wandb: 🚀 View run at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_english/runs/vq2yxsum
+2025-09-15:15:37:42 DEBUG    [tasks:539] File _default_template.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/code_x_glue/code-text could not be loaded
+2025-09-15:15:37:42 DEBUG    [tasks:539] File _evalita-mp_ner_adg.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-15:15:37:42 DEBUG    [tasks:539] File _evalita-mp_ner_fic.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-15:15:37:42 DEBUG    [tasks:539] File _evalita-mp_ner_wn.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-15:15:37:47 INFO     [evaluator:189] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-09-15:15:37:47 INFO     [evaluator:227] Initializing hf model, with arguments: {'pretrained': 'r-three/supertoken_models-llama_mistralai-tekken', 'tokenizer': 'mistralai/tekken', 'trust_remote_code': True}
+2025-09-15:15:37:47 INFO     [models.huggingface:165] Using device 'cuda'
+2025-09-15:15:37:47 DEBUG    [models.huggingface:1098] Using model type 'causal'
+2025-09-15:15:37:47 INFO     [mistral_common.tokens.tokenizers.tekken:176] Adding special tokens <SPECIAL_20>, ..., <SPECIAL_999>
+2025-09-15:15:37:47 INFO     [mistral_common.tokens.tokenizers.tekken:540] Vocab size: 150000
+2025-09-15:15:37:47 INFO     [mistral_common.tokens.tokenizers.tekken:544] Cutting vocab to first 130072 tokens.
+2025-09-15:15:37:48 INFO     [models.huggingface:776] Tokenizer validation passed for 'Hello, world!'
+2025-09-15:15:37:48 INFO     [models.huggingface:843] Successfully loaded custom tokenizer: mistralai/tekken
+2025-09-15:15:37:48 INFO     [models.huggingface:984] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda'}
+2025-09-15:15:37:52 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:37:53 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:37:55 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:37:56 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:37:57 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:37:58 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:00 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:01 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:02 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:03 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:04 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:05 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:06 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:07 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:08 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:10 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:11 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:12 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:13 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:14 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:16 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:17 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:18 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:19 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:20 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:21 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:23 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:24 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:25 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:26 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:27 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:28 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-15:15:38:28 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_combining_diacritics on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 1333.82it/s]
+2025-09-15:15:38:28 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_combining_diacritics; number of requests on this rank: 160
+2025-09-15:15:38:28 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_additional_spaces on rank 0...
+  0%|          | 0/39 [00:00<?, ?it/s]100%|██████████| 39/39 [00:00<00:00, 2054.48it/s]
+2025-09-15:15:38:28 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_additional_spaces; number of requests on this rank: 156
+2025-09-15:15:38:28 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_character_deletion on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2059.87it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_character_deletion; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_date_formats on rank 0...
+  0%|          | 0/17 [00:00<?, ?it/s]100%|██████████| 17/17 [00:00<00:00, 2024.51it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_date_formats; number of requests on this rank: 68
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_space_additions on rank 0...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 1448.31it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_space_additions; number of requests on this rank: 4
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_inflections on rank 0...
+  0%|          | 0/14 [00:00<?, ?it/s]100%|██████████| 14/14 [00:00<00:00, 1956.69it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_inflections; number of requests on this rank: 56
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_similar_words on rank 0...
+  0%|          | 0/12 [00:00<?, ?it/s]100%|██████████| 12/12 [00:00<00:00, 1943.91it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_similar_words; number of requests on this rank: 48
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_character_substitution on rank 0...
+  0%|          | 0/42 [00:00<?, ?it/s]100%|██████████| 42/42 [00:00<00:00, 2063.84it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_character_substitution; number of requests on this rank: 168
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_letter_repetition_for_emphasis on rank 0...
+  0%|          | 0/41 [00:00<?, ?it/s]100%|██████████| 41/41 [00:00<00:00, 1996.17it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_letter_repetition_for_emphasis; number of requests on this rank: 164
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_deliberate_misspellings on rank 0...
+  0%|          | 0/42 [00:00<?, ?it/s]100%|██████████| 42/42 [00:00<00:00, 2064.85it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_deliberate_misspellings; number of requests on this rank: 168
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_numerical_formats on rank 0...
+  0%|          | 0/5 [00:00<?, ?it/s]100%|██████████| 5/5 [00:00<00:00, 1809.29it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_numerical_formats; number of requests on this rank: 20
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_cannonical on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2064.58it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_cannonical; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_script on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2045.78it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_script; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_borrowing on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 1914.68it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_borrowing; number of requests on this rank: 40
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_spelled_out on rank 0...
+  0%|          | 0/52 [00:00<?, ?it/s]100%|██████████| 52/52 [00:00<00:00, 2051.37it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_spelled_out; number of requests on this rank: 208
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_capitalization on rank 0...
+  0%|          | 0/77 [00:00<?, ?it/s]100%|██████████| 77/77 [00:00<00:00, 2089.70it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_capitalization; number of requests on this rank: 308
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_grammatical_errors on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2083.01it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_grammatical_errors; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_word_reordering on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 1955.34it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_word_reordering; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_regional_spelling_variations on rank 0...
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1989.39it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_regional_spelling_variations; number of requests on this rank: 60
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_emoji_substitution on rank 0...
+  0%|          | 0/47 [00:00<?, ?it/s]100%|██████████| 47/47 [00:00<00:00, 2077.90it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_emoji_substitution; number of requests on this rank: 188
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_web_search_query on rank 0...
+  0%|          | 0/37 [00:00<?, ?it/s]100%|██████████| 37/37 [00:00<00:00, 2012.02it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_web_search_query; number of requests on this rank: 148
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_abbreviations on rank 0...
+  0%|          | 0/36 [00:00<?, ?it/s]100%|██████████| 36/36 [00:00<00:00, 2059.59it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_abbreviations; number of requests on this rank: 144
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_compounds on rank 0...
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 1947.55it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_compounds; number of requests on this rank: 44
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_wiki-jargon on rank 0...
+  0%|          | 0/54 [00:00<?, ?it/s]100%|██████████| 54/54 [00:00<00:00, 2053.50it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_wiki-jargon; number of requests on this rank: 216
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_space_removal on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2064.28it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_space_removal; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_contractions on rank 0...
+  0%|          | 0/5 [00:00<?, ?it/s]100%|██████████| 5/5 [00:00<00:00, 1816.97it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_contractions; number of requests on this rank: 20
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_colloquial on rank 0...
+  0%|          | 0/41 [00:00<?, ?it/s]100%|██████████| 41/41 [00:00<00:00, 2069.96it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_colloquial; number of requests on this rank: 164
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_historical_spelling on rank 0...
+  0%|          | 0/41 [00:00<?, ?it/s]100%|██████████| 41/41 [00:00<00:00, 2069.87it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_historical_spelling; number of requests on this rank: 164
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_ocr_errors on rank 0...
+  0%|          | 0/42 [00:00<?, ?it/s]100%|██████████| 42/42 [00:00<00:00, 2069.07it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_ocr_errors; number of requests on this rank: 168
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_homoglyphs on rank 0...
+  0%|          | 0/39 [00:00<?, ?it/s]100%|██████████| 39/39 [00:00<00:00, 2067.81it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_homoglyphs; number of requests on this rank: 156
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_superscript_subscript on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2116.73it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_superscript_subscript; number of requests on this rank: 160
+2025-09-15:15:38:29 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_english_keyboard_proximity_errors on rank 0...
+  0%|          | 0/43 [00:00<?, ?it/s]100%|██████████| 43/43 [00:00<00:00, 2114.36it/s]
+2025-09-15:15:38:29 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_english_keyboard_proximity_errors; number of requests on this rank: 172
+2025-09-15:15:38:29 INFO     [evaluator:559] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/4332 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/4332 [00:00<35:07,  2.06it/s]Running loglikelihood requests:   0%|          | 6/4332 [00:00<05:43, 12.60it/s]Running loglikelihood requests:   0%|          | 11/4332 [00:00<03:29, 20.65it/s]Running loglikelihood requests:   0%|          | 16/4332 [00:00<02:40, 26.90it/s]Running loglikelihood requests:   0%|          | 21/4332 [00:00<02:16, 31.65it/s]Running loglikelihood requests:   1%|          | 26/4332 [00:01<02:02, 35.24it/s]Running loglikelihood requests:   1%|          | 31/4332 [00:01<01:53, 37.91it/s]Running loglikelihood requests:   1%|          | 36/4332 [00:01<01:47, 39.85it/s]Running loglikelihood requests:   1%|          | 41/4332 [00:01<01:45, 40.55it/s]Running loglikelihood requests:   1%|          | 46/4332 [00:01<01:43, 41.47it/s]Running loglikelihood requests:   1%|          | 51/4332 [00:01<01:41, 42.16it/s]Running loglikelihood requests:   1%|▏         | 56/4332 [00:01<01:40, 42.75it/s]Running loglikelihood requests:   1%|▏         | 61/4332 [00:01<01:39, 43.14it/s]Running loglikelihood requests:   2%|▏         | 66/4332 [00:01<01:38, 43.42it/s]Running loglikelihood requests:   2%|▏         | 71/4332 [00:02<01:37, 43.64it/s]Running loglikelihood requests:   2%|▏         | 76/4332 [00:02<01:37, 43.80it/s]Running loglikelihood requests:   2%|▏         | 81/4332 [00:02<01:36, 43.94it/s]Running loglikelihood requests:   2%|▏         | 86/4332 [00:02<01:36, 43.99it/s]Running loglikelihood requests:   2%|▏         | 91/4332 [00:02<01:36, 44.09it/s]Running loglikelihood requests:   2%|▏         | 96/4332 [00:02<01:35, 44.18it/s]Running loglikelihood requests:   2%|▏         | 101/4332 [00:02<01:35, 44.19it/s]Running loglikelihood requests:   2%|▏         | 106/4332 [00:02<01:35, 44.22it/s]Running loglikelihood requests:   3%|▎         | 111/4332 [00:02<01:35, 44.27it/s]Running loglikelihood requests:   3%|▎         | 116/4332 [00:03<01:35, 44.28it/s]Running loglikelihood requests:   3%|▎         | 121/4332 [00:03<01:34, 44.33it/s]Running loglikelihood requests:   3%|▎         | 126/4332 [00:03<01:34, 44.52it/s]Running loglikelihood requests:   3%|▎         | 131/4332 [00:03<01:34, 44.67it/s]Running loglikelihood requests:   3%|▎         | 136/4332 [00:03<01:33, 44.80it/s]Running loglikelihood requests:   3%|▎         | 141/4332 [00:03<01:33, 44.60it/s]Running loglikelihood requests:   3%|▎         | 146/4332 [00:03<01:33, 44.92it/s]Running loglikelihood requests:   3%|▎         | 151/4332 [00:03<01:32, 45.09it/s]Running loglikelihood requests:   4%|▎         | 156/4332 [00:03<01:32, 45.18it/s]Running loglikelihood requests:   4%|▍         | 164/4332 [00:04<01:18, 53.29it/s]Running loglikelihood requests:   4%|▍         | 170/4332 [00:04<01:22, 50.68it/s]Running loglikelihood requests:   4%|▍         | 178/4332 [00:04<01:12, 56.97it/s]Running loglikelihood requests:   4%|▍         | 184/4332 [00:04<01:17, 53.21it/s]Running loglikelihood requests:   4%|▍         | 192/4332 [00:04<01:10, 58.60it/s]Running loglikelihood requests:   5%|▍         | 198/4332 [00:04<01:16, 54.34it/s]Running loglikelihood requests:   5%|▍         | 204/4332 [00:04<01:20, 51.52it/s]Running loglikelihood requests:   5%|▍         | 210/4332 [00:04<01:23, 49.62it/s]Running loglikelihood requests:   5%|▍         | 216/4332 [00:05<01:25, 48.36it/s]Running loglikelihood requests:   5%|▌         | 224/4332 [00:05<01:14, 54.87it/s]Running loglikelihood requests:   5%|▌         | 230/4332 [00:05<01:18, 51.95it/s]Running loglikelihood requests:   5%|▌         | 236/4332 [00:05<01:22, 49.93it/s]Running loglikelihood requests:   6%|▌         | 242/4332 [00:05<01:24, 48.25it/s]Running loglikelihood requests:   6%|▌         | 249/4332 [00:05<01:17, 52.36it/s]Running loglikelihood requests:   6%|▌         | 255/4332 [00:05<01:21, 50.24it/s]Running loglikelihood requests:   6%|▌         | 263/4332 [00:05<01:12, 56.23it/s]Running loglikelihood requests:   6%|▋         | 271/4332 [00:06<01:07, 60.47it/s]Running loglikelihood requests:   6%|▋         | 278/4332 [00:06<01:14, 54.74it/s]Running loglikelihood requests:   7%|▋         | 284/4332 [00:06<01:18, 51.85it/s]Running loglikelihood requests:   7%|▋         | 290/4332 [00:06<01:20, 49.94it/s]Running loglikelihood requests:   7%|▋         | 296/4332 [00:06<01:22, 48.65it/s]Running loglikelihood requests:   7%|▋         | 301/4332 [00:06<01:24, 47.84it/s]Running loglikelihood requests:   7%|▋         | 306/4332 [00:06<01:25, 47.23it/s]Running loglikelihood requests:   7%|▋         | 311/4332 [00:06<01:26, 46.73it/s]Running loglikelihood requests:   7%|▋         | 316/4332 [00:07<01:26, 46.39it/s]Running loglikelihood requests:   7%|▋         | 321/4332 [00:07<01:26, 46.12it/s]Running loglikelihood requests:   8%|▊         | 326/4332 [00:07<01:27, 45.94it/s]Running loglikelihood requests:   8%|▊         | 331/4332 [00:07<01:27, 45.86it/s]Running loglikelihood requests:   8%|▊         | 336/4332 [00:07<01:27, 45.78it/s]Running loglikelihood requests:   8%|▊         | 341/4332 [00:07<01:27, 45.61it/s]Running loglikelihood requests:   8%|▊         | 346/4332 [00:07<01:27, 45.58it/s]Running loglikelihood requests:   8%|▊         | 351/4332 [00:07<01:27, 45.47it/s]Running loglikelihood requests:   8%|▊         | 356/4332 [00:07<01:28, 45.04it/s]Running loglikelihood requests:   8%|▊         | 361/4332 [00:08<01:27, 45.16it/s]Running loglikelihood requests:   8%|▊         | 366/4332 [00:08<01:27, 45.28it/s]Running loglikelihood requests:   9%|▊         | 375/4332 [00:08<01:10, 56.18it/s]Running loglikelihood requests:   9%|▉         | 381/4332 [00:08<01:10, 55.73it/s]Running loglikelihood requests:   9%|▉         | 389/4332 [00:08<01:04, 60.80it/s]Running loglikelihood requests:   9%|▉         | 396/4332 [00:08<01:11, 55.13it/s]Running loglikelihood requests:   9%|▉         | 402/4332 [00:08<01:15, 52.08it/s]Running loglikelihood requests:   9%|▉         | 408/4332 [00:08<01:18, 49.77it/s]Running loglikelihood requests:  10%|▉         | 414/4332 [00:09<01:21, 48.24it/s]Running loglikelihood requests:  10%|▉         | 419/4332 [00:09<01:22, 47.22it/s]Running loglikelihood requests:  10%|▉         | 424/4332 [00:09<01:24, 46.47it/s]Running loglikelihood requests:  10%|▉         | 429/4332 [00:09<01:25, 45.91it/s]Running loglikelihood requests:  10%|█         | 434/4332 [00:09<01:25, 45.59it/s]Running loglikelihood requests:  10%|█         | 441/4332 [00:09<01:17, 50.43it/s]Running loglikelihood requests:  10%|█         | 447/4332 [00:09<01:20, 48.36it/s]Running loglikelihood requests:  10%|█         | 452/4332 [00:09<01:22, 47.30it/s]Running loglikelihood requests:  11%|█         | 459/4332 [00:09<01:14, 51.64it/s]Running loglikelihood requests:  11%|█         | 469/4332 [00:10<01:01, 62.57it/s]Running loglikelihood requests:  11%|█         | 476/4332 [00:10<01:08, 56.07it/s]Running loglikelihood requests:  11%|█         | 482/4332 [00:10<01:13, 52.68it/s]Running loglikelihood requests:  11%|█▏        | 488/4332 [00:10<01:15, 50.61it/s]Running loglikelihood requests:  11%|█▏        | 494/4332 [00:10<01:17, 49.25it/s]Running loglikelihood requests:  12%|█▏        | 499/4332 [00:10<01:19, 48.45it/s]Running loglikelihood requests:  12%|█▏        | 504/4332 [00:10<01:20, 47.82it/s]Running loglikelihood requests:  12%|█▏        | 509/4332 [00:10<01:20, 47.30it/s]Running loglikelihood requests:  12%|█▏        | 514/4332 [00:11<01:21, 46.93it/s]Running loglikelihood requests:  12%|█▏        | 519/4332 [00:11<01:21, 46.74it/s]Running loglikelihood requests:  12%|█▏        | 524/4332 [00:11<01:21, 46.59it/s]Running loglikelihood requests:  12%|█▏        | 529/4332 [00:11<01:21, 46.45it/s]Running loglikelihood requests:  12%|█▏        | 534/4332 [00:11<01:22, 46.30it/s]Running loglikelihood requests:  12%|█▏        | 539/4332 [00:11<01:21, 46.27it/s]Running loglikelihood requests:  13%|█▎        | 544/4332 [00:11<01:21, 46.25it/s]Running loglikelihood requests:  13%|█▎        | 549/4332 [00:11<01:21, 46.23it/s]Running loglikelihood requests:  13%|█▎        | 555/4332 [00:11<01:17, 49.00it/s]Running loglikelihood requests:  13%|█▎        | 560/4332 [00:12<01:18, 48.03it/s]Running loglikelihood requests:  13%|█▎        | 565/4332 [00:12<01:19, 47.49it/s]Running loglikelihood requests:  13%|█▎        | 570/4332 [00:12<01:19, 47.13it/s]Running loglikelihood requests:  13%|█▎        | 575/4332 [00:12<01:20, 46.89it/s]Running loglikelihood requests:  13%|█▎        | 580/4332 [00:12<01:20, 46.72it/s]Running loglikelihood requests:  14%|█▎        | 585/4332 [00:12<01:20, 46.63it/s]Running loglikelihood requests:  14%|█▎        | 592/4332 [00:12<01:12, 51.84it/s]Running loglikelihood requests:  14%|█▍        | 598/4332 [00:12<01:14, 49.94it/s]Running loglikelihood requests:  14%|█▍        | 604/4332 [00:12<01:16, 48.74it/s]Running loglikelihood requests:  14%|█▍        | 609/4332 [00:13<01:17, 48.03it/s]Running loglikelihood requests:  14%|█▍        | 617/4332 [00:13<01:06, 55.47it/s]Running loglikelihood requests:  14%|█▍        | 623/4332 [00:13<01:10, 52.31it/s]Running loglikelihood requests:  15%|█▍        | 629/4332 [00:13<01:13, 50.36it/s]Running loglikelihood requests:  15%|█▍        | 640/4332 [00:13<00:57, 64.45it/s]Running loglikelihood requests:  15%|█▍        | 647/4332 [00:13<00:57, 64.47it/s]Running loglikelihood requests:  15%|█▌        | 654/4332 [00:13<00:56, 64.53it/s]Running loglikelihood requests:  15%|█▌        | 662/4332 [00:13<00:54, 66.83it/s]Running loglikelihood requests:  15%|█▌        | 671/4332 [00:13<00:51, 71.40it/s]Running loglikelihood requests:  16%|█▌        | 679/4332 [00:14<00:56, 64.36it/s]Running loglikelihood requests:  16%|█▌        | 686/4332 [00:14<00:59, 61.14it/s]Running loglikelihood requests:  16%|█▌        | 693/4332 [00:14<01:01, 58.96it/s]Running loglikelihood requests:  16%|█▌        | 700/4332 [00:14<00:59, 60.54it/s]Running loglikelihood requests:  16%|█▋        | 707/4332 [00:14<01:05, 55.62it/s]Running loglikelihood requests:  16%|█▋        | 714/4332 [00:14<01:02, 58.02it/s]Running loglikelihood requests:  17%|█▋        | 720/4332 [00:14<01:06, 54.32it/s]Running loglikelihood requests:  17%|█▋        | 728/4332 [00:15<01:00, 59.38it/s]Running loglikelihood requests:  17%|█▋        | 735/4332 [00:15<00:59, 60.86it/s]Running loglikelihood requests:  17%|█▋        | 743/4332 [00:15<00:55, 64.55it/s]Running loglikelihood requests:  17%|█▋        | 750/4332 [00:15<00:55, 64.59it/s]Running loglikelihood requests:  17%|█▋        | 757/4332 [00:15<01:02, 57.47it/s]Running loglikelihood requests:  18%|█▊        | 768/4332 [00:15<00:51, 68.98it/s]Running loglikelihood requests:  18%|█▊        | 776/4332 [00:15<00:59, 59.89it/s]Running loglikelihood requests:  18%|█▊        | 785/4332 [00:15<00:54, 65.36it/s]Running loglikelihood requests:  18%|█▊        | 792/4332 [00:16<01:00, 58.59it/s]Running loglikelihood requests:  18%|█▊        | 799/4332 [00:16<01:05, 54.31it/s]Running loglikelihood requests:  19%|█▊        | 805/4332 [00:16<01:08, 51.74it/s]Running loglikelihood requests:  19%|█▊        | 811/4332 [00:16<01:10, 49.87it/s]Running loglikelihood requests:  19%|█▉        | 817/4332 [00:16<01:08, 51.01it/s]Running loglikelihood requests:  19%|█▉        | 823/4332 [00:16<01:11, 49.28it/s]Running loglikelihood requests:  19%|█▉        | 828/4332 [00:16<01:12, 48.15it/s]Running loglikelihood requests:  19%|█▉        | 833/4332 [00:16<01:14, 47.13it/s]Running loglikelihood requests:  19%|█▉        | 838/4332 [00:17<01:15, 46.57it/s]Running loglikelihood requests:  19%|█▉        | 844/4332 [00:17<01:11, 48.83it/s]Running loglikelihood requests:  20%|█▉        | 849/4332 [00:17<01:12, 47.79it/s]Running loglikelihood requests:  20%|█▉        | 854/4332 [00:17<01:13, 47.08it/s]Running loglikelihood requests:  20%|█▉        | 860/4332 [00:17<01:10, 49.17it/s]Running loglikelihood requests:  20%|█▉        | 865/4332 [00:17<01:12, 48.05it/s]Running loglikelihood requests:  20%|██        | 872/4332 [00:17<01:05, 52.66it/s]Running loglikelihood requests:  20%|██        | 878/4332 [00:17<01:08, 50.25it/s]Running loglikelihood requests:  20%|██        | 884/4332 [00:17<01:11, 48.43it/s]Running loglikelihood requests:  21%|██        | 889/4332 [00:18<01:13, 47.16it/s]Running loglikelihood requests:  21%|██        | 894/4332 [00:18<01:13, 46.49it/s]Running loglikelihood requests:  21%|██        | 899/4332 [00:18<01:14, 45.91it/s]Running loglikelihood requests:  21%|██        | 904/4332 [00:18<01:14, 45.73it/s]Running loglikelihood requests:  21%|██        | 912/4332 [00:18<01:03, 53.50it/s]Running loglikelihood requests:  21%|██        | 918/4332 [00:18<01:03, 53.75it/s]Running loglikelihood requests:  21%|██▏       | 924/4332 [00:18<01:03, 53.92it/s]Running loglikelihood requests:  21%|██▏       | 930/4332 [00:18<01:06, 51.00it/s]Running loglikelihood requests:  22%|██▏       | 936/4332 [00:19<01:09, 49.07it/s]Running loglikelihood requests:  22%|██▏       | 941/4332 [00:19<01:11, 47.75it/s]Running loglikelihood requests:  22%|██▏       | 946/4332 [00:19<01:12, 47.00it/s]Running loglikelihood requests:  22%|██▏       | 951/4332 [00:19<01:12, 46.51it/s]Running loglikelihood requests:  22%|██▏       | 956/4332 [00:19<01:13, 46.15it/s]Running loglikelihood requests:  22%|██▏       | 961/4332 [00:19<01:13, 45.82it/s]Running loglikelihood requests:  22%|██▏       | 971/4332 [00:19<00:57, 58.94it/s]Running loglikelihood requests:  23%|██▎       | 977/4332 [00:19<00:58, 57.30it/s]Running loglikelihood requests:  23%|██▎       | 986/4332 [00:19<00:51, 64.36it/s]Running loglikelihood requests:  23%|██▎       | 993/4332 [00:20<00:55, 60.46it/s]Running loglikelihood requests:  23%|██▎       | 1000/4332 [00:20<00:54, 61.22it/s]Running loglikelihood requests:  23%|██▎       | 1007/4332 [00:20<00:53, 61.86it/s]Running loglikelihood requests:  23%|██▎       | 1015/4332 [00:20<00:51, 64.90it/s]Running loglikelihood requests:  24%|██▎       | 1022/4332 [00:20<00:54, 60.82it/s]Running loglikelihood requests:  24%|██▍       | 1031/4332 [00:20<00:49, 66.64it/s]Running loglikelihood requests:  24%|██▍       | 1038/4332 [00:20<00:50, 65.68it/s]Running loglikelihood requests:  24%|██▍       | 1045/4332 [00:20<00:50, 64.92it/s]Running loglikelihood requests:  24%|██▍       | 1053/4332 [00:20<00:48, 67.05it/s]Running loglikelihood requests:  24%|██▍       | 1060/4332 [00:21<00:55, 58.62it/s]Running loglikelihood requests:  25%|██▍       | 1067/4332 [00:21<01:00, 53.92it/s]Running loglikelihood requests:  25%|██▍       | 1073/4332 [00:21<01:00, 53.98it/s]Running loglikelihood requests:  25%|██▍       | 1082/4332 [00:21<00:52, 61.37it/s]Running loglikelihood requests:  25%|██▌       | 1089/4332 [00:21<00:58, 55.76it/s]Running loglikelihood requests:  25%|██▌       | 1097/4332 [00:21<00:53, 59.91it/s]Running loglikelihood requests:  25%|██▌       | 1104/4332 [00:21<00:59, 54.58it/s]Running loglikelihood requests:  26%|██▌       | 1112/4332 [00:22<00:54, 59.14it/s]Running loglikelihood requests:  26%|██▌       | 1119/4332 [00:22<00:59, 54.12it/s]Running loglikelihood requests:  26%|██▌       | 1130/4332 [00:22<00:48, 65.69it/s]Running loglikelihood requests:  26%|██▋       | 1142/4332 [00:22<00:41, 77.09it/s]Running loglikelihood requests:  27%|██▋       | 1151/4332 [00:22<00:45, 70.48it/s]Running loglikelihood requests:  27%|██▋       | 1159/4332 [00:22<00:51, 61.41it/s]Running loglikelihood requests:  27%|██▋       | 1167/4332 [00:22<00:49, 63.90it/s]Running loglikelihood requests:  27%|██▋       | 1174/4332 [00:22<00:52, 60.48it/s]Running loglikelihood requests:  27%|██▋       | 1181/4332 [00:23<00:54, 58.20it/s]Running loglikelihood requests:  27%|██▋       | 1190/4332 [00:23<00:48, 64.20it/s]Running loglikelihood requests:  28%|██▊       | 1197/4332 [00:23<00:54, 57.76it/s]Running loglikelihood requests:  28%|██▊       | 1203/4332 [00:23<00:57, 54.13it/s]Running loglikelihood requests:  28%|██▊       | 1209/4332 [00:23<01:00, 51.55it/s]Running loglikelihood requests:  28%|██▊       | 1215/4332 [00:23<00:59, 52.28it/s]Running loglikelihood requests:  28%|██▊       | 1228/4332 [00:23<00:44, 69.88it/s]Running loglikelihood requests:  29%|██▊       | 1236/4332 [00:24<00:48, 63.57it/s]Running loglikelihood requests:  29%|██▊       | 1243/4332 [00:24<00:51, 60.37it/s]Running loglikelihood requests:  29%|██▉       | 1250/4332 [00:24<00:52, 58.17it/s]Running loglikelihood requests:  29%|██▉       | 1256/4332 [00:24<00:53, 57.19it/s]Running loglikelihood requests:  29%|██▉       | 1263/4332 [00:24<00:52, 58.91it/s]Running loglikelihood requests:  29%|██▉       | 1271/4332 [00:24<00:48, 63.08it/s]Running loglikelihood requests:  30%|██▉       | 1279/4332 [00:24<00:46, 66.24it/s]Running loglikelihood requests:  30%|██▉       | 1286/4332 [00:24<00:46, 65.93it/s]Running loglikelihood requests:  30%|███       | 1303/4332 [00:24<00:32, 92.50it/s]Running loglikelihood requests:  30%|███       | 1313/4332 [00:25<00:34, 87.55it/s]Running loglikelihood requests:  31%|███       | 1322/4332 [00:25<00:42, 70.68it/s]Running loglikelihood requests:  31%|███       | 1330/4332 [00:25<00:41, 71.64it/s]Running loglikelihood requests:  31%|███       | 1338/4332 [00:25<00:41, 72.43it/s]Running loglikelihood requests:  31%|███       | 1347/4332 [00:25<00:39, 75.52it/s]Running loglikelihood requests:  31%|███▏      | 1355/4332 [00:25<00:41, 71.36it/s]Running loglikelihood requests:  31%|███▏      | 1363/4332 [00:25<00:41, 72.29it/s]Running loglikelihood requests:  32%|███▏      | 1371/4332 [00:25<00:40, 72.88it/s]Running loglikelihood requests:  32%|███▏      | 1379/4332 [00:26<00:47, 62.64it/s]Running loglikelihood requests:  32%|███▏      | 1390/4332 [00:26<00:40, 72.91it/s]Running loglikelihood requests:  32%|███▏      | 1398/4332 [00:26<00:40, 72.72it/s]Running loglikelihood requests:  33%|███▎      | 1409/4332 [00:26<00:36, 80.80it/s]Running loglikelihood requests:  33%|███▎      | 1418/4332 [00:26<00:43, 66.67it/s]Running loglikelihood requests:  33%|███▎      | 1426/4332 [00:26<00:48, 59.81it/s]Running loglikelihood requests:  33%|███▎      | 1433/4332 [00:26<00:51, 55.86it/s]Running loglikelihood requests:  33%|███▎      | 1441/4332 [00:27<00:47, 60.23it/s]Running loglikelihood requests:  33%|███▎      | 1451/4332 [00:27<00:42, 68.46it/s]Running loglikelihood requests:  34%|███▎      | 1462/4332 [00:27<00:37, 77.35it/s]Running loglikelihood requests:  34%|███▍      | 1476/4332 [00:27<00:31, 91.68it/s]Running loglikelihood requests:  34%|███▍      | 1486/4332 [00:27<00:32, 87.21it/s]Running loglikelihood requests:  35%|███▍      | 1496/4332 [00:27<00:38, 72.93it/s]Running loglikelihood requests:  35%|███▍      | 1506/4332 [00:27<00:36, 77.75it/s]Running loglikelihood requests:  35%|███▍      | 1515/4332 [00:27<00:37, 75.25it/s]Running loglikelihood requests:  35%|███▌      | 1528/4332 [00:28<00:32, 86.82it/s]Running loglikelihood requests:  36%|███▌      | 1538/4332 [00:28<00:40, 69.68it/s]Running loglikelihood requests:  36%|███▌      | 1546/4332 [00:28<00:39, 70.69it/s]Running loglikelihood requests:  36%|███▌      | 1554/4332 [00:28<00:40, 68.13it/s]Running loglikelihood requests:  36%|███▌      | 1562/4332 [00:28<00:43, 63.28it/s]Running loglikelihood requests:  36%|███▌      | 1569/4332 [00:28<00:47, 57.99it/s]Running loglikelihood requests:  36%|███▋      | 1576/4332 [00:28<00:50, 54.40it/s]Running loglikelihood requests:  37%|███▋      | 1582/4332 [00:29<00:52, 52.21it/s]Running loglikelihood requests:  37%|███▋      | 1590/4332 [00:29<00:47, 57.63it/s]Running loglikelihood requests:  37%|███▋      | 1606/4332 [00:29<00:33, 81.07it/s]Running loglikelihood requests:  37%|███▋      | 1615/4332 [00:29<00:35, 77.47it/s]Running loglikelihood requests:  37%|███▋      | 1624/4332 [00:29<00:34, 79.02it/s]Running loglikelihood requests:  38%|███▊      | 1633/4332 [00:29<00:33, 80.20it/s]Running loglikelihood requests:  38%|███▊      | 1644/4332 [00:29<00:31, 86.19it/s]Running loglikelihood requests:  38%|███▊      | 1653/4332 [00:29<00:33, 80.74it/s]Running loglikelihood requests:  38%|███▊      | 1662/4332 [00:29<00:34, 77.14it/s]Running loglikelihood requests:  39%|███▊      | 1670/4332 [00:30<00:38, 68.75it/s]Running loglikelihood requests:  39%|███▉      | 1686/4332 [00:30<00:29, 89.25it/s]Running loglikelihood requests:  39%|███▉      | 1697/4332 [00:30<00:28, 92.54it/s]Running loglikelihood requests:  39%|███▉      | 1707/4332 [00:30<00:36, 72.41it/s]Running loglikelihood requests:  40%|███▉      | 1718/4332 [00:30<00:32, 79.33it/s]Running loglikelihood requests:  40%|███▉      | 1727/4332 [00:30<00:32, 80.33it/s]Running loglikelihood requests:  40%|████      | 1736/4332 [00:30<00:35, 73.40it/s]Running loglikelihood requests:  40%|████      | 1744/4332 [00:31<00:36, 70.02it/s]Running loglikelihood requests:  40%|████      | 1752/4332 [00:31<00:41, 61.63it/s]Running loglikelihood requests:  41%|████      | 1759/4332 [00:31<00:43, 59.57it/s]Running loglikelihood requests:  41%|████      | 1769/4332 [00:31<00:37, 67.72it/s]Running loglikelihood requests:  41%|████      | 1786/4332 [00:31<00:28, 90.91it/s]Running loglikelihood requests:  41%|████▏     | 1797/4332 [00:31<00:27, 93.80it/s]Running loglikelihood requests:  42%|████▏     | 1807/4332 [00:31<00:28, 88.35it/s]Running loglikelihood requests:  42%|████▏     | 1819/4332 [00:31<00:26, 94.37it/s]Running loglikelihood requests:  42%|████▏     | 1832/4332 [00:32<00:24, 101.42it/s]Running loglikelihood requests:  43%|████▎     | 1843/4332 [00:32<00:27, 90.72it/s] Running loglikelihood requests:  43%|████▎     | 1853/4332 [00:32<00:28, 86.59it/s]Running loglikelihood requests:  43%|████▎     | 1862/4332 [00:32<00:33, 74.04it/s]Running loglikelihood requests:  43%|████▎     | 1870/4332 [00:32<00:36, 67.19it/s]Running loglikelihood requests:  43%|████▎     | 1878/4332 [00:32<00:35, 68.68it/s]Running loglikelihood requests:  44%|████▎     | 1886/4332 [00:32<00:36, 66.43it/s]Running loglikelihood requests:  44%|████▎     | 1895/4332 [00:32<00:34, 70.58it/s]Running loglikelihood requests:  44%|████▍     | 1907/4332 [00:33<00:29, 81.31it/s]Running loglikelihood requests:  44%|████▍     | 1921/4332 [00:33<00:25, 94.76it/s]Running loglikelihood requests:  45%|████▍     | 1931/4332 [00:33<00:29, 80.89it/s]Running loglikelihood requests:  45%|████▌     | 1951/4332 [00:33<00:22, 107.76it/s]Running loglikelihood requests:  45%|████▌     | 1963/4332 [00:33<00:25, 94.02it/s] Running loglikelihood requests:  46%|████▌     | 1974/4332 [00:33<00:29, 80.33it/s]Running loglikelihood requests:  46%|████▌     | 1991/4332 [00:33<00:24, 97.54it/s]Running loglikelihood requests:  46%|████▌     | 2002/4332 [00:34<00:23, 98.37it/s]Running loglikelihood requests:  46%|████▋     | 2013/4332 [00:34<00:25, 90.24it/s]Running loglikelihood requests:  47%|████▋     | 2025/4332 [00:34<00:24, 95.64it/s]Running loglikelihood requests:  47%|████▋     | 2036/4332 [00:34<00:27, 84.35it/s]Running loglikelihood requests:  47%|████▋     | 2049/4332 [00:34<00:24, 93.36it/s]Running loglikelihood requests:  48%|████▊     | 2063/4332 [00:34<00:22, 102.91it/s]Running loglikelihood requests:  48%|████▊     | 2084/4332 [00:34<00:17, 127.57it/s]Running loglikelihood requests:  48%|████▊     | 2098/4332 [00:35<00:23, 96.53it/s] Running loglikelihood requests:  49%|████▊     | 2110/4332 [00:35<00:26, 84.60it/s]Running loglikelihood requests:  49%|████▉     | 2120/4332 [00:35<00:27, 79.65it/s]Running loglikelihood requests:  49%|████▉     | 2129/4332 [00:35<00:27, 80.62it/s]Running loglikelihood requests:  49%|████▉     | 2139/4332 [00:35<00:26, 83.65it/s]Running loglikelihood requests:  50%|████▉     | 2148/4332 [00:35<00:28, 76.06it/s]Running loglikelihood requests:  50%|████▉     | 2162/4332 [00:35<00:24, 88.92it/s]Running loglikelihood requests:  50%|█████     | 2172/4332 [00:35<00:24, 89.62it/s]Running loglikelihood requests:  50%|█████     | 2183/4332 [00:36<00:23, 92.72it/s]Running loglikelihood requests:  51%|█████     | 2193/4332 [00:36<00:24, 87.65it/s]Running loglikelihood requests:  51%|█████     | 2202/4332 [00:36<00:26, 81.89it/s]Running loglikelihood requests:  51%|█████     | 2211/4332 [00:36<00:27, 77.95it/s]Running loglikelihood requests:  51%|█████     | 2219/4332 [00:36<00:27, 76.82it/s]Running loglikelihood requests:  52%|█████▏    | 2235/4332 [00:36<00:21, 96.19it/s]Running loglikelihood requests:  52%|█████▏    | 2249/4332 [00:36<00:19, 105.34it/s]Running loglikelihood requests:  52%|█████▏    | 2266/4332 [00:36<00:17, 119.81it/s]Running loglikelihood requests:  53%|█████▎    | 2279/4332 [00:37<00:24, 85.47it/s] Running loglikelihood requests:  53%|█████▎    | 2298/4332 [00:37<00:19, 105.72it/s]Running loglikelihood requests:  54%|█████▎    | 2318/4332 [00:37<00:16, 124.67it/s]Running loglikelihood requests:  54%|█████▍    | 2334/4332 [00:37<00:15, 130.35it/s]Running loglikelihood requests:  54%|█████▍    | 2349/4332 [00:37<00:16, 119.59it/s]Running loglikelihood requests:  55%|█████▍    | 2362/4332 [00:37<00:16, 119.52it/s]Running loglikelihood requests:  55%|█████▍    | 2377/4332 [00:37<00:15, 124.12it/s]Running loglikelihood requests:  55%|█████▌    | 2393/4332 [00:37<00:14, 129.92it/s]Running loglikelihood requests:  56%|█████▌    | 2407/4332 [00:38<00:17, 111.25it/s]Running loglikelihood requests:  56%|█████▌    | 2423/4332 [00:38<00:15, 120.54it/s]Running loglikelihood requests:  56%|█████▋    | 2441/4332 [00:38<00:14, 132.61it/s]Running loglikelihood requests:  57%|█████▋    | 2455/4332 [00:38<00:16, 113.22it/s]Running loglikelihood requests:  57%|█████▋    | 2483/4332 [00:38<00:12, 149.48it/s]Running loglikelihood requests:  58%|█████▊    | 2500/4332 [00:38<00:16, 110.93it/s]Running loglikelihood requests:  58%|█████▊    | 2514/4332 [00:39<00:17, 101.84it/s]Running loglikelihood requests:  58%|█████▊    | 2526/4332 [00:39<00:18, 99.63it/s] Running loglikelihood requests:  59%|█████▉    | 2561/4332 [00:39<00:11, 149.85it/s]Running loglikelihood requests:  60%|█████▉    | 2579/4332 [00:39<00:14, 119.25it/s]Running loglikelihood requests:  60%|█████▉    | 2594/4332 [00:39<00:17, 98.49it/s] Running loglikelihood requests:  60%|██████    | 2606/4332 [00:39<00:17, 100.92it/s]Running loglikelihood requests:  60%|██████    | 2618/4332 [00:40<00:18, 91.35it/s] Running loglikelihood requests:  61%|██████    | 2629/4332 [00:40<00:20, 82.79it/s]Running loglikelihood requests:  61%|██████    | 2639/4332 [00:40<00:21, 77.80it/s]Running loglikelihood requests:  61%|██████    | 2652/4332 [00:40<00:19, 86.90it/s]Running loglikelihood requests:  62%|██████▏   | 2665/4332 [00:40<00:17, 94.81it/s]Running loglikelihood requests:  62%|██████▏   | 2679/4332 [00:40<00:15, 103.52it/s]Running loglikelihood requests:  62%|██████▏   | 2693/4332 [00:40<00:14, 110.35it/s]Running loglikelihood requests:  63%|██████▎   | 2710/4332 [00:40<00:13, 123.04it/s]Running loglikelihood requests:  63%|██████▎   | 2723/4332 [00:41<00:13, 115.75it/s]Running loglikelihood requests:  63%|██████▎   | 2735/4332 [00:41<00:17, 93.75it/s] Running loglikelihood requests:  64%|██████▎   | 2758/4332 [00:41<00:12, 122.43it/s]Running loglikelihood requests:  64%|██████▍   | 2778/4332 [00:41<00:11, 138.26it/s]Running loglikelihood requests:  65%|██████▍   | 2798/4332 [00:41<00:10, 150.50it/s]Running loglikelihood requests:  65%|██████▍   | 2814/4332 [00:41<00:10, 141.91it/s]Running loglikelihood requests:  65%|██████▌   | 2829/4332 [00:41<00:10, 140.93it/s]Running loglikelihood requests:  66%|██████▌   | 2844/4332 [00:41<00:11, 132.79it/s]Running loglikelihood requests:  66%|██████▌   | 2860/4332 [00:42<00:10, 136.77it/s]Running loglikelihood requests:  66%|██████▋   | 2874/4332 [00:42<00:16, 89.91it/s] Running loglikelihood requests:  67%|██████▋   | 2886/4332 [00:42<00:15, 94.37it/s]Running loglikelihood requests:  67%|██████▋   | 2898/4332 [00:42<00:15, 90.00it/s]Running loglikelihood requests:  67%|██████▋   | 2915/4332 [00:42<00:13, 105.50it/s]Running loglikelihood requests:  68%|██████▊   | 2935/4332 [00:42<00:11, 125.05it/s]Running loglikelihood requests:  68%|██████▊   | 2949/4332 [00:43<00:12, 109.18it/s]Running loglikelihood requests:  68%|██████▊   | 2962/4332 [00:43<00:14, 97.74it/s] Running loglikelihood requests:  69%|██████▊   | 2973/4332 [00:43<00:14, 94.36it/s]Running loglikelihood requests:  69%|██████▉   | 2984/4332 [00:43<00:14, 91.80it/s]Running loglikelihood requests:  69%|██████▉   | 3000/4332 [00:43<00:12, 105.65it/s]Running loglikelihood requests:  70%|██████▉   | 3012/4332 [00:43<00:16, 81.82it/s] Running loglikelihood requests:  70%|██████▉   | 3022/4332 [00:43<00:17, 74.49it/s]Running loglikelihood requests:  70%|██████▉   | 3031/4332 [00:44<00:18, 70.44it/s]Running loglikelihood requests:  70%|███████   | 3042/4332 [00:44<00:16, 77.51it/s]Running loglikelihood requests:  71%|███████   | 3059/4332 [00:44<00:13, 96.75it/s]Running loglikelihood requests:  71%|███████   | 3071/4332 [00:44<00:12, 100.43it/s]Running loglikelihood requests:  71%|███████▏  | 3095/4332 [00:44<00:09, 132.72it/s]Running loglikelihood requests:  72%|███████▏  | 3110/4332 [00:44<00:09, 134.37it/s]Running loglikelihood requests:  72%|███████▏  | 3131/4332 [00:44<00:07, 151.03it/s]Running loglikelihood requests:  73%|███████▎  | 3147/4332 [00:44<00:08, 134.83it/s]Running loglikelihood requests:  73%|███████▎  | 3162/4332 [00:45<00:08, 135.66it/s]Running loglikelihood requests:  73%|███████▎  | 3177/4332 [00:45<00:09, 117.19it/s]Running loglikelihood requests:  74%|███████▎  | 3190/4332 [00:45<00:12, 94.48it/s] Running loglikelihood requests:  74%|███████▍  | 3201/4332 [00:45<00:13, 81.63it/s]Running loglikelihood requests:  74%|███████▍  | 3211/4332 [00:45<00:13, 80.19it/s]Running loglikelihood requests:  74%|███████▍  | 3220/4332 [00:45<00:14, 77.28it/s]Running loglikelihood requests:  75%|███████▍  | 3229/4332 [00:46<00:14, 75.28it/s]Running loglikelihood requests:  75%|███████▍  | 3237/4332 [00:46<00:15, 71.65it/s]Running loglikelihood requests:  75%|███████▍  | 3248/4332 [00:46<00:13, 79.21it/s]Running loglikelihood requests:  75%|███████▌  | 3263/4332 [00:46<00:11, 94.75it/s]Running loglikelihood requests:  76%|███████▌  | 3273/4332 [00:46<00:11, 93.81it/s]Running loglikelihood requests:  76%|███████▌  | 3283/4332 [00:46<00:11, 88.67it/s]Running loglikelihood requests:  76%|███████▌  | 3293/4332 [00:46<00:11, 89.82it/s]Running loglikelihood requests:  76%|███████▋  | 3304/4332 [00:46<00:11, 93.29it/s]Running loglikelihood requests:  77%|███████▋  | 3314/4332 [00:46<00:12, 83.69it/s]Running loglikelihood requests:  77%|███████▋  | 3323/4332 [00:47<00:12, 83.64it/s]Running loglikelihood requests:  77%|███████▋  | 3332/4332 [00:47<00:13, 75.41it/s]Running loglikelihood requests:  77%|███████▋  | 3344/4332 [00:47<00:11, 84.84it/s]Running loglikelihood requests:  77%|███████▋  | 3355/4332 [00:47<00:10, 89.54it/s]Running loglikelihood requests:  78%|███████▊  | 3369/4332 [00:47<00:09, 100.77it/s]Running loglikelihood requests:  78%|███████▊  | 3380/4332 [00:47<00:09, 101.10it/s]Running loglikelihood requests:  78%|███████▊  | 3397/4332 [00:47<00:07, 117.24it/s]Running loglikelihood requests:  79%|███████▉  | 3418/4332 [00:47<00:06, 139.43it/s]Running loglikelihood requests:  79%|███████▉  | 3433/4332 [00:47<00:06, 138.54it/s]Running loglikelihood requests:  80%|███████▉  | 3447/4332 [00:48<00:08, 110.04it/s]Running loglikelihood requests:  80%|███████▉  | 3460/4332 [00:48<00:07, 112.43it/s]Running loglikelihood requests:  80%|████████  | 3472/4332 [00:48<00:10, 85.13it/s] Running loglikelihood requests:  80%|████████  | 3483/4332 [00:48<00:09, 88.78it/s]Running loglikelihood requests:  81%|████████  | 3495/4332 [00:48<00:08, 94.05it/s]Running loglikelihood requests:  81%|████████  | 3506/4332 [00:48<00:09, 87.13it/s]Running loglikelihood requests:  81%|████████  | 3517/4332 [00:48<00:08, 90.71it/s]Running loglikelihood requests:  81%|████████▏ | 3528/4332 [00:49<00:08, 93.55it/s]Running loglikelihood requests:  82%|████████▏ | 3538/4332 [00:49<00:10, 73.49it/s]Running loglikelihood requests:  82%|████████▏ | 3547/4332 [00:49<00:11, 69.33it/s]Running loglikelihood requests:  82%|████████▏ | 3555/4332 [00:49<00:12, 64.43it/s]Running loglikelihood requests:  82%|████████▏ | 3562/4332 [00:49<00:12, 61.64it/s]Running loglikelihood requests:  82%|████████▏ | 3570/4332 [00:49<00:11, 64.60it/s]Running loglikelihood requests:  83%|████████▎ | 3584/4332 [00:49<00:09, 81.08it/s]Running loglikelihood requests:  83%|████████▎ | 3593/4332 [00:50<00:10, 70.37it/s]Running loglikelihood requests:  83%|████████▎ | 3601/4332 [00:50<00:10, 67.93it/s]Running loglikelihood requests:  83%|████████▎ | 3609/4332 [00:50<00:11, 60.39it/s]Running loglikelihood requests:  84%|████████▎ | 3621/4332 [00:50<00:09, 72.38it/s]Running loglikelihood requests:  84%|████████▍ | 3637/4332 [00:50<00:07, 91.34it/s]Running loglikelihood requests:  84%|████████▍ | 3649/4332 [00:50<00:07, 96.43it/s]Running loglikelihood requests:  84%|████████▍ | 3660/4332 [00:50<00:08, 80.15it/s]Running loglikelihood requests:  85%|████████▍ | 3669/4332 [00:51<00:08, 76.75it/s]Running loglikelihood requests:  85%|████████▍ | 3681/4332 [00:51<00:07, 84.73it/s]Running loglikelihood requests:  85%|████████▌ | 3691/4332 [00:51<00:08, 71.78it/s]Running loglikelihood requests:  85%|████████▌ | 3699/4332 [00:51<00:08, 72.28it/s]Running loglikelihood requests:  86%|████████▌ | 3711/4332 [00:51<00:07, 81.89it/s]Running loglikelihood requests:  86%|████████▌ | 3720/4332 [00:51<00:07, 82.21it/s]Running loglikelihood requests:  86%|████████▌ | 3730/4332 [00:51<00:07, 84.88it/s]Running loglikelihood requests:  86%|████████▋ | 3739/4332 [00:51<00:07, 75.93it/s]Running loglikelihood requests:  86%|████████▋ | 3747/4332 [00:52<00:08, 71.66it/s]Running loglikelihood requests:  87%|████████▋ | 3755/4332 [00:52<00:07, 72.27it/s]Running loglikelihood requests:  87%|████████▋ | 3763/4332 [00:52<00:08, 68.95it/s]Running loglikelihood requests:  87%|████████▋ | 3771/4332 [00:52<00:07, 70.30it/s]Running loglikelihood requests:  87%|████████▋ | 3782/4332 [00:52<00:06, 78.97it/s]Running loglikelihood requests:  88%|████████▊ | 3793/4332 [00:52<00:06, 85.33it/s]Running loglikelihood requests:  88%|████████▊ | 3802/4332 [00:52<00:06, 80.11it/s]Running loglikelihood requests:  88%|████████▊ | 3811/4332 [00:52<00:06, 80.62it/s]Running loglikelihood requests:  88%|████████▊ | 3821/4332 [00:53<00:06, 84.05it/s]Running loglikelihood requests:  88%|████████▊ | 3830/4332 [00:53<00:06, 79.38it/s]Running loglikelihood requests:  89%|████████▉ | 3857/4332 [00:53<00:03, 126.91it/s]Running loglikelihood requests:  89%|████████▉ | 3875/4332 [00:53<00:03, 138.11it/s]Running loglikelihood requests:  90%|████████▉ | 3890/4332 [00:53<00:03, 112.71it/s]Running loglikelihood requests:  90%|█████████ | 3905/4332 [00:53<00:03, 119.28it/s]Running loglikelihood requests:  91%|█████████ | 3921/4332 [00:53<00:03, 126.87it/s]Running loglikelihood requests:  91%|█████████ | 3937/4332 [00:53<00:02, 132.61it/s]Running loglikelihood requests:  91%|█████████ | 3951/4332 [00:54<00:03, 124.88it/s]Running loglikelihood requests:  92%|█████████▏| 3966/4332 [00:54<00:02, 128.75it/s]Running loglikelihood requests:  92%|█████████▏| 3980/4332 [00:54<00:02, 122.25it/s]Running loglikelihood requests:  92%|█████████▏| 3993/4332 [00:54<00:03, 95.82it/s] Running loglikelihood requests:  93%|█████████▎| 4010/4332 [00:54<00:02, 110.32it/s]Running loglikelihood requests:  93%|█████████▎| 4023/4332 [00:54<00:03, 94.15it/s] Running loglikelihood requests:  93%|█████████▎| 4034/4332 [00:54<00:03, 81.22it/s]Running loglikelihood requests:  93%|█████████▎| 4044/4332 [00:55<00:03, 83.79it/s]Running loglikelihood requests:  94%|█████████▎| 4054/4332 [00:55<00:03, 69.65it/s]Running loglikelihood requests:  94%|█████████▍| 4076/4332 [00:55<00:02, 98.47it/s]Running loglikelihood requests:  94%|█████████▍| 4090/4332 [00:55<00:02, 105.81it/s]Running loglikelihood requests:  95%|█████████▍| 4107/4332 [00:55<00:01, 118.67it/s]Running loglikelihood requests:  95%|█████████▌| 4121/4332 [00:55<00:01, 121.48it/s]Running loglikelihood requests:  95%|█████████▌| 4135/4332 [00:55<00:01, 123.59it/s]Running loglikelihood requests:  96%|█████████▌| 4149/4332 [00:55<00:01, 125.14it/s]Running loglikelihood requests:  96%|█████████▌| 4162/4332 [00:56<00:01, 123.76it/s]Running loglikelihood requests:  96%|█████████▋| 4175/4332 [00:56<00:01, 116.05it/s]Running loglikelihood requests:  97%|█████████▋| 4187/4332 [00:56<00:01, 114.33it/s]Running loglikelihood requests:  97%|█████████▋| 4208/4332 [00:56<00:00, 135.82it/s]Running loglikelihood requests:  97%|█████████▋| 4222/4332 [00:56<00:00, 126.11it/s]Running loglikelihood requests:  98%|█████████▊| 4241/4332 [00:56<00:00, 139.61it/s]Running loglikelihood requests:  98%|█████████▊| 4256/4332 [00:56<00:00, 139.29it/s]Running loglikelihood requests:  99%|█████████▊| 4271/4332 [00:56<00:00, 131.59it/s]Running loglikelihood requests:  99%|█████████▉| 4288/4332 [00:56<00:00, 138.42it/s]Running loglikelihood requests:  99%|█████████▉| 4305/4332 [00:57<00:00, 143.37it/s]Running loglikelihood requests: 100%|█████████▉| 4320/4332 [00:57<00:00, 134.14it/s]Running loglikelihood requests: 100%|██████████| 4332/4332 [00:57<00:00, 75.63it/s] 
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:209] Saving results aggregated
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_abbreviations
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_additional_spaces
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_borrowing
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_cannonical
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_capitalization
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_character_deletion
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_character_substitution
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_colloquial
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_combining_diacritics
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_compounds
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_contractions
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_date_formats
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_deliberate_misspellings
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_emoji_substitution
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_grammatical_errors
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_historical_spelling
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_homoglyphs
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_inflections
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_keyboard_proximity_errors
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_letter_repetition_for_emphasis
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_numerical_formats
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_ocr_errors
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_regional_spelling_variations
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_script
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_similar_words
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_space_additions
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_space_removal
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_spelled_out
+2025-09-15:15:40:07 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_superscript_subscript
+2025-09-15:15:40:08 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_web_search_query
+2025-09-15:15:40:08 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_wiki-jargon
+2025-09-15:15:40:08 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_english_word_reordering
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                                            tokenizer_robustness_completion_english/acc ▁
+wandb:                                       tokenizer_robustness_completion_english/acc_norm ▁
+wandb:                              tokenizer_robustness_completion_english_abbreviations/acc ▁
+wandb:                         tokenizer_robustness_completion_english_abbreviations/acc_norm ▁
+wandb:                  tokenizer_robustness_completion_english_abbreviations/acc_norm_stderr ▁
+wandb:                       tokenizer_robustness_completion_english_abbreviations/acc_stderr ▁
+wandb:                          tokenizer_robustness_completion_english_additional_spaces/acc ▁
+wandb:                     tokenizer_robustness_completion_english_additional_spaces/acc_norm ▁
+wandb:              tokenizer_robustness_completion_english_additional_spaces/acc_norm_stderr ▁
+wandb:                   tokenizer_robustness_completion_english_additional_spaces/acc_stderr ▁
+wandb:                                  tokenizer_robustness_completion_english_borrowing/acc ▁
+wandb:                             tokenizer_robustness_completion_english_borrowing/acc_norm ▁
+wandb:                      tokenizer_robustness_completion_english_borrowing/acc_norm_stderr ▁
+wandb:                           tokenizer_robustness_completion_english_borrowing/acc_stderr ▁
+wandb:                                 tokenizer_robustness_completion_english_cannonical/acc ▁
+wandb:                            tokenizer_robustness_completion_english_cannonical/acc_norm ▁
+wandb:                     tokenizer_robustness_completion_english_cannonical/acc_norm_stderr ▁
+wandb:                          tokenizer_robustness_completion_english_cannonical/acc_stderr ▁
+wandb:                             tokenizer_robustness_completion_english_capitalization/acc ▁
+wandb:                        tokenizer_robustness_completion_english_capitalization/acc_norm ▁
+wandb:                 tokenizer_robustness_completion_english_capitalization/acc_norm_stderr ▁
+wandb:                      tokenizer_robustness_completion_english_capitalization/acc_stderr ▁
+wandb:                         tokenizer_robustness_completion_english_character_deletion/acc ▁
+wandb:                    tokenizer_robustness_completion_english_character_deletion/acc_norm ▁
+wandb:             tokenizer_robustness_completion_english_character_deletion/acc_norm_stderr ▁
+wandb:                  tokenizer_robustness_completion_english_character_deletion/acc_stderr ▁
+wandb:                     tokenizer_robustness_completion_english_character_substitution/acc ▁
+wandb:                tokenizer_robustness_completion_english_character_substitution/acc_norm ▁
+wandb:         tokenizer_robustness_completion_english_character_substitution/acc_norm_stderr ▁
+wandb:              tokenizer_robustness_completion_english_character_substitution/acc_stderr ▁
+wandb:                                 tokenizer_robustness_completion_english_colloquial/acc ▁
+wandb:                            tokenizer_robustness_completion_english_colloquial/acc_norm ▁
+wandb:                     tokenizer_robustness_completion_english_colloquial/acc_norm_stderr ▁
+wandb:                          tokenizer_robustness_completion_english_colloquial/acc_stderr ▁
+wandb:                       tokenizer_robustness_completion_english_combining_diacritics/acc ▁
+wandb:                  tokenizer_robustness_completion_english_combining_diacritics/acc_norm ▁
+wandb:           tokenizer_robustness_completion_english_combining_diacritics/acc_norm_stderr ▁
+wandb:                tokenizer_robustness_completion_english_combining_diacritics/acc_stderr ▁
+wandb:                                  tokenizer_robustness_completion_english_compounds/acc ▁
+wandb:                             tokenizer_robustness_completion_english_compounds/acc_norm ▁
+wandb:                      tokenizer_robustness_completion_english_compounds/acc_norm_stderr ▁
+wandb:                           tokenizer_robustness_completion_english_compounds/acc_stderr ▁
+wandb:                               tokenizer_robustness_completion_english_contractions/acc ▁
+wandb:                          tokenizer_robustness_completion_english_contractions/acc_norm ▁
+wandb:                   tokenizer_robustness_completion_english_contractions/acc_norm_stderr ▁
+wandb:                        tokenizer_robustness_completion_english_contractions/acc_stderr ▁
+wandb:                               tokenizer_robustness_completion_english_date_formats/acc ▁
+wandb:                          tokenizer_robustness_completion_english_date_formats/acc_norm ▁
+wandb:                   tokenizer_robustness_completion_english_date_formats/acc_norm_stderr ▁
+wandb:                        tokenizer_robustness_completion_english_date_formats/acc_stderr ▁
+wandb:                    tokenizer_robustness_completion_english_deliberate_misspellings/acc ▁
+wandb:               tokenizer_robustness_completion_english_deliberate_misspellings/acc_norm ▁
+wandb:        tokenizer_robustness_completion_english_deliberate_misspellings/acc_norm_stderr ▁
+wandb:             tokenizer_robustness_completion_english_deliberate_misspellings/acc_stderr ▁
+wandb:                         tokenizer_robustness_completion_english_emoji_substitution/acc ▁
+wandb:                    tokenizer_robustness_completion_english_emoji_substitution/acc_norm ▁
+wandb:             tokenizer_robustness_completion_english_emoji_substitution/acc_norm_stderr ▁
+wandb:                  tokenizer_robustness_completion_english_emoji_substitution/acc_stderr ▁
+wandb:                         tokenizer_robustness_completion_english_grammatical_errors/acc ▁
+wandb:                    tokenizer_robustness_completion_english_grammatical_errors/acc_norm ▁
+wandb:             tokenizer_robustness_completion_english_grammatical_errors/acc_norm_stderr ▁
+wandb:                  tokenizer_robustness_completion_english_grammatical_errors/acc_stderr ▁
+wandb:                        tokenizer_robustness_completion_english_historical_spelling/acc ▁
+wandb:                   tokenizer_robustness_completion_english_historical_spelling/acc_norm ▁
+wandb:            tokenizer_robustness_completion_english_historical_spelling/acc_norm_stderr ▁
+wandb:                 tokenizer_robustness_completion_english_historical_spelling/acc_stderr ▁
+wandb:                                 tokenizer_robustness_completion_english_homoglyphs/acc ▁
+wandb:                            tokenizer_robustness_completion_english_homoglyphs/acc_norm ▁
+wandb:                     tokenizer_robustness_completion_english_homoglyphs/acc_norm_stderr ▁
+wandb:                          tokenizer_robustness_completion_english_homoglyphs/acc_stderr ▁
+wandb:                                tokenizer_robustness_completion_english_inflections/acc ▁
+wandb:                           tokenizer_robustness_completion_english_inflections/acc_norm ▁
+wandb:                    tokenizer_robustness_completion_english_inflections/acc_norm_stderr ▁
+wandb:                         tokenizer_robustness_completion_english_inflections/acc_stderr ▁
+wandb:                  tokenizer_robustness_completion_english_keyboard_proximity_errors/acc ▁
+wandb:             tokenizer_robustness_completion_english_keyboard_proximity_errors/acc_norm ▁
+wandb:      tokenizer_robustness_completion_english_keyboard_proximity_errors/acc_norm_stderr ▁
+wandb:           tokenizer_robustness_completion_english_keyboard_proximity_errors/acc_stderr ▁
+wandb:             tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc ▁
+wandb:        tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc_norm ▁
+wandb: tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc_norm_stderr ▁
+wandb:      tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc_stderr ▁
+wandb:                          tokenizer_robustness_completion_english_numerical_formats/acc ▁
+wandb:                     tokenizer_robustness_completion_english_numerical_formats/acc_norm ▁
+wandb:              tokenizer_robustness_completion_english_numerical_formats/acc_norm_stderr ▁
+wandb:                   tokenizer_robustness_completion_english_numerical_formats/acc_stderr ▁
+wandb:                                 tokenizer_robustness_completion_english_ocr_errors/acc ▁
+wandb:                            tokenizer_robustness_completion_english_ocr_errors/acc_norm ▁
+wandb:                     tokenizer_robustness_completion_english_ocr_errors/acc_norm_stderr ▁
+wandb:                          tokenizer_robustness_completion_english_ocr_errors/acc_stderr ▁
+wandb:               tokenizer_robustness_completion_english_regional_spelling_variations/acc ▁
+wandb:          tokenizer_robustness_completion_english_regional_spelling_variations/acc_norm ▁
+wandb:   tokenizer_robustness_completion_english_regional_spelling_variations/acc_norm_stderr ▁
+wandb:        tokenizer_robustness_completion_english_regional_spelling_variations/acc_stderr ▁
+wandb:                                     tokenizer_robustness_completion_english_script/acc ▁
+wandb:                                tokenizer_robustness_completion_english_script/acc_norm ▁
+wandb:                         tokenizer_robustness_completion_english_script/acc_norm_stderr ▁
+wandb:                              tokenizer_robustness_completion_english_script/acc_stderr ▁
+wandb:                              tokenizer_robustness_completion_english_similar_words/acc ▁
+wandb:                         tokenizer_robustness_completion_english_similar_words/acc_norm ▁
+wandb:                  tokenizer_robustness_completion_english_similar_words/acc_norm_stderr ▁
+wandb:                       tokenizer_robustness_completion_english_similar_words/acc_stderr ▁
+wandb:                            tokenizer_robustness_completion_english_space_additions/acc ▁
+wandb:                       tokenizer_robustness_completion_english_space_additions/acc_norm ▁
+wandb:                              tokenizer_robustness_completion_english_space_removal/acc ▁
+wandb:                         tokenizer_robustness_completion_english_space_removal/acc_norm ▁
+wandb:                  tokenizer_robustness_completion_english_space_removal/acc_norm_stderr ▁
+wandb:                       tokenizer_robustness_completion_english_space_removal/acc_stderr ▁
+wandb:                                tokenizer_robustness_completion_english_spelled_out/acc ▁
+wandb:                           tokenizer_robustness_completion_english_spelled_out/acc_norm ▁
+wandb:                    tokenizer_robustness_completion_english_spelled_out/acc_norm_stderr ▁
+wandb:                         tokenizer_robustness_completion_english_spelled_out/acc_stderr ▁
+wandb:                      tokenizer_robustness_completion_english_superscript_subscript/acc ▁
+wandb:                 tokenizer_robustness_completion_english_superscript_subscript/acc_norm ▁
+wandb:          tokenizer_robustness_completion_english_superscript_subscript/acc_norm_stderr ▁
+wandb:               tokenizer_robustness_completion_english_superscript_subscript/acc_stderr ▁
+wandb:                           tokenizer_robustness_completion_english_web_search_query/acc ▁
+wandb:                      tokenizer_robustness_completion_english_web_search_query/acc_norm ▁
+wandb:               tokenizer_robustness_completion_english_web_search_query/acc_norm_stderr ▁
+wandb:                    tokenizer_robustness_completion_english_web_search_query/acc_stderr ▁
+wandb:                                tokenizer_robustness_completion_english_wiki-jargon/acc ▁
+wandb:                           tokenizer_robustness_completion_english_wiki-jargon/acc_norm ▁
+wandb:                    tokenizer_robustness_completion_english_wiki-jargon/acc_norm_stderr ▁
+wandb:                         tokenizer_robustness_completion_english_wiki-jargon/acc_stderr ▁
+wandb:                            tokenizer_robustness_completion_english_word_reordering/acc ▁
+wandb:                       tokenizer_robustness_completion_english_word_reordering/acc_norm ▁
+wandb:                tokenizer_robustness_completion_english_word_reordering/acc_norm_stderr ▁
+wandb:                     tokenizer_robustness_completion_english_word_reordering/acc_stderr ▁
+wandb: 
+wandb: Run summary:
+wandb:                                            tokenizer_robustness_completion_english/acc 0.68698
+wandb:                                       tokenizer_robustness_completion_english/acc_norm 0.70175
+wandb:                                tokenizer_robustness_completion_english/acc_norm_stderr N/A
+wandb:                                     tokenizer_robustness_completion_english/acc_stderr N/A
+wandb:                                          tokenizer_robustness_completion_english/alias tokenizer_robustness...
+wandb:                              tokenizer_robustness_completion_english_abbreviations/acc 0.80556
+wandb:                         tokenizer_robustness_completion_english_abbreviations/acc_norm 0.66667
+wandb:                  tokenizer_robustness_completion_english_abbreviations/acc_norm_stderr 0.07968
+wandb:                       tokenizer_robustness_completion_english_abbreviations/acc_stderr 0.0669
+wandb:                            tokenizer_robustness_completion_english_abbreviations/alias  - tokenizer_robustn...
+wandb:                          tokenizer_robustness_completion_english_additional_spaces/acc 0.28205
+wandb:                     tokenizer_robustness_completion_english_additional_spaces/acc_norm 0.35897
+wandb:              tokenizer_robustness_completion_english_additional_spaces/acc_norm_stderr 0.07782
+wandb:                   tokenizer_robustness_completion_english_additional_spaces/acc_stderr 0.073
+wandb:                        tokenizer_robustness_completion_english_additional_spaces/alias  - tokenizer_robustn...
+wandb:                                  tokenizer_robustness_completion_english_borrowing/acc 0.7
+wandb:                             tokenizer_robustness_completion_english_borrowing/acc_norm 0.7
+wandb:                      tokenizer_robustness_completion_english_borrowing/acc_norm_stderr 0.15275
+wandb:                           tokenizer_robustness_completion_english_borrowing/acc_stderr 0.15275
+wandb:                                tokenizer_robustness_completion_english_borrowing/alias  - tokenizer_robustn...
+wandb:                                 tokenizer_robustness_completion_english_cannonical/acc 0.95
+wandb:                            tokenizer_robustness_completion_english_cannonical/acc_norm 0.95
+wandb:                     tokenizer_robustness_completion_english_cannonical/acc_norm_stderr 0.0349
+wandb:                          tokenizer_robustness_completion_english_cannonical/acc_stderr 0.0349
+wandb:                               tokenizer_robustness_completion_english_cannonical/alias  - tokenizer_robustn...
+wandb:                             tokenizer_robustness_completion_english_capitalization/acc 0.79221
+wandb:                        tokenizer_robustness_completion_english_capitalization/acc_norm 0.84416
+wandb:                 tokenizer_robustness_completion_english_capitalization/acc_norm_stderr 0.04161
+wandb:                      tokenizer_robustness_completion_english_capitalization/acc_stderr 0.04654
+wandb:                           tokenizer_robustness_completion_english_capitalization/alias  - tokenizer_robustn...
+wandb:                         tokenizer_robustness_completion_english_character_deletion/acc 0.825
+wandb:                    tokenizer_robustness_completion_english_character_deletion/acc_norm 0.825
+wandb:             tokenizer_robustness_completion_english_character_deletion/acc_norm_stderr 0.06084
+wandb:                  tokenizer_robustness_completion_english_character_deletion/acc_stderr 0.06084
+wandb:                       tokenizer_robustness_completion_english_character_deletion/alias  - tokenizer_robustn...
+wandb:                     tokenizer_robustness_completion_english_character_substitution/acc 0.78571
+wandb:                tokenizer_robustness_completion_english_character_substitution/acc_norm 0.71429
+wandb:         tokenizer_robustness_completion_english_character_substitution/acc_norm_stderr 0.07055
+wandb:              tokenizer_robustness_completion_english_character_substitution/acc_stderr 0.06408
+wandb:                   tokenizer_robustness_completion_english_character_substitution/alias  - tokenizer_robustn...
+wandb:                                 tokenizer_robustness_completion_english_colloquial/acc 0.60976
+wandb:                            tokenizer_robustness_completion_english_colloquial/acc_norm 0.60976
+wandb:                     tokenizer_robustness_completion_english_colloquial/acc_norm_stderr 0.07713
+wandb:                          tokenizer_robustness_completion_english_colloquial/acc_stderr 0.07713
+wandb:                               tokenizer_robustness_completion_english_colloquial/alias  - tokenizer_robustn...
+wandb:                       tokenizer_robustness_completion_english_combining_diacritics/acc 0.275
+wandb:                  tokenizer_robustness_completion_english_combining_diacritics/acc_norm 0.4
+wandb:           tokenizer_robustness_completion_english_combining_diacritics/acc_norm_stderr 0.07845
+wandb:                tokenizer_robustness_completion_english_combining_diacritics/acc_stderr 0.0715
+wandb:                     tokenizer_robustness_completion_english_combining_diacritics/alias  - tokenizer_robustn...
+wandb:                                  tokenizer_robustness_completion_english_compounds/acc 1
+wandb:                             tokenizer_robustness_completion_english_compounds/acc_norm 1
+wandb:                      tokenizer_robustness_completion_english_compounds/acc_norm_stderr 0
+wandb:                           tokenizer_robustness_completion_english_compounds/acc_stderr 0
+wandb:                                tokenizer_robustness_completion_english_compounds/alias  - tokenizer_robustn...
+wandb:                               tokenizer_robustness_completion_english_contractions/acc 1
+wandb:                          tokenizer_robustness_completion_english_contractions/acc_norm 1
+wandb:                   tokenizer_robustness_completion_english_contractions/acc_norm_stderr 0
+wandb:                        tokenizer_robustness_completion_english_contractions/acc_stderr 0
+wandb:                             tokenizer_robustness_completion_english_contractions/alias  - tokenizer_robustn...
+wandb:                               tokenizer_robustness_completion_english_date_formats/acc 0.88235
+wandb:                          tokenizer_robustness_completion_english_date_formats/acc_norm 0.88235
+wandb:                   tokenizer_robustness_completion_english_date_formats/acc_norm_stderr 0.08055
+wandb:                        tokenizer_robustness_completion_english_date_formats/acc_stderr 0.08055
+wandb:                             tokenizer_robustness_completion_english_date_formats/alias  - tokenizer_robustn...
+wandb:                    tokenizer_robustness_completion_english_deliberate_misspellings/acc 0.78571
+wandb:               tokenizer_robustness_completion_english_deliberate_misspellings/acc_norm 0.7381
+wandb:        tokenizer_robustness_completion_english_deliberate_misspellings/acc_norm_stderr 0.06867
+wandb:             tokenizer_robustness_completion_english_deliberate_misspellings/acc_stderr 0.06408
+wandb:                  tokenizer_robustness_completion_english_deliberate_misspellings/alias  - tokenizer_robustn...
+wandb:                         tokenizer_robustness_completion_english_emoji_substitution/acc 0.65957
+wandb:                    tokenizer_robustness_completion_english_emoji_substitution/acc_norm 0.70213
+wandb:             tokenizer_robustness_completion_english_emoji_substitution/acc_norm_stderr 0.06743
+wandb:                  tokenizer_robustness_completion_english_emoji_substitution/acc_stderr 0.06987
+wandb:                       tokenizer_robustness_completion_english_emoji_substitution/alias  - tokenizer_robustn...
+wandb:                         tokenizer_robustness_completion_english_grammatical_errors/acc 0.925
+wandb:                    tokenizer_robustness_completion_english_grammatical_errors/acc_norm 0.9
+wandb:             tokenizer_robustness_completion_english_grammatical_errors/acc_norm_stderr 0.04804
+wandb:                  tokenizer_robustness_completion_english_grammatical_errors/acc_stderr 0.04218
+wandb:                       tokenizer_robustness_completion_english_grammatical_errors/alias  - tokenizer_robustn...
+wandb:                        tokenizer_robustness_completion_english_historical_spelling/acc 0.68293
+wandb:                   tokenizer_robustness_completion_english_historical_spelling/acc_norm 0.73171
+wandb:            tokenizer_robustness_completion_english_historical_spelling/acc_norm_stderr 0.07006
+wandb:                 tokenizer_robustness_completion_english_historical_spelling/acc_stderr 0.07358
+wandb:                      tokenizer_robustness_completion_english_historical_spelling/alias  - tokenizer_robustn...
+wandb:                                 tokenizer_robustness_completion_english_homoglyphs/acc 0.71795
+wandb:                            tokenizer_robustness_completion_english_homoglyphs/acc_norm 0.66667
+wandb:                     tokenizer_robustness_completion_english_homoglyphs/acc_norm_stderr 0.07647
+wandb:                          tokenizer_robustness_completion_english_homoglyphs/acc_stderr 0.073
+wandb:                               tokenizer_robustness_completion_english_homoglyphs/alias  - tokenizer_robustn...
+wandb:                                tokenizer_robustness_completion_english_inflections/acc 0.85714
+wandb:                           tokenizer_robustness_completion_english_inflections/acc_norm 0.78571
+wandb:                    tokenizer_robustness_completion_english_inflections/acc_norm_stderr 0.1138
+wandb:                         tokenizer_robustness_completion_english_inflections/acc_stderr 0.09705
+wandb:                              tokenizer_robustness_completion_english_inflections/alias  - tokenizer_robustn...
+wandb:                  tokenizer_robustness_completion_english_keyboard_proximity_errors/acc 0.7907
+wandb:             tokenizer_robustness_completion_english_keyboard_proximity_errors/acc_norm 0.72093
+wandb:      tokenizer_robustness_completion_english_keyboard_proximity_errors/acc_norm_stderr 0.06921
+wandb:           tokenizer_robustness_completion_english_keyboard_proximity_errors/acc_stderr 0.06277
+wandb:                tokenizer_robustness_completion_english_keyboard_proximity_errors/alias  - tokenizer_robustn...
+wandb:             tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc 0.73171
+wandb:        tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc_norm 0.78049
+wandb: tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc_norm_stderr 0.06545
+wandb:      tokenizer_robustness_completion_english_letter_repetition_for_emphasis/acc_stderr 0.07006
+wandb:           tokenizer_robustness_completion_english_letter_repetition_for_emphasis/alias  - tokenizer_robustn...
+wandb:                          tokenizer_robustness_completion_english_numerical_formats/acc 1
+wandb:                     tokenizer_robustness_completion_english_numerical_formats/acc_norm 1
+wandb:              tokenizer_robustness_completion_english_numerical_formats/acc_norm_stderr 0
+wandb:                   tokenizer_robustness_completion_english_numerical_formats/acc_stderr 0
+wandb:                        tokenizer_robustness_completion_english_numerical_formats/alias  - tokenizer_robustn...
+wandb:                                 tokenizer_robustness_completion_english_ocr_errors/acc 0.85714
+wandb:                            tokenizer_robustness_completion_english_ocr_errors/acc_norm 0.78571
+wandb:                     tokenizer_robustness_completion_english_ocr_errors/acc_norm_stderr 0.06408
+wandb:                          tokenizer_robustness_completion_english_ocr_errors/acc_stderr 0.05465
+wandb:                               tokenizer_robustness_completion_english_ocr_errors/alias  - tokenizer_robustn...
+wandb:               tokenizer_robustness_completion_english_regional_spelling_variations/acc 1
+wandb:          tokenizer_robustness_completion_english_regional_spelling_variations/acc_norm 0.93333
+wandb:   tokenizer_robustness_completion_english_regional_spelling_variations/acc_norm_stderr 0.06667
+wandb:        tokenizer_robustness_completion_english_regional_spelling_variations/acc_stderr 0
+wandb:             tokenizer_robustness_completion_english_regional_spelling_variations/alias  - tokenizer_robustn...
+wandb:                                     tokenizer_robustness_completion_english_script/acc 0.275
+wandb:                                tokenizer_robustness_completion_english_script/acc_norm 0.4
+wandb:                         tokenizer_robustness_completion_english_script/acc_norm_stderr 0.07845
+wandb:                              tokenizer_robustness_completion_english_script/acc_stderr 0.0715
+wandb:                                   tokenizer_robustness_completion_english_script/alias  - tokenizer_robustn...
+wandb:                              tokenizer_robustness_completion_english_similar_words/acc 0.83333
+wandb:                         tokenizer_robustness_completion_english_similar_words/acc_norm 0.75
+wandb:                  tokenizer_robustness_completion_english_similar_words/acc_norm_stderr 0.13056
+wandb:                       tokenizer_robustness_completion_english_similar_words/acc_stderr 0.11237
+wandb:                            tokenizer_robustness_completion_english_similar_words/alias  - tokenizer_robustn...
+wandb:                            tokenizer_robustness_completion_english_space_additions/acc 0
+wandb:                       tokenizer_robustness_completion_english_space_additions/acc_norm 0
+wandb:                tokenizer_robustness_completion_english_space_additions/acc_norm_stderr N/A
+wandb:                     tokenizer_robustness_completion_english_space_additions/acc_stderr N/A
+wandb:                          tokenizer_robustness_completion_english_space_additions/alias  - tokenizer_robustn...
+wandb:                              tokenizer_robustness_completion_english_space_removal/acc 0.625
+wandb:                         tokenizer_robustness_completion_english_space_removal/acc_norm 0.725
+wandb:                  tokenizer_robustness_completion_english_space_removal/acc_norm_stderr 0.0715
+wandb:                       tokenizer_robustness_completion_english_space_removal/acc_stderr 0.07752
+wandb:                            tokenizer_robustness_completion_english_space_removal/alias  - tokenizer_robustn...
+wandb:                                tokenizer_robustness_completion_english_spelled_out/acc 0.30769
+wandb:                           tokenizer_robustness_completion_english_spelled_out/acc_norm 0.40385
+wandb:                    tokenizer_robustness_completion_english_spelled_out/acc_norm_stderr 0.06871
+wandb:                         tokenizer_robustness_completion_english_spelled_out/acc_stderr 0.06463
+wandb:                              tokenizer_robustness_completion_english_spelled_out/alias  - tokenizer_robustn...
+wandb:                      tokenizer_robustness_completion_english_superscript_subscript/acc 0.3
+wandb:                 tokenizer_robustness_completion_english_superscript_subscript/acc_norm 0.375
+wandb:          tokenizer_robustness_completion_english_superscript_subscript/acc_norm_stderr 0.07752
+wandb:               tokenizer_robustness_completion_english_superscript_subscript/acc_stderr 0.07338
+wandb:                    tokenizer_robustness_completion_english_superscript_subscript/alias  - tokenizer_robustn...
+wandb:                           tokenizer_robustness_completion_english_web_search_query/acc 0.37838
+wandb:                      tokenizer_robustness_completion_english_web_search_query/acc_norm 0.48649
+wandb:               tokenizer_robustness_completion_english_web_search_query/acc_norm_stderr 0.0833
+wandb:                    tokenizer_robustness_completion_english_web_search_query/acc_stderr 0.08083
+wandb:                         tokenizer_robustness_completion_english_web_search_query/alias  - tokenizer_robustn...
+wandb:                                tokenizer_robustness_completion_english_wiki-jargon/acc 0.94444
+wandb:                           tokenizer_robustness_completion_english_wiki-jargon/acc_norm 0.94444
+wandb:                    tokenizer_robustness_completion_english_wiki-jargon/acc_norm_stderr 0.03146
+wandb:                         tokenizer_robustness_completion_english_wiki-jargon/acc_stderr 0.03146
+wandb:                              tokenizer_robustness_completion_english_wiki-jargon/alias  - tokenizer_robustn...
+wandb:                            tokenizer_robustness_completion_english_word_reordering/acc 0.925
+wandb:                       tokenizer_robustness_completion_english_word_reordering/acc_norm 0.9
+wandb:                tokenizer_robustness_completion_english_word_reordering/acc_norm_stderr 0.04804
+wandb:                     tokenizer_robustness_completion_english_word_reordering/acc_stderr 0.04218
+wandb:                          tokenizer_robustness_completion_english_word_reordering/alias  - tokenizer_robustn...
+wandb: 
+wandb: 🚀 View run mistralai-tekken-1757961613 at: https://wandb.ai/raffel-reports/tokenizer_robustness_completion_english/runs/vq2yxsum
+wandb: ⭐️ View project at: https://wandb.ai/raffel-reports/tokenizer_robustness_completion_english
+wandb: Synced 6 W&B file(s), 34 media file(s), 134 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250915_153739-vq2yxsum/logs
