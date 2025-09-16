@@ -10,14 +10,14 @@ from .plot_utils import TASK_TO_PLOT_MAPPING
 
 MODEL_PRETTY_NAMES = {
     "common-pile-comma-v0.1": "Comma",
-    "meta-llama-Llama-3.2-1B": "LLaMA",
+    "meta-llama-Llama-3.2-1B": "Llama-3.2",
     "microsoft-Phi-3-mini-4k-instruct": "Phi-3",
     "gpt2": "GPT-2",
-    "bigscience-bloom": "Bloom",
+    "bigscience-bloom": "BLOON",
     "facebook-xglm-564M": "XGLM",
     "mistralai-tekken": "Tekken",
     "google-byt5-small": "ByT5",
-    "google-bert-bert-base-multilingual-cased": "MBERT",
+    "google-bert-bert-base-multilingual-cased": "mBERT",
     "Qwen-Qwen3-8B": "Qwen-3",
     "tokenmonster-englishcode-32000-consistent-v1": "TokenMonster",
     "tiktoken-gpt-4o": "GPT-4o",
@@ -195,12 +195,12 @@ def load_all_samples(
     if flatten_doc:
         df2 = pd.json_normalize(samples["doc"], max_level=1)
         samples = pd.concat([samples, df2], axis=1).drop(columns=["doc"])
-        samples["answer_choice"] = samples.apply(
-            lambda x: x["choices"][x["target"]]
-            if isinstance(x["target"], int) and (isinstance(x["choices"], list))
-            else None,
-            axis=1,
-        )
+        # samples["answer_choice"] = samples.apply(
+        #     lambda x: x["choices"][x["target"]]
+        #     if isinstance(x["target"], int) and (isinstance(x["choices"], list))
+        #     else None,
+        #     axis=1,
+        # )
     # samples["task"] = samples["dataset"].apply(lambda x: TASK_TO_PLOT_MAPPING.get(x, x))
     if simplify_df:
         samples = samples.drop(

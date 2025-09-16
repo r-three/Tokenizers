@@ -327,15 +327,15 @@ MODEL_TO_COLOR = {
 
 MODEL_TO_COLOR = {
     "Comma": MODEL_FAMILY_COLORS["comma"],
-    "LLaMA": MODEL_FAMILY_COLORS["llama"],
+    "Llama-3.2": MODEL_FAMILY_COLORS["llama"],
     "Phi-3": MODEL_FAMILY_COLORS["phi"],
     "GPT-2": MODEL_FAMILY_COLORS["gpt2"],
     "GPT-4o": MODEL_FAMILY_COLORS["gpt-4o"],
-    "Bloom": MODEL_FAMILY_COLORS["bloom"],
+    "BLOOM": MODEL_FAMILY_COLORS["bloom"],
     "XGLM": MODEL_FAMILY_COLORS["xglm"],
     "Tekken": MODEL_FAMILY_COLORS["mistral"],
     "ByT5": MODEL_FAMILY_COLORS["byt5"],
-    "MBERT": MODEL_FAMILY_COLORS["mbert"],
+    "mBERT": MODEL_FAMILY_COLORS["mbert"],
     "Qwen-3": MODEL_FAMILY_COLORS["qwen"],
     "TokenMonster": MODEL_FAMILY_COLORS["tokenmonster"],
     "Gemma-2": MODEL_FAMILY_COLORS["gemma"],
