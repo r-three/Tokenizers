@@ -41,69 +41,55 @@ random.seed(42)  # Set the seed to a fixed value
 ALIGNED_BOS = "~SPECIAL~ALIGNED~BOS~SYMBOL~"
 
 TOKENIZER_NAMES =  {
-    "BERT multilingual base model (cased)": "google-bert/bert-base-multilingual-cased",
-    "BERT base model (uncased)": "google-bert/bert-base-uncased",
-    "T5": "google-t5/t5-base",
-    "mT5": "google/mt5-base",
-    "XGLM-564M" : "facebook/xglm-564M",
-    "Gemma 2": "google/gemma-2-2b",
-    "Phi-3-Mini-4K-Instruct": "microsoft/Phi-3-mini-4k-instruct",
-    "Mistral v3": "mistralai/Mistral-7B-Instruct-v0.3",
-    "TokenMonster": "tokenmonster/english-32000-balanced-v1",
-    "ByT5 - Small": "google/byt5-small",
-    "BLOOM": "bigscience/bloom",
+    "Comma": "common-pile/comma-v0.1",
+    "Llama-3.2" : "meta-llama/Llama-3.2-1B",
+    "Phi-3": "microsoft/Phi-3-mini-4k-instruct",
     "GPT-2": "gpt2",
-    "GPT-4 Tiktoken": "tiktoken/gpt-4",
-    "GPT-4o Tiktoken": "tiktoken/gpt-4o",
-    "Mistral v3 (tekken)": "mistralai/tekken", #Use this link to call it: https://docs.mistral.ai/guides/tokenization/
-    "Llama-3.2 1B " : "meta-llama/Llama-3.2-1B",
-    "Qwen3-8B": "Qwen/Qwen3-8B",
-    "Aya Expanse 8B": "CohereLabs/aya-expanse-8b",
-    "Common Pile v1.0": "common-pile/comma-v0.1",
+    "GPT-4o": "tiktoken/gpt-4o",
+    "BLOOM": "bigscience/bloom",
+    "XGLM" : "facebook/xglm-564M",
+    "Tekken": "mistralai/tekken",
+    "ByT5": "google/byt5-small",
+    "mBERT": "google-bert/bert-base-multilingual-cased",
+    "Qwen-3": "Qwen/Qwen3-8B",
+    "TokenMonster": "tokenmonster/english-32000-consistent-v1",
+    "Gemma-2": "google/gemma-2-2b",
+    "Aya": "CohereLabs/aya-expanse-8b"
 }
 
 TOKENIZER_TYPES =  {
-    "BERT multilingual base model (cased)": "WordPiece",
-    "BERT base model (uncased)": "WordPiece",
-    "T5": "SentencePiece_Unigram",
-    "mT5": "SentencePiece_Unigram",
-    "XGLM-564M" : "SentencePiece_Unigram",
-    "Gemma 2": "BPE", # BPE in HF but Originally SentencePiece_Unigram
-    "Phi-3-Mini-4K-Instruct": "SentencePiece_BPE",
-    "Mistral v3": "SentencePiece_BPE",
+    "Comma": "BPE",
+    "mBERT": "WordPiece",
+    "XGLM" : "SentencePiece_Unigram",
+    "Gemma-2": "BPE", # BPE in HF but Originally SentencePiece_Unigram
+    "Phi-3": "SentencePiece_BPE",
     "TokenMonster": "",
-    "ByT5 - Small": "byte-level",
+    "ByT5": "byte-level",
     "BLOOM": "BPE",
     "GPT-2": "BPE",
-    "GPT-4 Tiktoken": "BPE",
-    "GPT-4o Tiktoken": "BPE",
-    "Mistral v3 (tekken)": "BPE", #Use this link to call it: https://docs.mistral.ai/guides/tokenization/
-    "Llama-3.2 1B " : "BPE",
-    "Qwen3-8B": "BPE",
-    "Aya Expanse 8B": "SentencePiece",
-    "Common Pile v1.0": "BPE",
+    "GPT-4o": "BPE",
+    "Tekken": "BPE", #Use this link to call it: https://docs.mistral.ai/guides/tokenization/
+    "Llama-3.2" : "BPE",
+    "Qwen-3": "BPE",
+    "Aya": "SentencePiece"
 }
 
 TOKENIZER_N_SPECIAL_TOKENS_PER_WORD =  {
-    "BERT multilingual base model (cased)": 2, # Example: ['[CLS]', 'Families', '[SEP]']
-    "BERT base model (uncased)": 2, # Example: ['[CLS]', 'families', '[SEP]']
-    "T5": 1, # Example: ['▁Familie', 's', '</s>']
-    "mT5": 1, # Example: ['▁Familie', 's', '</s>']
-    "XGLM-564M" : 1, # Example: ['▁Familie', 's', '</s>']
-    "Gemma 2": 1, # Example: ['<bos>', 'Families']
-    "Phi-3-Mini-4K-Instruct": 0, # Example: ['▁Famil', 'ies']
-    "Mistral v3": 1, # Example: ['<s>', '▁Famil', 'ies']
+    "Comma": 0, # Example: ['F', 'amil', 'ies']
+    "mBERT": 2, # Example: ['[CLS]', 'Families', '[SEP]']
+    "XGLM" : 1, # Example: ['▁Familie', 's', '</s>']
+    "Gemma-2": 1, # Example: ['<bos>', 'Families']
+    "Phi-3": 0, # Example: ['▁Famil', 'ies']
     "TokenMonster": 0, # Example: [np.uint16(586), np.uint16(17496)]
-    "ByT5 - Small": 1, # Example: [73, 100, 112, 108, 111, 108, 104, 118, 1]
+    "ByT5": 1, # Example: [73, 100, 112, 108, 111, 108, 104, 118, 1]
     "BLOOM": 0, # Example: ['Famil', 'ies']
     "GPT-2": 0, # Example: ['F', 'am', 'ilies']
-    "GPT-4 Tiktoken": 0, # Example: [37, 60004]
-    "GPT-4o Tiktoken": 0, # Example: [139342]
-    "Mistral v3 (tekken)": 0, # Example: [109925, 1564]
-    "Llama-3.2 1B " : 1, # Example: ['<|begin_of_text|>', 'F', 'amilies']
-    "Qwen3-8B": 0, # Example: ['F', 'amilies']
-    "Aya Expanse 8B": 1, # Example: ['<BOS_TOKEN>', 'Families']
-    "Common Pile v1.0": 0, # Example: ['F', 'amil', 'ies']
+    "GPT-4o": 0, # Example: [139342]
+    "Tekken": 0, # Example: [109925, 1564]
+    "Llama-3.2" : 1, # Example: ['<|begin_of_text|>', 'F', 'amilies']
+    "Qwen-3": 0, # Example: ['F', 'amilies']
+    "Aya": 1 # Example: ['<BOS_TOKEN>', 'Families']
+
 }
 
 LANGUAGE_KEYS = {'sentence_eng_Latn': "eng_Latn", #english
@@ -432,10 +418,21 @@ class MistralTokenizer(Tokenizer):
 
     @classmethod
     def load(cls, name):
-        from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
-        tok = MistralTokenizer.v3(is_tekken=True)
-        tok = tok.instruct_tokenizer.tokenizer
-        return cls(name, tok)
+        print(f"Loading MistralTokenizer for: {name}")
+        try:
+            from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
+            print("Import successful")
+            
+            tok = MistralTokenizer.v3(is_tekken=True)
+            print("Tokenizer created")
+            
+            tok = tok.instruct_tokenizer.tokenizer
+            print("Instruct tokenizer extracted")
+            
+            return cls(name, tok)
+        except Exception as e:
+            print(f"Error in MistralTokenizer.load: {e}")
+            raise
 
 
 def plot_tokenizer_vocab_overlap_symmetric(tokenizer_names):
