@@ -6,6 +6,9 @@ source /home/ehghaghi/projects/aip-craffel/ehghaghi/Tokenizers/.venv/bin/activat
 
 
 export HUGGINGFACE_HUB_CACHE=$SCRATCH/.cache
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export HF_DATASETS_OFFLINE=1
 
 # pip install datasets==3.6.0
 # pip install tokenmonster==1.1.12
@@ -21,7 +24,7 @@ PYTHON_SCRIPT="$SCRIPT_DIR/calculate_intrinsic_tokenizer_metrics.py"
 DEFAULT_SAMPLE_SIZE=10000
 
 # Default tokenizers (comma-separated)
-TOKENIZERS=TOKENIZERS="BERT multilingual base model (cased),BERT base model (uncased),T5,mT5,XGLM-564M,Gemma 2,Phi-3-Mini-4K-Instruct,Mistral v3,TokenMonster,ByT5 - Small,BLOOM,GPT-2,GPT-4 Tiktoken,GPT-4o Tiktoken,Mistral v3 (tekken),Llama-3.2 1B,Qwen3-8B,Aya Expanse 8B,Common Pile v1.0"
+TOKENIZERS="Comma,Llama-3.2,Phi-3,GPT-2,GPT-4o,BLOOM,XGLM,Tekken,ByT5,mBERT,Qwen-3,TokenMonster,Gemma-2,Aya"
 
 # Default languages (comma-separated) 
 LANGUAGES="sentence_eng_Latn,sentence_zho_Hans,sentence_tur_Latn,sentence_pes_Arab,sentence_ita_Latn"
