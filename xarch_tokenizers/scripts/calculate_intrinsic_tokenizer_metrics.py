@@ -471,6 +471,7 @@ def plot_tokenizer_vocab_overlap_symmetric(tokenizer_names):
 
     # Create DataFrame with clean names
     vocab_overlap_ratio_df = pd.DataFrame(ratio_matrix, index=clean_names, columns=clean_names)
+    vocab_overlap_ratio_df.to_csv("symmetric_vocab_overlap.csv")
 
     # Print high precision overlap matrix
     print("\n" + "="*80)
@@ -582,6 +583,7 @@ def plot_tokenizer_vocab_overlap_asymmetric(tokenizer_names):
 
     # Create DataFrame with clean names
     vocab_overlap_ratio_df = pd.DataFrame(ratio_matrix, index=clean_names, columns=clean_names)
+    vocab_overlap_ratio_df.to_csv("asymmetric_vocab_overlap.csv")
     
     # Find and print interesting statistics
     max_coverage = 0
