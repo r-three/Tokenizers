@@ -1,0 +1,179 @@
+wandb: Currently logged in as: gsaltintas to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /home/gsa/tokenizers/wandb/run-20250916_002631-486viqrp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run microsoft-Phi-3-mini-4k-instruct-1757996060
+wandb: ⭐️ View project at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_chinese
+wandb: 🚀 View run at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_chinese/runs/486viqrp
+2025-09-16:00:26:35 DEBUG    [tasks:539] File _default_template.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/code_x_glue/code-text could not be loaded
+2025-09-16:00:26:35 DEBUG    [tasks:539] File _evalita-mp_ner_adg.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-16:00:26:35 DEBUG    [tasks:539] File _evalita-mp_ner_fic.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-16:00:26:35 DEBUG    [tasks:539] File _evalita-mp_ner_wn.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:26:39 WARNING  [evaluator:163] Model appears to be an instruct variant but chat template is not applied. Recommend setting `apply_chat_template` (optionally `fewshot_as_multiturn`).
+2025-09-16:00:26:39 INFO     [evaluator:189] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-09-16:00:26:39 INFO     [evaluator:227] Initializing hf model, with arguments: {'pretrained': 'r-three/supertoken_models-llama_microsoft-Phi-3-mini-4k-instruct', 'tokenizer': 'microsoft/Phi-3-mini-4k-instruct', 'trust_remote_code': True}
+2025-09-16:00:26:39 INFO     [models.huggingface:165] Using device 'cuda'
+2025-09-16:00:26:39 DEBUG    [models.huggingface:1098] Using model type 'causal'
+2025-09-16:00:26:39 INFO     [models.huggingface:898] Successfully loaded HuggingFace tokenizer: microsoft/Phi-3-mini-4k-instruct
+2025-09-16:00:26:39 INFO     [models.huggingface:984] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda'}
+2025-09-16:00:26:49 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:49 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:50 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:51 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:51 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:52 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:52 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:53 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:53 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space on rank 0...
+  0%|          | 0/26 [00:00<?, ?it/s]100%|██████████| 26/26 [00:00<00:00, 1966.28it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space; number of requests on this rank: 104
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_keyboard_proximity_errors on rank 0...
+  0%|          | 0/25 [00:00<?, ?it/s]100%|██████████| 25/25 [00:00<00:00, 2016.45it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_keyboard_proximity_errors; number of requests on this rank: 100
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_colloquial on rank 0...
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 1902.65it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_colloquial; number of requests on this rank: 44
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_traditional_vs_simplified on rank 0...
+  0%|          | 0/30 [00:00<?, ?it/s]100%|██████████| 30/30 [00:00<00:00, 2019.34it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_traditional_vs_simplified; number of requests on this rank: 120
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_romanization on rank 0...
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 2014.43it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_romanization; number of requests on this rank: 96
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_code_language_script_switching on rank 0...
+  0%|          | 0/38 [00:00<?, ?it/s]100%|██████████| 38/38 [00:00<00:00, 2033.19it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_code_language_script_switching; number of requests on this rank: 152
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_equivalent_expressions on rank 0...
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 1882.54it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_equivalent_expressions; number of requests on this rank: 44
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_cannonical on rank 0...
+  0%|          | 0/40 [00:00<?, ?it/s]100%|██████████| 40/40 [00:00<00:00, 2027.19it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_cannonical; number of requests on this rank: 160
+2025-09-16:00:26:53 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_chinese_homoglyphs on rank 0...
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 2015.44it/s]
+2025-09-16:00:26:53 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_chinese_homoglyphs; number of requests on this rank: 96
+2025-09-16:00:26:53 INFO     [evaluator:559] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/916 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/916 [00:00<07:43,  1.97it/s]Running loglikelihood requests:   1%|          | 6/916 [00:00<01:13, 12.31it/s]Running loglikelihood requests:   1%|          | 11/916 [00:00<00:43, 20.88it/s]Running loglikelihood requests:   2%|▏         | 16/916 [00:00<00:32, 27.70it/s]Running loglikelihood requests:   2%|▏         | 21/916 [00:00<00:27, 32.94it/s]Running loglikelihood requests:   3%|▎         | 26/916 [00:01<00:24, 36.89it/s]Running loglikelihood requests:   3%|▎         | 31/916 [00:01<00:22, 39.77it/s]Running loglikelihood requests:   4%|▍         | 36/916 [00:01<00:20, 41.90it/s]Running loglikelihood requests:   4%|▍         | 41/916 [00:01<00:20, 43.40it/s]Running loglikelihood requests:   5%|▌         | 46/916 [00:01<00:19, 44.48it/s]Running loglikelihood requests:   6%|▌         | 51/916 [00:01<00:19, 45.28it/s]Running loglikelihood requests:   6%|▌         | 56/916 [00:01<00:18, 45.85it/s]Running loglikelihood requests:   7%|▋         | 61/916 [00:01<00:18, 46.27it/s]Running loglikelihood requests:   7%|▋         | 66/916 [00:01<00:18, 46.50it/s]Running loglikelihood requests:   8%|▊         | 71/916 [00:01<00:18, 46.71it/s]Running loglikelihood requests:   8%|▊         | 77/916 [00:02<00:16, 49.61it/s]Running loglikelihood requests:   9%|▉         | 82/916 [00:02<00:17, 48.89it/s]Running loglikelihood requests:   9%|▉         | 87/916 [00:02<00:17, 48.37it/s]Running loglikelihood requests:  10%|█         | 93/916 [00:02<00:16, 50.84it/s]Running loglikelihood requests:  11%|█         | 99/916 [00:02<00:15, 52.59it/s]Running loglikelihood requests:  11%|█▏        | 105/916 [00:02<00:15, 52.05it/s]Running loglikelihood requests:  12%|█▏        | 111/916 [00:02<00:16, 50.04it/s]Running loglikelihood requests:  13%|█▎        | 117/916 [00:02<00:15, 51.51it/s]Running loglikelihood requests:  13%|█▎        | 123/916 [00:03<00:15, 49.71it/s]Running loglikelihood requests:  14%|█▍        | 129/916 [00:03<00:15, 51.20it/s]Running loglikelihood requests:  15%|█▍        | 135/916 [00:03<00:15, 49.55it/s]Running loglikelihood requests:  15%|█▌        | 140/916 [00:03<00:15, 48.58it/s]Running loglikelihood requests:  16%|█▌        | 145/916 [00:03<00:16, 47.85it/s]Running loglikelihood requests:  16%|█▋        | 150/916 [00:03<00:16, 47.33it/s]Running loglikelihood requests:  17%|█▋        | 156/916 [00:03<00:15, 49.62it/s]Running loglikelihood requests:  18%|█▊        | 161/916 [00:03<00:15, 48.60it/s]Running loglikelihood requests:  18%|█▊        | 166/916 [00:03<00:15, 47.85it/s]Running loglikelihood requests:  19%|█▊        | 171/916 [00:04<00:15, 46.61it/s]Running loglikelihood requests:  19%|█▉        | 176/916 [00:04<00:15, 46.40it/s]Running loglikelihood requests:  20%|█▉        | 181/916 [00:04<00:15, 46.30it/s]Running loglikelihood requests:  20%|██        | 186/916 [00:04<00:15, 46.22it/s]Running loglikelihood requests:  21%|██        | 191/916 [00:04<00:15, 46.17it/s]Running loglikelihood requests:  21%|██▏       | 196/916 [00:04<00:15, 46.16it/s]Running loglikelihood requests:  22%|██▏       | 201/916 [00:04<00:15, 46.14it/s]Running loglikelihood requests:  22%|██▏       | 206/916 [00:04<00:15, 46.15it/s]Running loglikelihood requests:  23%|██▎       | 211/916 [00:04<00:15, 46.13it/s]Running loglikelihood requests:  24%|██▎       | 216/916 [00:04<00:15, 46.12it/s]Running loglikelihood requests:  24%|██▍       | 224/916 [00:05<00:12, 54.29it/s]Running loglikelihood requests:  25%|██▌       | 230/916 [00:05<00:13, 51.53it/s]Running loglikelihood requests:  26%|██▌       | 236/916 [00:05<00:13, 49.74it/s]Running loglikelihood requests:  26%|██▋       | 242/916 [00:05<00:13, 48.59it/s]Running loglikelihood requests:  27%|██▋       | 247/916 [00:05<00:13, 47.89it/s]Running loglikelihood requests:  28%|██▊       | 252/916 [00:05<00:14, 47.39it/s]Running loglikelihood requests:  28%|██▊       | 257/916 [00:05<00:14, 46.99it/s]Running loglikelihood requests:  29%|██▊       | 262/916 [00:05<00:13, 46.74it/s]Running loglikelihood requests:  29%|██▉       | 267/916 [00:06<00:14, 46.15it/s]Running loglikelihood requests:  30%|██▉       | 272/916 [00:06<00:13, 46.13it/s]Running loglikelihood requests:  30%|███       | 277/916 [00:06<00:13, 46.11it/s]Running loglikelihood requests:  31%|███       | 282/916 [00:06<00:13, 46.08it/s]Running loglikelihood requests:  31%|███▏      | 287/916 [00:06<00:13, 46.08it/s]Running loglikelihood requests:  32%|███▏      | 292/916 [00:06<00:13, 46.11it/s]Running loglikelihood requests:  33%|███▎      | 298/916 [00:06<00:12, 48.86it/s]Running loglikelihood requests:  33%|███▎      | 303/916 [00:06<00:12, 48.02it/s]Running loglikelihood requests:  34%|███▎      | 308/916 [00:06<00:12, 47.47it/s]Running loglikelihood requests:  34%|███▍      | 313/916 [00:07<00:12, 47.09it/s]Running loglikelihood requests:  35%|███▍      | 318/916 [00:07<00:12, 46.82it/s]Running loglikelihood requests:  35%|███▌      | 323/916 [00:07<00:12, 46.59it/s]Running loglikelihood requests:  36%|███▌      | 328/916 [00:07<00:12, 46.47it/s]Running loglikelihood requests:  36%|███▋      | 333/916 [00:07<00:12, 46.40it/s]Running loglikelihood requests:  37%|███▋      | 338/916 [00:07<00:12, 46.30it/s]Running loglikelihood requests:  37%|███▋      | 343/916 [00:07<00:12, 46.23it/s]Running loglikelihood requests:  38%|███▊      | 348/916 [00:07<00:12, 46.17it/s]Running loglikelihood requests:  39%|███▊      | 353/916 [00:07<00:12, 45.74it/s]Running loglikelihood requests:  39%|███▉      | 358/916 [00:07<00:12, 45.84it/s]Running loglikelihood requests:  40%|███▉      | 363/916 [00:08<00:12, 45.86it/s]Running loglikelihood requests:  40%|████      | 368/916 [00:08<00:11, 45.92it/s]Running loglikelihood requests:  41%|████      | 373/916 [00:08<00:11, 45.98it/s]Running loglikelihood requests:  41%|████▏     | 378/916 [00:08<00:11, 46.00it/s]Running loglikelihood requests:  42%|████▏     | 383/916 [00:08<00:11, 46.02it/s]Running loglikelihood requests:  42%|████▏     | 388/916 [00:08<00:11, 46.06it/s]Running loglikelihood requests:  43%|████▎     | 393/916 [00:08<00:11, 46.07it/s]Running loglikelihood requests:  44%|████▎     | 399/916 [00:08<00:10, 48.85it/s]Running loglikelihood requests:  44%|████▍     | 404/916 [00:08<00:10, 48.07it/s]Running loglikelihood requests:  45%|████▍     | 409/916 [00:09<00:10, 47.23it/s]Running loglikelihood requests:  45%|████▌     | 414/916 [00:09<00:10, 46.88it/s]Running loglikelihood requests:  46%|████▌     | 419/916 [00:09<00:10, 46.62it/s]Running loglikelihood requests:  46%|████▋     | 424/916 [00:09<00:10, 46.46it/s]Running loglikelihood requests:  47%|████▋     | 429/916 [00:09<00:10, 46.37it/s]Running loglikelihood requests:  47%|████▋     | 434/916 [00:09<00:10, 46.29it/s]Running loglikelihood requests:  48%|████▊     | 440/916 [00:09<00:09, 49.00it/s]Running loglikelihood requests:  49%|████▊     | 445/916 [00:09<00:09, 48.12it/s]Running loglikelihood requests:  49%|████▉     | 451/916 [00:09<00:09, 50.27it/s]Running loglikelihood requests:  50%|████▉     | 457/916 [00:10<00:09, 48.51it/s]Running loglikelihood requests:  50%|█████     | 462/916 [00:10<00:09, 48.06it/s]Running loglikelihood requests:  51%|█████     | 467/916 [00:10<00:09, 47.74it/s]Running loglikelihood requests:  52%|█████▏    | 472/916 [00:10<00:09, 47.50it/s]Running loglikelihood requests:  52%|█████▏    | 477/916 [00:10<00:09, 47.33it/s]Running loglikelihood requests:  53%|█████▎    | 483/916 [00:10<00:08, 49.97it/s]Running loglikelihood requests:  53%|█████▎    | 489/916 [00:10<00:08, 48.96it/s]Running loglikelihood requests:  54%|█████▍    | 495/916 [00:10<00:08, 51.00it/s]Running loglikelihood requests:  55%|█████▍    | 503/916 [00:10<00:07, 57.92it/s]Running loglikelihood requests:  56%|█████▌    | 511/916 [00:11<00:06, 62.89it/s]Running loglikelihood requests:  57%|█████▋    | 518/916 [00:11<00:06, 57.03it/s]Running loglikelihood requests:  57%|█████▋    | 524/916 [00:11<00:07, 53.90it/s]Running loglikelihood requests:  58%|█████▊    | 530/916 [00:11<00:07, 51.77it/s]Running loglikelihood requests:  59%|█████▊    | 538/916 [00:11<00:06, 57.98it/s]Running loglikelihood requests:  59%|█████▉    | 544/916 [00:11<00:06, 54.56it/s]Running loglikelihood requests:  60%|██████    | 550/916 [00:11<00:06, 52.33it/s]Running loglikelihood requests:  61%|██████    | 556/916 [00:11<00:07, 50.82it/s]Running loglikelihood requests:  61%|██████▏   | 562/916 [00:12<00:07, 49.77it/s]Running loglikelihood requests:  62%|██████▏   | 568/916 [00:12<00:07, 49.03it/s]Running loglikelihood requests:  63%|██████▎   | 573/916 [00:12<00:07, 48.56it/s]Running loglikelihood requests:  63%|██████▎   | 578/916 [00:12<00:07, 48.17it/s]Running loglikelihood requests:  64%|██████▍   | 587/916 [00:12<00:05, 58.49it/s]Running loglikelihood requests:  65%|██████▌   | 598/916 [00:12<00:04, 71.39it/s]Running loglikelihood requests:  66%|██████▌   | 606/916 [00:12<00:04, 65.06it/s]Running loglikelihood requests:  67%|██████▋   | 614/916 [00:12<00:04, 67.83it/s]Running loglikelihood requests:  68%|██████▊   | 621/916 [00:13<00:04, 63.79it/s]Running loglikelihood requests:  69%|██████▊   | 628/916 [00:13<00:04, 64.38it/s]Running loglikelihood requests:  69%|██████▉   | 635/916 [00:13<00:04, 58.34it/s]Running loglikelihood requests:  70%|██████▉   | 641/916 [00:13<00:05, 54.98it/s]Running loglikelihood requests:  71%|███████   | 647/916 [00:13<00:05, 52.57it/s]Running loglikelihood requests:  71%|███████▏  | 653/916 [00:13<00:04, 53.58it/s]Running loglikelihood requests:  72%|███████▏  | 663/916 [00:13<00:03, 64.57it/s]Running loglikelihood requests:  74%|███████▎  | 674/916 [00:13<00:03, 75.39it/s]Running loglikelihood requests:  74%|███████▍  | 682/916 [00:14<00:03, 64.31it/s]Running loglikelihood requests:  75%|███████▌  | 689/916 [00:14<00:03, 58.62it/s]Running loglikelihood requests:  76%|███████▌  | 696/916 [00:14<00:03, 57.55it/s]Running loglikelihood requests:  77%|███████▋  | 707/916 [00:14<00:03, 69.12it/s]Running loglikelihood requests:  78%|███████▊  | 716/916 [00:14<00:02, 73.11it/s]Running loglikelihood requests:  79%|███████▉  | 726/916 [00:14<00:02, 78.69it/s]Running loglikelihood requests:  80%|████████  | 735/916 [00:14<00:02, 65.65it/s]Running loglikelihood requests:  81%|████████▏ | 746/916 [00:14<00:02, 74.88it/s]Running loglikelihood requests:  82%|████████▏ | 755/916 [00:15<00:02, 73.51it/s]Running loglikelihood requests:  83%|████████▎ | 763/916 [00:15<00:02, 63.97it/s]Running loglikelihood requests:  84%|████████▍ | 774/916 [00:15<00:01, 72.82it/s]Running loglikelihood requests:  85%|████████▌ | 782/916 [00:15<00:01, 73.35it/s]Running loglikelihood requests:  86%|████████▌ | 790/916 [00:15<00:01, 73.97it/s]Running loglikelihood requests:  87%|████████▋ | 798/916 [00:15<00:01, 74.43it/s]Running loglikelihood requests:  88%|████████▊ | 806/916 [00:15<00:01, 70.83it/s]Running loglikelihood requests:  89%|████████▉ | 815/916 [00:15<00:01, 74.76it/s]Running loglikelihood requests:  90%|████████▉ | 823/916 [00:15<00:01, 75.03it/s]Running loglikelihood requests:  91%|█████████ | 831/916 [00:16<00:01, 75.23it/s]Running loglikelihood requests:  92%|█████████▏| 839/916 [00:16<00:01, 75.28it/s]Running loglikelihood requests:  92%|█████████▏| 847/916 [00:16<00:01, 67.45it/s]Running loglikelihood requests:  93%|█████████▎| 854/916 [00:16<00:00, 66.97it/s]Running loglikelihood requests:  94%|█████████▍| 861/916 [00:16<00:00, 60.11it/s]Running loglikelihood requests:  95%|█████████▌| 872/916 [00:16<00:00, 71.69it/s]Running loglikelihood requests:  96%|█████████▌| 880/916 [00:16<00:00, 72.79it/s]Running loglikelihood requests:  97%|█████████▋| 891/916 [00:16<00:00, 81.46it/s]Running loglikelihood requests:  98%|█████████▊| 900/916 [00:17<00:00, 78.07it/s]Running loglikelihood requests:  99%|█████████▉| 908/916 [00:17<00:00, 66.36it/s]Running loglikelihood requests: 100%|██████████| 916/916 [00:17<00:00, 53.11it/s]
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:209] Saving results aggregated
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_cannonical
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_code_language_script_switching
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_colloquial
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_equivalent_expressions
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_homoglyphs
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_keyboard_proximity_errors
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_romanization
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_traditional_vs_simplified
+2025-09-16:00:27:18 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                                                            tokenizer_robustness_completion_chinese/acc ▁
+wandb:                                                       tokenizer_robustness_completion_chinese/acc_norm ▁
+wandb:                                                tokenizer_robustness_completion_chinese/acc_norm_stderr ▁
+wandb:                                                     tokenizer_robustness_completion_chinese/acc_stderr ▁
+wandb:                                                 tokenizer_robustness_completion_chinese_cannonical/acc ▁
+wandb:                                            tokenizer_robustness_completion_chinese_cannonical/acc_norm ▁
+wandb:                                     tokenizer_robustness_completion_chinese_cannonical/acc_norm_stderr ▁
+wandb:                                          tokenizer_robustness_completion_chinese_cannonical/acc_stderr ▁
+wandb:                             tokenizer_robustness_completion_chinese_code_language_script_switching/acc ▁
+wandb:                        tokenizer_robustness_completion_chinese_code_language_script_switching/acc_norm ▁
+wandb:                 tokenizer_robustness_completion_chinese_code_language_script_switching/acc_norm_stderr ▁
+wandb:                      tokenizer_robustness_completion_chinese_code_language_script_switching/acc_stderr ▁
+wandb:                                                 tokenizer_robustness_completion_chinese_colloquial/acc ▁
+wandb:                                            tokenizer_robustness_completion_chinese_colloquial/acc_norm ▁
+wandb:                                     tokenizer_robustness_completion_chinese_colloquial/acc_norm_stderr ▁
+wandb:                                          tokenizer_robustness_completion_chinese_colloquial/acc_stderr ▁
+wandb:                                     tokenizer_robustness_completion_chinese_equivalent_expressions/acc ▁
+wandb:                                tokenizer_robustness_completion_chinese_equivalent_expressions/acc_norm ▁
+wandb:                         tokenizer_robustness_completion_chinese_equivalent_expressions/acc_norm_stderr ▁
+wandb:                              tokenizer_robustness_completion_chinese_equivalent_expressions/acc_stderr ▁
+wandb:                                                 tokenizer_robustness_completion_chinese_homoglyphs/acc ▁
+wandb:                                            tokenizer_robustness_completion_chinese_homoglyphs/acc_norm ▁
+wandb:                                     tokenizer_robustness_completion_chinese_homoglyphs/acc_norm_stderr ▁
+wandb:                                          tokenizer_robustness_completion_chinese_homoglyphs/acc_stderr ▁
+wandb:                                  tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc ▁
+wandb:                             tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc_norm ▁
+wandb:                      tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc_norm_stderr ▁
+wandb:                           tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc_stderr ▁
+wandb:                                               tokenizer_robustness_completion_chinese_romanization/acc ▁
+wandb:                                          tokenizer_robustness_completion_chinese_romanization/acc_norm ▁
+wandb:                                   tokenizer_robustness_completion_chinese_romanization/acc_norm_stderr ▁
+wandb:                                        tokenizer_robustness_completion_chinese_romanization/acc_stderr ▁
+wandb:                                  tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc ▁
+wandb:                             tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc_norm ▁
+wandb:                      tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc_norm_stderr ▁
+wandb:                           tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc_stderr ▁
+wandb:             tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc ▁
+wandb:        tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc_norm ▁
+wandb: tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc_norm_stderr ▁
+wandb:      tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc_stderr ▁
+wandb: 
+wandb: Run summary:
+wandb:                                                            tokenizer_robustness_completion_chinese/acc 0.65066
+wandb:                                                       tokenizer_robustness_completion_chinese/acc_norm 0.64192
+wandb:                                                tokenizer_robustness_completion_chinese/acc_norm_stderr 0.03151
+wandb:                                                     tokenizer_robustness_completion_chinese/acc_stderr 0.03129
+wandb:                                                          tokenizer_robustness_completion_chinese/alias tokenizer_robustness...
+wandb:                                                 tokenizer_robustness_completion_chinese_cannonical/acc 0.8
+wandb:                                            tokenizer_robustness_completion_chinese_cannonical/acc_norm 0.775
+wandb:                                     tokenizer_robustness_completion_chinese_cannonical/acc_norm_stderr 0.06687
+wandb:                                          tokenizer_robustness_completion_chinese_cannonical/acc_stderr 0.06405
+wandb:                                               tokenizer_robustness_completion_chinese_cannonical/alias  - tokenizer_robustn...
+wandb:                             tokenizer_robustness_completion_chinese_code_language_script_switching/acc 0.65789
+wandb:                        tokenizer_robustness_completion_chinese_code_language_script_switching/acc_norm 0.65789
+wandb:                 tokenizer_robustness_completion_chinese_code_language_script_switching/acc_norm_stderr 0.07799
+wandb:                      tokenizer_robustness_completion_chinese_code_language_script_switching/acc_stderr 0.07799
+wandb:                           tokenizer_robustness_completion_chinese_code_language_script_switching/alias  - tokenizer_robustn...
+wandb:                                                 tokenizer_robustness_completion_chinese_colloquial/acc 0.63636
+wandb:                                            tokenizer_robustness_completion_chinese_colloquial/acc_norm 0.45455
+wandb:                                     tokenizer_robustness_completion_chinese_colloquial/acc_norm_stderr 0.15746
+wandb:                                          tokenizer_robustness_completion_chinese_colloquial/acc_stderr 0.15212
+wandb:                                               tokenizer_robustness_completion_chinese_colloquial/alias  - tokenizer_robustn...
+wandb:                                     tokenizer_robustness_completion_chinese_equivalent_expressions/acc 0.63636
+wandb:                                tokenizer_robustness_completion_chinese_equivalent_expressions/acc_norm 0.63636
+wandb:                         tokenizer_robustness_completion_chinese_equivalent_expressions/acc_norm_stderr 0.15212
+wandb:                              tokenizer_robustness_completion_chinese_equivalent_expressions/acc_stderr 0.15212
+wandb:                                   tokenizer_robustness_completion_chinese_equivalent_expressions/alias  - tokenizer_robustn...
+wandb:                                                 tokenizer_robustness_completion_chinese_homoglyphs/acc 0.625
+wandb:                                            tokenizer_robustness_completion_chinese_homoglyphs/acc_norm 0.625
+wandb:                                     tokenizer_robustness_completion_chinese_homoglyphs/acc_norm_stderr 0.10095
+wandb:                                          tokenizer_robustness_completion_chinese_homoglyphs/acc_stderr 0.10095
+wandb:                                               tokenizer_robustness_completion_chinese_homoglyphs/alias  - tokenizer_robustn...
+wandb:                                  tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc 0.56
+wandb:                             tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc_norm 0.52
+wandb:                      tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc_norm_stderr 0.10198
+wandb:                           tokenizer_robustness_completion_chinese_keyboard_proximity_errors/acc_stderr 0.10132
+wandb:                                tokenizer_robustness_completion_chinese_keyboard_proximity_errors/alias  - tokenizer_robustn...
+wandb:                                               tokenizer_robustness_completion_chinese_romanization/acc 0.5
+wandb:                                          tokenizer_robustness_completion_chinese_romanization/acc_norm 0.54167
+wandb:                                   tokenizer_robustness_completion_chinese_romanization/acc_norm_stderr 0.10389
+wandb:                                        tokenizer_robustness_completion_chinese_romanization/acc_stderr 0.10426
+wandb:                                             tokenizer_robustness_completion_chinese_romanization/alias  - tokenizer_robustn...
+wandb:                                  tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc 0.53333
+wandb:                             tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc_norm 0.56667
+wandb:                      tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc_norm_stderr 0.09202
+wandb:                           tokenizer_robustness_completion_chinese_traditional_vs_simplified/acc_stderr 0.09264
+wandb:                                tokenizer_robustness_completion_chinese_traditional_vs_simplified/alias  - tokenizer_robustn...
+wandb:             tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc 0.80769
+wandb:        tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc_norm 0.80769
+wandb: tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc_norm_stderr 0.07882
+wandb:      tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/acc_stderr 0.07882
+wandb:           tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space/alias  - tokenizer_robustn...
+wandb: 
+wandb: 🚀 View run microsoft-Phi-3-mini-4k-instruct-1757996060 at: https://wandb.ai/raffel-reports/tokenizer_robustness_completion_chinese/runs/486viqrp
+wandb: ⭐️ View project at: https://wandb.ai/raffel-reports/tokenizer_robustness_completion_chinese
+wandb: Synced 6 W&B file(s), 11 media file(s), 24 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250916_002631-486viqrp/logs

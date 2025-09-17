@@ -1,0 +1,641 @@
+{
+  "results": {
+    "farsi_tokenizer_robustness_completion": {
+      "acc_norm,none": 0.5597222222222222,
+      "acc_norm_stderr,none": 0.0181776299395942,
+      "acc,none": 0.5347222222222222,
+      "acc_stderr,none": 0.018291167662755983,
+      "alias": "farsi_tokenizer_robustness_completion"
+    },
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": {
+      "alias": " - farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi",
+      "acc,none": 0.375,
+      "acc_stderr,none": 0.07752170911825529,
+      "acc_norm,none": 0.45,
+      "acc_norm_stderr,none": 0.07966275068156915
+    },
+    "farsi_tokenizer_robustness_completion_cannonical": {
+      "alias": " - farsi_tokenizer_robustness_completion_cannonical",
+      "acc,none": 0.75,
+      "acc_stderr,none": 0.06933752452815363,
+      "acc_norm,none": 0.85,
+      "acc_norm_stderr,none": 0.05717718748968655
+    },
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": {
+      "alias": " - farsi_tokenizer_robustness_completion_code_language_script_switching",
+      "acc,none": 0.675,
+      "acc_stderr,none": 0.07499999999999998,
+      "acc_norm,none": 0.675,
+      "acc_norm_stderr,none": 0.07499999999999998
+    },
+    "farsi_tokenizer_robustness_completion_colloquial": {
+      "alias": " - farsi_tokenizer_robustness_completion_colloquial",
+      "acc,none": 0.55,
+      "acc_stderr,none": 0.07966275068156915,
+      "acc_norm,none": 0.55,
+      "acc_norm_stderr,none": 0.07966275068156915
+    },
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": {
+      "alias": " - farsi_tokenizer_robustness_completion_diacritics_presence_absence",
+      "acc,none": 0.475,
+      "acc_stderr,none": 0.07996393417804536,
+      "acc_norm,none": 0.55,
+      "acc_norm_stderr,none": 0.07966275068156915
+    },
+    "farsi_tokenizer_robustness_completion_dialects": {
+      "alias": " - farsi_tokenizer_robustness_completion_dialects",
+      "acc,none": 0.5111111111111111,
+      "acc_stderr,none": 0.026382474093672136,
+      "acc_norm,none": 0.5555555555555556,
+      "acc_norm_stderr,none": 0.02622558980416574
+    },
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": {
+      "alias": " - farsi_tokenizer_robustness_completion_equivalent_expressions",
+      "acc,none": 0.65,
+      "acc_stderr,none": 0.07637626158259732,
+      "acc_norm,none": 0.625,
+      "acc_norm_stderr,none": 0.07752170911825529
+    },
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": {
+      "alias": " - farsi_tokenizer_robustness_completion_keyboard_proximity_errors",
+      "acc,none": 0.65,
+      "acc_stderr,none": 0.07637626158259733,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.07844645405527362
+    },
+    "farsi_tokenizer_robustness_completion_romanization": {
+      "alias": " - farsi_tokenizer_robustness_completion_romanization",
+      "acc,none": 0.275,
+      "acc_stderr,none": 0.0714995069016527,
+      "acc_norm,none": 0.25,
+      "acc_norm_stderr,none": 0.06933752452815363
+    },
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": {
+      "alias": " - farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space",
+      "acc,none": 0.625,
+      "acc_stderr,none": 0.07752170911825529,
+      "acc_norm,none": 0.525,
+      "acc_norm_stderr,none": 0.07996393417804533
+    }
+  },
+  "groups": {
+    "farsi_tokenizer_robustness_completion": {
+      "acc_norm,none": 0.5597222222222222,
+      "acc_norm_stderr,none": 0.0181776299395942,
+      "acc,none": 0.5347222222222222,
+      "acc_stderr,none": 0.018291167662755983,
+      "alias": "farsi_tokenizer_robustness_completion"
+    }
+  },
+  "group_subtasks": {
+    "farsi_tokenizer_robustness_completion": [
+      "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space",
+      "farsi_tokenizer_robustness_completion_dialects",
+      "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi",
+      "farsi_tokenizer_robustness_completion_equivalent_expressions",
+      "farsi_tokenizer_robustness_completion_code_language_script_switching",
+      "farsi_tokenizer_robustness_completion_romanization",
+      "farsi_tokenizer_robustness_completion_cannonical",
+      "farsi_tokenizer_robustness_completion_colloquial",
+      "farsi_tokenizer_robustness_completion_keyboard_proximity_errors",
+      "farsi_tokenizer_robustness_completion_diacritics_presence_absence"
+    ]
+  },
+  "configs": {
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": {
+      "task": "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_cannonical": {
+      "task": "farsi_tokenizer_robustness_completion_cannonical",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_cannonical",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": {
+      "task": "farsi_tokenizer_robustness_completion_code_language_script_switching",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_code_language_script_switching",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_colloquial": {
+      "task": "farsi_tokenizer_robustness_completion_colloquial",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_colloquial",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": {
+      "task": "farsi_tokenizer_robustness_completion_diacritics_presence_absence",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_diacritics_presence_absence",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_dialects": {
+      "task": "farsi_tokenizer_robustness_completion_dialects",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_dialects",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": {
+      "task": "farsi_tokenizer_robustness_completion_equivalent_expressions",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_equivalent_expressions",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": {
+      "task": "farsi_tokenizer_robustness_completion_keyboard_proximity_errors",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_keyboard_proximity_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_romanization": {
+      "task": "farsi_tokenizer_robustness_completion_romanization",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_romanization",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    },
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": {
+      "task": "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space",
+      "dataset_path": "r-three/farsi_tokenizer_robustness_completion",
+      "dataset_name": "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+        "tokenizer": "Qwen/Qwen3-8B",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "farsi_tokenizer_robustness_completion": "1.0.2",
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": "1.0.2",
+    "farsi_tokenizer_robustness_completion_cannonical": "1.0.2",
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": "1.0.2",
+    "farsi_tokenizer_robustness_completion_colloquial": "1.0.2",
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": "1.0.2",
+    "farsi_tokenizer_robustness_completion_dialects": "1.0.2",
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": "1.0.2",
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": "1.0.2",
+    "farsi_tokenizer_robustness_completion_romanization": "1.0.2",
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": "1.0.2"
+  },
+  "n-shot": {
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": 0,
+    "farsi_tokenizer_robustness_completion_cannonical": 0,
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": 0,
+    "farsi_tokenizer_robustness_completion_colloquial": 0,
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": 0,
+    "farsi_tokenizer_robustness_completion_dialects": 0,
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": 0,
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": 0,
+    "farsi_tokenizer_robustness_completion_romanization": 0,
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": 0
+  },
+  "higher_is_better": {
+    "farsi_tokenizer_robustness_completion": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_cannonical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_colloquial": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_dialects": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_romanization": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_dialects": {
+      "original": 360,
+      "effective": 360
+    },
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_romanization": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_cannonical": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_colloquial": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": {
+      "original": 40,
+      "effective": 40
+    },
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": {
+      "original": 40,
+      "effective": 40
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=r-three/supertoken_models-llama_Qwen-Qwen3-8B,tokenizer=Qwen/Qwen3-8B,trust_remote_code=true",
+    "model_num_parameters": 1905846272,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "c5afd5c74bb2416d95af71446bfd8b6faaad43ad",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1757962829.9483035,
+  "pretty_env_info": "PyTorch version: 2.7.0+cu126\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 13.3.0 p16) 13.3.0\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.39\n\nPython version: 3.10.18 (main, Jun 12 2025, 12:39:39) [Clang 20.1.4 ] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-Intel-R-_Xeon-R-_Gold_6338_CPU_@_2.00GHz-with-glibc2.39\nIs CUDA available: True\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA L40S\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               64\nOn-line CPU(s) list:                  0-63\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz\nCPU family:                           6\nModel:                                106\nThread(s) per core:                   1\nCore(s) per socket:                   32\nSocket(s):                            2\nStepping:                             6\nCPU(s) scaling MHz:                   30%\nCPU max MHz:                          3200.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             4000.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities\nL1d cache:                            3 MiB (64 instances)\nL1i cache:                            2 MiB (64 instances)\nL2 cache:                             80 MiB (64 instances)\nL3 cache:                             96 MiB (2 instances)\nNUMA node(s):                         4\nNUMA node0 CPU(s):                    0-15\nNUMA node1 CPU(s):                    16-31\nNUMA node2 CPU(s):                    32-47\nNUMA node3 CPU(s):                    48-63\nVulnerability Gather data sampling:   Mitigation; Microcode\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT disabled\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.6.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.6.80\n[pip3] nvidia-cuda-nvrtc-cu12==12.6.77\n[pip3] nvidia-cuda-runtime-cu12==12.6.77\n[pip3] nvidia-cudnn-cu12==9.5.1.17\n[pip3] nvidia-cufft-cu12==11.3.0.4\n[pip3] nvidia-curand-cu12==10.3.7.77\n[pip3] nvidia-cusolver-cu12==11.7.1.2\n[pip3] nvidia-cusparse-cu12==12.5.4.2\n[pip3] nvidia-cusparselt-cu12==0.6.3\n[pip3] nvidia-nccl-cu12==2.26.2\n[pip3] nvidia-nvjitlink-cu12==12.6.85\n[pip3] nvidia-nvtx-cu12==12.6.77\n[pip3] torch==2.7.0\n[pip3] torchaudio==2.7.0\n[pip3] torchvision==0.22.0\n[pip3] triton==3.3.0\n[conda] Could not collect",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.9",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 8192,
+  "task_hashes": {
+    "farsi_tokenizer_robustness_completion_word_spacing_zero-width_characters_extra_space": "5fa438891a1365e6e55db64ad300c10b6b76a174d92c20c9a61060bbcdea47cd",
+    "farsi_tokenizer_robustness_completion_dialects": "c7ab42c7c1358e93d894afe7af8b8140dda2080b3e3046d64a1b3f189ac8973e",
+    "farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi": "84378e90a99fb6e466526933050d6890e413eebfc8d4582361a9a6743b0aad6f",
+    "farsi_tokenizer_robustness_completion_equivalent_expressions": "cbaba6a0408e358533ada291312dd129f17d83d57243cd1bec4c4081d72baba4",
+    "farsi_tokenizer_robustness_completion_code_language_script_switching": "76f19db04b5af4e8cd30d3edb757dddc51d07fb762cf931d010453a65f844581",
+    "farsi_tokenizer_robustness_completion_romanization": "b41f88a085d271b6f72ce083ff6ab8d672f9c53b17ca2a626677b2c96958013f",
+    "farsi_tokenizer_robustness_completion_cannonical": "6acc6326b3d1f938944779f77e9ae3a5d2760aa5780d01d87f7382e9abf2f5e5",
+    "farsi_tokenizer_robustness_completion_colloquial": "9f75a195dd8a27a407152813a303010e7fa4480f052031a3890088f996d00596",
+    "farsi_tokenizer_robustness_completion_keyboard_proximity_errors": "ef8f9c81a63814b9a4061538f050c65586da88daba390ce4e41174d81d40451d",
+    "farsi_tokenizer_robustness_completion_diacritics_presence_absence": "8737742a1136ab21f9b555dbbc091caf19826834b26b33ba12367eb78431797c"
+  },
+  "model_source": "hf",
+  "model_name": "r-three/supertoken_models-llama_Qwen-Qwen3-8B",
+  "model_name_sanitized": "r-three__supertoken_models-llama_Qwen-Qwen3-8B",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 783676.424281748,
+  "end_time": 783760.299110401,
+  "total_evaluation_time_seconds": "83.87482865294442"
+}

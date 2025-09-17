@@ -1,0 +1,113 @@
+wandb: Currently logged in as: gsaltintas to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /home/gsa/tokenizers/wandb/run-20250916_001533-b1a08m9c
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run google-gemma-2-2b-1757996120
+wandb: ⭐️ View project at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_stem
+wandb: 🚀 View run at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_stem/runs/b1a08m9c
+2025-09-16:00:15:37 DEBUG    [tasks:539] File _default_template.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/code_x_glue/code-text could not be loaded
+2025-09-16:00:15:37 DEBUG    [tasks:539] File _evalita-mp_ner_adg.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-16:00:15:37 DEBUG    [tasks:539] File _evalita-mp_ner_fic.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-16:00:15:37 DEBUG    [tasks:539] File _evalita-mp_ner_wn.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:41 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-16:00:15:42 INFO     [evaluator:189] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-09-16:00:15:42 INFO     [evaluator:227] Initializing hf model, with arguments: {'pretrained': 'r-three/supertoken_models-llama_google-gemma-2-2b', 'tokenizer': 'google/gemma-2-2b', 'trust_remote_code': True}
+2025-09-16:00:15:42 INFO     [models.huggingface:165] Using device 'cuda'
+2025-09-16:00:15:42 DEBUG    [models.huggingface:1098] Using model type 'causal'
+2025-09-16:00:15:43 INFO     [models.huggingface:898] Successfully loaded HuggingFace tokenizer: google/gemma-2-2b
+2025-09-16:00:15:43 INFO     [models.huggingface:984] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda'}
+2025-09-16:00:15:46 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:47 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:48 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:48 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:49 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:50 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:51 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:51 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:52 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:53 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:54 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:55 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:56 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:56 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:57 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:58 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-16:00:15:59 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/bin/lm_eval", line 10, in <module>
+    sys.exit(cli_evaluate())
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/__main__.py", line 449, in cli_evaluate
+    results = evaluator.simple_evaluate(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/utils.py", line 438, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/evaluator.py", line 268, in simple_evaluate
+    task_dict = get_task_dict(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 635, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 426, in load_task_or_group
+    collections.ChainMap(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 428, in <lambda>
+    lambda task: self._load_individual_task_or_group(task),
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 410, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 326, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 286, in _load_task
+    task_object = ConfigurableTask(config=config)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/api/task.py", line 863, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/api/task.py", line 991, in download
+    self.dataset = datasets.load_dataset(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/load.py", line 1392, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/load.py", line 1166, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/builder.py", line 343, in __init__
+    self.config, self.config_id = self._create_builder_config(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/builder.py", line 539, in _create_builder_config
+    raise ValueError(
+ValueError: BuilderConfig 'tokenizer_robustness_completion_stem_additional_spaces' not found. Available: ['tokenizer_robustness_completion_stem_ascii', 'tokenizer_robustness_completion_stem_cannonical', 'tokenizer_robustness_completion_stem_canonical', 'tokenizer_robustness_completion_stem_character_deletion', 'tokenizer_robustness_completion_stem_combining_diacritics', 'tokenizer_robustness_completion_stem_date_formats', 'tokenizer_robustness_completion_stem_double_struck', 'tokenizer_robustness_completion_stem_enclosed_characters', 'tokenizer_robustness_completion_stem_equivalent_expressions', 'tokenizer_robustness_completion_stem_fullwidth_characters', 'tokenizer_robustness_completion_stem_latex', 'tokenizer_robustness_completion_stem_script', 'tokenizer_robustness_completion_stem_space_additions_for_natural_split', 'tokenizer_robustness_completion_stem_space_removal', 'tokenizer_robustness_completion_stem_spelled_out', 'tokenizer_robustness_completion_stem_strikethrough', 'tokenizer_robustness_completion_stem_superscript_subscript', 'tokenizer_robustness_completion_stem_typographical_errors', 'tokenizer_robustness_completion_stem_unicode_formatting', 'tokenizer_robustness_completion_stem_unusual_formatting', 'tokenizer_robustness_completion_stem_upside_down_rotated']
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/bin/lm_eval", line 10, in <module>
+    sys.exit(cli_evaluate())
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/__main__.py", line 449, in cli_evaluate
+    results = evaluator.simple_evaluate(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/utils.py", line 438, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/evaluator.py", line 268, in simple_evaluate
+    task_dict = get_task_dict(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 635, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 426, in load_task_or_group
+    collections.ChainMap(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 428, in <lambda>
+    lambda task: self._load_individual_task_or_group(task),
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 410, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 326, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 286, in _load_task
+    task_object = ConfigurableTask(config=config)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/api/task.py", line 863, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/api/task.py", line 991, in download
+    self.dataset = datasets.load_dataset(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/load.py", line 1392, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/load.py", line 1166, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/builder.py", line 343, in __init__
+    self.config, self.config_id = self._create_builder_config(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/datasets/builder.py", line 539, in _create_builder_config
+    raise ValueError(
+ValueError: BuilderConfig 'tokenizer_robustness_completion_stem_additional_spaces' not found. Available: ['tokenizer_robustness_completion_stem_ascii', 'tokenizer_robustness_completion_stem_cannonical', 'tokenizer_robustness_completion_stem_canonical', 'tokenizer_robustness_completion_stem_character_deletion', 'tokenizer_robustness_completion_stem_combining_diacritics', 'tokenizer_robustness_completion_stem_date_formats', 'tokenizer_robustness_completion_stem_double_struck', 'tokenizer_robustness_completion_stem_enclosed_characters', 'tokenizer_robustness_completion_stem_equivalent_expressions', 'tokenizer_robustness_completion_stem_fullwidth_characters', 'tokenizer_robustness_completion_stem_latex', 'tokenizer_robustness_completion_stem_script', 'tokenizer_robustness_completion_stem_space_additions_for_natural_split', 'tokenizer_robustness_completion_stem_space_removal', 'tokenizer_robustness_completion_stem_spelled_out', 'tokenizer_robustness_completion_stem_strikethrough', 'tokenizer_robustness_completion_stem_superscript_subscript', 'tokenizer_robustness_completion_stem_typographical_errors', 'tokenizer_robustness_completion_stem_unicode_formatting', 'tokenizer_robustness_completion_stem_unusual_formatting', 'tokenizer_robustness_completion_stem_upside_down_rotated']

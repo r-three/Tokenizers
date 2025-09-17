@@ -1,9 +1,9 @@
 
-upload_to_hf: false
+upload_to_hf: true
 upload_individually: false
 is_translation: false
 flatten_metadata: true
-tag: 1.0.2
+tag: 1.0.21
 dataset_name: tokenization_robustness
 private: false
 tags:
@@ -70,9 +70,11 @@ metadata_fields:
   variation_id: "Variation Id"
   # split: Split
 create_subset_dirs: true
-subset_by: Category
+subset_by: Subcategory
+# subset_by: Category
 dataset_format: parquet
 split_field: Split
+combine_all_splits: true
 # subset_by: Subcategory
 lm_eval_task:
   dataset_name: tokenizer_robustness
@@ -89,7 +91,7 @@ lm_eval_task:
   doc_to_target: "answer"  # Changed from '{{answer_label}}' to field name
   doc_to_choice: "choices"  # Changed from null to actual field name
   test_split: test
-  fewshot_split: dev
+  # fewshot_split: dev
   num_fewshot: 0
   metric_list:
     - metric: acc

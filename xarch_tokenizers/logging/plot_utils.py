@@ -13,6 +13,8 @@ import seaborn as sns
 from matplotlib.cm import viridis
 from matplotlib.colors import to_hex
 
+NORMAL_FONT = 18
+TITLE_FONT = 24
 TASK_TO_PLOT_MAPPING = {
     "turkishmmlu_mathematics": "TUR-MMLU-Math",
     "turkishmmlu_geography": "TUR-MMLU-Geo",
@@ -38,6 +40,28 @@ TASK_TO_PLOT_MAPPING = {
     "mgsm_th": "MGSM-Th",
     "mgsm_zh": "MGSM-Zh",
 }
+
+
+def get_new_6_fig(title, sharey=True):
+    # Create figure with subplots (2 rows, 3 columns)
+    fig, axes = plt.subplots(2, 3, figsize=(18, 10), sharey=sharey)
+    fig.suptitle(title, y=0.98)
+
+    # Flatten axes array for easier indexing
+    axes_flat = axes.flatten()
+    return fig, axes_flat
+
+
+def get_new_fig(title, sharey=True, nrows=2, ncols=3):
+    # Create figure with subplots (2 rows, 3 columns)
+    fig, axes = plt.subplots(
+        nrows, ncols, figsize=(6 * ncols, 5 * nrows), sharey=sharey
+    )
+    fig.suptitle(title, y=0.98)
+
+    # Flatten axes array for easier indexing
+    axes_flat = axes.flatten()
+    return fig, axes_flat
 
 
 def download_font():
@@ -87,13 +111,13 @@ def setup_styles_matplotlib(custom_font):
             "font.family": "sans-serif",
             "font.sans-serif": [custom_font.get_name()]
             + plt.rcParams["font.sans-serif"],
-            "font.size": 14,  # Default font size
-            "axes.titlesize": 16,  # Title font size
-            "axes.labelsize": 14,  # Axis label font size
-            "xtick.labelsize": 14,  # X-axis tick label font size
-            "ytick.labelsize": 14,  # Y-axis tick label font size
-            "legend.fontsize": 14,  # Legend font size
-            "figure.titlesize": 16,  # Figure title font size
+            "font.size": NORMAL_FONT,  # Default font size
+            "axes.titlesize": TITLE_FONT,  # Title font size
+            "axes.labelsize": NORMAL_FONT,  # Axis label font size
+            "xtick.labelsize": NORMAL_FONT,  # X-axis tick label font size
+            "ytick.labelsize": NORMAL_FONT,  # Y-axis tick label font size
+            "legend.fontsize": NORMAL_FONT,  # Legend font size
+            "figure.titlesize": TITLE_FONT,  # Figure title font size
         }
     )
 
@@ -106,7 +130,7 @@ def setup_styles_plotly(custom_font):
     # Define custom font settings for Plotly
     font_settings = {
         "family": "Atkinson Hyperlegible, Arial, sans-serif",
-        "size": 14,
+        "size": NORMAL_FONT,
         "color": "#333333",
     }
 
@@ -117,7 +141,7 @@ def setup_styles_plotly(custom_font):
     template.layout.title = {
         "font": {
             "family": font_settings["family"],
-            "size": 16,
+            "size": TITLE_FONT,
             "color": font_settings["color"],
         },
         "x": 0.5,  # Center title
@@ -128,12 +152,12 @@ def setup_styles_plotly(custom_font):
     axis_settings = {
         "titlefont": {
             "family": font_settings["family"],
-            "size": 14,
+            "size": TITLE_FONT,
             "color": font_settings["color"],
         },
         "tickfont": {
             "family": font_settings["family"],
-            "size": 14,
+            "size": NORMAL_FONT,
             "color": font_settings["color"],
         },
         "gridcolor": "#E5E5E5",  # Similar to whitegrid in seaborn
@@ -148,7 +172,7 @@ def setup_styles_plotly(custom_font):
     template.layout.legend = {
         "font": {
             "family": font_settings["family"],
-            "size": 14,
+            "size": NORMAL_FONT,
             "color": font_settings["color"],
         },
         "bgcolor": "rgba(255, 255, 255, 0.5)",
@@ -187,16 +211,33 @@ def setup_styles():
 
 # Define base colors for each model family
 MODEL_FAMILY_COLORS = {
+    "mpt": "#78909C",  # Brighter blue-grey
     "llama": "#5B21FF",  # Brighter purple
     "qwen": "#FF3E30",  # Brighter red
     "gpt": "#4285F4",  # Google Blue
+    "xglm": "#0081FB",  # Meta Blue
     "mistral": "#00C853",  # Brighter green
     "gemma": "#FFD600",  # Brighter yellow
     "claude": "#FF9100",  # Brighter orange
     "phi": "#00E5FF",  # Brighter cyan
     "aya": "#8D6E63",  # Brighter brown
-    "mpt": "#78909C",  # Brighter blue-grey
     "pythia": "#FF6E40",  # Brighter deep orange
+    "comma": "#FFDD00",  # orange
+    "llama": "#8B5CF6",  # Violet
+    "qwen": "#C80505",  # Red
+    "gpt-4o": "#0C4F3A",  # Emerald
+    "gpt2": "#4B937CFF",  # Emerald
+    "xglm": "#3B82F6",  # Blue
+    "mistral": "#F59E0B",  # Amber
+    "gemma": "#06B6D4",  # Cyan
+    "claude": "#F97316",  # Orange
+    "phi": "#37197E",  # Purple
+    "aya": "#CA35A7",  # Pink
+    "pythia": "#7476EC",  # Indigo
+    "byt5": "#18AA2B",  # Emerald-600
+    "mbert": "#2563EB",  # Blue-600
+    "bloom": "#5031DD",  # Violet-600
+    "tokenmonster": "#ED6AAC",
 }
 
 
@@ -282,6 +323,23 @@ MODEL_TO_COLOR = {
     "mistralai/Mixtral-8x7B-v0.1": get_model_color("mistral", 56),
     "CohereLabs/aya-expanse-8B": get_model_color("aya", 8),
     "google/gemma-7b-it": get_model_color("gemma", 7),
+}
+
+MODEL_TO_COLOR = {
+    "Comma": MODEL_FAMILY_COLORS["comma"],
+    "Llama-3.2": MODEL_FAMILY_COLORS["llama"],
+    "Phi-3": MODEL_FAMILY_COLORS["phi"],
+    "GPT-2": MODEL_FAMILY_COLORS["gpt2"],
+    "GPT-4o": MODEL_FAMILY_COLORS["gpt-4o"],
+    "BLOOM": MODEL_FAMILY_COLORS["bloom"],
+    "XGLM": MODEL_FAMILY_COLORS["xglm"],
+    "Tekken": MODEL_FAMILY_COLORS["mistral"],
+    "ByT5": MODEL_FAMILY_COLORS["byt5"],
+    "mBERT": MODEL_FAMILY_COLORS["mbert"],
+    "Qwen-3": MODEL_FAMILY_COLORS["qwen"],
+    "TokenMonster": MODEL_FAMILY_COLORS["tokenmonster"],
+    "Gemma-2": MODEL_FAMILY_COLORS["gemma"],
+    "Aya": MODEL_FAMILY_COLORS["aya"],
 }
 
 

@@ -694,9 +694,14 @@ def created_consolidated(dcp_directory: Path):
         print("Found model.pth, skipping creating consolidated.pth")
         return
 
+    print("Creating consolidated.pth")
     from torch.distributed.checkpoint.format_utils import dcp_to_torch_save
 
     dcp_to_torch_save(dcp_directory, consolidated_path)
+    # also save model.pth without the optimizer states
+    state_dct = torch.load(consolidated_path, map_location="cpu", weights_only=True)
+    state_dct.pop("optim")
+    torch.save(state_dct, dcp_directory.joinpath("model.pth"))
 
 
 def main():

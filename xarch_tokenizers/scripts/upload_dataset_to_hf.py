@@ -155,6 +155,7 @@ def create_dataset_dict(
             df.replace(np.nan, "", inplace=True)
             # Create dataset
             dataset = Dataset.from_pandas(df)
+            # dataset = Dataset.from_pandas(df, features={"variation_id": "string"})
             dataset_dict[split_name] = dataset
         if len(files) > 0:
             logger.info(
@@ -315,13 +316,28 @@ def upload_dataset(dataset_dir: Path, config: HFUploadConfig, logger) -> None:
 
     card = create_dataset_card(config, config_names)
     card.push_to_hub(repo_id, token=config.hf_token)
+    # push folder to hf
+    dataset_dir = dataset_dir.resolve()
+    # wrap_huggingface_hub_op(api.upload_folder, logger)(
+    #     folder_path=dataset_dir,
+    #     repo_id=repo_id,
+    #     token=config.hf_token,
+    #     repo_type="dataset",
+    # )
+    # config_names = [x.name for x in dataset_dir.glob("*") if x.is_dir()]
+
+    # configs:
+    # - config_name: farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi
+    #   data_files:
+    #   - split: test
+    #     path: farsi_tokenizer_robustness_completion_arabic_keyboard_for_farsi/test-*
     for subset_dir in dataset_dir.iterdir():
         subset_name = subset_dir.name
-        print(f"  Processing subset: {subset_name}")
+        logger.info(f"  Processing subset: {subset_name}")
 
         subset_dataset_dict = create_dataset_dict(config, subset_dir, logger)
         if not subset_dataset_dict:
-            print(f"    No valid data files found in subset {subset_name}")
+            logger.warning(f"    No valid data files found in subset {subset_name}")
             continue
         # todo: depreceate upload_individually
         if config.upload_individually:

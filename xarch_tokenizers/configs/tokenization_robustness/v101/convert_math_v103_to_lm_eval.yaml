@@ -1,0 +1,137 @@
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_math_v103_to_lm_eval.yaml
+
+upload_to_hf: true
+upload_individually: false
+is_translation: false
+flatten_metadata: true
+tag: 1.0.3
+collections: 
+  - tokenization_robustness_completion
+private: false
+tags:
+  - multilingual
+  - tokenization
+version: collection
+hf_organization: r-three
+dataset_name: tokenizer_robustness_completion_math
+split_by_lang: false
+record_tokenizer_stats: true
+
+lm_eval_local_or_hf: hf
+# lm_eval_local_or_hf: local
+
+dataset_card:
+  dataset_name: "Tokenization Robustness Dataset"
+  dataset_summary: "A comprehensive evaluation dataset for testing robustness of different tokenization strategies."
+  dataset_description: "This dataset evaluates how robust language models are to different tokenization strategies and edge cases. It includes text completion questions with multiple choice answers designed to test various aspects of tokenization handling."
+  curators: "R3"
+  # languages: "English (en)"
+  # direct_use: "This dataset is intended for evaluating language model robustness to tokenization variations. It can be used for benchmarking models and understanding their sensitivity to input preprocessing."
+  # out_of_scope_use: "This dataset should not be used for training models, as it is specifically designed for evaluation. It may not be suitable for assessing performance on tasks other than tokenization robustness."
+  dataset_structure: "The dataset contains multiple-choice questions with associated metadata about tokenization types and categories."
+  curation_rationale: "Created to address the lack of comprehensive evaluation tools for tokenization robustness in language models."
+  data_collection: "Questions were systematically generated bu humans to cover various tokenization edge cases and strategies."
+  has_annotations: True
+  personal_sensitive_info: "The dataset does not contain personal or sensitive information."
+  bias_risks_limitations: "The dataset focuses primarily on English text and may not generalize to other languages or tokenization schemes not covered in the evaluation."
+  # dataset_card_contact: "gsaltintas@cs.toronto.edu"
+
+
+  # language: None
+  license: cc
+  # annotations_creators: None
+  # language_creators: None
+  multilinguality: multilingual
+  # size_categories: None
+  # source_datasets: None
+  task_categories: 
+    - multiple-choice
+  # task_ids: None
+  # paperswithcode_id: None
+  pretty_name: Tokenization Robustness Math
+  # train_eval_index: None
+  # config_names: None
+  ignore_metadata_errors: false
+
+
+dataset_path: data/v103.1.xlsx
+output_dir: data/v103.1/math
+separator: "§§§"
+# sheet_name: "Examples-cleaned"
+sheet_name: "Math-Text-Completion"
+# question_field: MMLU-version
+question_field: Question
+target_field: Correct
+option_fields:
+  - Opt 1
+  - Opt 2
+  - Opt 3
+metadata_fields:
+  subcategories: Subcategory
+  category: Category
+  # type: Type
+  lang: Lang
+  second_lang: "2nd Lang"
+  # coding_lang: "Coding Lang"
+  notes: Notes
+  id: Id
+  set_id: "Set Id"
+  variation_id: "Variation Id"
+  # split: Split
+  
+create_subset_dirs: true
+subset_by: Subcategory
+# dataset_by: Category
+dataset_format: parquet
+split_field: Split
+combine_all_splits: true
+# subset_by: Subcategory
+lm_eval_task:
+  dataset_name: tokenization_robustness_completion
+  task: tokenization_robustness_completion
+  # group: tokenizer_robustness
+  dataset_path: parquet
+  # tag:
+  #   - tokenizer_robustness
+  output_type: multiple_choice
+  training_split: null
+  validation_split: null
+  doc_to_text:  '{{ question.strip() }}'
+  # doc_to_target: '{{answer_label }}'
+  doc_to_target: "answer"  # Changed from '{{answer_label}}' to field name
+  doc_to_choice: "choices"  # Changed from null to actual field name
+  test_split: test
+  # fewshot_split: dev
+  num_fewshot: 0
+  metric_list:
+    - metric: acc
+      aggregation: mean
+      higher_is_better: true
+    - metric: acc_norm
+      aggregation: mean
+      higher_is_better: true
+  aggregate_metric_list:
+    - metric: acc
+      aggregation: mean
+      weight_by_size: true
+    - metric: acc_norm
+      aggregation: mean
+      weight_by_size: true
+  metadata:
+    version: "1.0.2"
+    description: "Tokenization robustness evaluation dataset"
+
+  # It doesn't have a yaml file extension as it is not meant to be imported directly
+  # by the harness.
+
+  target_delimiter: ' '
+  # generation_kwargs:
+  #   until:
+  #     - "\n"
+  #   do_sample: false
+  #   temperature: 0.0
+# subset_args:
+#   include: tiny_xquad_common_yamlAdd commentMore actions
+#   task: tiny_xquad_zh
+#   dataset_name: tiny_xquad.zh
+#   doc_to_text: "语境: {{context}}\n\n问题: {{question}}\n\n回答:"
