@@ -13,7 +13,7 @@ MODEL_PRETTY_NAMES = {
     "meta-llama-Llama-3.2-1B": "Llama-3.2",
     "microsoft-Phi-3-mini-4k-instruct": "Phi-3",
     "gpt2": "GPT-2",
-    "bigscience-bloom": "BLOON",
+    "bigscience-bloom": "BLOOM",
     "facebook-xglm-564M": "XGLM",
     "mistralai-tekken": "Tekken",
     "google-byt5-small": "ByT5",
@@ -23,6 +23,23 @@ MODEL_PRETTY_NAMES = {
     "tiktoken-gpt-4o": "GPT-4o",
     "google-gemma-2-2b": "Gemma-2",
     "CohereLabs-aya-expanse-8b": "Aya",
+}
+
+VOCAB_BUCKETS = {
+    "r-three/supertoken_models-llama_google-byt5-small": "X-Small",
+    "r-three/supertoken_models-llama_common-pile-comma-v0.1": "Small",
+    "r-three/supertoken_models-llama_microsoft-Phi-3-mini-4k-instruct": "Small",
+    "r-three/supertoken_models-llama_gpt2": "Small",
+    "r-three/supertoken_models-llama_tokenmonster-englishcode-32000-consistent-v1": "Small",
+    "r-three/supertoken_models-llama_google-bert-bert-base-multilingual-cased": "Medium",
+    "r-three/supertoken_models-llama_mistralai-tekken": "Medium",
+    "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B": "Medium",
+    "r-three/supertoken_models-llama_Qwen-Qwen3-8B": "Medium",
+    "r-three/supertoken_models-llama_tiktoken-gpt-4o": "Large",
+    "r-three/supertoken_models-llama_google-gemma-2-2b": "Large",
+    "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b": "Large",
+    "r-three/supertoken_models-llama_bigscience-bloom": "Large",
+    "r-three/supertoken_models-llama_facebook-xglm-564M": "Large",
 }
 
 
@@ -182,6 +199,11 @@ def load_all_samples(
             .split("2025")[0]
             .strip("_")
         )
+        task_name = task_name.replace(
+            "additional_spaces", "space_additions_for_natural_split"
+        )
+        print(task_name)
+
         try:
             sample = pd.read_json(path_or_buf=sample_path, lines=True)
             sample["model_name"] = model_name
@@ -208,7 +230,17 @@ def load_all_samples(
         )
         samples = samples.drop(columns=["arguments", "filter", "filtered_resps"])
     print(samples["set_id"].unique())
+    ## TODO: change later
+    samples["task"] = samples["task"].apply(
+        lambda x: x
+        if "additional_spaces" not in x
+        else x.replace("additional_spaces", "space_additions_for_natural_split")
+    )
+    samples["subcategories"] = samples["subcategories"].apply(
+        lambda x: x.replace("Additional spaces", "Space additions for natural split")
+    )
     samples["task_pretty_name"] = samples["subcategories"].apply(get_pretty_name)
+    samples["vocab_bucket"] = samples["model_name"].map(VOCAB_BUCKETS)
     samples["model_name"] = samples["model_name"].apply(clean_model_name)
     samples["is_canonical"] = (
         samples["variation_id"].apply(lambda x: str(x).split(".")[1]) == "0"

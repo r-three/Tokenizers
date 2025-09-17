@@ -57,7 +57,8 @@ dataset_path: data/v103.1.xlsx
 output_dir: data/v103.1/chinese
 separator: "§§§"
 # sheet_name: "Examples-cleaned"
-sheet_name: "Chinese-Text-Completion"
+sheet_name: "Cleaned-Chinese-Text-Completion"
+# sheet_name: "Chinese-Text-Completion"
 # sheet_name: "STEM-Text-Completion"
 # question_field: MMLU-version
 question_field: Question
@@ -68,6 +69,7 @@ option_fields:
   - Opt 3
 metadata_fields:
   subcategories: Subcategory
+  category: Category
   # type: Type
   lang: Lang
   second_lang: "2nd Lang"

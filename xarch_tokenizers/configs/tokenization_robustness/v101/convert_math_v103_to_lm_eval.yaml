@@ -1,6 +1,6 @@
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_math_v103_to_lm_eval.yaml
 
-upload_to_hf: false
+upload_to_hf: true
 upload_individually: false
 is_translation: false
 flatten_metadata: true
@@ -15,6 +15,7 @@ version: collection
 hf_organization: r-three
 dataset_name: tokenizer_robustness_completion_math
 split_by_lang: false
+record_tokenizer_stats: true
 
 lm_eval_local_or_hf: hf
 # lm_eval_local_or_hf: local
@@ -67,6 +68,7 @@ option_fields:
   - Opt 3
 metadata_fields:
   subcategories: Subcategory
+  category: Category
   # type: Type
   lang: Lang
   second_lang: "2nd Lang"
@@ -76,6 +78,7 @@ metadata_fields:
   set_id: "Set Id"
   variation_id: "Variation Id"
   # split: Split
+  
 create_subset_dirs: true
 subset_by: Subcategory
 # dataset_by: Category

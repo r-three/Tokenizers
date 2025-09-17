@@ -14,6 +14,7 @@ tags:
 version: collection
 hf_organization: r-three
 dataset_name: farsi_tokenizer_robustness_completion
+record_tokenizer_stats: true
 
 lm_eval_local_or_hf: hf
 # lm_eval_local_or_hf: local
@@ -66,10 +67,11 @@ option_fields:
   - Opt 3
 metadata_fields:
   subcategories: Subcategory
+  category: Category
   # type: Type
   lang: Lang
   second_lang: "2nd Lang"
-  coding_lang: "Coding Lang"
+  # coding_lang: "Coding Lang"
   notes: Notes
   id: Id
   set_id: "Set Id"

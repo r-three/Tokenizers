@@ -10,23 +10,32 @@ It creates parquet files and creates corresponding yaml files in the lm_eval dir
 ## TODO: do i need to add the subset config to daaset card
 ## TODO: language collections
 # TODO: add lang fitlering??
+import enum
+import glob
 import json
 import math
 import random
 import traceback
 import warnings
+from codecs import ignore_errors
 from dataclasses import dataclass, field, fields
 from pathlib import Path
+from re import L
 from typing import Any, Dict, List, Literal, Optional, Union
 
 import numpy as np
 import pandas as pd
+import torch
 import yaml
+from cv2 import add
 from datasets import Dataset
+from git import Tree
+from transformers import AutoModel, AutoTokenizer
 
 # For tokenizer loading
 from xarch_tokenizers.experiment_config import load_config
 from xarch_tokenizers.logging.logger import setup_logger
+from xarch_tokenizers.scripts.lingua_tokenizers import Tokenizer, build_tokenizer
 from xarch_tokenizers.scripts.upload_dataset_to_hf import (
     HFUploadConfig,
     get_dataset_name,
@@ -293,7 +302,10 @@ class DatasetConverterConfig(HFUploadConfig):
         default_factory=LmEvalTaskArgs,
         metadata={"help": "LM Evaluation task configuration"},
     )
+    record_tokenizer_stats: bool = False
     _create_experiment_dir: bool = False
+    set_id_field: str = "Set Id"
+    variation_id_field: str = "Variation Id"
 
     upload_to_hf: bool = False
     lm_eval_local_or_hf: Literal["local", "hf"] = field(
@@ -308,7 +320,7 @@ class DatasetConverterConfig(HFUploadConfig):
 
     def __post_init__(self):
         self.dataset_path = Path(str(self.dataset_path))
-        if not self.dataset_path.exists():
+        if not self.dataset_path.resolve().absolute().exists():
             raise ValueError(
                 f"Provided path ({self.dataset_path.absolute().as_posix()}) doesn't exist."
             )
@@ -475,11 +487,19 @@ def convert_to_lm_eval_format(
         choices.insert(correct_idx, correct_answer)
         metadata = {
             opt_field: row[opt_val]
-            if isinstance(row[opt_val], str)
-            or (isinstance(row[opt_val], float) and not math.isnan(row[opt_val]))
-            else ""
+            # if isinstance(row[opt_val], str)
+            # or (isinstance(row[opt_val], float) and not math.isnan(row[opt_val]))
+            # else ""
             for opt_field, opt_val in config.metadata_fields.items()
         }
+        if config.record_tokenizer_stats:
+            metadata["vanilla_cos_sim_to_canonical"] = row[
+                "vanilla_cos_sim_to_canonical"
+            ]
+            metadata["trimmed_cos_sim_to_canonical"] = row[
+                "trimmed_cos_sim_to_canonical"
+            ]
+            metadata["token_counts"] = row["token_counts"]
         split = str(row.get(config.split_field, "")).strip()
         if not split or split.lower() in ["", "nan", "none", "null"]:
             split = "test"
@@ -501,6 +521,9 @@ def convert_to_lm_eval_format(
         return None, None
     samples = pd.DataFrame(samples)
     data_files = {}
+    samples["set_id"] = samples["set_id"].astype("string")
+    samples["variation_id"] = samples["variation_id"].astype("string")
+    samples["lang"] = samples["lang"].astype("string")
     for split in samples["split"].unique():
         try:
             # output_path.mkdir(exist_ok=True, parents=True)
@@ -742,7 +765,7 @@ def transform_w_collection(
                     lambda x: x.split(",")[0] if isinstance(x, str) else x
                 )
                 mask = (
-                    filtered_df[config.metadata_fields.get("variation_id")]
+                    filtered_df[config.variation_id_field]
                     .astype(str)
                     .str.split(".")
                     .str[-1]
@@ -818,6 +841,169 @@ def transform_w_collection(
     )
 
 
+def record_tokenizer_stats(df, config: DatasetConverterConfig):
+    tokenizers = [
+        "google/gemma-2-2b",
+        "common-pile/comma-v0.1-1t",
+        "meta-llama/Llama-3.2-1B",
+        "microsoft/Phi-3-mini-4k-instruct",
+        "gpt2",
+        "bigscience/bloom",
+        "facebook/xglm-564M",
+        "mistralai/tekken",
+        "google/byt5-small",
+        "google-bert/bert-base-multilingual-cased",
+        "Qwen/Qwen3-8B",
+        "tokenmonster/englishcode-32000-consistent-v1",
+        "tiktoken/gpt-4o",
+        "CohereLabs/aya-expanse-8b",
+    ]
+    models = [
+        "google-gemma-2-2b",
+        "common-pile-comma-v0.1",
+        "meta-llama-Llama-3.2-1B",
+        "microsoft-Phi-3-mini-4k-instruct",
+        "gpt2",
+        "bigscience-bloom",
+        "facebook-xglm-564M",
+        "mistralai-tekken",
+        "google-byt5-small",
+        "google-bert-bert-base-multilingual-cased",
+        "Qwen-Qwen3-8B",
+        "tokenmonster-englishcode-32000-consistent-v1",
+        "tiktoken-gpt-4o",
+        "cohereLabs-aya-expanse-8b",
+    ]
+
+    ## cosine sim. against canonical
+    canonical_mask = df[config.variation_id_field].apply(
+        lambda x: str(x).split(".")[1] == "0"
+    )
+    import torch
+
+    vanilla_cos_sims = pd.DataFrame()
+    trimmed_cos_sims = pd.DataFrame()
+
+    for i, (tok_name, model_name) in enumerate(zip(tokenizers, models)):
+        tok = build_tokenizer(tok_name)
+        device = (
+            torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+        )
+        import gc
+
+        gc.collect()
+        model = AutoModel.from_pretrained(
+            f"r-three/supertoken_models-llama_{model_name}"
+        )
+        # model = model.to(device)
+        with torch.no_grad():
+            for i, row in df.iterrows():
+                import code
+
+                set_id = row[config.set_id_field]
+
+                if canonical_mask[i]:
+                    print(f"Skipping canonical example set_id {set_id} in row {i}")
+                    vanilla_cos_sims.loc[i, tok_name] = 1.0
+                    trimmed_cos_sims.loc[i, tok_name] = 1.0
+                    continue
+
+                var_id = row[config.variation_id_field]
+                try:
+                    canonical_text = df[
+                        canonical_mask & (df[config.set_id_field] == set_id)
+                    ].iloc[0][config.question_field]
+                except:
+                    import code
+
+                    code.interact(local=locals() | globals())
+                # code.interact(local=locals() | globals())
+                if not canonical_text:
+                    print(
+                        f"Something wrong with the canonical text for set id {set_id}"
+                    )
+                canonical_tokens = tok.encode(
+                    canonical_text, add_bos=False, add_eos=False
+                )
+                perturbed_text = row[config.question_field]
+                perturbed_tokens = tok.encode(
+                    perturbed_text, add_bos=False, add_eos=False
+                )
+                canonical_embed = (
+                    model.embed_tokens(torch.tensor(canonical_tokens))
+                    .cpu()
+                    .mean(axis=0)
+                )
+                perturbed_embed = (
+                    model.embed_tokens(torch.tensor(perturbed_tokens))
+                    .cpu()
+                    .mean(axis=0)
+                )
+                vanilla_cos_sim = torch.nn.functional.cosine_similarity(
+                    canonical_embed, perturbed_embed, dim=0
+                ).item()
+
+                ## brute force trimming
+                start_ind_can, start_ind_pert = 0, 0
+                end_ind_can, end_ind_pert = (
+                    len(canonical_tokens) - 1,
+                    len(perturbed_tokens) - 1,
+                )
+                while start_ind_can < end_ind_can and start_ind_pert < end_ind_pert:
+                    if (
+                        canonical_tokens[start_ind_can]
+                        == perturbed_tokens[start_ind_pert]
+                    ):
+                        start_ind_can += 1
+                        start_ind_pert += 1
+                    else:
+                        break
+                while end_ind_can > start_ind_can and end_ind_pert > start_ind_pert:
+                    if canonical_tokens[end_ind_can] == perturbed_tokens[end_ind_pert]:
+                        end_ind_can -= 1
+                        end_ind_pert -= 1
+                    else:
+                        break
+                # print(
+                #     f"Row {i}, start_ind_can: {start_ind_can} - start_ind_pert: {start_ind_pert};\nend_ind_can: {end_ind_can} - end_ind_pert: {end_ind_pert}"
+                # )
+                canonical_tokens = canonical_tokens[start_ind_can : end_ind_can + 1]
+                perturbed_tokens = perturbed_tokens[start_ind_pert : end_ind_pert + 1]
+                canonical_embed = (
+                    model.embed_tokens(torch.tensor(canonical_tokens))
+                    .cpu()
+                    .mean(axis=0)
+                )
+                perturbed_embed = (
+                    model.embed_tokens(torch.tensor(perturbed_tokens))
+                    .cpu()
+                    .mean(axis=0)
+                )
+                trimmed_cos_sim = torch.nn.functional.cosine_similarity(
+                    canonical_embed, perturbed_embed, dim=0
+                ).item()
+                vanilla_cos_sims.loc[i, tok_name] = vanilla_cos_sim
+                trimmed_cos_sims.loc[i, tok_name] = trimmed_cos_sim
+                # df.loc[i, f"{tok_name}_vanilla_cos_sim"] = vanilla_cos_sim
+                # df.loc[i, f"{tok_name}_trimmed_cos_sim"] = trimmed_cos_sim
+    import code
+
+    df["vanilla_cos_sim_to_canonical"] = vanilla_cos_sims.to_dict(orient="records")
+    df["trimmed_cos_sim_to_canonical"] = trimmed_cos_sims.to_dict(orient="records")
+
+    token_counts = pd.DataFrame()
+    for tok_name in tokenizers:
+        tok = build_tokenizer(tok_name)
+        token_counts[tok_name] = (
+            df[config.question_field]
+            .apply(lambda x: len(tok.encode(x, add_bos=False, add_eos=False)))
+            .tolist()
+        )
+    df["token_counts"] = token_counts.to_dict(orient="records")
+
+    return df
+
+
 def read_data(config, logger):
     logger.info(f"Loading data from {config.dataset_path}")
     if config.dataset_path.suffix == ".xlsx":
@@ -854,7 +1040,8 @@ def read_data(config, logger):
         )
         df = df[df[config.subset_by].apply(is_valid)]
         # df = df[df["_subset"].apply(is_valid)]
-
+    if config.record_tokenizer_stats:
+        record_tokenizer_stats(df, config)
     logger.info(f"Loaded {len(df)} rows")
 
     # Create output directory

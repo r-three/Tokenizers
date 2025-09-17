@@ -1,6 +1,6 @@
 # python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_stem_v103_to_lm_eval.yaml
 
-upload_to_hf: false
+upload_to_hf: true
 upload_individually: false
 is_translation: false
 flatten_metadata: true
@@ -15,6 +15,7 @@ version: collection
 hf_organization: r-three
 dataset_name: tokenizer_robustness_completion_stem
 split_by_lang: false
+record_tokenizer_stats: true
 
 lm_eval_local_or_hf: hf
 # lm_eval_local_or_hf: local
@@ -57,7 +58,7 @@ dataset_path: data/v103.1.xlsx
 output_dir: data/v103.1/stem
 separator: "§§§"
 # sheet_name: "Examples-cleaned"
-sheet_name: "Stem-completion"
+sheet_name: "Stem-Completion"
 # sheet_name: "STEM-Text-Completion"
 # question_field: MMLU-version
 question_field: Question
