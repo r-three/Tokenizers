@@ -2,12 +2,16 @@ import argparse
 import functools
 import random
 import re
+from curses import meta
+from pathlib import Path
 
-# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_preturbations/tr_canonical.tsv data/automated_preturbations/tr_perturbed.tsv --language tr -n 11
-# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_preturbations/it_canonical.tsv data/automated_preturbations/it_perturbed.tsv --language it -n 11
-# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_preturbations/en_canonical.tsv data/automated_preturbations/en_perturbed.tsv --language tr -n 11
-# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_preturbations/zh_canonical.tsv data/automated_preturbations/zh_perturbed.tsv --language zh -n 11
-# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_preturbations/fa_canonical.tsv data/automated_preturbations/fa_perturbed.tsv --language fa -n 11
+from sklearn import base
+
+# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_perturbations/tr_canonical.tsv data/automated_perturbations/tr_perturbed.tsv --language tr -n 11
+# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_perturbations/it_canonical.tsv data/automated_perturbations/it_perturbed.tsv --language it -n 11
+# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_perturbations/en_canonical.tsv data/automated_perturbations/en_perturbed.tsv --language tr -n 11
+# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_perturbations/zh_canonical.tsv data/automated_perturbations/zh_perturbed.tsv --language zh -n 11
+# python xarch_tokenizers/scripts/multi-auto/multi_gemini.py data/automated_perturbations/fa_canonical.tsv data/automated_perturbations/fa_perturbed.tsv --language fa -n 11
 
 # Set a fixed seed for reproducibility of random perturbations
 random.seed(42)
@@ -67,6 +71,9 @@ SUBCATEGORY_MAPPING = {
     "swap_quote_pair": "Swap quote pair",
     "canonical": "Canonical",
     "accent_variation": "Accent Variation",
+    "random_noise_diacritics_addition": "Random Diacritics Addition",
+    "random_natural_diacritics_addition": "Random Semi-Natural Diacritics Addition",
+    "exhaustive_natural_diacritics_delete": "Diacritics Removal",
 }
 
 
@@ -124,6 +131,9 @@ CATEGORY_MAPPING = {
     "swap_quote_pair": "Quotes",
     "canonical": "",
     "accent_variation": "Script / Orthography",
+    "random_noise_diacritics_addition": "Script / Orthography",
+    "random_natural_diacritics_addition": "Script / Orthography",
+    "exhaustive_natural_diacritics_delete": "Script / Orthography",
 }
 
 
@@ -189,6 +199,36 @@ ISO_LANGS = {
     "tr": "tur_Latn",
     "zh": "zho_Hans",
     "fa": "pes_Arab",
+}
+
+ALL_POSSIBLE_ACCENTS = {
+    "a": ["â", "à", "á", "ā", "ă", "ą"],
+    "e": ["ê", "è", "é", "ë", "ē", "ĕ", "ė", "ę", "ě"],
+    "u": ["û", "ù", "ú", "ü", "ū", "ŭ", "ů", "ų"],
+    "ü": ["û", "ù", "ú", "ü", "ū", "ŭ", "ů", "ų"],
+    "i": ["î", "ì", "í", "ï", "ī", "ĭ", "į", "ı", "İ"],
+    "o": ["ô", "ò", "ó", "ö", "ō", "ŏ", "ő", "ø"],
+    "ö": ["ô", "ò", "ó", "ö", "ō", "ŏ", "ő", "ø"],
+    "c": ["ç", "ć", "č", "ĉ", "ċ"],
+    "s": ["ş", "ś", "š", "ŝ", "ș", "ß"],
+    "g": ["ğ", "ģ", "ġ", "ĝ"],
+    #   "n": ["ñ", "ń", "ň", "ņ", "ŋ"],
+    #   "l": ["ł", "ĺ", "ľ", "ļ", "ŀ"],
+    #   "z": ["ž", "ź", "ż", "ẑ"],
+    #   "d": ["đ", "ď", "ḍ"],
+    #   "t": ["ţ", "ť", "ț", "ṭ"],
+    #   "r": ["ř", "ŕ", "ŗ"],
+    "y": ["ý", "ÿ", "ŷ"],
+    #   "h": ["ħ", "ĥ"],
+    #   "j": ["ĵ"],
+    #   "k": ["ķ"],
+    #   "w": ["ŵ"],
+    #   "b": ["ḅ"],
+    #   "f": ["ḟ"],
+    #   "m": ["ṁ"],
+    #   "p": ["ṗ"],
+    #   "v": ["ṽ"],
+    #   "x": ["ẋ"]
 }
 
 LANG_CONFIGS = {
@@ -393,38 +433,38 @@ LANG_CONFIGS = {
     "fa": {
         "alphabet": "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی",
         "keyboard": {
-            'ا': 'غدلت',
-            'ب': 'قریل',
-            'پ': 'تدو',
-            'ت': 'عپان',
-            'ث': 'یصق',
-            'ج': 'گحچ',
-            'چ': 'ج',
-            'ح': 'کخج',
-            'خ': 'مهح',
-            'د': 'اذپ',
-            'ذ': 'لرد',
-            'ر': 'بزذ',
-            'ز': 'یطر',
-            'ژ': 'یطر',
-            'س': 'صطشی',
-            'ش': 'ضظس',
-            'ص': 'سضث',
-            'ض': 'شص',
-            'ط': 'سظز',
-            'ظ': 'شط',
-            'ع': 'تغه',
-            'غ': 'افع',
-            'ف': 'لقغ',
-            'ق': 'بثف',
-            'ک': 'حمگ',
-            'گ': 'جک',
-            'ل': 'فذبا',
-            'م': 'خنک',
-            'ن': 'هوتم',
-            'و': 'نپ',
-            'ه': 'نعخ',
-            'ی': 'ثزسب'
+            "ا": "غدلت",
+            "ب": "قریل",
+            "پ": "تدو",
+            "ت": "عپان",
+            "ث": "یصق",
+            "ج": "گحچ",
+            "چ": "ج",
+            "ح": "کخج",
+            "خ": "مهح",
+            "د": "اذپ",
+            "ذ": "لرد",
+            "ر": "بزذ",
+            "ز": "یطر",
+            "ژ": "یطر",
+            "س": "صطشی",
+            "ش": "ضظس",
+            "ص": "سضث",
+            "ض": "شص",
+            "ط": "سظز",
+            "ظ": "شط",
+            "ع": "تغه",
+            "غ": "افع",
+            "ف": "لقغ",
+            "ق": "بثف",
+            "ک": "حمگ",
+            "گ": "جک",
+            "ل": "فذبا",
+            "م": "خنک",
+            "ن": "هوتم",
+            "و": "نپ",
+            "ه": "نعخ",
+            "ی": "ثزسب",
         },
         "ocr": {
             "ا": "ل1",
@@ -462,101 +502,89 @@ LANG_CONFIGS = {
         },
         "homoglyphs": {
             # Persian letters and their homoglyphs
-            "ی": "يئى",             # Persian yeh + Arabic yeh, yeh with hamza, alef maksura
-            "ي": "یئى",             # Arabic yeh + Persian yeh, yeh with hamza, alef maksura
-            "ئ": "یيى",             # Yeh with hamza + Persian yeh, Arabic yeh, alef maksura
-            "ى": "یيئ",             # Alef maksura + Persian yeh, Arabic yeh, yeh with hamza
-            
-            "ک": "ك",               # Persian kaf + Arabic kaf
-            "ك": "ک",               # Arabic kaf + Persian kaf
-            
-            "ا": "أآإٱ",             # Plain alef + all alef variants with hamza/madda
-            "أ": "اآإٱ",             # Alef with hamza above + other alef variants
-            "آ": "اأإٱ",             # Alef with madda + other alef variants
-            "إ": "اأآٱ",             # Alef with hamza below + other alef variants
-            "ٱ": "اأآإ",             # Alef wasla + other alef variants
-            
-            "ه": "ةہھ",             # Arabic heh + teh marbuta, Urdu heh variants
-            "ة": "هہھ",             # Teh marbuta + heh variants
-            "ہ": "هةھ",             # Urdu heh + Arabic heh, teh marbuta
-            "ھ": "هةہ",             # Heh with yeh above + other heh variants
-            
-            "و": "ؤ",               # Plain waw + waw with hamza
-            "ؤ": "و",               # Waw with hamza + plain waw
-            
+            "ی": "يئى",  # Persian yeh + Arabic yeh, yeh with hamza, alef maksura
+            "ي": "یئى",  # Arabic yeh + Persian yeh, yeh with hamza, alef maksura
+            "ئ": "یيى",  # Yeh with hamza + Persian yeh, Arabic yeh, alef maksura
+            "ى": "یيئ",  # Alef maksura + Persian yeh, Arabic yeh, yeh with hamza
+            "ک": "ك",  # Persian kaf + Arabic kaf
+            "ك": "ک",  # Arabic kaf + Persian kaf
+            "ا": "أآإٱ",  # Plain alef + all alef variants with hamza/madda
+            "أ": "اآإٱ",  # Alef with hamza above + other alef variants
+            "آ": "اأإٱ",  # Alef with madda + other alef variants
+            "إ": "اأآٱ",  # Alef with hamza below + other alef variants
+            "ٱ": "اأآإ",  # Alef wasla + other alef variants
+            "ه": "ةہھ",  # Arabic heh + teh marbuta, Urdu heh variants
+            "ة": "هہھ",  # Teh marbuta + heh variants
+            "ہ": "هةھ",  # Urdu heh + Arabic heh, teh marbuta
+            "ھ": "هةہ",  # Heh with yeh above + other heh variants
+            "و": "ؤ",  # Plain waw + waw with hamza
+            "ؤ": "و",  # Waw with hamza + plain waw
             # Persian digits and their homoglyphs
-            "۰": "٠0",              # Persian zero + Arabic-Indic zero, Latin zero
-            "۱": "١1",              # Persian one + Arabic-Indic one, Latin one
-            "۲": "٢2",              # Persian two + Arabic-Indic two, Latin two
-            "۳": "٣3",              # Persian three + Arabic-Indic three, Latin three
-            "۴": "٤4",              # Persian four + Arabic-Indic four, Latin four
-            "۵": "٥5",              # Persian five + Arabic-Indic five, Latin five
-            "۶": "٦6",              # Persian six + Arabic-Indic six, Latin six
-            "۷": "٧7",              # Persian seven + Arabic-Indic seven, Latin seven
-            "۸": "٨8",              # Persian eight + Arabic-Indic eight, Latin eight
-            "۹": "٩9",              # Persian nine + Arabic-Indic nine, Latin nine
-            
+            "۰": "٠0",  # Persian zero + Arabic-Indic zero, Latin zero
+            "۱": "١1",  # Persian one + Arabic-Indic one, Latin one
+            "۲": "٢2",  # Persian two + Arabic-Indic two, Latin two
+            "۳": "٣3",  # Persian three + Arabic-Indic three, Latin three
+            "۴": "٤4",  # Persian four + Arabic-Indic four, Latin four
+            "۵": "٥5",  # Persian five + Arabic-Indic five, Latin five
+            "۶": "٦6",  # Persian six + Arabic-Indic six, Latin six
+            "۷": "٧7",  # Persian seven + Arabic-Indic seven, Latin seven
+            "۸": "٨8",  # Persian eight + Arabic-Indic eight, Latin eight
+            "۹": "٩9",  # Persian nine + Arabic-Indic nine, Latin nine
             # Arabic-Indic digits and their homoglyphs
-            "٠": "۰0",              # Arabic-Indic zero + Persian zero, Latin zero
-            "١": "۱1",              # Arabic-Indic one + Persian one, Latin one
-            "٢": "۲2",              # Arabic-Indic two + Persian two, Latin two
-            "٣": "۳3",              # Arabic-Indic three + Persian three, Latin three
-            "٤": "۴4",              # Arabic-Indic four + Persian four, Latin four
-            "٥": "۵5",              # Arabic-Indic five + Persian five, Latin five
-            "٦": "۶6",              # Arabic-Indic six + Persian six, Latin six
-            "٧": "۷7",              # Arabic-Indic seven + Persian seven, Latin seven
-            "٨": "۸8",              # Arabic-Indic eight + Persian eight, Latin eight
-            "٩": "۹9",              # Arabic-Indic nine + Persian nine, Latin nine
-            
+            "٠": "۰0",  # Arabic-Indic zero + Persian zero, Latin zero
+            "١": "۱1",  # Arabic-Indic one + Persian one, Latin one
+            "٢": "۲2",  # Arabic-Indic two + Persian two, Latin two
+            "٣": "۳3",  # Arabic-Indic three + Persian three, Latin three
+            "٤": "۴4",  # Arabic-Indic four + Persian four, Latin four
+            "٥": "۵5",  # Arabic-Indic five + Persian five, Latin five
+            "٦": "۶6",  # Arabic-Indic six + Persian six, Latin six
+            "٧": "۷7",  # Arabic-Indic seven + Persian seven, Latin seven
+            "٨": "۸8",  # Arabic-Indic eight + Persian eight, Latin eight
+            "٩": "۹9",  # Arabic-Indic nine + Persian nine, Latin nine
             # Latin digits and their homoglyphs
-            "0": "۰٠",              # Latin zero + Persian zero, Arabic-Indic zero
-            "1": "۱١",              # Latin one + Persian one, Arabic-Indic one
-            "2": "۲٢",              # Latin two + Persian two, Arabic-Indic two
-            "3": "۳٣",              # Latin three + Persian three, Arabic-Indic three
-            "4": "۴٤",              # Latin four + Persian four, Arabic-Indic four
-            "5": "۵٥",              # Latin five + Persian five, Arabic-Indic five
-            "6": "۶٦",              # Latin six + Persian six, Arabic-Indic six
-            "7": "۷٧",              # Latin seven + Persian seven, Arabic-Indic seven
-            "8": "۸٨",              # Latin eight + Persian eight, Arabic-Indic eight
-            "9": "۹٩",              # Latin nine + Persian nine, Arabic-Indic nine
-            
+            "0": "۰٠",  # Latin zero + Persian zero, Arabic-Indic zero
+            "1": "۱١",  # Latin one + Persian one, Arabic-Indic one
+            "2": "۲٢",  # Latin two + Persian two, Arabic-Indic two
+            "3": "۳٣",  # Latin three + Persian three, Arabic-Indic three
+            "4": "۴٤",  # Latin four + Persian four, Arabic-Indic four
+            "5": "۵٥",  # Latin five + Persian five, Arabic-Indic five
+            "6": "۶٦",  # Latin six + Persian six, Arabic-Indic six
+            "7": "۷٧",  # Latin seven + Persian seven, Arabic-Indic seven
+            "8": "۸٨",  # Latin eight + Persian eight, Arabic-Indic eight
+            "9": "۹٩",  # Latin nine + Persian nine, Arabic-Indic nine
             # Punctuation homoglyphs
-            "؟": "?",               # Arabic question mark + Latin question mark
-            "?": "؟",               # Latin question mark + Arabic question mark
-            "؛": ";",               # Arabic semicolon + Latin semicolon
-            ";": "؛",               # Latin semicolon + Arabic semicolon
-            "،": ",",               # Arabic comma + Latin comma
-            ",": "،",               # Latin comma + Arabic comma
-            "٪": "%",               # Arabic percent + Latin percent
-            "%": "٪",               # Latin percent + Arabic percent
-            "«": "»\"",             # Arabic left quote + right quote, Latin quote
-            "»": "«\"",             # Arabic right quote + left quote, Latin quote
-            '"': "«»",              # Latin quote + Arabic quotes
+            "؟": "?",  # Arabic question mark + Latin question mark
+            "?": "؟",  # Latin question mark + Arabic question mark
+            "؛": ";",  # Arabic semicolon + Latin semicolon
+            ";": "؛",  # Latin semicolon + Arabic semicolon
+            "،": ",",  # Arabic comma + Latin comma
+            ",": "،",  # Latin comma + Arabic comma
+            "٪": "%",  # Arabic percent + Latin percent
+            "%": "٪",  # Latin percent + Arabic percent
+            "«": '»"',  # Arabic left quote + right quote, Latin quote
+            "»": '«"',  # Arabic right quote + left quote, Latin quote
+            '"': "«»",  # Latin quote + Arabic quotes
         },
         "persian_homophone_letters": {
-        # Letters that make the /z/ sound
-        'ز': 'ضذظ',  # ze
-        'ض': 'زذظ',  # zad
-        'ذ': 'زضظ',  # zal
-        'ظ': 'زضذ',  # za
-        
-        # Letters that make the /s/ sound
-        'س': 'صث',   # sin
-        'ص': 'سث',   # sad
-        'ث': 'سص',   # se
-        
-        # Letters that make the /t/ sound
-        'ت': 'ط',    # te
-        'ط': 'ت',    # ta
-        
-        # Letters that make the /h/ sound
-        'ه': 'ح',    # he
-        'ح': 'ه',    # he jimi (dotless he)
-        
-        # Letters that can carry the /a/ sound
-        'ا': 'ع',    # alef
-        'ع': 'ا'     # ain (when used as vowel carrier)
-    }
+            # Letters that make the /z/ sound
+            "ز": "ضذظ",  # ze
+            "ض": "زذظ",  # zad
+            "ذ": "زضظ",  # zal
+            "ظ": "زضذ",  # za
+            # Letters that make the /s/ sound
+            "س": "صث",  # sin
+            "ص": "سث",  # sad
+            "ث": "سص",  # se
+            # Letters that make the /t/ sound
+            "ت": "ط",  # te
+            "ط": "ت",  # ta
+            # Letters that make the /h/ sound
+            "ه": "ح",  # he
+            "ح": "ه",  # he jimi (dotless he)
+            # Letters that can carry the /a/ sound
+            "ا": "ع",  # alef
+            "ع": "ا",  # ain (when used as vowel carrier)
+        },
     },
     "tr": {
         "alphabet": "abcçdefgğhıijklmnoöprsştuüvyz",
@@ -566,25 +594,54 @@ LANG_CONFIGS = {
             "d": "serfcx",
             "f": "drtgvc",
             "g": "ftyhbv",
-            "ğ": "hgyuı",
+            "ğ": "üişp",
             "h": "gyujnb",
             "j": "uıkmnh",
             "k": "ıolmj",
-            "l": "kopş",
-            "ş": "li,",
-            "i": "ujko",
+            "l": "kopşö",
+            "ş": "pilç,",
+            "i": "şçǧü",
             "z": "asx",
             "x": "zsdc",
             "c": "xdfv",
-            "v": "cfgb",
-            "b": "vgn",
-            "n": "bhjm",
-            "m": "njkö",
+            "v": "cgb",
+            "b": "vhn",
+            "n": "bjm",
+            "m": "nkö",
             "ö": "mlç",
-            "ç": "ö,",
+            "ç": "öşi",
         },
-        "ocr": {"o": "0", "ı": "1", "i": "1", "s": "5", "g": "ğ", "c": "ç", "S": "Ş"},
+        "ocr": {
+            "o": "0",
+            "ı": "1",
+            "i": "1",
+            "s": "5",
+            "g": "ğ",
+            "c": "ç",
+            "S": "Ş",
+            "İ": "I",
+        },
         "homoglyphs": {"o": "о", "a": "а", "e": "е", "c": "с"},
+        "accent_variations": {
+            "c": ["ç"],
+            "s": ["ş"],
+            "ş": ["sh"],
+            "ç": ["ch"],
+            "u": ["ü"],
+            "o": ["ö"],
+            "i": ["i"],
+            "g": ["ǧ", "ģ"],
+            "a": ["â"],
+        },
+        "base_vowel_map": {
+            "ç": "c",
+            "ş": "s",
+            "ü": "u",
+            "ö": "o",
+            "ı": "i",
+            "ǧ": "g",
+            "â": "a",
+        },
     },
 }
 
@@ -1068,6 +1125,60 @@ def p_accent_variation_exhaustive_it(word, lang_config):
     return sorted(list(results), key=lambda x: x[0])
 
 
+# --- EXHAUSTIVE Perturbation Functions (Applicable to many langs) ---
+
+
+### splits the above function into two
+@preserves_punctuation
+def p_exhaustive_natural_diacritics_delete(word, lang_config):
+    """strips the diactrics in an exhaustive fashion"""
+    if not word:
+        return []
+    base_vowel_map = lang_config.get("base_vowel_map", None)
+    if not base_vowel_map:
+        return []
+    results = set()
+    for i, char in enumerate(word):
+        char_lower = char.lower()
+        base_vowel = base_vowel_map.get(char_lower, None)
+        if base_vowel:
+            p_word = word[:i] + base_vowel + word[i + 1 :]
+            results.add((p_word, base_vowel))
+    return sorted(list(results), key=lambda x: (x[0]))
+
+
+@preserves_punctuation
+def p_random_natural_diacritics_addition(word, lang_config):
+    """adds accented variations"""
+    accent_map = lang_config.get("accent_variations", {})
+    chars = list(word)
+    eligible_indices = [i for i, char in enumerate(chars) if char.lower() in accent_map]
+    if not eligible_indices:
+        return word, ""
+    idx = random.choice(eligible_indices)
+    char_to_replace = chars[idx].lower()
+    diacritized = random.choice(accent_map[char_to_replace])
+    chars[idx] = diacritized.upper() if chars[idx].isupper() else diacritized
+    return "".join(chars), chars[idx]
+
+
+@preserves_punctuation
+def p_random_noise_diacritics_addition(word, lang_config):
+    """randomly replaces any diacritizable character with its diacritized version"""
+    results = set()
+    chars = list(word)
+    eligible_indices = [
+        i for i, char in enumerate(chars) if char.lower() in ALL_POSSIBLE_ACCENTS
+    ]
+    if not eligible_indices:
+        return word, ""
+    idx = random.choice(eligible_indices)
+    char_to_replace = chars[idx].lower()
+    diacritized = random.choice(ALL_POSSIBLE_ACCENTS[char_to_replace])
+    chars[idx] = diacritized.upper() if chars[idx].isupper() else diacritized
+    return "".join(chars), chars[idx]
+
+
 # --- Main Logic ---
 
 
@@ -1084,6 +1195,8 @@ def get_perturbations_for_language(lang_code):
         "capitalization": p_change_capitalization_random,
         "zerowidth": p_add_zero_width_char_random,
         "random_repeat": p_random_repeat,
+        "random_natural_diacritics_addition": p_random_natural_diacritics_addition,
+        "random_noise_diacritics_addition": p_random_noise_diacritics_addition,
     }
 
     exhaustive_pert = {
@@ -1091,22 +1204,23 @@ def get_perturbations_for_language(lang_code):
         "swap_quote_pair": p_swap_quote_pair_exhaustive,
         "internal_space": p_internal_space_exhaustive,
         "internal_zerowidth": p_internal_zero_width_exhaustive,
+        "exhaustive_natural_diacritics_delete": p_exhaustive_natural_diacritics_delete,
         # "exhaustive_repeat": p_exhaustive_repeat,
     }
 
     context_pert = {}
 
-    if lang_code == "it":
-        exhaustive_pert.update(
-            {
-                # 'sms_spelling': p_sms_spelling_exhaustive_it,
-                # 'h_omission': p_h_omission_exhaustive_it,
-                # 'number': p_number_format_exhaustive_it,
-                # 'percentage': p_percentage_exhaustive_it,
-                # 'percentage_symbol': p_percentage_symbol_exhaustive_it,
-                "accent_variation": p_accent_variation_exhaustive_it,
-            }
-        )
+    # if lang_code == "it":
+    #     exhaustive_pert.update(
+    #         {
+    #             # 'sms_spelling': p_sms_spelling_exhaustive_it,
+    #             # 'h_omission': p_h_omission_exhaustive_it,
+    #             # 'number': p_number_format_exhaustive_it,
+    #             # 'percentage': p_percentage_exhaustive_it,
+    #             # 'percentage_symbol': p_percentage_symbol_exhaustive_it,
+    #             "accent_variation": p_accent_variation_exhaustive_it,
+    #         }
+    #     )
 
     return random_pert, exhaustive_pert, context_pert
 
@@ -1120,6 +1234,7 @@ def generate_perturbations(
     target_words_file,
     set_id,
 ):
+    input_file = Path(input_file).resolve().absolute()
     if lang_code not in LANG_CONFIGS:
         print(
             f"Error: Language code '{lang_code}' is not supported. Supported codes: {list(LANG_CONFIGS.keys())}"
@@ -1143,6 +1258,8 @@ def generate_perturbations(
         metadata_output = f"{name}_metadata.{ext}"
     else:
         metadata_output = f"{questions_output}_metadata"
+    questions_output = Path(questions_output).resolve().absolute()
+    metadata_output = Path(metadata_output).resolve().absolute()
 
     target_word_lines = []
     if target_words_file:
