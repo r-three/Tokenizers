@@ -533,6 +533,30 @@ LANG_CONFIGS = {
             "»": "«\"",             # Arabic right quote + left quote, Latin quote
             '"': "«»",              # Latin quote + Arabic quotes
         },
+        "persian_homophone_letters": {
+        # Letters that make the /z/ sound
+        'ز': 'ضذظ',  # ze
+        'ض': 'زذظ',  # zad
+        'ذ': 'زضظ',  # zal
+        'ظ': 'زضذ',  # za
+        
+        # Letters that make the /s/ sound
+        'س': 'صث',   # sin
+        'ص': 'سث',   # sad
+        'ث': 'سص',   # se
+        
+        # Letters that make the /t/ sound
+        'ت': 'ط',    # te
+        'ط': 'ت',    # ta
+        
+        # Letters that make the /h/ sound
+        'ه': 'ح',    # he
+        'ح': 'ه',    # he jimi (dotless he)
+        
+        # Letters that can carry the /a/ sound
+        'ا': 'ع',    # alef
+        'ع': 'ا'     # ain (when used as vowel carrier)
+    }
     },
     "tr": {
         "alphabet": "abcçdefgğhıijklmnoöprsştuüvyz",
