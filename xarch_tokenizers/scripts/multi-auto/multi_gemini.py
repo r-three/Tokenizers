@@ -391,31 +391,147 @@ LANG_CONFIGS = {
         "homoglyphs": {"干": "千", "燥": "躁"},
     },
     "fa": {
-        "alphabet": "ضصثقفغعهخحجچپشسیبلاتنمکگوظطزرذدئو",
-        "keyboard": {  # Persian Standard Layout
-            "ض": "صثقفغعهخحجچ",
-            "ص": "ضثقفغعهخحج",
-            "ث": "صضقفغعهخ",
-            "ق": "فغعهخحجچ",
-            "ف": "قغعهخحج",
-            "غ": "فعهخحج",
-            "ع": "غهخحج",
-            "ه": "غهخحج",
-            "خ": "هحجچ",
-            "ح": "خجچپ",
-            "ج": "حچپش",
-            "چ": "جپشسی",
-            "ش": "چسیبلات",
-            "س": "шسیبل",
-            "ی": "سیبلاتن",
-            "ب": "یبلاتنم",
-            "ل": "باکتنم",
-            "ا": "لکتنم",
+        "alphabet": "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی",
+        "keyboard": {
+            'ا': 'غدلت',
+            'ب': 'قریل',
+            'پ': 'تدو',
+            'ت': 'عپان',
+            'ث': 'یصق',
+            'ج': 'گحچ',
+            'چ': 'ج',
+            'ح': 'کخج',
+            'خ': 'مهح',
+            'د': 'اذپ',
+            'ذ': 'لرد',
+            'ر': 'بزذ',
+            'ز': 'یطر',
+            'ژ': 'یطر',
+            'س': 'صطشی',
+            'ش': 'ضظس',
+            'ص': 'سضث',
+            'ض': 'شص',
+            'ط': 'سظز',
+            'ظ': 'شط',
+            'ع': 'تغه',
+            'غ': 'افع',
+            'ف': 'لقغ',
+            'ق': 'بثف',
+            'ک': 'حمگ',
+            'گ': 'جک',
+            'ل': 'فذبا',
+            'م': 'خنک',
+            'ن': 'هوتم',
+            'و': 'نپ',
+            'ه': 'نعخ',
+            'ی': 'ثزسب'
         },
-        "ocr": {"ک": "گ", "چ": "ج", "ح": "خ", "ب": "پ", "ر": "ز", "و": "د"},
+        "ocr": {
+            "ا": "ل1",
+            "ب": "پتث",
+            "پ": "بتث",
+            "ت": "بپث",
+            "ث": "بپت",
+            "ج": "حخچ",
+            "چ": "جحخ",
+            "ح": "جچخ",
+            "خ": "جچح",
+            "د": "ذو",
+            "ذ": "دو",
+            "ر": "ز",
+            "ز": "ر",
+            "ژ": "ر",
+            "س": "ش",
+            "ش": "س",
+            "ص": "ض",
+            "ض": "ص",
+            "ط": "ظ",
+            "ظ": "ط",
+            "ع": "غ",
+            "غ": "ع",
+            "ف": "ق",
+            "ق": "ف",
+            "ک": "گ",
+            "گ": "ک",
+            "ل": "1ا",
+            "م": "هـ",
+            "ن": "ة",
+            "و": "ؤ",
+            "ه": "ة",
+            "ی": "ى",
+        },
         "homoglyphs": {
-            "ی": "ي",
-            "ک": "ك",  # Different Unicode representations
+            # Persian letters and their homoglyphs
+            "ی": "يئى",             # Persian yeh + Arabic yeh, yeh with hamza, alef maksura
+            "ي": "یئى",             # Arabic yeh + Persian yeh, yeh with hamza, alef maksura
+            "ئ": "یيى",             # Yeh with hamza + Persian yeh, Arabic yeh, alef maksura
+            "ى": "یيئ",             # Alef maksura + Persian yeh, Arabic yeh, yeh with hamza
+            
+            "ک": "ك",               # Persian kaf + Arabic kaf
+            "ك": "ک",               # Arabic kaf + Persian kaf
+            
+            "ا": "أآإٱ",             # Plain alef + all alef variants with hamza/madda
+            "أ": "اآإٱ",             # Alef with hamza above + other alef variants
+            "آ": "اأإٱ",             # Alef with madda + other alef variants
+            "إ": "اأآٱ",             # Alef with hamza below + other alef variants
+            "ٱ": "اأآإ",             # Alef wasla + other alef variants
+            
+            "ه": "ةہھ",             # Arabic heh + teh marbuta, Urdu heh variants
+            "ة": "هہھ",             # Teh marbuta + heh variants
+            "ہ": "هةھ",             # Urdu heh + Arabic heh, teh marbuta
+            "ھ": "هةہ",             # Heh with yeh above + other heh variants
+            
+            "و": "ؤ",               # Plain waw + waw with hamza
+            "ؤ": "و",               # Waw with hamza + plain waw
+            
+            # Persian digits and their homoglyphs
+            "۰": "٠0",              # Persian zero + Arabic-Indic zero, Latin zero
+            "۱": "١1",              # Persian one + Arabic-Indic one, Latin one
+            "۲": "٢2",              # Persian two + Arabic-Indic two, Latin two
+            "۳": "٣3",              # Persian three + Arabic-Indic three, Latin three
+            "۴": "٤4",              # Persian four + Arabic-Indic four, Latin four
+            "۵": "٥5",              # Persian five + Arabic-Indic five, Latin five
+            "۶": "٦6",              # Persian six + Arabic-Indic six, Latin six
+            "۷": "٧7",              # Persian seven + Arabic-Indic seven, Latin seven
+            "۸": "٨8",              # Persian eight + Arabic-Indic eight, Latin eight
+            "۹": "٩9",              # Persian nine + Arabic-Indic nine, Latin nine
+            
+            # Arabic-Indic digits and their homoglyphs
+            "٠": "۰0",              # Arabic-Indic zero + Persian zero, Latin zero
+            "١": "۱1",              # Arabic-Indic one + Persian one, Latin one
+            "٢": "۲2",              # Arabic-Indic two + Persian two, Latin two
+            "٣": "۳3",              # Arabic-Indic three + Persian three, Latin three
+            "٤": "۴4",              # Arabic-Indic four + Persian four, Latin four
+            "٥": "۵5",              # Arabic-Indic five + Persian five, Latin five
+            "٦": "۶6",              # Arabic-Indic six + Persian six, Latin six
+            "٧": "۷7",              # Arabic-Indic seven + Persian seven, Latin seven
+            "٨": "۸8",              # Arabic-Indic eight + Persian eight, Latin eight
+            "٩": "۹9",              # Arabic-Indic nine + Persian nine, Latin nine
+            
+            # Latin digits and their homoglyphs
+            "0": "۰٠",              # Latin zero + Persian zero, Arabic-Indic zero
+            "1": "۱١",              # Latin one + Persian one, Arabic-Indic one
+            "2": "۲٢",              # Latin two + Persian two, Arabic-Indic two
+            "3": "۳٣",              # Latin three + Persian three, Arabic-Indic three
+            "4": "۴٤",              # Latin four + Persian four, Arabic-Indic four
+            "5": "۵٥",              # Latin five + Persian five, Arabic-Indic five
+            "6": "۶٦",              # Latin six + Persian six, Arabic-Indic six
+            "7": "۷٧",              # Latin seven + Persian seven, Arabic-Indic seven
+            "8": "۸٨",              # Latin eight + Persian eight, Arabic-Indic eight
+            "9": "۹٩",              # Latin nine + Persian nine, Arabic-Indic nine
+            
+            # Punctuation homoglyphs
+            "؟": "?",               # Arabic question mark + Latin question mark
+            "?": "؟",               # Latin question mark + Arabic question mark
+            "؛": ";",               # Arabic semicolon + Latin semicolon
+            ";": "؛",               # Latin semicolon + Arabic semicolon
+            "،": ",",               # Arabic comma + Latin comma
+            ",": "،",               # Latin comma + Arabic comma
+            "٪": "%",               # Arabic percent + Latin percent
+            "%": "٪",               # Latin percent + Arabic percent
+            "«": "»\"",             # Arabic left quote + right quote, Latin quote
+            "»": "«\"",             # Arabic right quote + left quote, Latin quote
+            '"': "«»",              # Latin quote + Arabic quotes
         },
     },
     "tr": {
