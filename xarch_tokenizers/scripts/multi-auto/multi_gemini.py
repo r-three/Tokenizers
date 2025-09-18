@@ -1,0 +1,687 @@
+import argparse
+import random
+import re
+import functools
+
+# Set a fixed seed for reproducibility of random perturbations
+random.seed(42)
+
+# --- Punctuation Helper & Decorator ---
+
+def _strip_punctuation(word):
+    """Separates leading/trailing punctuation from the core word."""
+    # This regex finds a prefix of non-word chars, a core (including apostrophes), and a suffix.
+    match = re.match(r"^([\W_]*)([\w']*)([\W_]*)$", word)
+    if match:
+        return match.groups()  # (prefix, core, suffix)
+    return ('', word, '') # Fallback
+
+def preserves_punctuation(func):
+    """
+    A decorator that strips punctuation from a word, applies the perturbation
+    function to the core word, and then reattaches the punctuation.
+    """
+    @functools.wraps(func)
+    def wrapper(word, *args, **kwargs):
+        prefix, core_word, suffix = _strip_punctuation(word)
+        if not core_word:  # Don't perturb if there's no core word (e.g., just punctuation)
+            # For random functions, we need to decide on a consistent return format.
+            # Let's return a tuple that won't cause errors downstream.
+            if "random" in func.__name__:
+                return (word, "", 0) if func.__name__ == 'p_random_repeat' else (word, "")
+            return []
+        
+        # Call the original perturbation function on the core word
+        result = func(core_word, *args, **kwargs)
+
+        # Re-attach punctuation
+        if "exhaustive" in func.__name__:
+            # For exhaustive funcs returning a list of tuples
+            return [(f"{prefix}{p_word}{suffix}", replacement) if len(item) == 2 else (f"{prefix}{p_word}{suffix}", replacement, item[2]) for item in result for p_word, replacement in [item[:2]]]
+
+        else:
+            # For random funcs returning a tuple
+            if len(result) == 3:
+                perturbed_word, replacement, count = result
+                return f"{prefix}{perturbed_word}{suffix}", replacement, count
+            else:
+                perturbed_word, replacement = result
+                return f"{prefix}{perturbed_word}{suffix}", replacement
+    return wrapper
+
+
+# --- Multi-Lingual Perturbation Configuration ---
+
+LANG_CONFIGS = {
+    'it': {
+        'alphabet': 'abcdefghijklmnopqrstuvwxyzàèéìòù',
+        'keyboard': {
+            'a': 'qwsz', 'b': 'vgn', 'c': 'xdfv', 'd': 'serfcx', 'e': 'wsdr',
+            'f': 'drtgvc', 'g': 'ftyhbv', 'h': 'gyujnb', 'i': 'ujko', 'l': 'kopà',
+            'm': 'njk,', 'n': 'bhjm', 'o': 'iklp', 'p': 'olà', 'q': 'wa',
+            'r': 'edfgt', 's': 'wedxza', 't': 'rfgyh', 'u': 'yihj', 'v': 'cfgb',
+            'x': 'zsdc', 'y': 'tghu', 'z': 'asx', 'è': 'é', 'é': 'è',
+            'à': 'ò', 'ò': 'à', 'ù': 'ì', 'ì': 'ù',
+        },
+        'ocr': {
+            'o': '0', 'l': '1', 'i': '1', 'a': '4', 's': '5', 'g': '9',
+            'e': '3', 'b': '8', 'rn': 'm', 'ri': 'n', 'cl': 'd'
+        },
+        'homoglyphs': {
+            'o': 'о', 'l': 'I', 'a': 'а', 'e': 'е', 'c': 'с'
+        },
+        # Italian-specific data
+        'contractions_split': {
+            'del': 'de il', 'dello': 'de lo', 'della': 'de la', 'dei': 'de i',
+            'degli': 'de gli', 'delle': 'de le', 'dell\'': 'de l\'',
+            'al': 'a il', 'allo': 'a lo', 'alla': 'a la', 'ai': 'a i',
+            'agli': 'a gli', 'alle': 'a le', 'all\'': 'a l\'',
+            'dal': 'da il', 'dallo': 'da lo', 'dalla': 'da la', 'dai': 'da i',
+            'dagli': 'da gli', 'dalle': 'da le', 'dall\'': 'da l\'',
+            'nel': 'in il', 'nello': 'in lo', 'nella': 'in la', 'nei': 'in i',
+            'negli': 'in gli', 'nelle': 'in le', 'nell\'': 'in l\'',
+            'col': 'con il', 'coi': 'con i',
+            'sul': 'su il', 'sullo': 'su lo', 'sulla': 'su la', 'sui': 'su i',
+            'sugli': 'su gli', 'sulle': 'su le', 'sull\'': 'su l\'',
+        },
+        'clitics_split': {
+             'glielo': 'glie lo', 'gliela': 'glie la', 'melo': 'me lo'
+        },
+        'avere_h_omission': {'ho': 'o', 'ha': 'a', 'hanno': 'anno'},
+        'sms': {
+            "per": "x", "non": "nn", "comunque": "cmq", "grazie": "grz"
+        },
+        'phonetic': {
+            "che": "ke", "chi": "ki", "scena": "shena", "ghe": "ge", "ghi": "gi"
+        },
+        'accent_variations': {
+            'a': ['a', 'à', 'á', "a'"],
+            'e': ['e', 'è', 'é', "e'"],
+            'i': ['i', 'ì', 'í', "i'"],
+            'o': ['o', 'ò', 'ó', "o'"],
+            'u': ['u', 'ù', 'ú', "u'"],
+        },
+        'base_vowel_map': {
+            'à': 'a', 'á': 'a', 'â': 'a', 'ä': 'a', 'ã': 'a',
+            'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
+            'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
+            'ò': 'o', 'ó': 'o', 'ô': 'o', 'ö': 'o', 'õ': 'o',
+            'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',
+        },
+        'title_variations': [
+            {'signore', 'signor', 'sig.', 'sig', 'sig.re', 'signora', 'sig.ra'},
+            {'dottore', 'dottor', 'dott.', 'dott', 'dr.', 'dr', 'dottoressa', 'dott.ssa', 'dr.ssa'},
+            {'professore', 'professor', 'prof.', 'prof', 'professoressa', 'prof.ssa'},
+            {'ingegnere', 'ingegner', 'ing.', 'ing'},
+            {'avvocato', 'avv.', 'avv', 'avvocatessa'},
+        ]
+    },
+    'en': {
+        'alphabet': 'abcdefghijklmnopqrstuvwxyz',
+        'keyboard': {
+            'a': 'qwsz', 'b': 'vgn', 'c': 'xdfv', 'd': 'serfcx', 'e': 'wsdr',
+            'f': 'drtgvc', 'g': 'ftyhbv', 'h': 'gyujnb', 'i': 'ujko', 'j': 'uikmnh',
+            'k': 'iolmj', 'l': 'kop', 'm': 'njk', 'n': 'bhjm', 'o': 'iklp',
+            'p': 'ol', 'q': 'wa', 'r': 'edfgt', 's': 'wedxza', 't': 'rfgyh',
+            'u': 'yihj', 'v': 'cfgb', 'w': 'qase', 'x': 'zsdc', 'y': 'tghu', 'z': 'asx'
+        },
+        'ocr': {
+            'o': '0', 'l': '1', 'i': '1', 'S': '5', 's': '5', 'G': '6', 'B': '8'
+        },
+        'homoglyphs': {
+            'l': 'I', 'O': '0', 'o': 'о', 'a': 'а'
+        }
+    },
+    'zh': {
+        'alphabet': 'abcdefghijklmnopqrstuvwxyzü', # Pinyin alphabet
+        'keyboard': { # Simulating Pinyin input errors
+            'ü': 'v', 'sh': 's', 'zh': 'z', 'ch': 'c', 'n': 'ng', 'l': 'r'
+        },
+        'ocr': { # Visually similar characters
+            '日': '曰', '土': '士', '人': '入', '天': '夫', '太': '大'
+        },
+        'homoglyphs': {
+            '干': '千', '燥': '躁'
+        }
+    },
+    'fa': {
+        'alphabet': 'ضصثقفغعهخحجچپشسیبلاتنمکگوظطزرذدئو',
+        'keyboard': { # Persian Standard Layout
+            'ض': 'صثقفغعهخحجچ', 'ص': 'ضثقفغعهخحج', 'ث': 'صضقفغعهخ', 'ق': 'فغعهخحجچ',
+            'ف': 'قغعهخحج', 'غ': 'فعهخحج', 'ع': 'غهخحج', 'ه': 'غهخحج', 'خ': 'هحجچ',
+            'ح': 'خجچپ', 'ج': 'حچپش', 'چ': 'جپشسی', 'ش': 'چسیبلات', 'س': 'шسیبل',
+            'ی': 'سیبلاتن', 'ب': 'یبلاتنم', 'ل': 'باکتنم', 'ا': 'لکتنم',
+        },
+        'ocr': {
+            'ک': 'گ', 'چ': 'ج', 'ح': 'خ', 'ب': 'پ', 'ر': 'ز', 'و': 'د'
+        },
+        'homoglyphs': {
+            'ی': 'ي', 'ک': 'ك' # Different Unicode representations
+        }
+    },
+    'tr': {
+        'alphabet': 'abcçdefgğhıijklmnoöprsştuüvyz',
+        'keyboard': {
+            'a': 'qwsz', 's': 'wedxza', 'd': 'serfcx', 'f': 'drtgvc', 'g': 'ftyhbv',
+            'ğ': 'hgyuı', 'h': 'gyujnb', 'j': 'uıkmnh', 'k': 'ıolmj', 'l': 'kopş',
+            'ş': 'li,', 'i': 'ujko', 'z': 'asx', 'x': 'zsdc', 'c': 'xdfv',
+            'v': 'cfgb', 'b': 'vgn', 'n': 'bhjm', 'm': 'njkö', 'ö': 'mlç', 'ç': 'ö,',
+        },
+        'ocr': {
+            'o': '0', 'ı': '1', 'i': '1', 's': '5', 'g': 'ğ', 'c': 'ç', 'S': 'Ş'
+        },
+        'homoglyphs': {
+             'o': 'о', 'a': 'а', 'e': 'е', 'c': 'с'
+        }
+    }
+}
+
+# --- Quote Swapping Configuration ---
+SWAPPABLE_SINGLE_QUOTES = ["'", "‘", "’", "‹", "›", "′", "‚", "‵", "❛", "❜", "‛"]
+SWAPPABLE_DOUBLE_QUOTES = ['"', '“', '”', '«', '»', "″", "‴", "⁗", "「", "」", "『", "』", "„", "‶", "❝", "❞", "‟"]
+QUOTE_PAIRS = [('"', '"'), ("'", "'"), ('“', '”'), ('‘', '’'), ('«', '»'), ('「', '」'), ('『', '』')]
+LANG_PREFIX_MAP = { 'en': 0, 'fa': 1, 'tr': 2, 'it': 3, 'zh': 4 }
+
+
+# --- RANDOM Perturbation Functions ---
+@preserves_punctuation
+def p_typographical_error_insert_random(word, lang_config):
+    alphabet = lang_config.get('alphabet', 'abcdefghijklmnopqrstuvwxyz')
+    if word.isdigit() or (word.endswith('%') and word[:-1].isdigit()):
+        return word, ""
+    if not word: return word, ""
+    pos = random.randint(0, len(word))
+    char = random.choice(alphabet)
+    return word[:pos] + char + word[pos:], char
+
+@preserves_punctuation
+def p_typographical_error_delete_random(word, lang_config):
+    if word.isdigit() or (word.endswith('%') and word[:-1].isdigit()):
+        return word, ""
+    if len(word) < 2: return word, ""
+    pos = random.randint(0, len(word) - 1)
+    return word[:pos] + word[pos+1:], ""
+
+@preserves_punctuation
+def p_typographical_error_substitute_random(word, lang_config):
+    alphabet = lang_config.get('alphabet', 'abcdefghijklmnopqrstuvwxyz')
+    if word.isdigit() or (word.endswith('%') and word[:-1].isdigit()):
+        return word, ""
+    if not word: return word, ""
+    pos = random.randint(0, len(word) - 1)
+    char = random.choice(alphabet)
+    return word[:pos] + char + word[pos+1:], char
+
+@preserves_punctuation
+def p_keyboard_proximity_error_random(word, lang_config):
+    keyboard_map = lang_config.get('keyboard', {})
+    if not keyboard_map: return word, ""
+    
+    chars = list(word)
+    eligible_indices = [i for i, char in enumerate(chars) if char.lower() in keyboard_map]
+    if not eligible_indices: return word, ""
+    idx = random.choice(eligible_indices)
+    char_to_replace = chars[idx].lower()
+    neighbor = random.choice(keyboard_map[char_to_replace])
+    chars[idx] = neighbor.upper() if chars[idx].isupper() else neighbor
+    return "".join(chars), chars[idx]
+
+@preserves_punctuation
+def p_ocr_error_random(word, lang_config):
+    ocr_map = lang_config.get('ocr', {})
+    if not ocr_map: return word, ""
+
+    keys = list(ocr_map.keys())
+    random.shuffle(keys)
+    for target in keys:
+        if target in word:
+            replacement = ocr_map[target]
+            return word.replace(target, replacement, 1), replacement
+    return word, ""
+
+@preserves_punctuation
+def p_add_homoglyph_random(word, lang_config):
+    homoglyph_map = lang_config.get('homoglyphs', {})
+    if not homoglyph_map: return word, ""
+    
+    chars = list(word)
+    eligible_indices = [i for i, char in enumerate(chars) if char in homoglyph_map]
+    if not eligible_indices: return word, ""
+    idx = random.choice(eligible_indices)
+    replacement = homoglyph_map[chars[idx]]
+    chars[idx] = replacement
+    return "".join(chars), replacement
+
+@preserves_punctuation
+def p_permutation_error_random(word, lang_config):
+    if word.isdigit() or (word.endswith('%') and word[:-1].isdigit()): return word, ""
+    if len(word) < 2: return word, ""
+    pos = random.randint(0, len(word) - 2)
+    p_word = word[:pos] + word[pos+1] + word[pos] + word[pos+2:]
+    return p_word, p_word
+
+@preserves_punctuation
+def p_change_capitalization_random(word, lang_config):
+    op = random.choice(['lower', 'upper', 'title'])
+    if op == 'lower': p_word = word.lower()
+    elif op == 'upper': p_word = word.upper()
+    else: p_word = word.title()
+    return p_word, p_word
+
+@preserves_punctuation
+def p_add_zero_width_char_random(word, lang_config):
+    if len(word) < 2: return word, ""
+    pos = random.randint(1, len(word) - 1)
+    replacement = u'\u200b'
+    return word[:pos] + replacement + word[pos:], replacement
+
+@preserves_punctuation
+def p_random_repeat(word, lang_config):
+    if not word:
+        return word, "", 0
+    
+    pos = random.randint(0, len(word) - 1)
+    char_to_repeat = word[pos]
+    num_repeats = random.randint(2, 11)
+    
+    p_word = word[:pos] + (char_to_repeat * num_repeats) + word[pos+1:]
+    replacement = char_to_repeat * num_repeats
+    
+    return p_word, replacement, num_repeats
+
+# --- EXHAUSTIVE Perturbation Functions (Language-Agnostic) ---
+def p_swap_quote_exhaustive(word, lang_config):
+    results = set()
+    for i, char in enumerate(word):
+        if char in SWAPPABLE_SINGLE_QUOTES:
+            for quote_char in SWAPPABLE_SINGLE_QUOTES:
+                if quote_char != char:
+                    p_word = word[:i] + quote_char + word[i+1:]
+                    results.add((p_word, quote_char))
+        elif char in SWAPPABLE_DOUBLE_QUOTES:
+            for quote_char in SWAPPABLE_DOUBLE_QUOTES:
+                if quote_char != char:
+                    p_word = word[:i] + quote_char + word[i+1:]
+                    results.add((p_word, quote_char))
+    return sorted(list(results), key=lambda x: x[0])
+
+def p_swap_quote_pair_exhaustive(word, lang_config):
+    if len(word) < 2: return []
+    original_left, original_right = None, None
+    for left, right in QUOTE_PAIRS:
+        if word.startswith(left) and word.endswith(right):
+            original_left, original_right = left, right
+            break
+    if original_left is None: return []
+    core_content = word[len(original_left):-len(original_right)]
+    original_pair_found = (original_left, original_right)
+    results = set()
+    for new_left, new_right in QUOTE_PAIRS:
+        if (new_left, new_right) != original_pair_found:
+            p_word = f"{new_left}{core_content}{new_right}"
+            replacement = f"{new_left}...{new_right}"
+            results.add((p_word, replacement))
+    return sorted(list(results), key=lambda x: x[0])
+
+def p_internal_space_exhaustive(word, lang_config):
+    if not word:
+        return []
+
+    prefix, core, suffix = _strip_punctuation(word)
+    results = set()
+
+    # Case 1: Word has a core and attached punctuation.
+    if core and (prefix or suffix):
+        if prefix:
+            for i in range(1, 11):
+                results.add((f"{prefix}{' ' * i}{core}{suffix}", f"{prefix}{' ' * i}{core}{suffix}", i))
+        if suffix:
+            for i in range(1, 11):
+                results.add((f"{prefix}{core}{' ' * i}{suffix}", f"{prefix}{core}{' ' * i}{suffix}", i))
+        if prefix and suffix:
+            for i in range(1, 11):
+                results.add((f"{prefix}{' ' * i}{core}{' ' * i}{suffix}", f"{prefix}{' ' * i}{core}{' ' * i}{suffix}", i))
+
+    # Case 2: ANY word (including standalone punctuation) can have spaces added AFTER it.
+    for i in range(1, 11):
+        space = " " * i
+        new_word = f"{word}{space}"
+        results.add((new_word, new_word, i))
+
+    return sorted(list(results), key=lambda x: (x[0], x[2]))
+    
+def p_internal_zero_width_exhaustive(word, lang_config):
+    if not word:
+        return []
+
+    prefix, core, suffix = _strip_punctuation(word)
+    results = set()
+    zero_width_char = u'\u200b'
+
+    # Case 1: Word has a core and attached punctuation.
+    if core and (prefix or suffix):
+        if prefix:
+            for i in range(1, 11):
+                results.add((f"{prefix}{zero_width_char * i}{core}{suffix}", f"{prefix}{zero_width_char * i}{core}{suffix}", i))
+        if suffix:
+            for i in range(1, 11):
+                results.add((f"{prefix}{core}{zero_width_char * i}{suffix}", f"{prefix}{core}{zero_width_char * i}{suffix}", i))
+        if prefix and suffix:
+            for i in range(1, 11):
+                results.add((f"{prefix}{zero_width_char * i}{core}{zero_width_char * i}{suffix}", f"{prefix}{zero_width_char * i}{core}{zero_width_char * i}{suffix}", i))
+
+    # Case 2: ANY word can have zero-width chars added AFTER it.
+    for i in range(1, 11):
+        results.add((f"{word}{zero_width_char * i}", f"{word}{zero_width_char * i}", i))
+
+    return sorted(list(results), key=lambda x: (x[0], x[2]))
+
+@preserves_punctuation
+def p_exhaustive_repeat(word, lang_config):
+    if not word: return []
+    results = set()
+    for i in range(len(word)):
+        char_to_repeat = word[i]
+        # Repeat from 2 times up to 11 times in total
+        for num_repeats in range(2, 12):
+            p_word = word[:i] + (char_to_repeat * num_repeats) + word[i+1:]
+            replacement = char_to_repeat * num_repeats
+            results.add((p_word, replacement, num_repeats))
+    return sorted(list(results), key=lambda x: (x[0], x[2]))
+
+# --- EXHAUSTIVE Perturbation Functions (Italian-Specific) ---
+def _num_to_words_it_helper(num):
+    if num == 0: return ""
+    units = ["", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove"]
+    teens = ["dieci", "undici", "dodici", "tredici", "quattordici", "quinzici", "sedici", "diciassette", "diciotto", "diciannove"]
+    tens = ["", "dieci", "venti", "trenta", "quaranta", "cinquanta", "sessanta", "settanta", "ottanta", "novanta"]
+    if num < 10: return units[num]
+    if num < 20: return teens[num - 10]
+    if num < 100:
+        ten, unit = divmod(num, 10)
+        if unit in [1, 8]: return tens[ten][:-1] + units[unit]
+        return tens[ten] + units[unit]
+    if num < 1000:
+        hundred, rest = divmod(num, 100)
+        hundred_str = "cento" if hundred == 1 else units[hundred] + "cento"
+        return hundred_str + _num_to_words_it_helper(rest)
+    return ""
+
+@preserves_punctuation
+def p_number_format_exhaustive_it(word, lang_config):
+    clean_word = re.sub(r'[.,\s]', '', word)
+    if not clean_word.isdigit(): return []
+    num = int(clean_word)
+    options = set()
+    if num > 999:
+        options.add(f"{num:,}".replace(",", ".")); options.add(f"{num:,}")
+        options.add(f"{num:,}".replace(",", " "))
+    options.add(str(num))
+    if num >= 1000 and num % 1000 == 0:
+        prefix_num = num // 1000
+        options.add(f"{prefix_num}mila"); options.add(f"{prefix_num}k"); options.add(f"{prefix_num}K")
+        prefix_words = _num_to_words_it_helper(prefix_num)
+        if prefix_words:
+            options.add(prefix_words + "mila"); options.add(prefix_words + " mila")
+    if 0 <= num <= 100:
+        if num == 0: options.add("zero")
+        else:
+            word_form = _num_to_words_it_helper(num)
+            if word_form: options.add(word_form)
+    return sorted([(opt, opt) for opt in options if opt != word])
+
+def p_percentage_exhaustive_it(word, lang_config):
+    match = re.fullmatch(r'(\d+)(%)', word)
+    if not match: return []
+    num_str, symbol = match.groups()
+    results = set()
+    num_variations_tuples = p_number_format_exhaustive_it(num_str, lang_config) + [(num_str, num_str)]
+    symbol_variations_tuples = p_percentage_symbol_exhaustive_it(symbol, lang_config) + [(symbol, symbol)]
+    for num_var, _ in num_variations_tuples:
+        for sym_var, _ in symbol_variations_tuples:
+            if sym_var == '%':
+                results.add(f"{num_var}%"); results.add(f"{num_var} %")
+                results.add(f"%{num_var}"); results.add(f"% {num_var}")
+            else:
+                results.add(f"{num_var}{sym_var}"); results.add(f"{num_var} {sym_var}")
+                if sym_var.isalpha(): results.add(f"{num_var}{sym_var.capitalize()}")
+    return sorted([(opt, opt) for opt in results if opt != word])
+
+@preserves_punctuation
+def p_percentage_symbol_exhaustive_it(word, lang_config):
+    if word == '%':
+        return [(r, r) for r in ['per cento', 'percento', 'xcento']]
+    return []
+
+@preserves_punctuation
+def p_sms_spelling_exhaustive_it(word, lang_config):
+    sms_map = lang_config.get('sms', {})
+    word_lower = word.lower()
+    if word_lower in sms_map:
+        replacement = str(sms_map[word_lower])
+        p_word = replacement.capitalize() if word and word[0].isupper() and replacement.isalpha() else replacement
+        return [(p_word, p_word)]
+    return []
+
+@preserves_punctuation
+def p_h_omission_exhaustive_it(word, lang_config):
+    h_omission_map = lang_config.get('avere_h_omission', {})
+    results = set()
+    word_lower = word.lower()
+    if word_lower in h_omission_map:
+        replacement = h_omission_map[word_lower]
+        p_word = replacement.capitalize() if word and word[0].isupper() else replacement
+        results.add((p_word, replacement))
+    if 'ch' in word_lower: results.add((word.replace('ch', 'c').replace('Ch', 'C'), 'c'))
+    if 'gh' in word_lower: results.add((word.replace('gh', 'g').replace('Gh', 'G'), 'g'))
+    return sorted(list(results), key=lambda x: x[0])
+
+@preserves_punctuation
+def p_accent_variation_exhaustive_it(word, lang_config):
+    accent_map = lang_config.get('accent_variations', {})
+    base_vowel_map = lang_config.get('base_vowel_map', {})
+    results = set()
+    for i, char in enumerate(word):
+        char_lower = char.lower()
+        base_vowel = base_vowel_map.get(char_lower, char_lower if char_lower in accent_map else None)
+        if base_vowel:
+            for var in accent_map[base_vowel]:
+                if var != char_lower:
+                    new_char = var.upper() if char.isupper() else var
+                    p_word = word[:i] + new_char + word[i+1:]
+                    results.add((p_word, new_char))
+    return sorted(list(results), key=lambda x: x[0])
+
+
+# --- Main Logic ---
+
+def get_perturbations_for_language(lang_code):
+    """Returns dictionaries of perturbation functions for a given language."""
+    random_pert = {
+        'typo_insert': p_typographical_error_insert_random,
+        'typo_delete': p_typographical_error_delete_random,
+        'typo_substitute': p_typographical_error_substitute_random,
+        'keyboard': p_keyboard_proximity_error_random,
+        'ocr': p_ocr_error_random,
+        'homoglyph': p_add_homoglyph_random,
+        'permutation': p_permutation_error_random,
+        'capitalization': p_change_capitalization_random,
+        'zerowidth': p_add_zero_width_char_random,
+        'random_repeat': p_random_repeat,
+    }
+    
+    exhaustive_pert = {
+        'swap_quote': p_swap_quote_exhaustive,
+        'swap_quote_pair': p_swap_quote_pair_exhaustive,
+        'internal_space': p_internal_space_exhaustive,
+        'internal_zerowidth': p_internal_zero_width_exhaustive,
+        'exhaustive_repeat': p_exhaustive_repeat,
+    }
+    
+    context_pert = {}
+
+    if lang_code == 'it':
+        exhaustive_pert.update({
+            # 'sms_spelling': p_sms_spelling_exhaustive_it,
+            # 'h_omission': p_h_omission_exhaustive_it,
+            # 'number': p_number_format_exhaustive_it,
+            # 'percentage': p_percentage_exhaustive_it,
+            # 'percentage_symbol': p_percentage_symbol_exhaustive_it,
+            'accent_variation': p_accent_variation_exhaustive_it,
+        })
+    
+    return random_pert, exhaustive_pert, context_pert
+
+
+def generate_perturbations(input_file, questions_output, lang_code, num_versions, specific_types, target_words_file, set_id):
+    
+    if lang_code not in LANG_CONFIGS:
+        print(f"Error: Language code '{lang_code}' is not supported. Supported codes: {list(LANG_CONFIGS.keys())}")
+        return
+        
+    lang_config = LANG_CONFIGS[lang_code]
+    RANDOM_WORD_PERTURBATIONS, EXHAUSTIVE_WORD_PERTURBATIONS, CONTEXT_AWARE_PERTURBATIONS = get_perturbations_for_language(lang_code)
+    ALL_PERTURBATIONS = {**RANDOM_WORD_PERTURBATIONS, **EXHAUSTIVE_WORD_PERTURBATIONS, **CONTEXT_AWARE_PERTURBATIONS}
+
+    if '.' in questions_output:
+        name, ext = questions_output.rsplit('.', 1)
+        metadata_output = f"{name}_metadata.{ext}"
+    else:
+        metadata_output = f"{questions_output}_metadata"
+
+    target_word_lines = []
+    if target_words_file:
+        try:
+            with open(target_words_file, 'r', encoding='utf-8') as f:
+                target_word_lines = [line.strip() for line in f.readlines()]
+        except FileNotFoundError:
+            print(f"Error: Target words file not found at '{target_words_file}'")
+            return
+
+    try:
+        with open(input_file, 'r', encoding='utf-8') as infile, \
+             open(questions_output, 'w', encoding='utf-8', newline='') as q_outfile, \
+             open(metadata_output, 'w', encoding='utf-8', newline='') as m_outfile:
+            
+            total_generated = 0
+            for line_num, line in enumerate(infile, 1):
+                line = line.strip()
+                if not line: continue
+                parts = line.split('\t')
+                if len(parts) < 2: continue
+                
+                question_id = (line_num - 1) + set_id
+                variation_counter = 1
+                lang_prefix = LANG_PREFIX_MAP[lang_code]
+
+                original_question = parts[0]
+                words = original_question.split()
+                if not words: continue
+
+                indices_to_perturb = []
+                if target_word_lines and line_num <= len(target_word_lines) and target_word_lines[line_num - 1]:
+                    target_words_set = {w.lower() for w in target_word_lines[line_num - 1].split()}
+                    indices_to_perturb = [i for i, w in enumerate(words) if _strip_punctuation(w)[1].lower() in target_words_set]
+                else:
+                    target_word_str = parts[-1] if len(parts) > 5 and not target_word_lines else None
+                    if target_word_str:
+                        indices_to_perturb = [i for i, w in enumerate(words) if _strip_punctuation(w)[1].lower() == target_word_str.lower()]
+                    else:
+                        indices_to_perturb = list(range(len(words)))
+
+                answers = parts[1:-1] if (len(parts) > 5 and not target_word_lines) else parts[1:]
+                types_to_apply = specific_types if specific_types else ALL_PERTURBATIONS.keys()
+
+                for pert_type in types_to_apply:
+                    if pert_type not in ALL_PERTURBATIONS:
+                        continue
+                    
+                    for index in indices_to_perturb:
+                        original_word_affected = words[index]
+                        
+                        if pert_type in RANDOM_WORD_PERTURBATIONS:
+                            generated_results = set()
+                            max_attempts = num_versions * 5
+                            for _ in range(max_attempts):
+                                if len(generated_results) >= num_versions: break
+                                func = RANDOM_WORD_PERTURBATIONS[pert_type]
+                                result_tuple = func(original_word_affected, lang_config)
+                                
+                                if result_tuple and result_tuple[0] != original_word_affected:
+                                    generated_results.add(result_tuple)
+
+                            for result_tuple in generated_results:
+                                perturbed_word, replacement = result_tuple[0], result_tuple[1]
+                                final_pert_type = pert_type
+                                
+                                if pert_type == 'random_repeat':
+                                    num_repeats = result_tuple[2]
+                                    final_pert_type = f"random_repeat_{num_repeats}"
+                                
+                                temp_words = words[:]; temp_words[index] = perturbed_word
+                                perturbed_question = " ".join(temp_words)
+                                question_parts = [perturbed_question] + answers
+                                variation_id = f"{lang_prefix}.{variation_counter}"
+                                q_outfile.write('\t'.join(map(str, question_parts)) + '\n')
+                                metadata_parts = [original_word_affected, str(index), final_pert_type, replacement, str(question_id), lang_code, variation_id]
+                                sanitized_metadata_parts = [str(p).replace('"', "'") for p in metadata_parts]
+                                m_outfile.write('\t'.join(map(str, question_parts + sanitized_metadata_parts)) + '\n')
+                                total_generated += 1
+                                variation_counter += 1
+                        
+                        elif pert_type in EXHAUSTIVE_WORD_PERTURBATIONS:
+                            func = EXHAUSTIVE_WORD_PERTURBATIONS[pert_type]
+                            perturbed_results = func(original_word_affected, lang_config)
+                            for result_tuple in perturbed_results:
+                                if len(result_tuple) == 3:  # Check for the special format from internal_space/zerowidth/repeat
+                                    p_word, replacement, num_chars = result_tuple
+                                    final_pert_type = f"{pert_type}_{num_chars}"
+                                else:
+                                    p_word, replacement = result_tuple
+                                    final_pert_type = pert_type
+
+                                if p_word != original_word_affected:
+                                    temp_words = words[:]; temp_words[index] = p_word
+                                    perturbed_question = " ".join(temp_words)
+                                    question_parts = [perturbed_question] + answers
+                                    variation_id = f"{lang_prefix}.{variation_counter}"
+                                    q_outfile.write('\t'.join(map(str, question_parts)) + '\n')
+                                    metadata_parts = [original_word_affected, str(index), final_pert_type, replacement, str(question_id), lang_code, variation_id]
+                                    sanitized_metadata_parts = [str(p).replace('"', "'") for p in metadata_parts]
+                                    m_outfile.write('\t'.join(map(str, question_parts + sanitized_metadata_parts)) + '\n')
+                                    total_generated += 1
+                                    variation_counter += 1
+
+                        elif pert_type in CONTEXT_AWARE_PERTURBATIONS:
+                            func = CONTEXT_AWARE_PERTURBATIONS[pert_type]
+                            perturbed_results = func(words, index, lang_config)
+                            for p_sentence, replacement in perturbed_results:
+                                if p_sentence != " ".join(words):
+                                    question_parts = [p_sentence] + answers
+                                    variation_id = f"{lang_prefix}.{variation_counter}"
+                                    q_outfile.write('\t'.join(map(str, question_parts)) + '\n')
+                                    metadata_parts = [original_word_affected, str(index), pert_type, replacement, str(question_id), lang_code, variation_id]
+                                    sanitized_metadata_parts = [str(p).replace('"', "'") for p in metadata_parts]
+                                    m_outfile.write('\t'.join(map(str, question_parts + sanitized_metadata_parts)) + '\n')
+                                    total_generated += 1
+                                    variation_counter += 1
+        
+        print(f"Successfully generated {total_generated} perturbed examples.")
+        print(f"Output saved to: {questions_output} and {metadata_output}")
+
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generate tokenization perturbations for multiple languages.")
+    parser.add_argument("input_file", help="Path to the input TSV file.")
+    parser.add_argument("questions_output", help="Path for the output TSV file with questions.")
+    parser.add_argument("--language", required=True, choices=LANG_CONFIGS.keys(), help="Language of the input text.")
+    parser.add_argument("-n", "--num_versions", type=int, default=1, help="Number of versions for RANDOM perturbation types.")
+    parser.add_argument("--set-id", type=int, default=300, help="Starting number for the question ID.")
+    parser.add_argument("--types", nargs='+', help="Generate only specific perturbation types.")
+    parser.add_argument("--target-words-file", help="Path to a file with space-separated target words.")
+    args = parser.parse_args()
+    generate_perturbations(args.input_file, args.questions_output, args.language, args.num_versions, args.types, args.target_words_file, args.set_id)
+
+
