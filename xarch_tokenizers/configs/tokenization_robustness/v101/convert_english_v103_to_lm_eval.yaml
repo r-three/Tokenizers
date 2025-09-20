@@ -55,7 +55,7 @@ dataset_card:
 
 
 dataset_path: data/v103.1.xlsx
-output_dir: data/v103.1/english
+output_dir: data/v104/english
 separator: "§§§"
 # sheet_name: "Examples-cleaned"
 sheet_name: "English-Text-Completion"

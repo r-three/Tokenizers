@@ -55,7 +55,7 @@ dataset_card:
 
 
 dataset_path: data/v103.1.xlsx
-output_dir: data/v103.1/stem
+output_dir: data/v104/stem
 separator: "§§§"
 # sheet_name: "Examples-cleaned"
 sheet_name: "Stem-Completion"
@@ -77,6 +77,7 @@ metadata_fields:
   id: Id
   set_id: "Set Id"
   variation_id: "Variation Id"
+  question_general_category: "Q category" 
   # split: Split
 create_subset_dirs: true
 subset_by: Subcategory

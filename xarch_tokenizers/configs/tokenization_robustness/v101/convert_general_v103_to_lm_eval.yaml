@@ -1,4 +1,4 @@
-# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_math_v103_to_lm_eval.yaml
+# python xarch_tokenizers/scripts/convert_dataset_to_hf_format.py xarch_tokenizers/configs/tokenization_robustness/v101/convert_general_v103_to_lm_eval.yaml
 
 upload_to_hf: true
 upload_individually: false
@@ -9,11 +9,11 @@ collections:
   - tokenization_robustness_completion
 private: false
 tags:
-  - multilingual
+  - multilingual  
   - tokenization
 version: collection
 hf_organization: r-three
-dataset_name: tokenizer_robustness_completion_math
+dataset_name: tokenizer_robustness_completion_general
 split_by_lang: false
 record_tokenizer_stats: true
 
@@ -48,17 +48,17 @@ dataset_card:
     - multiple-choice
   # task_ids: None
   # paperswithcode_id: None
-  pretty_name: Tokenization Robustness Math
+  pretty_name: Tokenization Robustness
   # train_eval_index: None
   # config_names: None
   ignore_metadata_errors: false
 
 
 dataset_path: data/v103.1.xlsx
-output_dir: data/v104/math
+output_dir: data/v104/general
 separator: "§§§"
 # sheet_name: "Examples-cleaned"
-sheet_name: "Math-Text-Completion"
+sheet_name: "General-Text-Completion"
 # question_field: MMLU-version
 question_field: Question
 target_field: Correct
@@ -68,7 +68,6 @@ option_fields:
   - Opt 3
 metadata_fields:
   subcategories: Subcategory
-  category: Category
   # type: Type
   lang: Lang
   second_lang: "2nd Lang"
@@ -77,8 +76,8 @@ metadata_fields:
   id: Id
   set_id: "Set Id"
   variation_id: "Variation Id"
+  question_general_category: General category
   # split: Split
-  
 create_subset_dirs: true
 subset_by: Subcategory
 # dataset_by: Category

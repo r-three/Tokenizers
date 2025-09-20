@@ -257,7 +257,7 @@ class DatasetConverterConfig(HFUploadConfig):
     version: Literal["v01", "v1", "collection"] = field(
         default="v1",
         metadata={
-            "help": "v01 for the cannonical form with perturbations, v1 for csv formatted"
+            "help": "v01 for the canonical form with perturbations, v1 for csv formatted"
         },
     )
     question_field: str = field(
@@ -524,6 +524,9 @@ def convert_to_lm_eval_format(
     samples["set_id"] = samples["set_id"].astype("string")
     samples["variation_id"] = samples["variation_id"].astype("string")
     samples["lang"] = samples["lang"].astype("string")
+    if "perturbed_word" in samples.columns:
+        samples["perturbed_word"] = samples["perturbed_word"].astype(str)
+
     for split in samples["split"].unique():
         try:
             # output_path.mkdir(exist_ok=True, parents=True)
@@ -557,14 +560,15 @@ def convert_to_lm_eval_format(
 def cleanup_excel(df: pd.DataFrame, config: DatasetConverterConfig):
     """Cleans up the Excel DataFrame by removing rows with empty questions and certain versions (e.g. depreceated rows)."""
     df = df.dropna(subset=[config.question_field])
-    df = df[
-        ~(
-            df["Version"]
-            .fillna("")
-            .str.lower()
-            .str.startswith(tuple(["depreceate", "ignore", "maybe", "no"]))
-        )
-    ]
+    if "Version" in df.columns:
+        df = df[
+            ~(
+                df["Version"]
+                .fillna("")
+                .str.lower()
+                .str.startswith(tuple(["depreceate", "ignore", "maybe", "no"]))
+            )
+        ]
     return df
 
 
@@ -771,7 +775,7 @@ def transform_w_collection(
                     .str[-1]
                     == "0"
                 )
-                filtered_df.loc[mask, "_subset"] = "cannonical"
+                filtered_df.loc[mask, "_subset"] = "canonical"
 
                 all_subsets = filtered_df["_subset"].unique()
                 added_subsets = set()
@@ -876,9 +880,14 @@ def record_tokenizer_stats(df, config: DatasetConverterConfig):
     ]
 
     ## cosine sim. against canonical
-    canonical_mask = df[config.variation_id_field].apply(
-        lambda x: str(x).split(".")[1] == "0"
-    )
+    try:
+        canonical_mask = df[config.variation_id_field].apply(
+            lambda x: str(x).split(".")[-1] == "0"
+        )
+    except:
+        import code
+
+        code.interact(local=locals() | globals())
     import torch
 
     vanilla_cos_sims = pd.DataFrame()
