@@ -1,0 +1,71 @@
+2025-09-20:15:53:23 DEBUG    [tasks:539] File _default_template.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/code_x_glue/code-text could not be loaded
+2025-09-20:15:53:23 DEBUG    [tasks:539] File _evalita-mp_ner_adg.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-20:15:53:23 DEBUG    [tasks:539] File _evalita-mp_ner_fic.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-20:15:53:23 DEBUG    [tasks:539] File _evalita-mp_ner_wn.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:28 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:15:53:29 INFO     [evaluator:189] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-09-20:15:53:29 INFO     [evaluator:227] Initializing hf model, with arguments: {'pretrained': 'r-three/supertoken_models-llama_common-pile-comma-v0.1', 'tokenizer': 'common-pile/comma-v0.1-1t', 'trust_remote_code': True}
+2025-09-20:15:53:29 INFO     [models.huggingface:165] Using device 'cuda'
+2025-09-20:15:53:29 DEBUG    [models.huggingface:1098] Using model type 'causal'
+2025-09-20:15:53:29 INFO     [models.huggingface:898] Successfully loaded HuggingFace tokenizer: common-pile/comma-v0.1-1t
+2025-09-20:15:53:29 INFO     [models.huggingface:984] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda'}
+2025-09-20:15:53:40 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:41 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:41 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:42 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:42 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:43 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:44 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:45 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:45 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_decorative_unicode on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 880.21it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_decorative_unicode; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_chinese on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 1321.44it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_chinese; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_space_removal on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 1804.04it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_space_removal; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_latex on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 2239.41it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_latex; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_farsi on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 2590.22it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_farsi; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_spelled_out on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 2842.22it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_spelled_out; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_canonical on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 2883.34it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_canonical; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_turkish on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 2889.11it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_turkish; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_math_italian on rank 0...
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 2934.25it/s]
+2025-09-20:15:53:45 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_math_italian; number of requests on this rank: 84
+2025-09-20:15:53:45 INFO     [evaluator:559] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/756 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/756 [00:00<04:45,  2.65it/s]Running loglikelihood requests:   1%|          | 9/756 [00:00<00:32, 23.30it/s]Running loglikelihood requests:   2%|▏         | 15/756 [00:00<00:22, 33.11it/s]Running loglikelihood requests:   3%|▎         | 26/756 [00:00<00:13, 53.54it/s]Running loglikelihood requests:   4%|▍         | 34/756 [00:00<00:12, 58.16it/s]Running loglikelihood requests:   6%|▋         | 48/756 [00:00<00:08, 79.57it/s]Running loglikelihood requests:   8%|▊         | 60/756 [00:01<00:07, 89.52it/s]Running loglikelihood requests:  10%|▉         | 75/756 [00:01<00:06, 106.37it/s]Running loglikelihood requests:  12%|█▏        | 89/756 [00:01<00:05, 113.46it/s]Running loglikelihood requests:  13%|█▎        | 101/756 [00:01<00:06, 102.24it/s]Running loglikelihood requests:  15%|█▌        | 117/756 [00:01<00:05, 115.40it/s]Running loglikelihood requests:  17%|█▋        | 132/756 [00:01<00:05, 123.36it/s]Running loglikelihood requests:  19%|█▉        | 145/756 [00:01<00:05, 111.87it/s]Running loglikelihood requests:  21%|██        | 157/756 [00:01<00:05, 110.54it/s]Running loglikelihood requests:  22%|██▏       | 170/756 [00:01<00:05, 113.53it/s]Running loglikelihood requests:  25%|██▍       | 188/756 [00:02<00:04, 130.10it/s]Running loglikelihood requests:  27%|██▋       | 204/756 [00:02<00:04, 136.82it/s]Running loglikelihood requests:  29%|██▉       | 218/756 [00:02<00:04, 123.68it/s]Running loglikelihood requests:  31%|███       | 231/756 [00:02<00:04, 121.17it/s]Running loglikelihood requests:  32%|███▏      | 244/756 [00:02<00:04, 117.19it/s]Running loglikelihood requests:  34%|███▍      | 258/756 [00:02<00:04, 122.24it/s]Running loglikelihood requests:  36%|███▌      | 271/756 [00:02<00:03, 124.25it/s]Running loglikelihood requests:  38%|███▊      | 288/756 [00:02<00:03, 135.84it/s]Running loglikelihood requests:  40%|███▉      | 302/756 [00:02<00:03, 127.85it/s]Running loglikelihood requests:  42%|████▏     | 315/756 [00:03<00:03, 128.36it/s]Running loglikelihood requests:  43%|████▎     | 328/756 [00:03<00:03, 117.75it/s]Running loglikelihood requests:  45%|████▌     | 341/756 [00:03<00:03, 107.45it/s]Running loglikelihood requests:  47%|████▋     | 355/756 [00:03<00:03, 114.88it/s]Running loglikelihood requests:  49%|████▉     | 372/756 [00:03<00:02, 129.28it/s]Running loglikelihood requests:  51%|█████     | 386/756 [00:03<00:02, 127.29it/s]Running loglikelihood requests:  53%|█████▎    | 403/756 [00:03<00:02, 137.78it/s]Running loglikelihood requests:  56%|█████▌    | 424/756 [00:03<00:02, 157.60it/s]Running loglikelihood requests:  58%|█████▊    | 441/756 [00:04<00:02, 135.67it/s]Running loglikelihood requests:  60%|██████    | 456/756 [00:04<00:02, 128.20it/s]Running loglikelihood requests:  62%|██████▏   | 470/756 [00:04<00:02, 129.44it/s]Running loglikelihood requests:  65%|██████▍   | 488/756 [00:04<00:01, 142.37it/s]Running loglikelihood requests:  67%|██████▋   | 503/756 [00:04<00:01, 131.06it/s]Running loglikelihood requests:  69%|██████▉   | 521/756 [00:04<00:01, 143.51it/s]Running loglikelihood requests:  71%|███████   | 536/756 [00:04<00:01, 122.02it/s]Running loglikelihood requests:  73%|███████▎  | 550/756 [00:04<00:01, 118.67it/s]Running loglikelihood requests:  75%|███████▍  | 565/756 [00:05<00:01, 126.17it/s]Running loglikelihood requests:  77%|███████▋  | 579/756 [00:05<00:01, 122.53it/s]Running loglikelihood requests:  78%|███████▊  | 592/756 [00:05<00:01, 114.48it/s]Running loglikelihood requests:  82%|████████▏ | 617/756 [00:05<00:00, 147.08it/s]Running loglikelihood requests:  84%|████████▍ | 637/756 [00:05<00:00, 160.67it/s]Running loglikelihood requests:  87%|████████▋ | 654/756 [00:05<00:00, 143.92it/s]Running loglikelihood requests:  90%|█████████ | 681/756 [00:05<00:00, 175.42it/s]Running loglikelihood requests:  93%|█████████▎| 700/756 [00:05<00:00, 158.65it/s]Running loglikelihood requests:  95%|█████████▌| 721/756 [00:05<00:00, 167.87it/s]Running loglikelihood requests:  98%|█████████▊| 740/756 [00:06<00:00, 172.85it/s]Running loglikelihood requests: 100%|██████████| 756/756 [00:06<00:00, 121.98it/s]
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:209] Saving results aggregated
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_canonical
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_chinese
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_decorative_unicode
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_farsi
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_italian
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_latex
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_space_removal
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_spelled_out
+2025-09-20:15:53:53 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_math_turkish

@@ -1,0 +1,586 @@
+{
+  "results": {
+    "tokenizer_robustness_completion_math": {
+      "acc,none": 0.5343915343915344,
+      "acc_stderr,none": 0.03505665348884115,
+      "acc_norm,none": 0.6031746031746031,
+      "acc_norm_stderr,none": 0.03363015572925017,
+      "alias": "tokenizer_robustness_completion_math"
+    },
+    "tokenizer_robustness_completion_math_canonical": {
+      "alias": " - tokenizer_robustness_completion_math_canonical",
+      "acc,none": 0.7142857142857143,
+      "acc_stderr,none": 0.10101525445522108,
+      "acc_norm,none": 0.8095238095238095,
+      "acc_norm_stderr,none": 0.08780518530755131
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "alias": " - tokenizer_robustness_completion_math_chinese",
+      "acc,none": 0.6190476190476191,
+      "acc_stderr,none": 0.10858813572372741,
+      "acc_norm,none": 0.6666666666666666,
+      "acc_norm_stderr,none": 0.10540925533894598
+    },
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "alias": " - tokenizer_robustness_completion_math_decorative_unicode",
+      "acc,none": 0.3333333333333333,
+      "acc_stderr,none": 0.10540925533894599,
+      "acc_norm,none": 0.38095238095238093,
+      "acc_norm_stderr,none": 0.10858813572372741
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "alias": " - tokenizer_robustness_completion_math_farsi",
+      "acc,none": 0.2857142857142857,
+      "acc_stderr,none": 0.10101525445522108,
+      "acc_norm,none": 0.38095238095238093,
+      "acc_norm_stderr,none": 0.10858813572372741
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "alias": " - tokenizer_robustness_completion_math_italian",
+      "acc,none": 0.7142857142857143,
+      "acc_stderr,none": 0.10101525445522108,
+      "acc_norm,none": 0.8095238095238095,
+      "acc_norm_stderr,none": 0.08780518530755131
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "alias": " - tokenizer_robustness_completion_math_latex",
+      "acc,none": 0.5714285714285714,
+      "acc_stderr,none": 0.11065666703449763,
+      "acc_norm,none": 0.7142857142857143,
+      "acc_norm_stderr,none": 0.10101525445522108
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "alias": " - tokenizer_robustness_completion_math_space_removal",
+      "acc,none": 0.7142857142857143,
+      "acc_stderr,none": 0.10101525445522108,
+      "acc_norm,none": 0.8095238095238095,
+      "acc_norm_stderr,none": 0.08780518530755131
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "alias": " - tokenizer_robustness_completion_math_spelled_out",
+      "acc,none": 0.3333333333333333,
+      "acc_stderr,none": 0.10540925533894598,
+      "acc_norm,none": 0.3333333333333333,
+      "acc_norm_stderr,none": 0.10540925533894599
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "alias": " - tokenizer_robustness_completion_math_turkish",
+      "acc,none": 0.5238095238095238,
+      "acc_stderr,none": 0.11167656571008164,
+      "acc_norm,none": 0.5238095238095238,
+      "acc_norm_stderr,none": 0.11167656571008164
+    }
+  },
+  "groups": {
+    "tokenizer_robustness_completion_math": {
+      "acc,none": 0.5343915343915344,
+      "acc_stderr,none": 0.03505665348884115,
+      "acc_norm,none": 0.6031746031746031,
+      "acc_norm_stderr,none": 0.03363015572925017,
+      "alias": "tokenizer_robustness_completion_math"
+    }
+  },
+  "group_subtasks": {
+    "tokenizer_robustness_completion_math": [
+      "tokenizer_robustness_completion_math_decorative_unicode",
+      "tokenizer_robustness_completion_math_chinese",
+      "tokenizer_robustness_completion_math_space_removal",
+      "tokenizer_robustness_completion_math_latex",
+      "tokenizer_robustness_completion_math_farsi",
+      "tokenizer_robustness_completion_math_spelled_out",
+      "tokenizer_robustness_completion_math_canonical",
+      "tokenizer_robustness_completion_math_turkish",
+      "tokenizer_robustness_completion_math_italian"
+    ]
+  },
+  "configs": {
+    "tokenizer_robustness_completion_math_canonical": {
+      "task": "tokenizer_robustness_completion_math_canonical",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_canonical",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "task": "tokenizer_robustness_completion_math_chinese",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_chinese",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "task": "tokenizer_robustness_completion_math_decorative_unicode",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_decorative_unicode",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "task": "tokenizer_robustness_completion_math_farsi",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_farsi",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "task": "tokenizer_robustness_completion_math_italian",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_italian",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "task": "tokenizer_robustness_completion_math_latex",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_latex",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "task": "tokenizer_robustness_completion_math_space_removal",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_space_removal",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "task": "tokenizer_robustness_completion_math_spelled_out",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_spelled_out",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "task": "tokenizer_robustness_completion_math_turkish",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_turkish",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "tokenizer_robustness_completion_math": "1.0.2",
+    "tokenizer_robustness_completion_math_canonical": "1.0.2",
+    "tokenizer_robustness_completion_math_chinese": "1.0.2",
+    "tokenizer_robustness_completion_math_decorative_unicode": "1.0.2",
+    "tokenizer_robustness_completion_math_farsi": "1.0.2",
+    "tokenizer_robustness_completion_math_italian": "1.0.2",
+    "tokenizer_robustness_completion_math_latex": "1.0.2",
+    "tokenizer_robustness_completion_math_space_removal": "1.0.2",
+    "tokenizer_robustness_completion_math_spelled_out": "1.0.2",
+    "tokenizer_robustness_completion_math_turkish": "1.0.2"
+  },
+  "n-shot": {
+    "tokenizer_robustness_completion_math_canonical": 0,
+    "tokenizer_robustness_completion_math_chinese": 0,
+    "tokenizer_robustness_completion_math_decorative_unicode": 0,
+    "tokenizer_robustness_completion_math_farsi": 0,
+    "tokenizer_robustness_completion_math_italian": 0,
+    "tokenizer_robustness_completion_math_latex": 0,
+    "tokenizer_robustness_completion_math_space_removal": 0,
+    "tokenizer_robustness_completion_math_spelled_out": 0,
+    "tokenizer_robustness_completion_math_turkish": 0
+  },
+  "higher_is_better": {
+    "tokenizer_robustness_completion_math": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_canonical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_canonical": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "original": 21,
+      "effective": 21
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=r-three/supertoken_models-llama_google-gemma-2-2b,tokenizer=google/gemma-2-2b,trust_remote_code=true",
+    "model_num_parameters": 2333186048,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "13b239c29dbb99651452ab5160443fb2a0454404",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1758399444.299938,
+  "pretty_env_info": "PyTorch version: 2.7.0+cu126\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 13.3.0 p16) 13.3.0\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.39\n\nPython version: 3.10.18 (main, Jun 12 2025, 12:39:39) [Clang 20.1.4 ] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-Intel-R-_Xeon-R-_Gold_6442Y-with-glibc2.39\nIs CUDA available: True\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA H100 80GB HBM3\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               48\nOn-line CPU(s) list:                  0-47\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Gold 6442Y\nCPU family:                           6\nModel:                                143\nThread(s) per core:                   1\nCore(s) per socket:                   24\nSocket(s):                            2\nStepping:                             8\nCPU(s) scaling MHz:                   33%\nCPU max MHz:                          4000.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             5200.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect user_shstk avx_vnni avx512_bf16 wbnoinvd dtherm ida arat pln pts hfi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities\nL1d cache:                            2.3 MiB (48 instances)\nL1i cache:                            1.5 MiB (48 instances)\nL2 cache:                             96 MiB (48 instances)\nL3 cache:                             120 MiB (2 instances)\nNUMA node(s):                         4\nNUMA node0 CPU(s):                    0-11\nNUMA node1 CPU(s):                    12-23\nNUMA node2 CPU(s):                    24-35\nNUMA node3 CPU(s):                    36-47\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.6.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.6.80\n[pip3] nvidia-cuda-nvrtc-cu12==12.6.77\n[pip3] nvidia-cuda-runtime-cu12==12.6.77\n[pip3] nvidia-cudnn-cu12==9.5.1.17\n[pip3] nvidia-cufft-cu12==11.3.0.4\n[pip3] nvidia-curand-cu12==10.3.7.77\n[pip3] nvidia-cusolver-cu12==11.7.1.2\n[pip3] nvidia-cusparse-cu12==12.5.4.2\n[pip3] nvidia-cusparselt-cu12==0.6.3\n[pip3] nvidia-nccl-cu12==2.26.2\n[pip3] nvidia-nvjitlink-cu12==12.6.85\n[pip3] nvidia-nvtx-cu12==12.6.77\n[pip3] torch==2.7.0\n[pip3] torchaudio==2.7.0\n[pip3] torchvision==0.22.0\n[pip3] triton==3.3.0\n[conda] Could not collect",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.9",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<pad>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<eos>",
+    "1"
+  ],
+  "tokenizer_bos_token": [
+    "<bos>",
+    "2"
+  ],
+  "eot_token_id": 1,
+  "max_length": 8192,
+  "task_hashes": {
+    "tokenizer_robustness_completion_math_decorative_unicode": "20e25fe14390d86bb02d1263728937ceee01685d9ac0375baf0e15838ffb26ec",
+    "tokenizer_robustness_completion_math_chinese": "809276d23d6a07072acf0052b27c6d5e5669cbd3f45af36724e87441a114e894",
+    "tokenizer_robustness_completion_math_space_removal": "c032f22ad7e5b872bd0a50011423c9df2d1a118737d56eb071553cd6943eb797",
+    "tokenizer_robustness_completion_math_latex": "4191866e79f4c4972f639360c0bb7851812c64cc99c3cb4a3fb5bdc93ff6e66f",
+    "tokenizer_robustness_completion_math_farsi": "90f92966b578190fb2be7140d2e72ea2abd1e81cd93f2c2554c5d466774e988a",
+    "tokenizer_robustness_completion_math_spelled_out": "02cbeafba1d18d094cb5c9f6f0c1f9ff0f09b447a3e321f4cc7d11274971b07b",
+    "tokenizer_robustness_completion_math_canonical": "30e15437786642b9296c7749cadf57535053eae98d88083bc0ecfe2108f69903",
+    "tokenizer_robustness_completion_math_turkish": "da7d1cff0b94192d1fe732941b2ce075db6d6afeee60028bfc57ae5e15fd473b",
+    "tokenizer_robustness_completion_math_italian": "b8027b9be556fb02e684beb0521e18e1d7c64976b419570331a93355bd755a4c"
+  },
+  "model_source": "hf",
+  "model_name": "r-three/supertoken_models-llama_google-gemma-2-2b",
+  "model_name_sanitized": "r-three__supertoken_models-llama_google-gemma-2-2b",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 99673.876293211,
+  "end_time": 99714.153868077,
+  "total_evaluation_time_seconds": "40.277574866006034"
+}
