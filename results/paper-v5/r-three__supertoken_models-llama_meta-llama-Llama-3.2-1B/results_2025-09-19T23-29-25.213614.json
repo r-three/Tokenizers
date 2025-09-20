@@ -1,0 +1,1026 @@
+{
+  "results": {
+    "tokenizer_robustness_completion_turkish": {
+      "acc,none": 0.7407407407407407,
+      "acc_stderr,none": 0.017414815802769237,
+      "acc_norm,none": 0.7230273752012882,
+      "acc_norm_stderr,none": 0.01784712294668773,
+      "alias": "tokenizer_robustness_completion_turkish"
+    },
+    "tokenizer_robustness_completion_turkish_canonical": {
+      "alias": " - tokenizer_robustness_completion_turkish_canonical",
+      "acc,none": 0.85,
+      "acc_stderr,none": 0.05717718748968655,
+      "acc_norm,none": 0.85,
+      "acc_norm_stderr,none": 0.05717718748968655
+    },
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": {
+      "alias": " - tokenizer_robustness_completion_turkish_code_language_script_switching",
+      "acc,none": 0.7608695652173914,
+      "acc_stderr,none": 0.06358669845936321,
+      "acc_norm,none": 0.7391304347826086,
+      "acc_norm_stderr,none": 0.06545849153992007
+    },
+    "tokenizer_robustness_completion_turkish_colloquial": {
+      "alias": " - tokenizer_robustness_completion_turkish_colloquial",
+      "acc,none": 0.7837837837837838,
+      "acc_stderr,none": 0.0686105685212965,
+      "acc_norm,none": 0.7837837837837838,
+      "acc_norm_stderr,none": 0.0686105685212965
+    },
+    "tokenizer_robustness_completion_turkish_date_formats": {
+      "alias": " - tokenizer_robustness_completion_turkish_date_formats",
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    },
+    "tokenizer_robustness_completion_turkish_derivations": {
+      "alias": " - tokenizer_robustness_completion_turkish_derivations",
+      "acc,none": 0.8780487804878049,
+      "acc_stderr,none": 0.05173952057462542,
+      "acc_norm,none": 0.8292682926829268,
+      "acc_norm_stderr,none": 0.05949419959829495
+    },
+    "tokenizer_robustness_completion_turkish_dialects": {
+      "alias": " - tokenizer_robustness_completion_turkish_dialects",
+      "acc,none": 0.7777777777777778,
+      "acc_stderr,none": 0.07027283689263068,
+      "acc_norm,none": 0.8055555555555556,
+      "acc_norm_stderr,none": 0.06689774765995718
+    },
+    "tokenizer_robustness_completion_turkish_english_keyboard": {
+      "alias": " - tokenizer_robustness_completion_turkish_english_keyboard",
+      "acc,none": 0.65,
+      "acc_stderr,none": 0.07637626158259732,
+      "acc_norm,none": 0.65,
+      "acc_norm_stderr,none": 0.07637626158259733
+    },
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": {
+      "alias": " - tokenizer_robustness_completion_turkish_equivalent_expressions",
+      "acc,none": 0.7647058823529411,
+      "acc_stderr,none": 0.10604562574894086,
+      "acc_norm,none": 0.7058823529411765,
+      "acc_norm_stderr,none": 0.11391127488845343
+    },
+    "tokenizer_robustness_completion_turkish_grammatical_errors": {
+      "alias": " - tokenizer_robustness_completion_turkish_grammatical_errors",
+      "acc,none": 0.8275862068965517,
+      "acc_stderr,none": 0.07138609234576078,
+      "acc_norm,none": 0.7931034482758621,
+      "acc_norm_stderr,none": 0.07655305550699533
+    },
+    "tokenizer_robustness_completion_turkish_inflections": {
+      "alias": " - tokenizer_robustness_completion_turkish_inflections",
+      "acc,none": 0.8163265306122449,
+      "acc_stderr,none": 0.05589005688828227,
+      "acc_norm,none": 0.7551020408163265,
+      "acc_norm_stderr,none": 0.062069005411206336
+    },
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": {
+      "alias": " - tokenizer_robustness_completion_turkish_keyboard_proximity_errors",
+      "acc,none": 0.6666666666666666,
+      "acc_stderr,none": 0.05479966243511907,
+      "acc_norm,none": 0.6266666666666667,
+      "acc_norm_stderr,none": 0.05622776504149495
+    },
+    "tokenizer_robustness_completion_turkish_orthographic_errors": {
+      "alias": " - tokenizer_robustness_completion_turkish_orthographic_errors",
+      "acc,none": 0.7,
+      "acc_stderr,none": 0.07337993857053426,
+      "acc_norm,none": 0.7,
+      "acc_norm_stderr,none": 0.07337993857053426
+    },
+    "tokenizer_robustness_completion_turkish_similar_words": {
+      "alias": " - tokenizer_robustness_completion_turkish_similar_words",
+      "acc,none": 0.8095238095238095,
+      "acc_stderr,none": 0.08780518530755134,
+      "acc_norm,none": 0.7142857142857143,
+      "acc_norm_stderr,none": 0.10101525445522108
+    },
+    "tokenizer_robustness_completion_turkish_spelled_out": {
+      "alias": " - tokenizer_robustness_completion_turkish_spelled_out",
+      "acc,none": 0.5,
+      "acc_stderr,none": 0.12909944487358055,
+      "acc_norm,none": 0.5625,
+      "acc_norm_stderr,none": 0.128086884574495
+    },
+    "tokenizer_robustness_completion_turkish_typographical_errors": {
+      "alias": " - tokenizer_robustness_completion_turkish_typographical_errors",
+      "acc,none": 0.6923076923076923,
+      "acc_stderr,none": 0.07487142513727497,
+      "acc_norm,none": 0.6666666666666666,
+      "acc_norm_stderr,none": 0.07647191129018722
+    },
+    "tokenizer_robustness_completion_turkish_web_search_query": {
+      "alias": " - tokenizer_robustness_completion_turkish_web_search_query",
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.07844645405527362,
+      "acc_norm,none": 0.575,
+      "acc_norm_stderr,none": 0.07915823166939519
+    },
+    "tokenizer_robustness_completion_turkish_word_reordering": {
+      "alias": " - tokenizer_robustness_completion_turkish_word_reordering",
+      "acc,none": 0.6818181818181818,
+      "acc_stderr,none": 0.07102933373079212,
+      "acc_norm,none": 0.7272727272727273,
+      "acc_norm_stderr,none": 0.06791703342160257
+    }
+  },
+  "groups": {
+    "tokenizer_robustness_completion_turkish": {
+      "acc,none": 0.7407407407407407,
+      "acc_stderr,none": 0.017414815802769237,
+      "acc_norm,none": 0.7230273752012882,
+      "acc_norm_stderr,none": 0.01784712294668773,
+      "alias": "tokenizer_robustness_completion_turkish"
+    }
+  },
+  "group_subtasks": {
+    "tokenizer_robustness_completion_turkish": [
+      "tokenizer_robustness_completion_turkish_derivations",
+      "tokenizer_robustness_completion_turkish_typographical_errors",
+      "tokenizer_robustness_completion_turkish_date_formats",
+      "tokenizer_robustness_completion_turkish_web_search_query",
+      "tokenizer_robustness_completion_turkish_english_keyboard",
+      "tokenizer_robustness_completion_turkish_equivalent_expressions",
+      "tokenizer_robustness_completion_turkish_dialects",
+      "tokenizer_robustness_completion_turkish_canonical",
+      "tokenizer_robustness_completion_turkish_code_language_script_switching",
+      "tokenizer_robustness_completion_turkish_colloquial",
+      "tokenizer_robustness_completion_turkish_inflections",
+      "tokenizer_robustness_completion_turkish_similar_words",
+      "tokenizer_robustness_completion_turkish_keyboard_proximity_errors",
+      "tokenizer_robustness_completion_turkish_word_reordering",
+      "tokenizer_robustness_completion_turkish_spelled_out",
+      "tokenizer_robustness_completion_turkish_grammatical_errors",
+      "tokenizer_robustness_completion_turkish_orthographic_errors"
+    ]
+  },
+  "configs": {
+    "tokenizer_robustness_completion_turkish_canonical": {
+      "task": "tokenizer_robustness_completion_turkish_canonical",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_canonical",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": {
+      "task": "tokenizer_robustness_completion_turkish_code_language_script_switching",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_code_language_script_switching",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_colloquial": {
+      "task": "tokenizer_robustness_completion_turkish_colloquial",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_colloquial",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_date_formats": {
+      "task": "tokenizer_robustness_completion_turkish_date_formats",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_date_formats",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_derivations": {
+      "task": "tokenizer_robustness_completion_turkish_derivations",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_derivations",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_dialects": {
+      "task": "tokenizer_robustness_completion_turkish_dialects",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_dialects",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_english_keyboard": {
+      "task": "tokenizer_robustness_completion_turkish_english_keyboard",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_english_keyboard",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": {
+      "task": "tokenizer_robustness_completion_turkish_equivalent_expressions",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_equivalent_expressions",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_grammatical_errors": {
+      "task": "tokenizer_robustness_completion_turkish_grammatical_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_grammatical_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_inflections": {
+      "task": "tokenizer_robustness_completion_turkish_inflections",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_inflections",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": {
+      "task": "tokenizer_robustness_completion_turkish_keyboard_proximity_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_keyboard_proximity_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_orthographic_errors": {
+      "task": "tokenizer_robustness_completion_turkish_orthographic_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_orthographic_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_similar_words": {
+      "task": "tokenizer_robustness_completion_turkish_similar_words",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_similar_words",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_spelled_out": {
+      "task": "tokenizer_robustness_completion_turkish_spelled_out",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_spelled_out",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_typographical_errors": {
+      "task": "tokenizer_robustness_completion_turkish_typographical_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_typographical_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_web_search_query": {
+      "task": "tokenizer_robustness_completion_turkish_web_search_query",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_web_search_query",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_turkish_word_reordering": {
+      "task": "tokenizer_robustness_completion_turkish_word_reordering",
+      "dataset_path": "r-three/tokenizer_robustness_completion_turkish",
+      "dataset_name": "tokenizer_robustness_completion_turkish_word_reordering",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+        "tokenizer": "meta-llama/Llama-3.2-1B",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "tokenizer_robustness_completion_turkish": "1.0.2",
+    "tokenizer_robustness_completion_turkish_canonical": "1.0.2",
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": "1.0.2",
+    "tokenizer_robustness_completion_turkish_colloquial": "1.0.2",
+    "tokenizer_robustness_completion_turkish_date_formats": "1.0.2",
+    "tokenizer_robustness_completion_turkish_derivations": "1.0.2",
+    "tokenizer_robustness_completion_turkish_dialects": "1.0.2",
+    "tokenizer_robustness_completion_turkish_english_keyboard": "1.0.2",
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": "1.0.2",
+    "tokenizer_robustness_completion_turkish_grammatical_errors": "1.0.2",
+    "tokenizer_robustness_completion_turkish_inflections": "1.0.2",
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": "1.0.2",
+    "tokenizer_robustness_completion_turkish_orthographic_errors": "1.0.2",
+    "tokenizer_robustness_completion_turkish_similar_words": "1.0.2",
+    "tokenizer_robustness_completion_turkish_spelled_out": "1.0.2",
+    "tokenizer_robustness_completion_turkish_typographical_errors": "1.0.2",
+    "tokenizer_robustness_completion_turkish_web_search_query": "1.0.2",
+    "tokenizer_robustness_completion_turkish_word_reordering": "1.0.2"
+  },
+  "n-shot": {
+    "tokenizer_robustness_completion_turkish_canonical": 0,
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": 0,
+    "tokenizer_robustness_completion_turkish_colloquial": 0,
+    "tokenizer_robustness_completion_turkish_date_formats": 0,
+    "tokenizer_robustness_completion_turkish_derivations": 0,
+    "tokenizer_robustness_completion_turkish_dialects": 0,
+    "tokenizer_robustness_completion_turkish_english_keyboard": 0,
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": 0,
+    "tokenizer_robustness_completion_turkish_grammatical_errors": 0,
+    "tokenizer_robustness_completion_turkish_inflections": 0,
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": 0,
+    "tokenizer_robustness_completion_turkish_orthographic_errors": 0,
+    "tokenizer_robustness_completion_turkish_similar_words": 0,
+    "tokenizer_robustness_completion_turkish_spelled_out": 0,
+    "tokenizer_robustness_completion_turkish_typographical_errors": 0,
+    "tokenizer_robustness_completion_turkish_web_search_query": 0,
+    "tokenizer_robustness_completion_turkish_word_reordering": 0
+  },
+  "higher_is_better": {
+    "tokenizer_robustness_completion_turkish": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_canonical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_colloquial": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_date_formats": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_derivations": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_dialects": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_english_keyboard": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_grammatical_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_inflections": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_orthographic_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_similar_words": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_spelled_out": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_typographical_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_web_search_query": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_turkish_word_reordering": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "tokenizer_robustness_completion_turkish_derivations": {
+      "original": 41,
+      "effective": 41
+    },
+    "tokenizer_robustness_completion_turkish_typographical_errors": {
+      "original": 39,
+      "effective": 39
+    },
+    "tokenizer_robustness_completion_turkish_date_formats": {
+      "original": 11,
+      "effective": 11
+    },
+    "tokenizer_robustness_completion_turkish_web_search_query": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_turkish_english_keyboard": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": {
+      "original": 17,
+      "effective": 17
+    },
+    "tokenizer_robustness_completion_turkish_dialects": {
+      "original": 36,
+      "effective": 36
+    },
+    "tokenizer_robustness_completion_turkish_canonical": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": {
+      "original": 46,
+      "effective": 46
+    },
+    "tokenizer_robustness_completion_turkish_colloquial": {
+      "original": 37,
+      "effective": 37
+    },
+    "tokenizer_robustness_completion_turkish_inflections": {
+      "original": 49,
+      "effective": 49
+    },
+    "tokenizer_robustness_completion_turkish_similar_words": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": {
+      "original": 75,
+      "effective": 75
+    },
+    "tokenizer_robustness_completion_turkish_word_reordering": {
+      "original": 44,
+      "effective": 44
+    },
+    "tokenizer_robustness_completion_turkish_spelled_out": {
+      "original": 16,
+      "effective": 16
+    },
+    "tokenizer_robustness_completion_turkish_grammatical_errors": {
+      "original": 29,
+      "effective": 29
+    },
+    "tokenizer_robustness_completion_turkish_orthographic_errors": {
+      "original": 40,
+      "effective": 40
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B,tokenizer=meta-llama/Llama-3.2-1B,trust_remote_code=true",
+    "model_num_parameters": 1809946624,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "da1739cb31452f5e734602075973acb0ba5f48d9",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1758338877.680114,
+  "pretty_env_info": "PyTorch version: 2.7.0+cu126\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 13.3.0 p16) 13.3.0\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.39\n\nPython version: 3.10.18 (main, Jun 12 2025, 12:39:39) [Clang 20.1.4 ] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-Intel-R-_Xeon-R-_Gold_6338_CPU_@_2.00GHz-with-glibc2.39\nIs CUDA available: True\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA L40S\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               64\nOn-line CPU(s) list:                  0-63\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz\nCPU family:                           6\nModel:                                106\nThread(s) per core:                   1\nCore(s) per socket:                   32\nSocket(s):                            2\nStepping:                             6\nCPU(s) scaling MHz:                   32%\nCPU max MHz:                          3200.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             4000.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities\nL1d cache:                            3 MiB (64 instances)\nL1i cache:                            2 MiB (64 instances)\nL2 cache:                             80 MiB (64 instances)\nL3 cache:                             96 MiB (2 instances)\nNUMA node(s):                         4\nNUMA node0 CPU(s):                    0-15\nNUMA node1 CPU(s):                    16-31\nNUMA node2 CPU(s):                    32-47\nNUMA node3 CPU(s):                    48-63\nVulnerability Gather data sampling:   Mitigation; Microcode\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT disabled\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.6.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.6.80\n[pip3] nvidia-cuda-nvrtc-cu12==12.6.77\n[pip3] nvidia-cuda-runtime-cu12==12.6.77\n[pip3] nvidia-cudnn-cu12==9.5.1.17\n[pip3] nvidia-cufft-cu12==11.3.0.4\n[pip3] nvidia-curand-cu12==10.3.7.77\n[pip3] nvidia-cusolver-cu12==11.7.1.2\n[pip3] nvidia-cusparse-cu12==12.5.4.2\n[pip3] nvidia-cusparselt-cu12==0.6.3\n[pip3] nvidia-nccl-cu12==2.26.2\n[pip3] nvidia-nvjitlink-cu12==12.6.85\n[pip3] nvidia-nvtx-cu12==12.6.77\n[pip3] torch==2.7.0\n[pip3] torchaudio==2.7.0\n[pip3] torchvision==0.22.0\n[pip3] triton==3.3.0\n[conda] Could not collect",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.9",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|end_of_text|>",
+    "128001"
+  ],
+  "tokenizer_eos_token": [
+    "<|end_of_text|>",
+    "128001"
+  ],
+  "tokenizer_bos_token": [
+    "<|begin_of_text|>",
+    "128000"
+  ],
+  "eot_token_id": 128001,
+  "max_length": 8192,
+  "task_hashes": {
+    "tokenizer_robustness_completion_turkish_derivations": "72f3a99fe7e079707a5347d93c463a9a1db13f475e3528c6c1e18534d917caeb",
+    "tokenizer_robustness_completion_turkish_typographical_errors": "0282f5ba7ab67feefd05ea749e0a97c7bc9c0336f811c600b0a2702c4317f190",
+    "tokenizer_robustness_completion_turkish_date_formats": "3511efb504dc0a6eb43df156b37a97ab44632caef233bd8487894f874e0ced1e",
+    "tokenizer_robustness_completion_turkish_web_search_query": "0e84a117a7ef68d02df4d1de3bc1cd895cb557b64be340ab703ba55f52b96279",
+    "tokenizer_robustness_completion_turkish_english_keyboard": "811503b89c5e6ea570f2f15c4aadccdecfc7609872bb86721d20fd3eb6ed9ad6",
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": "e1a4cba13590577068fd65156f26ba2872e0aee11d27593df1a7253529c2f10f",
+    "tokenizer_robustness_completion_turkish_dialects": "05d5e073c519b36e3cd302edc37dd42fcd07681b3398284388c85c6ed2649b8c",
+    "tokenizer_robustness_completion_turkish_canonical": "2e64b12f5784029c002e34c4e5d34ee262103b1e3418b0efbeaa90e493e03dbc",
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": "b2ee619fd721885d05e4efb6c602679771bd26a1bd641d9a69f0716bd2300413",
+    "tokenizer_robustness_completion_turkish_colloquial": "8fef4323a3f54969e7e66597118c889ed2a0cdd682de52cf3c2fd08b7d2e1580",
+    "tokenizer_robustness_completion_turkish_inflections": "a97757c2ea6674ac946f29aa41064be40f82c209163ee36ef0678d71813751e2",
+    "tokenizer_robustness_completion_turkish_similar_words": "a319c142de6828178929997b5c9a9b12b05b705ba003993852b3a9987a2bb669",
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": "b76a3d9ea1d0503f88ffd042500e12ab987d2940e3cf23166141cbb01df927b0",
+    "tokenizer_robustness_completion_turkish_word_reordering": "29ebff9564f91c5e87e75df46bda28eb16c38d2b1b1faa38a2f9aa3e1039ada9",
+    "tokenizer_robustness_completion_turkish_spelled_out": "60125979975054d8796495b694d28ebc59a93ce341de2979678f87c6ff0b2204",
+    "tokenizer_robustness_completion_turkish_grammatical_errors": "1800620fa9847df89d1e1522d3319c23867fd23c255e3b27880531c09f8c6656",
+    "tokenizer_robustness_completion_turkish_orthographic_errors": "e307de2fcead21b185cbc0452639d63580a35f1a110e8371371597dbdd8bccf1"
+  },
+  "model_source": "hf",
+  "model_name": "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B",
+  "model_name_sanitized": "r-three__supertoken_models-llama_meta-llama-Llama-3.2-1B",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 208948.396233417,
+  "end_time": 209043.287888147,
+  "total_evaluation_time_seconds": "94.89165472998866"
+}

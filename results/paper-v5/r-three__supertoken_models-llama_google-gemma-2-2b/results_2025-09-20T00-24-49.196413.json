@@ -1,0 +1,1686 @@
+{
+  "results": {
+    "tokenizer_robustness_completion_english": {
+      "acc_norm,none": 0.7236842105263158,
+      "acc_norm_stderr,none": 0.01182547333927933,
+      "acc,none": 0.6938596491228071,
+      "acc_stderr,none": 0.011467110835323965,
+      "alias": "tokenizer_robustness_completion_english"
+    },
+    "tokenizer_robustness_completion_english_abbreviations": {
+      "alias": " - tokenizer_robustness_completion_english_abbreviations",
+      "acc,none": 0.918918918918919,
+      "acc_stderr,none": 0.04549326548811747,
+      "acc_norm,none": 0.7297297297297297,
+      "acc_norm_stderr,none": 0.07401656182502248
+    },
+    "tokenizer_robustness_completion_english_canonical": {
+      "alias": " - tokenizer_robustness_completion_english_canonical",
+      "acc,none": 0.925,
+      "acc_stderr,none": 0.04217636961434867,
+      "acc_norm,none": 0.975,
+      "acc_norm_stderr,none": 0.024999999999999994
+    },
+    "tokenizer_robustness_completion_english_capitalization": {
+      "alias": " - tokenizer_robustness_completion_english_capitalization",
+      "acc,none": 0.75,
+      "acc_stderr,none": 0.06933752452815363,
+      "acc_norm,none": 0.825,
+      "acc_norm_stderr,none": 0.06084343084444759
+    },
+    "tokenizer_robustness_completion_english_character_deletion": {
+      "alias": " - tokenizer_robustness_completion_english_character_deletion",
+      "acc,none": 0.825,
+      "acc_stderr,none": 0.06084343084444759,
+      "acc_norm,none": 0.825,
+      "acc_norm_stderr,none": 0.060843430844447585
+    },
+    "tokenizer_robustness_completion_english_character_substitution": {
+      "alias": " - tokenizer_robustness_completion_english_character_substitution",
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 0.9375,
+      "acc_norm_stderr,none": 0.0625
+    },
+    "tokenizer_robustness_completion_english_colloquial": {
+      "alias": " - tokenizer_robustness_completion_english_colloquial",
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.06405126152203486,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.06405126152203486
+    },
+    "tokenizer_robustness_completion_english_compounds": {
+      "alias": " - tokenizer_robustness_completion_english_compounds",
+      "acc,none": 0.8809523809523809,
+      "acc_stderr,none": 0.05057601944205113,
+      "acc_norm,none": 0.8333333333333334,
+      "acc_norm_stderr,none": 0.058202524647464844
+    },
+    "tokenizer_robustness_completion_english_contractions": {
+      "alias": " - tokenizer_robustness_completion_english_contractions",
+      "acc,none": 0.5853658536585366,
+      "acc_stderr,none": 0.07789619230571372,
+      "acc_norm,none": 0.7073170731707317,
+      "acc_norm_stderr,none": 0.0719408839207445
+    },
+    "tokenizer_robustness_completion_english_date_formats": {
+      "alias": " - tokenizer_robustness_completion_english_date_formats",
+      "acc,none": 0.9444444444444444,
+      "acc_stderr,none": 0.05555555555555556,
+      "acc_norm,none": 0.9444444444444444,
+      "acc_norm_stderr,none": 0.05555555555555556
+    },
+    "tokenizer_robustness_completion_english_emoji_substitution": {
+      "alias": " - tokenizer_robustness_completion_english_emoji_substitution",
+      "acc,none": 0.7954545454545454,
+      "acc_stderr,none": 0.06151320742474889,
+      "acc_norm,none": 0.7954545454545454,
+      "acc_norm_stderr,none": 0.06151320742474889
+    },
+    "tokenizer_robustness_completion_english_grammatical_errors": {
+      "alias": " - tokenizer_robustness_completion_english_grammatical_errors",
+      "acc,none": 0.925,
+      "acc_stderr,none": 0.04217636961434869,
+      "acc_norm,none": 0.925,
+      "acc_norm_stderr,none": 0.042176369614348695
+    },
+    "tokenizer_robustness_completion_english_historical_spelling": {
+      "alias": " - tokenizer_robustness_completion_english_historical_spelling",
+      "acc,none": 0.575,
+      "acc_stderr,none": 0.07915823166939517,
+      "acc_norm,none": 0.675,
+      "acc_norm_stderr,none": 0.07499999999999998
+    },
+    "tokenizer_robustness_completion_english_homoglyphs": {
+      "alias": " - tokenizer_robustness_completion_english_homoglyphs",
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.06405126152203486,
+      "acc_norm,none": 0.825,
+      "acc_norm_stderr,none": 0.06084343084444758
+    },
+    "tokenizer_robustness_completion_english_hyphenated_spelling": {
+      "alias": " - tokenizer_robustness_completion_english_hyphenated_spelling",
+      "acc,none": 0.175,
+      "acc_stderr,none": 0.060843430844447564,
+      "acc_norm,none": 0.325,
+      "acc_norm_stderr,none": 0.07499999999999998
+    },
+    "tokenizer_robustness_completion_english_inflections": {
+      "alias": " - tokenizer_robustness_completion_english_inflections",
+      "acc,none": 0.9285714285714286,
+      "acc_stderr,none": 0.07142857142857142,
+      "acc_norm,none": 0.8571428571428571,
+      "acc_norm_stderr,none": 0.09705231721239392
+    },
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": {
+      "alias": " - tokenizer_robustness_completion_english_keyboard_proximity_errors",
+      "acc,none": 0.8292682926829268,
+      "acc_stderr,none": 0.05949419959829495,
+      "acc_norm,none": 0.8048780487804879,
+      "acc_norm_stderr,none": 0.06265967111543964
+    },
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": {
+      "alias": " - tokenizer_robustness_completion_english_letter_repetition_for_emphasis",
+      "acc,none": 0.6585365853658537,
+      "acc_stderr,none": 0.07497768853141168,
+      "acc_norm,none": 0.7804878048780488,
+      "acc_norm_stderr,none": 0.0654458920243841
+    },
+    "tokenizer_robustness_completion_english_lowercase": {
+      "alias": " - tokenizer_robustness_completion_english_lowercase",
+      "acc,none": 0.868421052631579,
+      "acc_stderr,none": 0.05557219020090342,
+      "acc_norm,none": 0.9210526315789473,
+      "acc_norm_stderr,none": 0.04433127181293721
+    },
+    "tokenizer_robustness_completion_english_macron_diacritic": {
+      "alias": " - tokenizer_robustness_completion_english_macron_diacritic",
+      "acc,none": 0.225,
+      "acc_stderr,none": 0.06686668711812967,
+      "acc_norm,none": 0.275,
+      "acc_norm_stderr,none": 0.0714995069016527
+    },
+    "tokenizer_robustness_completion_english_ocr_errors": {
+      "alias": " - tokenizer_robustness_completion_english_ocr_errors",
+      "acc,none": 0.8333333333333334,
+      "acc_stderr,none": 0.058202524647464844,
+      "acc_norm,none": 0.8095238095238095,
+      "acc_norm_stderr,none": 0.06132580154445565
+    },
+    "tokenizer_robustness_completion_english_orthographic_errors": {
+      "alias": " - tokenizer_robustness_completion_english_orthographic_errors",
+      "acc,none": 0.7875,
+      "acc_stderr,none": 0.04602472505573167,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.04500351603704091
+    },
+    "tokenizer_robustness_completion_english_scripted_text": {
+      "alias": " - tokenizer_robustness_completion_english_scripted_text",
+      "acc,none": 0.175,
+      "acc_stderr,none": 0.06084343084444755,
+      "acc_norm,none": 0.35,
+      "acc_norm_stderr,none": 0.07637626158259732
+    },
+    "tokenizer_robustness_completion_english_similar_words": {
+      "alias": " - tokenizer_robustness_completion_english_similar_words",
+      "acc,none": 0.918918918918919,
+      "acc_stderr,none": 0.03194750389456442,
+      "acc_norm,none": 0.9324324324324325,
+      "acc_norm_stderr,none": 0.02937760571493279
+    },
+    "tokenizer_robustness_completion_english_space_removal": {
+      "alias": " - tokenizer_robustness_completion_english_space_removal",
+      "acc,none": 0.725,
+      "acc_stderr,none": 0.07149950690165272,
+      "acc_norm,none": 0.7,
+      "acc_norm_stderr,none": 0.07337993857053426
+    },
+    "tokenizer_robustness_completion_english_spaced_styling": {
+      "alias": " - tokenizer_robustness_completion_english_spaced_styling",
+      "acc,none": 0.2,
+      "acc_stderr,none": 0.06405126152203486,
+      "acc_norm,none": 0.35,
+      "acc_norm_stderr,none": 0.07637626158259732
+    },
+    "tokenizer_robustness_completion_english_spelled_out": {
+      "alias": " - tokenizer_robustness_completion_english_spelled_out",
+      "acc,none": 0.6666666666666666,
+      "acc_stderr,none": 0.12598815766974242,
+      "acc_norm,none": 0.5333333333333333,
+      "acc_norm_stderr,none": 0.1333333333333333
+    },
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": {
+      "alias": " - tokenizer_robustness_completion_english_superscript_subscript_styling",
+      "acc,none": 0.15,
+      "acc_stderr,none": 0.05717718748968655,
+      "acc_norm,none": 0.3,
+      "acc_norm_stderr,none": 0.07337993857053426
+    },
+    "tokenizer_robustness_completion_english_web_search_query": {
+      "alias": " - tokenizer_robustness_completion_english_web_search_query",
+      "acc,none": 0.5405405405405406,
+      "acc_stderr,none": 0.08305895907471073,
+      "acc_norm,none": 0.4864864864864865,
+      "acc_norm_stderr,none": 0.08330289193201319
+    },
+    "tokenizer_robustness_completion_english_word_reordering": {
+      "alias": " - tokenizer_robustness_completion_english_word_reordering",
+      "acc,none": 0.875,
+      "acc_stderr,none": 0.05295740910852021,
+      "acc_norm,none": 0.9,
+      "acc_norm_stderr,none": 0.048038446141526095
+    }
+  },
+  "groups": {
+    "tokenizer_robustness_completion_english": {
+      "acc_norm,none": 0.7236842105263158,
+      "acc_norm_stderr,none": 0.01182547333927933,
+      "acc,none": 0.6938596491228071,
+      "acc_stderr,none": 0.011467110835323965,
+      "alias": "tokenizer_robustness_completion_english"
+    }
+  },
+  "group_subtasks": {
+    "tokenizer_robustness_completion_english": [
+      "tokenizer_robustness_completion_english_word_reordering",
+      "tokenizer_robustness_completion_english_lowercase",
+      "tokenizer_robustness_completion_english_canonical",
+      "tokenizer_robustness_completion_english_space_removal",
+      "tokenizer_robustness_completion_english_keyboard_proximity_errors",
+      "tokenizer_robustness_completion_english_macron_diacritic",
+      "tokenizer_robustness_completion_english_character_substitution",
+      "tokenizer_robustness_completion_english_scripted_text",
+      "tokenizer_robustness_completion_english_grammatical_errors",
+      "tokenizer_robustness_completion_english_homoglyphs",
+      "tokenizer_robustness_completion_english_letter_repetition_for_emphasis",
+      "tokenizer_robustness_completion_english_spaced_styling",
+      "tokenizer_robustness_completion_english_compounds",
+      "tokenizer_robustness_completion_english_colloquial",
+      "tokenizer_robustness_completion_english_historical_spelling",
+      "tokenizer_robustness_completion_english_similar_words",
+      "tokenizer_robustness_completion_english_abbreviations",
+      "tokenizer_robustness_completion_english_hyphenated_spelling",
+      "tokenizer_robustness_completion_english_web_search_query",
+      "tokenizer_robustness_completion_english_spelled_out",
+      "tokenizer_robustness_completion_english_date_formats",
+      "tokenizer_robustness_completion_english_orthographic_errors",
+      "tokenizer_robustness_completion_english_capitalization",
+      "tokenizer_robustness_completion_english_emoji_substitution",
+      "tokenizer_robustness_completion_english_contractions",
+      "tokenizer_robustness_completion_english_superscript_subscript_styling",
+      "tokenizer_robustness_completion_english_character_deletion",
+      "tokenizer_robustness_completion_english_inflections",
+      "tokenizer_robustness_completion_english_ocr_errors"
+    ]
+  },
+  "configs": {
+    "tokenizer_robustness_completion_english_abbreviations": {
+      "task": "tokenizer_robustness_completion_english_abbreviations",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_abbreviations",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_canonical": {
+      "task": "tokenizer_robustness_completion_english_canonical",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_canonical",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_capitalization": {
+      "task": "tokenizer_robustness_completion_english_capitalization",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_capitalization",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_character_deletion": {
+      "task": "tokenizer_robustness_completion_english_character_deletion",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_character_deletion",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_character_substitution": {
+      "task": "tokenizer_robustness_completion_english_character_substitution",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_character_substitution",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_colloquial": {
+      "task": "tokenizer_robustness_completion_english_colloquial",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_colloquial",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_compounds": {
+      "task": "tokenizer_robustness_completion_english_compounds",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_compounds",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_contractions": {
+      "task": "tokenizer_robustness_completion_english_contractions",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_contractions",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_date_formats": {
+      "task": "tokenizer_robustness_completion_english_date_formats",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_date_formats",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_emoji_substitution": {
+      "task": "tokenizer_robustness_completion_english_emoji_substitution",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_emoji_substitution",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_grammatical_errors": {
+      "task": "tokenizer_robustness_completion_english_grammatical_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_grammatical_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_historical_spelling": {
+      "task": "tokenizer_robustness_completion_english_historical_spelling",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_historical_spelling",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_homoglyphs": {
+      "task": "tokenizer_robustness_completion_english_homoglyphs",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_homoglyphs",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_hyphenated_spelling": {
+      "task": "tokenizer_robustness_completion_english_hyphenated_spelling",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_hyphenated_spelling",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_inflections": {
+      "task": "tokenizer_robustness_completion_english_inflections",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_inflections",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": {
+      "task": "tokenizer_robustness_completion_english_keyboard_proximity_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_keyboard_proximity_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": {
+      "task": "tokenizer_robustness_completion_english_letter_repetition_for_emphasis",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_letter_repetition_for_emphasis",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_lowercase": {
+      "task": "tokenizer_robustness_completion_english_lowercase",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_lowercase",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_macron_diacritic": {
+      "task": "tokenizer_robustness_completion_english_macron_diacritic",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_macron_diacritic",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_ocr_errors": {
+      "task": "tokenizer_robustness_completion_english_ocr_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_ocr_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_orthographic_errors": {
+      "task": "tokenizer_robustness_completion_english_orthographic_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_orthographic_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_scripted_text": {
+      "task": "tokenizer_robustness_completion_english_scripted_text",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_scripted_text",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_similar_words": {
+      "task": "tokenizer_robustness_completion_english_similar_words",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_similar_words",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_space_removal": {
+      "task": "tokenizer_robustness_completion_english_space_removal",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_space_removal",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_spaced_styling": {
+      "task": "tokenizer_robustness_completion_english_spaced_styling",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_spaced_styling",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_spelled_out": {
+      "task": "tokenizer_robustness_completion_english_spelled_out",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_spelled_out",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": {
+      "task": "tokenizer_robustness_completion_english_superscript_subscript_styling",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_superscript_subscript_styling",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_web_search_query": {
+      "task": "tokenizer_robustness_completion_english_web_search_query",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_web_search_query",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_english_word_reordering": {
+      "task": "tokenizer_robustness_completion_english_word_reordering",
+      "dataset_path": "r-three/tokenizer_robustness_completion_english",
+      "dataset_name": "tokenizer_robustness_completion_english_word_reordering",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_google-gemma-2-2b",
+        "tokenizer": "google/gemma-2-2b",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "tokenizer_robustness_completion_english": "1.0.2",
+    "tokenizer_robustness_completion_english_abbreviations": "1.0.2",
+    "tokenizer_robustness_completion_english_canonical": "1.0.2",
+    "tokenizer_robustness_completion_english_capitalization": "1.0.2",
+    "tokenizer_robustness_completion_english_character_deletion": "1.0.2",
+    "tokenizer_robustness_completion_english_character_substitution": "1.0.2",
+    "tokenizer_robustness_completion_english_colloquial": "1.0.2",
+    "tokenizer_robustness_completion_english_compounds": "1.0.2",
+    "tokenizer_robustness_completion_english_contractions": "1.0.2",
+    "tokenizer_robustness_completion_english_date_formats": "1.0.2",
+    "tokenizer_robustness_completion_english_emoji_substitution": "1.0.2",
+    "tokenizer_robustness_completion_english_grammatical_errors": "1.0.2",
+    "tokenizer_robustness_completion_english_historical_spelling": "1.0.2",
+    "tokenizer_robustness_completion_english_homoglyphs": "1.0.2",
+    "tokenizer_robustness_completion_english_hyphenated_spelling": "1.0.2",
+    "tokenizer_robustness_completion_english_inflections": "1.0.2",
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": "1.0.2",
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": "1.0.2",
+    "tokenizer_robustness_completion_english_lowercase": "1.0.2",
+    "tokenizer_robustness_completion_english_macron_diacritic": "1.0.2",
+    "tokenizer_robustness_completion_english_ocr_errors": "1.0.2",
+    "tokenizer_robustness_completion_english_orthographic_errors": "1.0.2",
+    "tokenizer_robustness_completion_english_scripted_text": "1.0.2",
+    "tokenizer_robustness_completion_english_similar_words": "1.0.2",
+    "tokenizer_robustness_completion_english_space_removal": "1.0.2",
+    "tokenizer_robustness_completion_english_spaced_styling": "1.0.2",
+    "tokenizer_robustness_completion_english_spelled_out": "1.0.2",
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": "1.0.2",
+    "tokenizer_robustness_completion_english_web_search_query": "1.0.2",
+    "tokenizer_robustness_completion_english_word_reordering": "1.0.2"
+  },
+  "n-shot": {
+    "tokenizer_robustness_completion_english_abbreviations": 0,
+    "tokenizer_robustness_completion_english_canonical": 0,
+    "tokenizer_robustness_completion_english_capitalization": 0,
+    "tokenizer_robustness_completion_english_character_deletion": 0,
+    "tokenizer_robustness_completion_english_character_substitution": 0,
+    "tokenizer_robustness_completion_english_colloquial": 0,
+    "tokenizer_robustness_completion_english_compounds": 0,
+    "tokenizer_robustness_completion_english_contractions": 0,
+    "tokenizer_robustness_completion_english_date_formats": 0,
+    "tokenizer_robustness_completion_english_emoji_substitution": 0,
+    "tokenizer_robustness_completion_english_grammatical_errors": 0,
+    "tokenizer_robustness_completion_english_historical_spelling": 0,
+    "tokenizer_robustness_completion_english_homoglyphs": 0,
+    "tokenizer_robustness_completion_english_hyphenated_spelling": 0,
+    "tokenizer_robustness_completion_english_inflections": 0,
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": 0,
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": 0,
+    "tokenizer_robustness_completion_english_lowercase": 0,
+    "tokenizer_robustness_completion_english_macron_diacritic": 0,
+    "tokenizer_robustness_completion_english_ocr_errors": 0,
+    "tokenizer_robustness_completion_english_orthographic_errors": 0,
+    "tokenizer_robustness_completion_english_scripted_text": 0,
+    "tokenizer_robustness_completion_english_similar_words": 0,
+    "tokenizer_robustness_completion_english_space_removal": 0,
+    "tokenizer_robustness_completion_english_spaced_styling": 0,
+    "tokenizer_robustness_completion_english_spelled_out": 0,
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": 0,
+    "tokenizer_robustness_completion_english_web_search_query": 0,
+    "tokenizer_robustness_completion_english_word_reordering": 0
+  },
+  "higher_is_better": {
+    "tokenizer_robustness_completion_english": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_abbreviations": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_canonical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_capitalization": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_character_deletion": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_character_substitution": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_colloquial": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_compounds": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_contractions": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_date_formats": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_emoji_substitution": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_grammatical_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_historical_spelling": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_homoglyphs": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_hyphenated_spelling": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_inflections": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_lowercase": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_macron_diacritic": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_ocr_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_orthographic_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_scripted_text": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_similar_words": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_space_removal": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_spaced_styling": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_spelled_out": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_web_search_query": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_english_word_reordering": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "tokenizer_robustness_completion_english_word_reordering": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_lowercase": {
+      "original": 38,
+      "effective": 38
+    },
+    "tokenizer_robustness_completion_english_canonical": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_space_removal": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": {
+      "original": 41,
+      "effective": 41
+    },
+    "tokenizer_robustness_completion_english_macron_diacritic": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_character_substitution": {
+      "original": 16,
+      "effective": 16
+    },
+    "tokenizer_robustness_completion_english_scripted_text": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_grammatical_errors": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_homoglyphs": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": {
+      "original": 41,
+      "effective": 41
+    },
+    "tokenizer_robustness_completion_english_spaced_styling": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_compounds": {
+      "original": 42,
+      "effective": 42
+    },
+    "tokenizer_robustness_completion_english_colloquial": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_historical_spelling": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_similar_words": {
+      "original": 74,
+      "effective": 74
+    },
+    "tokenizer_robustness_completion_english_abbreviations": {
+      "original": 37,
+      "effective": 37
+    },
+    "tokenizer_robustness_completion_english_hyphenated_spelling": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_web_search_query": {
+      "original": 37,
+      "effective": 37
+    },
+    "tokenizer_robustness_completion_english_spelled_out": {
+      "original": 15,
+      "effective": 15
+    },
+    "tokenizer_robustness_completion_english_date_formats": {
+      "original": 18,
+      "effective": 18
+    },
+    "tokenizer_robustness_completion_english_orthographic_errors": {
+      "original": 80,
+      "effective": 80
+    },
+    "tokenizer_robustness_completion_english_capitalization": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_emoji_substitution": {
+      "original": 44,
+      "effective": 44
+    },
+    "tokenizer_robustness_completion_english_contractions": {
+      "original": 41,
+      "effective": 41
+    },
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_character_deletion": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_english_inflections": {
+      "original": 14,
+      "effective": 14
+    },
+    "tokenizer_robustness_completion_english_ocr_errors": {
+      "original": 42,
+      "effective": 42
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=r-three/supertoken_models-llama_google-gemma-2-2b,tokenizer=google/gemma-2-2b,trust_remote_code=true",
+    "model_num_parameters": 2333186048,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "13b239c29dbb99651452ab5160443fb2a0454404",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1758342158.3329122,
+  "pretty_env_info": "PyTorch version: 2.7.0+cu126\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 13.3.0 p16) 13.3.0\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.39\n\nPython version: 3.10.18 (main, Jun 12 2025, 12:39:39) [Clang 20.1.4 ] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-Intel-R-_Xeon-R-_Gold_6338_CPU_@_2.00GHz-with-glibc2.39\nIs CUDA available: True\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA L40S\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               64\nOn-line CPU(s) list:                  0-63\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz\nCPU family:                           6\nModel:                                106\nThread(s) per core:                   1\nCore(s) per socket:                   32\nSocket(s):                            2\nStepping:                             6\nCPU(s) scaling MHz:                   37%\nCPU max MHz:                          3200.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             4000.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities\nL1d cache:                            3 MiB (64 instances)\nL1i cache:                            2 MiB (64 instances)\nL2 cache:                             80 MiB (64 instances)\nL3 cache:                             96 MiB (2 instances)\nNUMA node(s):                         4\nNUMA node0 CPU(s):                    0-15\nNUMA node1 CPU(s):                    16-31\nNUMA node2 CPU(s):                    32-47\nNUMA node3 CPU(s):                    48-63\nVulnerability Gather data sampling:   Mitigation; Microcode\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT disabled\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.6.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.6.80\n[pip3] nvidia-cuda-nvrtc-cu12==12.6.77\n[pip3] nvidia-cuda-runtime-cu12==12.6.77\n[pip3] nvidia-cudnn-cu12==9.5.1.17\n[pip3] nvidia-cufft-cu12==11.3.0.4\n[pip3] nvidia-curand-cu12==10.3.7.77\n[pip3] nvidia-cusolver-cu12==11.7.1.2\n[pip3] nvidia-cusparse-cu12==12.5.4.2\n[pip3] nvidia-cusparselt-cu12==0.6.3\n[pip3] nvidia-nccl-cu12==2.26.2\n[pip3] nvidia-nvjitlink-cu12==12.6.85\n[pip3] nvidia-nvtx-cu12==12.6.77\n[pip3] torch==2.7.0\n[pip3] torchaudio==2.7.0\n[pip3] torchvision==0.22.0\n[pip3] triton==3.3.0\n[conda] Could not collect",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.9",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<pad>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<eos>",
+    "1"
+  ],
+  "tokenizer_bos_token": [
+    "<bos>",
+    "2"
+  ],
+  "eot_token_id": 1,
+  "max_length": 8192,
+  "task_hashes": {
+    "tokenizer_robustness_completion_english_word_reordering": "8cdc745bf7acc436c1d4a30b119b5c6d4d2ad10096eaa434f484373e0198ff09",
+    "tokenizer_robustness_completion_english_lowercase": "45655a499a1ecd0709d0d3f06daf7b6264b656cfe4cdc4f12dfb1eaab0e57369",
+    "tokenizer_robustness_completion_english_canonical": "15cd5e545658bd045d3ca74015d6be6b539ea577b1f2a8144515a0d7eecc3027",
+    "tokenizer_robustness_completion_english_space_removal": "0879dfbb6f4785d564f733e5b0625ac65e925512712f2a19400872e91db1a17a",
+    "tokenizer_robustness_completion_english_keyboard_proximity_errors": "350181319b393fddfc64840d4fe71bfb2fa6dab7aeb7456427fe2ed662b4b510",
+    "tokenizer_robustness_completion_english_macron_diacritic": "a36050768c96d398e1d561e8e4ff63ab0402a4babb6ce8f107e2ebf5f89428e9",
+    "tokenizer_robustness_completion_english_character_substitution": "d500d797697fbf0893c25a0a3ef9eb44484d8a3b63cd83a55664eb6386144e7f",
+    "tokenizer_robustness_completion_english_scripted_text": "309bdbf02412ffc8c71418458f18e410fb3e5c2876ee4b42035021140c5c189a",
+    "tokenizer_robustness_completion_english_grammatical_errors": "7479486e8803c16d6e8ede3515fb608341843b3915c43903f5800ec672d3c35f",
+    "tokenizer_robustness_completion_english_homoglyphs": "a493eb441664bcbff1d88a0104b1a89962bb660dda605dc0920500507c4d5b7f",
+    "tokenizer_robustness_completion_english_letter_repetition_for_emphasis": "065c4b4ec8b7e2125b6f40da8396ff478112ce8d170fbea880ae46f9bba369ac",
+    "tokenizer_robustness_completion_english_spaced_styling": "9c45cb80fae0c2eb35a330781371a8cd6359e8603790bffe37288ae64d86a0fe",
+    "tokenizer_robustness_completion_english_compounds": "8af3ad45993824b225e98b26846645c9302381bd1e23353fe93ad4373057575d",
+    "tokenizer_robustness_completion_english_colloquial": "ce90c4a9dc84eafd01bb9f335174ec3595e5c323aa706a27c84ed9c0f937453d",
+    "tokenizer_robustness_completion_english_historical_spelling": "321aa8e8bb4f5a1b275ae05c8d0a555a3129459e62d5958c327e696138cb7be3",
+    "tokenizer_robustness_completion_english_similar_words": "c3e48e4e39184ea77b27088ca25e97c41f4ae7ed1b41f9b2d30d59a9f6f810fa",
+    "tokenizer_robustness_completion_english_abbreviations": "c34105c5d7cc9a4788e2259b3eb2d499f26d9558b28ec40108bef981f33fafa8",
+    "tokenizer_robustness_completion_english_hyphenated_spelling": "be05f1801996e5e908b5aa0e5b895e4534a6f945c7d4037967d84aeaf7e523f1",
+    "tokenizer_robustness_completion_english_web_search_query": "f3025f79c6050fa7c49afc4aade9bd7d1da36217c5206902e067e5b4544952a8",
+    "tokenizer_robustness_completion_english_spelled_out": "b3060c5b2b50adf90332147833d5378dd2bf73384e5d8d0a5dbffb3e1010eb0a",
+    "tokenizer_robustness_completion_english_date_formats": "4fe6edeeceb5aff90f0a2e2a52d17b9fc7430030940c4d17322e1690e7772ef9",
+    "tokenizer_robustness_completion_english_orthographic_errors": "5249c85c40b7cf8dfe23edf71d1f22568ee2e2e464236d694bb19c2a6f8a1236",
+    "tokenizer_robustness_completion_english_capitalization": "f24fd8ad7ec9fd08c198b79fb0a8dcaf29bc8ad349ee613a96e8f216ab04db54",
+    "tokenizer_robustness_completion_english_emoji_substitution": "72aee73d966a5c221bcc8e7fe1ac3204962003c4f845042a86ff86ab20204b0f",
+    "tokenizer_robustness_completion_english_contractions": "4b582b5fb87e9cd92466faa97a50ca6f65e1e9ed660cf7f19144bcc9ce9468d3",
+    "tokenizer_robustness_completion_english_superscript_subscript_styling": "e33eafbf77d12a891789b54b0a316ea3b61d2aab4eb7ca947bdfaec323200d36",
+    "tokenizer_robustness_completion_english_character_deletion": "11a07ecde085f32d9763f44dce70a365d1e86840e19a8b71c306c42fedae882c",
+    "tokenizer_robustness_completion_english_inflections": "a34e015bc914238a893b7aff4bb2c70b7b78d0a1dc0f0695ae9b40234d579c48",
+    "tokenizer_robustness_completion_english_ocr_errors": "712dd2d24a9d7961f4d1c1c99b748170f9c48d7dbb48cf5904f597c83be6b73b"
+  },
+  "model_source": "hf",
+  "model_name": "r-three/supertoken_models-llama_google-gemma-2-2b",
+  "model_name_sanitized": "r-three__supertoken_models-llama_google-gemma-2-2b",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 212313.704103737,
+  "end_time": 212470.119499163,
+  "total_evaluation_time_seconds": "156.41539542601095"
+}

@@ -1,0 +1,166 @@
+wandb: Currently logged in as: gsaltintas to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: ERROR Run initialization has timed out after 90.0 sec. Please try increasing the timeout with the `init_timeout` setting: `wandb.init(settings=wandb.Settings(init_timeout=120))`.
+Traceback (most recent call last):
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/locks.py", line 214, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/response_handle.py", line 105, in wait_async
+    await asyncio.wait_for(evt.wait(), timeout=timeout)
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 996, in init
+    result = wait_with_progress(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 87, in wait_all_with_progress
+    return asyncio_compat.run(progress_loop_with_timeout)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 30, in run
+    return future.result()
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 74, in run
+    return asyncio.run(self._run_or_cancel(fn))
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 98, in _run_or_cancel
+    return fn_task.result()
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 82, in progress_loop_with_timeout
+    return await _wait_handles_async(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 130, in _wait_handles_async
+    async with asyncio_compat.open_task_group() as task_group:
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 206, in __aexit__
+    await anext(self.gen)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 193, in open_task_group
+    await task_group._wait_all()
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 162, in _wait_all
+    raise exc
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 128, in wait_single
+    results[index] = await handle.wait_async(timeout=timeout)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/mailbox_handle.py", line 122, in wait_async
+    response = await self._handle.wait_async(timeout=timeout)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/response_handle.py", line 114, in wait_async
+    raise TimeoutError(
+TimeoutError: Timed out waiting for response on 42ev30kgyz85
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/bin/lm_eval", line 10, in <module>
+    sys.exit(cli_evaluate())
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/__main__.py", line 320, in cli_evaluate
+    wandb_logger = WandbLogger(wandb_args_dict, wandb_config_args_dict)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/loggers/wandb_logger.py", line 58, in __init__
+    self.run = wandb.init(**self.wandb_args)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1595, in init
+    wandb._sentry.reraise(e)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/analytics/sentry.py", line 162, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1581, in init
+    return wi.init(run_settings, run_config, run_printer)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1009, in init
+    raise CommError(
+wandb.errors.errors.CommError: Run initialization has timed out after 90.0 sec. Please try increasing the timeout with the `init_timeout` setting: `wandb.init(settings=wandb.Settings(init_timeout=120))`.
+Traceback (most recent call last):
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/locks.py", line 214, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/response_handle.py", line 105, in wait_async
+    await asyncio.wait_for(evt.wait(), timeout=timeout)
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 996, in init
+    result = wait_with_progress(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 87, in wait_all_with_progress
+    return asyncio_compat.run(progress_loop_with_timeout)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 30, in run
+    return future.result()
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 74, in run
+    return asyncio.run(self._run_or_cancel(fn))
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 98, in _run_or_cancel
+    return fn_task.result()
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 82, in progress_loop_with_timeout
+    return await _wait_handles_async(
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 130, in _wait_handles_async
+    async with asyncio_compat.open_task_group() as task_group:
+  File "/home/gsa/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 206, in __aexit__
+    await anext(self.gen)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 193, in open_task_group
+    await task_group._wait_all()
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 162, in _wait_all
+    raise exc
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 128, in wait_single
+    results[index] = await handle.wait_async(timeout=timeout)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/mailbox_handle.py", line 122, in wait_async
+    response = await self._handle.wait_async(timeout=timeout)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/mailbox/response_handle.py", line 114, in wait_async
+    raise TimeoutError(
+TimeoutError: Timed out waiting for response on 42ev30kgyz85
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gsa/tokenizers/.venv/bin/lm_eval", line 10, in <module>
+    sys.exit(cli_evaluate())
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/__main__.py", line 320, in cli_evaluate
+    wandb_logger = WandbLogger(wandb_args_dict, wandb_config_args_dict)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/loggers/wandb_logger.py", line 58, in __init__
+    self.run = wandb.init(**self.wandb_args)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1595, in init
+    wandb._sentry.reraise(e)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/analytics/sentry.py", line 162, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1581, in init
+    return wi.init(run_settings, run_config, run_printer)
+  File "/home/gsa/tokenizers/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1009, in init
+    raise CommError(
+wandb.errors.errors.CommError: Run initialization has timed out after 90.0 sec. Please try increasing the timeout with the `init_timeout` setting: `wandb.init(settings=wandb.Settings(init_timeout=120))`.

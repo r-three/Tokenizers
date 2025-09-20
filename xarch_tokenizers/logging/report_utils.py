@@ -185,6 +185,15 @@ def load_all_samples(
         results = json.loads(res_path.read_text())
         model_name = results["model_name"]
         model_args = results["config"]["model_args"]
+        # lang = "eng_Latn"
+        # if "farsi" in sample_path.as_posix():
+        #     lang = "pes_Arab"
+        # elif "turkish" in sample_path.as_posix():
+        #     lang = "tur_Latn"
+        # elif "chinese" in sample_path.as_posix():
+        #     lang = "zho_Hans"
+        # elif "italian" in sample_path.as_posix():
+        #     lang = "ita_Latn"
         if "tokenizer=" in model_args:
             tokenizer_name = model_args[model_args.index("tokenizer=") + 10 :]
             tokenizer_name = tokenizer_name.split(",")[0]
@@ -209,6 +218,7 @@ def load_all_samples(
             sample["model_name"] = model_name
             sample["tokenizer_name"] = tokenizer_name
             sample["task"] = task_name
+            # sample["Lang"] = lang
             samples.append(sample)
         except Exception as e:
             print(f"Error loading {sample_path}: {e}")
