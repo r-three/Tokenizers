@@ -1,1 +1,132 @@
 wandb: Currently logged in as: gsaltintas to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /home/gsa/tokenizers/wandb/run-20250920_104222-77c83h5s
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run gpt2-1758376013
+wandb: ⭐️ View project at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_general
+wandb: 🚀 View run at https://wandb.ai/raffel-reports/tokenizer_robustness_completion_general/runs/77c83h5s
+2025-09-20:10:42:25 DEBUG    [tasks:539] File _default_template.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/code_x_glue/code-text could not be loaded
+2025-09-20:10:42:26 DEBUG    [tasks:539] File _evalita-mp_ner_adg.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-20:10:42:26 DEBUG    [tasks:539] File _evalita-mp_ner_fic.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-20:10:42:26 DEBUG    [tasks:539] File _evalita-mp_ner_wn.yaml in /home/gsa/tokenizers/.venv/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:29 INFO     [tasks:476] The tag 'tokenizer_robustness' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-09-20:10:42:30 INFO     [evaluator:189] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-09-20:10:42:30 INFO     [evaluator:227] Initializing hf model, with arguments: {'pretrained': 'r-three/supertoken_models-llama_gpt2', 'tokenizer': 'gpt2', 'trust_remote_code': True}
+2025-09-20:10:42:30 INFO     [models.huggingface:165] Using device 'cuda'
+2025-09-20:10:42:30 DEBUG    [models.huggingface:1098] Using model type 'causal'
+2025-09-20:10:42:30 INFO     [models.huggingface:898] Successfully loaded HuggingFace tokenizer: gpt2
+2025-09-20:10:42:30 INFO     [models.huggingface:984] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda'}
+2025-09-20:10:42:32 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:10:42:32 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:10:42:33 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:10:42:34 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:10:42:34 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:10:42:35 DEBUG    [api.task:882] No custom filters defined. Using default 'take_first' filter for handling repeats.
+2025-09-20:10:42:35 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_general_date_formats on rank 0...
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 1896.87it/s]
+2025-09-20:10:42:35 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_general_date_formats; number of requests on this rank: 96
+2025-09-20:10:42:35 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_general_character_deletion on rank 0...
+  0%|          | 0/8 [00:00<?, ?it/s]100%|██████████| 8/8 [00:00<00:00, 1813.26it/s]
+2025-09-20:10:42:35 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_general_character_deletion; number of requests on this rank: 32
+2025-09-20:10:42:35 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_general_unusual_formatting on rank 0...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 1128.71it/s]
+2025-09-20:10:42:35 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_general_unusual_formatting; number of requests on this rank: 4
+2025-09-20:10:42:35 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_general_currency_symbol on rank 0...
+  0%|          | 0/15 [00:00<?, ?it/s]100%|██████████| 15/15 [00:00<00:00, 1761.13it/s]
+2025-09-20:10:42:35 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_general_currency_symbol; number of requests on this rank: 60
+2025-09-20:10:42:35 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_general_canonical on rank 0...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 1596.01it/s]
+2025-09-20:10:42:35 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_general_canonical; number of requests on this rank: 8
+2025-09-20:10:42:35 INFO     [api.task:434] Building contexts for tokenizer_robustness_completion_general_abbreviations on rank 0...
+  0%|          | 0/18 [00:00<?, ?it/s]100%|██████████| 18/18 [00:00<00:00, 1817.07it/s]
+2025-09-20:10:42:35 DEBUG    [evaluator:530] Task: tokenizer_robustness_completion_general_abbreviations; number of requests on this rank: 72
+2025-09-20:10:42:35 INFO     [evaluator:559] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/272 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/272 [00:00<02:11,  2.07it/s]Running loglikelihood requests:   2%|▏         | 6/272 [00:00<00:21, 12.66it/s]Running loglikelihood requests:   4%|▍         | 11/272 [00:00<00:12, 21.15it/s]Running loglikelihood requests:   6%|▌         | 16/272 [00:00<00:09, 27.76it/s]Running loglikelihood requests:   8%|▊         | 21/272 [00:00<00:07, 32.81it/s]Running loglikelihood requests:  10%|▉         | 26/272 [00:01<00:06, 36.59it/s]Running loglikelihood requests:  12%|█▏        | 33/272 [00:01<00:05, 44.39it/s]Running loglikelihood requests:  14%|█▍        | 39/272 [00:01<00:04, 47.25it/s]Running loglikelihood requests:  17%|█▋        | 47/272 [00:01<00:04, 54.53it/s]Running loglikelihood requests:  19%|█▉        | 53/272 [00:01<00:04, 51.39it/s]Running loglikelihood requests:  22%|██▏       | 61/272 [00:01<00:03, 57.31it/s]Running loglikelihood requests:  30%|██▉       | 81/272 [00:01<00:02, 92.40it/s]Running loglikelihood requests:  35%|███▍      | 95/272 [00:01<00:01, 101.65it/s]Running loglikelihood requests:  39%|███▉      | 106/272 [00:02<00:02, 74.65it/s]Running loglikelihood requests:  45%|████▍     | 122/272 [00:02<00:01, 90.90it/s]Running loglikelihood requests:  50%|████▉     | 135/272 [00:02<00:01, 96.55it/s]Running loglikelihood requests:  56%|█████▋    | 153/272 [00:02<00:01, 113.82it/s]Running loglikelihood requests:  61%|██████    | 166/272 [00:02<00:01, 90.81it/s] Running loglikelihood requests:  65%|██████▌   | 177/272 [00:02<00:01, 89.16it/s]Running loglikelihood requests:  71%|███████▏  | 194/272 [00:02<00:00, 104.96it/s]Running loglikelihood requests:  76%|███████▌  | 206/272 [00:03<00:00, 81.79it/s] Running loglikelihood requests:  81%|████████  | 219/272 [00:03<00:00, 90.17it/s]Running loglikelihood requests:  87%|████████▋ | 237/272 [00:03<00:00, 108.15it/s]Running loglikelihood requests:  92%|█████████▏| 250/272 [00:03<00:00, 101.09it/s]Running loglikelihood requests:  97%|█████████▋| 263/272 [00:03<00:00, 105.75it/s]Running loglikelihood requests: 100%|██████████| 272/272 [00:03<00:00, 74.88it/s] 
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:209] Saving results aggregated
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_general_abbreviations
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_general_canonical
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_general_character_deletion
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_general_currency_symbol
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_general_date_formats
+2025-09-20:10:42:44 INFO     [loggers.evaluation_tracker:298] Saving per-sample results for: tokenizer_robustness_completion_general_unusual_formatting
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                                tokenizer_robustness_completion_general/acc ▁
+wandb:                           tokenizer_robustness_completion_general/acc_norm ▁
+wandb:                  tokenizer_robustness_completion_general_abbreviations/acc ▁
+wandb:             tokenizer_robustness_completion_general_abbreviations/acc_norm ▁
+wandb:      tokenizer_robustness_completion_general_abbreviations/acc_norm_stderr ▁
+wandb:           tokenizer_robustness_completion_general_abbreviations/acc_stderr ▁
+wandb:                      tokenizer_robustness_completion_general_canonical/acc ▁
+wandb:                 tokenizer_robustness_completion_general_canonical/acc_norm ▁
+wandb:          tokenizer_robustness_completion_general_canonical/acc_norm_stderr ▁
+wandb:               tokenizer_robustness_completion_general_canonical/acc_stderr ▁
+wandb:             tokenizer_robustness_completion_general_character_deletion/acc ▁
+wandb:        tokenizer_robustness_completion_general_character_deletion/acc_norm ▁
+wandb: tokenizer_robustness_completion_general_character_deletion/acc_norm_stderr ▁
+wandb:      tokenizer_robustness_completion_general_character_deletion/acc_stderr ▁
+wandb:                tokenizer_robustness_completion_general_currency_symbol/acc ▁
+wandb:           tokenizer_robustness_completion_general_currency_symbol/acc_norm ▁
+wandb:    tokenizer_robustness_completion_general_currency_symbol/acc_norm_stderr ▁
+wandb:         tokenizer_robustness_completion_general_currency_symbol/acc_stderr ▁
+wandb:                   tokenizer_robustness_completion_general_date_formats/acc ▁
+wandb:              tokenizer_robustness_completion_general_date_formats/acc_norm ▁
+wandb:       tokenizer_robustness_completion_general_date_formats/acc_norm_stderr ▁
+wandb:            tokenizer_robustness_completion_general_date_formats/acc_stderr ▁
+wandb:             tokenizer_robustness_completion_general_unusual_formatting/acc ▁
+wandb:        tokenizer_robustness_completion_general_unusual_formatting/acc_norm ▁
+wandb: 
+wandb: Run summary:
+wandb:                                tokenizer_robustness_completion_general/acc 0.70588
+wandb:                           tokenizer_robustness_completion_general/acc_norm 0.72059
+wandb:                    tokenizer_robustness_completion_general/acc_norm_stderr N/A
+wandb:                         tokenizer_robustness_completion_general/acc_stderr N/A
+wandb:                              tokenizer_robustness_completion_general/alias tokenizer_robustness...
+wandb:                  tokenizer_robustness_completion_general_abbreviations/acc 0.72222
+wandb:             tokenizer_robustness_completion_general_abbreviations/acc_norm 0.61111
+wandb:      tokenizer_robustness_completion_general_abbreviations/acc_norm_stderr 0.11824
+wandb:           tokenizer_robustness_completion_general_abbreviations/acc_stderr 0.10863
+wandb:                tokenizer_robustness_completion_general_abbreviations/alias  - tokenizer_robustn...
+wandb:                      tokenizer_robustness_completion_general_canonical/acc 1
+wandb:                 tokenizer_robustness_completion_general_canonical/acc_norm 0.5
+wandb:          tokenizer_robustness_completion_general_canonical/acc_norm_stderr 0.5
+wandb:               tokenizer_robustness_completion_general_canonical/acc_stderr 0
+wandb:                    tokenizer_robustness_completion_general_canonical/alias  - tokenizer_robustn...
+wandb:             tokenizer_robustness_completion_general_character_deletion/acc 0.875
+wandb:        tokenizer_robustness_completion_general_character_deletion/acc_norm 0.75
+wandb: tokenizer_robustness_completion_general_character_deletion/acc_norm_stderr 0.16366
+wandb:      tokenizer_robustness_completion_general_character_deletion/acc_stderr 0.125
+wandb:           tokenizer_robustness_completion_general_character_deletion/alias  - tokenizer_robustn...
+wandb:                tokenizer_robustness_completion_general_currency_symbol/acc 0.4
+wandb:           tokenizer_robustness_completion_general_currency_symbol/acc_norm 0.53333
+wandb:    tokenizer_robustness_completion_general_currency_symbol/acc_norm_stderr 0.13333
+wandb:         tokenizer_robustness_completion_general_currency_symbol/acc_stderr 0.13093
+wandb:              tokenizer_robustness_completion_general_currency_symbol/alias  - tokenizer_robustn...
+wandb:                   tokenizer_robustness_completion_general_date_formats/acc 0.83333
+wandb:              tokenizer_robustness_completion_general_date_formats/acc_norm 0.95833
+wandb:       tokenizer_robustness_completion_general_date_formats/acc_norm_stderr 0.04167
+wandb:            tokenizer_robustness_completion_general_date_formats/acc_stderr 0.07771
+wandb:                 tokenizer_robustness_completion_general_date_formats/alias  - tokenizer_robustn...
+wandb:             tokenizer_robustness_completion_general_unusual_formatting/acc 0
+wandb:        tokenizer_robustness_completion_general_unusual_formatting/acc_norm 0
+wandb: tokenizer_robustness_completion_general_unusual_formatting/acc_norm_stderr N/A
+wandb:      tokenizer_robustness_completion_general_unusual_formatting/acc_stderr N/A
+wandb:           tokenizer_robustness_completion_general_unusual_formatting/alias  - tokenizer_robustn...
+wandb: 
+wandb: 🚀 View run gpt2-1758376013 at: https://wandb.ai/raffel-reports/tokenizer_robustness_completion_general/runs/77c83h5s
+wandb: ⭐️ View project at: https://wandb.ai/raffel-reports/tokenizer_robustness_completion_general
+wandb: Synced 6 W&B file(s), 8 media file(s), 18 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250920_104222-77c83h5s/logs

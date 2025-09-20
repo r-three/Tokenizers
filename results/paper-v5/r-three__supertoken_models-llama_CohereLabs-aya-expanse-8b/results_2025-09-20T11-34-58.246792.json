@@ -1,0 +1,1081 @@
+{
+  "results": {
+    "tokenizer_robustness_completion_italian": {
+      "acc,none": 0.7867647058823529,
+      "acc_stderr,none": 0.01227255173128377,
+      "acc_norm,none": 0.7840073529411765,
+      "acc_norm_stderr,none": 0.012127502342040204,
+      "alias": "tokenizer_robustness_completion_italian"
+    },
+    "tokenizer_robustness_completion_italian_abbreviations": {
+      "alias": " - tokenizer_robustness_completion_italian_abbreviations",
+      "acc,none": 0.8518518518518519,
+      "acc_stderr,none": 0.06966962541673782,
+      "acc_norm,none": 0.7407407407407407,
+      "acc_norm_stderr,none": 0.08594360757264022
+    },
+    "tokenizer_robustness_completion_italian_canonical": {
+      "alias": " - tokenizer_robustness_completion_italian_canonical",
+      "acc,none": 0.9,
+      "acc_stderr,none": 0.04803844614152612,
+      "acc_norm,none": 0.975,
+      "acc_norm_stderr,none": 0.024999999999999994
+    },
+    "tokenizer_robustness_completion_italian_capitalization": {
+      "alias": " - tokenizer_robustness_completion_italian_capitalization",
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    },
+    "tokenizer_robustness_completion_italian_code_language_script_switching": {
+      "alias": " - tokenizer_robustness_completion_italian_code_language_script_switching",
+      "acc,none": 0.8461538461538461,
+      "acc_stderr,none": 0.05852968540405247,
+      "acc_norm,none": 0.8974358974358975,
+      "acc_norm_stderr,none": 0.049216147176276606
+    },
+    "tokenizer_robustness_completion_italian_contractions": {
+      "alias": " - tokenizer_robustness_completion_italian_contractions",
+      "acc,none": 0.9523809523809523,
+      "acc_stderr,none": 0.04761904761904764,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    },
+    "tokenizer_robustness_completion_italian_date_formats": {
+      "alias": " - tokenizer_robustness_completion_italian_date_formats",
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    },
+    "tokenizer_robustness_completion_italian_dialects": {
+      "alias": " - tokenizer_robustness_completion_italian_dialects",
+      "acc,none": 0.8064516129032258,
+      "acc_stderr,none": 0.07213122508063838,
+      "acc_norm,none": 0.8387096774193549,
+      "acc_norm_stderr,none": 0.06715051611181073
+    },
+    "tokenizer_robustness_completion_italian_english_keyboard": {
+      "alias": " - tokenizer_robustness_completion_italian_english_keyboard",
+      "acc,none": 0.7941176470588235,
+      "acc_stderr,none": 0.049398593503540957,
+      "acc_norm,none": 0.8235294117647058,
+      "acc_norm_stderr,none": 0.046573440596575394
+    },
+    "tokenizer_robustness_completion_italian_grammatical_errors": {
+      "alias": " - tokenizer_robustness_completion_italian_grammatical_errors",
+      "acc,none": 0.9069767441860465,
+      "acc_stderr,none": 0.03150535522951526,
+      "acc_norm,none": 0.9534883720930233,
+      "acc_norm_stderr,none": 0.022841730741167514
+    },
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": {
+      "alias": " - tokenizer_robustness_completion_italian_keyboard_proximity_errors",
+      "acc,none": 0.7316017316017316,
+      "acc_stderr,none": 0.0292188621269891,
+      "acc_norm,none": 0.7229437229437229,
+      "acc_norm_stderr,none": 0.029510211673985765
+    },
+    "tokenizer_robustness_completion_italian_numerical_formats": {
+      "alias": " - tokenizer_robustness_completion_italian_numerical_formats",
+      "acc,none": 0.75,
+      "acc_stderr,none": 0.16366341767699427,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    },
+    "tokenizer_robustness_completion_italian_orthographic_errors": {
+      "alias": " - tokenizer_robustness_completion_italian_orthographic_errors",
+      "acc,none": 0.7608695652173914,
+      "acc_stderr,none": 0.04471485604388278,
+      "acc_norm,none": 0.8478260869565217,
+      "acc_norm_stderr,none": 0.03765327842541034
+    },
+    "tokenizer_robustness_completion_italian_phonetic_spelling": {
+      "alias": " - tokenizer_robustness_completion_italian_phonetic_spelling",
+      "acc,none": 0.9302325581395349,
+      "acc_stderr,none": 0.039309500219931015,
+      "acc_norm,none": 0.8372093023255814,
+      "acc_norm_stderr,none": 0.05696487773914369
+    },
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": {
+      "alias": " - tokenizer_robustness_completion_italian_plausible_diacritics_errors",
+      "acc,none": 0.9411764705882353,
+      "acc_stderr,none": 0.05882352941176472,
+      "acc_norm,none": 0.8823529411764706,
+      "acc_norm_stderr,none": 0.08054743492723031
+    },
+    "tokenizer_robustness_completion_italian_similar_words": {
+      "alias": " - tokenizer_robustness_completion_italian_similar_words",
+      "acc,none": 0.8333333333333334,
+      "acc_stderr,none": 0.11236664374387369,
+      "acc_norm,none": 0.75,
+      "acc_norm_stderr,none": 0.1305582419667734
+    },
+    "tokenizer_robustness_completion_italian_spelled_out": {
+      "alias": " - tokenizer_robustness_completion_italian_spelled_out",
+      "acc,none": 0.6486486486486487,
+      "acc_stderr,none": 0.0795654132101608,
+      "acc_norm,none": 0.5135135135135135,
+      "acc_norm_stderr,none": 0.08330289193201319
+    },
+    "tokenizer_robustness_completion_italian_typographical_errors": {
+      "alias": " - tokenizer_robustness_completion_italian_typographical_errors",
+      "acc,none": 0.7508896797153025,
+      "acc_stderr,none": 0.025846688694544363,
+      "acc_norm,none": 0.7153024911032029,
+      "acc_norm_stderr,none": 0.026968555586934045
+    },
+    "tokenizer_robustness_completion_italian_web_search_query": {
+      "alias": " - tokenizer_robustness_completion_italian_web_search_query",
+      "acc,none": 0.65,
+      "acc_stderr,none": 0.07637626158259732,
+      "acc_norm,none": 0.65,
+      "acc_norm_stderr,none": 0.07637626158259732
+    }
+  },
+  "groups": {
+    "tokenizer_robustness_completion_italian": {
+      "acc,none": 0.7867647058823529,
+      "acc_stderr,none": 0.01227255173128377,
+      "acc_norm,none": 0.7840073529411765,
+      "acc_norm_stderr,none": 0.012127502342040204,
+      "alias": "tokenizer_robustness_completion_italian"
+    }
+  },
+  "group_subtasks": {
+    "tokenizer_robustness_completion_italian": [
+      "tokenizer_robustness_completion_italian_english_keyboard",
+      "tokenizer_robustness_completion_italian_date_formats",
+      "tokenizer_robustness_completion_italian_typographical_errors",
+      "tokenizer_robustness_completion_italian_orthographic_errors",
+      "tokenizer_robustness_completion_italian_abbreviations",
+      "tokenizer_robustness_completion_italian_code_language_script_switching",
+      "tokenizer_robustness_completion_italian_phonetic_spelling",
+      "tokenizer_robustness_completion_italian_dialects",
+      "tokenizer_robustness_completion_italian_similar_words",
+      "tokenizer_robustness_completion_italian_grammatical_errors",
+      "tokenizer_robustness_completion_italian_contractions",
+      "tokenizer_robustness_completion_italian_web_search_query",
+      "tokenizer_robustness_completion_italian_spelled_out",
+      "tokenizer_robustness_completion_italian_keyboard_proximity_errors",
+      "tokenizer_robustness_completion_italian_numerical_formats",
+      "tokenizer_robustness_completion_italian_capitalization",
+      "tokenizer_robustness_completion_italian_canonical",
+      "tokenizer_robustness_completion_italian_plausible_diacritics_errors"
+    ]
+  },
+  "configs": {
+    "tokenizer_robustness_completion_italian_abbreviations": {
+      "task": "tokenizer_robustness_completion_italian_abbreviations",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_abbreviations",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_canonical": {
+      "task": "tokenizer_robustness_completion_italian_canonical",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_canonical",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_capitalization": {
+      "task": "tokenizer_robustness_completion_italian_capitalization",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_capitalization",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_code_language_script_switching": {
+      "task": "tokenizer_robustness_completion_italian_code_language_script_switching",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_code_language_script_switching",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_contractions": {
+      "task": "tokenizer_robustness_completion_italian_contractions",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_contractions",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_date_formats": {
+      "task": "tokenizer_robustness_completion_italian_date_formats",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_date_formats",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_dialects": {
+      "task": "tokenizer_robustness_completion_italian_dialects",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_dialects",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_english_keyboard": {
+      "task": "tokenizer_robustness_completion_italian_english_keyboard",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_english_keyboard",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_grammatical_errors": {
+      "task": "tokenizer_robustness_completion_italian_grammatical_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_grammatical_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": {
+      "task": "tokenizer_robustness_completion_italian_keyboard_proximity_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_keyboard_proximity_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_numerical_formats": {
+      "task": "tokenizer_robustness_completion_italian_numerical_formats",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_numerical_formats",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_orthographic_errors": {
+      "task": "tokenizer_robustness_completion_italian_orthographic_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_orthographic_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_phonetic_spelling": {
+      "task": "tokenizer_robustness_completion_italian_phonetic_spelling",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_phonetic_spelling",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": {
+      "task": "tokenizer_robustness_completion_italian_plausible_diacritics_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_plausible_diacritics_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_similar_words": {
+      "task": "tokenizer_robustness_completion_italian_similar_words",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_similar_words",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_spelled_out": {
+      "task": "tokenizer_robustness_completion_italian_spelled_out",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_spelled_out",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_typographical_errors": {
+      "task": "tokenizer_robustness_completion_italian_typographical_errors",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_typographical_errors",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    },
+    "tokenizer_robustness_completion_italian_web_search_query": {
+      "task": "tokenizer_robustness_completion_italian_web_search_query",
+      "dataset_path": "r-three/tokenizer_robustness_completion_italian",
+      "dataset_name": "tokenizer_robustness_completion_italian_web_search_query",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "pretrained": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+        "tokenizer": "CohereLabs/aya-expanse-8b",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "tokenizer_robustness_completion_italian": "1.0.2",
+    "tokenizer_robustness_completion_italian_abbreviations": "1.0.2",
+    "tokenizer_robustness_completion_italian_canonical": "1.0.2",
+    "tokenizer_robustness_completion_italian_capitalization": "1.0.2",
+    "tokenizer_robustness_completion_italian_code_language_script_switching": "1.0.2",
+    "tokenizer_robustness_completion_italian_contractions": "1.0.2",
+    "tokenizer_robustness_completion_italian_date_formats": "1.0.2",
+    "tokenizer_robustness_completion_italian_dialects": "1.0.2",
+    "tokenizer_robustness_completion_italian_english_keyboard": "1.0.2",
+    "tokenizer_robustness_completion_italian_grammatical_errors": "1.0.2",
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": "1.0.2",
+    "tokenizer_robustness_completion_italian_numerical_formats": "1.0.2",
+    "tokenizer_robustness_completion_italian_orthographic_errors": "1.0.2",
+    "tokenizer_robustness_completion_italian_phonetic_spelling": "1.0.2",
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": "1.0.2",
+    "tokenizer_robustness_completion_italian_similar_words": "1.0.2",
+    "tokenizer_robustness_completion_italian_spelled_out": "1.0.2",
+    "tokenizer_robustness_completion_italian_typographical_errors": "1.0.2",
+    "tokenizer_robustness_completion_italian_web_search_query": "1.0.2"
+  },
+  "n-shot": {
+    "tokenizer_robustness_completion_italian_abbreviations": 0,
+    "tokenizer_robustness_completion_italian_canonical": 0,
+    "tokenizer_robustness_completion_italian_capitalization": 0,
+    "tokenizer_robustness_completion_italian_code_language_script_switching": 0,
+    "tokenizer_robustness_completion_italian_contractions": 0,
+    "tokenizer_robustness_completion_italian_date_formats": 0,
+    "tokenizer_robustness_completion_italian_dialects": 0,
+    "tokenizer_robustness_completion_italian_english_keyboard": 0,
+    "tokenizer_robustness_completion_italian_grammatical_errors": 0,
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": 0,
+    "tokenizer_robustness_completion_italian_numerical_formats": 0,
+    "tokenizer_robustness_completion_italian_orthographic_errors": 0,
+    "tokenizer_robustness_completion_italian_phonetic_spelling": 0,
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": 0,
+    "tokenizer_robustness_completion_italian_similar_words": 0,
+    "tokenizer_robustness_completion_italian_spelled_out": 0,
+    "tokenizer_robustness_completion_italian_typographical_errors": 0,
+    "tokenizer_robustness_completion_italian_web_search_query": 0
+  },
+  "higher_is_better": {
+    "tokenizer_robustness_completion_italian": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_abbreviations": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_canonical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_capitalization": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_code_language_script_switching": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_contractions": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_date_formats": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_dialects": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_english_keyboard": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_grammatical_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_numerical_formats": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_orthographic_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_phonetic_spelling": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_similar_words": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_spelled_out": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_typographical_errors": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_italian_web_search_query": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "tokenizer_robustness_completion_italian_english_keyboard": {
+      "original": 68,
+      "effective": 68
+    },
+    "tokenizer_robustness_completion_italian_date_formats": {
+      "original": 6,
+      "effective": 6
+    },
+    "tokenizer_robustness_completion_italian_typographical_errors": {
+      "original": 281,
+      "effective": 281
+    },
+    "tokenizer_robustness_completion_italian_orthographic_errors": {
+      "original": 92,
+      "effective": 92
+    },
+    "tokenizer_robustness_completion_italian_abbreviations": {
+      "original": 27,
+      "effective": 27
+    },
+    "tokenizer_robustness_completion_italian_code_language_script_switching": {
+      "original": 39,
+      "effective": 39
+    },
+    "tokenizer_robustness_completion_italian_phonetic_spelling": {
+      "original": 43,
+      "effective": 43
+    },
+    "tokenizer_robustness_completion_italian_dialects": {
+      "original": 31,
+      "effective": 31
+    },
+    "tokenizer_robustness_completion_italian_similar_words": {
+      "original": 12,
+      "effective": 12
+    },
+    "tokenizer_robustness_completion_italian_grammatical_errors": {
+      "original": 86,
+      "effective": 86
+    },
+    "tokenizer_robustness_completion_italian_contractions": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_italian_web_search_query": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_italian_spelled_out": {
+      "original": 37,
+      "effective": 37
+    },
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": {
+      "original": 231,
+      "effective": 231
+    },
+    "tokenizer_robustness_completion_italian_numerical_formats": {
+      "original": 8,
+      "effective": 8
+    },
+    "tokenizer_robustness_completion_italian_capitalization": {
+      "original": 9,
+      "effective": 9
+    },
+    "tokenizer_robustness_completion_italian_canonical": {
+      "original": 40,
+      "effective": 40
+    },
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": {
+      "original": 17,
+      "effective": 17
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b,tokenizer=CohereLabs/aya-expanse-8b,trust_remote_code=true",
+    "model_num_parameters": 2329208832,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "8df271dc4bb42936fa87252afd1f43f914c33c4f",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1758382399.185971,
+  "pretty_env_info": "PyTorch version: 2.7.0+cu126\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 13.3.0 p16) 13.3.0\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.39\n\nPython version: 3.10.18 (main, Jun 12 2025, 12:39:39) [Clang 20.1.4 ] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-Intel-R-_Xeon-R-_Gold_6338_CPU_@_2.00GHz-with-glibc2.39\nIs CUDA available: True\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA L40S\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               64\nOn-line CPU(s) list:                  0-63\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz\nCPU family:                           6\nModel:                                106\nThread(s) per core:                   1\nCore(s) per socket:                   32\nSocket(s):                            2\nStepping:                             6\nCPU(s) scaling MHz:                   35%\nCPU max MHz:                          3200.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             4000.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities\nL1d cache:                            3 MiB (64 instances)\nL1i cache:                            2 MiB (64 instances)\nL2 cache:                             80 MiB (64 instances)\nL3 cache:                             96 MiB (2 instances)\nNUMA node(s):                         4\nNUMA node0 CPU(s):                    0-15\nNUMA node1 CPU(s):                    16-31\nNUMA node2 CPU(s):                    32-47\nNUMA node3 CPU(s):                    48-63\nVulnerability Gather data sampling:   Mitigation; Microcode\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT disabled\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.6.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.6.80\n[pip3] nvidia-cuda-nvrtc-cu12==12.6.77\n[pip3] nvidia-cuda-runtime-cu12==12.6.77\n[pip3] nvidia-cudnn-cu12==9.5.1.17\n[pip3] nvidia-cufft-cu12==11.3.0.4\n[pip3] nvidia-curand-cu12==10.3.7.77\n[pip3] nvidia-cusolver-cu12==11.7.1.2\n[pip3] nvidia-cusparse-cu12==12.5.4.2\n[pip3] nvidia-cusparselt-cu12==0.6.3\n[pip3] nvidia-nccl-cu12==2.26.2\n[pip3] nvidia-nvjitlink-cu12==12.6.85\n[pip3] nvidia-nvtx-cu12==12.6.77\n[pip3] torch==2.7.0\n[pip3] torchaudio==2.7.0\n[pip3] torchvision==0.22.0\n[pip3] triton==3.3.0\n[conda] Could not collect",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.9",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<PAD>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<|END_OF_TURN_TOKEN|>",
+    "255001"
+  ],
+  "tokenizer_bos_token": [
+    "<BOS_TOKEN>",
+    "5"
+  ],
+  "eot_token_id": 255001,
+  "max_length": 8192,
+  "task_hashes": {
+    "tokenizer_robustness_completion_italian_english_keyboard": "4e920f350872b1d86c3232221a18814c7ae57de5c9768a7559920c8a8707a2d3",
+    "tokenizer_robustness_completion_italian_date_formats": "d55ce16bd8063894e28cd1f1d31e8e9496a71388fdae01e83ea91050459b03e1",
+    "tokenizer_robustness_completion_italian_typographical_errors": "921999ad0b9d0fb181a4dfd644bb3d92f25586e5514ed9a8b273bc1b775c8aee",
+    "tokenizer_robustness_completion_italian_orthographic_errors": "23e30e790b96046a21816705e2a0f7dac571fd2801767f55d4e422f7dca406fc",
+    "tokenizer_robustness_completion_italian_abbreviations": "07b0cd50227e7fa96f327fbecc07222f79c609ae835b89466dbbe898b4068470",
+    "tokenizer_robustness_completion_italian_code_language_script_switching": "b66caa4ec490061d5f2c140e84c9d7c1fc792bfe94f5cc1fcb881e5059f2ad7e",
+    "tokenizer_robustness_completion_italian_phonetic_spelling": "7d3e3f9604ec8b9fb0336bc115242759da9e5ef066f195385ae898cfe8e86ec3",
+    "tokenizer_robustness_completion_italian_dialects": "01c8e3647fcf4c0ad833143867087b4925022b123b0a02d05f7ad2d1d220f0fb",
+    "tokenizer_robustness_completion_italian_similar_words": "631294ccc2115ca264b41fa6ac49eeaec3122316e75885cdbd5b8e10e7db16ce",
+    "tokenizer_robustness_completion_italian_grammatical_errors": "e959898cb6d7dd850b2369a466d3eeeac9bc66a0c68ec01f615a124f1a22f838",
+    "tokenizer_robustness_completion_italian_contractions": "1b3e2c724ece7778b84d49ff34e3c831b125bb99ee38031fbf325196420dcae1",
+    "tokenizer_robustness_completion_italian_web_search_query": "734967391d16d3f45e3fb2b67b097c5b4dd2f013e911163f75ed29145c679e2b",
+    "tokenizer_robustness_completion_italian_spelled_out": "af7c49011832aa99962585e97867458f36b8fcc346df589ccc7d6aae14fddf20",
+    "tokenizer_robustness_completion_italian_keyboard_proximity_errors": "9ffb2d540682da723c35a006520346e7cfe01a868a54e3ab16e2911bb49c2089",
+    "tokenizer_robustness_completion_italian_numerical_formats": "6f9d9c81cd97dcf2e2fbda3ad2c9efb6bba8e612f836ec611dfff5eb53193d2d",
+    "tokenizer_robustness_completion_italian_capitalization": "ffc9d668e96a17825786d259f0c3b4d9f5be97eb520baec0dd584073a7d0e4c6",
+    "tokenizer_robustness_completion_italian_canonical": "ddead86cb65293c11d15ebb4fc8f292f0cdc658fc23abf98e50f91986c4ee15a",
+    "tokenizer_robustness_completion_italian_plausible_diacritics_errors": "722037d25211312e6bd5724160c366d33c5a0dc8b623e53071b0b8e37a763b05"
+  },
+  "model_source": "hf",
+  "model_name": "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b",
+  "model_name_sanitized": "r-three__supertoken_models-llama_CohereLabs-aya-expanse-8b",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 252976.05716195,
+  "end_time": 253081.913600336,
+  "total_evaluation_time_seconds": "105.85643838599208"
+}
