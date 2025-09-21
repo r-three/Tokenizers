@@ -25,6 +25,7 @@ MODEL_PRETTY_NAMES = {
     "CohereLabs-aya-expanse-8b": "Aya",
 }
 
+
 VOCAB_BUCKETS = {
     "r-three/supertoken_models-llama_google-byt5-small": "X-Small",
     "r-three/supertoken_models-llama_common-pile-comma-v0.1": "Small",
@@ -162,6 +163,7 @@ def get_pretty_name(x):
 def load_all_samples(
     base_dir: Union[Path, str],
     patterns: Optional[List[str]] = None,
+    exclude_patterns: Optional[List[str]] = None,
     flatten_doc: bool = False,
     match_date: bool = True,
     simplify_df: bool = True,
@@ -175,6 +177,13 @@ def load_all_samples(
         patterns = ["*"]
     for pattern in patterns:
         pred_files.extend([p for p in base_dir.rglob(f"samples{pattern}.jsonl")])
+    if exclude_patterns:
+        pred_files = [
+            p
+            for pattern in exclude_patterns
+            for p in pred_files
+            if pattern not in str(p)
+        ]
     print(len(pred_files), pred_files[:5])
     samples = []
     for sample_path in pred_files:
@@ -186,6 +195,7 @@ def load_all_samples(
         model_name = results["model_name"]
         model_args = results["config"]["model_args"]
         # lang = "eng_Latn"
+        # lang = None
         # if "farsi" in sample_path.as_posix():
         #     lang = "pes_Arab"
         # elif "turkish" in sample_path.as_posix():
@@ -194,6 +204,7 @@ def load_all_samples(
         #     lang = "zho_Hans"
         # elif "italian" in sample_path.as_posix():
         #     lang = "ita_Latn"
+
         if "tokenizer=" in model_args:
             tokenizer_name = model_args[model_args.index("tokenizer=") + 10 :]
             tokenizer_name = tokenizer_name.split(",")[0]
@@ -211,14 +222,13 @@ def load_all_samples(
         task_name = task_name.replace(
             "additional_spaces", "space_additions_for_natural_split"
         )
-        print(task_name)
 
         try:
             sample = pd.read_json(path_or_buf=sample_path, lines=True)
             sample["model_name"] = model_name
             sample["tokenizer_name"] = tokenizer_name
             sample["task"] = task_name
-            # sample["Lang"] = lang
+            # sample["lang"] = lang
             samples.append(sample)
         except Exception as e:
             print(f"Error loading {sample_path}: {e}")
@@ -238,7 +248,9 @@ def load_all_samples(
         samples = samples.drop(
             columns=[col for col in samples.columns if "hash" in col]
         )
-        samples = samples.drop(columns=["arguments", "filter", "filtered_resps"])
+        samples = samples.drop(
+            columns=["arguments", "filter", "filtered_resps", "resps"]
+        )
     print(samples["set_id"].unique())
     ## TODO: change later
     samples["task"] = samples["task"].apply(
