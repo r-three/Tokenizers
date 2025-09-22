@@ -124,20 +124,21 @@ class TokenizerAnalyzer:
 
     def get_inheritance(self, tokenizer_name: str, tokenizer) -> str:
         """Determine tokenizer inheritance"""
+        #TODO
         inheritance_map = {
-            'aya-expanse': 'Llama/SentencePiece',
-            'bigscience-bloom': 'GPT-2/BPE',
-            'common-pile-comma-v0.1': 'GPT-NeoX/BPE',
-            'google-bert-bert-base-multilingual-cased': 'BERT/WordPiece',
-            'google-byt5-small': 'T5/SentencePiece (Byte-level)',
-            'google-gemma-2-2b': 'SentencePiece',
-            'gpt2': 'Base BPE',
-            'meta-llama-Llama-3.2-1B': 'Llama/SentencePiece',
-            'microsoft-Phi-3-mini-4k-instruct': 'Llama/SentencePiece',
-            'mistralai-tekken': 'Tekken/Custom',
-            'Qwen-Qwen3-8B': 'tiktoken/BPE',
-            'tiktoken-gpt-4o': 'tiktoken/BPE',
-            'facebook-xglm-564m': 'SentencePiece'
+            # 'aya-expanse': 'Llama/SentencePiece',
+            # 'bigscience-bloom': 'GPT-2/BPE',
+            # 'common-pile-comma-v0.1': 'GPT-NeoX/BPE',
+            # 'google-bert-bert-base-multilingual-cased': 'BERT/WordPiece',
+            # 'google-byt5-small': 'T5/SentencePiece (Byte-level)',
+            # 'google-gemma-2-2b': 'SentencePiece',
+            # 'gpt2': 'Base BPE',
+            # 'meta-llama-Llama-3.2-1B': 'Llama/SentencePiece',
+            # 'microsoft-Phi-3-mini-4k-instruct': 'Llama/SentencePiece',
+            # 'mistralai-tekken': 'Tekken/Custom',
+            # 'Qwen-Qwen3-8B': 'tiktoken/BPE',
+            # 'tiktoken-gpt-4o': 'tiktoken/BPE',
+            # 'facebook-xglm-564m': 'SentencePiece'
         }
         return inheritance_map.get(tokenizer_name, 'Unknown')
 
@@ -364,19 +365,20 @@ class TokenizerAnalyzer:
 
     def get_release_date(self, tokenizer_name: str) -> str:
         """Approximate release dates based on model knowledge"""
+        # not confirmed
         dates = {
-            'gpt2': '2019-02',
-            'google-bert-bert-base-multilingual-cased': '2018-10',
-            'google-byt5-small': '2021-05',
-            'bigscience-bloom': '2022-07',
-            'meta-llama-Llama-3.2-1B': '2024-09',
-            'microsoft-Phi-3-mini-4k-instruct': '2024-04',
-            'tiktoken-gpt-4o': '2024-05',
-            'google-gemma-2-2b': '2024-06',
-            'Qwen-Qwen3-8B': '2024-09',
-            'facebook-xglm-564m': '2021-12',
-            'aya-expanse': '2024-11',
-            'mistralai-tekken': '2024-10'
+            # 'gpt2': '2019-02',
+            # 'google-bert-bert-base-multilingual-cased': '2018-10',
+            # 'google-byt5-small': '2021-05',
+            # 'bigscience-bloom': '2022-07',
+            # 'meta-llama-Llama-3.2-1B': '2024-09',
+            # 'microsoft-Phi-3-mini-4k-instruct': '2024-04',
+            # 'tiktoken-gpt-4o': '2024-05',
+            # 'google-gemma-2-2b': '2024-06',
+            # 'Qwen-Qwen3-8B': '2024-09',
+            # 'facebook-xglm-564m': '2021-12',
+            # 'aya-expanse': '2024-11',
+            # 'mistralai-tekken': '2024-10'
         }
         return dates.get(tokenizer_name, 'Unknown')
 

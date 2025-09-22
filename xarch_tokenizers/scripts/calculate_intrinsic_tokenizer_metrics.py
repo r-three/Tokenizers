@@ -885,14 +885,14 @@ def plot_fertility_scores(results, dataset_name):
     for i, tokenizer in enumerate(tokenizers):
         ax.bar(x + i * bar_width - group_width/2 + bar_width/2, fertility_data[i], bar_width, label=tokenizer)
 
-    ax.set_xlabel('Languages', fontsize=25)
-    ax.set_ylabel('SF Scores', fontsize=25)
-    ax.set_title(f'Subword Fertility (SF) Scores \n by Tokenizer and Language', fontsize=27)
+    ax.set_xlabel('Languages', fontsize=18)
+    ax.set_ylabel('Fertility Scores', fontsize=18)
+    ax.set_title(f'Fertility Scores by Tokenizer and Language\n({dataset_name})', fontsize=20)
     ax.set_xticks(x)
-    ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=19)
+    ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=16)
     ax.tick_params(axis='y', labelsize=12)
     fig.subplots_adjust(right=0.8)  # make space on the right
-    ax.legend(fontsize=11, loc='center left', bbox_to_anchor=(1, 0.5))
+    ax.legend(fontsize=10, loc='center left', bbox_to_anchor=(1, 0.5))
     plt.tight_layout()
     plt.savefig("fertility.png")
     
@@ -922,14 +922,14 @@ def plot_parity_scores(results, dataset_name):
     for i, tokenizer in enumerate(tokenizers):
         ax.bar(x + i * bar_width - group_width/2 + bar_width/2, parity_data[i], bar_width, label=tokenizer)
 
-    ax.set_xlabel('Languages', fontsize=25)
-    ax.set_ylabel('Parity Scores', fontsize=25)
-    ax.set_title(f'Parity Scores \n by Tokenizer and Language', fontsize=27)
+    ax.set_xlabel('Languages', fontsize=18)
+    ax.set_ylabel('Parity Scores', fontsize=18)
+    ax.set_title(f'Parity Scores by Tokenizer and Language\n({dataset_name})', fontsize=20)
     ax.set_xticks(x)
-    ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=19)
+    ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=16)
     ax.tick_params(axis='y', labelsize=12)
     fig.subplots_adjust(right=0.8)  # make space on the right
-    ax.legend(fontsize=11, loc='center left', bbox_to_anchor=(1, 0.5))
+    ax.legend(fontsize=10, loc='center left', bbox_to_anchor=(1, 0.5))
     plt.tight_layout()
     plt.savefig("parity.png")
 
@@ -957,14 +957,14 @@ def plot_pcw_scores(results, dataset_name):
     for i, tokenizer in enumerate(tokenizers):
         ax.bar(x + i * bar_width - group_width/2 + bar_width/2, pcw_data[i], bar_width, label=tokenizer)
 
-    ax.set_xlabel('Languages', fontsize=25)
-    ax.set_ylabel('PCW Scores', fontsize=25)
-    ax.set_title(f'Proportion of Continued Words (PCW) \n by Tokenizer and Language', fontsize=27)
+    ax.set_xlabel('Languages', fontsize=18)
+    ax.set_ylabel('Proportion of Continued Words (PCW)', fontsize=18)
+    ax.set_title(f'Proportion of Continued Words by Tokenizer and Language\n({dataset_name})', fontsize=20)
     ax.set_xticks(x)
-    ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=19)
+    ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=16)
     ax.tick_params(axis='y', labelsize=12)
     fig.subplots_adjust(right=0.8)  # make space on the right
-    ax.legend(fontsize=11, loc='center left', bbox_to_anchor=(1, 0.5))
+    ax.legend(fontsize=10, loc='center left', bbox_to_anchor=(1, 0.5))
     plt.tight_layout()
     plt.savefig("pcw.png")
 
