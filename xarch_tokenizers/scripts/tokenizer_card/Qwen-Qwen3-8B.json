@@ -1,0 +1,1711 @@
+{
+  "tokenizer_name": "Qwen-Qwen3-8B",
+  "inherits_from": "Unknown",
+  "diff_from_parent": "",
+  "tokenization_method": "Unknown",
+  "vocab_size": 151643,
+  "special_characters": "<|endoftext|>, <|endoftext|>, ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']",
+  "byte_fallback": true,
+  "multi_lingual": "Supports 5/5 languages tested",
+  "numbers": "123→3tok; 12345→5tok; 3.14159→7tok; 1,000,000→9tok",
+  "pretokenization_splits": "whitespace_and_punctuation; splits: spaces, punctuation, symbols",
+  "unicode_normalization": "NFC normalization",
+  "continuation": "no continuation markers",
+  "oov_handling": "subword fallback",
+  "script_coverage": "Latin, Arabic, Chinese, Cyrillic",
+  "whitespace_treatment": "single_space:preserved; multiple_spaces:preserved; tabs:preserved; newlines:preserved",
+  "release_date": "Unknown",
+  "language_analysis": {
+    "english": {
+      "text": {
+        "original_length": 73,
+        "token_count": 21,
+        "compression_ratio": 3.4761904761904763,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.2876712328767123
+      },
+      "unicode_test": {
+        "original_length": 17,
+        "token_count": 7,
+        "compression_ratio": 2.4285714285714284,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.4117647058823529
+      },
+      "oov_test": {
+        "original_length": 34,
+        "token_count": 11,
+        "compression_ratio": 3.090909090909091,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.3235294117647059
+      }
+    },
+    "farsi": {
+      "text": {
+        "original_length": 50,
+        "token_count": 35,
+        "compression_ratio": 1.4285714285714286,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.7
+      },
+      "unicode_test": {
+        "original_length": 47,
+        "token_count": 30,
+        "compression_ratio": 1.5666666666666667,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.6382978723404256
+      },
+      "oov_test": {
+        "original_length": 44,
+        "token_count": 33,
+        "compression_ratio": 1.3333333333333333,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.75
+      }
+    },
+    "turkish": {
+      "text": {
+        "original_length": 59,
+        "token_count": 23,
+        "compression_ratio": 2.5652173913043477,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.3898305084745763
+      },
+      "unicode_test": {
+        "original_length": 33,
+        "token_count": 19,
+        "compression_ratio": 1.736842105263158,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.5757575757575758
+      },
+      "oov_test": {
+        "original_length": 70,
+        "token_count": 25,
+        "compression_ratio": 2.8,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.35714285714285715
+      }
+    },
+    "chinese": {
+      "text": {
+        "original_length": 24,
+        "token_count": 15,
+        "compression_ratio": 1.6,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.625
+      },
+      "unicode_test": {
+        "original_length": 12,
+        "token_count": 8,
+        "compression_ratio": 1.5,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.6666666666666666
+      },
+      "oov_test": {
+        "original_length": 13,
+        "token_count": 8,
+        "compression_ratio": 1.625,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.6153846153846154
+      }
+    },
+    "italian": {
+      "text": {
+        "original_length": 56,
+        "token_count": 21,
+        "compression_ratio": 2.6666666666666665,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.375
+      },
+      "unicode_test": {
+        "original_length": 32,
+        "token_count": 16,
+        "compression_ratio": 2.0,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.5
+      },
+      "oov_test": {
+        "original_length": 26,
+        "token_count": 8,
+        "compression_ratio": 3.25,
+        "perfect_reconstruction": true,
+        "tokens_per_char": 0.3076923076923077
+      }
+    }
+  },
+  "pretokenization_detailed": {
+    "primary_strategy": "whitespace_and_punctuation",
+    "splits_on": [
+      "spaces",
+      "punctuation",
+      "symbols"
+    ],
+    "preserves": [
+      "spaces_in_tokens",
+      "numbers",
+      "case"
+    ],
+    "normalization_effects": {
+      "unicode_forms": {
+        "nfc_composed": {
+          "original_length": 17,
+          "decoded_length": 17,
+          "token_count": 7,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.4117647058823529,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "nfd_decomposed": {
+          "original_length": 21,
+          "decoded_length": 17,
+          "token_count": 7,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3333333333333333,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "é",
+                "decoded": "é",
+                "position": 3
+              },
+              {
+                "original": "ï",
+                "decoded": "ï",
+                "position": 8
+              },
+              {
+                "original": "é",
+                "decoded": "é",
+                "position": 14
+              },
+              {
+                "original": "é",
+                "decoded": "é",
+                "position": 19
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": true,
+            "form_change": "NFC",
+            "combining_marks_changed": true,
+            "script_changes": {
+              "original": [
+                "COMBINING",
+                "LATIN",
+                "SPACE"
+              ],
+              "decoded": [
+                "LATIN",
+                "SPACE"
+              ],
+              "added": [],
+              "removed": [
+                "COMBINING"
+              ]
+            },
+            "category_changes": [],
+            "combining_change": {
+              "original_count": 4,
+              "decoded_count": 0
+            }
+          }
+        },
+        "nfkc_compat": {
+          "original_length": 3,
+          "decoded_length": 3,
+          "token_count": 2,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.6666666666666666,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "nfkd_compat_decomp": {
+          "original_length": 4,
+          "decoded_length": 4,
+          "token_count": 1,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.25,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": false,
+          "normalization_type": "nfc_normalizing",
+          "preservation_rate": 0.75,
+          "common_changes": [],
+          "insights": [
+            "Normalizes to NFC form"
+          ]
+        }
+      },
+      "case_folding": {
+        "mixed_case": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 3,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.1875,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "lowercase": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 3,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.1875,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "uppercase": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 6,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.375,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "title_case": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 3,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.1875,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 1.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "whitespace_variants": {
+        "normal_space": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 3,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.1875,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "non_breaking_space": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 5,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.3125,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "em_space": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 7,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.4375,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "thin_space": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 7,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.4375,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "zero_width_space": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 5,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.3125,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "tab_newline": {
+          "original_length": 16,
+          "decoded_length": 16,
+          "token_count": 4,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.25,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 1.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "diacritics_comprehensive": {
+        "latin_diacritics": {
+          "original_length": 28,
+          "decoded_length": 28,
+          "token_count": 28,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 1.0,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "combining_diacritics": {
+          "original_length": 10,
+          "decoded_length": 5,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "àáâãä",
+                "decoded": "àáâãä",
+                "position": 0
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": true,
+            "form_change": "NFC",
+            "combining_marks_changed": true,
+            "script_changes": {
+              "original": [
+                "COMBINING",
+                "LATIN"
+              ],
+              "decoded": [
+                "LATIN"
+              ],
+              "added": [],
+              "removed": [
+                "COMBINING"
+              ]
+            },
+            "category_changes": [],
+            "combining_change": {
+              "original_count": 5,
+              "decoded_count": 0
+            }
+          }
+        },
+        "double_diacritics": {
+          "original_length": 1,
+          "decoded_length": 1,
+          "token_count": 1,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 1.0,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "mixed_scripts_diacritics": {
+          "original_length": 17,
+          "decoded_length": 17,
+          "token_count": 13,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.7647058823529411,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "vietnamese_complex": {
+          "original_length": 10,
+          "decoded_length": 10,
+          "token_count": 5,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.5,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "turkish_special": {
+          "original_length": 14,
+          "decoded_length": 14,
+          "token_count": 5,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.35714285714285715,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": false,
+          "normalization_type": "none",
+          "preservation_rate": 0.8333333333333334,
+          "common_changes": [],
+          "insights": [
+            "Selective diacritic handling"
+          ]
+        }
+      },
+      "contractions_detailed": {
+        "apostrophe_contractions": {
+          "original_length": 42,
+          "decoded_length": 42,
+          "token_count": 14,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.3333333333333333,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "unicode_apostrophe": {
+          "original_length": 42,
+          "decoded_length": 42,
+          "token_count": 14,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.3333333333333333,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "multiple_apostrophes": {
+          "original_length": 24,
+          "decoded_length": 24,
+          "token_count": 11,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.4583333333333333,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "possessives": {
+          "original_length": 42,
+          "decoded_length": 42,
+          "token_count": 10,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.23809523809523808,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "language_contractions": {
+          "original_length": 26,
+          "decoded_length": 26,
+          "token_count": 9,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.34615384615384615,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "elision": {
+          "original_length": 22,
+          "decoded_length": 22,
+          "token_count": 8,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.36363636363636365,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 1.0,
+          "common_changes": [],
+          "insights": [
+            "Preserves contractions well"
+          ]
+        }
+      },
+      "special_unicode_cases": {
+        "emoji_sequences": {
+          "original_length": 15,
+          "decoded_length": 15,
+          "token_count": 20,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 1.3333333333333333,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "rtl_marks": {
+          "original_length": 17,
+          "decoded_length": 17,
+          "token_count": 8,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.47058823529411764,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "bidi_text": {
+          "original_length": 24,
+          "decoded_length": 24,
+          "token_count": 6,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.25,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "mathematical": {
+          "original_length": 9,
+          "decoded_length": 9,
+          "token_count": 9,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 1.0,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "currency_symbols": {
+          "original_length": 7,
+          "decoded_length": 7,
+          "token_count": 7,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 1.0,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "script_mixing": {
+          "original_length": 18,
+          "decoded_length": 18,
+          "token_count": 11,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.6111111111111112,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 1.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "ligatures_and_presentation": {
+        "latin_ligatures": {
+          "original_length": 11,
+          "decoded_length": 11,
+          "token_count": 9,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.8181818181818182,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "arabic_presentation": {
+          "original_length": 4,
+          "decoded_length": 4,
+          "token_count": 1,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.25,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "fullwidth_chars": {
+          "original_length": 11,
+          "decoded_length": 11,
+          "token_count": 11,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 1.0,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "subscript_superscript": {
+          "original_length": 18,
+          "decoded_length": 18,
+          "token_count": 13,
+          "perfect_reconstruction": true,
+          "length_preserved": true,
+          "tokens_per_char": 0.7222222222222222,
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": [],
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 1.0,
+          "common_changes": [],
+          "insights": []
+        }
+      }
+    },
+    "boundary_handling": {
+      "word_number": {
+        "tokens": [
+          "test",
+          "1",
+          "2",
+          "3",
+          " ",
+          "4",
+          "5",
+          "6",
+          "test",
+          " test",
+          "4",
+          "5",
+          "6",
+          "test"
+        ],
+        "preserves_boundary": true
+      },
+      "case_changes": {
+        "tokens": [
+          "camel",
+          "Case",
+          " Pascal",
+          "Case"
+        ],
+        "splits_on_case": true
+      },
+      "japanese_mixed_script_boundary": {
+        "tokens": [
+          "こんにちは",
+          "世界",
+          "Hello"
+        ],
+        "token_count": 3
+      },
+      "korean_mixed_script_boundary": {
+        "tokens": [
+          "안",
+          "녕",
+          "하세요",
+          " world",
+          " �",
+          "��",
+          "스트"
+        ],
+        "token_count": 7
+      }
+    },
+    "special_cases": {},
+    "pattern_examples": {
+      "whitespace_basic": {
+        "input": "hello world test",
+        "tokens": [
+          "hello",
+          " world",
+          " test"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 5.333333333333333
+      },
+      "whitespace_multiple": {
+        "input": "hello    world",
+        "tokens": [
+          "hello",
+          "   ",
+          " world"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 4.666666666666667
+      },
+      "whitespace_mixed": {
+        "input": "hello\tworld\ntest",
+        "tokens": [
+          "hello",
+          "\tworld",
+          "\n",
+          "test"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 4.0
+      },
+      "punctuation_attached": {
+        "input": "hello,world!test.",
+        "tokens": [
+          "hello",
+          ",",
+          "world",
+          "!",
+          "test",
+          "."
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.8333333333333335
+      },
+      "punctuation_spaced": {
+        "input": "hello , world ! test .",
+        "tokens": [
+          "hello",
+          " ,",
+          " world",
+          " !",
+          " test",
+          " ."
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 3.6666666666666665
+      },
+      "punctuation_mixed": {
+        "input": "hello, world!",
+        "tokens": [
+          "hello",
+          ",",
+          " world",
+          "!"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.25
+      },
+      "quotes_and_brackets": {
+        "input": "\"hello\" (world) [test]",
+        "tokens": [
+          "\"",
+          "hello",
+          "\"",
+          " (",
+          "world",
+          ")",
+          " [",
+          "test",
+          "]"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 2.4444444444444446
+      },
+      "apostrophes": {
+        "input": "don't can't won't it's",
+        "tokens": [
+          "don",
+          "'t",
+          " can",
+          "'t",
+          " won",
+          "'t",
+          " it",
+          "'s"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 2.75
+      },
+      "hyphens": {
+        "input": "state-of-the-art self-aware",
+        "tokens": [
+          "state",
+          "-of",
+          "-the",
+          "-art",
+          " self",
+          "-aware"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 4.5
+      },
+      "numbers_standalone": {
+        "input": "123 456 789",
+        "tokens": [
+          "1",
+          "2",
+          "3",
+          " ",
+          "4",
+          "5",
+          "6",
+          " ",
+          "7",
+          "8",
+          "9"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 1.0
+      },
+      "numbers_mixed": {
+        "input": "test123 456test test456test",
+        "tokens": [
+          "test",
+          "1",
+          "2",
+          "3",
+          " ",
+          "4",
+          "5",
+          "6",
+          "test",
+          " test",
+          "4",
+          "5",
+          "6",
+          "test"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 1.9285714285714286
+      },
+      "decimal_numbers": {
+        "input": "3.14159 2.5 100.0",
+        "tokens": [
+          "3",
+          ".",
+          "1",
+          "4",
+          "1",
+          "5",
+          "9",
+          " ",
+          "2",
+          ".",
+          "5",
+          " ",
+          "1",
+          "0",
+          "0",
+          ".",
+          "0"
+        ],
+        "token_count": 17,
+        "char_to_token_ratio": 1.0
+      },
+      "currency": {
+        "input": "$100 €50 ¥1000",
+        "tokens": [
+          "$",
+          "1",
+          "0",
+          "0",
+          " €",
+          "5",
+          "0",
+          " ¥",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 1.1666666666666667
+      },
+      "percentages": {
+        "input": "50% 3.14% 100%",
+        "tokens": [
+          "5",
+          "0",
+          "%",
+          " ",
+          "3",
+          ".",
+          "1",
+          "4",
+          "%",
+          " ",
+          "1",
+          "0",
+          "0",
+          "%"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 1.0
+      },
+      "dates_times": {
+        "input": "2024-01-01 12:30:45",
+        "tokens": [
+          "2",
+          "0",
+          "2",
+          "4",
+          "-",
+          "0",
+          "1",
+          "-",
+          "0",
+          "1",
+          " ",
+          "1",
+          "2",
+          ":",
+          "3",
+          "0",
+          ":",
+          "4",
+          "5"
+        ],
+        "token_count": 19,
+        "char_to_token_ratio": 1.0
+      },
+      "urls_emails": {
+        "input": "https://example.com user@email.com",
+        "tokens": [
+          "https",
+          "://",
+          "example",
+          ".com",
+          " user",
+          "@email",
+          ".com"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 4.857142857142857
+      },
+      "contractions_basic": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "I",
+          "'m",
+          " you",
+          "'re",
+          " they",
+          "'ve",
+          " we",
+          "'ll"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 3.0
+      },
+      "contractions_unicode": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "I",
+          "'m",
+          " you",
+          "'re",
+          " they",
+          "'ve",
+          " we",
+          "'ll"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 3.0
+      },
+      "possessives": {
+        "input": "John's car the dogs' toys",
+        "tokens": [
+          "John",
+          "'s",
+          " car",
+          " the",
+          " dogs",
+          "'",
+          " toys"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 3.5714285714285716
+      },
+      "italian_elision": {
+        "input": "dell'arte all'italiana",
+        "tokens": [
+          "d",
+          "ell",
+          "'",
+          "arte",
+          " all",
+          "'",
+          "ital",
+          "iana"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 2.75
+      },
+      "mixed_case": {
+        "input": "Hello WORLD Test",
+        "tokens": [
+          "Hello",
+          " WORLD",
+          " Test"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 5.333333333333333
+      },
+      "camelCase": {
+        "input": "camelCase PascalCase",
+        "tokens": [
+          "camel",
+          "Case",
+          " Pascal",
+          "Case"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 5.0
+      },
+      "acronyms": {
+        "input": "USA NASA FBI",
+        "tokens": [
+          "USA",
+          " NASA",
+          " FBI"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 4.0
+      },
+      "latin_diacritics": {
+        "input": "café naïve résumé piñata",
+        "tokens": [
+          "ca",
+          "fé",
+          " naï",
+          "ve",
+          " ré",
+          "sum",
+          "é",
+          " pi",
+          "ñ",
+          "ata"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 2.4
+      },
+      "combining_diacritics": {
+        "input": "café naïve",
+        "tokens": [
+          "ca",
+          "fé",
+          " naï",
+          "ve"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.0
+      },
+      "turkish_special": {
+        "input": "merhaba dünya İÜÖÇŞ ğüşıöç",
+        "tokens": [
+          "mer",
+          "hab",
+          "a",
+          " dünya",
+          " İ",
+          "Ü",
+          "Ö",
+          "Ç",
+          "Ş",
+          " �",
+          "�",
+          "ü",
+          "şı",
+          "ö",
+          "ç"
+        ],
+        "token_count": 15,
+        "char_to_token_ratio": 1.7333333333333334
+      },
+      "vietnamese_tones": {
+        "input": "tiếng việt",
+        "tokens": [
+          "ti",
+          "ế",
+          "ng",
+          " vi",
+          "ệt"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.0
+      },
+      "scandinavian": {
+        "input": "høj kött Åse",
+        "tokens": [
+          "h",
+          "øj",
+          " kö",
+          "tt",
+          " Å",
+          "se"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.0
+      },
+      "nfc_form": {
+        "input": "café naïve",
+        "tokens": [
+          "ca",
+          "fé",
+          " naï",
+          "ve"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 2.5
+      },
+      "nfd_form": {
+        "input": "café naïve",
+        "tokens": [
+          "ca",
+          "fé",
+          " naï",
+          "ve"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.0
+      },
+      "symbols": {
+        "input": "@#$%^&*()+=",
+        "tokens": [
+          "@",
+          "#$",
+          "%^",
+          "&",
+          "*",
+          "()",
+          "+="
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 1.5714285714285714
+      },
+      "unicode_symbols": {
+        "input": "→←↑↓★☆♠♥",
+        "tokens": [
+          "→",
+          "←",
+          "↑",
+          "↓",
+          "★",
+          "☆",
+          "♠",
+          "♥"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 1.0
+      },
+      "mathematical": {
+        "input": "∑∏∆∇∞±",
+        "tokens": [
+          "∑",
+          "∏",
+          "∆",
+          "∇",
+          "∞",
+          "±"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 1.0
+      },
+      "emojis": {
+        "input": "😀😃😄😁",
+        "tokens": [
+          "😀",
+          "😃",
+          "😄",
+          "😁"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 1.0
+      },
+      "code_like": {
+        "input": "function_name variable_x class.method()",
+        "tokens": [
+          "function",
+          "_name",
+          " variable",
+          "_x",
+          " class",
+          ".method",
+          "()"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 5.571428571428571
+      },
+      "file_paths": {
+        "input": "/path/to/file.txt C:\\Windows\\System32",
+        "tokens": [
+          "/path",
+          "/to",
+          "/file",
+          ".txt",
+          " C",
+          ":\\",
+          "Windows",
+          "\\System",
+          "3",
+          "2"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 3.7
+      },
+      "xml_html": {
+        "input": "<tag>content</tag> <div class=\"test\">",
+        "tokens": [
+          "<tag",
+          ">",
+          "content",
+          "</",
+          "tag",
+          ">",
+          " <",
+          "div",
+          " class",
+          "=\"",
+          "test",
+          "\">"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 3.0833333333333335
+      },
+      "contractions": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "I",
+          "'m",
+          " you",
+          "'re",
+          " they",
+          "'ve",
+          " we",
+          "'ll"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 3.0
+      },
+      "compound_words": {
+        "input": "twenty-first state-of-the-art",
+        "tokens": [
+          "twenty",
+          "-first",
+          " state",
+          "-of",
+          "-the",
+          "-art"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 4.833333333333333
+      },
+      "leading_trailing": {
+        "input": "  hello world  ",
+        "tokens": [
+          " ",
+          " hello",
+          " world",
+          "  "
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.75
+      },
+      "zero_width": {
+        "input": "hello​world",
+        "tokens": [
+          "hello",
+          "​",
+          "world"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 3.6666666666666665
+      },
+      "non_breaking": {
+        "input": "hello world",
+        "tokens": [
+          "hello",
+          " ",
+          "world"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 3.6666666666666665
+      },
+      "chinese_no_spaces": {
+        "input": "你好世界这是测试",
+        "tokens": [
+          "你好",
+          "世界",
+          "这是",
+          "测试"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 2.0
+      },
+      "japanese_mixed": {
+        "input": "こんにちは世界Hello",
+        "tokens": [
+          "こんにちは",
+          "世界",
+          "Hello"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 4.0
+      },
+      "arabic_rtl": {
+        "input": "مرحبا بالعالم اختبار",
+        "tokens": [
+          "مر",
+          "ح",
+          "با",
+          " بال",
+          "عالم",
+          " اخت",
+          "بار"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 2.857142857142857
+      },
+      "thai_no_spaces": {
+        "input": "สวัสดีโลกทดสอบ",
+        "tokens": [
+          "สว",
+          "ั",
+          "สด",
+          "ี",
+          "โลก",
+          "ทดสอบ"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.3333333333333335
+      },
+      "korean_mixed": {
+        "input": "안녕하세요 world 테스트",
+        "tokens": [
+          "안",
+          "녕",
+          "하세요",
+          " world",
+          " �",
+          "��",
+          "스트"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 2.142857142857143
+      },
+      "hindi_devanagari": {
+        "input": "नमस्ते दुनिया परीक्षण",
+        "tokens": [
+          "न",
+          "म",
+          "स",
+          "्�",
+          "�",
+          "े",
+          " �",
+          "�",
+          "ु",
+          "न",
+          "ि�",
+          "�",
+          "ा",
+          " प",
+          "र",
+          "ी",
+          "क",
+          "्�",
+          "�",
+          "ण"
+        ],
+        "token_count": 20,
+        "char_to_token_ratio": 1.05
+      },
+      "persian_farsi": {
+        "input": "سلام دنیا آزمایش",
+        "tokens": [
+          "سلام",
+          " د",
+          "ن",
+          "ی",
+          "ا",
+          " آ",
+          "زم",
+          "ای",
+          "ش"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 1.7777777777777777
+      }
+    },
+    "cross_linguistic_behavior": {
+      "latin": {
+        "mixed_case": {
+          "token_count": 3,
+          "efficiency": 5.333333333333333,
+          "tokens": [
+            "Hello",
+            " WORLD",
+            " Test"
+          ]
+        },
+        "contractions": {
+          "token_count": 8,
+          "efficiency": 3.0,
+          "tokens": [
+            "I",
+            "'m",
+            " you",
+            "'re",
+            " they"
+          ]
+        }
+      },
+      "cjk": {
+        "chinese_no_spaces": {
+          "token_count": 4,
+          "efficiency": 2.0,
+          "tokens": [
+            "你好",
+            "世界",
+            "这是",
+            "测试"
+          ]
+        },
+        "japanese_mixed": {
+          "token_count": 3,
+          "efficiency": 4.0,
+          "tokens": [
+            "こんにちは",
+            "世界",
+            "Hello"
+          ]
+        },
+        "korean_mixed": {
+          "token_count": 7,
+          "efficiency": 2.142857142857143,
+          "tokens": [
+            "안",
+            "녕",
+            "하세요",
+            " world",
+            " �"
+          ]
+        }
+      },
+      "arabic": {
+        "arabic_rtl": {
+          "token_count": 7,
+          "efficiency": 2.857142857142857,
+          "tokens": [
+            "مر",
+            "ح",
+            "با",
+            " بال",
+            "عالم"
+          ]
+        },
+        "persian_farsi": {
+          "token_count": 9,
+          "efficiency": 1.7777777777777777,
+          "tokens": [
+            "سلام",
+            " د",
+            "ن",
+            "ی",
+            "ا"
+          ]
+        }
+      },
+      "indic": {
+        "hindi_devanagari": {
+          "token_count": 20,
+          "efficiency": 1.05,
+          "tokens": [
+            "न",
+            "म",
+            "स",
+            "्�",
+            "�"
+          ]
+        },
+        "thai_no_spaces": {
+          "token_count": 6,
+          "efficiency": 2.3333333333333335,
+          "tokens": [
+            "สว",
+            "ั",
+            "สด",
+            "ี",
+            "โลก"
+          ]
+        }
+      },
+      "turkic": {
+        "turkish_special": {
+          "token_count": 15,
+          "efficiency": 1.7333333333333334,
+          "tokens": [
+            "mer",
+            "hab",
+            "a",
+            " dünya",
+            " İ"
+          ]
+        }
+      }
+    }
+  }
+}

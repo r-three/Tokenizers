@@ -11,6 +11,11 @@ from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
+from xarch_tokenizers.scripts.tokenizer_card.supertoken import (
+    MistralTokenizer,
+    TokenMonsterTokenizer,
+)
+
 warnings.filterwarnings('ignore')
 
 # Required imports - install with: pip install transformers tiktoken tokenizers sentencepiece
@@ -54,20 +59,20 @@ class TokenizerAnalyzer:
         }
         
         self.tokenizer_configs = {
-            'aya-expanse': {'model_name': 'CohereForAI/aya-expanse-8b'},
-            'bigscience-bloom': {'model_name': 'bigscience/bloom-560m'},
-            'common-pile-comma-v0.1': {'model_name': 'EleutherAI/gpt-neox-20b'},  # Uses same tokenizer
-            'google-bert-bert-base-multilingual-cased': {'model_name': 'google-bert/bert-base-multilingual-cased'},
-            'google-byt5-small': {'model_name': 'google/byt5-small'},
-            'google-gemma-2-2b': {'model_name': 'google/gemma-2-2b'},
-            'gpt2': {'model_name': 'gpt2'},
-            'meta-llama-Llama-3.2-1B': {'model_name': 'meta-llama/Llama-3.2-1B'},
-            'microsoft-Phi-3-mini-4k-instruct': {'model_name': 'microsoft/Phi-3-mini-4k-instruct'},
-            'mistralai-tekken': {'model_name': 'mistralai/Mistral-7B-v0.1'},  # Tekken tokenizer
-            'Qwen-Qwen3-8B': {'model_name': 'Qwen/Qwen2.5-7B'},
-            'tiktoken-gpt-4o': {'is_tiktoken': True, 'encoding': 'o200k_base'},
-            'tokenmonster-englishcode-32000-consistent-v1': {'skip': True, 'reason': 'Requires specific TokenMonster library'},
-            'facebook-xglm-564m': {'model_name': 'facebook/xglm-564M'}
+            # 'aya-expanse': {'model_name': 'CohereForAI/aya-expanse-8b'},
+            # 'bigscience-bloom': {'model_name': 'bigscience/bloom-560m'},
+            # 'common-pile-comma-v0.1': {'model_name': 'EleutherAI/gpt-neox-20b'},  # Uses same tokenizer
+            # 'google-bert-bert-base-multilingual-cased': {'model_name': 'google-bert/bert-base-multilingual-cased'},
+            # 'google-byt5-small': {'model_name': 'google/byt5-small'},
+            # 'google-gemma-2-2b': {'model_name': 'google/gemma-2-2b'},
+            # 'gpt2': {'model_name': 'gpt2'},
+            # 'meta-llama-Llama-3.2-1B': {'model_name': 'meta-llama/Llama-3.2-1B'},
+            # 'microsoft-Phi-3-mini-4k-instruct': {'model_name': 'microsoft/Phi-3-mini-4k-instruct'},
+            'mistralai-tekken': {'is_tekken': True},  # Tekken tokenizer
+            # 'Qwen-Qwen3-8B': {'model_name': 'Qwen/Qwen2.5-7B'},
+            # 'tiktoken-gpt-4o': {'is_tiktoken': True, 'encoding': 'o200k_base'},
+            'tokenmonster-englishcode-32000-consistent-v1': {'is_tokenmonster': True, 'model_name': 'englishcode-32000-consistent-v1'},
+            # 'facebook-xglm-564m': {'model_name': 'facebook/xglm-564M'}
         }
         
         self.results = []
@@ -83,6 +88,10 @@ class TokenizerAnalyzer:
         try:
             if config.get('is_tiktoken'):
                 return tiktoken.get_encoding(config['encoding'])
+            elif config.get('is_tekken'):
+                return MistralTokenizer.load("")
+            elif config.get('is_tokenmonster'):
+                return TokenMonsterTokenizer.load(config.get('model_name'))
             else:
                 model_name = config.get('model_name')
                 if not model_name:
@@ -499,7 +508,7 @@ class TokenizerAnalyzer:
             'korean_mixed': '안녕하세요 world 테스트',
             'hindi_devanagari': 'नमस्ते दुनिया परीक्षण',
             'persian_farsi': 'سلام دنیا آزمایش',
-            'turkish_special': 'merhaba dünya ğüşıöç',
+            'turkish_special': 'merhaba dünya İÜÖÇŞ ğüşıöç',
         }
         test_cases.update(multilingual_tests)
         
@@ -941,8 +950,14 @@ class TokenizerAnalyzer:
 
     def save_results(self):
         """Save detailed results to JSON"""
-        with open('tokenizer_analysis_detailed.json', 'w', encoding='utf-8') as f:
-            json.dump(self.results, f, indent=2, ensure_ascii=False, default=str)
+        for result in self.results:
+            name = result["tokenizer_name"]
+            with open(f"{name}.json", "w", encoding="utf-8") as f:
+                json.dump(result, f, indent=2, ensure_ascii=False, default=str)
+            print(f"Results saved to {name}.json")
+
+        # with open('tokenizer_analysis_detailed.json', 'w', encoding='utf-8') as f:
+        #     json.dump(self.results, f, indent=2, ensure_ascii=False, default=str)
         print(f"\nDetailed results saved to: tokenizer_analysis_detailed.json")
 
     def create_summary_table(self):

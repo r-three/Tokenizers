@@ -1,0 +1,2788 @@
+{
+  "tokenizer_name": "google-gemma-2-2b",
+  "inherits_from": "Unknown",
+  "diff_from_parent": "",
+  "tokenization_method": "Unknown",
+  "vocab_size": 256000,
+  "special_characters": "<bos>, <eos>, <unk>, <pad>, ['<start_of_turn>', '<end_of_turn>']",
+  "byte_fallback": false,
+  "multi_lingual": "Supports 5/5 languages tested",
+  "numbers": "123→4tok; 12345→6tok; 3.14159→8tok; 1,000,000→10tok",
+  "pretokenization_splits": "whitespace_and_punctuation; splits: spaces, punctuation, symbols",
+  "unicode_normalization": "NFC normalization",
+  "continuation": "no continuation markers",
+  "oov_handling": "approximation",
+  "script_coverage": "",
+  "whitespace_treatment": "single_space:modified; multiple_spaces:modified; tabs:modified; newlines:modified",
+  "release_date": "Unknown",
+  "language_analysis": {
+    "english": {
+      "text": {
+        "original_length": 73,
+        "token_count": 22,
+        "compression_ratio": 3.3181818181818183,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3013698630136986
+      },
+      "unicode_test": {
+        "original_length": 17,
+        "token_count": 4,
+        "compression_ratio": 4.25,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.23529411764705882
+      },
+      "oov_test": {
+        "original_length": 34,
+        "token_count": 11,
+        "compression_ratio": 3.090909090909091,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3235294117647059
+      }
+    },
+    "farsi": {
+      "text": {
+        "original_length": 50,
+        "token_count": 19,
+        "compression_ratio": 2.6315789473684212,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.38
+      },
+      "unicode_test": {
+        "original_length": 47,
+        "token_count": 14,
+        "compression_ratio": 3.357142857142857,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.2978723404255319
+      },
+      "oov_test": {
+        "original_length": 44,
+        "token_count": 23,
+        "compression_ratio": 1.9130434782608696,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.5227272727272727
+      }
+    },
+    "turkish": {
+      "text": {
+        "original_length": 59,
+        "token_count": 22,
+        "compression_ratio": 2.6818181818181817,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3728813559322034
+      },
+      "unicode_test": {
+        "original_length": 33,
+        "token_count": 19,
+        "compression_ratio": 1.736842105263158,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.5757575757575758
+      },
+      "oov_test": {
+        "original_length": 70,
+        "token_count": 24,
+        "compression_ratio": 2.9166666666666665,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.34285714285714286
+      }
+    },
+    "chinese": {
+      "text": {
+        "original_length": 24,
+        "token_count": 16,
+        "compression_ratio": 1.5,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.6666666666666666
+      },
+      "unicode_test": {
+        "original_length": 12,
+        "token_count": 9,
+        "compression_ratio": 1.3333333333333333,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.75
+      },
+      "oov_test": {
+        "original_length": 13,
+        "token_count": 9,
+        "compression_ratio": 1.4444444444444444,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.6923076923076923
+      }
+    },
+    "italian": {
+      "text": {
+        "original_length": 56,
+        "token_count": 19,
+        "compression_ratio": 2.9473684210526314,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3392857142857143
+      },
+      "unicode_test": {
+        "original_length": 32,
+        "token_count": 16,
+        "compression_ratio": 2.0,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.5
+      },
+      "oov_test": {
+        "original_length": 26,
+        "token_count": 6,
+        "compression_ratio": 4.333333333333333,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.23076923076923078
+      }
+    }
+  },
+  "pretokenization_detailed": {
+    "primary_strategy": "whitespace_and_punctuation",
+    "splits_on": [
+      "spaces",
+      "punctuation",
+      "symbols"
+    ],
+    "preserves": [
+      "spaces_in_tokens",
+      "numbers",
+      "case"
+    ],
+    "normalization_effects": {
+      "unicode_forms": {
+        "nfc_composed": {
+          "original_length": 17,
+          "decoded_length": 22,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.23529411764705882,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>caf"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "nfd_decomposed": {
+          "original_length": 21,
+          "decoded_length": 26,
+          "token_count": 10,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.47619047619047616,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>caf"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "COMBINING",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "COMBINING",
+                "LESS-THAN",
+                "LATIN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "nfkc_compat": {
+          "original_length": 3,
+          "decoded_length": 8,
+          "token_count": 3,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>ﬁle"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "nfkd_compat_decomp": {
+          "original_length": 4,
+          "decoded_length": 9,
+          "token_count": 2,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>fil"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "case_folding": {
+        "mixed_case": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.25,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "lowercase": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.25,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "uppercase": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3125,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>HEL"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "title_case": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.25,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "whitespace_variants": {
+        "normal_space": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.25,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "non_breaking_space": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "NO-BREAK",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "NO-BREAK",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "em_space": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "EM",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "EM",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "thin_space": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "THIN",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "THIN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "zero_width_space": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN",
+                "ZERO"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN",
+                "ZERO"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "tab_newline": {
+          "original_length": 16,
+          "decoded_length": 21,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN",
+                "UNKNOWN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "UNKNOWN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "diacritics_comprehensive": {
+        "latin_diacritics": {
+          "original_length": 28,
+          "decoded_length": 33,
+          "token_count": 29,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0357142857142858,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>àáâ"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "combining_diacritics": {
+          "original_length": 10,
+          "decoded_length": 15,
+          "token_count": 11,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.1,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>àa"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "COMBINING",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "COMBINING",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "double_diacritics": {
+          "original_length": 1,
+          "decoded_length": 6,
+          "token_count": 2,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 2.0,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>ǘ"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "mixed_scripts_diacritics": {
+          "original_length": 17,
+          "decoded_length": 22,
+          "token_count": 9,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5294117647058824,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>caf"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "ARABIC",
+                "LATIN",
+                "CYRILLIC"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "ARABIC",
+                "CYRILLIC"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "vietnamese_complex": {
+          "original_length": 10,
+          "decoded_length": 15,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.4,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>tiế"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "turkish_special": {
+          "original_length": 14,
+          "decoded_length": 19,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.42857142857142855,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>İst"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": [
+            "Strips or modifies diacritics"
+          ]
+        }
+      },
+      "contractions_detailed": {
+        "apostrophe_contractions": {
+          "original_length": 42,
+          "decoded_length": 47,
+          "token_count": 22,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5238095238095238,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>I'm"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "unicode_apostrophe": {
+          "original_length": 42,
+          "decoded_length": 47,
+          "token_count": 22,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5238095238095238,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>I'm"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "multiple_apostrophes": {
+          "original_length": 24,
+          "decoded_length": 29,
+          "token_count": 15,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.625,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>roc"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE",
+                "DIGIT",
+                "HYPHEN-MINUS"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "APOSTROPHE",
+                "DIGIT",
+                "HYPHEN-MINUS"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "possessives": {
+          "original_length": 42,
+          "decoded_length": 47,
+          "token_count": 13,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.30952380952380953,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Joh"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "language_contractions": {
+          "original_length": 26,
+          "decoded_length": 31,
+          "token_count": 13,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>c'e"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "elision": {
+          "original_length": 22,
+          "decoded_length": 27,
+          "token_count": 8,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.36363636363636365,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>del"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": [
+            "Splits contractions aggressively"
+          ]
+        }
+      },
+      "special_unicode_cases": {
+        "emoji_sequences": {
+          "original_length": 15,
+          "decoded_length": 20,
+          "token_count": 15,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>👨‍👩"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "WAVING",
+                "RAINBOW",
+                "EMOJI",
+                "WOMAN",
+                "BOY",
+                "ZERO",
+                "THUMBS",
+                "MAN",
+                "VARIATION",
+                "GIRL"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "WAVING",
+                "RAINBOW",
+                "EMOJI",
+                "LESS-THAN",
+                "WOMAN",
+                "LATIN",
+                "ZERO",
+                "BOY",
+                "THUMBS",
+                "MAN",
+                "VARIATION",
+                "GIRL"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "rtl_marks": {
+          "original_length": 17,
+          "decoded_length": 22,
+          "token_count": 8,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.47058823529411764,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "HEBREW",
+                "LATIN",
+                "RIGHT-TO-LEFT",
+                "LEFT-TO-RIGHT"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "HEBREW",
+                "LESS-THAN",
+                "LATIN",
+                "RIGHT-TO-LEFT",
+                "LEFT-TO-RIGHT"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "bidi_text": {
+          "original_length": 24,
+          "decoded_length": 29,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.25,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "ARABIC",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LESS-THAN",
+                "LATIN",
+                "ARABIC"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "mathematical": {
+          "original_length": 9,
+          "decoded_length": 14,
+          "token_count": 10,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.1111111111111112,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>∑∏∆"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SQUARE",
+                "PARTIAL",
+                "N-ARY",
+                "INCREMENT",
+                "INFINITY",
+                "PLUS-MINUS",
+                "NABLA",
+                "INTEGRAL"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SQUARE",
+                "LESS-THAN",
+                "PARTIAL",
+                "N-ARY",
+                "INCREMENT",
+                "LATIN",
+                "INFINITY",
+                "PLUS-MINUS",
+                "NABLA",
+                "INTEGRAL"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "currency_symbols": {
+          "original_length": 7,
+          "decoded_length": 12,
+          "token_count": 8,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.1428571428571428,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>$€¥"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "RUBLE",
+                "EURO",
+                "YEN",
+                "INDIAN",
+                "DOLLAR",
+                "BITCOIN",
+                "POUND"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "RUBLE",
+                "EURO",
+                "LESS-THAN",
+                "YEN",
+                "INDIAN",
+                "LATIN",
+                "DOLLAR",
+                "BITCOIN",
+                "POUND"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "script_mixing": {
+          "original_length": 18,
+          "decoded_length": 23,
+          "token_count": 9,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Hel"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "DEVANAGARI",
+                "CJK",
+                "LATIN",
+                "ARABIC"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "CJK",
+                "DEVANAGARI",
+                "LESS-THAN",
+                "LATIN",
+                "ARABIC"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "ligatures_and_presentation": {
+        "latin_ligatures": {
+          "original_length": 11,
+          "decoded_length": 16,
+          "token_count": 7,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.6363636363636364,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>ﬁle"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "arabic_presentation": {
+          "original_length": 4,
+          "decoded_length": 9,
+          "token_count": 2,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>سلا"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "ARABIC"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "ARABIC",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "fullwidth_chars": {
+          "original_length": 11,
+          "decoded_length": 16,
+          "token_count": 12,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0909090909090908,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>Ｈｅｌ"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "FULLWIDTH",
+                "IDEOGRAPHIC"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "IDEOGRAPHIC",
+                "LESS-THAN",
+                "FULLWIDTH",
+                "LATIN"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LATIN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "subscript_superscript": {
+          "original_length": 18,
+          "decoded_length": 23,
+          "token_count": 15,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.8333333333333334,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "<bos>",
+                "context": "<bos>H₂O"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "SUBSCRIPT",
+                "PLUS",
+                "LATIN",
+                "SUPERSCRIPT",
+                "EQUALS"
+              ],
+              "decoded": [
+                "GREATER-THAN",
+                "SPACE",
+                "SUBSCRIPT",
+                "LESS-THAN",
+                "PLUS",
+                "LATIN",
+                "SUPERSCRIPT",
+                "EQUALS"
+              ],
+              "added": [
+                "GREATER-THAN",
+                "LESS-THAN"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      }
+    },
+    "boundary_handling": {
+      "word_number": {
+        "tokens": [
+          "<bos>",
+          "test",
+          "1",
+          "2",
+          "3",
+          " ",
+          "4",
+          "5",
+          "6",
+          "test",
+          " test",
+          "4",
+          "5",
+          "6",
+          "test"
+        ],
+        "preserves_boundary": true
+      },
+      "case_changes": {
+        "tokens": [
+          "<bos>",
+          "camel",
+          "Case",
+          " Pascal",
+          "Case"
+        ],
+        "splits_on_case": true
+      },
+      "japanese_mixed_script_boundary": {
+        "tokens": [
+          "<bos>",
+          "こんにちは",
+          "世界",
+          "Hello"
+        ],
+        "token_count": 4
+      },
+      "korean_mixed_script_boundary": {
+        "tokens": [
+          "<bos>",
+          "안",
+          "녕",
+          "하세요",
+          " world",
+          " 테",
+          "스트"
+        ],
+        "token_count": 7
+      }
+    },
+    "special_cases": {},
+    "pattern_examples": {
+      "whitespace_basic": {
+        "input": "hello world test",
+        "tokens": [
+          "<bos>",
+          "hello",
+          " world",
+          " test"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 4.0
+      },
+      "whitespace_multiple": {
+        "input": "hello    world",
+        "tokens": [
+          "<bos>",
+          "hello",
+          "    ",
+          "world"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.5
+      },
+      "whitespace_mixed": {
+        "input": "hello\tworld\ntest",
+        "tokens": [
+          "<bos>",
+          "hello",
+          "\t",
+          "world",
+          "\n",
+          "test"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.6666666666666665
+      },
+      "punctuation_attached": {
+        "input": "hello,world!test.",
+        "tokens": [
+          "<bos>",
+          "hello",
+          ",",
+          "world",
+          "!",
+          "test",
+          "."
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 2.4285714285714284
+      },
+      "punctuation_spaced": {
+        "input": "hello , world ! test .",
+        "tokens": [
+          "<bos>",
+          "hello",
+          " ,",
+          " world",
+          " !",
+          " test",
+          " ."
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 3.142857142857143
+      },
+      "punctuation_mixed": {
+        "input": "hello, world!",
+        "tokens": [
+          "<bos>",
+          "hello",
+          ",",
+          " world",
+          "!"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.6
+      },
+      "quotes_and_brackets": {
+        "input": "\"hello\" (world) [test]",
+        "tokens": [
+          "<bos>",
+          "\"",
+          "hello",
+          "\"",
+          " (",
+          "world",
+          ")",
+          " [",
+          "test",
+          "]"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 2.2
+      },
+      "apostrophes": {
+        "input": "don't can't won't it's",
+        "tokens": [
+          "<bos>",
+          "don",
+          "'",
+          "t",
+          " can",
+          "'",
+          "t",
+          " won",
+          "'",
+          "t",
+          " it",
+          "'",
+          "s"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.6923076923076923
+      },
+      "hyphens": {
+        "input": "state-of-the-art self-aware",
+        "tokens": [
+          "<bos>",
+          "state",
+          "-",
+          "of",
+          "-",
+          "the",
+          "-",
+          "art",
+          " self",
+          "-",
+          "aware"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 2.4545454545454546
+      },
+      "numbers_standalone": {
+        "input": "123 456 789",
+        "tokens": [
+          "<bos>",
+          "1",
+          "2",
+          "3",
+          " ",
+          "4",
+          "5",
+          "6",
+          " ",
+          "7",
+          "8",
+          "9"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 0.9166666666666666
+      },
+      "numbers_mixed": {
+        "input": "test123 456test test456test",
+        "tokens": [
+          "<bos>",
+          "test",
+          "1",
+          "2",
+          "3",
+          " ",
+          "4",
+          "5",
+          "6",
+          "test",
+          " test",
+          "4",
+          "5",
+          "6",
+          "test"
+        ],
+        "token_count": 15,
+        "char_to_token_ratio": 1.8
+      },
+      "decimal_numbers": {
+        "input": "3.14159 2.5 100.0",
+        "tokens": [
+          "<bos>",
+          "3",
+          ".",
+          "1",
+          "4",
+          "1",
+          "5",
+          "9",
+          " ",
+          "2",
+          ".",
+          "5",
+          " ",
+          "1",
+          "0",
+          "0",
+          ".",
+          "0"
+        ],
+        "token_count": 18,
+        "char_to_token_ratio": 0.9444444444444444
+      },
+      "currency": {
+        "input": "$100 €50 ¥1000",
+        "tokens": [
+          "<bos>",
+          "$",
+          "1",
+          "0",
+          "0",
+          " €",
+          "5",
+          "0",
+          " ¥",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.0769230769230769
+      },
+      "percentages": {
+        "input": "50% 3.14% 100%",
+        "tokens": [
+          "<bos>",
+          "5",
+          "0",
+          "%",
+          " ",
+          "3",
+          ".",
+          "1",
+          "4",
+          "%",
+          " ",
+          "1",
+          "0",
+          "0",
+          "%"
+        ],
+        "token_count": 15,
+        "char_to_token_ratio": 0.9333333333333333
+      },
+      "dates_times": {
+        "input": "2024-01-01 12:30:45",
+        "tokens": [
+          "<bos>",
+          "2",
+          "0",
+          "2",
+          "4",
+          "-",
+          "0",
+          "1",
+          "-",
+          "0",
+          "1",
+          " ",
+          "1",
+          "2",
+          ":",
+          "3",
+          "0",
+          ":",
+          "4",
+          "5"
+        ],
+        "token_count": 20,
+        "char_to_token_ratio": 0.95
+      },
+      "urls_emails": {
+        "input": "https://example.com user@email.com",
+        "tokens": [
+          "<bos>",
+          "https",
+          "://",
+          "example",
+          ".",
+          "com",
+          " user",
+          "@",
+          "email",
+          ".",
+          "com"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 3.090909090909091
+      },
+      "contractions_basic": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "<bos>",
+          "I",
+          "'",
+          "m",
+          " you",
+          "'",
+          "re",
+          " they",
+          "'",
+          "ve",
+          " we",
+          "'",
+          "ll"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.8461538461538463
+      },
+      "contractions_unicode": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "<bos>",
+          "I",
+          "'",
+          "m",
+          " you",
+          "'",
+          "re",
+          " they",
+          "'",
+          "ve",
+          " we",
+          "'",
+          "ll"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.8461538461538463
+      },
+      "possessives": {
+        "input": "John's car the dogs' toys",
+        "tokens": [
+          "<bos>",
+          "John",
+          "'",
+          "s",
+          " car",
+          " the",
+          " dogs",
+          "'",
+          " toys"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 2.7777777777777777
+      },
+      "italian_elision": {
+        "input": "dell'arte all'italiana",
+        "tokens": [
+          "<bos>",
+          "dell",
+          "'",
+          "arte",
+          " all",
+          "'",
+          "ital",
+          "iana"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 2.75
+      },
+      "mixed_case": {
+        "input": "Hello WORLD Test",
+        "tokens": [
+          "<bos>",
+          "Hello",
+          " WORLD",
+          " Test"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 4.0
+      },
+      "camelCase": {
+        "input": "camelCase PascalCase",
+        "tokens": [
+          "<bos>",
+          "camel",
+          "Case",
+          " Pascal",
+          "Case"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 4.0
+      },
+      "acronyms": {
+        "input": "USA NASA FBI",
+        "tokens": [
+          "<bos>",
+          "USA",
+          " NASA",
+          " FBI"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.0
+      },
+      "latin_diacritics": {
+        "input": "café naïve résumé piñata",
+        "tokens": [
+          "<bos>",
+          "café",
+          " naïve",
+          " résumé",
+          " pi",
+          "ñata"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 4.0
+      },
+      "combining_diacritics": {
+        "input": "café naïve",
+        "tokens": [
+          "<bos>",
+          "cafe",
+          "́",
+          " nai",
+          "̈",
+          "ve"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.0
+      },
+      "turkish_special": {
+        "input": "merhaba dünya İÜÖÇŞ ğüşıöç",
+        "tokens": [
+          "<bos>",
+          "mer",
+          "haba",
+          " dünya",
+          " İ",
+          "Ü",
+          "Ö",
+          "Ç",
+          "Ş",
+          " ",
+          "ğ",
+          "ü",
+          "şı",
+          "ö",
+          "ç"
+        ],
+        "token_count": 15,
+        "char_to_token_ratio": 1.7333333333333334
+      },
+      "vietnamese_tones": {
+        "input": "tiếng việt",
+        "tokens": [
+          "<bos>",
+          "ti",
+          "ếng",
+          " việt"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 2.5
+      },
+      "scandinavian": {
+        "input": "høj kött Åse",
+        "tokens": [
+          "<bos>",
+          "h",
+          "øj",
+          " kö",
+          "tt",
+          " Å",
+          "se"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 1.7142857142857142
+      },
+      "nfc_form": {
+        "input": "café naïve",
+        "tokens": [
+          "<bos>",
+          "café",
+          " naïve"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 3.3333333333333335
+      },
+      "nfd_form": {
+        "input": "café naïve",
+        "tokens": [
+          "<bos>",
+          "cafe",
+          "́",
+          " nai",
+          "̈",
+          "ve"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.0
+      },
+      "symbols": {
+        "input": "@#$%^&*()+=",
+        "tokens": [
+          "<bos>",
+          "@",
+          "#$",
+          "%^",
+          "&",
+          "*",
+          "()",
+          "+="
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 1.375
+      },
+      "unicode_symbols": {
+        "input": "→←↑↓★☆♠♥",
+        "tokens": [
+          "<bos>",
+          "→",
+          "←",
+          "↑",
+          "↓",
+          "★☆",
+          "♠",
+          "♥"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 1.0
+      },
+      "mathematical": {
+        "input": "∑∏∆∇∞±",
+        "tokens": [
+          "<bos>",
+          "∑",
+          "∏",
+          "∆",
+          "∇",
+          "∞",
+          "±"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 0.8571428571428571
+      },
+      "emojis": {
+        "input": "😀😃😄😁",
+        "tokens": [
+          "<bos>",
+          "😀",
+          "😃",
+          "😄",
+          "😁"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 0.8
+      },
+      "code_like": {
+        "input": "function_name variable_x class.method()",
+        "tokens": [
+          "<bos>",
+          "function",
+          "_",
+          "name",
+          " variable",
+          "_",
+          "x",
+          " class",
+          ".",
+          "method",
+          "()"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 3.5454545454545454
+      },
+      "file_paths": {
+        "input": "/path/to/file.txt C:\\Windows\\System32",
+        "tokens": [
+          "<bos>",
+          "/",
+          "path",
+          "/",
+          "to",
+          "/",
+          "file",
+          ".",
+          "txt",
+          " C",
+          ":\\",
+          "Windows",
+          "\\",
+          "System",
+          "3",
+          "2"
+        ],
+        "token_count": 16,
+        "char_to_token_ratio": 2.3125
+      },
+      "xml_html": {
+        "input": "<tag>content</tag> <div class=\"test\">",
+        "tokens": [
+          "<bos>",
+          "<",
+          "tag",
+          ">",
+          "content",
+          "</",
+          "tag",
+          ">",
+          " <",
+          "div",
+          " class",
+          "=\"",
+          "test",
+          "\">"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 2.642857142857143
+      },
+      "contractions": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "<bos>",
+          "I",
+          "'",
+          "m",
+          " you",
+          "'",
+          "re",
+          " they",
+          "'",
+          "ve",
+          " we",
+          "'",
+          "ll"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.8461538461538463
+      },
+      "compound_words": {
+        "input": "twenty-first state-of-the-art",
+        "tokens": [
+          "<bos>",
+          "twenty",
+          "-",
+          "first",
+          " state",
+          "-",
+          "of",
+          "-",
+          "the",
+          "-",
+          "art"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 2.6363636363636362
+      },
+      "leading_trailing": {
+        "input": "  hello world  ",
+        "tokens": [
+          "<bos>",
+          "  ",
+          "hello",
+          " world",
+          "  "
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 3.0
+      },
+      "zero_width": {
+        "input": "hello​world",
+        "tokens": [
+          "<bos>",
+          "hello",
+          "​",
+          "world"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 2.75
+      },
+      "non_breaking": {
+        "input": "hello world",
+        "tokens": [
+          "<bos>",
+          "hello",
+          " ",
+          "world"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 2.75
+      },
+      "chinese_no_spaces": {
+        "input": "你好世界这是测试",
+        "tokens": [
+          "<bos>",
+          "你好",
+          "世界",
+          "这是",
+          "测试"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 1.6
+      },
+      "japanese_mixed": {
+        "input": "こんにちは世界Hello",
+        "tokens": [
+          "<bos>",
+          "こんにちは",
+          "世界",
+          "Hello"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 3.0
+      },
+      "arabic_rtl": {
+        "input": "مرحبا بالعالم اختبار",
+        "tokens": [
+          "<bos>",
+          "مرح",
+          "با",
+          " بالع",
+          "الم",
+          " اخت",
+          "بار"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 2.857142857142857
+      },
+      "thai_no_spaces": {
+        "input": "สวัสดีโลกทดสอบ",
+        "tokens": [
+          "<bos>",
+          "ส",
+          "วัส",
+          "ดี",
+          "โลก",
+          "ท",
+          "ด",
+          "สอบ"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 1.75
+      },
+      "korean_mixed": {
+        "input": "안녕하세요 world 테스트",
+        "tokens": [
+          "<bos>",
+          "안",
+          "녕",
+          "하세요",
+          " world",
+          " 테",
+          "스트"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 2.142857142857143
+      },
+      "hindi_devanagari": {
+        "input": "नमस्ते दुनिया परीक्षण",
+        "tokens": [
+          "<bos>",
+          "न",
+          "म",
+          "स्त",
+          "े",
+          " दुनिया",
+          " परी",
+          "क्षण"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 2.625
+      },
+      "persian_farsi": {
+        "input": "سلام دنیا آزمایش",
+        "tokens": [
+          "<bos>",
+          "سلام",
+          " دنیا",
+          " آزمایش"
+        ],
+        "token_count": 4,
+        "char_to_token_ratio": 4.0
+      }
+    },
+    "cross_linguistic_behavior": {
+      "latin": {
+        "mixed_case": {
+          "token_count": 4,
+          "efficiency": 4.0,
+          "tokens": [
+            "<bos>",
+            "Hello",
+            " WORLD",
+            " Test"
+          ]
+        },
+        "contractions": {
+          "token_count": 13,
+          "efficiency": 1.8461538461538463,
+          "tokens": [
+            "<bos>",
+            "I",
+            "'",
+            "m",
+            " you"
+          ]
+        }
+      },
+      "cjk": {
+        "chinese_no_spaces": {
+          "token_count": 5,
+          "efficiency": 1.6,
+          "tokens": [
+            "<bos>",
+            "你好",
+            "世界",
+            "这是",
+            "测试"
+          ]
+        },
+        "japanese_mixed": {
+          "token_count": 4,
+          "efficiency": 3.0,
+          "tokens": [
+            "<bos>",
+            "こんにちは",
+            "世界",
+            "Hello"
+          ]
+        },
+        "korean_mixed": {
+          "token_count": 7,
+          "efficiency": 2.142857142857143,
+          "tokens": [
+            "<bos>",
+            "안",
+            "녕",
+            "하세요",
+            " world"
+          ]
+        }
+      },
+      "arabic": {
+        "arabic_rtl": {
+          "token_count": 7,
+          "efficiency": 2.857142857142857,
+          "tokens": [
+            "<bos>",
+            "مرح",
+            "با",
+            " بالع",
+            "الم"
+          ]
+        },
+        "persian_farsi": {
+          "token_count": 4,
+          "efficiency": 4.0,
+          "tokens": [
+            "<bos>",
+            "سلام",
+            " دنیا",
+            " آزمایش"
+          ]
+        }
+      },
+      "indic": {
+        "hindi_devanagari": {
+          "token_count": 8,
+          "efficiency": 2.625,
+          "tokens": [
+            "<bos>",
+            "न",
+            "म",
+            "स्त",
+            "े"
+          ]
+        },
+        "thai_no_spaces": {
+          "token_count": 8,
+          "efficiency": 1.75,
+          "tokens": [
+            "<bos>",
+            "ส",
+            "วัส",
+            "ดี",
+            "โลก"
+          ]
+        }
+      },
+      "turkic": {
+        "turkish_special": {
+          "token_count": 15,
+          "efficiency": 1.7333333333333334,
+          "tokens": [
+            "<bos>",
+            "mer",
+            "haba",
+            " dünya",
+            " İ"
+          ]
+        }
+      }
+    }
+  }
+}

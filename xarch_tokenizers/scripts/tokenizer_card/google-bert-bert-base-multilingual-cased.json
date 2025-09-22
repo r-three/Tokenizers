@@ -1,0 +1,3449 @@
+{
+  "tokenizer_name": "google-bert-bert-base-multilingual-cased",
+  "inherits_from": "Unknown",
+  "diff_from_parent": "",
+  "tokenization_method": "WordPiece",
+  "vocab_size": 119547,
+  "special_characters": "[UNK], [SEP], [PAD], [CLS], [MASK]",
+  "byte_fallback": false,
+  "multi_lingual": "Supports 5/5 languages tested",
+  "numbers": "123→3tok; 12345→4tok; 3.14159→6tok; 1,000,000→7tok",
+  "pretokenization_splits": "whitespace_and_punctuation; splits: spaces, punctuation, symbols",
+  "unicode_normalization": "NFC normalization",
+  "continuation": "uses continuation markers",
+  "oov_handling": "approximation",
+  "script_coverage": "",
+  "whitespace_treatment": "single_space:modified; multiple_spaces:modified; tabs:modified; newlines:modified",
+  "release_date": "Unknown",
+  "language_analysis": {
+    "english": {
+      "text": {
+        "original_length": 73,
+        "token_count": 21,
+        "compression_ratio": 3.4761904761904763,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.2876712328767123
+      },
+      "unicode_test": {
+        "original_length": 17,
+        "token_count": 10,
+        "compression_ratio": 1.7,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.5882352941176471
+      },
+      "oov_test": {
+        "original_length": 34,
+        "token_count": 11,
+        "compression_ratio": 3.090909090909091,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3235294117647059
+      }
+    },
+    "farsi": {
+      "text": {
+        "original_length": 50,
+        "token_count": 21,
+        "compression_ratio": 2.380952380952381,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.42
+      },
+      "unicode_test": {
+        "original_length": 47,
+        "token_count": 16,
+        "compression_ratio": 2.9375,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3404255319148936
+      },
+      "oov_test": {
+        "original_length": 44,
+        "token_count": 20,
+        "compression_ratio": 2.2,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.45454545454545453
+      }
+    },
+    "turkish": {
+      "text": {
+        "original_length": 59,
+        "token_count": 20,
+        "compression_ratio": 2.95,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3389830508474576
+      },
+      "unicode_test": {
+        "original_length": 33,
+        "token_count": 17,
+        "compression_ratio": 1.9411764705882353,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.5151515151515151
+      },
+      "oov_test": {
+        "original_length": 70,
+        "token_count": 26,
+        "compression_ratio": 2.6923076923076925,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.37142857142857144
+      }
+    },
+    "chinese": {
+      "text": {
+        "original_length": 24,
+        "token_count": 23,
+        "compression_ratio": 1.0434782608695652,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.9583333333333334
+      },
+      "unicode_test": {
+        "original_length": 12,
+        "token_count": 14,
+        "compression_ratio": 0.8571428571428571,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 1.1666666666666667
+      },
+      "oov_test": {
+        "original_length": 13,
+        "token_count": 15,
+        "compression_ratio": 0.8666666666666667,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 1.1538461538461537
+      }
+    },
+    "italian": {
+      "text": {
+        "original_length": 56,
+        "token_count": 17,
+        "compression_ratio": 3.2941176470588234,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.30357142857142855
+      },
+      "unicode_test": {
+        "original_length": 32,
+        "token_count": 17,
+        "compression_ratio": 1.8823529411764706,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.53125
+      },
+      "oov_test": {
+        "original_length": 26,
+        "token_count": 8,
+        "compression_ratio": 3.25,
+        "perfect_reconstruction": false,
+        "tokens_per_char": 0.3076923076923077
+      }
+    }
+  },
+  "pretokenization_detailed": {
+    "primary_strategy": "whitespace_and_punctuation",
+    "splits_on": [
+      "spaces",
+      "punctuation",
+      "symbols"
+    ],
+    "preserves": [
+      "space_splitting",
+      "numbers",
+      "case"
+    ],
+    "normalization_effects": {
+      "unicode_forms": {
+        "nfc_composed": {
+          "original_length": 17,
+          "decoded_length": 29,
+          "token_count": 10,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5882352941176471,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] caf"
+              },
+              {
+                "position": 23,
+                "text": " [SEP]",
+                "context": "umé [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "nfd_decomposed": {
+          "original_length": 21,
+          "decoded_length": 32,
+          "token_count": 10,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.47619047619047616,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] caf"
+              },
+              {
+                "position": 26,
+                "text": " [SEP]",
+                "context": "mé [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "naïve",
+                "decoded": "[UNK]",
+                "position": 6
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": true,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "COMBINING",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "COMBINING",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": [],
+            "combining_change": {
+              "original_count": 4,
+              "decoded_count": 3
+            }
+          }
+        },
+        "nfkc_compat": {
+          "original_length": 3,
+          "decoded_length": 17,
+          "token_count": 3,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "ﬁle",
+                "decoded": "[CLS] [UNK] [SEP]",
+                "position": 0
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "nfkd_compat_decomp": {
+          "original_length": 4,
+          "decoded_length": 16,
+          "token_count": 3,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.75,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] fil"
+              },
+              {
+                "position": 10,
+                "text": " [SEP]",
+                "context": "ile [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "case_folding": {
+        "mixed_case": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3125,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] Hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "afé [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "lowercase": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "afé [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "uppercase": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 9,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5625,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] HEL"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "AFÉ [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "title_case": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3125,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] Hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "afé [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "whitespace_variants": {
+        "normal_space": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "est [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "non_breaking_space": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "est [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": " ",
+                "decoded": " ",
+                "position": 5
+              },
+              {
+                "original": " ",
+                "decoded": " ",
+                "position": 11
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "NO-BREAK",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "NO-BREAK"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "em_space": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "est [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": " ",
+                "decoded": " ",
+                "position": 5
+              },
+              {
+                "original": " ",
+                "decoded": " ",
+                "position": 11
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "EM",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "EM"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "thin_space": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "est [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": " ",
+                "decoded": " ",
+                "position": 5
+              },
+              {
+                "original": " ",
+                "decoded": " ",
+                "position": 11
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "THIN",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "THIN"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "zero_width_space": {
+          "original_length": 16,
+          "decoded_length": 26,
+          "token_count": 7,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.4375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 20,
+                "text": " [SEP]",
+                "context": "est [SEP]"
+              }
+            ],
+            "deletions": [
+              {
+                "position": 5,
+                "text": "​",
+                "context": "llo​wor"
+              },
+              {
+                "position": 11,
+                "text": "​",
+                "context": "rld​tes"
+              }
+            ],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN",
+                "ZERO"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "ZERO"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "tab_newline": {
+          "original_length": 16,
+          "decoded_length": 28,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.375,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] hel"
+              },
+              {
+                "position": 22,
+                "text": " [SEP]",
+                "context": "est [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "\t",
+                "decoded": " ",
+                "position": 5
+              },
+              {
+                "original": "\n",
+                "decoded": " ",
+                "position": 11
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN",
+                "UNKNOWN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "UNKNOWN"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "diacritics_comprehensive": {
+        "latin_diacritics": {
+          "original_length": 28,
+          "decoded_length": 40,
+          "token_count": 29,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0357142857142858,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] àáâ"
+              },
+              {
+                "position": 34,
+                "text": " [SEP]",
+                "context": "ûüý [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "combining_diacritics": {
+          "original_length": 10,
+          "decoded_length": 17,
+          "token_count": 3,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "àáâãä",
+                "decoded": "[CLS] [UNK] [SEP]",
+                "position": 0
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": true,
+            "script_changes": {
+              "original": [
+                "COMBINING",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "COMBINING"
+              ]
+            },
+            "category_changes": [],
+            "combining_change": {
+              "original_count": 5,
+              "decoded_count": 0
+            }
+          }
+        },
+        "double_diacritics": {
+          "original_length": 1,
+          "decoded_length": 17,
+          "token_count": 3,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 3.0,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "ǘ",
+                "decoded": "[CLS] [UNK] [SEP]",
+                "position": 0
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "mixed_scripts_diacritics": {
+          "original_length": 17,
+          "decoded_length": 29,
+          "token_count": 12,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.7058823529411765,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] caf"
+              },
+              {
+                "position": 23,
+                "text": " [SEP]",
+                "context": "ِيّ [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "ARABIC",
+                "LATIN",
+                "CYRILLIC"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "ARABIC",
+                "CYRILLIC"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "vietnamese_complex": {
+          "original_length": 10,
+          "decoded_length": 22,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] tiế"
+              },
+              {
+                "position": 16,
+                "text": " [SEP]",
+                "context": "iệt [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "turkish_special": {
+          "original_length": 14,
+          "decoded_length": 26,
+          "token_count": 6,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.42857142857142855,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] İst"
+              },
+              {
+                "position": 20,
+                "text": " [SEP]",
+                "context": "neş [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": [
+            "Strips or modifies diacritics"
+          ]
+        }
+      },
+      "contractions_detailed": {
+        "apostrophe_contractions": {
+          "original_length": 42,
+          "decoded_length": 68,
+          "token_count": 23,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5476190476190477,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] I '"
+              },
+              {
+                "position": 7,
+                "text": " ",
+                "context": "] I ' m"
+              },
+              {
+                "position": 9,
+                "text": " ",
+                "context": "I ' m y"
+              },
+              {
+                "position": 15,
+                "text": " ",
+                "context": "you ' r"
+              },
+              {
+                "position": 17,
+                "text": " ",
+                "context": "u ' re "
+              },
+              {
+                "position": 25,
+                "text": " ",
+                "context": "hey ' v"
+              },
+              {
+                "position": 27,
+                "text": " ",
+                "context": "y ' ve "
+              },
+              {
+                "position": 33,
+                "text": " ",
+                "context": " we ' l"
+              },
+              {
+                "position": 35,
+                "text": " ",
+                "context": "e ' ll "
+              },
+              {
+                "position": 42,
+                "text": " ",
+                "context": "can ' t"
+              },
+              {
+                "position": 44,
+                "text": " ",
+                "context": "n ' t d"
+              },
+              {
+                "position": 50,
+                "text": " ",
+                "context": "don ' t"
+              },
+              {
+                "position": 52,
+                "text": " ",
+                "context": "n ' t w"
+              },
+              {
+                "position": 58,
+                "text": " ",
+                "context": "won ' t"
+              },
+              {
+                "position": 60,
+                "text": " ",
+                "context": "n ' t ["
+              },
+              {
+                "position": 62,
+                "text": " [SEP]",
+                "context": "' t [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "unicode_apostrophe": {
+          "original_length": 42,
+          "decoded_length": 68,
+          "token_count": 23,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5476190476190477,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] I '"
+              },
+              {
+                "position": 7,
+                "text": " ",
+                "context": "] I ' m"
+              },
+              {
+                "position": 9,
+                "text": " ",
+                "context": "I ' m y"
+              },
+              {
+                "position": 15,
+                "text": " ",
+                "context": "you ' r"
+              },
+              {
+                "position": 17,
+                "text": " ",
+                "context": "u ' re "
+              },
+              {
+                "position": 25,
+                "text": " ",
+                "context": "hey ' v"
+              },
+              {
+                "position": 27,
+                "text": " ",
+                "context": "y ' ve "
+              },
+              {
+                "position": 33,
+                "text": " ",
+                "context": " we ' l"
+              },
+              {
+                "position": 35,
+                "text": " ",
+                "context": "e ' ll "
+              },
+              {
+                "position": 42,
+                "text": " ",
+                "context": "can ' t"
+              },
+              {
+                "position": 44,
+                "text": " ",
+                "context": "n ' t d"
+              },
+              {
+                "position": 50,
+                "text": " ",
+                "context": "don ' t"
+              },
+              {
+                "position": 52,
+                "text": " ",
+                "context": "n ' t w"
+              },
+              {
+                "position": 58,
+                "text": " ",
+                "context": "won ' t"
+              },
+              {
+                "position": 60,
+                "text": " ",
+                "context": "n ' t ["
+              },
+              {
+                "position": 62,
+                "text": " [SEP]",
+                "context": "' t [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "multiple_apostrophes": {
+          "original_length": 24,
+          "decoded_length": 45,
+          "token_count": 15,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.625,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] roc"
+              },
+              {
+                "position": 10,
+                "text": " ",
+                "context": "ock ' n"
+              },
+              {
+                "position": 12,
+                "text": " ",
+                "context": "k ' n '"
+              },
+              {
+                "position": 14,
+                "text": " ",
+                "context": "' n ' r"
+              },
+              {
+                "position": 16,
+                "text": " ",
+                "context": "n ' rol"
+              },
+              {
+                "position": 23,
+                "text": " ",
+                "context": "l ' 90s"
+              },
+              {
+                "position": 30,
+                "text": " ",
+                "context": " wi - f"
+              },
+              {
+                "position": 32,
+                "text": " ",
+                "context": "i - fi "
+              },
+              {
+                "position": 35,
+                "text": " ",
+                "context": " fi ' s"
+              },
+              {
+                "position": 37,
+                "text": " ",
+                "context": "i ' s ["
+              },
+              {
+                "position": 39,
+                "text": " [SEP]",
+                "context": "' s [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE",
+                "DIGIT",
+                "HYPHEN-MINUS"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "APOSTROPHE",
+                "DIGIT",
+                "HYPHEN-MINUS"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "possessives": {
+          "original_length": 42,
+          "decoded_length": 59,
+          "token_count": 15,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.35714285714285715,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] Joh"
+              },
+              {
+                "position": 10,
+                "text": " ",
+                "context": "ohn ' s"
+              },
+              {
+                "position": 12,
+                "text": " ",
+                "context": "n ' s c"
+              },
+              {
+                "position": 27,
+                "text": " ",
+                "context": "ogs ' t"
+              },
+              {
+                "position": 43,
+                "text": " ",
+                "context": "ren ' s"
+              },
+              {
+                "position": 45,
+                "text": " ",
+                "context": "n ' s b"
+              },
+              {
+                "position": 53,
+                "text": " [SEP]",
+                "context": "oks [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "language_contractions": {
+          "original_length": 26,
+          "decoded_length": 46,
+          "token_count": 14,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5384615384615384,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] c '"
+              },
+              {
+                "position": 7,
+                "text": " ",
+                "context": "] c ' e"
+              },
+              {
+                "position": 9,
+                "text": " ",
+                "context": "c ' est"
+              },
+              {
+                "position": 15,
+                "text": " ",
+                "context": "t n ' e"
+              },
+              {
+                "position": 17,
+                "text": " ",
+                "context": "n ' est"
+              },
+              {
+                "position": 23,
+                "text": " ",
+                "context": "t l ' e"
+              },
+              {
+                "position": 25,
+                "text": " ",
+                "context": "l ' eau"
+              },
+              {
+                "position": 31,
+                "text": " ",
+                "context": "u d ' a"
+              },
+              {
+                "position": 33,
+                "text": " ",
+                "context": "d ' acc"
+              },
+              {
+                "position": 40,
+                "text": " [SEP]",
+                "context": "ord [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "elision": {
+          "original_length": 22,
+          "decoded_length": 38,
+          "token_count": 8,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.36363636363636365,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] del"
+              },
+              {
+                "position": 10,
+                "text": " ",
+                "context": "ell ' a"
+              },
+              {
+                "position": 12,
+                "text": " ",
+                "context": "l ' art"
+              },
+              {
+                "position": 21,
+                "text": " ",
+                "context": "all ' i"
+              },
+              {
+                "position": 23,
+                "text": " ",
+                "context": "l ' ita"
+              },
+              {
+                "position": 32,
+                "text": " [SEP]",
+                "context": "ana [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN",
+                "APOSTROPHE"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "APOSTROPHE"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": [
+            "Splits contractions aggressively"
+          ]
+        }
+      },
+      "special_unicode_cases": {
+        "emoji_sequences": {
+          "original_length": 15,
+          "decoded_length": 29,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3333333333333333,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "👨‍👩‍👧‍👦",
+                "decoded": "[CLS]",
+                "position": 0
+              },
+              {
+                "original": "🏳️‍🌈",
+                "decoded": "[UNK]",
+                "position": 8
+              },
+              {
+                "original": "👍🏽",
+                "decoded": "[UNK] [UNK] [SEP]",
+                "position": 13
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "WAVING",
+                "RAINBOW",
+                "EMOJI",
+                "WOMAN",
+                "BOY",
+                "ZERO",
+                "THUMBS",
+                "MAN",
+                "VARIATION",
+                "GIRL"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "removed": [
+                "WAVING",
+                "RAINBOW",
+                "EMOJI",
+                "WOMAN",
+                "BOY",
+                "ZERO",
+                "THUMBS",
+                "MAN",
+                "VARIATION",
+                "GIRL"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "rtl_marks": {
+          "original_length": 17,
+          "decoded_length": 27,
+          "token_count": 7,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.4117647058823529,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] Hel"
+              },
+              {
+                "position": 21,
+                "text": " [SEP]",
+                "context": "rld [SEP]"
+              }
+            ],
+            "deletions": [
+              {
+                "position": 6,
+                "text": "‮",
+                "context": "lo ‮מלש"
+              },
+              {
+                "position": 10,
+                "text": "‭",
+                "context": "מלש‭ Wo"
+              }
+            ],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "HEBREW",
+                "LATIN",
+                "RIGHT-TO-LEFT",
+                "LEFT-TO-RIGHT"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "HEBREW",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": [
+                "LEFT-TO-RIGHT",
+                "RIGHT-TO-LEFT"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "bidi_text": {
+          "original_length": 24,
+          "decoded_length": 36,
+          "token_count": 8,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3333333333333333,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] Hel"
+              },
+              {
+                "position": 30,
+                "text": " [SEP]",
+                "context": "rld [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "ARABIC",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "ARABIC"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "mathematical": {
+          "original_length": 9,
+          "decoded_length": 17,
+          "token_count": 3,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.3333333333333333,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "∑∏∆∇∞±√∫∂",
+                "decoded": "[CLS] [UNK] [SEP]",
+                "position": 0
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SQUARE",
+                "PARTIAL",
+                "N-ARY",
+                "INCREMENT",
+                "INFINITY",
+                "PLUS-MINUS",
+                "NABLA",
+                "INTEGRAL"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "removed": [
+                "SQUARE",
+                "N-ARY",
+                "INCREMENT",
+                "PLUS-MINUS",
+                "INFINITY",
+                "PARTIAL",
+                "NABLA",
+                "INTEGRAL"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "currency_symbols": {
+          "original_length": 7,
+          "decoded_length": 19,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.5714285714285714,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] $ ["
+              }
+            ],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "€¥£₹₽₿",
+                "decoded": " [UNK] [SEP]",
+                "position": 1
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "RUBLE",
+                "EURO",
+                "YEN",
+                "INDIAN",
+                "DOLLAR",
+                "BITCOIN",
+                "POUND"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "DOLLAR",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "removed": [
+                "RUBLE",
+                "EURO",
+                "INDIAN",
+                "YEN",
+                "BITCOIN",
+                "POUND"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "script_mixing": {
+          "original_length": 18,
+          "decoded_length": 33,
+          "token_count": 12,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.6666666666666666,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] Hel"
+              },
+              {
+                "position": 11,
+                "text": " ",
+                "context": "llo 世 界"
+              },
+              {
+                "position": 13,
+                "text": " ",
+                "context": "o 世 界 م"
+              },
+              {
+                "position": 15,
+                "text": " ",
+                "context": "世 界 مرح"
+              },
+              {
+                "position": 27,
+                "text": " [SEP]",
+                "context": "्ते [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "DEVANAGARI",
+                "CJK",
+                "LATIN",
+                "ARABIC"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "CJK",
+                "DEVANAGARI",
+                "LATIN",
+                "RIGHT",
+                "ARABIC"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      },
+      "ligatures_and_presentation": {
+        "latin_ligatures": {
+          "original_length": 11,
+          "decoded_length": 29,
+          "token_count": 5,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.45454545454545453,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "ﬁle",
+                "decoded": "[CLS]",
+                "position": 0
+              },
+              {
+                "original": "ﬂower",
+                "decoded": "[UNK]",
+                "position": 4
+              },
+              {
+                "original": "ﬀ",
+                "decoded": "[UNK] [UNK] [SEP]",
+                "position": 10
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "LATIN"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "arabic_presentation": {
+          "original_length": 4,
+          "decoded_length": 16,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 1.0,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] سلا"
+              },
+              {
+                "position": 10,
+                "text": " [SEP]",
+                "context": "لام [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "ARABIC"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT",
+                "ARABIC"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "fullwidth_chars": {
+          "original_length": 11,
+          "decoded_length": 23,
+          "token_count": 4,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.36363636363636365,
+          "character_changes": {
+            "insertions": [],
+            "deletions": [],
+            "substitutions": [
+              {
+                "original": "Ｈｅｌｌｏ　Ｗｏｒｌｄ",
+                "decoded": "[CLS] [UNK] [UNK] [SEP]",
+                "position": 0
+              }
+            ],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "FULLWIDTH",
+                "IDEOGRAPHIC"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "added": [
+                "SPACE",
+                "LEFT",
+                "LATIN",
+                "RIGHT"
+              ],
+              "removed": [
+                "FULLWIDTH",
+                "IDEOGRAPHIC"
+              ]
+            },
+            "category_changes": []
+          }
+        },
+        "subscript_superscript": {
+          "original_length": 18,
+          "decoded_length": 36,
+          "token_count": 16,
+          "perfect_reconstruction": false,
+          "length_preserved": false,
+          "tokens_per_char": 0.8888888888888888,
+          "character_changes": {
+            "insertions": [
+              {
+                "position": 0,
+                "text": "[CLS] ",
+                "context": "[CLS] H₂O"
+              },
+              {
+                "position": 11,
+                "text": " ",
+                "context": "O E = m"
+              },
+              {
+                "position": 13,
+                "text": " ",
+                "context": "E = mc²"
+              },
+              {
+                "position": 20,
+                "text": " ",
+                "context": " x² + y"
+              },
+              {
+                "position": 22,
+                "text": " ",
+                "context": "² + y² "
+              },
+              {
+                "position": 25,
+                "text": " ",
+                "context": " y² = z"
+              },
+              {
+                "position": 27,
+                "text": " ",
+                "context": "² = z² "
+              },
+              {
+                "position": 30,
+                "text": " [SEP]",
+                "context": " z² [SEP]"
+              }
+            ],
+            "deletions": [],
+            "substitutions": [],
+            "position_shifts": []
+          },
+          "unicode_analysis": {
+            "normalization_applied": false,
+            "form_change": null,
+            "combining_marks_changed": false,
+            "script_changes": {
+              "original": [
+                "SPACE",
+                "SUBSCRIPT",
+                "PLUS",
+                "LATIN",
+                "SUPERSCRIPT",
+                "EQUALS"
+              ],
+              "decoded": [
+                "SPACE",
+                "LEFT",
+                "SUBSCRIPT",
+                "PLUS",
+                "LATIN",
+                "RIGHT",
+                "EQUALS",
+                "SUPERSCRIPT"
+              ],
+              "added": [
+                "LEFT",
+                "RIGHT"
+              ],
+              "removed": []
+            },
+            "category_changes": []
+          }
+        },
+        "normalization_summary": {
+          "consistent_behavior": true,
+          "normalization_type": "none",
+          "preservation_rate": 0.0,
+          "common_changes": [],
+          "insights": []
+        }
+      }
+    },
+    "boundary_handling": {
+      "word_number": {
+        "tokens": [
+          "[CLS]",
+          "test",
+          "##12",
+          "##3",
+          "456",
+          "##test",
+          "test",
+          "##45",
+          "##6",
+          "##test",
+          "[SEP]"
+        ],
+        "preserves_boundary": true
+      },
+      "case_changes": {
+        "tokens": [
+          "[CLS]",
+          "came",
+          "##l",
+          "##C",
+          "##ase",
+          "Pascal",
+          "##C",
+          "##ase",
+          "[SEP]"
+        ],
+        "splits_on_case": true
+      },
+      "japanese_mixed_script_boundary": {
+        "tokens": [
+          "[CLS]",
+          "こ",
+          "##ん",
+          "##に",
+          "##ち",
+          "##は",
+          "世",
+          "界",
+          "Hello",
+          "[SEP]"
+        ],
+        "token_count": 10
+      },
+      "korean_mixed_script_boundary": {
+        "tokens": [
+          "[CLS]",
+          "안",
+          "##녕",
+          "##하",
+          "##세",
+          "##요",
+          "world",
+          "테",
+          "##스트",
+          "[SEP]"
+        ],
+        "token_count": 10
+      }
+    },
+    "special_cases": {},
+    "pattern_examples": {
+      "whitespace_basic": {
+        "input": "hello world test",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          "world",
+          "test",
+          "[SEP]"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.6666666666666665
+      },
+      "whitespace_multiple": {
+        "input": "hello    world",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          "world",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.8
+      },
+      "whitespace_mixed": {
+        "input": "hello\tworld\ntest",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          "world",
+          "test",
+          "[SEP]"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.6666666666666665
+      },
+      "punctuation_attached": {
+        "input": "hello,world!test.",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          ",",
+          "world",
+          "!",
+          "test",
+          ".",
+          "[SEP]"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 1.8888888888888888
+      },
+      "punctuation_spaced": {
+        "input": "hello , world ! test .",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          ",",
+          "world",
+          "!",
+          "test",
+          ".",
+          "[SEP]"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 2.4444444444444446
+      },
+      "punctuation_mixed": {
+        "input": "hello, world!",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          ",",
+          "world",
+          "!",
+          "[SEP]"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 1.8571428571428572
+      },
+      "quotes_and_brackets": {
+        "input": "\"hello\" (world) [test]",
+        "tokens": [
+          "[CLS]",
+          "\"",
+          "hell",
+          "##o",
+          "\"",
+          "(",
+          "world",
+          ")",
+          "[",
+          "test",
+          "]",
+          "[SEP]"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 1.8333333333333333
+      },
+      "apostrophes": {
+        "input": "don't can't won't it's",
+        "tokens": [
+          "[CLS]",
+          "don",
+          "'",
+          "t",
+          "can",
+          "'",
+          "t",
+          "won",
+          "'",
+          "t",
+          "it",
+          "'",
+          "s",
+          "[SEP]"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 1.5714285714285714
+      },
+      "hyphens": {
+        "input": "state-of-the-art self-aware",
+        "tokens": [
+          "[CLS]",
+          "state",
+          "-",
+          "of",
+          "-",
+          "the",
+          "-",
+          "art",
+          "self",
+          "-",
+          "aware",
+          "[SEP]"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 2.25
+      },
+      "numbers_standalone": {
+        "input": "123 456 789",
+        "tokens": [
+          "[CLS]",
+          "123",
+          "456",
+          "789",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.2
+      },
+      "numbers_mixed": {
+        "input": "test123 456test test456test",
+        "tokens": [
+          "[CLS]",
+          "test",
+          "##12",
+          "##3",
+          "456",
+          "##test",
+          "test",
+          "##45",
+          "##6",
+          "##test",
+          "[SEP]"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 2.4545454545454546
+      },
+      "decimal_numbers": {
+        "input": "3.14159 2.5 100.0",
+        "tokens": [
+          "[CLS]",
+          "3",
+          ".",
+          "1415",
+          "##9",
+          "2",
+          ".",
+          "5",
+          "100",
+          ".",
+          "0",
+          "[SEP]"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 1.4166666666666667
+      },
+      "currency": {
+        "input": "$100 €50 ¥1000",
+        "tokens": [
+          "[CLS]",
+          "$",
+          "100",
+          "€",
+          "##50",
+          "¥",
+          "##100",
+          "##0",
+          "[SEP]"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 1.5555555555555556
+      },
+      "percentages": {
+        "input": "50% 3.14% 100%",
+        "tokens": [
+          "[CLS]",
+          "50",
+          "%",
+          "3",
+          ".",
+          "14",
+          "%",
+          "100",
+          "%",
+          "[SEP]"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 1.4
+      },
+      "dates_times": {
+        "input": "2024-01-01 12:30:45",
+        "tokens": [
+          "[CLS]",
+          "202",
+          "##4",
+          "-",
+          "01",
+          "-",
+          "01",
+          "12",
+          ":",
+          "30",
+          ":",
+          "45",
+          "[SEP]"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.4615384615384615
+      },
+      "urls_emails": {
+        "input": "https://example.com user@email.com",
+        "tokens": [
+          "[CLS]",
+          "https",
+          ":",
+          "/",
+          "/",
+          "example",
+          ".",
+          "com",
+          "user",
+          "@",
+          "email",
+          ".",
+          "com",
+          "[SEP]"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 2.4285714285714284
+      },
+      "contractions_basic": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "[CLS]",
+          "I",
+          "'",
+          "m",
+          "you",
+          "'",
+          "re",
+          "they",
+          "'",
+          "ve",
+          "we",
+          "'",
+          "ll",
+          "[SEP]"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 1.7142857142857142
+      },
+      "contractions_unicode": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "[CLS]",
+          "I",
+          "'",
+          "m",
+          "you",
+          "'",
+          "re",
+          "they",
+          "'",
+          "ve",
+          "we",
+          "'",
+          "ll",
+          "[SEP]"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 1.7142857142857142
+      },
+      "possessives": {
+        "input": "John's car the dogs' toys",
+        "tokens": [
+          "[CLS]",
+          "John",
+          "'",
+          "s",
+          "car",
+          "the",
+          "dogs",
+          "'",
+          "toy",
+          "##s",
+          "[SEP]"
+        ],
+        "token_count": 11,
+        "char_to_token_ratio": 2.272727272727273
+      },
+      "italian_elision": {
+        "input": "dell'arte all'italiana",
+        "tokens": [
+          "[CLS]",
+          "dell",
+          "'",
+          "arte",
+          "all",
+          "'",
+          "italiana",
+          "[SEP]"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 2.75
+      },
+      "mixed_case": {
+        "input": "Hello WORLD Test",
+        "tokens": [
+          "[CLS]",
+          "Hello",
+          "WORLD",
+          "Test",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 3.2
+      },
+      "camelCase": {
+        "input": "camelCase PascalCase",
+        "tokens": [
+          "[CLS]",
+          "came",
+          "##l",
+          "##C",
+          "##ase",
+          "Pascal",
+          "##C",
+          "##ase",
+          "[SEP]"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 2.2222222222222223
+      },
+      "acronyms": {
+        "input": "USA NASA FBI",
+        "tokens": [
+          "[CLS]",
+          "USA",
+          "NASA",
+          "FBI",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.4
+      },
+      "latin_diacritics": {
+        "input": "café naïve résumé piñata",
+        "tokens": [
+          "[CLS]",
+          "café",
+          "na",
+          "##ï",
+          "##ve",
+          "r",
+          "##és",
+          "##um",
+          "##é",
+          "pi",
+          "##ña",
+          "##ta",
+          "[SEP]"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 1.8461538461538463
+      },
+      "combining_diacritics": {
+        "input": "café naïve",
+        "tokens": [
+          "[CLS]",
+          "ca",
+          "##fe",
+          "##́",
+          "[UNK]",
+          "[SEP]"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.0
+      },
+      "turkish_special": {
+        "input": "merhaba dünya İÜÖÇŞ ğüşıöç",
+        "tokens": [
+          "[CLS]",
+          "mer",
+          "##hab",
+          "##a",
+          "dünya",
+          "İ",
+          "##Ü",
+          "##Ö",
+          "##Ç",
+          "##Ş",
+          "ğ",
+          "##üş",
+          "##ı",
+          "##ö",
+          "##ç",
+          "[SEP]"
+        ],
+        "token_count": 16,
+        "char_to_token_ratio": 1.625
+      },
+      "vietnamese_tones": {
+        "input": "tiếng việt",
+        "tokens": [
+          "[CLS]",
+          "tiếng",
+          "vi",
+          "##ệt",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.0
+      },
+      "scandinavian": {
+        "input": "høj kött Åse",
+        "tokens": [
+          "[CLS]",
+          "høj",
+          "k",
+          "##ött",
+          "Å",
+          "##se",
+          "[SEP]"
+        ],
+        "token_count": 7,
+        "char_to_token_ratio": 1.7142857142857142
+      },
+      "nfc_form": {
+        "input": "café naïve",
+        "tokens": [
+          "[CLS]",
+          "café",
+          "na",
+          "##ï",
+          "##ve",
+          "[SEP]"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 1.6666666666666667
+      },
+      "nfd_form": {
+        "input": "café naïve",
+        "tokens": [
+          "[CLS]",
+          "ca",
+          "##fe",
+          "##́",
+          "[UNK]",
+          "[SEP]"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 2.0
+      },
+      "symbols": {
+        "input": "@#$%^&*()+=",
+        "tokens": [
+          "[CLS]",
+          "@",
+          "#",
+          "$",
+          "%",
+          "^",
+          "&",
+          "*",
+          "(",
+          ")",
+          "+",
+          "=",
+          "[SEP]"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 0.8461538461538461
+      },
+      "unicode_symbols": {
+        "input": "→←↑↓★☆♠♥",
+        "tokens": [
+          "[CLS]",
+          "→",
+          "##←",
+          "##↑",
+          "##↓",
+          "##★",
+          "##☆",
+          "##♠",
+          "##♥",
+          "[SEP]"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 0.8
+      },
+      "mathematical": {
+        "input": "∑∏∆∇∞±",
+        "tokens": [
+          "[CLS]",
+          "[UNK]",
+          "[SEP]"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 2.0
+      },
+      "emojis": {
+        "input": "😀😃😄😁",
+        "tokens": [
+          "[CLS]",
+          "[UNK]",
+          "[SEP]"
+        ],
+        "token_count": 3,
+        "char_to_token_ratio": 1.3333333333333333
+      },
+      "code_like": {
+        "input": "function_name variable_x class.method()",
+        "tokens": [
+          "[CLS]",
+          "function",
+          "_",
+          "name",
+          "variable",
+          "_",
+          "x",
+          "class",
+          ".",
+          "method",
+          "(",
+          ")",
+          "[SEP]"
+        ],
+        "token_count": 13,
+        "char_to_token_ratio": 3.0
+      },
+      "file_paths": {
+        "input": "/path/to/file.txt C:\\Windows\\System32",
+        "tokens": [
+          "[CLS]",
+          "/",
+          "path",
+          "/",
+          "to",
+          "/",
+          "file",
+          ".",
+          "t",
+          "##xt",
+          "C",
+          ":",
+          "\\",
+          "Windows",
+          "\\",
+          "System",
+          "##32",
+          "[SEP]"
+        ],
+        "token_count": 18,
+        "char_to_token_ratio": 2.0555555555555554
+      },
+      "xml_html": {
+        "input": "<tag>content</tag> <div class=\"test\">",
+        "tokens": [
+          "[CLS]",
+          "<",
+          "tag",
+          ">",
+          "content",
+          "<",
+          "/",
+          "tag",
+          ">",
+          "<",
+          "div",
+          "class",
+          "=",
+          "\"",
+          "test",
+          "\"",
+          ">",
+          "[SEP]"
+        ],
+        "token_count": 18,
+        "char_to_token_ratio": 2.0555555555555554
+      },
+      "contractions": {
+        "input": "I'm you're they've we'll",
+        "tokens": [
+          "[CLS]",
+          "I",
+          "'",
+          "m",
+          "you",
+          "'",
+          "re",
+          "they",
+          "'",
+          "ve",
+          "we",
+          "'",
+          "ll",
+          "[SEP]"
+        ],
+        "token_count": 14,
+        "char_to_token_ratio": 1.7142857142857142
+      },
+      "compound_words": {
+        "input": "twenty-first state-of-the-art",
+        "tokens": [
+          "[CLS]",
+          "twenty",
+          "-",
+          "first",
+          "state",
+          "-",
+          "of",
+          "-",
+          "the",
+          "-",
+          "art",
+          "[SEP]"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 2.4166666666666665
+      },
+      "leading_trailing": {
+        "input": "  hello world  ",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          "world",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 3.0
+      },
+      "zero_width": {
+        "input": "hello​world",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##owo",
+          "##rl",
+          "##d",
+          "[SEP]"
+        ],
+        "token_count": 6,
+        "char_to_token_ratio": 1.8333333333333333
+      },
+      "non_breaking": {
+        "input": "hello world",
+        "tokens": [
+          "[CLS]",
+          "hell",
+          "##o",
+          "world",
+          "[SEP]"
+        ],
+        "token_count": 5,
+        "char_to_token_ratio": 2.2
+      },
+      "chinese_no_spaces": {
+        "input": "你好世界这是测试",
+        "tokens": [
+          "[CLS]",
+          "你",
+          "好",
+          "世",
+          "界",
+          "这",
+          "是",
+          "测",
+          "试",
+          "[SEP]"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 0.8
+      },
+      "japanese_mixed": {
+        "input": "こんにちは世界Hello",
+        "tokens": [
+          "[CLS]",
+          "こ",
+          "##ん",
+          "##に",
+          "##ち",
+          "##は",
+          "世",
+          "界",
+          "Hello",
+          "[SEP]"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 1.2
+      },
+      "arabic_rtl": {
+        "input": "مرحبا بالعالم اختبار",
+        "tokens": [
+          "[CLS]",
+          "م",
+          "##رح",
+          "##با",
+          "با",
+          "##ل",
+          "##عا",
+          "##لم",
+          "ا",
+          "##خت",
+          "##بار",
+          "[SEP]"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 1.6666666666666667
+      },
+      "thai_no_spaces": {
+        "input": "สวัสดีโลกทดสอบ",
+        "tokens": [
+          "[CLS]",
+          "ส",
+          "##ว",
+          "##ัส",
+          "##ดี",
+          "##โ",
+          "##ลก",
+          "##ท",
+          "##ด",
+          "##ส",
+          "##อบ",
+          "[SEP]"
+        ],
+        "token_count": 12,
+        "char_to_token_ratio": 1.1666666666666667
+      },
+      "korean_mixed": {
+        "input": "안녕하세요 world 테스트",
+        "tokens": [
+          "[CLS]",
+          "안",
+          "##녕",
+          "##하",
+          "##세",
+          "##요",
+          "world",
+          "테",
+          "##스트",
+          "[SEP]"
+        ],
+        "token_count": 10,
+        "char_to_token_ratio": 1.5
+      },
+      "hindi_devanagari": {
+        "input": "नमस्ते दुनिया परीक्षण",
+        "tokens": [
+          "[CLS]",
+          "न",
+          "##म",
+          "##स्त",
+          "##े",
+          "दुनिया",
+          "पर",
+          "##ीक्षण",
+          "[SEP]"
+        ],
+        "token_count": 9,
+        "char_to_token_ratio": 2.3333333333333335
+      },
+      "persian_farsi": {
+        "input": "سلام دنیا آزمایش",
+        "tokens": [
+          "[CLS]",
+          "س",
+          "##لام",
+          "دنیا",
+          "آ",
+          "##زم",
+          "##ایش",
+          "[SEP]"
+        ],
+        "token_count": 8,
+        "char_to_token_ratio": 2.0
+      }
+    },
+    "cross_linguistic_behavior": {
+      "latin": {
+        "mixed_case": {
+          "token_count": 5,
+          "efficiency": 3.2,
+          "tokens": [
+            "[CLS]",
+            "Hello",
+            "WORLD",
+            "Test",
+            "[SEP]"
+          ]
+        },
+        "contractions": {
+          "token_count": 14,
+          "efficiency": 1.7142857142857142,
+          "tokens": [
+            "[CLS]",
+            "I",
+            "'",
+            "m",
+            "you"
+          ]
+        }
+      },
+      "cjk": {
+        "chinese_no_spaces": {
+          "token_count": 10,
+          "efficiency": 0.8,
+          "tokens": [
+            "[CLS]",
+            "你",
+            "好",
+            "世",
+            "界"
+          ]
+        },
+        "japanese_mixed": {
+          "token_count": 10,
+          "efficiency": 1.2,
+          "tokens": [
+            "[CLS]",
+            "こ",
+            "##ん",
+            "##に",
+            "##ち"
+          ]
+        },
+        "korean_mixed": {
+          "token_count": 10,
+          "efficiency": 1.5,
+          "tokens": [
+            "[CLS]",
+            "안",
+            "##녕",
+            "##하",
+            "##세"
+          ]
+        }
+      },
+      "arabic": {
+        "arabic_rtl": {
+          "token_count": 12,
+          "efficiency": 1.6666666666666667,
+          "tokens": [
+            "[CLS]",
+            "م",
+            "##رح",
+            "##با",
+            "با"
+          ]
+        },
+        "persian_farsi": {
+          "token_count": 8,
+          "efficiency": 2.0,
+          "tokens": [
+            "[CLS]",
+            "س",
+            "##لام",
+            "دنیا",
+            "آ"
+          ]
+        }
+      },
+      "indic": {
+        "hindi_devanagari": {
+          "token_count": 9,
+          "efficiency": 2.3333333333333335,
+          "tokens": [
+            "[CLS]",
+            "न",
+            "##म",
+            "##स्त",
+            "##े"
+          ]
+        },
+        "thai_no_spaces": {
+          "token_count": 12,
+          "efficiency": 1.1666666666666667,
+          "tokens": [
+            "[CLS]",
+            "ส",
+            "##ว",
+            "##ัส",
+            "##ดี"
+          ]
+        }
+      },
+      "turkic": {
+        "turkish_special": {
+          "token_count": 16,
+          "efficiency": 1.625,
+          "tokens": [
+            "[CLS]",
+            "mer",
+            "##hab",
+            "##a",
+            "dünya"
+          ]
+        }
+      }
+    }
+  }
+}
