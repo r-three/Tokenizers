@@ -1,0 +1,540 @@
+{
+  "results": {
+    "tokenizer_robustness_completion_math": {
+      "acc,none": 0.4973544973544973,
+      "acc_stderr,none": 0.031077619376906698,
+      "acc_norm,none": 0.5714285714285714,
+      "acc_norm_stderr,none": 0.028591018171653538,
+      "alias": "tokenizer_robustness_completion_math"
+    },
+    "tokenizer_robustness_completion_math_canonical": {
+      "alias": " - tokenizer_robustness_completion_math_canonical",
+      "acc,none": 0.8095238095238095,
+      "acc_stderr,none": 0.08780518530755133,
+      "acc_norm,none": 0.9523809523809523,
+      "acc_norm_stderr,none": 0.04761904761904763
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "alias": " - tokenizer_robustness_completion_math_chinese",
+      "acc,none": 0.5714285714285714,
+      "acc_stderr,none": 0.11065666703449763,
+      "acc_norm,none": 0.6190476190476191,
+      "acc_norm_stderr,none": 0.10858813572372741
+    },
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "alias": " - tokenizer_robustness_completion_math_decorative_unicode",
+      "acc,none": 0.19047619047619047,
+      "acc_stderr,none": 0.08780518530755133,
+      "acc_norm,none": 0.2857142857142857,
+      "acc_norm_stderr,none": 0.10101525445522107
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "alias": " - tokenizer_robustness_completion_math_farsi",
+      "acc,none": 0.047619047619047616,
+      "acc_stderr,none": 0.047619047619047644,
+      "acc_norm,none": 0.09523809523809523,
+      "acc_norm_stderr,none": 0.0656383273909058
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "alias": " - tokenizer_robustness_completion_math_italian",
+      "acc,none": 0.6190476190476191,
+      "acc_stderr,none": 0.10858813572372741,
+      "acc_norm,none": 0.7142857142857143,
+      "acc_norm_stderr,none": 0.10101525445522108
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "alias": " - tokenizer_robustness_completion_math_latex",
+      "acc,none": 0.8571428571428571,
+      "acc_stderr,none": 0.07824607964359516,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "alias": " - tokenizer_robustness_completion_math_space_removal",
+      "acc,none": 0.7619047619047619,
+      "acc_stderr,none": 0.09523809523809523,
+      "acc_norm,none": 0.8571428571428571,
+      "acc_norm_stderr,none": 0.07824607964359515
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "alias": " - tokenizer_robustness_completion_math_spelled_out",
+      "acc,none": 0.2857142857142857,
+      "acc_stderr,none": 0.10101525445522108,
+      "acc_norm,none": 0.2857142857142857,
+      "acc_norm_stderr,none": 0.10101525445522108
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "alias": " - tokenizer_robustness_completion_math_turkish",
+      "acc,none": 0.3333333333333333,
+      "acc_stderr,none": 0.10540925533894598,
+      "acc_norm,none": 0.3333333333333333,
+      "acc_norm_stderr,none": 0.10540925533894598
+    }
+  },
+  "groups": {
+    "tokenizer_robustness_completion_math": {
+      "acc,none": 0.4973544973544973,
+      "acc_stderr,none": 0.031077619376906698,
+      "acc_norm,none": 0.5714285714285714,
+      "acc_norm_stderr,none": 0.028591018171653538,
+      "alias": "tokenizer_robustness_completion_math"
+    }
+  },
+  "group_subtasks": {
+    "tokenizer_robustness_completion_math": [
+      "tokenizer_robustness_completion_math_decorative_unicode",
+      "tokenizer_robustness_completion_math_chinese",
+      "tokenizer_robustness_completion_math_space_removal",
+      "tokenizer_robustness_completion_math_latex",
+      "tokenizer_robustness_completion_math_farsi",
+      "tokenizer_robustness_completion_math_spelled_out",
+      "tokenizer_robustness_completion_math_canonical",
+      "tokenizer_robustness_completion_math_turkish",
+      "tokenizer_robustness_completion_math_italian"
+    ]
+  },
+  "configs": {
+    "tokenizer_robustness_completion_math_canonical": {
+      "task": "tokenizer_robustness_completion_math_canonical",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_canonical",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "task": "tokenizer_robustness_completion_math_chinese",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_chinese",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "task": "tokenizer_robustness_completion_math_decorative_unicode",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_decorative_unicode",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "task": "tokenizer_robustness_completion_math_farsi",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_farsi",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "task": "tokenizer_robustness_completion_math_italian",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_italian",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "task": "tokenizer_robustness_completion_math_latex",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_latex",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "task": "tokenizer_robustness_completion_math_space_removal",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_space_removal",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "task": "tokenizer_robustness_completion_math_spelled_out",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_spelled_out",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "task": "tokenizer_robustness_completion_math_turkish",
+      "dataset_path": "r-three/tokenizer_robustness_completion_math",
+      "dataset_name": "tokenizer_robustness_completion_math_turkish",
+      "test_split": "test",
+      "doc_to_text": "{{ question.strip() }}",
+      "doc_to_target": "answer",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc"
+        },
+        {
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "metric": "acc_norm"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "description": "Tokenization robustness evaluation dataset",
+        "version": "1.0.2",
+        "model": "babbage-002"
+      }
+    }
+  },
+  "versions": {
+    "tokenizer_robustness_completion_math": "1.0.2",
+    "tokenizer_robustness_completion_math_canonical": "1.0.2",
+    "tokenizer_robustness_completion_math_chinese": "1.0.2",
+    "tokenizer_robustness_completion_math_decorative_unicode": "1.0.2",
+    "tokenizer_robustness_completion_math_farsi": "1.0.2",
+    "tokenizer_robustness_completion_math_italian": "1.0.2",
+    "tokenizer_robustness_completion_math_latex": "1.0.2",
+    "tokenizer_robustness_completion_math_space_removal": "1.0.2",
+    "tokenizer_robustness_completion_math_spelled_out": "1.0.2",
+    "tokenizer_robustness_completion_math_turkish": "1.0.2"
+  },
+  "n-shot": {
+    "tokenizer_robustness_completion_math_canonical": 0,
+    "tokenizer_robustness_completion_math_chinese": 0,
+    "tokenizer_robustness_completion_math_decorative_unicode": 0,
+    "tokenizer_robustness_completion_math_farsi": 0,
+    "tokenizer_robustness_completion_math_italian": 0,
+    "tokenizer_robustness_completion_math_latex": 0,
+    "tokenizer_robustness_completion_math_space_removal": 0,
+    "tokenizer_robustness_completion_math_spelled_out": 0,
+    "tokenizer_robustness_completion_math_turkish": 0
+  },
+  "higher_is_better": {
+    "tokenizer_robustness_completion_math": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_canonical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "tokenizer_robustness_completion_math_decorative_unicode": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_chinese": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_space_removal": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_latex": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_farsi": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_spelled_out": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_canonical": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_turkish": {
+      "original": 21,
+      "effective": 21
+    },
+    "tokenizer_robustness_completion_math_italian": {
+      "original": 21,
+      "effective": 21
+    }
+  },
+  "config": {
+    "model": "openai-completions",
+    "model_args": "model=babbage-002",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "f5d4ded5",
+  "date": 1760834724.1783712,
+  "pretty_env_info": "PyTorch version: 2.7.1\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 12.3.1_p20230526 p2) 12.3.1 20230526\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.37\n\nPython version: 3.11.4 (main, Nov  4 2023, 03:43:13) [GCC 12.3.1 20230526] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-QEMU_Virtual_CPU_version_2.5+-with-glibc2.37\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        40 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               24\nOn-line CPU(s) list:                  0-23\nVendor ID:                            GenuineIntel\nModel name:                           QEMU Virtual CPU version 2.5+\nCPU family:                           15\nModel:                                107\nThread(s) per core:                   1\nCore(s) per socket:                   24\nSocket(s):                            1\nStepping:                             1\nBogoMIPS:                             5786.30\nFlags:                                fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx lm constant_tsc nopl xtopology cpuid tsc_known_freq pni ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c hypervisor lahf_lm abm cpuid_fault pti bmi1 avx2 bmi2\nHypervisor vendor:                    KVM\nVirtualization type:                  full\nL1d cache:                            768 KiB (24 instances)\nL1i cache:                            768 KiB (24 instances)\nL2 cache:                             96 MiB (24 instances)\nL3 cache:                             16 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-23\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          KVM: Mitigation: VMX unsupported\nVulnerability L1tf:                   Mitigation; PTE Inversion\nVulnerability Mds:                    Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Meltdown:               Mitigation; PTI\nVulnerability Mmio stale data:        Unknown: No mitigations\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Vulnerable\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.2+computecanada\n[pip3] torch==2.7.1+computecanada\n[conda] Could not collect",
+  "transformers_version": "4.55.2",
+  "lm_eval_version": "0.4.9",
+  "upper_git_hash": null,
+  "task_hashes": {},
+  "model_source": "openai-completions",
+  "model_name": "babbage-002",
+  "model_name_sanitized": "babbage-002",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 2702754.937081025,
+  "end_time": 2705295.517968081,
+  "total_evaluation_time_seconds": "2540.580887055956"
+}
