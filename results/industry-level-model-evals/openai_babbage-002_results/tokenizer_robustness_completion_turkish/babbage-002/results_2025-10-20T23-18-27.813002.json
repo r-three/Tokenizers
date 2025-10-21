@@ -1,10 +1,10 @@
 {
   "results": {
     "tokenizer_robustness_completion_turkish": {
-      "acc_norm,none": 0.4927536231884058,
-      "acc_norm_stderr,none": 0.019923879109418754,
       "acc,none": 0.4251207729468599,
       "acc_stderr,none": 0.019699060807294406,
+      "acc_norm,none": 0.4927536231884058,
+      "acc_norm_stderr,none": 0.019923879109418754,
       "alias": "tokenizer_robustness_completion_turkish"
     },
     "tokenizer_robustness_completion_turkish_canonical": {
@@ -129,10 +129,10 @@
   },
   "groups": {
     "tokenizer_robustness_completion_turkish": {
-      "acc_norm,none": 0.4927536231884058,
-      "acc_norm_stderr,none": 0.019923879109418754,
       "acc,none": 0.4251207729468599,
       "acc_stderr,none": 0.019699060807294406,
+      "acc_norm,none": 0.4927536231884058,
+      "acc_norm_stderr,none": 0.019923879109418754,
       "alias": "tokenizer_robustness_completion_turkish"
     }
   },
@@ -936,12 +936,30 @@
     "fewshot_seed": 1234
   },
   "git_hash": "1c5fbbb1",
-  "date": 1760886601.1580448,
-  "pretty_env_info": "PyTorch version: 2.6.0\nIs debug build: False\nCUDA used to build PyTorch: 12.2\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 12.3.1_p20230526 p2) 12.3.1 20230526\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.37\n\nPython version: 3.11.5 (main, Sep 18 2023, 12:23:42) [GCC 12.3.1 20230526] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-QEMU_Virtual_CPU_version_2.5+-with-glibc2.37\nIs CUDA available: False\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: Could not collect\nNvidia driver version: Could not collect\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        40 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               24\nOn-line CPU(s) list:                  0-23\nVendor ID:                            GenuineIntel\nModel name:                           QEMU Virtual CPU version 2.5+\nCPU family:                           15\nModel:                                107\nThread(s) per core:                   1\nCore(s) per socket:                   24\nSocket(s):                            1\nStepping:                             1\nBogoMIPS:                             5786.40\nFlags:                                fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx lm constant_tsc nopl xtopology cpuid tsc_known_freq pni ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c hypervisor lahf_lm abm cpuid_fault pti bmi1 avx2 bmi2\nHypervisor vendor:                    KVM\nVirtualization type:                  full\nL1d cache:                            768 KiB (24 instances)\nL1i cache:                            768 KiB (24 instances)\nL2 cache:                             96 MiB (24 instances)\nL3 cache:                             16 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-23\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          KVM: Mitigation: VMX unsupported\nVulnerability L1tf:                   Mitigation; PTE Inversion\nVulnerability Mds:                    Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Meltdown:               Mitigation; PTI\nVulnerability Mmio stale data:        Unknown: No mitigations\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Vulnerable\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] kmeans-pytorch==0.3\n[pip3] numpy==2.2.2+computecanada\n[pip3] torch==2.6.0+computecanada\n[pip3] triton==3.3.1+computecanada\n[conda] Could not collect",
-  "transformers_version": "4.51.3",
+  "date": 1761013390.3215241,
+  "pretty_env_info": "PyTorch version: 2.7.1\nIs debug build: False\nCUDA used to build PyTorch: 12.6\nROCM used to build PyTorch: N/A\n\nOS: Gentoo Linux (x86_64)\nGCC version: (Gentoo 12.3.1_p20230526 p2) 12.3.1 20230526\nClang version: Could not collect\nCMake version: version 3.27.7\nLibc version: glibc-2.37\n\nPython version: 3.11.4 (main, Nov  4 2023, 03:43:13) [GCC 12.3.1 20230526] (64-bit runtime)\nPython platform: Linux-6.8.0-54-generic-x86_64-QEMU_Virtual_CPU_version_2.5+-with-glibc2.37\nIs CUDA available: False\nCUDA runtime version: 12.6.77\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: Could not collect\nNvidia driver version: Could not collect\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        40 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               24\nOn-line CPU(s) list:                  0-23\nVendor ID:                            GenuineIntel\nModel name:                           QEMU Virtual CPU version 2.5+\nCPU family:                           15\nModel:                                107\nThread(s) per core:                   1\nCore(s) per socket:                   24\nSocket(s):                            1\nStepping:                             1\nBogoMIPS:                             5786.30\nFlags:                                fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx lm constant_tsc nopl xtopology cpuid tsc_known_freq pni ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c hypervisor lahf_lm abm cpuid_fault pti bmi1 avx2 bmi2\nHypervisor vendor:                    KVM\nVirtualization type:                  full\nL1d cache:                            768 KiB (24 instances)\nL1i cache:                            768 KiB (24 instances)\nL2 cache:                             96 MiB (24 instances)\nL3 cache:                             16 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-23\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          KVM: Mitigation: VMX unsupported\nVulnerability L1tf:                   Mitigation; PTE Inversion\nVulnerability Mds:                    Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Meltdown:               Mitigation; PTI\nVulnerability Mmio stale data:        Unknown: No mitigations\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Vulnerable\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.2+computecanada\n[pip3] torch==2.7.1+computecanada\n[conda] Could not collect",
+  "transformers_version": "4.55.2",
   "lm_eval_version": "0.4.9",
   "upper_git_hash": null,
-  "task_hashes": {},
+  "task_hashes": {
+    "tokenizer_robustness_completion_turkish_derivations": "72f3a99fe7e079707a5347d93c463a9a1db13f475e3528c6c1e18534d917caeb",
+    "tokenizer_robustness_completion_turkish_typographical_errors": "0282f5ba7ab67feefd05ea749e0a97c7bc9c0336f811c600b0a2702c4317f190",
+    "tokenizer_robustness_completion_turkish_date_formats": "3511efb504dc0a6eb43df156b37a97ab44632caef233bd8487894f874e0ced1e",
+    "tokenizer_robustness_completion_turkish_web_search_query": "0e84a117a7ef68d02df4d1de3bc1cd895cb557b64be340ab703ba55f52b96279",
+    "tokenizer_robustness_completion_turkish_english_keyboard": "811503b89c5e6ea570f2f15c4aadccdecfc7609872bb86721d20fd3eb6ed9ad6",
+    "tokenizer_robustness_completion_turkish_equivalent_expressions": "e1a4cba13590577068fd65156f26ba2872e0aee11d27593df1a7253529c2f10f",
+    "tokenizer_robustness_completion_turkish_dialects": "05d5e073c519b36e3cd302edc37dd42fcd07681b3398284388c85c6ed2649b8c",
+    "tokenizer_robustness_completion_turkish_canonical": "2e64b12f5784029c002e34c4e5d34ee262103b1e3418b0efbeaa90e493e03dbc",
+    "tokenizer_robustness_completion_turkish_code_language_script_switching": "b2ee619fd721885d05e4efb6c602679771bd26a1bd641d9a69f0716bd2300413",
+    "tokenizer_robustness_completion_turkish_colloquial": "8fef4323a3f54969e7e66597118c889ed2a0cdd682de52cf3c2fd08b7d2e1580",
+    "tokenizer_robustness_completion_turkish_inflections": "a97757c2ea6674ac946f29aa41064be40f82c209163ee36ef0678d71813751e2",
+    "tokenizer_robustness_completion_turkish_similar_words": "a319c142de6828178929997b5c9a9b12b05b705ba003993852b3a9987a2bb669",
+    "tokenizer_robustness_completion_turkish_keyboard_proximity_errors": "b76a3d9ea1d0503f88ffd042500e12ab987d2940e3cf23166141cbb01df927b0",
+    "tokenizer_robustness_completion_turkish_word_reordering": "29ebff9564f91c5e87e75df46bda28eb16c38d2b1b1faa38a2f9aa3e1039ada9",
+    "tokenizer_robustness_completion_turkish_spelled_out": "60125979975054d8796495b694d28ebc59a93ce341de2979678f87c6ff0b2204",
+    "tokenizer_robustness_completion_turkish_grammatical_errors": "1800620fa9847df89d1e1522d3319c23867fd23c255e3b27880531c09f8c6656",
+    "tokenizer_robustness_completion_turkish_orthographic_errors": "e307de2fcead21b185cbc0452639d63580a35f1a110e8371371597dbdd8bccf1"
+  },
   "model_source": "openai-completions",
   "model_name": "babbage-002",
   "model_name_sanitized": "babbage-002",
@@ -950,7 +968,7 @@
   "fewshot_as_multiturn": false,
   "chat_template": null,
   "chat_template_sha": null,
-  "start_time": 2753035.168658058,
-  "end_time": 2756385.502510236,
-  "total_evaluation_time_seconds": "3350.3338521779515"
+  "start_time": 2881406.617486524,
+  "end_time": 2884744.822893955,
+  "total_evaluation_time_seconds": "3338.2054074308835"
 }
