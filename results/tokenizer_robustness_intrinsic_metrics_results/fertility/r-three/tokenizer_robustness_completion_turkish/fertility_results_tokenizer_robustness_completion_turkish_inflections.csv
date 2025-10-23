@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_turkish_inflections
+Comma,3.61
+Llama-3.2,2.65
+Phi-3,3.632
+GPT-2,3.751
+GPT-4o,2.56
+BLOOM,3.04
+XGLM,1.845
+Tekken,2.736
+ByT5,7.123
+mBERT,2.238
+Qwen-3,2.877
+TokenMonster,4.986
+Gemma-2,2.458
+Aya,2.404

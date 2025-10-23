@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_farsi_optional_diacritics
+Comma,5.801
+Llama-3.2,2.835
+Phi-3,5.552
+GPT-2,5.835
+GPT-4o,2.95
+BLOOM,2.762
+XGLM,2.862
+Tekken,2.927
+ByT5,9.084
+mBERT,3.015
+Qwen-3,3.632
+TokenMonster,9.192
+Gemma-2,2.916
+Aya,3.111

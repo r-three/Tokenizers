@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_italian_abbreviations,tokenizer_robustness_completion_italian_canonical,tokenizer_robustness_completion_italian_capitalization,tokenizer_robustness_completion_italian_code_language_script_switching,tokenizer_robustness_completion_italian_contractions,tokenizer_robustness_completion_italian_date_formats,tokenizer_robustness_completion_italian_dialects,tokenizer_robustness_completion_italian_english_keyboard,tokenizer_robustness_completion_italian_grammatical_errors,tokenizer_robustness_completion_italian_keyboard_proximity_errors,tokenizer_robustness_completion_italian_numerical_formats,tokenizer_robustness_completion_italian_orthographic_errors,tokenizer_robustness_completion_italian_phonetic_spelling,tokenizer_robustness_completion_italian_plausible_diacritics_errors,tokenizer_robustness_completion_italian_similar_words,tokenizer_robustness_completion_italian_spelled_out,tokenizer_robustness_completion_italian_typographical_errors,tokenizer_robustness_completion_italian_web_search_query
+Comma,0.483,0.467,0.418,0.387,0.515,0.312,0.401,0.429,0.499,0.465,0.402,0.479,0.478,0.45,0.516,0.384,0.486,0.698
+Llama-3.2,0.423,0.396,0.373,0.286,0.402,0.312,0.333,0.358,0.434,0.407,0.453,0.415,0.435,0.38,0.468,0.374,0.422,0.643
+Phi-3,0.366,0.316,0.254,0.23,0.318,0.406,0.266,0.29,0.315,0.345,0.197,0.355,0.355,0.271,0.331,0.331,0.338,0.566
+GPT-2,0.457,0.442,0.403,0.322,0.406,0.312,0.375,0.4,0.469,0.446,0.402,0.445,0.483,0.419,0.54,0.388,0.463,0.76
+GPT-4o,0.404,0.371,0.343,0.269,0.385,0.188,0.326,0.336,0.407,0.381,0.333,0.395,0.402,0.341,0.46,0.335,0.397,0.636
+BLOOM,0.374,0.374,0.343,0.297,0.364,0.219,0.345,0.336,0.392,0.385,0.222,0.38,0.394,0.341,0.444,0.327,0.39,0.674
+XGLM,0.166,0.184,0.209,0.129,0.222,0.125,0.15,0.168,0.196,0.238,0.085,0.242,0.212,0.186,0.242,0.146,0.263,0.287
+Tekken,0.426,0.387,0.328,0.308,0.393,0.312,0.322,0.353,0.42,0.397,0.376,0.406,0.419,0.372,0.419,0.313,0.401,0.667
+ByT5,0.857,0.898,0.94,0.891,0.929,0.875,0.888,0.758,0.915,0.901,0.915,0.865,0.898,0.93,0.815,0.915,0.898,0.93
+mBERT,0.151,0.132,0.119,0.095,0.142,0.062,0.135,0.129,0.136,0.204,0.009,0.213,0.202,0.085,0.169,0.089,0.206,0.256
+Qwen-3,0.442,0.409,0.373,0.3,0.402,0.406,0.337,0.374,0.442,0.423,0.496,0.417,0.435,0.411,0.468,0.409,0.424,0.682
+TokenMonster,0.543,0.549,0.537,0.513,0.54,0.406,0.483,0.51,0.585,0.558,0.632,0.538,0.601,0.566,0.597,0.537,0.571,0.806
+Gemma-2,0.309,0.28,0.254,0.193,0.289,0.188,0.24,0.259,0.296,0.306,0.137,0.314,0.299,0.287,0.323,0.221,0.303,0.473
+Aya,0.4,0.352,0.254,0.252,0.347,0.312,0.3,0.317,0.359,0.374,0.325,0.373,0.381,0.31,0.387,0.302,0.372,0.62

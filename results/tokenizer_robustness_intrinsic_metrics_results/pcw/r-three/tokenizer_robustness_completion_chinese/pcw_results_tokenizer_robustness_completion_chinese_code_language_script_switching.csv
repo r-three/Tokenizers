@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_chinese_code_language_script_switching
+Comma,0.322
+Llama-3.2,0.195
+Phi-3,0.771
+GPT-2,0.438
+GPT-4o,0.185
+BLOOM,0.103
+XGLM,0.644
+Tekken,0.264
+ByT5,0.945
+mBERT,0.291
+Qwen-3,0.116
+TokenMonster,0.897
+Gemma-2,0.103
+Aya,0.103

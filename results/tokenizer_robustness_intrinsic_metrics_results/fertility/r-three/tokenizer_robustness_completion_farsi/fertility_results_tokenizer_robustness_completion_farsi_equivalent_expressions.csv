@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_farsi_equivalent_expressions
+Comma,4.237
+Llama-3.2,1.827
+Phi-3,4.525
+GPT-2,4.665
+GPT-4o,1.824
+BLOOM,1.91
+XGLM,1.266
+Tekken,1.856
+ByT5,7.018
+mBERT,1.421
+Qwen-3,2.356
+TokenMonster,7.112
+Gemma-2,1.716
+Aya,1.766

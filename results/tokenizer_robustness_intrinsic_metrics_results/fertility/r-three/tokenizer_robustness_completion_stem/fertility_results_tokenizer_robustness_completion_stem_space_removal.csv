@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_stem_space_removal
+Comma,1.784
+Llama-3.2,1.606
+Phi-3,1.674
+GPT-2,1.711
+GPT-4o,1.592
+BLOOM,1.647
+XGLM,1.61
+Tekken,1.679
+ByT5,5.766
+mBERT,1.661
+Qwen-3,1.619
+TokenMonster,2.22
+Gemma-2,1.427
+Aya,1.537

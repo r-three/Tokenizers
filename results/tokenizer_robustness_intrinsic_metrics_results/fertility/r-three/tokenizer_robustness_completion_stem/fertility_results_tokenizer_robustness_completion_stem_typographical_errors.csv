@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_stem_typographical_errors
+Comma,1.705
+Llama-3.2,1.522
+Phi-3,1.514
+GPT-2,1.61
+GPT-4o,1.506
+BLOOM,1.502
+XGLM,1.462
+Tekken,1.57
+ByT5,4.841
+mBERT,1.526
+Qwen-3,1.534
+TokenMonster,2.247
+Gemma-2,1.418
+Aya,1.466

@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_italian_dialects
+Comma,0.401
+Llama-3.2,0.333
+Phi-3,0.266
+GPT-2,0.375
+GPT-4o,0.326
+BLOOM,0.345
+XGLM,0.15
+Tekken,0.322
+ByT5,0.888
+mBERT,0.135
+Qwen-3,0.337
+TokenMonster,0.483
+Gemma-2,0.24
+Aya,0.3

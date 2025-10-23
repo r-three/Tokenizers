@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_farsi_arabic_keyboard_for_farsi,tokenizer_robustness_completion_farsi_canonical,tokenizer_robustness_completion_farsi_code_language_script_switching,tokenizer_robustness_completion_farsi_colloquial,tokenizer_robustness_completion_farsi_dialects,tokenizer_robustness_completion_farsi_equivalent_expressions,tokenizer_robustness_completion_farsi_keyboard_proximity_errors,tokenizer_robustness_completion_farsi_number_romanization,tokenizer_robustness_completion_farsi_optional_diacritics,tokenizer_robustness_completion_farsi_romanization,tokenizer_robustness_completion_farsi_spelled_out,tokenizer_robustness_completion_farsi_word_spacing_zero-width_characters_extra_space
+Comma,0.882,0.875,0.697,0.88,0.884,0.881,0.883,0.902,0.885,0.668,0.908,0.878
+Llama-3.2,0.646,0.598,0.394,0.584,0.65,0.525,0.598,0.557,0.72,0.642,0.575,0.604
+Phi-3,0.898,0.891,0.685,0.897,0.902,0.899,0.895,0.967,0.889,0.664,0.966,0.896
+GPT-2,0.882,0.887,0.681,0.888,0.896,0.896,0.891,0.902,0.889,0.655,0.908,0.889
+GPT-4o,0.63,0.582,0.386,0.575,0.636,0.529,0.582,0.508,0.72,0.584,0.517,0.6
+BLOOM,0.602,0.602,0.429,0.575,0.655,0.554,0.609,0.607,0.747,0.588,0.586,0.633
+XGLM,0.417,0.23,0.161,0.279,0.352,0.209,0.422,0.164,0.67,0.571,0.161,0.289
+Tekken,0.661,0.594,0.449,0.584,0.646,0.525,0.598,0.59,0.724,0.633,0.54,0.611
+ByT5,0.98,0.973,0.965,0.979,0.967,0.975,0.977,0.967,0.969,0.903,0.966,0.974
+mBERT,0.591,0.301,0.205,0.386,0.45,0.263,0.449,0.23,0.667,0.597,0.276,0.344
+Qwen-3,0.65,0.715,0.5,0.682,0.741,0.644,0.723,0.885,0.793,0.659,0.782,0.7
+TokenMonster,0.941,0.934,0.882,0.94,0.935,0.939,0.938,0.902,0.931,0.748,0.966,0.937
+Gemma-2,0.587,0.512,0.327,0.528,0.582,0.46,0.543,0.443,0.701,0.553,0.414,0.544
+Aya,0.626,0.547,0.35,0.567,0.608,0.511,0.562,0.475,0.709,0.58,0.448,0.537

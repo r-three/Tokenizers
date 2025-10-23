@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_stem_upside_down_rotated
+Comma,1.439
+Llama-3.2,1.245
+Phi-3,1.255
+GPT-2,1.327
+GPT-4o,1.255
+BLOOM,1.276
+XGLM,1.214
+Tekken,1.296
+ByT5,4.571
+mBERT,1.214
+Qwen-3,1.255
+TokenMonster,1.673
+Gemma-2,1.163
+Aya,1.224

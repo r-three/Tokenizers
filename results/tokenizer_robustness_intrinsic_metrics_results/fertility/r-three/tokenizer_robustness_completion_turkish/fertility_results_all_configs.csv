@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_turkish_canonical,tokenizer_robustness_completion_turkish_code_language_script_switching,tokenizer_robustness_completion_turkish_colloquial,tokenizer_robustness_completion_turkish_date_formats,tokenizer_robustness_completion_turkish_derivations,tokenizer_robustness_completion_turkish_dialects,tokenizer_robustness_completion_turkish_english_keyboard,tokenizer_robustness_completion_turkish_equivalent_expressions,tokenizer_robustness_completion_turkish_grammatical_errors,tokenizer_robustness_completion_turkish_inflections,tokenizer_robustness_completion_turkish_keyboard_proximity_errors,tokenizer_robustness_completion_turkish_orthographic_errors,tokenizer_robustness_completion_turkish_similar_words,tokenizer_robustness_completion_turkish_spelled_out,tokenizer_robustness_completion_turkish_typographical_errors,tokenizer_robustness_completion_turkish_web_search_query,tokenizer_robustness_completion_turkish_word_reordering
+Comma,3.293,2.769,3.12,3.164,3.658,3.33,2.766,3.183,3.281,3.61,3.2,3.262,4.069,2.649,3.267,3.014,3.307
+Llama-3.2,2.488,2.107,2.445,2.612,2.708,2.689,2.383,2.431,2.456,2.65,2.494,2.48,2.708,2.041,2.544,2.326,2.472
+Phi-3,3.385,2.761,3.125,3.642,3.685,3.401,2.775,3.183,3.294,3.632,3.259,3.307,3.75,2.794,3.325,3.049,3.358
+GPT-2,3.459,2.829,3.22,3.179,3.758,3.425,2.732,3.275,3.263,3.751,3.323,3.356,4.069,2.68,3.398,3.049,3.454
+GPT-4o,2.42,2.085,2.39,2.627,2.644,2.585,2.306,2.385,2.413,2.56,2.425,2.45,2.639,2.134,2.442,2.229,2.422
+BLOOM,2.844,2.393,2.645,2.597,3.087,2.83,2.402,2.706,2.719,3.04,2.751,2.827,3.319,2.381,2.845,2.5,2.807
+XGLM,1.795,1.705,1.82,1.881,1.886,1.92,2.014,1.688,1.719,1.845,1.9,1.96,2.333,1.598,1.883,1.694,1.826
+Tekken,2.6,2.209,2.565,3.179,2.817,2.726,2.44,2.532,2.556,2.736,2.584,2.604,2.736,2.216,2.631,2.458,2.615
+ByT5,6.624,6.214,6.145,6.03,7.1,6.599,5.928,6.349,6.456,7.123,6.325,6.495,7.431,5.278,6.476,5.806,6.546
+mBERT,2.161,1.936,2.075,2.045,2.205,2.33,2.211,2.11,2.094,2.238,2.257,2.297,2.5,1.608,2.204,2.069,2.188
+Qwen-3,2.746,2.312,2.605,3.209,2.918,2.816,2.598,2.624,2.675,2.877,2.687,2.772,2.875,2.268,2.718,2.486,2.752
+TokenMonster,4.585,3.786,4.14,4.299,5.009,4.618,3.722,4.404,4.406,4.986,4.433,4.49,5.486,3.732,4.524,3.896,4.514
+Gemma-2,2.395,2.081,2.26,3.0,2.534,2.519,2.273,2.22,2.281,2.458,2.333,2.396,2.653,2.041,2.374,2.16,2.431
+Aya,2.337,2.068,2.265,2.985,2.511,2.514,2.244,2.257,2.306,2.404,2.32,2.416,2.556,1.99,2.325,2.229,2.367

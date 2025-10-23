@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_italian_orthographic_errors
+Comma,0.479
+Llama-3.2,0.415
+Phi-3,0.355
+GPT-2,0.445
+GPT-4o,0.395
+BLOOM,0.38
+XGLM,0.242
+Tekken,0.406
+ByT5,0.865
+mBERT,0.213
+Qwen-3,0.417
+TokenMonster,0.538
+Gemma-2,0.314
+Aya,0.373

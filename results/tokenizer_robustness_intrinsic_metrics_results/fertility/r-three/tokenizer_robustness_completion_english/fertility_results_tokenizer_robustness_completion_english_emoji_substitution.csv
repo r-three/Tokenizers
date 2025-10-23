@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_english_emoji_substitution
+Comma,1.595
+Llama-3.2,1.41
+Phi-3,1.721
+GPT-2,1.449
+GPT-4o,1.214
+BLOOM,1.381
+XGLM,1.26
+Tekken,1.663
+ByT5,3.408
+mBERT,1.068
+Qwen-3,1.243
+TokenMonster,1.881
+Gemma-2,1.097
+Aya,1.337

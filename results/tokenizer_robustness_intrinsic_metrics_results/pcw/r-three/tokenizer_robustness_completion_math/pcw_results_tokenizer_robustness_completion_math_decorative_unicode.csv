@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_math_decorative_unicode
+Comma,0.525
+Llama-3.2,0.351
+Phi-3,0.421
+GPT-2,0.45
+GPT-4o,0.347
+BLOOM,0.376
+XGLM,0.233
+Tekken,0.371
+ByT5,0.837
+mBERT,0.153
+Qwen-3,0.342
+TokenMonster,0.604
+Gemma-2,0.203
+Aya,0.356
