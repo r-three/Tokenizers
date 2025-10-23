@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_english_capitalization
+Comma,0.406
+Llama-3.2,0.288
+Phi-3,0.461
+GPT-2,0.395
+GPT-4o,0.277
+BLOOM,0.363
+XGLM,0.401
+Tekken,0.421
+ByT5,0.873
+mBERT,0.441
+Qwen-3,0.3
+TokenMonster,0.862
+Gemma-2,0.153
+Aya,0.268

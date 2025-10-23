@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_stem_character_deletion
+Comma,0.458
+Llama-3.2,0.303
+Phi-3,0.277
+GPT-2,0.337
+GPT-4o,0.307
+BLOOM,0.288
+XGLM,0.265
+Tekken,0.341
+ByT5,0.905
+mBERT,0.258
+Qwen-3,0.303
+TokenMonster,0.545
+Gemma-2,0.242
+Aya,0.273

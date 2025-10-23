@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_italian_similar_words
+Comma,1.871
+Llama-3.2,1.831
+Phi-3,1.548
+GPT-2,1.887
+GPT-4o,1.71
+BLOOM,1.661
+XGLM,1.242
+Tekken,1.645
+ByT5,4.266
+mBERT,1.258
+Qwen-3,1.839
+TokenMonster,2.331
+Gemma-2,1.403
+Aya,1.524

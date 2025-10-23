@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_english_keyboard_proximity_errors
+Comma,0.393
+Llama-3.2,0.164
+Phi-3,0.162
+GPT-2,0.17
+GPT-4o,0.153
+BLOOM,0.195
+XGLM,0.162
+Tekken,0.212
+ByT5,0.872
+mBERT,0.142
+Qwen-3,0.175
+TokenMonster,0.432
+Gemma-2,0.145
+Aya,0.145

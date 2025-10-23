@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_stem_scripted_text
+Comma,0.388
+Llama-3.2,0.214
+Phi-3,0.165
+GPT-2,0.262
+GPT-4o,0.233
+BLOOM,0.214
+XGLM,0.165
+Tekken,0.262
+ByT5,0.971
+mBERT,0.146
+Qwen-3,0.214
+TokenMonster,0.524
+Gemma-2,0.126
+Aya,0.194

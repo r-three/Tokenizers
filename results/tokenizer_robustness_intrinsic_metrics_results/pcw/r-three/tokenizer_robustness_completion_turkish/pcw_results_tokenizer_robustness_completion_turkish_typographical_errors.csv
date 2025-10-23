@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_turkish_typographical_errors
+Comma,0.757
+Llama-3.2,0.767
+Phi-3,0.782
+GPT-2,0.801
+GPT-4o,0.772
+BLOOM,0.748
+XGLM,0.578
+Tekken,0.777
+ByT5,0.898
+mBERT,0.621
+Qwen-3,0.786
+TokenMonster,0.869
+Gemma-2,0.718
+Aya,0.704

@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_chinese_canonical,tokenizer_robustness_completion_chinese_code_language_script_switching,tokenizer_robustness_completion_chinese_colloquial,tokenizer_robustness_completion_chinese_equivalent_expressions,tokenizer_robustness_completion_chinese_keyboard_proximity_errors,tokenizer_robustness_completion_chinese_ocr_errors,tokenizer_robustness_completion_chinese_optional_diacritics,tokenizer_robustness_completion_chinese_partially_romanized,tokenizer_robustness_completion_chinese_romanization,tokenizer_robustness_completion_chinese_space_removal,tokenizer_robustness_completion_chinese_spelled_out,tokenizer_robustness_completion_chinese_traditional,tokenizer_robustness_completion_chinese_word_spacing_zero-width_characters_extra_space
+Comma,0.459,0.322,0.496,0.478,0.483,0.491,0.179,0.477,0.423,0.218,0.553,0.524,0.455
+Llama-3.2,0.263,0.195,0.299,0.289,0.309,0.326,0.035,0.323,0.331,0.171,0.355,0.367,0.219
+Phi-3,0.94,0.771,0.939,0.942,0.941,0.939,0.318,0.939,0.66,0.545,1.0,0.931,0.944
+GPT-2,0.584,0.438,0.659,0.629,0.615,0.609,0.179,0.599,0.343,0.367,0.579,0.633,0.618
+GPT-4o,0.253,0.185,0.28,0.271,0.306,0.326,0.041,0.319,0.22,0.171,0.342,0.371,0.213
+BLOOM,0.093,0.103,0.125,0.12,0.146,0.204,0.001,0.219,0.229,0.147,0.224,0.117,0.083
+XGLM,0.808,0.644,0.837,0.838,0.826,0.814,0.106,0.814,0.279,0.29,0.961,0.819,0.801
+Tekken,0.363,0.264,0.386,0.402,0.378,0.423,0.064,0.409,0.35,0.21,0.421,0.415,0.316
+ByT5,0.947,0.945,0.962,0.969,0.941,0.946,0.686,0.95,0.939,0.808,1.0,0.952,0.94
+mBERT,0.445,0.291,0.443,0.454,0.444,0.455,0.041,0.473,0.374,0.221,0.5,0.456,0.365
+Qwen-3,0.125,0.116,0.155,0.137,0.188,0.237,0.014,0.244,0.34,0.144,0.25,0.214,0.11
+TokenMonster,0.922,0.897,0.924,0.924,0.924,0.921,0.305,0.928,0.645,0.529,1.0,0.931,0.92
+Gemma-2,0.146,0.103,0.182,0.168,0.215,0.24,0.009,0.237,0.057,0.118,0.25,0.19,0.13
+Aya,0.146,0.103,0.182,0.168,0.215,0.247,0.01,0.24,0.156,0.129,0.237,0.169,0.126

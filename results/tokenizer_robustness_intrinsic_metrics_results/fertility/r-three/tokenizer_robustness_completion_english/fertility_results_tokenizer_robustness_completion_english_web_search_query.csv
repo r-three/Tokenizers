@@ -1,0 +1,15 @@
+model_name,tokenizer_robustness_completion_english_web_search_query
+Comma,1.272
+Llama-3.2,1.152
+Phi-3,1.179
+GPT-2,1.199
+GPT-4o,1.119
+BLOOM,1.179
+XGLM,1.106
+Tekken,1.272
+ByT5,4.172
+mBERT,1.106
+Qwen-3,1.185
+TokenMonster,1.682
+Gemma-2,1.073
+Aya,1.113
