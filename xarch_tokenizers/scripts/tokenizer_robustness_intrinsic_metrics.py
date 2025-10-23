@@ -685,120 +685,6 @@ def compute_pcw_per_config(
     
     return all_configs_results
 
-def plot_fertility_scores(results, dataset_name):
-    """
-    Plot fertility scores for all configs.
-    
-    Args:
-        results: Nested dictionary {config: {tokenizer: {fertility: {...}}}}
-        dataset_name: Name of the dataset
-    """
-    # Iterate through each config
-    for config_name, config_results in results.items():
-        print(f"Plotting fertility scores for config: {config_name}")
-        
-        tokenizers = list(config_results.keys())
-        
-        # Get common languages across all tokenizers for this config
-        all_languages = [set(config_results[tokenizer]["fertility"].keys()) for tokenizer in tokenizers]
-        common_languages = set.intersection(*all_languages)
-        
-        if not common_languages:
-            print(f"No common languages found for config {config_name}, skipping...")
-            continue
-
-        fertility_data = []
-
-        for tokenizer in tokenizers:
-            fertilities = [config_results[tokenizer]["fertility"][lang] for lang in common_languages]
-            fertility_data.append(fertilities)
-
-        fertility_data = np.array(fertility_data)
-
-        num_tokenizers = len(tokenizers)
-        num_languages = len(common_languages)
-        group_width = 0.8
-        bar_width = group_width / num_tokenizers
-        x = np.arange(num_languages)
-
-        # Plot Fertility
-        fig, ax = plt.subplots(figsize=(12, 6))
-        for i, tokenizer in enumerate(tokenizers):
-            ax.bar(x + i * bar_width - group_width/2 + bar_width/2, fertility_data[i], bar_width, label=tokenizer)
-
-        ax.set_xlabel('Languages', fontsize=18)
-        ax.set_ylabel('Fertility Scores', fontsize=18)
-        ax.set_title(f'Fertility Scores by Tokenizer and Language\n({dataset_name} - {config_name})', fontsize=20)
-        ax.set_xticks(x)
-        ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=16)
-        ax.tick_params(axis='y', labelsize=12)
-        fig.subplots_adjust(right=0.8)
-        ax.legend(fontsize=10, loc='center left', bbox_to_anchor=(1, 0.5))
-        plt.tight_layout()
-        
-        # Save with config name in filename
-        plt.savefig(f"fertility_{config_name}.png")
-        plt.close()
-        
-    print(f"Saved {len(results)} fertility plots")
-    
-def plot_pcw_scores(results, dataset_name):
-    """
-    Plot proportion of continued words scores for all configs.
-    
-    Args:
-        results: Nested dictionary {config: {tokenizer: {proportion_of_continued_words: {...}}}}
-        dataset_name: Name of the dataset
-    """
-    # Iterate through each config
-    for config_name, config_results in results.items():
-        print(f"Plotting PCW scores for config: {config_name}")
-        
-        tokenizers = list(config_results.keys())
-        
-        # Get common languages across all tokenizers for this config
-        all_languages = [set(config_results[tokenizer]["proportion_of_continued_words"].keys()) for tokenizer in tokenizers]
-        common_languages = set.intersection(*all_languages)
-        
-        if not common_languages:
-            print(f"No common languages found for config {config_name}, skipping...")
-            continue
-
-        pcw_data = []
-
-        for tokenizer in tokenizers:
-            pcws = [config_results[tokenizer]["proportion_of_continued_words"][lang] for lang in common_languages]
-            pcw_data.append(pcws)
-
-        pcw_data = np.array(pcw_data)
-
-        num_tokenizers = len(tokenizers)
-        num_languages = len(common_languages)
-        group_width = 0.8
-        bar_width = group_width / num_tokenizers
-        x = np.arange(num_languages)
-
-        # Plot PCW
-        fig, ax = plt.subplots(figsize=(12, 6))
-        for i, tokenizer in enumerate(tokenizers):
-            ax.bar(x + i * bar_width - group_width/2 + bar_width/2, pcw_data[i], bar_width, label=tokenizer)
-
-        ax.set_xlabel('Languages', fontsize=18)
-        ax.set_ylabel('Proportion of Continued Words (PCW)', fontsize=18)
-        ax.set_title(f'Proportion of Continued Words by Tokenizer and Language\n({dataset_name} - {config_name})', fontsize=20)
-        ax.set_xticks(x)
-        ax.set_xticklabels(common_languages, rotation=45, ha='right', fontsize=16)
-        ax.tick_params(axis='y', labelsize=12)
-        fig.subplots_adjust(right=0.8)
-        ax.legend(fontsize=10, loc='center left', bbox_to_anchor=(1, 0.5))
-        plt.tight_layout()
-        
-        # Save with config name in filename
-        plt.savefig(f"pcw_{config_name}.png")
-        plt.close()
-        
-    print(f"Saved {len(results)} PCW plots")
-
 def parse_tokenizer_argument(tokenizer_arg):
     """
     Parse tokenizer argument which can be either:
@@ -910,7 +796,6 @@ def main():
             output_dir=os.path.join(args.output_dir, "fertility")
         )
         print("Plotting fertility scores...")
-        # plot_fertility_scores(fertility_results, args.dataset_name)
         print("-" * 50)
     
     if 'pcw' in analyses:
@@ -923,7 +808,6 @@ def main():
             output_dir=os.path.join(args.output_dir, "pcw")
         )
         print("Plotting PCW scores...")
-        # plot_pcw_scores(pcw_results, args.dataset_name)
         print("-" * 50)
 
         
