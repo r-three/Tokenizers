@@ -22,25 +22,30 @@ MODEL_PRETTY_NAMES = {
     "tokenmonster-englishcode-32000-consistent-v1": "TokenMonster",
     "tiktoken-gpt-4o": "GPT-4o",
     "google-gemma-2-2b": "Gemma-2",
-    "CohereLabs-aya-expanse-8b": "Aya",
+    "CohereLabs-aya-expanse-8b": "Aya", 
 }
 
 
 VOCAB_BUCKETS = {
     "r-three/supertoken_models-llama_google-byt5-small": "X-Small",
-    "r-three/supertoken_models-llama_common-pile-comma-v0.1": "Small",
     "r-three/supertoken_models-llama_microsoft-Phi-3-mini-4k-instruct": "Small",
-    "r-three/supertoken_models-llama_gpt2": "Small",
     "r-three/supertoken_models-llama_tokenmonster-englishcode-32000-consistent-v1": "Small",
+    "r-three/supertoken_models-llama_common-pile-comma-v0.1": "Medium",
+    "r-three/supertoken_models-llama_gpt2": "Medium",
     "r-three/supertoken_models-llama_google-bert-bert-base-multilingual-cased": "Medium",
     "r-three/supertoken_models-llama_mistralai-tekken": "Medium",
     "r-three/supertoken_models-llama_meta-llama-Llama-3.2-1B": "Medium",
-    "r-three/supertoken_models-llama_Qwen-Qwen3-8B": "Medium",
+    "r-three/supertoken_models-llama_Qwen-Qwen3-8B": "Large",
     "r-three/supertoken_models-llama_tiktoken-gpt-4o": "Large",
     "r-three/supertoken_models-llama_google-gemma-2-2b": "Large",
     "r-three/supertoken_models-llama_CohereLabs-aya-expanse-8b": "Large",
     "r-three/supertoken_models-llama_bigscience-bloom": "Large",
     "r-three/supertoken_models-llama_facebook-xglm-564M": "Large",
+}
+
+VOCAB_BUCKETS_PRETTY_NAME = {
+    MODEL_PRETTY_NAMES.get(k.replace("r-three/supertoken_models-llama_", ""), k): v
+    for k, v in VOCAB_BUCKETS.items()
 }
 
 
@@ -154,6 +159,8 @@ def load_predictions_lm_eval(
 
 
 def get_pretty_name(x):
+    if x == "Superscript/subscript":
+        x = "Superscript/subscript styling"
     return x.split(",")[0]
     if isinstance(x, str):
         return x
@@ -222,6 +229,8 @@ def load_all_samples(
         task_name = task_name.replace(
             "additional_spaces", "space_additions_for_natural_split"
         )
+        if task_name == "superscript_subscript":
+            task_name = "superscript_subscript_styling"
 
         try:
             sample = pd.read_json(path_or_buf=sample_path, lines=True)
@@ -236,6 +245,19 @@ def load_all_samples(
     samples = pd.concat(samples, ignore_index=True)
     if flatten_doc:
         df2 = pd.json_normalize(samples["doc"], max_level=1)
+        cols = samples.iloc[0]["doc"].keys()
+        if "vanilla_cos_sim_to_canonical" in cols:
+            vanilla_cos_sim_to_canonical = samples.apply(lambda x: x["doc"].get("vanilla_cos_sim_to_canonical", {}).get(x["tokenizer_name"], None), axis=1)
+            df2 = df2.drop(columns=[c for c in df2.columns if "vanilla_cos_sim_to_canonical" in c])
+            df2["vanilla_cos_sim_to_canonical"]=vanilla_cos_sim_to_canonical
+        if "trimmed_cos_sim_to_canonical" in samples.iloc[0]["doc"].keys():
+            trimmed_cos_sim_to_canonical = samples.apply(lambda x: x["doc"].get("trimmed_cos_sim_to_canonical", {}).get(x["tokenizer_name"]), axis=1)
+            df2 = df2.drop(columns=[c for c in df2.columns if "trimmed_cos_sim_to_canonical" in c])
+            df2["trimmed_cos_sim_to_canonical"]=trimmed_cos_sim_to_canonical
+        if "token_counts" in samples.iloc[0]["doc"].keys():
+            token_counts = samples.apply(lambda x: x["doc"].get("token_counts", {}).get(x["tokenizer_name"]), axis=1)
+            df2 = df2.drop(columns=[c for c in df2.columns if "token_counts" in c])
+            df2["token_counts"]=token_counts
         samples = pd.concat([samples, df2], axis=1).drop(columns=["doc"])
         # samples["answer_choice"] = samples.apply(
         #     lambda x: x["choices"][x["target"]]
@@ -271,8 +293,41 @@ def load_all_samples(
         lambda x: float(str(x).split(".")[1])
     )
     samples = samples.sort_values(["model_name", "set_id", "var_id"])
+    intrinsic_df = get_intrinsic_metrics()
+    samples = pd.merge(samples, intrinsic_df, how="left", on=["model_name", "lang"])
+    task_spesific_intrinsics = get_task_specific_intrinsic_metrics()
+    samples = pd.merge(samples, task_spesific_intrinsics, how="left", on=["model_name", "task"])
     return samples
 
+def get_task_specific_intrinsic_metrics():
+    dfs = []
+    for task in [
+    "tokenizer_robustness_completion_chinese", 
+    "tokenizer_robustness_completion_english", 
+    "tokenizer_robustness_completion_farsi", 
+    "tokenizer_robustness_completion_italian", 
+    "tokenizer_robustness_completion_math", 
+    "tokenizer_robustness_completion_stem", 
+    "tokenizer_robustness_completion_turkish"]:
+        task_fertility = pd.read_csv(Path(__file__).parents[2].absolute() /f"results/tokenizer_robustness_intrinsic_metrics_results/fertility/r-three/{task}/fertility_results_all_configs.csv")
+        task_fertility =task_fertility.melt(id_vars=["model_name"], var_name="task", value_name="fertility").reset_index()
+        task_pcw = pd.read_csv(Path(__file__).parents[2].absolute() /f"results/tokenizer_robustness_intrinsic_metrics_results/pcw/r-three/{task}/pcw_results_all_configs.csv")
+        task_pcw =task_pcw.melt(id_vars=["model_name"], var_name="task", value_name="pcw").reset_index()
+        intrinsics = pd.merge(task_fertility, task_pcw, how="outer", on=["model_name", "task"])
+        dfs.append(intrinsics)
+    dfs = pd.concat(dfs)
+    return dfs
+
+
+def get_intrinsic_metrics():
+    from xarch_tokenizers.logging.parity_fertility import fertility, parity
+    parity = pd.DataFrame.from_records(parity)
+    fertility = pd.DataFrame.from_records(fertility)
+    parity = parity.melt(id_vars="model_name", value_name="parity_flores", var_name="lang")
+    fertility = fertility.melt(id_vars="model_name", value_name="fertility_flores", var_name="lang")
+    intrinsics = pd.merge(fertility, parity, how="outer", on=["model_name", "lang"])
+    
+    return intrinsics
 
 def load_all_samples_old(
     base_dir: Union[Path, str],
