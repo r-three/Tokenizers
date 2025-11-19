@@ -27,5 +27,6 @@ def setup_logger(config: "Config", name: str = "") -> logging.Logger:
             logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
         )
         logger.addHandler(file_handler)
+        print(f"Streaming output to {file_handler.baseFilename}")
 
     return logger
