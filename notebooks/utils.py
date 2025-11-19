@@ -2,6 +2,7 @@ import json
 import math
 import warnings
 from pathlib import Path
+from re import S
 from typing import List
 
 import numpy as np
@@ -10,6 +11,8 @@ import seaborn as sns
 from category_mapping import SUBCATEGORY_TO_CATEGORY
 from matplotlib import pyplot as plt
 from matplotlib.ticker import MaxNLocator
+from sympy import Li, latex
+from torch import ne
 
 from xarch_tokenizers.logging.plot_utils import (
     MODEL_TO_COLOR,
@@ -267,7 +270,7 @@ def extract_robustness_table_data(all_summaries, canonical_by_task, filter_mode=
             else:
                 # Combined (all languages)
                 data = model_data[model_data["task_pretty_name"].isin(perturbations)]
-            print(f"Processing model: {model}, category: {category}, data size: {len(data)}, perturbations: {perturbations}, \n\ttasks: {data['task'].unique()}")
+            # print(f"Processing model: {model}, category: {category}, data size: {len(data)}, perturbations: {perturbations}, \n\ttasks: {data['task'].unique()}")
             model_results[category] = calculate_robustness_drop(data, canonical_by_task)
         
         # Add whitespace robustness drop
@@ -315,8 +318,8 @@ def generate_robustness_latex_table_dict(all_summaries, canonical_by_task, filte
         "raw_dataframe": df,
     }
 
-def generate_robustness_latex_table(df_display, title: str="", header_mapping=dict()):
-    """Generate formatted LaTeX table for robustness drops"""
+def generate_robustness_latex_table(df_display, title: str="", header_mapping=dict()    , column_data:List[List[str]]=None, size="footnotesize"):
+    """Generate formatted LaTeX table for robustness drops, column_data could be used for n-level headers e.g. [["Input", "<same>"], ["Non-EN", "EN"]] -> this will produce (Input combining two columns) \\ Non-EN & EN"""
     
     n_cols = len(df_display.columns)
     
@@ -326,16 +329,63 @@ def generate_robustness_latex_table(df_display, title: str="", header_mapping=di
 \\vspace*{{\\fill}}
 \\caption{{{title}}}
 \\label{{tab:multilingual_tokenization_robustness}}
-\\footnotesize
+\\{size}
 \\begin{{tabularx}}{{\\textwidth}}{{l|*{{{n_cols}}}{{>{{\\centering\\arraybackslash}}X}}}}
 \\toprule
 \\textbf{{Model}} &"""
     
-    # Column headers
-    
-    for col in df_display.columns:
-        header_name = header_mapping.get(col, col)
-        latex_str += f"\n\\rotatebox{{60}}{{\\textbf{{{header_name}}}}} &"
+    if column_data:
+        for ind, level in enumerate(column_data):
+            if ind > 0:
+                latex_str += "\\\\\n"
+                latex_str += "&"  # for empty model thing
+
+            i = 0
+            while i < len(level):
+                col = level[i]
+                
+                # Count consecutive "<same>" entries
+                same_count = 1
+                while i + same_count < len(level) and level[i + same_count] == "<same>":
+                    same_count += 1
+                
+                # Add the multicolumn entry
+                if ind == 0:
+                    latex_str += f" \\multicolumn{{{same_count}}}{{c}}{{\\textbf{{{col}}}}} &"
+                else:
+                    # don't bold second level
+                    latex_str += f" \\multicolumn{{{same_count}}}{{c}}{{{col}}} &"
+                
+                # Move index past all the columns we just processed
+                i += same_count
+        # prev_col = None
+        # for ind, level in enumerate(column_data):
+        #     if ind > 0:
+        #         latex_str += "\\\\\n"
+        #         latex_str += "&" # for empty model thing
+
+        #     same_count =0
+        #     for col in level:
+        #         if prev_col is None:
+        #             prev_col = col
+        #         while col == "<same>":
+        #             same_count +=1
+        #             col = next(level)
+        #         if ind == 0:
+        #             latex_str += f" \\multicolumn{{{same_count +1}}}{{c}}{{\\textbf{{{col}}}}} &"
+        #         else:
+        #             # don't bold second level
+        #             latex_str += f" \\multicolumn{{{same_count +1}}}{{c}}{{{{{col}}}}} &"
+        #         same_count = 0
+        #         if col != "<same>":
+        #             prev_col = col
+
+
+    else:
+        # Column headers
+        for col in df_display.columns:
+            header_name = header_mapping.get(col, col)
+            latex_str += f"\n\\rotatebox{{60}}{{\\textbf{{{header_name}}}}} &"
     latex_str = latex_str.rstrip(" &") + " \\\\\n\\midrule\n"
     
     # Find best and worst robustness (lowest and highest drops)
@@ -391,7 +441,7 @@ def generate_robustness_latex_table(df_display, title: str="", header_mapping=di
     
     return latex_str
 
-def load_and_generate_robustness_latex_table(jsonl_file="robustness_results.jsonl", title: str = "", header_mapping=dict()):
+def load_and_generate_robustness_latex_table(jsonl_file="robustness_results.jsonl", title: str = "", header_mapping=dict(), two_level_header: bool = False, column_data:List[str]=None, size="footnotesize"):
     """Load JSONL data and generate formatted robustness LaTeX table"""
     
     # Load data
@@ -430,7 +480,7 @@ def load_and_generate_robustness_latex_table(jsonl_file="robustness_results.json
     df = df.sort_values('Average', ascending=True)
     
     # Generate LaTeX
-    return generate_robustness_latex_table(df, title=title, header_mapping=header_mapping)
+    return generate_robustness_latex_table(df, title=title, header_mapping=header_mapping, column_data=column_data, size=size)
 
 
 
