@@ -318,7 +318,7 @@ def generate_robustness_latex_table_dict(all_summaries, canonical_by_task, filte
         "raw_dataframe": df,
     }
 
-def generate_robustness_latex_table(df_display, title: str="", header_mapping=dict()    , column_data:List[List[str]]=None, size="footnotesize"):
+def generate_robustness_latex_table(df_display, title: str="", header_mapping=dict()    , column_data:List[List[str]]=None, size="footnotesize",add_column_avg:bool=True):
     """Generate formatted LaTeX table for robustness drops, column_data could be used for n-level headers e.g. [["Input", "<same>"], ["Non-EN", "EN"]] -> this will produce (Input combining two columns) \\ Non-EN & EN"""
     
     n_cols = len(df_display.columns)
@@ -358,28 +358,6 @@ def generate_robustness_latex_table(df_display, title: str="", header_mapping=di
                 
                 # Move index past all the columns we just processed
                 i += same_count
-        # prev_col = None
-        # for ind, level in enumerate(column_data):
-        #     if ind > 0:
-        #         latex_str += "\\\\\n"
-        #         latex_str += "&" # for empty model thing
-
-        #     same_count =0
-        #     for col in level:
-        #         if prev_col is None:
-        #             prev_col = col
-        #         while col == "<same>":
-        #             same_count +=1
-        #             col = next(level)
-        #         if ind == 0:
-        #             latex_str += f" \\multicolumn{{{same_count +1}}}{{c}}{{\\textbf{{{col}}}}} &"
-        #         else:
-        #             # don't bold second level
-        #             latex_str += f" \\multicolumn{{{same_count +1}}}{{c}}{{{{{col}}}}} &"
-        #         same_count = 0
-        #         if col != "<same>":
-        #             prev_col = col
-
 
     else:
         # Column headers
@@ -394,8 +372,11 @@ def generate_robustness_latex_table(df_display, title: str="", header_mapping=di
     for col in df_display.columns:
         valid_vals = df_display[col].dropna()
         if len(valid_vals) > 1:
-            best_values[col] = valid_vals.min()  # Lowest drop = best robustness
-            worst_values[col] = valid_vals.max()  # Highest drop = worst robustness
+            try:
+                best_values[col] = valid_vals.min()  # Lowest drop = best robustness
+                worst_values[col] = valid_vals.max()  # Highest drop = worst robustness
+            except:
+                pass
     
     # Data rows
     for model in df_display.index:
@@ -405,33 +386,42 @@ def generate_robustness_latex_table(df_display, title: str="", header_mapping=di
             if pd.isna(val):
                 latex_str += " & ---"
             else:
-                val_str = f"{val:.2f}"
-                # Color formatting for robustness: green for low drops, red for high drops
-                if col in best_values and abs(val - best_values[col]) < 1e-4:
-                    val_str = f"\\textbf{{\\textcolor{{green!70!black}}{{{val_str}}}}}"  # Best robustness
-                elif col in worst_values and abs(val - worst_values[col]) < 1e-4:
-                    val_str = f"\\textcolor{{red}}{{{val_str}}}"  # Worst robustness
+                try:
+                    val_str = f"{val:.2f}"
+                    # Color formatting for robustness: green for low drops, red for high drops
+                    if col in best_values and abs(val - best_values[col]) < 1e-4:
+                        val_str = f"\\textbf{{\\textcolor{{green!70!black}}{{{val_str}}}}}"  # Best robustness
+                    elif col in worst_values and abs(val - worst_values[col]) < 1e-4:
+                        val_str = f"\\textcolor{{red}}{{{val_str}}}"  # Worst robustness
+                except:
+                    val_str = str(val)
                 latex_str += f" & {val_str}"
         latex_str += " \\\\\n"
     
     # Summary row
-    latex_str += "\\midrule\nAvg"
-    col_avgs = df_display.mean(axis=0, skipna=True)
-    best_col_avg = col_avgs.min() if len(col_avgs.dropna()) > 0 else None  # Lowest avg drop
-    worst_col_avg = col_avgs.max() if len(col_avgs.dropna()) > 0 else None  # Highest avg drop
+    try:
+        col_avgs = df_display.mean(axis=0, skipna=True)
+        best_col_avg = col_avgs.min() if len(col_avgs.dropna()) > 0 else None  # Lowest avg drop
+        worst_col_avg = col_avgs.max() if len(col_avgs.dropna()) > 0 else None  # Highest avg drop
+        latex_str += "\\midrule\nAvg"
+        for col in df_display.columns:
+            avg_val = col_avgs[col]
+            if pd.isna(avg_val):
+                latex_str += " & ---"
+            else:
+                try:
+                    val_str = f"{avg_val:.2f}"
+                    if best_col_avg is not None and abs(avg_val - best_col_avg) < 1e-6:
+                        val_str = f"\\textbf{{\\textcolor{{green!70!black}}{{{val_str}}}}}"
+                    elif worst_col_avg is not None and abs(avg_val - worst_col_avg) < 1e-6:
+                        val_str = f"\\textcolor{{red}}{{{val_str}}}"
+                except:
+                    val_str = str(avg_val)
+                latex_str += f" & {val_str}"
+        latex_str += " \\\\\n"
+    except:
+        pass
     
-    for col in df_display.columns:
-        avg_val = col_avgs[col]
-        if pd.isna(avg_val):
-            latex_str += " & ---"
-        else:
-            val_str = f"{avg_val:.2f}"
-            if best_col_avg is not None and abs(avg_val - best_col_avg) < 1e-6:
-                val_str = f"\\textbf{{\\textcolor{{green!70!black}}{{{val_str}}}}}"
-            elif worst_col_avg is not None and abs(avg_val - worst_col_avg) < 1e-6:
-                val_str = f"\\textcolor{{red}}{{{val_str}}}"
-            latex_str += f" & {val_str}"
-    latex_str += " \\\\\n"
     
     # End table
     latex_str += f"""\\bottomrule
@@ -441,7 +431,16 @@ def generate_robustness_latex_table(df_display, title: str="", header_mapping=di
     
     return latex_str
 
-def load_and_generate_robustness_latex_table(jsonl_file="robustness_results.jsonl", title: str = "", header_mapping=dict(), two_level_header: bool = False, column_data:List[str]=None, size="footnotesize"):
+def load_df_from_jsonl(jsonl_file):
+    # Load data
+    records = []
+    with open(jsonl_file, 'r') as f:
+        for line in f:
+            records.append(json.loads(line))
+    df = pd.DataFrame(records).set_index("model_name")
+    return df
+
+def load_and_generate_robustness_latex_table(jsonl_file="robustness_results.jsonl", title: str = "", header_mapping=dict(), two_level_header: bool = False, column_data:List[str]=None, size="footnotesize", add_column_avg: bool = True):
     """Load JSONL data and generate formatted robustness LaTeX table"""
     
     # Load data
@@ -472,15 +471,17 @@ def load_and_generate_robustness_latex_table(jsonl_file="robustness_results.json
     
     # Apply model name mapping
     df.index = [model_mapping.get(model, model) for model in df.index]
-    
-    # Add average column (mean robustness drop)
-    df['Average'] = df.mean(axis=1, skipna=True)
-    
-    # Sort by average robustness (lowest drops first = best robustness)
-    df = df.sort_values('Average', ascending=True)
-    
+    try:
+        # Add average column (mean robustness drop)
+        df['Average'] = df.mean(axis=1, skipna=True)
+        
+        # Sort by average robustness (lowest drops first = best robustness)
+        df = df.sort_values('Average', ascending=True)
+    except Exception as e:
+        print(f"Could not compute average column or sort: {e}")
     # Generate LaTeX
-    return generate_robustness_latex_table(df, title=title, header_mapping=header_mapping, column_data=column_data, size=size)
+    return generate_robustness_latex_table(df, title=title, header_mapping=header_mapping, column_data=column_data, size=size, add_column_avg=add_column_avg)
+
 
 
 
@@ -928,7 +929,25 @@ keys = {
     "canonical_wrong_at_least_one_perturb_correct": (False, False, True),
     "remains_or_becomes_correct": (False, True, False),
 }
-def get_summaries(all_samples, subcategories: List[str] = None):
+def remove_duplicates_from_samples(samples):
+    dup_keys = [
+        "model_name",
+        "task",
+        "subcategories",
+        "lang",
+        "set_id",
+        "var_id",
+        "question",
+    ]
+    duplicate_count = (
+        samples.groupby(dup_keys, as_index=False).size()["size"] > 1
+    ).sum()
+    print(f"N duplicates: {duplicate_count}")
+    samples = samples.drop_duplicates(subset=dup_keys)
+    return samples
+
+def get_summaries(all_samples, subcategories: List[str] = None, filters_to_process: List[str] = None, remove_duplicates: bool = True):
+    # Pass remove_duplicates=False for bootstrapping
     all_tasks = all_samples["task_pretty_name"].unique()
     all_tasks = all_samples["task"].unique()
     model_names = all_samples["model_name"].unique()
@@ -937,27 +956,17 @@ def get_summaries(all_samples, subcategories: List[str] = None):
         lambda x: str(x).split(",")[0]
     )
     all_summaries = []
-    for filtering_mode in FILTERS:
+    if filters_to_process is None:
+        filters_to_process = FILTERS
+    for filtering_mode in filters_to_process:
         #################### filtering & clean-up ####################
         # don't rely on canonical_df, perturbed_df, always use samples
         samples, canonical_df, perturbed_df = get_canonical_and_perturbed_df(
             all_samples, *keys[filtering_mode], verbose=False
         )
         ## remove duplicate results just in case they were run twice
-        dup_keys = [
-            "model_name",
-            "task",
-            "subcategories",
-            "lang",
-            "set_id",
-            "var_id",
-            "question",
-        ]
-        duplicate_count = (
-            samples.groupby(dup_keys, as_index=False).size()["size"] > 1
-        ).sum()
-        print(f"N duplicates: {duplicate_count}")
-        samples = samples.drop_duplicates(subset=dup_keys)
+        if remove_duplicates:
+            samples = remove_duplicates_from_samples(samples)
         metadata = {"filtering_mode": filtering_mode}
         #################### process results for each model ####################
         for model in model_names:
