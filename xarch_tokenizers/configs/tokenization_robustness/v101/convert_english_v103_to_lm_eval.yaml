@@ -12,33 +12,108 @@ tags:
   - multilingual
   - tokenization
 version: collection
-hf_organization: r-three
+hf_organization: toksuite
 dataset_name: tokenizer_robustness_completion_english
 split_by_lang: false
 record_tokenizer_stats: true
 
 lm_eval_local_or_hf: hf
 # lm_eval_local_or_hf: local
+readme_path: xarch_tokenizers/configs/tokenization_robustness/v101/english_readme.md
 
 dataset_card:
-  dataset_name: "Tokenization Robustness Dataset"
-  dataset_summary: "A comprehensive evaluation dataset for testing robustness of different tokenization strategies."
-  dataset_description: "This dataset evaluates how robust language models are to different tokenization strategies and edge cases. It includes text completion questions with multiple choice answers designed to test various aspects of tokenization handling."
-  curators: "R3"
-  # languages: "English (en)"
+  dataset_name: "TokSuite Benchmark (English Collection)"
+  dataset_summary: "A comprehensive evaluation dataset for testing robustness of different tokenization strategies in English."
+  dataset_description: |
+    This dataset is part of **TokSuite**, a comprehensive benchmark designed to measure how different tokenization strategies affect language model performance and robustness. This specific subset contains English language multiple-choice text completion questions with various real-world perturbations that test tokenizer robustness.
+
+        **Key Features:**
+    - 40 canonical questions covering general knowledge
+    - Multiple perturbation types reflecting real-world text variations in English
+    - Parallel structure with TokSuite benchmark (available in English, Turkish, Italian, Chinese, Farsi)
+    - Native speaker curation ensuring linguistic authenticity
+
+      ### Supported Tasks
+
+    - **Multiple-Choice Question Answering**: Text completion format with 4 answer choices
+    - **Tokenizer Robustness Evaluation**: Measuring performance degradation under various text perturbations
+    - **Multilingual NLP Benchmarking**: Evaluating language models on {LANGUAGE_NAME} text understanding
+
+  curators: 
+    - "R3 Research Team"
+  curation_rationale: >
+    Created to systematically evaluate how tokenization strategies handle English text 
+    and measure robustness against real-world perturbations specific to the language.
+  data_collection: >
+    Questions were manually created by native speakers. Each canonical question underwent 
+    targeted perturbations designed to reflect {LINGUISTIC_CHARACTERISTICS}.
+  personal_sensitive_info: "The dataset contains only general knowledge and does not include personal or sensitive information."
+  bias_risks_limitations: >
+    The dataset focuses on {STANDARD_VARIETY}, is relatively small for evaluation purposes, 
+    and uses a multiple-choice format which may not capture all linguistic nuances.
+  has_annotations: true
+  contact: For questions or issues related to this dataset, please refer to the TokSuite project or contact the authors through the paper submission system.
+  languages: "English (eng_Latn)"
   # direct_use: "This dataset is intended for evaluating language model robustness to tokenization variations. It can be used for benchmarking models and understanding their sensitivity to input preprocessing."
   # out_of_scope_use: "This dataset should not be used for training models, as it is specifically designed for evaluation. It may not be suitable for assessing performance on tasks other than tokenization robustness."
-  dataset_structure: "The dataset contains multiple-choice questions with associated metadata about tokenization types and categories."
-  curation_rationale: "Created to address the lack of comprehensive evaluation tools for tokenization robustness in language models."
-  data_collection: "Questions were systematically generated bu humans to cover various tokenization edge cases and strategies."
+  dataset_structure: |
+    ### Data Instances
+
+    An example from the dataset:
+    ```json
+    {
+      "question": "{EXAMPLE_QUESTION}",
+      "choices": ["{CHOICE_A}", "{CHOICE_B}", "{CHOICE_C}", "{CHOICE_D}"],
+      "answer": {ANSWER_INDEX},
+      "answer_label": "{ANSWER_LABEL}",
+      "split": "test",
+      "subcategories": "{SUBCATEGORY}",
+      "lang": "{LANGUAGE_CODE_FULL}",
+      "second_lang": "{ENGLISH_TRANSLATION}",
+      "coding_lang": "",
+      "notes": "{NOTES}",
+      "id": "{ID}",
+      "set_id": {SET_ID},
+      "variation_id": {VARIATION_ID}
+    }
+    ```
+
+    ### Data Fields
+
+    | Field | Type | Description |
+    |-------|------|-------------|
+    | question | string | The question text in {LANGUAGE_NAME} ({SCRIPT_DESCRIPTION}) |
+    | choices | list[string] | Four multiple-choice answer options in {LANGUAGE_NAME} |
+    | answer | int64 | Index of the correct answer (0-3) |
+    | answer_label | string | Letter label of the correct answer (A, B, C, or D) |
+    | split | string | Dataset split identifier (all entries are "test") |
+    | subcategories | string | Perturbation category |
+    | lang | string | Language code ({LANGUAGE_CODE_FULL} = {LANGUAGE_DESCRIPTION}) |
+    | second_lang | string | English translation or description of the question |
+    | coding_lang | string | Not applicable for this dataset (empty string) |
+    | notes | string | Additional context about the question or perturbation type |
+    | id | string | Unique question identifier |
+    | set_id | float64 | Question set grouping identifier (ranges from {ID_RANGE_START}-{ID_RANGE_END}) |
+    | variation_id | float64 | Variation number within a question set |
+  curation_rationale: |
+    This dataset was created to:
+    1. Systematically evaluate how different tokenization strategies handle {LANGUAGE_NAME} text
+    2. Measure robustness against real-world text perturbations specific to {LANGUAGE_NAME} language
+    3. Support research into tokenization's impact on language model behavior
+    4. Provide standardized benchmarks for {LANGUAGE_NAME} language models
+
+    The questions were designed to be straightforward with high baseline accuracy, allowing researchers to cleanly measure performance degradation when perturbations are applied.
+  data_collection: |
+    - **Canonical Questions**: {NUM_BASE_QUESTIONS} baseline questions in English were created covering general knowledge topics
+    - **Translation**: Native {LANGUAGE_NAME} speakers translated questions to {LANGUAGE_NAME}
+    - **Perturbations**: Each question underwent targeted perturbations designed to reflect {LINGUISTIC_CHARACTERISTICS}
+    - **Validation**: Model-in-the-loop process ensured high baseline accuracy across 14 different tokenizers
   has_annotations: True
   personal_sensitive_info: "The dataset does not contain personal or sensitive information."
   bias_risks_limitations: "The dataset focuses primarily on English text and may not generalize to other languages or tokenization schemes not covered in the evaluation."
-  # dataset_card_contact: "gsaltintas@cs.toronto.edu"
-
 
   # language: None
-  license: cc
+  license: MIT License
   # annotations_creators: None
   # language_creators: None
   multilinguality: multilingual

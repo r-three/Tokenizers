@@ -307,6 +307,8 @@ class DatasetConverterConfig(HFUploadConfig):
     set_id_field: str = "Set Id"
     variation_id_field: str = "Variation Id"
 
+    readme_path: Optional[Path] = field(default=None, metadata={"help": "Path to README content."})
+
     upload_to_hf: bool = False
     lm_eval_local_or_hf: Literal["local", "hf"] = field(
         default="local",
@@ -847,13 +849,13 @@ def transform_w_collection(
 
 def record_tokenizer_stats(df, config: DatasetConverterConfig):
     tokenizers = [
-        "google/gemma-2-2b",
+        "facebook/xglm-564M",
+        "bigscience/bloom",
         "common-pile/comma-v0.1-1t",
+        "google/gemma-2-2b",
         "meta-llama/Llama-3.2-1B",
         "microsoft/Phi-3-mini-4k-instruct",
         "gpt2",
-        "bigscience/bloom",
-        "facebook/xglm-564M",
         "mistralai/tekken",
         "google/byt5-small",
         "google-bert/bert-base-multilingual-cased",
@@ -863,13 +865,13 @@ def record_tokenizer_stats(df, config: DatasetConverterConfig):
         "CohereLabs/aya-expanse-8b",
     ]
     models = [
-        "google-gemma-2-2b",
+        "facebook-xglm-564M",
+        "bigscience-bloom",
         "common-pile-comma-v0.1",
+        "google-gemma-2-2b",
         "meta-llama-Llama-3.2-1B",
         "microsoft-Phi-3-mini-4k-instruct",
         "gpt2",
-        "bigscience-bloom",
-        "facebook-xglm-564M",
         "mistralai-tekken",
         "google-byt5-small",
         "google-bert-bert-base-multilingual-cased",
@@ -893,31 +895,31 @@ def record_tokenizer_stats(df, config: DatasetConverterConfig):
     vanilla_cos_sims = pd.DataFrame()
     trimmed_cos_sims = pd.DataFrame()
 
-    for i, (tok_name, model_name) in enumerate(zip(tokenizers, models)):
+    for model_ind, (tok_name, model_name) in enumerate(zip(tokenizers, models)):
         tok = build_tokenizer(tok_name)
-        device = (
+        device = "cpu"
+        if "gpt" in model_name or "xglm" in model_name:
+        # if i % 3 == 2:
+            device = (
             torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
         )
+        device = "cuda"
         import gc
 
         gc.collect()
         model = AutoModel.from_pretrained(
-            f"r-three/supertoken_models-llama_{model_name}"
+            f"toksuite/supertoken_models-llama_{model_name}"
         )
-        # model = model.to(device)
+        model = model.to(device)
+        print(model_name)
         with torch.no_grad():
             for i, row in df.iterrows():
-                import code
-
                 set_id = row[config.set_id_field]
-
                 if canonical_mask[i]:
                     print(f"Skipping canonical example set_id {set_id} in row {i}")
                     vanilla_cos_sims.loc[i, tok_name] = 1.0
                     trimmed_cos_sims.loc[i, tok_name] = 1.0
                     continue
-
-                var_id = row[config.variation_id_field]
                 try:
                     canonical_text = df[
                         canonical_mask & (df[config.set_id_field] == set_id)
@@ -926,11 +928,23 @@ def record_tokenizer_stats(df, config: DatasetConverterConfig):
                     import code
 
                     code.interact(local=locals() | globals())
-                # code.interact(local=locals() | globals())
                 if not canonical_text:
                     print(
                         f"Something wrong with the canonical text for set id {set_id}"
                     )
+                    continue
+                # Helper to get mean embedding
+                def get_mean_embed(text_or_tokens):
+                    if isinstance(text_or_tokens, str):
+                        tokens = tok.encode(text_or_tokens, add_bos=False, add_eos=False)
+                    else:
+                        tokens = text_or_tokens
+                    
+                    # if not tokens: return torch.zeros(model.config.hidden_size).to(device)
+                    
+                    t_tensor = torch.tensor([tokens], device=device) # Shape [1, seq]
+                    embeds = model.embed_tokens(t_tensor).squeeze(0) # [seq, dim]
+                    return embeds.mean(dim=0).cpu().detach()
                 canonical_tokens = tok.encode(
                     canonical_text, add_bos=False, add_eos=False
                 )
@@ -938,19 +952,13 @@ def record_tokenizer_stats(df, config: DatasetConverterConfig):
                 perturbed_tokens = tok.encode(
                     perturbed_text, add_bos=False, add_eos=False
                 )
-                canonical_embed = (
-                    model.embed_tokens(torch.tensor(canonical_tokens))
-                    .cpu()
-                    .mean(axis=0)
-                )
-                perturbed_embed = (
-                    model.embed_tokens(torch.tensor(perturbed_tokens))
-                    .cpu()
-                    .mean(axis=0)
-                )
+                canonical_embed = get_mean_embed(canonical_text)
+                perturbed_embed = get_mean_embed(perturbed_text)
                 vanilla_cos_sim = torch.nn.functional.cosine_similarity(
                     canonical_embed, perturbed_embed, dim=0
                 ).item()
+                # Delete embeddings immediately
+                del canonical_embed, perturbed_embed
 
                 ## brute force trimming
                 start_ind_can, start_ind_pert = 0, 0
@@ -978,25 +986,21 @@ def record_tokenizer_stats(df, config: DatasetConverterConfig):
                 # )
                 canonical_tokens = canonical_tokens[start_ind_can : end_ind_can + 1]
                 perturbed_tokens = perturbed_tokens[start_ind_pert : end_ind_pert + 1]
-                canonical_embed = (
-                    model.embed_tokens(torch.tensor(canonical_tokens))
-                    .cpu()
-                    .mean(axis=0)
-                )
-                perturbed_embed = (
-                    model.embed_tokens(torch.tensor(perturbed_tokens))
-                    .cpu()
-                    .mean(axis=0)
-                )
+                canonical_embed = get_mean_embed(canonical_tokens)
+                perturbed_embed = get_mean_embed(perturbed_tokens)
                 trimmed_cos_sim = torch.nn.functional.cosine_similarity(
                     canonical_embed, perturbed_embed, dim=0
                 ).item()
+                del canonical_embed, perturbed_embed
                 vanilla_cos_sims.loc[i, tok_name] = vanilla_cos_sim
                 trimmed_cos_sims.loc[i, tok_name] = trimmed_cos_sim
-                # df.loc[i, f"{tok_name}_vanilla_cos_sim"] = vanilla_cos_sim
-                # df.loc[i, f"{tok_name}_trimmed_cos_sim"] = trimmed_cos_sim
-    import code
-
+                if i % 2 == 0 and torch.cuda.is_available():
+                    gc.collect()
+                    torch.cuda.empty_cache()
+        del model
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        gc.collect()
     df["vanilla_cos_sim_to_canonical"] = vanilla_cos_sims.to_dict(orient="records")
     df["trimmed_cos_sim_to_canonical"] = trimmed_cos_sims.to_dict(orient="records")
 
